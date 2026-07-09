@@ -294,6 +294,18 @@ def main():
                         src_file = os.path.join(src, "ielts-vocab-day%s.html" % m.group(1))
             if src_file and os.path.isfile(src_file):
                 shutil.copy2(src_file, os.path.join(out_dir, out_name))
+        # ielts 板块：复制本地音频目录（单词发音+例句发音）
+        if sec["kind"] == "ielts":
+            audio_src = os.path.join(src, "audio")
+            if os.path.isdir(audio_src):
+                audio_dst = os.path.join(out_dir, "audio")
+                os.makedirs(audio_dst, exist_ok=True)
+                cnt = 0
+                for af in os.listdir(audio_src):
+                    if af.endswith(".mp3"):
+                        shutil.copy2(os.path.join(audio_src, af), os.path.join(audio_dst, af))
+                        cnt += 1
+                print("  [%s] 复制音频 %d 个" % (sec["title"], cnt))
         # 写板块列表页
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(section_index_html(sec, items))

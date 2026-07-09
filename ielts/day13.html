@@ -322,14 +322,18 @@ const RAW = [
 const $ = id => document.getElementById(id);
 const player = $('player');
 
+var _sentMap={"the building has great aesthetic appeal despite it": "audio/aesthetic_sent1.mp3", "philosophers have long debated the nature of aesth": "audio/aesthetic_sent2.mp3", "modern architecture often prioritizes function ove": "audio/aesthetic_sent3.mp3", "the painting depicts a serene mountain landscape a": "audio/depict_sent1.mp3", "the novel depicts life in a small coastal village.": "audio/depict_sent2.mp3", "media often depicts young people as irresponsible.": "audio/depict_sent3.mp3", "science fiction is a popular genre among young rea": "audio/genre_sent1.mp3", "she enjoys writing in the mystery genre.": "audio/genre_sent2.mp3", "this film blends several genres, including comedy ": "audio/genre_sent3.mp3", "the film uses a non-linear narrative to tell the s": "audio/narrative_sent1.mp3", "historians are revising the traditional narrative ": "audio/narrative_sent2.mp3", "social media has changed how we construct personal": "audio/narrative_sent3.mp3", "the regime used propaganda to control public opini": "audio/propaganda_sent1.mp3", "that advertisement is nothing more than commercial": "audio/propaganda_sent2.mp3", "citizens grew weary of constant political propagan": "audio/propaganda_sent3.mp3", "the novel is a sharp satire on modern politics.": "audio/satire_sent1.mp3", "swift's 'gulliver's travels' is a famous work of s": "audio/satire_sent2.mp3", "the tv show uses satire to critique social norms.": "audio/satire_sent3.mp3", "it's unfair to judge people based on stereotypes.": "audio/stereotype_sent1.mp3", "the film challenges stereotypes about elderly peop": "audio/stereotype_sent2.mp3", "media often stereotypes certain professions in a n": "audio/stereotype_sent3.mp3", "his speech was full of rhetoric but lacked substan": "audio/rhetoric_sent1.mp3", "the politician's rhetoric often fails to match his": "audio/rhetoric_sent2.mp3", "'why should we care?' is a classic rhetorical ques": "audio/rhetoric_sent3.mp3", "orwell's 'animal farm' is a famous political alleg": "audio/allegory_sent1.mp3", "the play can be read as an allegory for totalitari": "audio/allegory_sent2.mp3", "medieval artists often used allegory in their pain": "audio/allegory_sent3.mp3", "words often fail to convey our deepest emotions.": "audio/convey_sent1.mp3", "the painting conveys a sense of melancholy and iso": "audio/convey_sent2.mp3", "body language can convey more than spoken words.": "audio/convey_sent3.mp3", "the film portrays the king as a cruel tyrant.": "audio/portray_sent1.mp3", "she was portrayed as a strong and independent woma": "audio/portray_sent2.mp3", "the actor portrayed hamlet with great passion.": "audio/portray_sent3.mp3", "there are subtle differences between the two theor": "audio/subtle_sent1.mp3", "her writing is known for its subtle humor and iron": "audio/subtle_sent2.mp3", "the artist uses subtle shades of gray in this pain": "audio/subtle_sent3.mp3", "the contract includes explicit terms about the dea": "audio/explicit_sent1.mp3", "she was explicit about her reasons for leaving the": "audio/explicit_sent2.mp3", "the film contains explicit scenes of violence.": "audio/explicit_sent3.mp3", "smartphones have become omnipresent in modern soci": "audio/omnipresent_sent1.mp3", "advertising is omnipresent in public spaces.": "audio/omnipresent_sent2.mp3", "the influence of social media is omnipresent in ou": "audio/omnipresent_sent3.mp3", "she is a versatile actress capable of playing many": "audio/versatile_sent1.mp3", "this versatile jacket can be worn in any season.": "audio/versatile_sent2.mp3", "plastic is a versatile material used in many indus": "audio/versatile_sent3.mp3"};
 function playTTS(text, type){
-  // type: 'gb'=英音 type=1, 'us'=美音 type=2, 'ex'=百度TTS整句
-  let url;
-  if(type==='gb') url = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&type=1`;
-  else if(type==='us') url = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&type=2`;
-  else if(type==='ex') url = `https://fanyi.baidu.com/gettts?lan=uk&spd=4&text=${encodeURIComponent(text)}`;
-  player.src = url;
-  player.play().catch(e=>console.log('播放失败',e));
+  var url;
+  if(type==='gb') url='audio/'+text.toLowerCase()+'_uk.mp3';
+  else if(type==='us') url='audio/'+text.toLowerCase()+'_us.mp3';
+  else if(type==='ex'){
+    var key=text.replace(/<[^>]+>/g,'').trim().toLowerCase().substring(0,50);
+    url=_sentMap[key]||'';
+  }
+  if(!url) return;
+  player.src=url;
+  player.play().catch(function(e){console.log('播放失败',e);});
 }
 
 // 例句按钮播放 + 视觉反馈

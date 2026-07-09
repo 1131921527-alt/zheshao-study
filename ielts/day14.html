@@ -322,13 +322,18 @@ const RAW = [
 const $ = id => document.getElementById(id);
 const player = $('player');
 
+var _sentMap={"a good therapist must show empathy toward every cl": "audio/empathy_sent1.mp3", "his speech was full of empathy for the victims of ": "audio/empathy_sent2.mp3", "reading fiction can increase our capacity for empa": "audio/empathy_sent3.mp3", "she felt anxious about her upcoming job interview.": "audio/anxious_sent1.mp3", "parents are often anxious for their children's suc": "audio/anxious_sent2.mp3", "he was anxious to make a good impression on his ne": "audio/anxious_sent3.mp3", "elderly people are particularly vulnerable to the ": "audio/vulnerable_sent1.mp3", "children are often the most vulnerable victims of ": "audio/vulnerable_sent2.mp3", "sharing personal stories online can make you feel ": "audio/vulnerable_sent3.mp3", "she resented being treated as a child.": "audio/resent_sent1.mp3", "many workers resent the long working hours imposed": "audio/resent_sent2.mp3", "he deeply resents his brother's success.": "audio/resent_sent3.mp3", "she spoke with deep compassion for the refugees.": "audio/compassion_sent1.mp3", "true leaders are guided by compassion, not by powe": "audio/compassion_sent2.mp3", "volunteering can cultivate a sense of compassion i": "audio/compassion_sent3.mp3", "several celebrities endorsed the new environmental": "audio/endorse_sent1.mp3", "the senator endorsed the proposed healthcare refor": "audio/endorse_sent2.mp3", "many athletes refuse to endorse products containin": "audio/endorse_sent3.mp3", "his arrogant behavior alienated many of his collea": "audio/alienate_sent1.mp3", "modern city life can alienate people from nature.": "audio/alienate_sent2.mp3", "young voters feel alienated from the political sys": "audio/alienate_sent3.mp3", "the two brothers finally reconciled after years of": "audio/reconcile_sent1.mp3", "it is hard to reconcile his public statements with": "audio/reconcile_sent2.mp3", "she tried to reconcile her career ambitions with f": "audio/reconcile_sent3.mp3", "we anticipate strong demand for the new product.": "audio/anticipate_sent1.mp3", "economists anticipated the recession long before i": "audio/anticipate_sent2.mp3", "she anticipated his arrival and prepared dinner in": "audio/anticipate_sent3.mp3", "the refugees were met with a hostile reception.": "audio/hostile_sent1.mp3", "his proposal received hostile criticism from the b": "audio/hostile_sent2.mp3", "the two nations have been in a hostile relationshi": "audio/hostile_sent3.mp3", "she was jealous of her sister's achievements.": "audio/jealous_sent1.mp3", "a jealous partner can quickly destroy a relationsh": "audio/jealous_sent2.mp3", "he felt jealous when he saw others succeeding.": "audio/jealous_sent3.mp3", "she is held in high esteem by her colleagues.": "audio/esteem_sent1.mp3", "parents should help build their children's self-es": "audio/esteem_sent2.mp3", "his esteem for his teacher has only grown over the": "audio/esteem_sent3.mp3", "advertisers often try to manipulate consumers' emo": "audio/manipulate_sent1.mp3", "the politician was accused of manipulating the sta": "audio/manipulate_sent2.mp3", "he manipulated his younger brother into doing his ": "audio/manipulate_sent3.mp3", "an empathetic doctor listens carefully to every pa": "audio/empathetic_sent1.mp3", "she gave an empathetic smile that put him at ease.": "audio/empathetic_sent2.mp3", "teachers need to be empathetic toward students fro": "audio/empathetic_sent3.mp3", "the older students tried to intimidate the new arr": "audio/intimidate_sent1.mp3", "she refused to be intimidated by his aggressive to": "audio/intimidate_sent2.mp3", "the witness was intimidated into silence.": "audio/intimidate_sent3.mp3"};
 function playTTS(text, type){
-  let url;
-  if(type==='gb') url = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&type=1`;
-  else if(type==='us') url = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&type=2`;
-  else if(type==='ex') url = `https://fanyi.baidu.com/gettts?lan=uk&spd=4&text=${encodeURIComponent(text)}`;
-  player.src = url;
-  player.play().catch(e=>console.log('播放失败',e));
+  var url;
+  if(type==='gb') url='audio/'+text.toLowerCase()+'_uk.mp3';
+  else if(type==='us') url='audio/'+text.toLowerCase()+'_us.mp3';
+  else if(type==='ex'){
+    var key=text.replace(/<[^>]+>/g,'').trim().toLowerCase().substring(0,50);
+    url=_sentMap[key]||'';
+  }
+  if(!url) return;
+  player.src=url;
+  player.play().catch(function(e){console.log('播放失败',e);});
 }
 
 function playExample(btn, sentence){
