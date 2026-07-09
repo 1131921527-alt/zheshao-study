@@ -297,19 +297,19 @@ def main_index_html(sections_data):
 
     copy_btn = ""
     if WECHAT_ID:
-        copy_btn = '<div class="hint" style="margin-top:2px"><span class="wx-copy" onclick="lcCopyWx()">复制微信号：%s</span></div>\n' % WECHAT_ID
+        copy_btn = '<div class="hint" style="margin-top:2px">想一起交流？加我微信：<span class="wx-copy" onclick="lcCopyWx()">复制微信号 %s</span></div>\n' % WECHAT_ID
     support_html = (
         '<section class="support">\n'
-        '<h2>🤝 与喆少保持连接</h2>\n'
-        '<p>这些内容会一直免费更新。如果对你用得上，欢迎加我微信一起交流 —— 把日子过好。</p>\n'
+        '<h2>☕ 觉得有用，欢迎打赏</h2>\n'
+        '<p>这些内容会一直免费更新。如果觉得我做得还可以，欢迎扫码打赏，随意就好 —— 也欢迎加我微信一起交流。</p>\n'
         '<div class="qr-row">\n'
         '  <div class="qr-card">\n'
-        '    <img class="qr-img" src="%s" alt="微信二维码" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">\n'
-        '    <div class="qr-fallback">微信二维码<br>放入 assets/wechat.png</div>\n'
-        '    <span class="label">微信</span>\n'
+        '    <img class="qr-img" src="%s" alt="微信赞赏码" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">\n'
+        '    <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>\n'
+        '    <span class="label">微信赞赏码</span>\n'
         '  </div>\n'
         '</div>\n'
-        '<div class="hint">在微信里打开本页，长按上方二维码即可识别添加；或点「复制微信号」手动添加。</div>\n'
+        '<div class="hint">在微信里打开本页，长按上方二维码即可打赏。</div>\n'
         '%s'
         '</section>\n'
     ) % (WECHAT_QR, copy_btn)
