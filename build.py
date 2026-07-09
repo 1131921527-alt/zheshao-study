@@ -12,6 +12,78 @@ SITE_TITLE = "喆少的学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
+# ---------- 联系/收款信息（按需修改） ----------
+# 支付宝收款码解码出的真实跳转链接（可直接点击跳转）
+ALIPAY_URL = "https://qr.alipay.com/fkx17072tjhicy025mhjk00?0&T=58488-10-14%2017:21:43"
+# 微信号（留空则不显示“复制微信号”按钮）；个人微信码是加密码，无法被标准解码器读出链接，
+# 只能在微信内长按识别，因此这里提供复制微信号作为兜底。
+WECHAT_ID = ""
+# 微信 / 支付宝 收款码图片路径（放在 assets/ 下）
+WECHAT_QR = "assets/wechat.png"
+ALIPAY_QR = "assets/alipay.jpg"
+
+# ---------- 实时时钟（注入到每个页面） ----------
+CLOCK_CSS = """
+#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(88,166,255,.25);box-shadow:0 2px 14px rgba(0,0,0,.5);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
+#liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
+@keyframes lcPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+#liveClockBar .lc-date{color:#8b949e;white-space:nowrap}
+#liveClockBar .lc-time{font-variant-numeric:tabular-nums;font-weight:700;color:#e6edf3;letter-spacing:.5px;font-size:15px}
+#liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
+#liveClockBar .lc-sec{color:#ff7b72}
+#liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
+#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
+#liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
+@media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
+body{padding-top:44px!important}
+"""
+CLOCK_HTML = """
+<div id="liveClockBar">
+<span class="lc-dot"></span>
+<span class="lc-date" id="lcDate">--</span>
+<span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
+<span class="lc-tag">时间正在流逝 ⏳</span>
+<i class="lc-bar" id="lcBar"></i>
+</div>
+"""
+CLOCK_JS = """
+(function(){
+  var w=['周日','周一','周二','周三','周四','周五','周六'];
+  function p(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var d=new Date();
+    var dt=document.getElementById('lcDate');
+    if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
+    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
+    if(h)h.textContent=p(d.getHours());
+    if(m)m.textContent=p(d.getMinutes());
+    if(s)s.textContent=p(d.getSeconds());
+    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
+  }
+  tick();setInterval(tick,1000);
+  window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
+  window.lcCopyWx=function(){
+    var id=__WECHAT_ID__;
+    if(!id) return;
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
+    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
+  };
+})();
+"""
+CLOCK_JS = CLOCK_JS.replace("__WECHAT_ID__", '"%s"' % WECHAT_ID)
+
+
+def inject_clock(html):
+    """在每个页面注入实时时钟（自包含，不依赖外部资源）。"""
+    if "liveClockBar" in html:
+        return html
+    block = "<style>" + CLOCK_CSS + "</style>" + CLOCK_HTML + "<script>" + CLOCK_JS + "</script>"
+    if "</body>" in html:
+        return html.replace("</body>", block + "</body>", 1)
+    if "</html>" in html:
+        return html.replace("</html>", block + "</html>", 1)
+    return html + block
+
 
 def weekday_cn(d):
     return WEEK[d.weekday()]
@@ -151,6 +223,9 @@ a { color: inherit; text-decoration: none; }
 .qr-card img { width: 140px; height: 140px; object-fit: cover; border-radius: 12px; background: #fff; border: 1px solid var(--line); }
 .qr-card .qr-fallback { width: 140px; height: 140px; border-radius: 12px; background: repeating-linear-gradient(45deg,#1f6feb22,#1f6feb22 8px,#0d1117 8px,#0d1117 16px); border: 1px dashed var(--muted); display: none; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; text-align: center; padding: 8px; }
 .qr-card .label { display: block; margin-top: 8px; font-size: 13px; color: var(--fg); font-weight: 600; }
+.qr-img { cursor: zoom-in; transition: transform .15s; }
+.qr-img:active { transform: scale(.97); }
+.qr-link { display: block; text-decoration: none; }
 .support .hint { font-size: 11px; color: var(--muted); margin-top: 16px; }
 .footer { text-align: center; color: #555; font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); line-height: 1.8; }
 .back { display: inline-flex; align-items: center; gap: 6px; color: #58a6ff; font-size: 14px; font-weight: 600; margin: 22px 0 6px; }
@@ -218,6 +293,32 @@ def main_index_html(sections_data):
             '</a>\n'
         ) % (sec["grad"], sec["out"], sec["icon"], latest, sec["title"], sec["desc"], len(items))
 
+    copy_btn = ""
+    if WECHAT_ID:
+        copy_btn = '<div class="hint"><span class="qr-copy" onclick="lcCopyWx()">复制微信号</span></div>\n'
+    support_html = (
+        '<section class="support">\n'
+        '<h2>🤝 与喆少保持连接</h2>\n'
+        '<p>这些内容会一直免费更新。如果对你用得上，欢迎扫码加我微信，或关注公众号 —— 一起交流，一起把日子过好。</p>\n'
+        '<div class="qr-row">\n'
+        '  <div class="qr-card">\n'
+        '    <img class="qr-img" src="%s" alt="微信二维码" onclick="lcZoom(this)" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">\n'
+        '    <div class="qr-fallback">微信二维码<br>放入 assets/wechat.png</div>\n'
+        '    <span class="label">微信</span>\n'
+        '  </div>\n'
+        '  <div class="qr-card">\n'
+        '    <a class="qr-link" href="%s" target="_blank" rel="noopener">\n'
+        '      <img class="qr-img" src="%s" alt="支付宝二维码" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">\n'
+        '      <div class="qr-fallback">支付宝二维码<br>放入 assets/alipay.jpg</div>\n'
+        '    </a>\n'
+        '    <span class="label">支付宝</span>\n'
+        '  </div>\n'
+        '</div>\n'
+        '<div class="hint">微信内长按二维码即可识别 · 支付宝可直接点击跳转</div>\n'
+        '%s'
+        '</section>\n'
+    ) % (WECHAT_QR, ALIPAY_URL, ALIPAY_QR, copy_btn)
+
     return """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -238,22 +339,11 @@ def main_index_html(sections_data):
 <section class="grid">
 %s</section>
 
-<section class="support">
-<h2>☕ 请喆少喝杯咖啡</h2>
-<p>内容全部免费公开。如果对你有帮助，扫下面的码支持 1 元，就是最大的鼓励。</p>
-<div class="qr-row">
-<div class="qr-card">
-<img src="assets/wechat.png" alt="微信收款码" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-<div class="qr-fallback">微信收款码<br>放入 assets/wechat.png</div>
-<span class="label">微信</span>
-</div>
-</div>
-<div class="hint">收款码位置：哲少的学习任务/assets/wechat.png，放进去就自动显示。</div>
-</section>
+%s
 </main>
 <footer>腾讯龙虾的成品 · %s<br>内容每日自动更新 · 由 GitHub Pages 托管</footer>
 </body>
-</html>""" % (SITE_TITLE, SITE_TITLE, total, cards, SITE_TITLE)
+</html>""" % (SITE_TITLE, SITE_TITLE, total, cards, support_html, SITE_TITLE)
 
 
 def main():
@@ -288,7 +378,16 @@ def main():
                     if m:
                         src_file = os.path.join(src, "ielts-vocab-day%s.html" % m.group(1))
             if src_file and os.path.isfile(src_file):
-                shutil.copy2(src_file, os.path.join(out_dir, out_name))
+                dst = os.path.join(out_dir, out_name)
+                shutil.copy2(src_file, dst)
+                # 注入实时时钟（自包含，不依赖页面路径）
+                try:
+                    with open(dst, "r", encoding="utf-8") as fh:
+                        html = fh.read()
+                    with open(dst, "w", encoding="utf-8") as fh:
+                        fh.write(inject_clock(html))
+                except Exception as e:
+                    print("  [warn] 注入时钟失败 %s: %s" % (out_name, e))
         # ielts 板块：复制本地音频目录（单词发音+例句发音）
         if sec["kind"] == "ielts":
             audio_src = os.path.join(src, "audio")
@@ -303,12 +402,12 @@ def main():
                 print("  [%s] 复制音频 %d 个" % (sec["title"], cnt))
         # 写板块列表页
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
-            f.write(section_index_html(sec, items))
+            f.write(inject_clock(section_index_html(sec, items)))
         sections_data.append((sec, items))
         print("  [%s] %d 期" % (sec["title"], len(items)))
     # 写首页
     with open(os.path.join(OUT, "index.html"), "w", encoding="utf-8") as f:
-        f.write(main_index_html(sections_data))
+        f.write(inject_clock(main_index_html(sections_data)))
     print("首页已生成。站点目录：%s" % OUT)
 
 
