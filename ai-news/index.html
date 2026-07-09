@@ -80,7 +80,7 @@ body{padding-top:44px!important}
   tick();setInterval(tick,1000);
   window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
   window.lcCopyWx=function(){
-    var id="";
+    var id="Harryalwayslucky";
     if(!id) return;
     if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
     else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }

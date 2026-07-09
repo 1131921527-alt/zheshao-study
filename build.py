@@ -17,7 +17,7 @@ WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 ALIPAY_URL = "https://qr.alipay.com/fkx17072tjhicy025mhjk00?0&T=58488-10-14%2017:21:43"
 # 微信号（留空则不显示“复制微信号”按钮）；个人微信码是加密码，无法被标准解码器读出链接，
 # 只能在微信内长按识别，因此这里提供复制微信号作为兜底。
-WECHAT_ID = ""
+WECHAT_ID = "Harryalwayslucky"
 # 微信 / 支付宝 收款码图片路径（放在 assets/ 下）
 WECHAT_QR = "assets/wechat.png"
 ALIPAY_QR = "assets/alipay.jpg"
@@ -220,12 +220,14 @@ a { color: inherit; text-decoration: none; }
 .support p { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
 .qr-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .qr-card { width: 140px; }
-.qr-card img { width: 140px; height: 140px; object-fit: cover; border-radius: 12px; background: #fff; border: 1px solid var(--line); }
+.qr-card img { width: 150px; height: 150px; object-fit: contain; border-radius: 12px; background: #fff; border: 1px solid var(--line); }
 .qr-card .qr-fallback { width: 140px; height: 140px; border-radius: 12px; background: repeating-linear-gradient(45deg,#1f6feb22,#1f6feb22 8px,#0d1117 8px,#0d1117 16px); border: 1px dashed var(--muted); display: none; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; text-align: center; padding: 8px; }
 .qr-card .label { display: block; margin-top: 8px; font-size: 13px; color: var(--fg); font-weight: 600; }
 .qr-img { cursor: zoom-in; transition: transform .15s; }
 .qr-img:active { transform: scale(.97); }
 .qr-link { display: block; text-decoration: none; }
+.wx-copy { display: inline-block; margin-top: 14px; color: #58a6ff; font-size: 13px; border: 1px solid rgba(88,166,255,.4); border-radius: 20px; padding: 8px 18px; cursor: pointer; font-weight: 600; }
+.wx-copy:active { background: rgba(88,166,255,.12); }
 .support .hint { font-size: 11px; color: var(--muted); margin-top: 16px; }
 .footer { text-align: center; color: #555; font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); line-height: 1.8; }
 .back { display: inline-flex; align-items: center; gap: 6px; color: #58a6ff; font-size: 14px; font-weight: 600; margin: 22px 0 6px; }
@@ -295,29 +297,22 @@ def main_index_html(sections_data):
 
     copy_btn = ""
     if WECHAT_ID:
-        copy_btn = '<div class="hint"><span class="qr-copy" onclick="lcCopyWx()">复制微信号</span></div>\n'
+        copy_btn = '<div class="hint" style="margin-top:2px"><span class="wx-copy" onclick="lcCopyWx()">复制微信号：%s</span></div>\n' % WECHAT_ID
     support_html = (
         '<section class="support">\n'
         '<h2>🤝 与喆少保持连接</h2>\n'
-        '<p>这些内容会一直免费更新。如果对你用得上，欢迎扫码加我微信，或关注公众号 —— 一起交流，一起把日子过好。</p>\n'
+        '<p>这些内容会一直免费更新。如果对你用得上，欢迎加我微信一起交流 —— 把日子过好。</p>\n'
         '<div class="qr-row">\n'
         '  <div class="qr-card">\n'
-        '    <img class="qr-img" src="%s" alt="微信二维码" onclick="lcZoom(this)" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">\n'
+        '    <img class="qr-img" src="%s" alt="微信二维码" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">\n'
         '    <div class="qr-fallback">微信二维码<br>放入 assets/wechat.png</div>\n'
         '    <span class="label">微信</span>\n'
         '  </div>\n'
-        '  <div class="qr-card">\n'
-        '    <a class="qr-link" href="%s" target="_blank" rel="noopener">\n'
-        '      <img class="qr-img" src="%s" alt="支付宝二维码" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">\n'
-        '      <div class="qr-fallback">支付宝二维码<br>放入 assets/alipay.jpg</div>\n'
-        '    </a>\n'
-        '    <span class="label">支付宝</span>\n'
-        '  </div>\n'
         '</div>\n'
-        '<div class="hint">微信内长按二维码即可识别 · 支付宝可直接点击跳转</div>\n'
+        '<div class="hint">在微信里打开本页，长按上方二维码即可识别添加；或点「复制微信号」手动添加。</div>\n'
         '%s'
         '</section>\n'
-    ) % (WECHAT_QR, ALIPAY_URL, ALIPAY_QR, copy_btn)
+    ) % (WECHAT_QR, copy_btn)
 
     return """<!DOCTYPE html>
 <html lang="zh-CN">
