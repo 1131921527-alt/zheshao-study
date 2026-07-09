@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-哲少的学习任务 · 站点生成器
+泽少的学习任务 · 站点生成器
 扫描 腾讯龙虾的成品 下各自动化产出目录，归一化命名后生成静态站点。
 重跑本脚本即可把新内容 + 历史同步进站点，随后 git push 即上线。
 """
@@ -8,7 +8,7 @@ import os, shutil, re, glob, datetime
 
 SRC = r"E:\workbuddyFIle\腾讯龙虾的成品"
 OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\哲少的学习任务"
-SITE_TITLE = "喆少的学习任务"
+SITE_TITLE = "泽少的学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
@@ -24,7 +24,7 @@ ALIPAY_QR = "assets/alipay.jpg"
 
 # ---------- 实时时钟（注入到每个页面） ----------
 CLOCK_CSS = """
-#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(88,166,255,.25);box-shadow:0 2px 14px rgba(0,0,0,.5);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
+#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
 #liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
 @keyframes lcPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
 #liveClockBar .lc-date{color:#8b949e;white-space:nowrap}
@@ -198,45 +198,54 @@ def collect(sec):
 CSS = """* { margin: 0; padding: 0; box-sizing: border-box }
 :root { --bg:#0d1117; --fg:#c9d1d9; --muted:#8b949e; --line:#30363d; --card:#161b22; }
 html { -webkit-text-size-adjust: 100%; }
-body { background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; min-height: 100vh; }
+body { background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; min-height: 100vh; position: relative; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: -20%; z-index: -1; background: radial-gradient(40% 40% at 18% 22%, rgba(88,166,255,.16), transparent 60%), radial-gradient(38% 38% at 82% 28%, rgba(192,132,252,.16), transparent 60%), radial-gradient(42% 42% at 50% 86%, rgba(255,123,114,.12), transparent 62%); filter: blur(30px); animation: bgFloat 16s ease-in-out infinite alternate; }
+@keyframes bgFloat { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(2%,-2%) scale(1.08); } }
 a { color: inherit; text-decoration: none; }
 .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 60px; }
 .hero { text-align: center; padding: 48px 20px 36px; background: radial-gradient(120% 120% at 50% 0%, #1b2740 0%, #0d1117 70%); border-bottom: 1px solid var(--line); }
-.hero .logo { font-size: 52px; line-height: 1; margin-bottom: 12px; }
-.hero h1 { font-size: 28px; color: #fff; font-weight: 800; letter-spacing: 1px; }
+.hero .logo { font-size: 52px; line-height: 1; margin-bottom: 12px; filter: drop-shadow(0 0 16px rgba(88,166,255,.55)); animation: logoPulse 3.4s ease-in-out infinite; }
+@keyframes logoPulse { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.hero h1 { font-size: 30px; font-weight: 800; letter-spacing: 1px; background: linear-gradient(90deg,#7cc4ff,#c084fc 55%,#ff9b8e); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 26px rgba(120,170,255,.25); }
 .hero .tag { font-size: 14px; color: #58a6ff; margin-top: 10px; }
 .hero .sub { font-size: 12px; color: var(--muted); margin-top: 6px; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; animation: gridIn .6s ease; }
+@keyframes gridIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
-.card { border-radius: 16px; padding: 22px 20px; position: relative; overflow: hidden; border: 1px solid var(--line); transition: transform .15s, border-color .15s; display: block; }
+.card { border-radius: 16px; padding: 22px 20px; position: relative; overflow: hidden; border: 1px solid var(--line); transition: transform .2s cubic-bezier(.2,.8,.2,1), border-color .2s, box-shadow .2s; display: block; }
+.card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(255,255,255,.10), transparent 42%); opacity: 0; transition: opacity .25s; pointer-events: none; }
+.card:hover { transform: translateY(-6px); border-color: rgba(120,170,255,.65); box-shadow: 0 14px 34px rgba(0,0,0,.45), 0 0 22px rgba(88,166,255,.25); }
+.card:hover::before { opacity: 1; }
 .card:active { transform: scale(.98); }
 .card .icon { font-size: 30px; }
 .card .title { font-size: 17px; font-weight: 700; color: #fff; margin: 8px 0 4px; }
 .card .latest { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 20px; background: rgba(255,255,255,.14); color: #fff; margin-bottom: 8px; }
 .card .desc { font-size: 12.5px; color: rgba(255,255,255,.72); line-height: 1.55; }
 .card .count { font-size: 12px; color: rgba(255,255,255,.55); margin-top: 10px; }
-.support { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px 22px; text-align: center; margin-top: 8px; }
+.support { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px 22px; text-align: center; margin-top: 8px; box-shadow: 0 8px 30px rgba(0,0,0,.35); }
 .support h2 { font-size: 18px; color: #fff; margin-bottom: 8px; }
 .support p { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
 .qr-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .qr-card { width: 140px; }
-.qr-card img { width: 150px; height: 150px; object-fit: contain; border-radius: 12px; background: #fff; border: 1px solid var(--line); }
+.qr-card img { width: 150px; height: 150px; object-fit: contain; border-radius: 12px; background: #fff; border: 1px solid var(--line); box-shadow: 0 0 0 4px rgba(255,255,255,.05), 0 10px 28px rgba(0,0,0,.45); }
 .qr-card .qr-fallback { width: 140px; height: 140px; border-radius: 12px; background: repeating-linear-gradient(45deg,#1f6feb22,#1f6feb22 8px,#0d1117 8px,#0d1117 16px); border: 1px dashed var(--muted); display: none; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; text-align: center; padding: 8px; }
 .qr-card .label { display: block; margin-top: 8px; font-size: 13px; color: var(--fg); font-weight: 600; }
 .qr-img { cursor: zoom-in; transition: transform .15s; }
 .qr-img:active { transform: scale(.97); }
 .qr-link { display: block; text-decoration: none; }
-.wx-copy { display: inline-block; margin-top: 14px; color: #58a6ff; font-size: 13px; border: 1px solid rgba(88,166,255,.4); border-radius: 20px; padding: 8px 18px; cursor: pointer; font-weight: 600; }
-.wx-copy:active { background: rgba(88,166,255,.12); }
+.wx-copy { display: inline-block; margin-top: 14px; color: #fff; font-size: 13px; border: none; border-radius: 20px; padding: 9px 20px; cursor: pointer; font-weight: 700; background: linear-gradient(90deg,#1f6feb,#58a6ff); box-shadow: 0 4px 16px rgba(31,111,235,.45); transition: transform .15s, box-shadow .15s; }
+.wx-copy:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(88,166,255,.6); }
+.wx-copy:active { transform: translateY(0); }
 .support .hint { font-size: 11px; color: var(--muted); margin-top: 16px; }
 .footer { text-align: center; color: #555; font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); line-height: 1.8; }
 .back { display: inline-flex; align-items: center; gap: 6px; color: #58a6ff; font-size: 14px; font-weight: 600; margin: 22px 0 6px; }
 .sec-head { text-align: center; padding: 36px 0 8px; }
 .sec-head .icon { font-size: 40px; }
-.sec-head h1 { font-size: 24px; color: #fff; margin: 8px 0 4px; }
+.sec-head h1 { font-size: 24px; margin: 8px 0 4px; background: linear-gradient(90deg,#7cc4ff,#c084fc); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .sec-head .desc { font-size: 13px; color: var(--muted); }
 .list { display: flex; flex-direction: column; gap: 2px; margin-top: 18px; }
-.list a { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; transition: border-color .15s, background .15s; }
+.list a { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; transition: border-color .15s, background .15s, transform .15s; }
+.list a:hover { border-color: rgba(120,170,255,.55); background: #1b2433; transform: translateX(5px); }
 .list a:active { background: #1f2937; }
 .list a .label { font-weight: 600; color: #e6edf3; }
 .list a .arrow { color: #555; font-size: 16px; }
@@ -319,7 +328,7 @@ def main_index_html(sections_data):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="喆少的学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
+<meta name="description" content="泽少的学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
 <title>%s</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
