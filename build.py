@@ -247,13 +247,8 @@ def main_index_html(sections_data):
 <div class="qr-fallback">微信收款码<br>放入 assets/wechat.png</div>
 <span class="label">微信</span>
 </div>
-<div class="qr-card">
-<img src="assets/alipay.jpg" alt="支付宝收款码" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="qr-fallback">支付宝收款码<br>放入 assets/alipay.jpg</div>
-<span class="label">支付宝</span>
 </div>
-</div>
-<div class="hint">收款码位置：喆少的学习任务/assets/wechat.png、alipay.jpg，放进去就自动显示。</div>
+<div class="hint">收款码位置：哲少的学习任务/assets/wechat.png，放进去就自动显示。</div>
 </section>
 </main>
 <footer>腾讯龙虾的成品 · %s<br>内容每日自动更新 · 由 GitHub Pages 托管</footer>
