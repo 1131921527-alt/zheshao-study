@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 - 2026年6月4日</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-secondary: #8b949e;
+    --accent: #58a6ff;
+    --heavy: #ff7b72;
+    --focus: #d2991d;
+    --watch: #3fb950;
+    --gradient-1: #7928ca;
+    --gradient-2: #ff0080;
+    --gradient-3: #007cf0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 40px;
+  }
+
+  /* Header */
+  .header {
+    padding: 28px 20px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #16213e 100%);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(88,166,255,0.08) 0%, transparent 60%);
+    animation: headerGlow 4s ease-in-out infinite;
+  }
+  @keyframes headerGlow {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10px, -10px); }
+  }
+  .header-content { position: relative; z-index: 1; }
+  .logo-icon { font-size: 40px; margin-bottom: 8px; display: block; }
+  .title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+  .date-badge {
+    display: inline-block;
+    background: rgba(88,166,255,0.12);
+    border: 1px solid rgba(88,166,255,0.25);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 13px;
+    color: var(--accent);
+    margin-top: 12px;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-count { font-size: 22px; font-weight: 700; }
+  .stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+  .stat-heavy .stat-count { color: var(--heavy); }
+  .stat-focus .stat-count { color: var(--focus); }
+  .stat-watch .stat-count { color: var(--watch); }
+
+  /* Cards */
+  .content { padding: 0 16px; max-width: 600px; margin: 0 auto; }
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 24px 0 12px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 14px;
+    position: relative;
+    transition: transform 0.2s, border-color 0.2s;
+    overflow: hidden;
+  }
+  .card:active { transform: scale(0.985); }
+  .card::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    border-radius: 3px 0 0 3px;
+  }
+  .card-heavy { border-color: rgba(255,123,114,0.3); }
+  .card-heavy::after { background: linear-gradient(180deg, var(--heavy), #ff3b30); }
+  .card-focus { border-color: rgba(210,153,29,0.3); }
+  .card-focus::after { background: linear-gradient(180deg, var(--focus), #e8a838); }
+  .card-watch { border-color: rgba(63,185,80,0.3); }
+  .card-watch::after { background: linear-gradient(180deg, var(--watch), #2ea043); }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .card-number {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .badge-heavy { background: rgba(255,123,114,0.15); color: var(--heavy); border: 1px solid rgba(255,123,114,0.3); }
+  .badge-focus { background: rgba(210,153,29,0.15); color: var(--focus); border: 1px solid rgba(210,153,29,0.3); }
+  .badge-watch { background: rgba(63,185,80,0.15); color: var(--watch); border: 1px solid rgba(63,185,80,0.3); }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .card-body strong { color: var(--text); font-weight: 600; }
+  .card-source {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(139,148,158,0.5);
+  }
+
+  /* One Sentence */
+  .onesentence-section {
+    padding: 28px 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .onesentence-card {
+    background: linear-gradient(135deg, rgba(121,40,202,0.12), rgba(0,124,240,0.12));
+    border: 1px solid rgba(121,40,202,0.3);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .onesentence-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    font-size: 72px;
+    color: rgba(121,40,202,0.15);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .onesentence-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(121,40,202,0.8);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .onesentence-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 24px 20px 32px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .footer-divider {
+    width: 60px;
+    height: 2px;
+    background: rgba(139,148,158,0.2);
+    margin: 0 auto 16px;
+    border-radius: 1px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* Pulse animation for badges */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  .badge-heavy { animation: pulse 2s ease-in-out infinite; }
+
+  /* Responsive */
+  @media (max-width: 360px) {
+    .title { font-size: 22px; }
+    .card-title { font-size: 15px; }
+    .card-body { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-content">
+    <span class="logo-icon">🤖</span>
+    <h1 class="title">AI 动态播报</h1>
+    <p class="subtitle">全球人工智能 · 每日速览</p>
+    <div class="date-badge">📅 2026年6月4日 星期四</div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item stat-heavy"><div class="stat-count">2</div><div class="stat-label">重磅</div></div>
+  <div class="stat-item stat-focus"><div class="stat-count">3</div><div class="stat-label">重点</div></div>
+  <div class="stat-item stat-watch"><div class="stat-count">2</div><div class="stat-label">关注</div></div>
+</div>
+
+<div class="content">
+
+<!-- 第1条：重磅 -->
+<div class="card card-heavy">
+  <div class="card-header">
+    <span class="card-number">NO.1</span>
+    <span class="badge badge-heavy">重磅</span>
+  </div>
+  <div class="card-title">Anthropic秘密递交IPO申请，估值逼近万亿美元</div>
+  <div class="card-body">
+    Anthropic已向美国证券交易委员会（SEC）<strong>秘密递交S-1注册声明草案</strong>，正式启动IPO流程。公司最新估值高达<strong>9650亿美元</strong>，在上市竞赛中领先于OpenAI。此前Anthropic完成新一轮融资，增长动力来自Claude Code、企业级需求激增以及Claude Opus 4.8的发布。
+  </div>
+  <div class="card-source">来源：TechCrunch · 2026-06-03</div>
+</div>
+
+<!-- 第2条：重磅 -->
+<div class="card card-heavy">
+  <div class="card-header">
+    <span class="card-number">NO.2</span>
+    <span class="badge badge-heavy">重磅</span>
+  </div>
+  <div class="card-title">微软发布MAI系列7款模型，构建自主AI技术栈</div>
+  <div class="card-body">
+    微软AI部门（Mustafa Suleyman领导）一口气发布<strong>7款MAI系列模型</strong>：旗舰推理模型MAI-Thinking-1在SWE Bench Pro上媲美Claude Opus 4.6；MAI-Code-1-Flash实现低延迟代码生成并原生集成VS Code；MAI-Image-2.5支持多轮图像编辑；MAI-Transcribe-1.5覆盖<strong>43种语言</strong>的音频转录。此举标志着微软加速降低对OpenAI的战略依赖。
+  </div>
+  <div class="card-source">来源：DevFlokers · 2026-06-02</div>
+</div>
+
+<!-- 第3条：重点 -->
+<div class="card card-focus">
+  <div class="card-header">
+    <span class="card-number">NO.3</span>
+    <span class="badge badge-focus">重点</span>
+  </div>
+  <div class="card-title">欧盟正式提出《云与AI发展法案》，打造自主计算生态</div>
+  <div class="card-body">
+    欧洲委员会于6月3日正式提出<strong>《云与AI发展法案》</strong>，旨在协调各成员国资本投资方向、保护本地数据主权，构建欧洲自主的计算生态系统。该法案被视为欧盟在AI主权竞赛中的关键一步，预示着欧洲将对AI基础设施进行大规模公共投资。
+  </div>
+  <div class="card-source">来源：DevFlokers · 2026-06-03</div>
+</div>
+
+<!-- 第4条：重点 -->
+<div class="card card-focus">
+  <div class="card-header">
+    <span class="card-number">NO.4</span>
+    <span class="badge badge-focus">重点</span>
+  </div>
+  <div class="card-title">OpenAI Codex扩展企业级功能：从编程助手到商业平台</div>
+  <div class="card-body">
+    OpenAI为Codex新增<strong>Sites、Annotations及企业工作流插件</strong>，将AI编程工具的能力边界从代码生成延伸到文档协作、知识管理和业务流程自动化。这一定位转变意味着Codex正从开发者工具蜕变为<strong>企业级AI工作平台</strong>。
+  </div>
+  <div class="card-source">来源：TheAITrack · 2026-06-02</div>
+</div>
+
+<!-- 第5条：重点 -->
+<div class="card card-focus">
+  <div class="card-header">
+    <span class="card-number">NO.5</span>
+    <span class="badge badge-focus">重点</span>
+  </div>
+  <div class="card-title">DeepSeek V4 Pro永久降价75%，中国AI性价比优势持续凸显</div>
+  <div class="card-body">
+    DeepSeek宣布<strong>V4 Pro模型永久降价75%</strong>，此前临时降价转为永久策略。在AI智能体、编程工具和长上下文工作流等场景中，DeepSeek的低成本优势进一步扩大。与此同时，Kimi K2.5、Qwen 3.5等国产模型也在持续迭代，中国AI企业在模型性价比和落地应用方面持续领先。
+  </div>
+  <div class="card-source">来源：TheAITrack · 2026-05-26</div>
+</div>
+
+<!-- 第6条：关注 -->
+<div class="card card-watch">
+  <div class="card-header">
+    <span class="card-number">NO.6</span>
+    <span class="badge badge-watch">关注</span>
+  </div>
+  <div class="card-title">联合国警告：AI能耗与电子废弃物危机急剧恶化</div>
+  <div class="card-body">
+    联合国支持的研究报告于6月3日发布，发出严厉警告：训练一个ChatGPT-5级别模型的电力消耗<strong>可为77万非洲居民供电一年</strong>。到2030年，AI服务器快速更替产生的电子废弃物相当于<strong>每年丢弃250座埃菲尔铁塔</strong>。报告呼吁各国将AI可持续发展纳入监管框架。
+  </div>
+  <div class="card-source">来源：DevFlokers · 2026-06-03</div>
+</div>
+
+<!-- 第7条：关注 -->
+<div class="card card-watch">
+  <div class="card-header">
+    <span class="card-number">NO.7</span>
+    <span class="badge badge-watch">关注</span>
+  </div>
+  <div class="card-title">SK海力士市值首破1万亿美元，AI芯片需求持续爆发</div>
+  <div class="card-body">
+    受AI对高带宽内存（HBM）需求激增驱动，<strong>SK海力士市值首次突破1万亿美元大关</strong>，与三星、美光共同重塑全球芯片产业格局。AI训练和推理对内存带宽的饥渴需求，正将存储芯片从"配角"推向AI基础设施的核心位置。
+  </div>
+  <div class="card-source">来源：TheAITrack · 2026-05-27</div>
+</div>
+
+</div>
+
+<!-- 今日AI一句话 -->
+<div class="onesentence-section">
+  <div class="onesentence-card">
+    <div class="onesentence-label">📌 今日 AI 一句话</div>
+    <div class="onesentence-text">
+      资本、模型、监管三线并进，AI行业正从技术竞赛走向生态竞争——谁能在模型性能、商业落地和合规治理之间找到平衡，谁就掌握了下一个时代的入场券。
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-divider"></div>
+  <p>AI动态播报 · 每日自动生成</p>
+  <p style="margin-top:4px;">数据来源：公开新闻报道 | 仅供参考，不构成投资建议</p>
+</div>
+
+</body>
+</html>

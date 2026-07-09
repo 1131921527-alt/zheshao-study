@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026年6月9日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 16px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    position: relative;
+  }
+  .header-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(248,81,73,0.10) 0%, rgba(210,153,29,0.06) 50%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-date {
+    font-size: 13px;
+    color: #f85149;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f85149 0%, #d2991d 50%, #58a6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 4px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    margin: 0 auto 24px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    max-width: 420px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  .stat-num.red { color: #f85149; }
+  .stat-num.orange { color: #d2991d; }
+  .stat-num.green { color: #3fb950; }
+  .stat-label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+
+  /* News cards */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+
+  .card-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .badge-重磅 {
+    background: rgba(248,81,73,0.15);
+    color: #f85149;
+    border: 1px solid rgba(248,81,73,0.3);
+  }
+  .badge-重点 {
+    background: rgba(210,153,29,0.15);
+    color: #d2991d;
+    border: 1px solid rgba(210,153,29,0.3);
+  }
+  .badge-关注 {
+    background: rgba(63,185,80,0.15);
+    color: #3fb950;
+    border: 1px solid rgba(63,185,80,0.3);
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-body {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #484f58;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-source::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #30363d;
+    border-radius: 50%;
+  }
+
+  /* Highlight tag inside card */
+  .card-highlight {
+    display: inline;
+    color: #58a6ff;
+    font-weight: 600;
+  }
+
+  /* Summary section */
+  .summary-section {
+    max-width: 600px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, rgba(248,81,73,0.06) 0%, rgba(210,153,29,0.06) 100%);
+    border: 1px solid rgba(248,81,73,0.2);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-label {
+    font-size: 12px;
+    color: #f85149;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .summary-quote {
+    font-size: 15px;
+    color: #e6edf3;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  .summary-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 28px 0 12px;
+    font-size: 11px;
+    color: #30363d;
+    letter-spacing: 1px;
+  }
+
+  /* Numbering dot */
+  .card-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(248,81,73,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-glow"></div>
+  <div class="header-date">2026.06.09 · TUESDAY</div>
+  <h1>AI 动态播报</h1>
+  <div class="header-subtitle">每日精选 · 全球视野</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red">3</div>
+    <div class="stat-label">重磅</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num orange">3</div>
+    <div class="stat-label">重点</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green">1</div>
+    <div class="stat-label">关注</div>
+  </div>
+</div>
+
+<div class="news-list">
+
+  <!-- Card 1 -->
+  <div class="news-card">
+    <div class="card-number">01</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">OpenAI 正式递交 IPO 申请，估值 8520 亿美元，最快秋季上市</div>
+    <div class="card-body">
+      6 月 8 日，OpenAI 正式向 SEC 递交保密 S-1 上市申请文件，估值高达 <span class="card-highlight">8520 亿美元（约合人民币 5.78 万亿）</span>。公司最快可能于 <span class="card-highlight">今年 9 月挂牌</span>，融资额有望冲击千亿美元量级。就在一周前，竞争对手 Anthropic 也已秘密递表。投行指出，率先上市的 AI 企业将抢占行业主导地位——而 OpenAI 今年 3 月刚完成 1220 亿美元融资，为硅谷史上最大规模。
+    </div>
+    <div class="card-source">证券时报 / 新浪财经 / CNBC</div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="news-card">
+    <div class="card-number">02</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">苹果 WWDC 2026 开幕：Siri 全面拥抱 Gemini，库克告别主题演讲</div>
+    <div class="card-body">
+      北京时间 6 月 9 日凌晨，苹果 WWDC 2026 正式开幕。全新 <span class="card-highlight">Siri 与谷歌 Gemini 大模型深度整合</span>，采用全新 AI 架构实现更智能的交互体验。这是 <span class="card-highlight">蒂姆·库克作为 CEO 主持的最后一届 WWDC</span>。苹果高管克雷格在台上罕见严厉抨击科技界"为 AI 而 AI"的功利现状，强调苹果 AI 路线坚持实用主义。新版 Siri 还推出独立 App，重新定义了语音助手的交互范式。
+    </div>
+    <div class="card-source">BusinessToday / 新浪科技 / 虎嗅</div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="news-card">
+    <div class="card-number">03</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">苹果联合谷歌与英伟达，三巨头合研 Apple Foundation Model Cloud Pro</div>
+    <div class="card-body">
+      打破巨头各自为战的局面，苹果、谷歌与英伟达宣布联合开发新一代 AI 模型 <span class="card-highlight">Apple Foundation Model Cloud Pro</span>，旨在平衡高性能计算与隐私保护，性能对标谷歌 Gemini。苹果同时回应"套壳 Gemini"质疑：AFM 完全自研，虽在蒸馏与训练中借助 Gemini，但最终产品基于苹果自有代码与数据体系独立完成。三巨头联手，标志着 AI 基础设施层面的深度合纵。
+    </div>
+    <div class="card-source">AIBase / 多家媒体</div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="news-card">
+    <div class="card-number">04</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">阿里巴巴 AI 大重组：合并两大部门成立 Token Foundry，吴泳铭亲自挂帅</div>
+    <div class="card-body">
+      6 月 8 日，阿里巴巴宣布合并 <span class="card-highlight">通义大模型事业部与未来生活实验室</span>，成立 <span class="card-highlight">Token Foundry 事业部</span>，由集团 CEO 吴泳铭直接负责。周靖人升任阿里巴巴首席科学家，牵头成立 AI 未来研究院。此次调整将大模型研发与视频生成等 AI 应用能力全面整合，属于阿里"创造 Token、输送 Token、应用 Token"的全栈战略。AI 在阿里的地位已升至最高决策层。
+    </div>
+    <div class="card-source">每日经济新闻 / 新智元 / 时代周报</div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="news-card">
+    <div class="card-number">05</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">蚂蚁集团发布 AMP 协议，打通全球智能体支付新链路</div>
+    <div class="card-body">
+      蚂蚁国际面向全球电子钱包、超级应用和数字银行正式推出 <span class="card-highlight">移动智能体协议（AMP）</span>，解决全球消费者在 AI 智能体中购物以及商家跨市场智能体商业运营中的关键难题。蚂蚁 CEO 韩歆毅表示："AI 时代下商业本质未变，但智能体正在重构用户交互、服务流程与交易方式。"从用户手动操作到智能体授权执行，支付基础设施的 AI 化正在拉开序幕。
+    </div>
+    <div class="card-source">上海证券报 / 中国日报 / 证券时报</div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="news-card">
+    <div class="card-number">06</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">人形机器人"进厂"倒计时！两部门启动实景实训专项行动</div>
+    <div class="card-body">
+      6 月 9 日，工信部与国务院国资委联合发布通知，启动 <span class="card-highlight">2026 年度人形机器人与具身智能实景实训专项行动</span>。面向工业、特种、服务等领域重点场景，一体推进实景实训空间建设、创新应用联合体培育、作业技能攻关等任务，目标到年底实现<span class="card-highlight">常态化部署并开启"作业模式"</span>。这意味着人形机器人正从实验室走向真实工厂车间，具身智能产业化进入加速期。
+    </div>
+    <div class="card-source">工信部官网 / 格隆汇 / 同花顺</div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="news-card">
+    <div class="card-number">07</div>
+    <span class="card-badge badge-关注">关注</span>
+    <div class="card-title">Kimi Code 重大升级：一行命令安装，支持拖视频写代码</div>
+    <div class="card-body">
+      Moonshot AI 旗下开源编码代理 Kimi Code 迎来重磅升级：<span class="card-highlight">一行 CLI 命令即可极简安装</span>，零配置启动；新增<span class="card-highlight">视频上下文能力</span>，支持拖入屏幕录像或演示视频作为编码参考，实现"画面替你说清需求"的多模态开发体验。配合丰富的插件生态，Kimi Code 正在从工具向 AI 编码平台进化。
+    </div>
+    <div class="card-source">AIBase / 站长之家 / AgentRen</div>
+  </div>
+
+</div>
+
+<div class="summary-section">
+  <div class="summary-icon">🔥</div>
+  <div class="summary-label">今日 AI 一句话</div>
+  <div class="summary-quote">OpenAI 递表冲击万亿市值，苹果 Siri 牵手 Gemini 开启新时代，阿里蚂蚁双线布局 Token 与智能体——6 月 9 日，AI 赛道的资本、产品、政策三浪齐发，2026 年的夏天注定不平静。</div>
+</div>
+
+<div class="footer">
+  AI 动态播报 · 每日更新 · 2026.06.09
+</div>
+
+</body>
+</html>

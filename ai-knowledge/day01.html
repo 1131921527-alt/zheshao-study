@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI知识卡 · Day 1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a2e;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;padding:16px 16px 40px}
+.card{background:#16213e;border-radius:16px;padding:24px 20px;margin-bottom:16px;border:1px solid #0f3460}
+.day-tag{display:inline-block;background:#e94560;color:#fff;font-size:13px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+h1{font-size:22px;color:#fff;margin-bottom:4px}
+.sub{color:#a0a0c0;font-size:14px;margin-bottom:16px}
+h2{font-size:18px;color:#53d8fb;margin:16px 0 8px;border-left:3px solid #53d8fb;padding-left:10px}
+h3{font-size:15px;color:#ffc107;margin:12px 0 6px}
+p{font-size:15px;color:#c8c8d8;margin-bottom:8px}
+.highlight{background:#0f3460;border-radius:10px;padding:14px 16px;margin:10px 0}
+.highlight p{color:#53d8fb;font-size:14px;margin:0}
+.tag-list{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+.tag{background:#533483;color:#fff;font-size:12px;padding:3px 10px;border-radius:12px}
+.prompt-box{background:#1a1a2e;border:1px solid #e94560;border-radius:12px;padding:14px 16px;margin:10px 0}
+.prompt-box .label{color:#e94560;font-size:12px;font-weight:700;margin-bottom:6px}
+.prompt-box pre{color:#ffc107;font-size:14px;white-space:pre-wrap;word-break:break-all;font-family:inherit}
+.compare-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+.compare-table th{background:#0f3460;color:#53d8fb;padding:8px 6px;text-align:left;font-size:13px}
+.compare-table td{padding:8px 6px;border-bottom:1px solid #16213e;color:#c8c8d8}
+.compare-table tr:last-child td{border-bottom:none}
+.tip{background:#533483;border-radius:10px;padding:12px 16px;margin:10px 0}
+.tip p{color:#fff;font-size:14px;margin:0}
+.tips-list{list-style:none;padding:0;margin:8px 0}
+.tips-list li{padding:6px 0;font-size:14px;color:#c8c8d8;display:flex;align-items:flex-start;gap:6px}
+.tips-list li .icon{color:#53d8fb;font-size:16px;flex-shrink:0}
+.footer{text-align:center;color:#666;font-size:12px;margin-top:24px;padding-top:16px;border-top:1px solid #0f3460}
+.emoji-big{font-size:28px;display:block;text-align:center;margin:8px 0}
+</style>
+</head>
+<body>
+
+<div class="card">
+<div class="day-tag">Day 1</div>
+<h1>主流大模型到底有什么区别？</h1>
+<div class="sub">选题：主流大模型产品科普 🧠</div>
+
+<div class="emoji-big">🤖🆚🤖🆚🤖</div>
+
+<p>现在市面上能聊天、能写东西的AI一大堆，名字听着都挺唬人。但你真正用起来，它们到底差在哪？今天掰开了给你说。</p>
+
+<h2>先搞清楚：什么是"大模型"</h2>
+<p>大模型就是读了几百亿字之后，学会了"说话"和"干活"的AI。就像一个人读了整个互联网之后，你问他啥他都能接上一句——但接得好不好，就看各家本事了。</p>
+<div class="highlight">
+<p>💡 大模型 ≠ 机器人 ≠ App。大模型是背后的"脑子"，你用的ChatGPT、豆包、Kimi是套了壳的"App"。一个脑子可以装在不同壳里。</p>
+</div>
+
+<h2>六大主流选手对比</h2>
+<table class="compare-table">
+<tr><th>选手</th><th>谁家的</th><th>最擅长</th><th>免费额度</th></tr>
+<tr><td>ChatGPT</td><td>OpenAI（美国）</td><td>综合最强，写代码一把好手</td><td>GPT-4o免费有限次</td></tr>
+<tr><td>Claude</td><td>Anthropic（美国）</td><td>长文理解、写得有深度</td><td>有限免费</td></tr>
+<tr><td>Gemini</td><td>Google（美国）</td><td>多模态（看图+文字一起搞）</td><td>免费版够日常用</td></tr>
+<tr><td>豆包</td><td>字节跳动（中国）</td><td>中文聊天、日常问答</td><td>完全免费</td></tr>
+<tr><td>Kimi</td><td>月之暗面（中国）</td><td>读超长文档、网页总结</td><td>完全免费</td></tr>
+<tr><td>DeepSeek</td><td>深度求索（中国）</td><td>数学推理、代码、便宜</td><td>完全免费</td></tr>
+</table>
+
+<h2>选谁？看你要干什么</h2>
+<div class="tag-list">
+<span class="tag">写东西→Claude</span>
+<span class="tag">写代码→ChatGPT/DeepSeek</span>
+<span class="tag">读长文件→Kimi</span>
+<span class="tag">日常聊天→豆包</span>
+<span class="tag">看图分析→Gemini</span>
+<span class="tag">省钱干活→DeepSeek</span>
+</div>
+
+<h3>📌 一个关键区别：上下文长度</h3>
+<p>就是AI一次能"记住"多少字。你塞一份50页报告进去，有的AI能从头到尾看完再回答你，有的看一半就忘了前面说的啥。</p>
+<table class="compare-table">
+<tr><th>选手</th><th>一次能读多少字（大约）</th></tr>
+<tr><td>Kimi</td><td>200万字 ← 超长</td></tr>
+<tr><td>Claude</td><td>20万字</td></tr>
+<tr><td>ChatGPT</td><td>12万字</td></tr>
+<tr><td>DeepSeek</td><td>6万字</td></tr>
+<tr><td>豆包</td><td>4万字</td></tr>
+</table>
+<div class="highlight">
+<p>💡 数字会更新，这里写的是2026年7月的大致水平。各家都在卷长度。</p>
+</div>
+
+<h2>实战提示词范例</h2>
+
+<div class="prompt-box">
+<div class="label">🟢 给ChatGPT写代码</div>
+<pre>我需要一个Python脚本，功能是：
+1. 从Excel读取客户名单（列：姓名、电话、金额）
+2. 按金额从高到低排序
+3. 输出前10名到一个新Excel
+
+要求代码简洁，加上异常处理，用pandas库。</pre>
+</div>
+
+<div class="prompt-box">
+<div class="label">🟢 给Kimi读长文档</div>
+<pre>请阅读这份完整报告，然后：
+1. 用3句话总结核心结论
+2. 列出5个关键数据点
+3. 指出报告里有没有自相矛盾的地方
+
+不要跳过任何章节，逐段读完再回答。</pre>
+</div>
+
+<div class="prompt-box">
+<div class="label">🟢 给Claude写深度分析</div>
+<pre>帮我写一篇2000字的对比分析，主题是：
+"远程办公 vs 传统坐班，对中小企业的影响"
+
+要求：
+- 用具体数据举例，不要空谈
+- 结构清晰，每段有小标题
+- 最后给出实操建议，不是鸡汤</pre>
+</div>
+
+<h2>新手最容易踩的3个坑</h2>
+<ul class="tips-list">
+<li><span class="icon">❌</span>问太笼统——"帮我写个方案"，AI不知道你要什么方案、给谁看、多长</li>
+<li><span class="icon">❌</span>不检查结果——AI写的代码有bug、写的文章有错，你得自己过一遍</li>
+<li><span class="icon">❌</span>只用一个——不同AI各有所长，重要任务换两个交叉验证</li>
+</ul>
+
+<div class="tip">
+<p>🎯 明天预告：各种使用端口区别——网页版、App、API、小程序，到底哪个更靠谱？</p>
+</div>
+
+<div class="footer">AI系统性学习 · Day 1 · 每天一个知识点，30天从小白到上手</div>
+</div>
+
+</body>
+</html>

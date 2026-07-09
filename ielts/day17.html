@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅思核心词汇 Day 17 — 健康医疗+法律公正</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+.header {
+  background: linear-gradient(135deg, #1a2332 0%, #0d1117 100%);
+  padding: 28px 16px 20px;
+  text-align: center;
+  border-bottom: 1px solid #21262d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+.header h1 { font-size: 24px; font-weight: 700; color: #58a6ff; margin-bottom: 4px; }
+.header .sub { font-size: 13px; color: #8b949e; }
+.header .controls { margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  background: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn:active { background: #30363d; transform: scale(0.97); }
+.btn-shuffle { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+.card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 14px;
+  margin: 16px 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+}
+.emoji-box {
+  width: 72px; height: 72px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  flex-shrink: 0;
+}
+.gradient-1 { background: linear-gradient(135deg, #ff6b6b22, #ee5a2422); }
+.gradient-2 { background: linear-gradient(135deg, #4834d422, #686de022); }
+.gradient-3 { background: linear-gradient(135deg, #22a6b322, #be2edd22); }
+.gradient-4 { background: linear-gradient(135deg, #f0932b22, #f9ca2422); }
+.gradient-5 { background: linear-gradient(135deg, #6ab04c22, #badc5822); }
+.gradient-6 { background: linear-gradient(135deg, #eb4d4b22, #ff797922); }
+.gradient-7 { background: linear-gradient(135deg, #130f4022, #5352ed22); }
+.gradient-8 { background: linear-gradient(135deg, #30336b22, #7ed6df22); }
+.gradient-9 { background: linear-gradient(135deg, #b7154022, #e77f6722); }
+.gradient-10 { background: linear-gradient(135deg, #0abde322, #54a0ff22); }
+.gradient-11 { background: linear-gradient(135deg, #01a3a422, #f368e022); }
+.gradient-12 { background: linear-gradient(135deg, #c4456922, #cf6a8722); }
+.gradient-13 { background: linear-gradient(135deg, #3dc1d322, #63cdda22); }
+.gradient-14 { background: linear-gradient(135deg, #e15f4122, #f8a5c222); }
+.gradient-15 { background: linear-gradient(135deg, #574b9022, #786fa622); }
+.word-info { flex: 1; min-width: 0; }
+.word-en { font-size: 22px; font-weight: 700; color: #f0f6fc; letter-spacing: 0.5px; }
+.word-num { font-size: 12px; color: #58a6ff; font-weight: 600; }
+.ipa { font-size: 14px; color: #8b949e; margin: 2px 0; }
+.pos-zh { font-size: 14px; color: #7ee787; font-weight: 500; }
+.audio-btns { display: flex; gap: 6px; margin-top: 6px; }
+.audio-btn {
+  background: #21262d;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s;
+}
+.audio-btn:active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+.playing { background: #1f6feb !important; color: #fff !important; border-color: #1f6feb !important; }
+.memory-story {
+  background: #1c2128;
+  border-top: 1px solid #21262d;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #8b949e;
+  line-height: 1.7;
+}
+.memory-story strong { color: #d2a8ff; }
+.usage-tip {
+  background: #1c2128;
+  border-top: 1px solid #21262d;
+  padding: 10px 16px;
+  font-size: 12px;
+  color: #8b949e;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.usage-tip span:first-child { flex-shrink: 0; }
+.sentences {
+  border-top: 1px solid #21262d;
+  padding: 10px 16px;
+}
+.sent-title { font-size: 12px; color: #58a6ff; font-weight: 600; margin-bottom: 8px; }
+.sent-item {
+  background: #0d1117;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+.sent-item:last-child { margin-bottom: 0; }
+.sent-en { font-size: 14px; color: #e6edf3; margin-bottom: 3px; line-height: 1.5; }
+.sent-en .highlight { color: #ffa657; font-weight: 600; }
+.sent-zh { font-size: 12px; color: #8b949e; margin-bottom: 4px; }
+.sent-play {
+  background: none;
+  border: 1px solid #30363d;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: 11px;
+  color: #8b949e;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.15s;
+}
+.sent-play:active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+.sent-play.playing { background: #1f6feb !important; color: #fff !important; border-color: #1f6feb !important; }
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 16px;
+  justify-content: center;
+}
+.toc-btn {
+  background: #21262d;
+  color: #8b949e;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.toc-btn:active { background: #30363d; color: #c9d1d9; }
+audio { display: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📖 雅思核心词汇 Day 17</h1>
+  <div class="sub">健康医疗 + 法律公正 · 15词 · 45例句 · 上次Day16</div>
+  <div class="controls">
+    <button class="btn btn-shuffle" onclick="shuffleCards()">🔀 乱序排列</button>
+    <button class="btn" onclick="resetOrder()">📋 恢复默认</button>
+  </div>
+</div>
+
+<div class="toc" id="toc"></div>
+
+<div id="cards-container"></div>
+
+<audio id="player" playsinline webkit-playsinline x5-playsinline></audio>
+
+<script>
+const WORDS = [
+  {
+    id: 1,
+    en: "diagnose", ipa: "/ˈdaɪəɡnoʊz/", pos: "v.", zh: "诊断；判断",
+    emoji: "🩺", grad: "gradient-1",
+    story: "医生拿着<strong>听诊器🩺</strong>，说"I <b>diagnose</b> you with awesomeness"——诊断出你最帅的病。记住：diagnose = 诊断，di-ag-nose，拆开是"对着鼻子看"。",
+    tip: "💡 雅思写作常用结构：be diagnosed with + 疾病名。口语中也常说 diagnose the problem，不限于医学。",
+    sentences: [
+      { en: "The doctor <span class='highlight'>diagnosed</span> her with an early stage of lung cancer.", zh: "医生诊断她患有早期肺癌。" },
+      { en: "Engineers are trying to <span class='highlight'>diagnose</span> the cause of the system failure.", zh: "工程师们正在试图诊断系统故障的原因。" },
+      { en: "It took three specialists to <span class='highlight'>diagnose</span> the rare genetic condition.", zh: "三位专家花了很久才诊断出这种罕见的遗传病。" }
+    ]
+  },
+  {
+    id: 2,
+    en: "epidemic", ipa: "/ˌepɪˈdemɪk/", pos: "n./adj.", zh: "流行病；流行的",
+    emoji: "🦠", grad: "gradient-2",
+    story: "一只<strong>病毒🦠</strong>在大街上开派对，邀请所有人参加——这就是<b>epidemic</b>。epi（在…之上）+ dem（人民）= 在人民头上传播的东西。",
+    tip: "💡 注意 epidemic 和 pandemic 的区别：epidemic 是局部流行，pandemic 是全球大流行（pan- = 全部）。",
+    sentences: [
+      { en: "Obesity has become a global <span class='highlight'>epidemic</span> affecting millions of children.", zh: "肥胖已成为影响数百万儿童的全球性流行病。" },
+      { en: "The government declared a public health emergency as the <span class='highlight'>epidemic</span> spread rapidly.", zh: "随着疫情迅速蔓延，政府宣布了公共卫生紧急状态。" },
+      { en: "Social media addiction is reaching <span class='highlight'>epidemic</span> proportions among teenagers.", zh: "社交媒体上瘾在青少年中正达到流行病的程度。" }
+    ]
+  },
+  {
+    id: 3,
+    en: "hereditary", ipa: "/həˈredɪteri/", pos: "adj.", zh: "遗传的；世袭的",
+    emoji: "🧬", grad: "gradient-3",
+    story: "你的<strong>DNA螺旋🧬</strong>里藏着祖传的秘密——<b>hereditary</b>就是"从祖宗那继承来的"。he-red-it-ary，红色基因传下来的。",
+    tip: "💡 搭配 hereditary disease（遗传病）、hereditary title（世袭头衔）。注意和 inherited 的区别：hereditary 更正式。",
+    sentences: [
+      { en: "Heart disease can be <span class='highlight'>hereditary</span>, so regular check-ups are essential.", zh: "心脏病可能是遗传性的，因此定期体检至关重要。" },
+      { en: "The family's <span class='highlight'>hereditary</span> wealth has been passed down for six generations.", zh: "这个家族的世袭财富已经传承了六代。" },
+      { en: "Scientists have identified the <span class='highlight'>hereditary</span> gene responsible for the condition.", zh: "科学家已经确定了导致该疾病的遗传基因。" }
+    ]
+  },
+  {
+    id: 4,
+    en: "hygiene", ipa: "/ˈhaɪdʒiːn/", pos: "n.", zh: "卫生；保健",
+    emoji: "🧼", grad: "gradient-4",
+    story: "<strong>肥皂🧼</strong>在手，细菌全走——<b>hygiene</b>就是"洗干净"。发音像"还洁净"，洗了才洁净。",
+    tip: "💡 高频搭配：personal hygiene（个人卫生）、oral hygiene（口腔卫生）、food hygiene（食品卫生）。写作环保/健康话题常用。",
+    sentences: [
+      { en: "Good hand <span class='highlight'>hygiene</span> is the simplest way to prevent infections.", zh: "良好的手部卫生是预防感染的最简单方法。" },
+      { en: "The restaurant was closed due to poor food <span class='highlight'>hygiene</span> standards.", zh: "这家餐厅因食品卫生标准不合格而被关闭。" },
+      { en: "Schools should educate children about personal <span class='highlight'>hygiene</span> from an early age.", zh: "学校应该从小教育孩子注意个人卫生。" }
+    ]
+  },
+  {
+    id: 5,
+    en: "infectious", ipa: "/ɪnˈfekʃəs/", pos: "adj.", zh: "传染性的；有感染力的",
+    emoji: "😷", grad: "gradient-5",
+    story: "<strong>戴口罩😷</strong>是因为怕被<b>infectious</b>——会传染的东西。记住 in-fect-ious，fect 跟"感染"有关，加上 ious 就是形容词。",
+    tip: "💡 不仅指疾病，也可说 infectious laughter / enthusiasm（有感染力的笑声/热情），雅思口语用这个很加分。",
+    sentences: [
+      { en: "The flu is highly <span class='highlight'>infectious</span> and spreads through airborne droplets.", zh: "流感传染性极强，通过飞沫传播。" },
+      { en: "Her <span class='highlight'>infectious</span> smile instantly brightened the entire room.", zh: "她那富有感染力的笑容瞬间点亮了整个房间。" },
+      { en: "Patients with <span class='highlight'>infectious</span> diseases must be isolated to prevent transmission.", zh: "传染性疾病患者必须隔离以防止传播。" }
+    ]
+  },
+  {
+    id: 6,
+    en: "mortality", ipa: "/mɔːrˈtæləti/", pos: "n.", zh: "死亡率；必死性",
+    emoji: "📊", grad: "gradient-6",
+    story: "医院的<strong>数据图表📊</strong>上有一条下降的曲线——那就是<b>mortality</b> rate 在降低。mort = 死亡（想想 mortuary 太平间），al + ity = 名词。",
+    tip: "💡 雅思写作数据描述必会词：mortality rate（死亡率）、infant mortality（婴儿死亡率）。对比 life expectancy（预期寿命）。",
+    sentences: [
+      { en: "Infant <span class='highlight'>mortality</span> rates have dropped significantly in the past decade.", zh: "过去十年婴儿死亡率大幅下降。" },
+      { en: "Smoking is one of the leading causes of premature <span class='highlight'>mortality</span> worldwide.", zh: "吸烟是全球过早死亡的主要原因之一。" },
+      { en: "The report highlighted the link between air pollution and increased <span class='highlight'>mortality</span>.", zh: "该报告强调了空气污染与死亡率上升之间的联系。" }
+    ]
+  },
+  {
+    id: 7,
+    en: "nutrition", ipa: "/nuːˈtrɪʃən/", pos: "n.", zh: "营养；营养学",
+    emoji: "🥗", grad: "gradient-7",
+    story: "一碗<strong>沙拉🥗</strong>里全是<b>nutrition</b>——各种营养素。nutri = 滋养，tion = 名词后缀。吃好的，才有营养。",
+    tip: "💡 搭配：balanced nutrition（均衡营养）、nutrition facts（营养成分表）。形容词 nutritious = 有营养的，别和 nutritional 混了。",
+    sentences: [
+      { en: "Adequate <span class='highlight'>nutrition</span> is vital for children's physical and mental development.", zh: "充足的营养对儿童的身心发育至关重要。" },
+      { en: "The school launched a campaign to promote healthy <span class='highlight'>nutrition</span> among students.", zh: "学校发起了一项促进学生健康营养的活动。" },
+      { en: "Processed foods often lack the <span class='highlight'>nutrition</span> found in fresh whole foods.", zh: "加工食品通常缺乏新鲜天然食物中所含的营养。" }
+    ]
+  },
+  {
+    id: 8,
+    en: "prescribe", ipa: "/prɪˈskraɪb/", pos: "v.", zh: "开处方；规定",
+    emoji: "💊", grad: "gradient-8",
+    story: "医生在处方单上写下<strong>药丸💊</strong>的名字——这就是<b>prescribe</b>。pre（提前）+ scribe（写）= 提前写好药方。",
+    tip: "💡 搭配：prescribe medication / treatment（开药/治疗方案）。名词是 prescription（处方）。不要和 proscribe（禁止）搞混，意思完全相反！",
+    sentences: [
+      { en: "The doctor <span class='highlight'>prescribed</span> antibiotics to treat the bacterial infection.", zh: "医生开了抗生素来治疗细菌感染。" },
+      { en: "The law <span class='highlight'>prescribes</span> strict penalties for wildlife trafficking.", zh: "法律对野生动物贩运规定了严厉的处罚。" },
+      { en: "Doctors should avoid <span class='highlight'>prescribing</span> unnecessary medication to patients.", zh: "医生应该避免给患者开不必要的药物。" }
+    ]
+  },
+  {
+    id: 9,
+    en: "rehabilitation", ipa: "/ˌriːəˌbɪlɪˈteɪʃən/", pos: "n.", zh: "康复；改造；恢复",
+    emoji: "🏥", grad: "gradient-9",
+    story: "<strong>医院🏥</strong>里的康复中心——<b>rehabilitation</b>就是让人重新站起来。re（重新）+ habilit（能力）+ ation = 恢复能力的过程。",
+    tip: "💡 口语可简说 rehab。搭配：drug rehabilitation（戒毒康复）、rehabilitation centre（康复中心）。写作社会话题高频词。",
+    sentences: [
+      { en: "After the surgery, he underwent six months of <span class='highlight'>rehabilitation</span> to regain full mobility.", zh: "手术后，他经历了六个月的康复治疗以恢复完全活动能力。" },
+      { en: "The prison system should focus on <span class='highlight'>rehabilitation</span> rather than mere punishment.", zh: "监狱系统应该注重改造而不只是惩罚。" },
+      { en: "The government has allocated funds for the <span class='highlight'>rehabilitation</span> of stroke patients.", zh: "政府已拨款用于中风患者的康复治疗。" }
+    ]
+  },
+  {
+    id: 10,
+    en: "symptom", ipa: "/ˈsɪmptəm/", pos: "n.", zh: "症状；征兆",
+    emoji: "🤒", grad: "gradient-10",
+    story: "<strong>发烧捂额头🤒</strong>是生病的<b>symptom</b>——症状。sym（一起）+ ptom（落下）= 一起出现的迹象。记住：symptom 是你能感觉到的，sign 是医生能看到的。",
+    tip: "💡 不仅指疾病，也可说 symptom of a problem（问题的征兆）。雅思写作表达"显示问题"的高级说法。",
+    sentences: [
+      { en: "Common <span class='highlight'>symptoms</span> of COVID include fever, cough, and loss of taste.", zh: "新冠的常见症状包括发烧、咳嗽和味觉丧失。" },
+      { en: "Rising inflation is a <span class='highlight'>symptom</span> of deeper economic problems.", zh: "通胀上升是更深层次经济问题的征兆。" },
+      { en: "If <span class='highlight'>symptoms</span> persist for more than a week, consult a specialist immediately.", zh: "如果症状持续超过一周，请立即咨询专科医生。" }
+    ]
+  },
+  {
+    id: 11,
+    en: "therapy", ipa: "/ˈθerəpi/", pos: "n.", zh: "治疗；疗法",
+    emoji: "🧘", grad: "gradient-11",
+    story: "<strong>瑜伽冥想🧘</strong>是一种<b>therapy</b>——不一定是吃药，也可能是心理治疗、物理治疗。希腊语 therapeia = 治愈、服务。",
+    tip: "💡 高频搭配：physical therapy（物理治疗）、cognitive therapy（认知疗法）、retail therapy（购物疗法，口语俏皮说法）。",
+    sentences: [
+      { en: "Cognitive behavioural <span class='highlight'>therapy</span> is effective for treating anxiety disorders.", zh: "认知行为疗法对治疗焦虑症很有效。" },
+      { en: "She attends weekly speech <span class='highlight'>therapy</span> sessions to improve her pronunciation.", zh: "她每周参加语言治疗课程来改善发音。" },
+      { en: "Music <span class='highlight'>therapy</span> has been shown to reduce stress levels in hospital patients.", zh: "音乐疗法已被证明能降低住院患者的压力水平。" }
+    ]
+  },
+  {
+    id: 12,
+    en: "transmit", ipa: "/trænzˈmɪt/", pos: "v.", zh: "传播；传递；传送",
+    emoji: "📡", grad: "gradient-12",
+    story: "<strong>信号塔📡</strong>在<b>transmit</b>信息——发射、传递。trans（跨越）+ mit（发送）= 从一个地方发送到另一个地方。",
+    tip: "💡 搭配：transmit data/signals（传输数据/信号）、transmit diseases（传播疾病）。名词是 transmission。",
+    sentences: [
+      { en: "Mosquitoes can <span class='highlight'>transmit</span> malaria and other deadly diseases.", zh: "蚊子可以传播疟疾和其他致命疾病。" },
+      { en: "The satellite <span class='highlight'>transmits</span> data back to the ground station every hour.", zh: "卫星每小时向地面站传回一次数据。" },
+      { en: "Traditional stories were <span class='highlight'>transmitted</span> orally from one generation to the next.", zh: "传统故事通过口口相传代代传承。" }
+    ]
+  },
+  {
+    id: 13,
+    en: "verdict", ipa: "/ˈvɜːrdɪkt/", pos: "n.", zh: "裁决；结论；意见",
+    emoji: "⚖️", grad: "gradient-13",
+    story: "<strong>天平⚖️</strong>落下，法官宣布<b>verdict</b>——最终裁决。ver（真实）+ dict（说）= 说出真相。和 dictionary（字典，记录词语真相）同根。",
+    tip: "💡 搭配：reach a verdict（达成裁决）、guilty verdict（有罪判决）。口语中也可说 What's your verdict? = 你觉得怎么样？",
+    sentences: [
+      { en: "The jury returned a unanimous <span class='highlight'>verdict</span> of not guilty after three days.", zh: "陪审团经过三天做出了无异议的无罪裁决。" },
+      { en: "The public's <span class='highlight'>verdict</span> on the new policy has been overwhelmingly negative.", zh: "公众对新政策的评价几乎一面倒地负面。" },
+      { en: "We are still waiting for the court to deliver its final <span class='highlight'>verdict</span>.", zh: "我们仍在等待法庭作出最终裁决。" }
+    ]
+  },
+  {
+    id: 14,
+    en: "warrant", ipa: "/ˈwɒrənt/", pos: "n./v.", zh: "授权令；保证；使有必要",
+    emoji: "🔖", grad: "gradient-14",
+    story: "警察亮出<strong>搜查令🔖</strong>——这就是<b>warrant</b>。古法语 warant = 担保、授权。做动词时表示"值得、使有必要"。",
+    tip: "💡 n. 常见：search warrant（搜查令）、arrest warrant（逮捕令）。v. 写作高级词：warrant attention / investigation（值得关注/调查）。",
+    sentences: [
+      { en: "The police obtained a search <span class='highlight'>warrant</span> before entering the suspect's house.", zh: "警方在进入嫌疑人家中前获得了搜查令。" },
+      { en: "The seriousness of the situation <span class='highlight'>warrants</span> an immediate government response.", zh: "情况的严重性使得政府必须立即做出回应。" },
+      { en: "This product comes with a two-year <span class='highlight'>warrant</span> against manufacturing defects.", zh: "该产品附带两年内对制造缺陷的质保。" }
+    ]
+  },
+  {
+    id: 15,
+    en: "yield", ipa: "/jiːld/", pos: "v./n.", zh: "屈服；产出；产量",
+    emoji: "🌾", grad: "gradient-15",
+    story: "<strong>金黄的麦田🌾</strong>丰收了——这就是<b>yield</b>，既表示"产出"也表示"屈服"（麦子熟了会弯腰）。一个词，两个意思，完美！",
+    tip: "💡 yield to = 屈服于，yield results = 产生结果。雅思写作万能词：high-yield investment（高收益投资）、crop yield（作物产量）。",
+    sentences: [
+      { en: "The company refused to <span class='highlight'>yield</span> to pressure from its competitors.", zh: "该公司拒绝屈服于竞争对手的压力。" },
+      { en: "The research project <span class='highlight'>yielded</span> some unexpected but valuable findings.", zh: "该研究项目产出了一些意想不到但有价值的发现。" },
+      { en: "Farmers reported a record <span class='highlight'>yield</span> of wheat this harvesting season.", zh: "农民报告本收获季节小麦产量创下纪录。" }
+    ]
+  }
+];
+
+const PLAYER = document.getElementById('player');
+let currentActiveBtn = null;
+
+function urlEncode(text) {
+  return encodeURIComponent(text);
+}
+
+function playWord(word, type) {
+  const url = `https://dict.youdao.com/dictvoice?audio=${word}&type=${type}`;
+  PLAYER.src = url;
+  PLAYER.play().catch(() => {});
+}
+
+function playSentence(text, btn) {
+  if (currentActiveBtn) currentActiveBtn.classList.remove('playing');
+  const url = `https://fanyi.baidu.com/gettts?lan=uk&spd=4&text=${urlEncode(text)}`;
+  PLAYER.src = url;
+  btn.classList.add('playing');
+  currentActiveBtn = btn;
+  PLAYER.play().catch(() => {});
+  PLAYER.onended = () => {
+    btn.classList.remove('playing');
+    currentActiveBtn = null;
+  };
+  PLAYER.onerror = () => {
+    btn.classList.remove('playing');
+    currentActiveBtn = null;
+  };
+}
+
+function stripTags(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+}
+
+function renderCards(words) {
+  const container = document.getElementById('cards-container');
+  const toc = document.getElementById('toc');
+  let html = '';
+  let tocHtml = '';
+
+  words.forEach((w, idx) => {
+    tocHtml += `<button class="toc-btn" onclick="document.getElementById('card-${w.id}').scrollIntoView({behavior:'smooth',block:'start'})">${w.en}</button>`;
+
+    html += `<div class="card" id="card-${w.id}" data-original="${idx}">`;
+    html += `<div class="card-top">`;
+    html += `<div class="emoji-box ${w.grad}">${w.emoji}</div>`;
+    html += `<div class="word-info">`;
+    html += `<div class="word-num">No.${idx + 1} · 雅思核心</div>`;
+    html += `<div class="word-en">${w.en}</div>`;
+    html += `<div class="ipa">${w.ipa}</div>`;
+    html += `<div class="pos-zh">${w.pos} ${w.zh}</div>`;
+    html += `<div class="audio-btns">`;
+    html += `<button class="audio-btn" onclick="event.stopPropagation();playWord('${w.en}',1)">🇬🇧 GB</button>`;
+    html += `<button class="audio-btn" onclick="event.stopPropagation();playWord('${w.en}',2)">🇺🇸 US</button>`;
+    html += `</div></div></div>`;
+    html += `<div class="memory-story">${w.story}</div>`;
+    html += `<div class="usage-tip"><span>📌</span><span>${w.tip}</span></div>`;
+    html += `<div class="sentences">`;
+    html += `<div class="sent-title">📝 例句</div>`;
+    w.sentences.forEach((s, si) => {
+      const plainText = stripTags(s.en);
+      html += `<div class="sent-item">`;
+      html += `<div class="sent-en">${si + 1}. ${s.en}</div>`;
+      html += `<div class="sent-zh">${s.zh}</div>`;
+      html += `<button class="sent-play" data-text="${plainText.replace(/"/g, '&quot;')}">🔊 播放</button>`;
+      html += `</div>`;
+    });
+    html += `</div></div>`;
+  });
+
+  toc.innerHTML = tocHtml;
+  container.innerHTML = html;
+
+  // Attach sentence play handlers
+  document.querySelectorAll('.sent-play').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      playSentence(this.dataset.text, this);
+    });
+  });
+}
+
+function shuffleCards() {
+  const shuffled = [...WORDS].sort(() => Math.random() - 0.5);
+  renderCards(shuffled);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetOrder() {
+  renderCards([...WORDS]);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Init
+renderCards([...WORDS]);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026-06-25</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    min-height: 100vh;
+    padding: 16px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 24px 0 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 20px;
+  }
+  .header .icon { font-size: 36px; margin-bottom: 8px; }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 4px;
+  }
+  .header .date {
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+  .news-card .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .badge-hot {
+    background: rgba(218, 54, 51, 0.15);
+    color: #f85149;
+  }
+  .badge-model {
+    background: rgba(88, 166, 255, 0.15);
+    color: #58a6ff;
+  }
+  .badge-tool {
+    background: rgba(63, 185, 80, 0.15);
+    color: #3fb950;
+  }
+  .badge-oss {
+    background: rgba(188, 140, 255, 0.15);
+    color: #bc8cff;
+  }
+  .badge-policy {
+    background: rgba(255, 138, 0, 0.15);
+    color: #ff8a00;
+  }
+  .badge-robot {
+    background: rgba(0, 201, 183, 0.15);
+    color: #00c9b7;
+  }
+  .badge-hardware {
+    background: rgba(255, 213, 0, 0.15);
+    color: #ffd500;
+  }
+  .news-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .news-card p {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .news-card .source {
+    font-size: 12px;
+    color: #484f58;
+    margin-top: 10px;
+  }
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 12px;
+    color: #484f58;
+    border-top: 1px solid #21262d;
+    margin-top: 8px;
+  }
+  .footer a { color: #58a6ff; text-decoration: none; }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 0 8px;
+    font-size: 12px;
+    color: #8b949e;
+  }
+  .stats span { color: #58a6ff; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="icon">🤖</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026年6月25日 · 星期四</div>
+    <div class="stats">
+      <div>今日速递 <span>7</span> 条</div>
+      <div>覆盖 <span>10</span> 家厂商</div>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>OpenAI 发布首款自研 AI 推理芯片 Jalapeño，联手博通 9 个月完成流片</h2>
+    <p>OpenAI 与半导体巨头博通（Broadcom）联合发布首款定制 AI 推理芯片 Jalapeño，专为大语言模型推理设计。从最初设计到完成流片仅用 9 个月，开发中采用 OpenAI 自身 AI 模型加速设计。OpenAI 负责底层架构，博通负责硅片实现与网络硬件，Celestica 负责系统集成。工程样片已以量产目标频率运行 GPT-5.3、Codex 和 Spark 工作负载，早期测试显示每瓦性能优于当前最先进水平。OpenAI 总裁 Brockman 称这是长期全栈基础设施战略的第一步，多代计算平台计划于 2026 年底前首次部署。</p>
+    <div class="source">来源：第一财经 / OpenAI 官网 · 2026-06-24/25</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>ChatGPT 最大规模语音升级：双向 AI 语音模型 Bidi 1 上线测试</h2>
+    <p>部分用户发现 ChatGPT 已上线双向语音模型 Bidi 1，支持边说话边监听，可在对话中途打断并发出新指令，彻底告别一问一答模式。该模型与标准语音、高级语音并列于设置中，OpenAI 尚未官宣，预计本周启动更大范围测试。Bidi 1 意味着 ChatGPT 从「语音助手」进化为「实时对话伙伴」，语音交互体验接近真人通话级别。</p>
+    <div class="source">来源：IT之家 / AI日报 · 2026-06-25</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="news-card">
+    <span class="badge badge-model">🧠 模型</span>
+    <h2>Gemini 3.5 Flash 集成计算机使用能力，Google 把 Agent 做进主模型</h2>
+    <p>Google 将 Computer use（计算机使用）原生整合至 Gemini 3.5 Flash 主模型，开发者可通过 API 构建跨浏览器、移动端和桌面环境的智能体。该功能具备针对性对抗训练防提示注入，并新增敏感操作确认与自动停止两项企业级保护。模型层竞争进入「集成化」阶段——不再是单独的 Agent 工具，而是把 Agent 能力直接嵌入主模型，从「可用」走向「好用」。</p>
+    <div class="source">来源：Google / AI日报 · 2026-06-25</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="news-card">
+    <span class="badge badge-model">🧠 模型</span>
+    <h2>GPT-5.5 Instant 新版本发布，对话更有趣更连贯</h2>
+    <p>OpenAI 推出 GPT-5.5 Instant 更新版，改进了意图理解与复杂约束处理能力，在购物、本地推荐等场景表现更连贯。即日起向付费用户推送，明日覆盖免费用户。同时 GPT-5.5-Cyber 完整版面向安全防御方开放，在 CyberGym 上得分 85.6% 刷新纪录，超越 Claude Mythos 5，具备漏洞发现到一键修复的全链路能力。</p>
+    <div class="source">来源：OpenAI / IT之家 · 2026-06-25</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="news-card">
+    <span class="badge badge-oss">📂 开源</span>
+    <h2>通义千问发布 Qwen-AgentWorld：首个原生语言世界模型，超越 GPT-5.4 和 Claude Opus 4.8</h2>
+    <p>通义千问发布首个原生语言世界模型 Qwen-AgentWorld，基于超 1000 万条真实交互轨迹训练，覆盖 MCP、Search、Web 等七大领域。在 AgentWorldBench 上 Qwen-AgentWorld-397B-A17B 以 58.71 分超越 GPT-5.4 和 Claude Opus 4.8，验证了可控 Sim RL 与在线决策两种新范式。开源社区还涌现 DFlash 突破性加速方案，一次前向推理生成整块 token，最高 15 倍吞吐量提升。</p>
+    <div class="source">来源：通义千问 / UC San Diego · 2026-06-25</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="news-card">
+    <span class="badge badge-policy">📋 行业</span>
+    <h2>夏季达沃斯论坛大连闭幕，AI 成全场关键词，十大新兴技术报告发布</h2>
+    <p>6月23-25日，第十七届夏季达沃斯论坛在辽宁大连举行，90 多个国家 1700 余名代表参会，「规模化创新」为主题。世界经济论坛发布《2026年十大新兴技术》报告，聚焦未来3-5年落地价值的前沿成果。AI 贯穿全场讨论，从科技互动装置到产业落地案例，创新正从「概念」向「规模化落地」转变。就业数据也印证这一趋势：SignalFire追踪8000万公司数据发现工程岗仅降11%，黄仁勋称AI让工程师更忙——杰文斯悖论的典型例证。</p>
+    <div class="source">来源：新华社 / 每日经济新闻 / 夏季达沃斯 · 2026-06-25</div>
+  </div>
+
+  <!-- 7 -->
+  <div class="news-card">
+    <span class="badge badge-tool">🛠 产品</span>
+    <h2>豆包专业版正式上线 + Perplexity 法律 AI 助手发布</h2>
+    <p>字节跳动旗下豆包专业版正式上线，基于豆包 2.1 系列，支持操作本地电脑、浏览器、调用 Skills 技能及生成在线应用，定价 68 元/月（大学生 38 元/月）。Perplexity 同日推出 Computer for Counsel 法律助手，连接律师常用研究数据库、文档工具和案件管理系统，可提取可引用来源，首批集成 @midpageAI、@LegalZoom 等平台。平台级 AI 能力从「聊天助手」走向「专业工具」，细分场景落地加速。</p>
+    <div class="source">来源：字节跳动 / Perplexity / 36氪 · 2026-06-25</div>
+  </div>
+
+  <div class="footer">
+    <p>AI 动态播报 · 每日自动生成</p>
+    <p style="margin-top:4px">数据来源：OpenAI / Google / 第一财经 / IT之家 / 通义千问 / 夏季达沃斯 / 36氪</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AI动态播报 · 2026-07-03</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --card: #12121a;
+      --card-2: #1a1a25;
+      --text: #e8e8ec;
+      --text-2: #9a9aa8;
+      --accent: #4d9eff;
+      --accent-2: #8b5cf6;
+      --hot: #ff4d6d;
+      --warn: #f59e0b;
+      --ok: #22c55e;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 40px;
+    }
+    .header {
+      padding: 28px 20px 18px;
+      background: linear-gradient(135deg, rgba(77, 158, 255, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .header .meta {
+      color: var(--text-2);
+      font-size: 13px;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--ok);
+      box-shadow: 0 0 8px var(--ok);
+      display: inline-block;
+    }
+    .container {
+      padding: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .summary {
+      background: var(--card-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: var(--text-2);
+      margin-bottom: 16px;
+    }
+    .summary strong {
+      color: var(--text);
+    }
+    .news-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .news-item::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+    .news-item.hot::before { background: var(--hot); opacity: 0.9; }
+    .news-item.warn::before { background: var(--warn); opacity: 0.8; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .tag-hot { background: rgba(255, 77, 109, 0.15); color: var(--hot); }
+    .tag-key { background: rgba(77, 158, 255, 0.15); color: var(--accent); }
+    .tag-watch { background: rgba(245, 158, 11, 0.12); color: var(--warn); }
+    .news-title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .news-body {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+    .news-body p + p {
+      margin-top: 8px;
+    }
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--text-2);
+    }
+    .news-meta .company {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .footer {
+      text-align: center;
+      padding: 24px 20px;
+      color: var(--text-2);
+      font-size: 12px;
+    }
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    @media (max-width: 380px) {
+      .header h1 { font-size: 20px; }
+      .news-title { font-size: 15px; }
+      .news-body { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🤖 AI动态播报</h1>
+    <div class="meta"><span class="dot"></span> 2026年7月3日 · 7条动态 · 2重磅/3重点/2关注</div>
+  </div>
+
+  <div class="container">
+    <div class="summary">
+      <strong>一句话概括：</strong>Claude Fable 5监管复活后新增自动降级，OpenAI GPT-5.6内测、微软豪掷25亿美元押注企业Agent，AI Agent已能完成16%自由职业工作，编程入口争夺战进入白热化。
+    </div>
+
+    <div class="news-item hot">
+      <div class="tag tag-hot">🔥 重磅</div>
+      <div class="news-title">Claude Fable 5 解除出口管制后回归，复杂请求自动转交 Opus 4.8</div>
+      <div class="news-body">
+        <p>7月1日起，美国商务部解除对 Anthropic Claude Fable 5 和 Mythos 5 的出口管制，模型全球访问恢复。回归版本最大变化是新增“自动降级”机制：当任务超出能力边界时，系统会自动把请求转交给更强的 Opus 4.8 处理。</p>
+        <p>Anthropic 同时透露，Claude Code 的系统提示词已被削减 80%，原因是 Fable 5 模型“更想要更小的系统提示”。</p>
+      </div>
+      <div class="news-meta"><span class="company">Anthropic</span> · 7月1-2日</div>
+    </div>
+
+    <div class="news-item hot">
+      <div class="tag tag-hot">🔥 重磅</div>
+      <div class="news-title">OpenAI GPT-5.6 系列低调内测，上下文扩至 150 万 Token</div>
+      <div class="news-body">
+        <p>6 月 25-28 日，OpenAI 向约 20 家合作伙伴推送 GPT-5.6 系列，公开上线预计 7 月完成。三个版本定位清晰：Sol（旗舰，SVG/3D 生成能力击败 Fable 5）、Terra（日用均衡）、Luna（低价入门）。</p>
+        <p>核心升级包括 150 万 token 上下文、可变速度推理模式，以及增强的 Agentic 多步任务能力。价格方面 reportedly 与 GPT-5.5 持平。</p>
+      </div>
+      <div class="news-meta"><span class="company">OpenAI</span> · 6月25-28日 / 7月公测</div>
+    </div>
+
+    <div class="news-item">
+      <div class="tag tag-key">⭐ 重点</div>
+      <div class="news-title">微软成立 25 亿美元“Frontier Company”，向企业派驻 6000 名 AI 工程师</div>
+      <div class="news-body">
+        <p>微软推出全新 25 亿美元 Frontier Company 计划，将派遣约 6000 名 AI 工程师进入大型企业客户内部，帮助企业落地 AI Agent 与自动化工作流。这是微软“Agent 优先”战略的最新动作，也是其自研 MAI 模型矩阵之后的又一重大企业级投入。</p>
+      </div>
+      <div class="news-meta"><span class="company">Microsoft</span> · 7月2日</div>
+    </div>
+
+    <div class="news-item">
+      <div class="tag tag-key">⭐ 重点</div>
+      <div class="news-title">AI Agent 已能完成 16% 自由职业工作，八个月内从 2.5% 飙升</div>
+      <div class="news-body">
+        <p>据最新研究数据，AI Agent 现在能以专业质量完成约 16% 的自由职业任务，而八个月前这一比例仅为 2.5%。增长主要来自编程、写作、数据分析等可流程化任务，标志着 Agent 从“玩具”向“生产力工具”的拐点正在逼近。</p>
+      </div>
+      <div class="news-meta"><span class="company">行业研究</span> · 7月2日</div>
+    </div>
+
+    <div class="news-item">
+      <div class="tag tag-key">⭐ 重点</div>
+      <div class="news-title">SpaceX 600 亿美元全股票收购 Cursor，xAI 编程入口闭环成型</div>
+      <div class="news-body">
+        <p>马斯克旗下 SpaceX 宣布以约 600 亿美元全股票方式收购 Cursor 母公司 Anysphere。Grok 4.5 将整合 Cursor 的编程数据，Cursor 工程师团队参与模型研发。这意味着 xAI/SpaceX 要从模型层到 IDE 工具层全面控制 AI 编程入口。</p>
+      </div>
+      <div class="news-meta"><span class="company">xAI / SpaceX</span> · 6月底</div>
+    </div>
+
+    <div class="news-item warn">
+      <div class="tag tag-watch">👀 关注</div>
+      <div class="news-title">Google Gemini 3.5 Pro 再次跳票至 7 月，Veo 3.1 升级 4K 竖版视频</div>
+      <div class="news-body">
+        <p>Google 原定于 6 月发布的 Gemini 3.5 Pro 再次延期至 7 月，团队需要更多时间优化 token 效率和长时间 Agent 基础平台。另一方面，视频模型 Veo 3.1 已支持 4K 分辨率和原生竖版视频输出，Google 在 AI 视频生成领域的投入继续兑现。</p>
+      </div>
+      <div class="news-meta"><span class="company">Google</span> · 7月发布</div>
+    </div>
+
+    <div class="news-item warn">
+      <div class="tag tag-watch">👀 关注</div>
+      <div class="news-title">DeepSeek V4 正式版 7 月中旬发布，峰谷定价引争议</div>
+      <div class="news-body">
+        <p>DeepSeek V4 预览版热度持续，正式版计划于 7 月中旬发布。核心参数包括 100 万 token 上下文、推理算力约为 V3.2 的 27%，分 V4-Pro 和 V4-Flash 两个版本。争议点在于峰谷定价：高峰时段（9:00-12:00、14:00-18:00）API 价格翻倍，开发者反馈不一。</p>
+      </div>
+      <div class="news-meta"><span class="company">DeepSeek</span> · 7月中旬</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    AI动态播报 · 每日精选 · 2026-07-03<br>
+    来源：无矩AI / The Decoder / LM Market Cap / Towards AI
+  </div>
+</body>
+</html>

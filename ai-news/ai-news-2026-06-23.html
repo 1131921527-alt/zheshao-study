@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026-06-23</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    min-height: 100vh;
+    padding: 16px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 24px 0 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 20px;
+  }
+  .header .icon { font-size: 36px; margin-bottom: 8px; }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 4px;
+  }
+  .header .date {
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+  .news-card .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .badge-hot {
+    background: rgba(218, 54, 51, 0.15);
+    color: #f85149;
+  }
+  .badge-model {
+    background: rgba(88, 166, 255, 0.15);
+    color: #58a6ff;
+  }
+  .badge-tool {
+    background: rgba(63, 185, 80, 0.15);
+    color: #3fb950;
+  }
+  .badge-talent {
+    background: rgba(210, 168, 0, 0.15);
+    color: #d2a800;
+  }
+  .badge-oss {
+    background: rgba(188, 140, 255, 0.15);
+    color: #bc8cff;
+  }
+  .badge-policy {
+    background: rgba(255, 138, 0, 0.15);
+    color: #ff8a00;
+  }
+  .news-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .news-card p {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .news-card .source {
+    font-size: 12px;
+    color: #484f58;
+    margin-top: 10px;
+  }
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 12px;
+    color: #484f58;
+    border-top: 1px solid #21262d;
+    margin-top: 8px;
+  }
+  .footer a { color: #58a6ff; text-decoration: none; }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 0 8px;
+    font-size: 12px;
+    color: #8b949e;
+  }
+  .stats span { color: #58a6ff; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="icon">🤖</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026年6月23日 · 星期二</div>
+    <div class="stats">
+      <div>今日速递 <span>7</span> 条</div>
+      <div>覆盖 <span>7</span> 家厂商</div>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>OpenAI GPT-5.6 今日发布，150万Token上下文对标Claude Fable 5</h2>
+    <p>OpenAI 于6月23日正式发布代号 GPT-5.6 的新一代旗舰模型，支持 150 万 tokens 上下文窗口，在智能体编程工作流上大幅提升。系列涵盖 mini、标准版、Pro 三个版本，API 价格仅为 Claude Fable 5 的三分之一，被视为对 Anthropic 估值反超（9650亿 vs 8520亿）的关键反击。</p>
+    <div class="source">来源：testingcatalog / Polymarket · 2026-06-23</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="news-card">
+    <span class="badge badge-policy">📋 政策</span>
+    <h2>Anthropic 更新隐私政策，部分 Claude 用户需上传身份证件核验</h2>
+    <p>Anthropic 6月23日宣布更新隐私政策，明确有权基于多重理由要求用户上传身份证件副本：核验账号创建与管理身份、执行服务条款、防范欺诈与滥用、排查平台安全风险。此举标志着 AI 平台在合规与反滥用方面进入更严格的身份核验时代。</p>
+    <div class="source">来源：新浪科技 · 2026-06-23</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="news-card">
+    <span class="badge badge-model">🧠 模型</span>
+    <h2>Anthropic「AI驱动AI」递归自进化，研发效率指数级增长</h2>
+    <p>Anthropic 正将最新模型深度嵌入自身研发流程，构建「模型工厂」式递归自进化策略。新一代 Claude 模型不仅是对外产品，更成为下一代模型的研发工具。这种「AI 写 AI」的闭环让 Anthropic 保持高速迭代节奏（Fable 5、Opus 4.8、Sonnet 4.5 接连发布），企业级 AI 护城河进一步加深。</p>
+    <div class="source">来源：AI内参 · 2026-06-23</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="news-card">
+    <span class="badge badge-oss">📂 开源</span>
+    <h2>国产 VibeThinker-3B 小模型登顶，编程能力比肩 Opus 4.5</h2>
+    <p>3B 参数（30亿）的国产开源推理模型 VibeThinker-3B 在多个难度可验证的推理任务上进入 Gemini 3 Pro、GPT-5 high、Claude Opus 4.5、GLM-5、Kimi K2.5 等前沿模型的性能区间。论文登上 arXiv（2606.16140），获 HN 18分热议，证明小模型路径同样能突破推理边界。</p>
+    <div class="source">来源：arXiv 2606.16140 / Hacker News · 2026-06-23</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="news-card">
+    <span class="badge badge-tool">🛠 工具</span>
+    <h2>Google 把 Interactions API 设为 Gemini 模型与 Agent 默认接口</h2>
+    <p>Google 6月22日宣布将 Interactions API 设为 Gemini 系列模型和 Agent 的默认调用接口，简化开发者集成流程。同一周还发布 Nano Banana 2（Gemini 3.1 Flash Image）和 Nano Banana Pro（Gemini 3 Pro Image）两款图像生成模型，进一步完善多模态生态。</p>
+    <div class="source">来源：The Decoder / LM Market Cap · 2026-06-22</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="news-card">
+    <span class="badge badge-oss">📂 开源</span>
+    <h2>智谱 GLM-5.2 本地部署方案发布，1M 上下文 MIT 协议</h2>
+    <p>继 Unsloth 等社区推出 GLM-5.2 本地硬件运行指南后，GLM-5.2（744B MoE、100万Token 上下文、MIT 协议）已成为国产开源新旗舰。在 Anthropic Fable 5 因出口管制被禁背景下，GLM-5.2 凭借无地域限制的开源协议迅速抢占海外市场，被 Simon Willison 评价为「目前最强纯文本开源大模型」。</p>
+    <div class="source">来源：Unsloth / Towards AI · 2026-06-22</div>
+  </div>
+
+  <!-- 7 -->
+  <div class="news-card">
+    <span class="badge badge-tool">🛠 工具</span>
+    <h2>Getty Images 与 OpenAI 达成多年协议，授权图片入驻 ChatGPT 搜索</h2>
+    <p>全球最大图库之一 Getty Images 与 OpenAI 签署多年期协议，正式将授权照片接入 ChatGPT 搜索结果。此举既终结了双方此前的版权诉讼，也为 ChatGPT 应对 AI 搜索「幻觉图片引用」问题提供了合规、可溯源的视觉内容来源，进一步削弱传统搜索引擎的护城河。</p>
+    <div class="source">来源：The Decoder · 2026-06-22</div>
+  </div>
+
+  <div class="footer">
+    <p>AI 动态播报 · 每日自动生成</p>
+    <p style="margin-top:4px">数据来源：AI内参 / The Decoder / LM Market Cap / arXiv / 新浪科技 / testingcatalog</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 · 2026-06-21</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0a0a0a;
+  color: #e6e6e6;
+  line-height: 1.65;
+  min-height: 100vh;
+  padding: 16px 14px 60px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+
+.header {
+  text-align: center;
+  padding: 22px 0 18px;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 22px;
+}
+.date-badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #c9a55c;
+  border: 1px solid #c9a55c;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 13px;
+  color: #8a8a8a;
+  letter-spacing: 0.5px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.summary-item {
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 12px 6px;
+  text-align: center;
+}
+.summary-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c9a55c;
+  display: block;
+}
+.summary-label {
+  font-size: 11px;
+  color: #8a8a8a;
+  margin-top: 2px;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #c9a55c;
+  letter-spacing: 2px;
+  margin: 24px 0 12px;
+  padding-left: 10px;
+  border-left: 3px solid #c9a55c;
+}
+
+.card {
+  background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.card.heavy {
+  border-color: #c9a55c;
+  background: linear-gradient(135deg, #1a1408 0%, #1f1a10 100%);
+}
+.card.heavy::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: #c9a55c;
+}
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.tag-heavy { background: #c9a55c; color: #0a0a0a; }
+.tag-key { background: #2a4d6e; color: #9fc4e8; }
+.tag-watch { background: #3d2a4d; color: #c89fc4; }
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 8px 0 8px;
+  line-height: 1.45;
+}
+.card p {
+  font-size: 14px;
+  color: #b8b8b8;
+  line-height: 1.7;
+}
+.card p .hl { color: #c9a55c; font-weight: 600; }
+
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid #2a2a2a;
+  color: #6a6a6a;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.footer .brand { color: #c9a55c; font-weight: 600; }
+
+@media (max-width: 380px) {
+  .title { font-size: 22px; }
+  .card h3 { font-size: 15px; }
+  .card p { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="date-badge">2026 · 06 · 21 · 星期日</div>
+    <div class="title">AI 动态播报</div>
+    <div class="subtitle">全球AI行业 · 每日头条精粹</div>
+  </div>
+
+  <div class="summary">
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">重磅</div></div>
+    <div class="summary-item"><span class="summary-num">3</span><div class="summary-label">重点</div></div>
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">关注</div></div>
+  </div>
+
+  <div class="section-title">重磅 HEADLINE</div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 评测</span>
+    <h3>美团LongCat发布General 365评测集：26款大模型推理实测，Gemini 3 Pro仅62.8%</h3>
+    <p>美团<span class="hl">LongCat</span>团队正式发布<span class="hl">General 365</span>综合评测集，对26款主流大模型进行覆盖365天的全维度推理能力测试。结果令人警醒：<span class="hl">最强的Gemini 3 Pro准确率仅62.8%</span>，绝大多数模型未达60分及格线。这一评测揭示了大模型在<span class="hl">复杂推理任务中的普遍短板</span>——榜单分数与实际推理能力之间存在巨大鸿沟，单纯堆参数和扩大训练数据已逼近边际效应天花板。</p>
+  </div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 多模态</span>
+    <h3>美团LongCat-AudioDiT发布：零样本TTS音色克隆，抛弃梅尔谱直接在波形潜空间建模</h3>
+    <p>美团<span class="hl">LongCat-AudioDiT</span>正式发布，实现<span class="hl">零样本TTS音色克隆</span>的重大突破。该模型在架构层面做出关键创新：<span class="hl">直接在波形潜空间进行扩散模型建模</span>，完全抛弃梅尔频谱图等传统中间表示，使声音克隆的真实度与自然度大幅跃升。这意味着只需几秒参考音频，即可<span class="hl">完整复现说话人的音色、韵律与情感</span>——从数字人到智能客服，从有声书到实时翻译，语音AI正跨越"听得懂"走向"听不出是AI"。</p>
+  </div>
+
+  <div class="section-title">重点 KEY NEWS</div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 开发工具</span>
+    <h3>BuilderIO发布Agent-Native开源框架：终结"丰富UI"与"自主智能体"的取舍之痛</h3>
+    <p><span class="hl">BuilderIO</span>正式发布<span class="hl">Agent-Native</span>开源框架，提出"智能体原生"应用开发新范式。该框架核心解决一个尖锐矛盾：传统AI应用要么牺牲自动化能力换取精美UI，要么放弃图形界面追求完全自主。Agent-Native通过<span class="hl">深度融合智能体决策链与UI渲染管线</span>，使开发者能同时构建兼具强大自动化能力与直观交互界面的应用——<span class="hl">AI应用从此不必在"好看"和"好用"之间二选一</span>。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 开源工具</span>
+    <h3>OpenMontage发布：全球首个开源Agent视频制作系统，52工具500+技能</h3>
+    <p><span class="hl">OpenMontage</span>作为全球首个<span class="hl">开源智能体视频制作系统</span>正式发布，集成了12条专业流水线、52个专用工具和超过500项智能体技能。其核心设计理念是将AI编程助手<span class="hl">转化为全功能视频制作工作室</span>，覆盖脚本策划、分镜生成、素材剪辑、配音配乐、特效合成等全流程。在AI视频生成竞争白热化的当下，OpenMontage选择了<span class="hl">"工具链整合"而非"单一模型"</span>的差异化路线，为开源社区提供了可定制、可扩展的视频制作基座。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 机器人</span>
+    <h3>机器人赛道告别"世界模型"炒作：资本转向工业级99.9%成功率与数据效率</h3>
+    <p><span class="hl">Generalist AI</span>完成4亿美元融资，但其背后折射的信号比金额本身更重要：<span class="hl">资本对具身智能的评价标准正在发生根本性转变</span>——从追逐"通用世界模型"的宏大叙事，转向追求<span class="hl">工业级99.9%任务成功率</span>和全工作流数据效率。行业共识明确：具身智能已正式<span class="hl">从"PPT惊艳"阶段进入"工厂落地"阶段</span>，那些不能证明实际产线价值的机器人概念，将面临融资断崖。</p>
+  </div>
+
+  <div class="section-title">关注 WATCH</div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 产业竞争</span>
+    <h3>马斯克v智谱唐杰隔空辩论：中国AI何时追平Claude？"不用等到2027"</h3>
+    <p><span class="hl">马斯克</span>近日公开预测中国AI模型将在<span class="hl">2027年初追平Claude</span>，而<span class="hl">智谱创始人唐杰</span>则回应"不用那么久"。这场隔空辩论的隐性焦点并非时间点本身，而是<span class="hl">谁能率先实现"超越跑分的原生多模态"与"实用智能"</span>。在OpenAI与Anthropic相继冲刺IPO、Fable 5遭遇禁令的背景下，中美大模型竞争正从论文刷榜转向<span class="hl">产品可用性、商业闭环与生态博弈</span>的立体战场。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 商业落地</span>
+    <h3>近九成企业AI转型未获显著回报：工具叠加≠组织智效</h3>
+    <p>最新行业报告指出：<span class="hl">近90%采用AI的企业未获得显著投资回报</span>。症结并非AI能力不足，而在于企业<span class="hl">仅将AI视为"工具叠加"</span>，而非从战略层面对组织架构和业务流程进行系统性重构。与此同时，先行者正通过<span class="hl">"1人+N个AI Agent"</span>的极简团队模式进入核心流程——从律师撰写文书、投资人分析BP到跨境电商管理全球广告投放，<span class="hl">数字员工正悄然改写组织效能公式</span>。</p>
+  </div>
+
+  <div class="footer">
+    <div class="brand">AI 动态播报</div>
+    <div style="margin-top:6px;">每日 12:30 准时推送 · WorkBuddy 自动化出品</div>
+    <div style="margin-top:4px;">© 2026 · 王老板专属订阅</div>
+  </div>
+
+</div>
+</body>
+</html>

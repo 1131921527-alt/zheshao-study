@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026年6月8日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 16px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    position: relative;
+  }
+  .header-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(248,81,73,0.10) 0%, rgba(210,153,29,0.06) 50%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-date {
+    font-size: 13px;
+    color: #f85149;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f85149 0%, #d2991d 50%, #58a6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 4px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    margin: 0 auto 24px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    max-width: 420px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  .stat-num.red { color: #f85149; }
+  .stat-num.orange { color: #d2991d; }
+  .stat-num.green { color: #3fb950; }
+  .stat-label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+
+  /* News cards */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+
+  .card-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .badge-重磅 {
+    background: rgba(248,81,73,0.15);
+    color: #f85149;
+    border: 1px solid rgba(248,81,73,0.3);
+  }
+  .badge-重点 {
+    background: rgba(210,153,29,0.15);
+    color: #d2991d;
+    border: 1px solid rgba(210,153,29,0.3);
+  }
+  .badge-关注 {
+    background: rgba(63,185,80,0.15);
+    color: #3fb950;
+    border: 1px solid rgba(63,185,80,0.3);
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-body {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #484f58;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-source::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #30363d;
+    border-radius: 50%;
+  }
+
+  /* Highlight tag inside card */
+  .card-highlight {
+    display: inline;
+    color: #58a6ff;
+    font-weight: 600;
+  }
+
+  /* Summary section */
+  .summary-section {
+    max-width: 600px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, rgba(248,81,73,0.06) 0%, rgba(210,153,29,0.06) 100%);
+    border: 1px solid rgba(248,81,73,0.2);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-label {
+    font-size: 12px;
+    color: #f85149;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .summary-quote {
+    font-size: 15px;
+    color: #e6edf3;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  .summary-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 28px 0 12px;
+    font-size: 11px;
+    color: #30363d;
+    letter-spacing: 1px;
+  }
+
+  /* Numbering dot */
+  .card-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(248,81,73,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-glow"></div>
+  <div class="header-date">2026.06.08 · MONDAY</div>
+  <h1>AI 动态播报</h1>
+  <div class="header-subtitle">每日精选 · 全球视野</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red">3</div>
+    <div class="stat-label">重磅</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num orange">3</div>
+    <div class="stat-label">重点</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green">1</div>
+    <div class="stat-label">关注</div>
+  </div>
+</div>
+
+<div class="news-list">
+
+  <!-- Card 1 -->
+  <div class="news-card">
+    <div class="card-number">01</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">苹果 WWDC26 今晚开幕，库克告别之作</div>
+    <div class="card-body">
+      北京时间6月9日凌晨，苹果 WWDC26 全球开发者大会即将开幕。这是 <span class="card-highlight">蒂姆·库克作为 CEO 主持的最后一届 WWDC</span>，外界高度关注苹果在 Siri 及 AI 功能方面的重大更新。此前多方爆料称苹果将在大会上展示下一代 AI 助手能力，能否在智能体大战中扳回一城，今晚揭晓。
+    </div>
+    <div class="card-source">新浪科技 / 多家媒体</div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="news-card">
+    <div class="card-number">02</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">英伟达联手 SK 海力士开发 HBM4，黄仁勋警告存储短缺将持续数年</div>
+    <div class="card-body">
+      英伟达与 SK 海力士宣布建立多年技术合作，联合开发下一代 AI 工厂所需的 <span class="card-highlight">HBM4 存储芯片</span>。黄仁勋同时发出警告：<span class="card-highlight">存储供应短缺将持续数年，目前未见结束迹象</span>。HBM 已是 AI 算力的瓶颈环节，此次深度绑定意味着英伟达在为万亿美元规模的 AI 基础设施提前锁定供应链。
+    </div>
+    <div class="card-source">路透社 / 新浪AI热点</div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="news-card">
+    <div class="card-number">03</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">月之暗面（Kimi）寻求超 10 亿美元融资，半年估值暴涨 7 倍</div>
+    <div class="card-body">
+      消息称 Kimi 聊天机器人研发方月之暗面正寻求 <span class="card-highlight">超 10 亿美元</span>新一轮融资，目标估值较去年 12 月<span class="card-highlight">暴涨约 7 倍</span>。这是该企业 <span class="card-highlight">半年内启动的第三轮融资</span>，从侧面印证了国内 AI 赛道的资本热度仍在加速升温。大模型烧钱战远未结束，谁能持续融资、留在牌桌上，谁就有机会笑到最后。
+    </div>
+    <div class="card-source">新浪AI热点 / AIBase</div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="news-card">
+    <div class="card-number">04</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">英伟达与 LG 集团携手打造物理 AI 工厂，具身智能走向产业级落地</div>
+    <div class="card-body">
+      英伟达与 LG 集团宣布合作，融合英伟达全栈式端到端 AI 工厂平台与 LG 在<span class="card-highlight">消费电子、机器人、车载零部件、智慧空间</span>等领域的优势，共同推动物理 AI 与移动出行。这是继与斗山集团扩大合作后，英伟达 24 小时内公布的第二个亚洲制造业巨头合作，具身智能正从实验室走向工厂车间。
+    </div>
+    <div class="card-source">新浪AI热点 / 第一财经</div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="news-card">
+    <div class="card-number">05</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">理想汽车宣布 6 月 15 日举办「Livis Day」AI 发布会，聚焦具身智能</div>
+    <div class="card-body">
+      理想汽车宣布将于 6 月 15 日举办 <span class="card-highlight">Livis Day 软件与人工智能发布会</span>，主题聚焦<span class="card-highlight">具身智能</span>本质及公司未来方向。理想明确表示不局限于汽车本身，将全面展示在软件和 AI 领域的战略布局。继特斯拉 Optimus 之后，中国新势力车企也开始将「AI 公司」而非「车企」作为核心叙事。
+    </div>
+    <div class="card-source">理想汽车官方 / 新浪AI热点</div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="news-card">
+    <div class="card-number">06</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">全国首批涉 AI 精品司法案例公布，AI 裁判规则进入落地阶段</div>
+    <div class="card-body">
+      全国首批涉人工智能精品司法案例正式公布，截至 2026 年 2 月共收到 27 家单位推荐的 <span class="card-highlight">54 个案例</span>，含民事诉讼 50 个、刑事诉讼 4 个。这标志着中国在 AI 领域的<span class="card-highlight">司法实践进入规范化阶段</span>。结合近期密集出台的智能体规范、伦理指引，AI 治理正从「纸面」走向「判例」。
+    </div>
+    <div class="card-source">最高人民法院 / 新浪AI热点</div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="news-card">
+    <div class="card-number">07</div>
+    <span class="card-badge badge-关注">关注</span>
+    <div class="card-title">韩国半导体股全线暴跌，AI 算力泡沫担忧蔓延</div>
+    <div class="card-body">
+      受博通业绩预期不及预期影响，韩国 KOSPI 指数<span class="card-highlight">触发熔断</span>，三星电子与 SK 海力士<span class="card-highlight">双双跌近 10%</span>，A 股多只 AI 相关 ETF 午间跌幅在 2%-3%。这是继上周博通芯片指引爆冷后的连锁反应，市场对 AI 算力泡沫的担忧正在从美国向亚太蔓延。一边是黄仁勋高喊供应短缺，一边是资本市场用脚投票——AI 赛道的冰火两重天愈发明显。
+    </div>
+    <div class="card-source">新浪财经 / 彭博社</div>
+  </div>
+
+</div>
+
+<div class="summary-section">
+  <div class="summary-icon">🔥</div>
+  <div class="summary-label">今日 AI 一句话</div>
+  <div class="summary-quote">WWDC 压轴登场、HBM4 深度绑定、Kimi 估值飞天、半导体股雪崩——AI 赛道上有人在仰望星空，有人在低头看路，而市场在用真金白银告诉大家：光有梦想不够，还得有算力的命门和落地的路径。</div>
+</div>
+
+<div class="footer">
+  AI 动态播报 · 每日更新 · 2026.06.08
+</div>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>雅思单词 Day 04</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;min-height:100vh;margin:0}
+.app{min-height:100vh;display:flex;flex-direction:column}
+
+.top-bar{position:sticky;top:0;z-index:100;background:#161b22;border-bottom:1px solid #30363d;padding:12px 16px 10px;flex-shrink:0}
+.day-label{font-size:12px;color:#8b949e;margin-bottom:6px}
+.progress-row{display:flex;align-items:center;gap:10px}
+.progress-bar{flex:1;background:#1c2128;border-radius:10px;height:6px;overflow:hidden}
+.fill{background:linear-gradient(90deg,#58a6ff,#bc8cff);height:100%;border-radius:10px;transition:width .4s}
+.progress-num{font-size:12px;color:#8b949e;white-space:nowrap}
+
+.card-area{flex:1;padding:14px 16px 100px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.word-card{display:none;max-width:400px;margin:0 auto}
+.word-card.show{display:block}
+
+.img-area{width:100%;aspect-ratio:4/3;background:#161b22;border:1px solid #30363d;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:72px;margin-bottom:14px;position:relative;overflow:hidden}
+.img-label{position:absolute;bottom:8px;right:12px;font-size:11px;color:#8b949e;background:#0d1117;padding:2px 8px;border-radius:8px}
+
+.word-title-row{display:flex;align-items:center;gap:12px;margin-bottom:4px;flex-wrap:wrap}
+.word-text{font-size:34px;font-weight:800;color:#e6edf3}
+.phonetic{font-size:14px;color:#8b949e;margin-bottom:10px}
+
+.speak-group{display:flex;gap:10px;align-items:center;flex-shrink:0}
+.speak-btn{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:2px solid;cursor:pointer;padding:6px 10px;border-radius:14px;transition:all .15s;font-family:inherit;min-width:60px}
+.speak-btn:active{opacity:.6;transform:scale(.95)}
+.speak-btn .icon{font-size:20px;pointer-events:none}
+.speak-btn .label{font-size:10px;line-height:1;pointer-events:none}
+.speak-btn.uk{border-color:#f778ba;color:#f778ba}
+.speak-btn.us{border-color:#58a6ff;color:#58a6ff}
+.speak-btn.playing{animation:pulse .7s infinite alternate}
+.speak-btn.uk.playing{background:rgba(247,120,186,.15);box-shadow:0 0 12px rgba(247,120,186,.3)}
+.speak-btn.us.playing{background:rgba(88,166,255,.15);box-shadow:0 0 12px rgba(88,166,255,.3)}
+@keyframes pulse{from{transform:scale(1)}to{transform:scale(1.06)}}
+
+.meaning-box{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.pos{color:#f0883e;font-weight:700;margin-right:6px}
+.def{color:#e6edf3;font-size:14px;line-height:1.7}
+
+.story-box{background:rgba(240,136,62,.08);border:1px solid rgba(240,136,62,.2);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.story-box .bt{color:#f0883e;font-weight:700;font-size:12px;margin-bottom:4px}
+.story-box .bd{color:#8b949e;font-size:13px;line-height:1.7}
+
+.tip-box{background:rgba(63,185,80,.08);border:1px solid rgba(63,185,80,.2);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.tip-box .bt{color:#3fb950;font-weight:700;font-size:12px;margin-bottom:4px}
+.tip-box .bd{color:#8b949e;font-size:13px;line-height:1.7}
+
+.example-section{border-top:1px solid #30363d;padding-top:10px;margin-bottom:4px}
+.ex-title{font-size:12px;color:#f0883e;font-weight:700;margin-bottom:8px}
+.ex-item{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:10px 12px;margin-bottom:8px;position:relative;padding-right:40px}
+.ex-en{color:#58a6ff;font-size:13px;margin-bottom:2px;line-height:1.6}
+.ex-cn{color:#8b949e;font-size:12px;line-height:1.5}
+.ex-play{position:absolute;right:8px;top:8px;background:none;border:1.5px solid #3fb950;border-radius:50%;width:28px;height:28px;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#3fb950;padding:0;transition:all .15s;font-family:inherit}
+.ex-play:active{background:rgba(63,185,80,.2)}
+.ex-play.playing{background:rgba(63,185,80,.2);animation:pulse .7s infinite alternate}
+
+.voice-note{background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:10px;padding:8px 12px;margin-bottom:12px;font-size:12px;color:#58a6ff;text-align:center}
+
+.nav{position:fixed;bottom:0;left:0;right:0;z-index:100;background:#161b22;border-top:1px solid #30363d;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;padding-bottom:max(10px,env(safe-area-inset-bottom))}
+.nav button{font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;border-radius:12px;font-family:inherit}
+.nav .prev{background:#1c2128;border:1px solid #30363d;color:#e6edf3;padding:9px 24px}
+.nav .next{background:#58a6ff;color:#000;border:none;padding:9px 24px}
+.nav button:active{opacity:.7}
+.nav .prev:disabled{opacity:.3;cursor:default}
+
+.done{text-align:center;padding:40px 20px;max-width:400px;margin:0 auto}
+.done .em{font-size:64px;margin-bottom:20px}
+.done h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.done p{color:#8b949e;font-size:14px;margin-bottom:20px;line-height:1.7}
+.done button{background:#58a6ff;color:#000;border:none;border-radius:12px;padding:11px 32px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top-bar">
+    <div class="day-label">雅思单词 · Day 04 · 已乱序</div>
+    <div class="progress-row">
+      <div class="progress-bar"><div class="fill" id="prog"></div></div>
+      <div class="progress-num"><span id="cur">1</span> / <span id="tot">15</span></div>
+    </div>
+  </div>
+  <div class="card-area" id="area"></div>
+  <div class="nav">
+    <button class="prev" id="prevBtn" disabled>上一个</button>
+    <button class="next" id="nextBtn" onclick="go(1)">下一个</button>
+  </div>
+</div>
+
+<script>
+// ======== 例句MP3映射表 ========
+// 每个例句对应的MP3文件路径（由 gen_sentence_voice.py 生成）
+var sentenceMap = {
+  "Could you elaborate on your proposal?": "voice/sentences/01_Could_you_elaborate_on_your_pr.mp3",
+  "The wedding featured an elaborate floral display.": "voice/sentences/02_The_wedding_featured_an_elabor.mp3",
+  "The theory lacks empirical support.": "voice/sentences/03_The_theory_lacks_empirical_sup.mp3",
+  "Empirical research confirms the hypothesis.": "voice/sentences/04_Empirical_research_confirms_th.mp3",
+  "The two countries recognized each other as separate entities.": "voice/sentences/05_The_two_countries_recognized_e.mp3",
+  "Each department operates as a separate entity.": "voice/sentences/06_Each_department_operates_as_a_.mp3",
+  "One dollar is roughly equivalent to seven yuan.": "voice/sentences/07_One_dollar_is_roughly_equivale.mp3",
+  "She holds the equivalent of a master's degree.": "voice/sentences/08_She_holds_the_equivalent_of_a_.mp3",
+  "Wind and rain gradually eroded the cliff.": "voice/sentences/09_Wind_and_rain_gradually_eroded.mp3",
+  "Public trust has been eroding.": "voice/sentences/10_Public_trust_has_been_eroding..mp3",
+  "The company faces serious ethical concerns.": "voice/sentences/11_The_company_faces_serious_ethi.mp3",
+  "Ethical investing has become popular.": "voice/sentences/12_Ethical_investing_has_become_p.mp3",
+  "The music evoked memories of her childhood.": "voice/sentences/13_The_music_evoked_memories_of_h.mp3",
+  "His speech evoked a strong response.": "voice/sentences/14_His_speech_evoked_a_strong_res.mp3",
+  "Demand has exceeded supply this year.": "voice/sentences/15_Demand_has_exceeded_supply_thi.mp3",
+  "The results exceeded our expectations.": "voice/sentences/16_The_results_exceeded_our_expec.mp3",
+  "She gave explicit instructions.": "voice/sentences/17_She_gave_explicit_instructions.mp3",
+  "The report was explicit about the causes.": "voice/sentences/18_The_report_was_explicit_about_.mp3",
+  "The plan is economically feasible.": "voice/sentences/19_The_plan_is_economically_feasi.mp3",
+  "Is it feasible to finish by Friday?": "voice/sentences/20_Is_it_feasible_to_finish_by_Fr.mp3",
+  "Stock prices fluctuate throughout the day.": "voice/sentences/21_Stock_prices_fluctuate_through.mp3",
+  "Temperatures fluctuate dramatically in mountains.": "voice/sentences/22_Temperatures_fluctuate_dramati.mp3",
+  "There is a fundamental difference between the two methods.": "voice/sentences/23_There_is_a_fundamental_differe.mp3",
+  "Freedom of speech is a fundamental right.": "voice/sentences/24_Freedom_of_speech_is_a_fundame.mp3",
+  "The new policy is expected to generate thousands of jobs.": "voice/sentences/25_The_new_policy_is_expected_to_.mp3",
+  "Wind turbines generate clean energy.": "voice/sentences/26_Wind_turbines_generate_clean_e.mp3",
+  "Scientists set out to test their hypothesis.": "voice/sentences/27_Scientists_set_out_to_test_the.mp3",
+  "The hypothesis was proven correct.": "voice/sentences/28_The_hypothesis_was_proven_corr.mp3",
+  "Are you implying that I made a mistake?": "voice/sentences/29_Are_you_implying_that_I_made_a.mp3",
+  "His silence implies agreement.": "voice/sentences/30_His_silence_implies_agreement..mp3"
+};
+
+// ======== 数据 ========
+var words = [
+  {w:"elaborate",p:"/ɪˈlæbərət/",pos:"adj./v.",m:"精心制作的；详尽的 / 详述",img:"🎨",story:"e（出）+ labor（劳动）+ ate → 用心劳动出来的 → 精心制作的",tip:"搭配：elaborate on（详细说明）。近义：detailed。雅思口语Part 3高频",ex:[["Could you elaborate on your proposal?","你能详细说明一下你的提案吗"],["The wedding featured an elaborate floral display.","婚礼上有精心设计的花卉装饰"]]},
+  {w:"empirical",p:"/ɪmˈpɪrɪkl/",pos:"adj.",m:"经验主义的；以实验为依据的",img:"🧪",story:"empiric（经验）+ al → 靠经验的 → 以实验为依据的",tip:"搭配：empirical evidence / study。近义：experimental。雅思写作学术类必会",ex:[["The theory lacks empirical support.","这个理论缺乏实证支持"],["Empirical research confirms the hypothesis.","实证研究证实了这一假设"]]},
+  {w:"entity",p:"/ˈentəti/",pos:"n.",m:"实体；独立存在",img:"🏢",story:"ent（存在）+ ity → 存在的东西 → 实体",tip:"搭配：legal entity（法人实体）。近义：being / unit",ex:[["The two countries recognized each other as separate entities.","两国承认彼此为独立的实体"],["Each department operates as a separate entity.","每个部门作为一个独立的实体运营"]]},
+  {w:"equivalent",p:"/ɪˈkwɪvələnt/",pos:"adj./n.",m:"等价的；相等的 / 等价物",img:"⚖️",story:"equi（相等）+ val（价值）+ ent → 价值相等的 → 等价的",tip:"搭配：equivalent to。雅思阅读比较题高频",ex:[["One dollar is roughly equivalent to seven yuan.","一美元大约相当于七元人民币"],["She holds the equivalent of a master's degree.","她持有相当于硕士学位的学历"]]},
+  {w:"erode",p:"/ɪˈrəʊd/",pos:"v.",m:"侵蚀；腐蚀；损害",img:"🌊",story:"e（出）+ rode（咬）→ 咬掉 → 侵蚀",tip:"搭配：erode trust/confidence。名词：erosion。雅思写作环境话题高频",ex:[["Wind and rain gradually eroded the cliff.","风雨逐渐侵蚀了悬崖"],["Public trust has been eroding.","公众信任一直在下降"]]},
+  {w:"ethical",p:"/ˈeθɪkl/",pos:"adj.",m:"伦理的；道德的",img:"⚖️",story:"ethic（伦理）+ al → 伦理的",tip:"搭配：ethical standards / ethical dilemma。反义：unethical",ex:[["The company faces serious ethical concerns.","这家公司面临严重的道德问题"],["Ethical investing has become popular.","道德投资越来越受欢迎"]]},
+  {w:"evoke",p:"/ɪˈvəʊk/",pos:"v.",m:"唤起；引起",img:"💭",story:"e（出）+ voke（叫）→ 叫出来 → 唤起",tip:"搭配：evoke memories / emotions。近义：arouse。注意与invoke区分",ex:[["The music evoked memories of her childhood.","这段音乐唤起了她童年的回忆"],["His speech evoked a strong response.","他的演讲引起了强烈共鸣"]]},
+  {w:"exceed",p:"/ɪkˈsiːd/",pos:"v.",m:"超过；超出",img:"📈",story:"ex（出）+ ceed（走）→ 走出去 → 超出",tip:"搭配：exceed expectations。名词：excess。形容词：excessive",ex:[["Demand has exceeded supply this year.","今年需求超过了供应"],["The results exceeded our expectations.","结果超出了我们的预期"]]},
+  {w:"explicit",p:"/ɪkˈsplɪsɪt/",pos:"adj.",m:"明确的；清楚的",img:"💬",story:"ex（出）+ plic（折）+ it → 展开 → 明确的",tip:"反义：implicit（隐含的）。搭配：explicit instructions",ex:[["She gave explicit instructions.","她就如何进行给出了明确的指示"],["The report was explicit about the causes.","报告对原因讲得很清楚"]]},
+  {w:"feasible",p:"/ˈfiːzəbl/",pos:"adj.",m:"可行的；可能的",img:"✅",story:"feas（做）+ ible → 能做的 → 可行的",tip:"名词：feasibility（可行性）。近义：viable",ex:[["The plan is economically feasible.","该计划在经济上可行"],["Is it feasible to finish by Friday?","周五前完成可行吗"]]},
+  {w:"fluctuate",p:"/ˈflʌktʃueɪt/",pos:"v.",m:"波动；起伏",img:"📊",story:"fluct（流动）→ 像水一样流动 → 波动",tip:"名词：fluctuation。搭配：fluctuate between A and B",ex:[["Stock prices fluctuate throughout the day.","股票价格在全天不断波动"],["Temperatures fluctuate dramatically in mountains.","山区温度可能剧烈波动"]]},
+  {w:"fundamental",p:"/ˌfʌndəˈmentl/",pos:"adj./n.",m:"基本的；根本的",img:"🏛️",story:"fundament（基础）+ al → 基础的",tip:"搭配：fundamental difference / principle。复数：fundamentals",ex:[["There is a fundamental difference between the two methods.","这两种方法有根本性的差异"],["Freedom of speech is a fundamental right.","言论自由是一项基本权利"]]},
+  {w:"generate",p:"/ˈdʒenəreɪt/",pos:"v.",m:"产生；生成",img:"⚡",story:"gener（产生）+ ate → 产生",tip:"搭配：generate electricity / revenue。名词：generation",ex:[["The new policy is expected to generate thousands of jobs.","新政策预计将创造数千个就业机会"],["Wind turbines generate clean energy.","风力涡轮机产生清洁能源"]]},
+  {w:"hypothesis",p:"/haɪˈpɒθəsɪs/",pos:"n.",m:"假设；假说",img:"💡",story:"hypo（在…下）+ thesis（论点）→ 未定论的论点 → 假设",tip:"复数：hypotheses。搭配：test/confirm a hypothesis",ex:[["Scientists set out to test their hypothesis.","科学家着手检验他们的假设"],["The hypothesis was proven correct.","这一假设被证明是正确的"]]},
+  {w:"imply",p:"/ɪmˈplaɪ/",pos:"v.",m:"暗示；意味",img:"🤔",story:"im（进入）+ ply（折叠）→ 不直说 → 暗示",tip:"名词：implication。与infer区分：说者imply，听者infer",ex:[["Are you implying that I made a mistake?","你是在暗示我犯了一个错误吗"],["His silence implies agreement.","他的沉默意味着同意"]]}
+];
+
+// 乱序
+function shuffle(a){var b=a.slice();for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t}return b}
+words=shuffle(words);
+
+var cur=0, tot=words.length;
+document.getElementById('tot').textContent=tot;
+
+// ======== 语音播放（本地MP3文件）========
+var currentAudio = null;
+
+function stopAllAudio() {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  // 移除所有按钮的playing状态
+  var allBtns = document.querySelectorAll('.playing');
+  for (var i=0; i<allBtns.length; i++) allBtns[i].classList.remove('playing');
+}
+
+function playMp3(word, type) {
+  stopAllAudio();
+  
+  var filename = word + '_' + type + '.mp3';
+  var url = 'voice/' + filename;
+  var audio = new Audio(url);
+  currentAudio = audio;
+  
+  // 按钮动画
+  var btn = document.querySelector('.speak-btn.' + type);
+  if (btn) btn.classList.add('playing');
+  
+  audio.play().then(function(){
+    // 播放成功
+  }).catch(function(e){
+    console.log('MP3播放失败，降级到Web Speech API:', e);
+    speakFallback(word, type);
+  });
+  
+  audio.onended = function() {
+    var b = document.querySelector('.speak-btn.' + type);
+    if (b) b.classList.remove('playing');
+    currentAudio = null;
+  };
+  audio.onerror = function() {
+    var b = document.querySelector('.speak-btn.' + type);
+    if (b) b.classList.remove('playing');
+    currentAudio = null;
+    speakFallback(word, type);
+  };
+}
+
+function speakFallback(text, type) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  u.lang = type === 'uk' ? 'en-GB' : 'en-US';
+  window.speechSynthesis.speak(u);
+}
+
+function playSentenceMp3(sentence) {
+  stopAllAudio();
+  
+  // 查找例句对应的MP3文件
+  var mp3Path = sentenceMap[sentence];
+  if (!mp3Path) {
+    console.log('未找到例句MP3:', sentence);
+    speakFallback(sentence, 'us');
+    return;
+  }
+  
+  var audio = new Audio(mp3Path);
+  currentAudio = audio;
+  
+  // 找到对应的按钮并添加动画
+  var exBtns = document.querySelectorAll('.ex-play');
+  var targetBtn = null;
+  for (var i=0; i<exBtns.length; i++) {
+    if (exBtns[i].getAttribute('data-ex') === sentence) {
+      targetBtn = exBtns[i];
+      break;
+    }
+  }
+  if (targetBtn) targetBtn.classList.add('playing');
+  
+  audio.play().catch(function(){
+    // 降级到Web Speech API
+    if (targetBtn) targetBtn.classList.remove('playing');
+    speakFallback(sentence, 'us');
+  });
+  
+  audio.onended = function() {
+    if (targetBtn) targetBtn.classList.remove('playing');
+    currentAudio = null;
+  };
+  audio.onerror = function() {
+    if (targetBtn) targetBtn.classList.remove('playing');
+    currentAudio = null;
+    speakFallback(sentence, 'us');
+  };
+}
+
+// ======== 渲染 ========
+function show(idx){
+  var w=words[idx];
+  var exHtml='';
+  for(var i=0;i<w.ex.length;i++){
+    exHtml+='<div class="ex-item"><div class="ex-en">'+esc(w.ex[i][0])+'</div><div class="ex-cn">'+esc(w.ex[i][1])+'</div><button class="ex-play" data-ex="'+escAttr(w.ex[i][0])+'">🔊</button></div>';
+  }
+  document.getElementById('area').innerHTML=
+    '<div class="word-card show">'+
+      '<div class="img-area">'+w.img+'<span class="img-label">'+esc(w.w)+'</span></div>'+
+      '<div class="word-title-row">'+
+        '<div class="word-text" data-word="'+escAttr(w.w)+'">'+esc(w.w)+'</div>'+
+        '<div class="speak-group">'+
+          '<button class="speak-btn uk" data-word="'+escAttr(w.w)+'" data-type="uk"><span class="icon">🇬🇧</span><span class="label">英式</span></button>'+
+          '<button class="speak-btn us" data-word="'+escAttr(w.w)+'" data-type="us"><span class="icon">🇺🇸</span><span class="label">美式</span></button>'+
+        '</div>'+
+      '</div>'+
+      '<div class="phonetic">'+esc(w.p)+'</div>'+
+      '<div class="voice-note">🔊 点击按钮播放真人发音（美式/英式）</div>'+
+      '<div class="meaning-box"><span class="pos">'+esc(w.pos)+'</span><span class="def">'+esc(w.m)+'</span></div>'+
+      '<div class="story-box"><div class="bt">💡 记忆法</div><div class="bd">'+esc(w.story)+'</div></div>'+
+      '<div class="tip-box"><div class="bt">📝 用法提示</div><div class="bd">'+esc(w.tip)+'</div></div>'+
+      '<div class="example-section"><div class="ex-title">📖 例句（点击🔊播放真人发音）</div>'+exHtml+'</div>'+
+    '</div>';
+  document.getElementById('cur').textContent=idx+1;
+  document.getElementById('prog').style.width=((idx+1)/tot*100)+'%';
+  document.getElementById('prevBtn').disabled=(idx<=0);
+  document.getElementById('nextBtn').textContent=(idx>=tot-1)?'完成':'下一个';
+}
+
+function go(dir){
+  cur+=dir;
+  if(cur<0)cur=0;
+  if(cur>=tot){finish();return}
+  show(cur);
+}
+
+function finish(){
+  document.getElementById('area').innerHTML=
+    '<div class="done"><div class="em">🎉</div><h2>Day 04 完成！</h2>'+
+    '<p>今天学了 15 个雅思高频词<br>坚持就是胜利 💪</p>'+
+    '<button onclick="location.reload()">重新乱序再来</button></div>';
+  document.getElementById('nextBtn').textContent='完成';
+  document.getElementById('nextBtn').disabled=true;
+}
+
+// 工具函数
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function escAttr(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+// ======== 事件代理 ========
+document.getElementById('area').addEventListener('click', function(e){
+  // 单词点击发音（美式）
+  var wordDiv=e.target.closest('.word-text');
+  if(wordDiv){playMp3(wordDiv.getAttribute('data-word'), 'us');return}
+  // 英式/美式发音按钮
+  var speakBtn=e.target.closest('.speak-btn');
+  if(speakBtn){
+    var word=speakBtn.getAttribute('data-word');
+    var type=speakBtn.getAttribute('data-type');
+    playMp3(word, type);
+    return;
+  }
+  // 例句发音按钮
+  var exBtn=e.target.closest('.ex-play');
+  if(exBtn){
+    var text=exBtn.getAttribute('data-ex');
+    playSentenceMp3(text);
+    return;
+  }
+});
+
+// 键盘
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();go(-1);}
+});
+
+show(0);
+</script>
+</body>
+</html>

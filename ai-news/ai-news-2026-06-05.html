@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026年6月5日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 16px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    position: relative;
+  }
+  .header-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(88,166,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-date {
+    font-size: 13px;
+    color: #58a6ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #58a6ff 0%, #bc8cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 4px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    margin: 0 auto 24px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    max-width: 420px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  .stat-num.red { color: #f85149; }
+  .stat-num.orange { color: #d2991d; }
+  .stat-num.green { color: #3fb950; }
+  .stat-label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+
+  /* News cards */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+
+  .card-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .badge-重磅 {
+    background: rgba(248,81,73,0.15);
+    color: #f85149;
+    border: 1px solid rgba(248,81,73,0.3);
+  }
+  .badge-重点 {
+    background: rgba(210,153,29,0.15);
+    color: #d2991d;
+    border: 1px solid rgba(210,153,29,0.3);
+  }
+  .badge-关注 {
+    background: rgba(63,185,80,0.15);
+    color: #3fb950;
+    border: 1px solid rgba(63,185,80,0.3);
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-body {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #484f58;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-source::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #30363d;
+    border-radius: 50%;
+  }
+
+  /* Summary section */
+  .summary-section {
+    max-width: 600px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, rgba(88,166,255,0.06) 0%, rgba(188,140,255,0.06) 100%);
+    border: 1px solid rgba(88,166,255,0.2);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-label {
+    font-size: 12px;
+    color: #58a6ff;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .summary-quote {
+    font-size: 15px;
+    color: #e6edf3;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  .summary-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 28px 0 12px;
+    font-size: 11px;
+    color: #30363d;
+    letter-spacing: 1px;
+  }
+
+  /* Numbering dot */
+  .card-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(88,166,255,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-glow"></div>
+  <div class="header-date">2026.06.05 · FRIDAY</div>
+  <h1>AI 动态播报</h1>
+  <div class="header-subtitle">每日精选 · 全球视野</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red">3</div>
+    <div class="stat-label">重磅</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num orange">3</div>
+    <div class="stat-label">重点</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green">1</div>
+    <div class="stat-label">关注</div>
+  </div>
+</div>
+
+<div class="news-list">
+
+  <!-- Card 1 -->
+  <div class="news-card">
+    <div class="card-number">01</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">OpenAI 为 ChatGPT 装上「记忆大脑」</div>
+    <div class="card-body">
+      OpenAI 推出基于 Dreaming 技术的全新记忆系统，ChatGPT 现在能自动整理、更新用户信息，让个性化回答更精准。不再是你问一句它答一句，而是真正「记住你」——率先向美国 Plus 和 Pro 用户开放。
+    </div>
+    <div class="card-source">OpenAI 官方</div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="news-card">
+    <div class="card-number">02</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">CodeX 全面整合进 ChatGPT，周活已超 500 万</div>
+    <div class="card-body">
+      OpenAI 宣布未来几周将 CodeX 整合进 ChatGPT，推出 6 个职位专属插件覆盖 62 个应用、110 项技能，新增 Annotations 精确修改和 Sites 一键建站分享。CodeX 非开发者用户占比已达 20%，正向「准超级应用」演进。
+    </div>
+    <div class="card-source">OpenAI 官方</div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="news-card">
+    <div class="card-number">03</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">阶跃 Step 3.7 Flash 登顶：速度、性价比、端到端三项第一</div>
+    <div class="card-body">
+      阶跃星辰发布 Step 3.7 Flash 大模型，登顶 AA 榜三项第一。最高输出速度 416 tokens/s，单任务成本仅为 Claude Opus 4.6 的 1/9，编程能力达其 97%。已在 HuggingFace 开源，国产模型性价比之战再升级。
+    </div>
+    <div class="card-source">阶跃星辰</div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="news-card">
+    <div class="card-number">04</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">Anthropic：超 80% 代码由 Claude 编写，AI 已开始自我迭代</div>
+    <div class="card-body">
+      Anthropic 发布万字长文《When AI builds itself》，披露公司超 80% 代码由 Claude 编写，工程师季度代码交付量是 2021-2025 年均值的 8 倍。AI 正在加速构建自身，递归式自我改进不再是科幻场景。
+    </div>
+    <div class="card-source">Anthropic</div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="news-card">
+    <div class="card-number">05</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">微软联手梅奥诊所，打造全球最大医疗 AI 模型</div>
+    <div class="card-body">
+      微软 Build 2026 宣布与梅奥诊所合作，依托含 1300 万患者数据的全球顶级临床数据库，开发专属医疗 AI 大模型。模型用于辅助临床诊疗，产权归梅奥，微软负责商业化。CEO 放话：医疗才是 AI 最重要的赛道。
+    </div>
+    <div class="card-source">微软 Build 2026</div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="news-card">
+    <div class="card-number">06</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">苹果 AI 眼镜推迟至 2027 年底，瞄准 200-500 美元主流市场</div>
+    <div class="card-body">
+      彭博社 Mark Gurman 爆料，苹果代号 N50 的 AI 智能眼镜从 2026 年底推迟至 2027 年底发布。产品定位为轻量无屏、与 iPhone 协同的日常 AI 眼镜，主打感知交互，价格瞄准 200-500 美元区间。
+    </div>
+    <div class="card-source">彭博社 / Mark Gurman</div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="news-card">
+    <div class="card-number">07</div>
+    <span class="card-badge badge-关注">关注</span>
+    <div class="card-title">GitLab 裁员 14% 全面转型 AI，AI 编程正在重塑行业</div>
+    <div class="card-body">
+      GitLab 裁掉约 350 名员工（14%），将节省资金全部投入 AI 研发。其 2026 年 Q1 营收同比增长 23% 超预期，股价盘后涨 7%。这并非孤例——AI 对软件行业的重塑已从「趋势」变为「现实」。
+    </div>
+    <div class="card-source">GitLab 财报 / 多家媒体</div>
+  </div>
+
+</div>
+
+<div class="summary-section">
+  <div class="summary-icon">⚡</div>
+  <div class="summary-label">今日 AI 一句话</div>
+  <div class="summary-quote">AI 不再只是工具——它开始记住你、替你写代码、帮你诊病，甚至加速构建自己。2026 年的夏天，我们正站在「AI 从助手变成伙伴」的拐点上。</div>
+</div>
+
+<div class="footer">
+  AI 动态播报 · 每日更新 · 2026.06.05
+</div>
+
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>雅思核心词汇 Day 13</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{padding:14px;padding-bottom:80px;max-width:760px;margin:0 auto}
+.header{text-align:center;padding:18px 0 14px;border-bottom:1px solid #21262d;margin-bottom:18px}
+.header h1{font-size:22px;color:#58a6ff;font-weight:700;letter-spacing:.5px}
+.header .sub{font-size:13px;color:#8b949e;margin-top:6px}
+.header .meta{font-size:11px;color:#6e7681;margin-top:4px}
+.toolbar{display:flex;gap:10px;margin-bottom:18px;justify-content:center;flex-wrap:wrap}
+.btn-action{background:linear-gradient(135deg,#238636,#2ea043);color:#fff;border:none;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;box-shadow:0 2px 6px rgba(35,134,54,.3)}
+.btn-action:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(35,134,54,.4)}
+.btn-action:active{transform:translateY(0)}
+.btn-shuffle{background:linear-gradient(135deg,#1f6feb,#388bfd);box-shadow:0 2px 6px rgba(31,111,235,.3)}
+.btn-shuffle:hover{box-shadow:0 4px 10px rgba(31,111,235,.4)}
+.card{background:#161b22;border:1px solid #30363d;border-radius:16px;padding:20px;margin-bottom:18px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.card-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.emoji-box{width:78px;height:78px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:46px;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 4px 10px rgba(0,0,0,.3)}
+.word-info{flex:1;min-width:0}
+.word-en{font-size:26px;font-weight:700;color:#f0f6fc;letter-spacing:.3px;word-break:break-word}
+.ipa{font-size:13px;color:#8b949e;margin-top:3px;font-family:"Lucida Sans Unicode",Arial,sans-serif}
+.pos-mean{font-size:14px;color:#c9d1d9;margin-top:6px;line-height:1.5}
+.pos-mean .pos{color:#d2a8ff;font-weight:600;margin-right:6px}
+.tts-row{display:flex;gap:8px;margin:12px 0}
+.tts-btn{flex:1;background:#21262d;border:1px solid #30363d;color:#e6edf3;padding:9px 10px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;transition:all .15s}
+.tts-btn:hover{background:#30363d;border-color:#58a6ff}
+.tts-btn:active{transform:scale(.96)}
+.tts-btn.gb{background:linear-gradient(135deg,#1f6feb33,#388bfd22);border-color:#1f6feb}
+.tts-btn.us{background:linear-gradient(135deg,#d2992233,#e3b34122);border-color:#d29922}
+.story{background:linear-gradient(135deg,#1c2128,#22272e);border-left:3px solid #d2a8ff;padding:12px 14px;border-radius:0 10px 10px 0;margin:12px 0;font-size:13.5px;color:#c9d1d9;line-height:1.7}
+.story .label{color:#d2a8ff;font-weight:700;margin-right:6px;font-size:12px}
+.usage{background:#0d1117;border:1px dashed #30363d;padding:10px 12px;border-radius:8px;margin:10px 0;font-size:12.5px;color:#8b949e;line-height:1.6}
+.usage .label{color:#ffa657;font-weight:700;margin-right:6px}
+.examples-title{font-size:13px;color:#58a6ff;font-weight:700;margin:16px 0 10px;display:flex;align-items:center;gap:6px}
+.examples-title::before{content:"";width:3px;height:13px;background:#58a6ff;border-radius:2px}
+.ex-item{background:#0d1117;border:1px solid #21262d;border-radius:10px;padding:11px 12px;margin-bottom:9px}
+.ex-en{font-size:14px;color:#e6edf3;line-height:1.5;word-break:break-word}
+.ex-en b{color:#7ee787;font-weight:600}
+.ex-cn{font-size:12.5px;color:#8b949e;margin-top:5px;line-height:1.5}
+.ex-tts{margin-top:8px;background:#161b22;border:1px solid #30363d;color:#58a6ff;padding:6px 12px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:all .15s}
+.ex-tts:hover{background:#1f6feb33;border-color:#58a6ff}
+.ex-tts:active{transform:scale(.95)}
+.ex-tts.playing{background:#23863633;border-color:#3fb950;color:#3fb950}
+.footer{text-align:center;padding:20px 0 10px;font-size:11px;color:#6e7681;line-height:1.6}
+.gradient-1{background:linear-gradient(135deg,#ff6b6b33,#ee5a6f22)}
+.gradient-2{background:linear-gradient(135deg,#4ecdc433,#44a08d22)}
+.gradient-3{background:linear-gradient(135deg,#a8edea22,#fed6e322)}
+.gradient-4{background:linear-gradient(135deg,#fbc2eb22,#a6c1ee22)}
+.gradient-5{background:linear-gradient(135deg,#fad0c433,#ffd1ff22)}
+.gradient-6{background:linear-gradient(135deg,#a18cd122,#fbc2eb22)}
+.gradient-7{background:linear-gradient(135deg,#84fab022,#8fd3f422)}
+.gradient-8{background:linear-gradient(135deg,#ffecd222,#fcb69f22)}
+.gradient-9{background:linear-gradient(135deg,#667eea33,#764ba222)}
+.gradient-10{background:linear-gradient(135deg,#f093fb22,#f5576c22)}
+.gradient-11{background:linear-gradient(135deg,#5ee7df22,#b490ca22)}
+.gradient-12{background:linear-gradient(135deg,#c3cfe222,#f5f7fa22)}
+.gradient-13{background:linear-gradient(135deg,#fdcbf122,#e1bee722)}
+.gradient-14{background:linear-gradient(135deg,#ff9a9e22,#fad0c422)}
+.gradient-15{background:linear-gradient(135deg,#a1c4fd22,#c2e9fb22)}
+.fade-in{animation:fadeIn .45s ease-out}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📚 雅思核心词汇 Day 13</h1>
+  <div class="sub">艺术文化 + 媒体传播</div>
+  <div class="meta">15个高频词 · 每词3例句 · 微信内可发音</div>
+</div>
+
+<div class="toolbar">
+  <button class="btn-action btn-shuffle" onclick="shuffleCards()">🔀 乱序重排</button>
+  <button class="btn-action" onclick="playAll()">▶️ 顺序连播</button>
+</div>
+
+<div id="cards"></div>
+
+<div class="footer">
+  雅思核心词汇 Day 13 · 深色主题<br>
+  单词：有道TTS · 例句：百度TTS
+</div>
+
+<!-- 共享 audio 元素：微信X5内核兼容 -->
+<audio id="player" playsinline webkit-playsinline x5-playsinline preload="none"></audio>
+
+<script>
+// ============ 单词数据 ============
+const RAW = [
+  {
+    word:"aesthetic",
+    ipa:"/iːsˈθetɪk/",
+    pos:"adj.",
+    mean:"美学的；审美的；有美感的",
+    emoji:"🎨",
+    grad:"gradient-1",
+    story:"把 'a' 想成 'a(一)'，'esth' 像 '爱死它'，'ic' 是形容词后缀。想象：一件美的东西让人爱死它——这就是aesthetic美学的境界。",
+    usage:"雅思大作文艺术类高频词。搭配：aesthetic value(审美价值)、aesthetic appeal(美感)、aesthetic standards(审美标准)。",
+    examples:[
+      {en:"The building has great <b>aesthetic</b> appeal despite its small size.",cn:"这座建筑虽小，但具有很强的美感。"},
+      {en:"Philosophers have long debated the nature of <b>aesthetic</b> experience.",cn:"哲学家们长期以来一直在争论审美体验的本质。"},
+      {en:"Modern architecture often prioritizes function over <b>aesthetic</b> considerations.",cn:"现代建筑常常优先考虑功能而非美学考量。"}
+    ]
+  },
+  {
+    word:"depict",
+    ipa:"/dɪˈpɪkt/",
+    pos:"v.",
+    mean:"描绘；描述；刻画",
+    emoji:"🖼️",
+    grad:"gradient-2",
+    story:"'de' (向下) + 'pict' (画，picture的词根) = 画下来 → 描绘。画家把看到的东西用画笔depict下来。",
+    usage:"写作描述类必背。搭配：depict sth as...(把某物描绘成...)、be depicted in...(在...中被描绘)。",
+    examples:[
+      {en:"The painting <b>depicts</b> a serene mountain landscape at dawn.",cn:"这幅画描绘了黎明时分宁静的山景。"},
+      {en:"The novel <b>depicts</b> life in a small coastal village.",cn:"这部小说描写了一个小渔村的生活。"},
+      {en:"Media often <b>depicts</b> young people as irresponsible.",cn:"媒体常常把年轻人描绘成不负责任的样子。"}
+    ]
+  },
+  {
+    word:"genre",
+    ipa:"/ˈʒɑːnrə/",
+    pos:"n.",
+    mean:"体裁；类型；流派",
+    emoji:"🎬",
+    grad:"gradient-3",
+    story:"法语词 'genre'，意为'种类、类型'。电影有genre（动作/爱情/科幻），文学有genre（小说/诗歌/散文）。",
+    usage:"口语和写作都常用。搭配：a genre of music(一种音乐类型)、science fiction genre(科幻类)、hybrid genre(混合类型)。",
+    examples:[
+      {en:"Science fiction is a popular <b>genre</b> among young readers.",cn:"科幻小说在年轻读者中很受欢迎。"},
+      {en:"She enjoys writing in the mystery <b>genre</b>.",cn:"她喜欢写悬疑类作品。"},
+      {en:"This film blends several <b>genres</b>, including comedy and drama.",cn:"这部电影融合了喜剧和戏剧等多种类型。"}
+    ]
+  },
+  {
+    word:"narrative",
+    ipa:"/ˈnærətɪv/",
+    pos:"n.",
+    mean:"叙述；故事；叙事",
+    emoji:"📖",
+    grad:"gradient-4",
+    story:"'narr' 来自拉丁 narrare (讲述)，'-ive' 名词后缀 = 讲述出来的东西 = 叙事/故事。",
+    usage:"雅思写作task 2神器。搭配：dominant narrative(主流叙事)、narrative structure(叙事结构)、challenge the narrative(挑战主流说法)。",
+    examples:[
+      {en:"The film uses a non-linear <b>narrative</b> to tell the story.",cn:"这部电影用非线性叙事来讲故事。"},
+      {en:"Historians are revising the traditional <b>narrative</b> of the war.",cn:"历史学家们正在修正关于这场战争的传统叙述。"},
+      {en:"Social media has changed how we construct personal <b>narratives</b>.",cn:"社交媒体改变了我们构建个人叙事的方式。"}
+    ]
+  },
+  {
+    word:"propaganda",
+    ipa:"/ˌprɒpəˈɡændə/",
+    pos:"n.",
+    mean:"宣传；鼓动（多含贬义）",
+    emoji:"📢",
+    grad:"gradient-5",
+    story:"源自拉丁 'propagare'(繁殖、传播)。原本是中性词指'传播观念'，后因政治宣传多带操控色彩，演变为贬义词。",
+    usage:"媒体类话题高频词。区分：propaganda(贬义宣传) vs. publicity/promotion(中性推广)。",
+    examples:[
+      {en:"The regime used <b>propaganda</b> to control public opinion.",cn:"该政权利用宣传来控制舆论。"},
+      {en:"That advertisement is nothing more than commercial <b>propaganda</b>.",cn:"那则广告不过是商业宣传罢了。"},
+      {en:"Citizens grew weary of constant political <b>propaganda</b>.",cn:"市民们对不断涌现的政治宣传感到厌倦。"}
+    ]
+  },
+  {
+    word:"satire",
+    ipa:"/ˈsætaɪə/",
+    pos:"n.",
+    mean:"讽刺；讽刺作品",
+    emoji:"🎭",
+    grad:"gradient-6",
+    story:"拉丁 'satura'(杂拌、拼盘)演变而来。原指把不同内容拼在一起的杂剧，后专指讽刺作品。",
+    usage:"艺术文化话题高频。搭配：political satire(政治讽刺)、social satire(社会讽刺)、a satire on/upon...(对...的讽刺)。",
+    examples:[
+      {en:"The novel is a sharp <b>satire</b> on modern politics.",cn:"这部小说是对现代政治的尖锐讽刺。"},
+      {en:"Swift's 'Gulliver's Travels' is a famous work of <b>satire</b>.",cn:"斯威夫特的《格列佛游记》是一部著名的讽刺作品。"},
+      {en:"The TV show uses <b>satire</b> to critique social norms.",cn:"这个电视节目用讽刺手法批判社会规范。"}
+    ]
+  },
+  {
+    word:"stereotype",
+    ipa:"/ˈsteriətaɪp/",
+    pos:"n./v.",
+    mean:"刻板印象；成见",
+    emoji:"🏷️",
+    grad:"gradient-7",
+    story:"'stereo' (固体的) + 'type' (类型) = 固定的类型 → 刻板印象。把人固定归类的思维陷阱。",
+    usage:"雅思写作task 2高频词。搭配：break/challenge stereotypes(打破刻板印象)、gender/racial stereotypes(性别/种族刻板印象)、stereotypical view。",
+    examples:[
+      {en:"It's unfair to judge people based on <b>stereotypes</b>.",cn:"基于刻板印象评判人是不公平的。"},
+      {en:"The film challenges <b>stereotypes</b> about elderly people.",cn:"这部电影挑战了关于老年人的刻板印象。"},
+      {en:"Media often <b>stereotypes</b> certain professions in a negative light.",cn:"媒体经常以负面方式把某些职业模式化。"}
+    ]
+  },
+  {
+    word:"rhetoric",
+    ipa:"/ˈretərɪk/",
+    pos:"n.",
+    mean:"修辞；华丽辞藻；雄辩",
+    emoji:"🗣️",
+    grad:"gradient-8",
+    story:"希腊 'rhetor' (演说家) 演变而来。古代修辞学家教人如何雄辩 → rhetoric 既指修辞术，也指华而不实的言辞。",
+    usage:"写作高分替换词。搭配：political rhetoric(政治辞令)、empty rhetoric(空洞辞藻)、rhetorical question(反问句)。",
+    examples:[
+      {en:"His speech was full of <b>rhetoric</b> but lacked substance.",cn:"他的演讲满是华丽辞藻，却缺乏实质内容。"},
+      {en:"The politician's <b>rhetoric</b> often fails to match his actions.",cn:"那位政客的言辞常常与行动不符。"},
+      {en:"'Why should we care?' is a classic <b>rhetorical</b> question.",cn:"'我们为什么要关心？'是一个经典的修辞性反问。"}
+    ]
+  },
+  {
+    word:"allegory",
+    ipa:"/ˈæləɡɔːri/",
+    pos:"n.",
+    mean:"寓言；讽喻",
+    emoji:"🦁",
+    grad:"gradient-9",
+    story:"希腊 'allos' (其他) + 'agoreuein' (说话) = 说别的事 = 借彼说此。动物王国的故事讲人类社会的道理。",
+    usage:"文学分析必备。搭配：political allegory(政治寓言)、moral allegory(道德寓言)、'Animal Farm' is an allegory of...(《动物农场》是...的寓言)。",
+    examples:[
+      {en:"Orwell's 'Animal Farm' is a famous political <b>allegory</b>.",cn:"奥威尔的《动物农场》是一部著名的政治寓言。"},
+      {en:"The play can be read as an <b>allegory</b> for totalitarianism.",cn:"这出戏可以被解读为对极权主义的讽喻。"},
+      {en:"Medieval artists often used <b>allegory</b> in their paintings.",cn:"中世纪艺术家常常在画作中使用寓言手法。"}
+    ]
+  },
+  {
+    word:"convey",
+    ipa:"/kənˈveɪ/",
+    pos:"v.",
+    mean:"传达；传递；表达",
+    emoji:"📬",
+    grad:"gradient-10",
+    story:"'con' (一起) + 'vey' (路，看convey/way) = 一起走同一条路 → 把信息传递过去。",
+    usage:"雅思口语写作万能动词。搭配：convey a message(传达信息)、convey emotions(表达情感)、convey meaning(表达含义)。",
+    examples:[
+      {en:"Words often fail to <b>convey</b> our deepest emotions.",cn:"言语常常无法表达我们最深的情感。"},
+      {en:"The painting <b>conveys</b> a sense of melancholy and isolation.",cn:"这幅画传达了一种忧郁和孤独的感觉。"},
+      {en:"Body language can <b>convey</b> more than spoken words.",cn:"肢体语言能传达比言语更多的信息。"}
+    ]
+  },
+  {
+    word:"portray",
+    ipa:"/pɔːˈtreɪ/",
+    pos:"v.",
+    mean:"描绘；扮演；展现",
+    emoji:"🎭",
+    grad:"gradient-11",
+    story:"法语 'portraire'(画出)演变而来。画家把人物画出来 = portray。也可指演员扮演角色。",
+    usage:"媒体人物描写高频词。搭配：portray sb as...(把某人描绘成...)、be portrayed by...(由...扮演)、accurately portray(准确描绘)。",
+    examples:[
+      {en:"The film <b>portrays</b> the king as a cruel tyrant.",cn:"这部电影把国王描绘成一个残酷的暴君。"},
+      {en:"She was <b>portrayed</b> as a strong and independent woman.",cn:"她被刻画成一个坚强独立的女性。"},
+      {en:"The actor <b>portrayed</b> Hamlet with great passion.",cn:"那位演员以极大热情扮演了哈姆雷特。"}
+    ]
+  },
+  {
+    word:"subtle",
+    ipa:"/ˈsʌtl/",
+    pos:"adj.",
+    mean:"微妙的；细微的；狡猾的",
+    emoji:"🌫️",
+    grad:"gradient-12",
+    story:"拉丁 'subtilis'(精细的)演变 → 细微到不易察觉的。区别：subtle(微妙的) vs. obvious(明显的)。",
+    usage:"写作替换 very good/bad 的高分词。搭配：subtle difference(细微差别)、subtle humor(含蓄幽默)、subtle changes(微妙变化)。",
+    examples:[
+      {en:"There are <b>subtle</b> differences between the two theories.",cn:"这两种理论之间有细微的差别。"},
+      {en:"Her writing is known for its <b>subtle</b> humor and irony.",cn:"她的作品以其含蓄的幽默和讽刺而闻名。"},
+      {en:"The artist uses <b>subtle</b> shades of gray in this painting.",cn:"这位艺术家在这幅画中运用了微妙的灰色调。"}
+    ]
+  },
+  {
+    word:"explicit",
+    ipa:"/ɪkˈsplɪsɪt/",
+    pos:"adj.",
+    mean:"明确的；清楚的；直率的",
+    emoji:"📌",
+    grad:"gradient-13",
+    story:"拉丁 'explicare'(展开、解释) = 展开来说清楚 = 明确的。注意与 implicit(隐含的)相反。",
+    usage:"写作论证必备。搭配：explicit instructions(明确指示)、be explicit about...(对...态度明确)、explicit content(露骨内容)。",
+    examples:[
+      {en:"The contract includes <b>explicit</b> terms about the deadline.",cn:"合同中包含关于截止日期的明确条款。"},
+      {en:"She was <b>explicit</b> about her reasons for leaving the job.",cn:"她对自己离职的原因直言不讳。"},
+      {en:"The film contains <b>explicit</b> scenes of violence.",cn:"这部电影包含露骨的暴力场面。"}
+    ]
+  },
+  {
+    word:"omnipresent",
+    ipa:"/ˌɒmnɪˈpreznt/",
+    pos:"adj.",
+    mean:"无处不在的；普遍存在的",
+    emoji:"🌐",
+    grad:"gradient-14",
+    story:"拉丁 'omni'(全部) + 'praesens'(在场) = 处处都在场 = 无处不在的。和 ubiquitous 意思相近。",
+    usage:"高分替换 everywhere。搭配：omnipresent media(无处不在的媒体)、omnipresent technology(普及的技术)、be omnipresent in...(在...中无处不在)。",
+    examples:[
+      {en:"Smartphones have become <b>omnipresent</b> in modern society.",cn:"智能手机在现代社会已无处不在。"},
+      {en:"Advertising is <b>omnipresent</b> in public spaces.",cn:"广告在公共场所无处不在。"},
+      {en:"The influence of social media is <b>omnipresent</b> in our daily lives.",cn:"社交媒体的影响在我们日常生活中无处不在。"}
+    ]
+  },
+  {
+    word:"versatile",
+    ipa:"/ˈvɜːsətaɪl/",
+    pos:"adj.",
+    mean:"多才多艺的；多用途的；通用的",
+    emoji:"🔧",
+    grad:"gradient-15",
+    story:"拉丁 'versare'(转动) + '-ile' = 能转动的、能多面用的。瑞士军刀就是versatile的极致。",
+    usage:"人物描述和物品评价万能词。搭配：versatile actor(多才多艺的演员)、versatile material(多用途材料)、versatile tool(多功能工具)。",
+    examples:[
+      {en:"She is a <b>versatile</b> actress capable of playing many roles.",cn:"她是一位多才多艺的演员，能胜任多种角色。"},
+      {en:"This <b>versatile</b> jacket can be worn in any season.",cn:"这件多功能夹克四季皆宜。"},
+      {en:"Plastic is a <b>versatile</b> material used in many industries.",cn:"塑料是一种在许多行业使用的多用途材料。"}
+    ]
+  }
+];
+
+// ============ 工具函数 ============
+const $ = id => document.getElementById(id);
+const player = $('player');
+
+function playTTS(text, type){
+  // type: 'gb'=英音 type=1, 'us'=美音 type=2, 'ex'=百度TTS整句
+  let url;
+  if(type==='gb') url = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&type=1`;
+  else if(type==='us') url = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&type=2`;
+  else if(type==='ex') url = `https://fanyi.baidu.com/gettts?lan=uk&spd=4&text=${encodeURIComponent(text)}`;
+  player.src = url;
+  player.play().catch(e=>console.log('播放失败',e));
+}
+
+// 例句按钮播放 + 视觉反馈
+function playExample(btn, sentence){
+  document.querySelectorAll('.ex-tts.playing').forEach(b=>b.classList.remove('playing'));
+  btn.classList.add('playing');
+  playTTS(sentence, 'ex');
+  player.onended = () => btn.classList.remove('playing');
+  player.onerror = () => btn.classList.remove('playing');
+  setTimeout(()=>btn.classList.remove('playing'), 8000);
+}
+
+// ============ 渲染卡片 ============
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function buildCard(w, idx){
+  const examplesHtml = w.examples.map((ex,i)=>`
+    <div class="ex-item">
+      <div class="ex-en">${ex.en}</div>
+      <div class="ex-cn">${ex.cn}</div>
+      <button class="ex-tts" data-sent="${escapeHtml(ex.en)}" onclick="playExample(this, this.dataset.sent)">🔊 播放本句</button>
+    </div>
+  `).join('');
+
+  return `
+    <div class="card fade-in" data-idx="${idx}">
+      <div class="card-top">
+        <div class="emoji-box ${w.grad}">${w.emoji}</div>
+        <div class="word-info">
+          <div class="word-en">${w.word}</div>
+          <div class="ipa">${w.ipa}</div>
+          <div class="pos-mean"><span class="pos">${w.pos}</span>${w.mean}</div>
+        </div>
+      </div>
+      <div class="tts-row">
+        <button class="tts-btn gb" onclick="playTTS('${w.word}','gb')">🇬🇧 英音 GB</button>
+        <button class="tts-btn us" onclick="playTTS('${w.word}','us')">🇺🇸 美音 US</button>
+      </div>
+      <div class="story"><span class="label">💡 记忆故事</span>${w.story}</div>
+      <div class="usage"><span class="label">📝 用法提示</span>${w.usage}</div>
+      <div class="examples-title">📖 例句（点击🔊逐句播放）</div>
+      ${examplesHtml}
+    </div>
+  `;
+}
+
+let currentOrder = RAW.map((_,i)=>i);
+
+function render(){
+  const html = currentOrder.map(i=>buildCard(RAW[i], i)).join('');
+  $('cards').innerHTML = html;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function shuffleCards(){
+  currentOrder = [...currentOrder];
+  for(let i=currentOrder.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [currentOrder[i],currentOrder[j]] = [currentOrder[j],currentOrder[i]];
+  }
+  render();
+}
+
+let playQueue = [];
+let playIdx = 0;
+function playAll(){
+  playQueue = [...currentOrder];
+  playIdx = 0;
+  playNextInQueue();
+}
+function playNextInQueue(){
+  if(playIdx >= playQueue.length){ playQueue=[]; return; }
+  const w = RAW[playQueue[playIdx]];
+  const card = document.querySelector(`.card[data-idx="${playQueue[playIdx]}"]`);
+  if(card) card.scrollIntoView({behavior:'smooth',block:'start'});
+  playTTS(w.word, 'gb');
+  player.onended = ()=>{ playIdx++; playNextInQueue(); };
+}
+
+// 首次进入即乱序（按要求每次打开随机排序）
+function initShuffle(){
+  for(let i=currentOrder.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [currentOrder[i],currentOrder[j]] = [currentOrder[j],currentOrder[i]];
+  }
+}
+
+initShuffle();
+render();
+</script>
+</body>
+</html>

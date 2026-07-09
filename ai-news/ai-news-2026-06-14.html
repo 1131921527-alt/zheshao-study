@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI动态播报 · 2026-06-14</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;min-height:100vh}
+  .wrap{max-width:680px;margin:0 auto;padding:20px 16px 60px}
+
+  /* 顶部标题栏 */
+  .header{text-align:center;padding:32px 0 24px;position:relative}
+  .header::after{content:'';display:block;width:60px;height:3px;background:linear-gradient(90deg,#58a6ff,#bc8cff);margin:16px auto 0;border-radius:2px}
+  .header .logo{font-size:28px;font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .header .date{font-size:14px;color:#8b949e;margin-top:6px;font-weight:500}
+  .header .weekday{font-size:12px;color:#6e7681;margin-top:2px}
+
+  /* 摘要条 */
+  .summary-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0 28px}
+  .summary-tag{font-size:12px;padding:4px 12px;border-radius:20px;border:1px solid rgba(88,166,255,0.3);color:#58a6ff;background:rgba(88,166,255,0.08)}
+
+  /* 卡片 */
+  .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:20px 18px;margin-bottom:16px;transition:border-color .2s}
+  .card:hover{border-color:#30363d}
+  .card-num{display:inline-block;font-size:11px;font-weight:700;color:#0d1117;background:#58a6ff;border-radius:6px;padding:1px 8px;margin-right:8px;vertical-align:middle}
+  .card-num.hot{background:#f85149}
+  .card-num.mid{background:#d29922}
+  .card-num.low{background:#8b949e}
+  .card-title{font-size:17px;font-weight:700;color:#e6edf3;display:inline;vertical-align:middle}
+  .card-meta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+  .badge{font-size:11px;padding:2px 10px;border-radius:20px;font-weight:600}
+  .badge-heavy{background:rgba(248,81,73,0.15);color:#f85149;border:1px solid rgba(248,81,73,0.3)}
+  .badge-important{background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3)}
+  .badge-follow{background:rgba(139,148,158,0.15);color:#8b949e;border:1px solid rgba(139,148,158,0.25)}
+  .badge-tag{background:rgba(88,166,255,0.1);color:#58a6ff;border:1px solid rgba(88,166,255,0.2);font-weight:500}
+  .card-body{margin-top:12px;font-size:14.5px;color:#c9d1d9;line-height:1.85}
+  .card-body strong{color:#e6edf3}
+  .card-body .highlight{color:#58a6ff;font-weight:600}
+  .card-body .warn{color:#f85149;font-weight:600}
+
+  /* 数据面板 */
+  .data-panel{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:18px;margin-bottom:16px}
+  .data-panel h3{font-size:15px;color:#e6edf3;margin-bottom:12px;font-weight:700}
+  .data-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .data-item{background:#0d1117;border-radius:10px;padding:12px 14px;border:1px solid #21262d}
+  .data-item .val{font-size:18px;font-weight:800;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .data-item .label{font-size:11px;color:#8b949e;margin-top:2px}
+
+  /* 今日一句话 */
+  .one-line{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(188,140,255,0.1));border:1px solid rgba(88,166,255,0.25);border-radius:14px;padding:22px 20px;text-align:center;margin-top:24px}
+  .one-line .label{font-size:12px;color:#8b949e;font-weight:600;letter-spacing:2px;margin-bottom:8px}
+  .one-line .text{font-size:16px;color:#e6edf3;font-weight:600;line-height:1.7}
+
+  /* 底部 */
+  .footer{text-align:center;margin-top:36px;padding:16px 0;border-top:1px solid #21262d}
+  .footer p{font-size:11px;color:#484f58;line-height:1.6}
+  .footer .brand{color:#6e7681;font-weight:600}
+
+  @media(max-width:400px){
+    .header .logo{font-size:22px}
+    .card-title{font-size:15px}
+    .data-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 头部 -->
+  <div class="header">
+    <div class="logo">AI 动态播报</div>
+    <div class="date">2026 年 6 月 14 日 · 星期六</div>
+    <div class="weekday">DAILY AI BRIEFING</div>
+  </div>
+
+  <!-- 摘要 -->
+  <div class="summary-bar">
+    <span class="summary-tag">🔥 2 条重磅</span>
+    <span class="summary-tag">📌 3 条重点</span>
+    <span class="summary-tag">👁 2 条关注</span>
+  </div>
+
+  <!-- 1 -->
+  <div class="card">
+    <div>
+      <span class="card-num hot">01</span>
+      <span class="card-title">Claude 5 遭美国政府禁令，上线72小时全球下架</span>
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-heavy">重磅</span>
+      <span class="badge badge-tag">Anthropic</span>
+      <span class="badge badge-tag">出口管制</span>
+    </div>
+    <div class="card-body">
+      Anthropic 6月9日发布 Claude Fable 5 / Mythos 5，SWE-Bench Pro 得分 <span class="highlight">80.3</span>，大幅领先 GPT-5.5。然而上线仅72小时，美国商务部以"已掌握越狱方法"为由发布紧急出口管制令，将这两款模型视同"军火"级别限制。Anthropic 被迫一刀切停服<span class="warn">所有外国用户</span>，含自家外籍员工，新会话回退至 Opus 4.8。这是<span class="warn">史上首次</span>AI大模型被以国家安全理由全球禁用。
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <div>
+      <span class="card-num hot">02</span>
+      <span class="card-title">智谱 GLM-5.2 趁势宣布"完全开源"，1M上下文窗口</span>
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-heavy">重磅</span>
+      <span class="badge badge-tag">智谱AI</span>
+      <span class="badge badge-tag">开源</span>
+    </div>
+    <div class="card-body">
+      就在 Anthropic 被迫闭源之际，智谱 CEO 唐杰宣布 <span class="highlight">GLM-5.2 完全开源</span>，定位"智谱迄今最强开源模型"。支持真正可用的 <span class="highlight">1M context window</span>，主打长链路任务与 Agent 应用，号称"国内最强 Coding 模型主引擎"。同步上线 GLM Coding Plan 全档位（Lite/Pro/Max），API 下周开通。战略意图明确：以"激进开放"路线抢夺 Anthropic 受限后留出的市场空间。
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <div>
+      <span class="card-num mid">03</span>
+      <span class="card-title">OpenAI 将 Codex 并入 ChatGPT，周活破500万</span>
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-important">重点</span>
+      <span class="badge badge-tag">OpenAI</span>
+      <span class="badge badge-tag">Agent</span>
+    </div>
+    <div class="card-body">
+      OpenAI 在"Intelligence at Work"活动上宣布 <span class="highlight">Codex 正式并入 ChatGPT</span>，合并对话式AI与自主任务执行能力。Codex 周活跃用户突破 <span class="highlight">500万</span>，知识工作者占比20%，增速是开发者的3倍。同步发布 Agent Plugins、Annotations、Sites 三大新功能，朝"10亿用户超级Agent"方向加速。此外，OpenAI 还上线了"Codex for open source"申请页，定向开放算力给开源项目维护者。
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <div>
+      <span class="card-num mid">04</span>
+      <span class="card-title">微软 Build 2026：Windows Agent Framework 发布，14亿台PC变身Agent平台</span>
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-important">重点</span>
+      <span class="badge badge-tag">微软</span>
+      <span class="badge badge-tag">Build 2026</span>
+    </div>
+    <div class="card-body">
+      微软 Build 2026 大会发布 <span class="highlight">Windows Agent Framework</span>，AI Agent 成为系统级一等公民。WSL 3 GPU访问速度提升40%；Azure Agent Mesh 全球分布式Agent基础设施上线；Windows Agent Store 开发者分成高达<span class="highlight">85%</span>。全球 <span class="highlight">14亿台</span> Windows 设备将成为 Agent 执行节点。同时 GitHub Copilot 推出桌面应用预览版与 Canvas 双向协作空间，但同步上线的 Token 计费模式引发社区强烈反对——部分用户月费可能从29美元飙至750美元。
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <div>
+      <span class="card-num mid">05</span>
+      <span class="card-title">Kimi 估值6个月飙至300亿美元，中国AI公司估值集体重写</span>
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-important">重点</span>
+      <span class="badge badge-tag">月之暗面</span>
+      <span class="badge badge-tag">融资</span>
+    </div>
+    <div class="card-body">
+      Kimi 估值6个月内从43亿美元飙升至 <span class="highlight">300亿美元</span>，对应 ARR 2亿美元、PS约150倍。2026年1月付费订单环比<span class="highlight">+8280%</span>，Stripe付费排名跃至全球第9。行业同步：智谱完成港股上市启动A股IPO、MiniMax港股上市、DeepSeek传与国家集成电路基金洽谈首轮融资、阶跃星辰即将递表港股。中国AI原生App MAU已达 <span class="highlight">4.4亿</span>，单季新增1.3亿。
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <div>
+      <span class="card-num low">06</span>
+      <span class="card-title">2026智源大会开幕：悟界·Physis世界基座模型等系列成果发布</span>
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-follow">关注</span>
+      <span class="badge badge-tag">智源研究院</span>
+      <span class="badge badge-tag">具身智能</span>
+    </div>
+    <div class="card-body">
+      第八届北京智源大会开幕，主题"三体互动"（AI、物理世界、生命科学）。重磅发布：①<span class="highlight">悟界·Physis-v0.1</span>——全球首个通用世界基座模型；②悟界·Brainμ1.0——多模态神经科学大模型（关联论文已发Science）；③悟界·OpenComplex2.5——AI驱动药物发现模型；④具身栈 RoboBrain / RoboOS / RoboBrain Orca。FlagOS 2.1 覆盖18家芯片厂商32款芯片，累计开源模型200+，总下载 <span class="highlight">10亿+</span>。
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <div>
+      <span class="card-num low">07</span>
+      <span class="card-title">阿里首席科学家周靖人履新仅6天提交离职</span>
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-follow">关注</span>
+      <span class="badge badge-tag">阿里巴巴</span>
+      <span class="badge badge-tag">人事变动</span>
+    </div>
+    <div class="card-body">
+      阿里合伙人、首席科学家周靖人于6月13日提交离职申请，距6月8日任命仅<span class="warn">6天</span>。行业普遍解读为"明升暗降"——6月8日调整中 Token Foundry 事业部改由CEO吴泳铭直管，周靖人实际被架空。2026年以来 Qwen 团队已流失4位核心：技术负责人林俊旸、后训练郁博文、核心成员李凯新，加上周靖人。通义团队的持续人才流失值得关注。
+    </div>
+  </div>
+
+  <!-- 数据面板 -->
+  <div class="data-panel">
+    <h3>📊 今日关键数据</h3>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="val">72h</div>
+        <div class="label">Claude 5 从发布到被禁</div>
+      </div>
+      <div class="data-item">
+        <div class="val">1M</div>
+        <div class="label">GLM-5.2 上下文窗口</div>
+      </div>
+      <div class="data-item">
+        <div class="val">500万</div>
+        <div class="label">Codex 周活跃用户</div>
+      </div>
+      <div class="data-item">
+        <div class="val">14亿</div>
+        <div class="label">Windows Agent 设备节点</div>
+      </div>
+      <div class="data-item">
+        <div class="val">300亿$</div>
+        <div class="label">Kimi 最新估值</div>
+      </div>
+      <div class="data-item">
+        <div class="val">10亿+</div>
+        <div class="label">智源开源模型总下载</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 今日一句话 -->
+  <div class="one-line">
+    <div class="label">💬 今日 AI 一句话</div>
+    <div class="text">Anthropic 被迫关上大门，智谱主动打开窗户——<br>AI的开放与封锁，正在重新定义全球技术版图。</div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <p>由 <span class="brand">WorkBuddy</span> 自动生成 · 数据来源：公开新闻报道</p>
+    <p>每天中午12点准时推送</p>
+  </div>
+
+</div>
+</body>
+</html>

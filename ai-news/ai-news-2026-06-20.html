@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 · 2026-06-20</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0a0a0a;
+  color: #e6e6e6;
+  line-height: 1.65;
+  min-height: 100vh;
+  padding: 16px 14px 60px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+
+.header {
+  text-align: center;
+  padding: 22px 0 18px;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 22px;
+}
+.date-badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #c9a55c;
+  border: 1px solid #c9a55c;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 13px;
+  color: #8a8a8a;
+  letter-spacing: 0.5px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.summary-item {
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 12px 6px;
+  text-align: center;
+}
+.summary-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c9a55c;
+  display: block;
+}
+.summary-label {
+  font-size: 11px;
+  color: #8a8a8a;
+  margin-top: 2px;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #c9a55c;
+  letter-spacing: 2px;
+  margin: 24px 0 12px;
+  padding-left: 10px;
+  border-left: 3px solid #c9a55c;
+}
+
+.card {
+  background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.card.heavy {
+  border-color: #c9a55c;
+  background: linear-gradient(135deg, #1a1408 0%, #1f1a10 100%);
+}
+.card.heavy::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: #c9a55c;
+}
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.tag-heavy { background: #c9a55c; color: #0a0a0a; }
+.tag-key { background: #2a4d6e; color: #9fc4e8; }
+.tag-watch { background: #3d2a4d; color: #c89fc4; }
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 8px 0 8px;
+  line-height: 1.45;
+}
+.card p {
+  font-size: 14px;
+  color: #b8b8b8;
+  line-height: 1.7;
+}
+.card p .hl { color: #c9a55c; font-weight: 600; }
+
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid #2a2a2a;
+  color: #6a6a6a;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.footer .brand { color: #c9a55c; font-weight: 600; }
+
+@media (max-width: 380px) {
+  .title { font-size: 22px; }
+  .card h3 { font-size: 15px; }
+  .card p { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="date-badge">2026 · 06 · 20 · 星期六</div>
+    <div class="title">AI 动态播报</div>
+    <div class="subtitle">全球AI行业 · 每日头条精粹</div>
+  </div>
+
+  <div class="summary">
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">重磅</div></div>
+    <div class="summary-item"><span class="summary-num">3</span><div class="summary-label">重点</div></div>
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">关注</div></div>
+  </div>
+
+  <div class="section-title">重磅 HEADLINE</div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 人才</span>
+    <h3>诺贝尔化学奖得主John Jumper离开DeepMind，正式加入Anthropic</h3>
+    <p>曾领导<span class="hl">AlphaFold</span>项目、预测近2亿种蛋白质结构的<span class="hl">2024诺贝尔化学奖得主John Jumper</span>，宣布离开Google DeepMind加入Anthropic。Jumper的加盟被视为Anthropic在科学推理与蛋白质工程方向的战略布局——将AlphaFold的"从序列到结构"范式迁移至大模型的安全验证与对齐研究中。这一顶级人才流动进一步印证了<span class="hl">AI行业从"参数竞赛"向"精准推理"转型</span>的大趋势。</p>
+  </div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 产品</span>
+    <h3>Anthropic为Claude Code推出Beta版Artifacts，终端会话成果可生成交互式网页</h3>
+    <p><span class="hl">Anthropic</span>为Claude Code推出Beta版<span class="hl">Artifacts</span>功能，面向Team和Enterprise用户。开发者可将终端中的代码会话成果一键转化为<span class="hl">自包含、可交互、可分享的HTML网页</span>，支持实时更新与版本回滚，且可限定组织内私密访问。这意味着AI编码Agent从"只帮你写代码"升级为"帮你交付可运行的产品"——<span class="hl">从辅助工具到交付引擎</span>的质变正在发生。</p>
+  </div>
+
+  <div class="section-title">重点 KEY NEWS</div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 机器人</span>
+    <h3>银河通用发布AstraBrain-WBC 0.5：人形机器人"小脑"的GPT时刻</h3>
+    <p>银河通用发布<span class="hl">AstraBrain-WBC 0.5</span>——人形机器人通用运动小脑模型。该模型基于<span class="hl">20亿帧动捕数据</span>训练，零样本动作成功率达<span class="hl">92.58%</span>，推理延迟仅0.39ms。这意味着机器人无需针对每个新动作单独训练，只需"看一遍"就能学会——从"专用小脑"到"通用小脑"的跨越，标志着<span class="hl">具身智能正式进入"泛化运动"阶段</span>。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 政策</span>
+    <h3>挪威宣布小学近全面禁用AI：全球最严厉课堂技术限制政策</h3>
+    <p>挪威政府宣布从2026年8月新学期起，对<span class="hl">小学1-7年级（6-13岁）近乎全面禁止生成式AI</span>工具，初中严格限制使用，高中才逐步教授"负责任使用"。政策核心逻辑：基础学力（书写、阅读、数学推理）正在因过早依赖AI而退化。挪威还同步拨钱<span class="hl">将纸质书请回课堂</span>——这被视为对过去二十年"全盘数字化"教育实验的一次清算，引发全球关于<span class="hl">"AI进校园"边界</span>的激烈讨论。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 开源</span>
+    <h3>美团LongCat团队密集开源：WBench评测基准、LongCat-Video-Avatar 1.5数字人、LongCat-Next原生多模态</h3>
+    <p>美团<span class="hl">LongCat</span>团队本周集中发布多项开源成果：<span class="hl">WBench</span>——首个交互式视频世界模型多轮评测基准；<span class="hl">LongCat-Video-Avatar 1.5</span>——商业级数字人视频生成，支持多人交互与唇形同步；<span class="hl">LongCat-Next</span>——原生多模态模型，视觉与语音深度融合为"母语"而非后期拼接。三项成果分别瞄准<span class="hl">评测、生成、感知</span>三大方向，标志着国产多模态从"追赶"进入"定义标准"阶段。</p>
+  </div>
+
+  <div class="section-title">关注 WATCH</div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 基础模型</span>
+    <h3>Google Research发布TimesFM：时间序列预测的基础模型范式</h3>
+    <p><span class="hl">Google Research</span>正式推出<span class="hl">TimesFM</span>（Time-series Foundation Model），将基础模型范式引入时间序列预测领域。不同于传统针对每个场景单独建模的方式，TimesFM通过大规模预训练实现<span class="hl">跨领域时序泛化</span>——金融走势、天气预测、供应链波动均可由同一模型处理。这标志着时序数据分析从"孤立模型"向<span class="hl">"通用预训练架构"</span>的重大转变，有望成为数据科学领域的新基础设施。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 基础设施</span>
+    <h3>阿里巴巴发布zvec：轻量级超高速进程内向量数据库</h3>
+    <p>阿里巴巴正式开源<span class="hl">zvec</span>——一款进程内向量数据库，直接与应用<span class="hl">共享内存空间</span>运行，大幅降低延迟，为RAG和推荐引擎等场景提供高性能、低开销的向量相似度搜索方案。与Pinecone、Milvus等独立服务型数据库不同，zvec主打<span class="hl">"零网络开销"</span>的嵌入式部署模式，填补了AI应用中"向量检索就近计算"的空白，对中小团队的<span class="hl">成本与部署效率</span>意义重大。</p>
+  </div>
+
+  <div class="footer">
+    <div class="brand">AI 动态播报</div>
+    <div style="margin-top:6px;">每日 12:30 准时推送 · WorkBuddy 自动化出品</div>
+    <div style="margin-top:4px;">© 2026 · 王老板专属订阅</div>
+  </div>
+
+</div>
+</body>
+</html>

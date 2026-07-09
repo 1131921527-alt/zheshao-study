@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 · 2026-06-18</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0a0a0a;
+  color: #e6e6e6;
+  line-height: 1.65;
+  min-height: 100vh;
+  padding: 16px 14px 60px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+
+.header {
+  text-align: center;
+  padding: 22px 0 18px;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 22px;
+}
+.date-badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #c9a55c;
+  border: 1px solid #c9a55c;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 13px;
+  color: #8a8a8a;
+  letter-spacing: 0.5px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.summary-item {
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 12px 6px;
+  text-align: center;
+}
+.summary-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c9a55c;
+  display: block;
+}
+.summary-label {
+  font-size: 11px;
+  color: #8a8a8a;
+  margin-top: 2px;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #c9a55c;
+  letter-spacing: 2px;
+  margin: 24px 0 12px;
+  padding-left: 10px;
+  border-left: 3px solid #c9a55c;
+}
+
+.card {
+  background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.card.heavy {
+  border-color: #c9a55c;
+  background: linear-gradient(135deg, #1a1408 0%, #1f1a10 100%);
+}
+.card.heavy::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: #c9a55c;
+}
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.tag-heavy { background: #c9a55c; color: #0a0a0a; }
+.tag-key { background: #2a4d6e; color: #9fc4e8; }
+.tag-watch { background: #3d2a4d; color: #c89fc4; }
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 8px 0 8px;
+  line-height: 1.45;
+}
+.card p {
+  font-size: 14px;
+  color: #b8b8b8;
+  line-height: 1.7;
+}
+.card p .hl { color: #c9a55c; font-weight: 600; }
+
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid #2a2a2a;
+  color: #6a6a6a;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.footer .brand { color: #c9a55c; font-weight: 600; }
+
+@media (max-width: 380px) {
+  .title { font-size: 22px; }
+  .card h3 { font-size: 15px; }
+  .card p { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="date-badge">2026 · 06 · 18 · 星期四</div>
+    <div class="title">AI 动态播报</div>
+    <div class="subtitle">全球AI行业 · 每日头条精粹</div>
+  </div>
+
+  <div class="summary">
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">重磅</div></div>
+    <div class="summary-item"><span class="summary-num">3</span><div class="summary-label">重点</div></div>
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">关注</div></div>
+  </div>
+
+  <div class="section-title">重磅 HEADLINE</div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 资本</span>
+    <h3>上交所发布AI大模型企业科创板上市指引，证监会吴清宣布第五套标准扩至AI</h3>
+    <p>6月17日<span class="hl">2026陆家嘴论坛</span>开幕，证监会主席吴清宣布将科创板第五套上市标准扩大至人工智能领域。当日上交所同步发布《适用指引第10号——AI大模型企业适用科创板第五套上市标准》，即日施行。《指引》要求申报AI大模型企业至少有一个产品完成关键节点，"未盈利上市"通道正式向国产大模型独角兽打开，<span class="hl">DeepSeek、智谱、月之暗面、阶跃、MiniMax、百川</span>等头部玩家均有望率先受益。</p>
+  </div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 监管</span>
+    <h3>G7法国峰会落幕，奥尔特曼、哈萨比斯、阿莫代同席"AI治理工作午餐"</h3>
+    <p>为期三天的<span class="hl">2026年G7峰会</span>在法国埃维昂闭幕，OpenAI CEO奥尔特曼、Google DeepMind CEO哈萨比斯、Anthropic CEO阿莫代首次同框出席领导人级别工作午宴。马克龙牵头推动的"前沿AI风险、产业基础设施、AI主权"三大议题取得阶段性共识，<span class="hl">网络儿童保护</span>被列为下一阶段重点。这是G7近50年来首次给予AI公司CEO正式席位，科技巨头正式进入全球地缘政治核心圈层。</p>
+  </div>
+
+  <div class="section-title">重点 KEY NEWS</div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 融资</span>
+    <h3>DeepSeek完成500亿元首轮融资，梁文锋个人出资200亿，估值500亿美元</h3>
+    <p>据多家媒体披露，<span class="hl">DeepSeek（深度求索）</span>完成总额约500亿元（约74亿美元）首轮对外融资，投后估值突破500亿美元（约3380亿人民币），刷新中国AI创业公司融资纪录。<span class="hl">创始人梁文锋个人出资约200亿元</span>（占比40%）为最大出资方，腾讯投资100亿、宁德时代50亿、京东/网易/IDG各出资。国家队基金入局且拥有投票权，标志DeepSeek被正式纳入国家AI战略版图。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · IPO</span>
+    <h3>宇树科技科创板过会73天速通，Anthropic率先递表冲刺万亿估值</h3>
+    <p>具身智能"第一股"<span class="hl">宇树科技</span>科创板过会仅用73天，刷新AI硬件公司过会速度纪录，将于7月正式挂牌。与此同时，<span class="hl">Anthropic率先递交IPO申请</span>，估值冲刺万亿美元；OpenAI紧随其后递交SEC文件，估值8520亿美元。两大AI新势力竞速IPO，全球资本市场迎来"AI超级周期"。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 大会</span>
+    <h3>2026中国海峡创新发展大会今日福州启幕，聚焦AI产业生态</h3>
+    <p>6月18日，<span class="hl">2026中国海峡创新发展大会暨人工智能产业生态大会</span>在福州召开。大会直击AI产业前沿，聚焦行业垂直大模型与智能体的研发创新及场景落地，与会嘉宾围绕AI赋能高质量就业、智慧医疗、数据要素流通等热点展开讨论。<span class="hl">阿里、腾讯、华为、字节、商汤、智谱</span>等头部厂商悉数亮相，发布最新行业落地案例。</p>
+  </div>
+
+  <div class="section-title">关注 WATCH</div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 算力</span>
+    <h3>摩尔线程新一代AI芯片6月18日开启预售，云边端全栈智算矩阵成型</h3>
+    <p>国产AI芯片厂商<span class="hl">摩尔线程</span>新一代产品于5月18日发布会后正式进入预售阶段，6月18日全面开售。产品覆盖万卡级云端训练集群、边缘推理卡、消费级显卡全栈，<span class="hl">对标英伟达H200的MT-BX100</span>在多项基准测试中已接近国际主流水平。叠加华为昇腾、寒武纪、燧原等国产算力厂商密集动作，国产AI芯片替代进程明显提速。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 营销</span>
+    <h3>调研：超六成美国消费者抵触品牌AI营销宣传，行业信任度持续走低</h3>
+    <p>最新消费者调研显示，<span class="hl">超60%的美国消费者对品牌使用AI生成营销内容表示反感</span>，认为缺乏"真实感"和"情感连接"。这一比例较2025年同期上升17个百分点。叠加近期Anthropic Fable 5封禁风波、Meta 2万+IG账户被AI漏洞劫持等系列事件，<span class="hl">AI内容标识与可信度建设</span>正成为行业下一阶段必须解决的核心问题。</p>
+  </div>
+
+  <div class="footer">
+    <div class="brand">AI 动态播报</div>
+    <div style="margin-top:6px;">每日 12:30 准时推送 · WorkBuddy 自动化出品</div>
+    <div style="margin-top:4px;">© 2026 · 王老板专属订阅</div>
+  </div>
+
+</div>
+</body>
+</html>

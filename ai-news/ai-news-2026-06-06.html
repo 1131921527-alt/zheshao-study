@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026年6月6日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 16px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    position: relative;
+  }
+  .header-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(248,81,73,0.10) 0%, rgba(210,153,29,0.06) 50%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-date {
+    font-size: 13px;
+    color: #f85149;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f85149 0%, #d2991d 50%, #58a6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 4px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    margin: 0 auto 24px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    max-width: 420px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  .stat-num.red { color: #f85149; }
+  .stat-num.orange { color: #d2991d; }
+  .stat-num.green { color: #3fb950; }
+  .stat-label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+
+  /* News cards */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+
+  .card-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .badge-重磅 {
+    background: rgba(248,81,73,0.15);
+    color: #f85149;
+    border: 1px solid rgba(248,81,73,0.3);
+  }
+  .badge-重点 {
+    background: rgba(210,153,29,0.15);
+    color: #d2991d;
+    border: 1px solid rgba(210,153,29,0.3);
+  }
+  .badge-关注 {
+    background: rgba(63,185,80,0.15);
+    color: #3fb950;
+    border: 1px solid rgba(63,185,80,0.3);
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-body {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #484f58;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-source::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #30363d;
+    border-radius: 50%;
+  }
+
+  /* Highlight tag inside card */
+  .card-highlight {
+    display: inline;
+    color: #58a6ff;
+    font-weight: 600;
+  }
+
+  /* Summary section */
+  .summary-section {
+    max-width: 600px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, rgba(248,81,73,0.06) 0%, rgba(210,153,29,0.06) 100%);
+    border: 1px solid rgba(248,81,73,0.2);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-label {
+    font-size: 12px;
+    color: #f85149;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .summary-quote {
+    font-size: 15px;
+    color: #e6edf3;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  .summary-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 28px 0 12px;
+    font-size: 11px;
+    color: #30363d;
+    letter-spacing: 1px;
+  }
+
+  /* Numbering dot */
+  .card-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(248,81,73,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-glow"></div>
+  <div class="header-date">2026.06.06 · SATURDAY</div>
+  <h1>AI 动态播报</h1>
+  <div class="header-subtitle">每日精选 · 全球视野</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red">3</div>
+    <div class="stat-label">重磅</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num orange">3</div>
+    <div class="stat-label">重点</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green">1</div>
+    <div class="stat-label">关注</div>
+  </div>
+</div>
+
+<div class="news-list">
+
+  <!-- Card 1 -->
+  <div class="news-card">
+    <div class="card-number">01</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">特朗普政府拟入股 OpenAI，AI 资本化进入国家层面</div>
+    <div class="card-body">
+      特朗普政府计划与 OpenAI 等 AI 巨头洽谈入股事宜。Sam Altman 此前提出「公共财富基金」概念，希望让公众分享 AI 发展红利。OpenAI 当前估值已超 <span class="card-highlight">8500 亿美元</span>，若美国政府入股，将是史无前例的「国家资本直接介入 AI 产业」。
+    </div>
+    <div class="card-source">AITNT / 多家媒体</div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="news-card">
+    <div class="card-number">02</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">苹果 WWDC 2026 定档 6 月 9 日：Siri 2.0 大换脑，iOS 27 即将亮相</div>
+    <div class="card-body">
+      苹果确认 WWDC 2026 于北京时间 6 月 9 日凌晨 1 点开幕。核心看点：代号 <span class="card-highlight">Project Campos</span> 的 Siri 2.0 将全面重构，搭载定制 Gemini 模型；macOS 27 全面 AI 化；Apple Intelligence 深度更新。苹果生态即将迎来最大规模 AI 升级。
+    </div>
+    <div class="card-source">苹果官方 / 彭博社</div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="news-card">
+    <div class="card-number">03</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">小米下半年 MIX 旗舰：3nm 玄戒 O3 + 澎湃 OS 4 + MiMo 大模型全自研会师</div>
+    <div class="card-body">
+      小米计划下半年发布超高端 MIX 折叠屏旗舰，首次实现「三剑合璧」：<span class="card-highlight">台积电 3nm 玄戒 O3</span> 芯片（超大核 4.05GHz）、全面底层重构的澎湃 OS 4、以及已跻身全球第一梯队的 MiMo-V2.5 大模型。从芯片到系统到 AI，小米全栈自研完成闭环。
+    </div>
+    <div class="card-source">新浪科技 / 多方爆料</div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="news-card">
+    <div class="card-number">04</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">AI 抗体模型历史级突破：性能暴涨 100 倍，连斩礼来、辉瑞两大药企</div>
+    <div class="card-body">
+      Chai Discovery 发布 <span class="card-highlight">Chai-3</span> 抗体设计模型，抗体设计成功率较前代翻倍，亲和力提升百倍。辉瑞已达成许可合作并获得优先使用权，礼来也已签约。AI 制药从「辅助工具」正式走向「核心生产力」，生物科技行业格局正在被重塑。
+    </div>
+    <div class="card-source">Chai Discovery / AITNT</div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="news-card">
+    <div class="card-number">05</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">腾讯推出智能体社区「虾友会」，聚合元宝、混元、CodeBuddy</div>
+    <div class="card-body">
+      腾讯发布 AI 智能体社区平台 <span class="card-highlight">「虾友会」</span>，聚合旗下元宝、混元大模型、CodeBuddy 等产品。支持用户交流、发帖、作品发布及「码力奖励」，定位为找工具、学教程、问问题的一站式 AI 社区。这是腾讯 AI 生态从产品矩阵走向社区化运营的关键一步。
+    </div>
+    <div class="card-source">腾讯官方</div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="news-card">
+    <div class="card-number">06</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">AI 自主攻克 80 年数学难题，67 位领袖联名呼吁建立 AI 治理规则</div>
+    <div class="card-body">
+      OpenAI 内部模型自主证伪了困扰数学界 <span class="card-highlight">80 年</span>的 Erdős 单位距离问题。与此同时，约 60 位数学家和计算机科学家签署《莱顿宣言》，要求披露 AI 使用情况、防止商业 AI 垄断数学解释权。Sam Altman、Dario Amodei、Demis Hassabis 等 <span class="card-highlight">67 位</span>领袖亦联名致信美国国会，呼吁立法强制筛查合成 DNA 订单。
+    </div>
+    <div class="card-source">AITNT / 莱顿宣言</div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="news-card">
+    <div class="card-number">07</div>
+    <span class="card-badge badge-关注">关注</span>
+    <div class="card-title">AI 编程平台 Lovable 估值达 120 亿美元，半年翻倍</div>
+    <div class="card-body">
+      AI 氛围编程创企 Lovable 正在洽谈新一轮融资，估值或达 <span class="card-highlight">120 亿美元</span>，较去年 12 月的 66 亿美元近乎翻倍。其工具让用户无需写代码即可生成软件，已拥有 800 万用户。从 Cursor 到 Bolt 到 Lovable，AI 编程赛道估值持续飙升，提示词工程师正在成为新时代的「程序员」。
+    </div>
+    <div class="card-source">AITNT / 行业报道</div>
+  </div>
+
+</div>
+
+<div class="summary-section">
+  <div class="summary-icon">🏛️</div>
+  <div class="summary-label">今日 AI 一句话</div>
+  <div class="summary-quote">从白宫拟入股 OpenAI 到苹果重构 Siri，从小米全栈自研三剑合璧到 AI 攻克 80 年数学难题——这个 6 月，AI 已不仅是技术，它是全球政治、经济、科学的中心议题。</div>
+</div>
+
+<div class="footer">
+  AI 动态播报 · 每日更新 · 2026.06.06
+</div>
+
+</body>
+</html>

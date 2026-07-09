@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 · 2026-06-15</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:#0a0a0f;
+    color:#e0e0e8;
+    line-height:1.7;
+    min-height:100vh;
+    padding:0 0 60px 0;
+  }
+  .container{max-width:420px;margin:0 auto;padding:0 16px}
+
+  /* Header */
+  .header{
+    text-align:center;
+    padding:40px 0 28px;
+    position:relative;
+  }
+  .header::after{
+    content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+    width:60px;height:3px;border-radius:2px;
+    background:linear-gradient(90deg,#6c5ce7,#a29bfe);
+  }
+  .header .date{
+    font-size:13px;color:#6c5ce7;letter-spacing:3px;
+    text-transform:uppercase;margin-bottom:8px;
+  }
+  .header h1{
+    font-size:26px;font-weight:800;
+    background:linear-gradient(135deg,#a29bfe,#6c5ce7,#fd79a8);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+  .header .subtitle{
+    font-size:13px;color:#666;margin-top:6px;
+  }
+
+  /* News Card */
+  .card{
+    background:linear-gradient(145deg,#13131f,#0f0f1a);
+    border:1px solid #1e1e35;
+    border-radius:16px;
+    padding:22px 20px;
+    margin-top:20px;
+    position:relative;
+    overflow:hidden;
+    transition:transform .2s,border-color .3s;
+  }
+  .card:active{transform:scale(0.985)}
+  .card:hover{border-color:#2d2d50}
+
+  .card .tag{
+    display:inline-block;
+    font-size:11px;font-weight:700;
+    padding:3px 10px;border-radius:20px;
+    margin-bottom:12px;letter-spacing:1px;
+  }
+  .tag.heavy{background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff}
+  .tag.important{background:linear-gradient(135deg,#6c5ce7,#4834d4);color:#fff}
+  .tag.watch{background:linear-gradient(135deg,#00b894,#00a381);color:#fff}
+
+  .card h2{
+    font-size:17px;font-weight:700;color:#f0f0f8;
+    margin-bottom:10px;line-height:1.5;
+  }
+  .card .body{
+    font-size:14px;color:#a0a0b8;line-height:1.8;
+  }
+  .card .body strong{color:#c8c8e0}
+
+  /* Decorative glow */
+  .card.heavy-glow::before{
+    content:'';position:absolute;top:-40px;right:-40px;
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,rgba(231,76,60,0.12),transparent 70%);
+    pointer-events:none;
+  }
+  .card.important-glow::before{
+    content:'';position:absolute;top:-40px;right:-40px;
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,rgba(108,92,231,0.12),transparent 70%);
+    pointer-events:none;
+  }
+  .card.watch-glow::before{
+    content:'';position:absolute;top:-40px;right:-40px;
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,rgba(0,184,148,0.12),transparent 70%);
+    pointer-events:none;
+  }
+
+  /* Divider */
+  .divider{
+    text-align:center;margin:32px 0 8px;position:relative;
+  }
+  .divider::before{
+    content:'';position:absolute;top:50%;left:0;right:0;
+    height:1px;background:linear-gradient(90deg,transparent,#1e1e35,transparent);
+  }
+  .divider span{
+    position:relative;background:#0a0a0f;
+    padding:0 16px;font-size:12px;color:#444;letter-spacing:2px;
+  }
+
+  /* Quote */
+  .quote-card{
+    background:linear-gradient(145deg,#1a1a30,#13131f);
+    border:1px solid #2d2d50;
+    border-radius:16px;
+    padding:28px 24px;
+    margin-top:24px;
+    text-align:center;
+    position:relative;
+  }
+  .quote-card::before{
+    content:'"';position:absolute;top:8px;left:18px;
+    font-size:52px;color:#6c5ce7;opacity:0.2;
+    font-family:Georgia,serif;line-height:1;
+  }
+  .quote-card .label{
+    font-size:11px;color:#6c5ce7;letter-spacing:2px;margin-bottom:10px;
+  }
+  .quote-card .text{
+    font-size:16px;color:#d0d0e8;line-height:1.8;font-weight:500;
+  }
+
+  /* Footer */
+  .footer{
+    text-align:center;margin-top:36px;padding:20px 0;
+    font-size:11px;color:#333;letter-spacing:1px;
+  }
+
+  /* Number badge */
+  .num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:22px;height:22px;border-radius:50%;
+    font-size:11px;font-weight:700;margin-right:8px;
+    flex-shrink:0;
+  }
+  .num.heavy-num{background:#e74c3c;color:#fff}
+  .num.important-num{background:#6c5ce7;color:#fff}
+  .num.watch-num{background:#00b894;color:#fff}
+
+  .title-row{display:flex;align-items:flex-start}
+  .title-row h2{flex:1}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="date">2026 · 06 · 15</div>
+    <h1>AI 动态播报</h1>
+    <div class="subtitle">每日精选 · 7条速览</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="card heavy-glow">
+    <span class="tag heavy">重磅</span>
+    <div class="title-row">
+      <span class="num heavy-num">1</span>
+      <h2>DeepMind发布ASI路线图，宣告"AGI已过时"</h2>
+    </div>
+    <div class="body">
+      谷歌DeepMind发布57页报告《从AGI到ASI》，提出<strong>超级人工智能（ASI）</strong>全新定义。报告指出，即使AI仅停留在人类水平，通过叠加<strong>1亿个实例</strong>即可涌现出超越数万名专家的超级智能能力。DeepMind CEO哈萨比斯此前预测AGI将在5年内到来，届时影响将是工业革命的<strong>10倍</strong>。
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="card heavy-glow">
+    <span class="tag heavy">重磅</span>
+    <div class="title-row">
+      <span class="num heavy-num">2</span>
+      <h2>Fable 5封禁内幕：亚马逊CEO举报，Anthropic CEO拒修漏洞</h2>
+    </div>
+    <div class="body">
+      据《华尔街日报》报道，<strong>亚马逊CEO安迪·贾西</strong>向美国财政部举报Claude Fable 5存在可被用于网络攻击的安全漏洞。美国政府要求Anthropic修复，但<strong>CEO达里奥·阿莫代伊拒绝修复</strong>，并以"其他模型也有同样问题"辩解。最终美国政府下达出口管制禁令，Fable 5发布仅<strong>4天</strong>即遭全球停用。
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card important-glow">
+    <span class="tag important">重点</span>
+    <div class="title-row">
+      <span class="num important-num">3</span>
+      <h2>OpenAI再收多州传票，监管压力从联邦蔓延至地方</h2>
+    </div>
+    <div class="body">
+      OpenAI收到来自<strong>纽约州</strong>等多州总检察长的传票，调查范围涵盖ChatGPT的<strong>数据隐私、未成年人保护、广告业务</strong>及用户健康数据处理方式。多州联合调查标志着AI监管压力正从联邦层面向地方层面扩散，对冲刺万亿美元估值的OpenAI上市进程构成直接风险。
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card important-glow">
+    <span class="tag important">重点</span>
+    <div class="title-row">
+      <span class="num important-num">4</span>
+      <h2>国产GPU四小龙之一燧原科技科创板IPO今日上会</h2>
+    </div>
+    <div class="body">
+      上交所今日审议<strong>燧原科技</strong>科创板首发事项。公司拟募资<strong>60亿元</strong>，用于第五代和第六代AI芯片研发及产业化。今年前3月营收<strong>2.87亿元，同比增长1474.85%</strong>，但持续大额亏损、收入严重依赖关联方、国内市占率不足2%等问题仍存。
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="card important-glow">
+    <span class="tag important">重点</span>
+    <div class="title-row">
+      <span class="num important-num">5</span>
+      <h2>SpaceX通过xAI整合，确立"航天-算力-AI"闭环生态</h2>
+    </div>
+    <div class="body">
+      SpaceX正式并入马斯克旗下<strong>xAI</strong>，将自身重塑为"<strong>航天—算力—人工智能</strong>"一体化闭环生态。即将启动的IPO承载万亿级资本叙事，同时也是核心工程师财富兑付的关键节点。xAI的算力资源将为SpaceX卫星网络提供AI能力支撑。
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card watch-glow">
+    <span class="tag watch">关注</span>
+    <div class="title-row">
+      <span class="num watch-num">6</span>
+      <h2>SoulX获高瓴数千万元天使轮融资，消费级情感机器人赛道升温</h2>
+    </div>
+    <div class="body">
+      专注家庭健康关护的<strong>SoulX</strong>宣布完成高瓴创投独家投资的数千万元天使轮融资。首款柔性机器人产品<strong>MoYa</strong>将于2026年下半年发布，以"拥抱"切入家庭关护场景，从执行任务转向<strong>提供情感安抚</strong>，开辟情感陪伴新赛道。
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="card watch-glow">
+    <span class="tag watch">关注</span>
+    <div class="title-row">
+      <span class="num watch-num">7</span>
+      <h2>星源智发布具身交互世界模型，首创"预演-验证-行动"闭环</h2>
+    </div>
+    <div class="body">
+      星源智在第八届北京智源大会发布<strong>具身交互世界模型</strong>，首创"<strong>预演、验证、行动</strong>"决策闭环机制，让机器人能在行动前预判后果、自主优化动作，推动具身智能从"环境感知"迈向"<strong>自主预判、动态修正</strong>"新阶段。
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"><span>✦</span></div>
+
+  <!-- Today's Quote -->
+  <div class="quote-card">
+    <div class="label">🔥 今日AI一句话</div>
+    <div class="text">超级智能的蓝图刚刚展开，安全漏洞的裂缝就已暴露——AI正以前所未有的速度冲向未来，而现实世界的规则正全力拽住它的缰绳。</div>
+  </div>
+
+  <div class="footer">
+    AI动态播报 · 每日12:00自动推送<br>
+    Powered by WorkBuddy
+  </div>
+
+</div>
+</body>
+</html>

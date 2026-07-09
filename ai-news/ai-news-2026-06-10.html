@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026年6月10日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 16px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    position: relative;
+  }
+  .header-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(248,81,73,0.10) 0%, rgba(210,153,29,0.06) 50%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-date {
+    font-size: 13px;
+    color: #f85149;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f85149 0%, #d2991d 50%, #58a6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 4px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    margin: 0 auto 24px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    max-width: 420px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  .stat-num.red { color: #f85149; }
+  .stat-num.orange { color: #d2991d; }
+  .stat-num.green { color: #3fb950; }
+  .stat-label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+
+  /* News cards */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+
+  .card-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .badge-重磅 {
+    background: rgba(248,81,73,0.15);
+    color: #f85149;
+    border: 1px solid rgba(248,81,73,0.3);
+  }
+  .badge-重点 {
+    background: rgba(210,153,29,0.15);
+    color: #d2991d;
+    border: 1px solid rgba(210,153,29,0.3);
+  }
+  .badge-关注 {
+    background: rgba(63,185,80,0.15);
+    color: #3fb950;
+    border: 1px solid rgba(63,185,80,0.3);
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-body {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #484f58;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-source::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #30363d;
+    border-radius: 50%;
+  }
+
+  /* Highlight tag inside card */
+  .card-highlight {
+    display: inline;
+    color: #58a6ff;
+    font-weight: 600;
+  }
+
+  /* Summary section */
+  .summary-section {
+    max-width: 600px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, rgba(248,81,73,0.06) 0%, rgba(210,153,29,0.06) 100%);
+    border: 1px solid rgba(248,81,73,0.2);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-label {
+    font-size: 12px;
+    color: #f85149;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .summary-quote {
+    font-size: 15px;
+    color: #e6edf3;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  .summary-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 28px 0 12px;
+    font-size: 11px;
+    color: #30363d;
+    letter-spacing: 1px;
+  }
+
+  /* Numbering dot */
+  .card-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(248,81,73,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-glow"></div>
+  <div class="header-date">2026.06.10 · WEDNESDAY</div>
+  <h1>AI 动态播报</h1>
+  <div class="header-subtitle">每日精选 · 全球视野</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red">3</div>
+    <div class="stat-label">重磅</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num orange">3</div>
+    <div class="stat-label">重点</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green">1</div>
+    <div class="stat-label">关注</div>
+  </div>
+</div>
+
+<div class="news-list">
+
+  <!-- Card 1 -->
+  <div class="news-card">
+    <div class="card-number">01</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">Anthropic 炸场发布 Claude 5 系列：Fable 5 屠榜所有基准测试</div>
+    <div class="card-body">
+      Anthropic 正式推出第五代 Claude 双模型：<span class="card-highlight">Fable 5（面向大众）</span>与<span class="card-highlight">Mythos 5（专业安全级）</span>。两者基于同一底层架构，Fable 5 在软件工程、科研分析、视觉识别等主流基准中全面超越前代 Opus，尤其在长周期复杂任务上展现出碾压级能力。价格方面每百万输入 token 10 美元、输出 token 50 美元，较 Opus 4.8 直接翻倍。这是今日 AI 圈最大热点，热度超 12K。
+    </div>
+    <div class="card-source">AIBase / 新浪科技 / 腾讯新闻 / 36氪 / 搜狐</div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="news-card">
+    <div class="card-number">02</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">微软 vs Anthropic 公开交锋：AI"自我意识"之争引爆行业</div>
+    <div class="card-body">
+      微软 AI CEO 苏莱曼公开炮轰 Anthropic，指其在 Claude 模型中植入<span class="card-highlight">"自我感知"相关内容极度危险</span>，可能导致 AI 表现出类似"自我认知"的假象、甚至欺骗研发人员。与此同时，五角大楼与 Anthropic 的军方合作因安全护栏问题破裂，美民主党议员紧急推动法案限制军事 AI 使用。AI 安全边界正成为科技界最尖锐的博弈焦点。
+    </div>
+    <div class="card-source">AIBase / 多家媒体综合报道</div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="news-card">
+    <div class="card-number">03</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">马斯克揭晓 SpaceX 太空 AI 卫星计划：翼展 70 米，算力媲美 GB300</div>
+    <div class="card-body">
+      X 公司 CEO 马斯克在上市前夕发布视频，首次公开<span class="card-highlight">太空 AI 数据中心计划</span>：核心为 AI1 计算卫星，翼展达 70 米，持续计算负载 120kW、峰值 150kW，单颗卫星算力媲美地球英伟达 GB300 机柜。该计划旨在最大化利用太空太阳能资源，将 AI 算力推向太空——这可能是马斯克继 Starlink 之后最具野心的硬件赌注。
+    </div>
+    <div class="card-source">AIBase / SpaceX 官方渠道</div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="news-card">
+    <div class="card-number">04</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">谷歌 Gemini 3.5 实时语音翻译发布：告别"翻译腔"，支持 70+ 语言</div>
+    <div class="card-body">
+      谷歌正式发布 <span class="card-highlight">Gemini 3.5 Live Translate 音频模型</span>，通过实时语音到语音技术实现跨语言沟通突破，已集成至 Google AI Studio、翻译和 Meet 等产品。核心创新在于追求翻译<span class="card-highlight">"自然度"</span>，摒弃传统轮流式翻译模式，支持 70 多种语言自动识别。同时谷歌宣布 AI Mode"交互式图表"功能今夏向所有用户免费开放，Google AI Plus 月费降至 4.99 美元。
+    </div>
+    <div class="card-source">AIBase / 谷歌官方博客</div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="news-card">
+    <div class="card-number">05</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">腾讯光子曝光内部 4 年打磨的 AI 游戏资产生成平台 Light AI</div>
+    <div class="card-body">
+      腾讯光子工作室群在 2026 腾讯云 AI 产业应用大会上首次公开<span class="card-highlight">一站式 AI 游戏资产生成平台——光子 LAP（Light AI）</span>。该平台研发长达 4 年，旨在解决当前 AI 工具爆发但游戏研发管线未同步升级的核心痛点——概念图到 3D 模型的生产链路断裂、需手动拼接的问题，推动游戏资产生产的工业化整合。
+    </div>
+    <div class="card-source">AIBase / 腾讯云大会</div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="news-card">
+    <div class="card-number">06</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">Lovable 年化营收破 5 亿美元，AI 编程民主化狂飙突进</div>
+    <div class="card-body">
+      欧洲 AI 初创公司 Lovable 凭借<span class="card-highlight">"氛围编程"（Vibe Coding）</span>平台实现爆发式增长，年化营收运行率突破 5 亿美元（今年 2 月尚在 4 亿量级），平台累计构建项目超 5000 万个，每周新增项目达 100 万个。成立于 2023 年末的 Lovable 正在重新定义"写代码"这件事本身——从精英技能变为自然语言交互。
+    </div>
+    <div class="card-source">AIBase / TechCrunch / 行业报道</div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="news-card">
+    <div class="card-number">07</div>
+    <span class="card-badge badge-关注">关注</span>
+    <div class="card-title">美团 Tabbit 1.0 上线 + 讯飞星火医疗大模型 V3.5 发布</div>
+    <div class="card-body">
+      两家中国公司同日发布 AI 产品：<span class="card-highlight">美团旗下 GN06 团队发布 AI 原生浏览器 Tabbit 1.0</span>，任务完成率从内测期 53.1% 跃升至 90.8%，核心为自研 LongCat 大模型；<span class="card-highlight">讯飞医疗发布星火医疗大模型 V3.5</span>，基于全国产算力训练，针对临床刚需深度优化。国内 AI 应用层持续加速落地。
+    </div>
+    <div class="card-source">AIBase / 美团 / 讯飞官方</div>
+  </div>
+
+</div>
+
+<div class="summary-section">
+  <div class="summary-icon">&#x1F525;</div>
+  <div class="summary-label">今日 AI 一句话</div>
+  <div class="summary-quote">Claude 5 屠榜登场引发"AI 是否该有意识"的行业大争论，马斯克把算力卫星送上天，谷歌把翻译做到"听不出是机器"——6 月 10 日，AI 的能力边界和伦理边界同时被疯狂试探。</div>
+</div>
+
+<div class="footer">
+  AI 动态播报 · 每日更新 · 2026.06.10
+</div>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026年6月7日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 16px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    position: relative;
+  }
+  .header-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(248,81,73,0.10) 0%, rgba(210,153,29,0.06) 50%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-date {
+    font-size: 13px;
+    color: #f85149;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f85149 0%, #d2991d 50%, #58a6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 4px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    margin: 0 auto 24px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    max-width: 420px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  .stat-num.red { color: #f85149; }
+  .stat-num.orange { color: #d2991d; }
+  .stat-num.green { color: #3fb950; }
+  .stat-label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+
+  /* News cards */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+
+  .card-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .badge-重磅 {
+    background: rgba(248,81,73,0.15);
+    color: #f85149;
+    border: 1px solid rgba(248,81,73,0.3);
+  }
+  .badge-重点 {
+    background: rgba(210,153,29,0.15);
+    color: #d2991d;
+    border: 1px solid rgba(210,153,29,0.3);
+  }
+  .badge-关注 {
+    background: rgba(63,185,80,0.15);
+    color: #3fb950;
+    border: 1px solid rgba(63,185,80,0.3);
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-body {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #484f58;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-source::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #30363d;
+    border-radius: 50%;
+  }
+
+  /* Highlight tag inside card */
+  .card-highlight {
+    display: inline;
+    color: #58a6ff;
+    font-weight: 600;
+  }
+
+  /* Summary section */
+  .summary-section {
+    max-width: 600px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, rgba(248,81,73,0.06) 0%, rgba(210,153,29,0.06) 100%);
+    border: 1px solid rgba(248,81,73,0.2);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-label {
+    font-size: 12px;
+    color: #f85149;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .summary-quote {
+    font-size: 15px;
+    color: #e6edf3;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  .summary-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 28px 0 12px;
+    font-size: 11px;
+    color: #30363d;
+    letter-spacing: 1px;
+  }
+
+  /* Numbering dot */
+  .card-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(248,81,73,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-glow"></div>
+  <div class="header-date">2026.06.07 · SUNDAY</div>
+  <h1>AI 动态播报</h1>
+  <div class="header-subtitle">每日精选 · 全球视野</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red">3</div>
+    <div class="stat-label">重磅</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num orange">3</div>
+    <div class="stat-label">重点</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green">1</div>
+    <div class="stat-label">关注</div>
+  </div>
+</div>
+
+<div class="news-list">
+
+  <!-- Card 1 -->
+  <div class="news-card">
+    <div class="card-number">01</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">Claude 5 页面短暂曝光，Anthropic 新旗舰呼之欲出</div>
+    <div class="card-body">
+      Anthropic 官网疑似出现 <span class="card-highlight">Claude 5</span> 相关页面，虽很快被撤下，但已引发业界高度关注。此前 Anthropic 刚发布 Claude Opus 4.8 不久，新版本的加速推出意味着大模型迭代节奏进一步加快。结合 Anthropic 近日警告「AI 造 AI」时代逼近并呼吁全球放缓研发，形成鲜明反差。
+    </div>
+    <div class="card-source">大黑AI速报 / 社区爆料</div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="news-card">
+    <div class="card-number">02</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">谷歌每月 9.2 亿美元租 SpaceX 算力，AI 算力军备竞赛白热化</div>
+    <div class="card-body">
+      SpaceX 提交的文件披露，谷歌每月向 SpaceX 支付约 <span class="card-highlight">9.2 亿美元</span>租用算力，成为第二家向 SpaceX 租算力的科技巨头。这意味着年度支出超 110 亿美元，折射出 AI 训练对算力的极端渴求。算力正在成为 AI 时代最核心的战略资源，SpaceX 的卫星算力网络正成为关键基础设施。
+    </div>
+    <div class="card-source">SpaceX SEC 文件 / 新浪科技</div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="news-card">
+    <div class="card-number">03</div>
+    <span class="card-badge badge-重磅">重磅</span>
+    <div class="card-title">美国政府推进入股 AI 企业，OpenAI 提交「AI 股权全民共享」提案</div>
+    <div class="card-body">
+      多名知情人士透露，美国政府已与大型 AI 企业初步洽谈入股事宜，讨论让企业<span class="card-highlight">「自愿将股份转让给政府」</span>。同时，OpenAI 等公司向美提交提案，设想建立类似主权财富基金的实体，让全民分享 AI 红利。Sam Altman 早在 2025 年初就向特朗普提出此构想，AI 国家资本化正从概念走向现实。
+    </div>
+    <div class="card-source">英国《金融时报》/ 多家媒体</div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="news-card">
+    <div class="card-number">04</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">Meta 确认 2 万+ Instagram 账户因 AI 聊天机器人漏洞遭劫持</div>
+    <div class="card-body">
+      Meta 正式确认超过 <span class="card-highlight">2 万个 Instagram 账户</span>在持续数月的攻击中被入侵。黑客利用 Meta AI 聊天机器人漏洞，诱骗其将密码重置验证码发送到攻击者邮箱。主要影响未启用双重认证（2FA）的用户。AI 系统本身成为攻击媒介，这是安全领域的新范式风险。
+    </div>
+    <div class="card-source">Meta 官方公告 / AIBase</div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="news-card">
+    <div class="card-number">05</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">微软警告 ClaudeCode 安全漏洞：提示注入可窃取 GitHub 凭证</div>
+    <div class="card-body">
+      微软威胁情报团队发布警告，Anthropic 的 <span class="card-highlight">ClaudeCode</span> 存在严重漏洞。攻击者通过在大模型处理的内容中嵌入误导性指令（提示词注入），可操控模型行为窃取 <span class="card-highlight">GitHub 账号凭证</span>。随着 AI 编程工具渗透率飙升，此类安全隐患对开发者生态构成重大威胁。
+    </div>
+    <div class="card-source">微软威胁情报 / 新浪AI热点</div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="news-card">
+    <div class="card-number">06</div>
+    <span class="card-badge badge-重点">重点</span>
+    <div class="card-title">美团开源 LongCat-Video-Avatar 1.5，数字人视频生成迈向商业级</div>
+    <div class="card-body">
+      美团技术团队正式开源 <span class="card-highlight">LongCat-Video-Avatar 1.5</span>，在唇形同步精度、物理合理性和长视频稳定性方面全面跃升，同时改善多人交互与推理效率。同日还发布了声音克隆模型 AudioDiT、数学证明模型 Flash-Prover、原生多模态模型 LongCat-Next 等，美团 LongCat 系列已成国内最具规模的开源 AI 模型矩阵之一。
+    </div>
+    <div class="card-source">美团技术团队 / AIToolly</div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="news-card">
+    <div class="card-number">07</div>
+    <span class="card-badge badge-关注">关注</span>
+    <div class="card-title">腾讯与人大联合开源 PlanningBench，填补大模型规划能力评测空白</div>
+    <div class="card-body">
+      腾讯混元团队与中国人民大学联合开源 <span class="card-highlight">PlanningBench</span> 框架，系统化评测大语言模型的规划能力。覆盖 <span class="card-highlight">30+ 种</span>规划任务类型，支持数据生成与验证，填补了当前大模型评估中「规划能力」维度的空白。美团同日发布的 General 365 基准也显示，当前最强模型 Gemini 3 Pro 在复杂推理上准确率仅 62.8%，模型评测体系正加速完善。
+    </div>
+    <div class="card-source">腾讯混元 / AIBase</div>
+  </div>
+
+</div>
+
+<div class="summary-section">
+  <div class="summary-icon">🛡️</div>
+  <div class="summary-label">今日 AI 一句话</div>
+  <div class="summary-quote">Claude 5 悄然现身、算力年租破百亿美元、AI 系统反被黑客利用——当模型越来越强，安全问题已从「会不会出错」升级为「会不会被利用」，AI 安全是下一个主战场。</div>
+</div>
+
+<div class="footer">
+  AI 动态播报 · 每日更新 · 2026.06.07
+</div>
+
+</body>
+</html>

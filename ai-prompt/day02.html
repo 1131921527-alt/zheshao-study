@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>提示词技巧 Day 02 | 用AI一键做出高质量PPT</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0f0f1a;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;padding:0 0 60px 0;min-height:100vh}
+.container{max-width:420px;margin:0 auto;padding:20px 16px}
+.tag{display:inline-block;background:#ff6b35;color:#fff;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:700;letter-spacing:1px;margin-bottom:12px}
+h1{font-size:26px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-0.5px}
+.subtitle{color:#aaa;font-size:13px;margin-bottom:28px}
+.section{background:#1a1a2e;border-radius:14px;padding:18px 16px;margin-bottom:16px;border:1px solid #2a2a4a}
+.section h2{font-size:17px;color:#ff6b35;margin-bottom:12px;font-weight:700}
+.section p{font-size:14px;color:#ccc;margin-bottom:10px}
+.section ul{list-style:none;padding:0}
+.section ul li{font-size:14px;color:#ccc;padding:6px 0 6px 18px;position:relative}
+.section ul li::before{content:"▸";color:#ff6b35;position:absolute;left:0;font-size:13px}
+.tip-box{background:#ff6b35;color:#fff;border-radius:10px;padding:14px 16px;margin-bottom:16px;font-size:14px;font-weight:600}
+.tip-box .emoji{font-size:20px;margin-right:6px}
+.prompt-block{background:#12122a;border:2px solid #ff6b35;border-radius:12px;padding:16px;margin-bottom:16px;position:relative}
+.prompt-block .label{font-size:11px;color:#ff6b35;font-weight:700;letter-spacing:1px;margin-bottom:8px}
+.prompt-block pre{color:#e0e0e8;font-size:13px;line-height:1.65;white-space:pre-wrap;word-break:break-all;font-family:inherit}
+.copy-btn{position:absolute;top:10px;right:10px;background:#ff6b35;color:#fff;border:none;border-radius:6px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s}
+.copy-btn:hover{background:#e55a2b;transform:scale(1.05)}
+.copy-btn:active{transform:scale(0.95)}
+.copy-btn.copied{background:#22c55e;color:#fff}
+.dont-box{background:#2a1a1a;border:1px solid #ff4444;border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.dont-box h3{color:#ff4444;font-size:14px;margin-bottom:8px;font-weight:700}
+.dont-box ul{list-style:none;padding:0}
+.dont-box ul li{font-size:13px;color:#ff8888;padding:4px 0 4px 16px;position:relative}
+.dont-box ul li::before{content:"✕";color:#ff4444;position:absolute;left:0;font-size:12px}
+.key-rule{background:#1a2a1a;border:1px solid #22c55e;border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.key-rule h3{color:#22c55e;font-size:14px;margin-bottom:8px;font-weight:700}
+.key-rule ul{list-style:none;padding:0}
+.key-rule ul li{font-size:13px;color:#88dd88;padding:4px 0 4px 16px;position:relative}
+.key-rule ul li::before{content:"✓";color:#22c55e;position:absolute;left:0;font-size:12px}
+.footer{text-align:center;color:#555;font-size:11px;padding:20px 0}
+.footer span{color:#ff6b35}
+.compare{display:flex;gap:12px;margin-bottom:16px}
+.compare>div{flex:1;background:#1a1a2e;border-radius:12px;padding:14px 12px;border:1px solid #2a2a4a}
+.compare .bad{border-color:#ff4444}
+.compare .good{border-color:#22c55e}
+.compare h4{font-size:13px;margin-bottom:8px}
+.compare .bad h4{color:#ff4444}
+.compare .good h4{color:#22c55e}
+.compare p{font-size:12px;color:#999;line-height:1.6}
+.step-num{display:inline-flex;width:24px;height:24px;background:#ff6b35;color:#fff;border-radius:50%;font-size:12px;font-weight:700;align-items:center;justify-content:center;margin-right:8px;flex-shrink:0}
+.step-item{display:flex;align-items:flex-start;margin-bottom:10px}
+.step-item span:last-child{font-size:14px;color:#ccc;line-height:1.65}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="tag">Day 02 · PPT制作</div>
+<h1>用AI一键做出高质量PPT</h1>
+<div class="subtitle">别再对着空白幻灯片发呆了，提示词写对了，3分钟出成品</div>
+
+<div class="tip-box">
+<span class="emoji">🔥</span>核心认知：AI不是"帮你排版"，而是"帮你想内容+排版+逻辑"。你给的约束越细，出来的PPT越能直接用。
+</div>
+
+<div class="section">
+<h2>为什么大部分人用AI做PPT效果差？</h2>
+<p>因为你只说了"帮我做个PPT"。AI不知道你要几页、每页讲什么、什么风格、给谁看。结果就是一堆废话堆在白底上。</p>
+<p>做PPT的提示词，关键是<strong style="color:#ff6b35">把PPT当成一份结构化文档来描述</strong>，而不是当成"一张图"来描述。</p>
+</div>
+
+<div class="compare">
+<div class="bad">
+<h4>❌ 糟糕提示词</h4>
+<p>帮我做一个关于公司年会的PPT，大概10页就行</p>
+</div>
+<div class="good">
+<h4>✅ 好提示词</h4>
+<p>帮我做一个8页的公司年会PPT，受众是全体员工（200人），风格：活泼喜庆、深色背景、金色点缀。内容结构：开场→年度回顾→业绩亮点→优秀团队→新年展望→互动环节→抽奖→结束。每页只保留3个要点，不要长段落。</p>
+</div>
+</div>
+
+<div class="section">
+<h2>做PPT的5步提示词框架</h2>
+<div class="step-item"><span class="step-num">1</span><span>说清楚<strong style="color:#ff6b35">主题和受众</strong>——给谁看、什么场合、多长时间</span></div>
+<div class="step-item"><span class="step-num">2</span><span>给出<strong style="color:#ff6b35">页数和结构</strong>——不要让AI自己猜要几页，直接列出来</span></div>
+<div class="step-item"><span class="step-num">3</span><span>指定<strong style="color:#ff6b35">视觉风格</strong>——配色、字体风格、整体氛围（商务/活泼/学术）</span></div>
+<div class="step-item"><span class="step-num">4</span><span>约束<strong style="color:#ff6b35">内容密度</strong>——每页最多几个要点、禁止长段落、标题不超过几个字</span></div>
+<div class="step-item"><span class="step-num">5</span><span>提<strong style="color:#ff6b35">特殊要求</strong>——要不要图表、要不要动画提示、要不要备注页</span></div>
+</div>
+
+<div class="prompt-block">
+<div class="label">📋 实战提示词 · 直接复制使用</div>
+<pre>帮我制作一份12页的行业趋势汇报PPT。
+
+【受众】公司管理层，非技术背景
+【场合】季度战略会议，15分钟演讲
+【风格】商务简约，深蓝底+白色文字+橙色强调色，不要花哨装饰
+【结构】
+  第1页：封面（标题+副标题+日期）
+  第2页：核心结论（3条一句话总结）
+  第3-5页：行业数据趋势（每页1个核心数据+2个支撑数据）
+  第6-7页：竞品对比（表格形式）
+  第8-9页：我们公司的位置和机会
+  第10页：风险提示（3条）
+  第11页：建议行动（3条，每条一句话）
+  第12页：结束页（感谢+联系方式）
+
+【约束】
+- 每页不超过5行文字
+- 标题不超过8个字
+- 数据用图表呈现，不要纯文字描述
+- 不要用术语，用大白话</pre>
+<button class="copy-btn" onclick="copyPrompt(this)">复制</button>
+</div>
+
+<div class="prompt-block">
+<div class="label">📋 快速版 · 3分钟速出PPT</div>
+<pre>帮我做6页PPT，主题是"新手如何开始健身"。
+
+受众：零基础小白，健身房新人
+风格：活力运动风，深色底+亮色强调
+结构：为什么健身→怎么选健身房→第一周训练计划→饮食建议→常见误区→总结一句话
+每页只写3个要点，用大白话，不要专业术语</pre>
+<button class="copy-btn" onclick="copyPrompt(this)">复制</button>
+</div>
+
+<div class="dont-box">
+<h3>✕ 常见坑</h3>
+<ul>
+<li>只说主题不说页数——AI会给你20页废话或者3页空洞</li>
+<li>不说受众——给老板看的和给学生看的完全不同</li>
+<li>不约束内容密度——PPT最忌一页塞8行字</li>
+<li>说"做得好看一点"——AI不知道你觉得什么是好看</li>
+<li>忘了说"不要术语"——结果一页全是专业词汇</li>
+</ul>
+</div>
+
+<div class="key-rule">
+<h3>✓ 记住这个公式</h3>
+<ul>
+<li>主题 + 受众 + 页数 + 结构 + 风格 + 约束 = 可直接用的PPT</li>
+<li>6个要素缺1个，就得手动大改</li>
+<li>6个要素都给，出来90%能直接用</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>进阶玩法</h2>
+<ul>
+<li>先让AI出大纲，确认后再让它填充内容——分两步比一步到位效果好</li>
+<li>要求AI给每页加<strong style="color:#ff6b35">演讲者备注</strong>（Notes），上台不怕忘词</li>
+<li>让AI帮你生成<strong style="color:#ff6b35">配套话术</strong>——每页该怎么讲，1分钟版本和3分钟版本</li>
+<li>做完PPT后让AI<strong style="color:#ff6b35">自查一遍</strong>："检查这PPT有没有术语过多、内容过密、逻辑断裂的问题"</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>不同场景的提示词模板</h2>
+<p><strong style="color:#ff6b35">汇报型</strong>：重点是数据+结论，每页一个核心结论，图表多于文字</p>
+<p><strong style="color:#ff6b35">培训型</strong>：重点是步骤+案例，每页一个知识点+一个实操案例</p>
+<p><strong style="color:#ff6b35">提案型</strong>：重点是逻辑+证据，每页一个论点+2-3个支撑依据</p>
+<p><strong style="color:#ff6b35">路演型</strong>：重点是故事+数据，前3页抓注意力，中间讲故事，结尾给数字</p>
+</div>
+
+<div class="footer">
+提示词技巧 Day 02 · <span>PPT制作</span> · 每日更新
+</div>
+
+</div>
+
+<script>
+function copyPrompt(btn){
+  const pre=btn.parentElement.querySelector('pre');
+  const text=pre.textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>{
+      btn.textContent='已复制';
+      btn.classList.add('copied');
+      setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},2000);
+    });
+  }else{
+    const ta=document.createElement('textarea');
+    ta.value=text;
+    ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent='已复制';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},2000);
+  }
+}
+</script>
+</body>
+</html>

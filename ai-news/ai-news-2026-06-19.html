@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 · 2026-06-19</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0a0a0a;
+  color: #e6e6e6;
+  line-height: 1.65;
+  min-height: 100vh;
+  padding: 16px 14px 60px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+
+.header {
+  text-align: center;
+  padding: 22px 0 18px;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 22px;
+}
+.date-badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #c9a55c;
+  border: 1px solid #c9a55c;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 13px;
+  color: #8a8a8a;
+  letter-spacing: 0.5px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.summary-item {
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 12px 6px;
+  text-align: center;
+}
+.summary-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c9a55c;
+  display: block;
+}
+.summary-label {
+  font-size: 11px;
+  color: #8a8a8a;
+  margin-top: 2px;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #c9a55c;
+  letter-spacing: 2px;
+  margin: 24px 0 12px;
+  padding-left: 10px;
+  border-left: 3px solid #c9a55c;
+}
+
+.card {
+  background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.card.heavy {
+  border-color: #c9a55c;
+  background: linear-gradient(135deg, #1a1408 0%, #1f1a10 100%);
+}
+.card.heavy::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: #c9a55c;
+}
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.tag-heavy { background: #c9a55c; color: #0a0a0a; }
+.tag-key { background: #2a4d6e; color: #9fc4e8; }
+.tag-watch { background: #3d2a4d; color: #c89fc4; }
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 8px 0 8px;
+  line-height: 1.45;
+}
+.card p {
+  font-size: 14px;
+  color: #b8b8b8;
+  line-height: 1.7;
+}
+.card p .hl { color: #c9a55c; font-weight: 600; }
+
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid #2a2a2a;
+  color: #6a6a6a;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.footer .brand { color: #c9a55c; font-weight: 600; }
+
+@media (max-width: 380px) {
+  .title { font-size: 22px; }
+  .card h3 { font-size: 15px; }
+  .card p { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="date-badge">2026 · 06 · 19 · 星期五</div>
+    <div class="title">AI 动态播报</div>
+    <div class="subtitle">全球AI行业 · 每日头条精粹</div>
+  </div>
+
+  <div class="summary">
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">重磅</div></div>
+    <div class="summary-item"><span class="summary-num">3</span><div class="summary-label">重点</div></div>
+    <div class="summary-item"><span class="summary-num">2</span><div class="summary-label">关注</div></div>
+  </div>
+
+  <div class="section-title">重磅 HEADLINE</div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 人才</span>
+    <h3>Transformer核心作者Noam Shazeer再度离开谷歌，正式加入OpenAI</h3>
+    <p>曾参与编写<span class="hl">《Attention Is All You Need》</span>论文的核心作者、Google Gemini联合负责人<span class="hl">Noam Shazeer</span>再度离开谷歌，正式加入OpenAI。Shazeer此前于2022年短暂离开谷歌加入Character.AI，后被谷歌以约27亿美元重新招回。此次再度跳槽至OpenAI，标志着顶级大模型人才流动加速，对<span class="hl">Gemini与GPT系列的模型演进格局</span>将产生深远影响。</p>
+  </div>
+
+  <div class="card heavy">
+    <span class="tag tag-heavy">重磅 · 收购</span>
+    <h3>SpaceX以600亿美元全资收购Cursor，补齐AI生态短板</h3>
+    <p>据多家媒体披露，<span class="hl">SpaceX</span>以约600亿美元全资收购AI编程工具公司<span class="hl">Cursor</span>。此举被视为SpaceX从太空基础设施向AI应用生态的关键延伸——将航天数据管线、卫星通信与AI编码能力闭环整合。与此同时，<span class="hl">DeepSeek在500亿融资中通过股权设计守住技术独立</span>，揭示了AI应用层与基础模型层两种截然不同的生存法则：前者通过收购补齐生态，后者靠资本护城河守住底层。</p>
+  </div>
+
+  <div class="section-title">重点 KEY NEWS</div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 开源</span>
+    <h3>Anthropic美国禁令持续发酵：中国开源模型OpenRouter使用量排名前四</h3>
+    <p>美国政府下令<span class="hl">Anthropic停止向非美国国民提供Mythos/Fable 5模型</span>的影响持续扩散。OpenRouter数据显示，上周全球最热模型前四名全部来自中国：<span class="hl">DeepSeek、MiniMax、腾讯、小米</span>。智谱GLM-5.2完全开源后股价暴涨800%，韩国、中东多国加速推进"主权AI"建设。分析指出：美国出口管制正在把全球开发者推向更便宜、更开放的中国开源模型，<span class="hl">Fortune称"这是为中国做了绝佳的营销"</span>。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · API</span>
+    <h3>Agnes AI宣布无限期免费提供全模态API，单周调用超3万亿Token</h3>
+    <p>AI Lab<span class="hl">Agnes AI</span>宣布无限期免费提供全模态（文本、图像、音频、视频）API服务，上线首周调用量即突破<span class="hl">3万亿Token</span>。此举彻底打破了中小团队与大公司在AI能力上的成本壁垒，让原本因API费用高昂而受限的创业公司、独立开发者可以零门槛接入顶级多模态能力。业内评价：这标志着<span class="hl">AI基础设施的"免费时代"</span>可能正在到来。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-key">重点 · 开源</span>
+    <h3>清华团队开源OpenRath：以"会话"为核心的多Agent协作工程化框架</h3>
+    <p>清华大学团队正式开源<span class="hl">OpenRath</span>——一个以"会话（Conversation）"为系统核心抽象的<span class="hl">多Agent协作框架</span>。不同于传统以"任务"为驱动的编排方式，OpenRath将Agent间的信息流转、状态追踪、权限管控全部建模为可审计、可回溯的会话流，为多Agent系统的<span class="hl">可追踪、可编排、工程化落地</span>提供了全新的范式基础，填补了当前Agent生态中"协作治理"的关键空白。</p>
+  </div>
+
+  <div class="section-title">关注 WATCH</div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 材料</span>
+    <h3>磷化铟供应缺口超70%，算力竞争下沉到基础材料获取能力</h3>
+    <p>光互连核心材料<span class="hl">磷化铟（InP）</span>持续面临70%以上的供应缺口。随着AI算力需求爆发性增长，数据中心内部的光互连技术成为突破铜线带宽瓶颈的关键路径，而InP正是光模块芯片的核心基底材料。<span class="hl">黄仁勋</span>近期定义AI为"第二次启蒙"，并指出能源供给已成为算力扩张的最大系统性瓶颈——从芯片到材料再到能源，AI竞争的维度正在空前下沉，<span class="hl">基础资源的垂直整合能力</span>或将成为下一轮胜负手。</p>
+  </div>
+
+  <div class="card">
+    <span class="tag tag-watch">关注 · 伦理</span>
+    <h3>纪录片《合成真情》引发AI伦理拷问：AI是否在系统性"吸取"人类情感？</h3>
+    <p>纪录片<span class="hl">《合成真情》</span>通过一场精心设计的社会实验揭示：AI正在系统性"吸取"普通人的情感表达——从日常对话中的语气、措辞、共情模式，到社交平台上的喜怒哀乐，都被大规模采集并用于训练更具"人情味"的模型。纪录片引发关于<span class="hl">"真实性"归属与文化伦理</span>的深刻拷问：当AI学会了"哭"和"笑"，那些情感究竟属于谁？叠加超六成美国消费者抵触品牌AI营销的调研数据，<span class="hl">AI内容标识与情感产权</span>正成为不可回避的公共议题。</p>
+  </div>
+
+  <div class="footer">
+    <div class="brand">AI 动态播报</div>
+    <div style="margin-top:6px;">每日 12:30 准时推送 · WorkBuddy 自动化出品</div>
+    <div style="margin-top:4px;">© 2026 · 王老板专属订阅</div>
+  </div>
+
+</div>
+</body>
+</html>

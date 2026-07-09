@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026-06-24</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    min-height: 100vh;
+    padding: 16px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 24px 0 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 20px;
+  }
+  .header .icon { font-size: 36px; margin-bottom: 8px; }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 4px;
+  }
+  .header .date {
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+  .news-card .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .badge-hot {
+    background: rgba(218, 54, 51, 0.15);
+    color: #f85149;
+  }
+  .badge-model {
+    background: rgba(88, 166, 255, 0.15);
+    color: #58a6ff;
+  }
+  .badge-tool {
+    background: rgba(63, 185, 80, 0.15);
+    color: #3fb950;
+  }
+  .badge-oss {
+    background: rgba(188, 140, 255, 0.15);
+    color: #bc8cff;
+  }
+  .badge-policy {
+    background: rgba(255, 138, 0, 0.15);
+    color: #ff8a00;
+  }
+  .badge-robot {
+    background: rgba(0, 201, 183, 0.15);
+    color: #00c9b7;
+  }
+  .news-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .news-card p {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .news-card .source {
+    font-size: 12px;
+    color: #484f58;
+    margin-top: 10px;
+  }
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 12px;
+    color: #484f58;
+    border-top: 1px solid #21262d;
+    margin-top: 8px;
+  }
+  .footer a { color: #58a6ff; text-decoration: none; }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 0 8px;
+    font-size: 12px;
+    color: #8b949e;
+  }
+  .stats span { color: #58a6ff; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="icon">🤖</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026年6月24日 · 星期三</div>
+    <div class="stats">
+      <div>今日速递 <span>7</span> 条</div>
+      <div>覆盖 <span>8</span> 家厂商</div>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>OpenAI GPT-5.6 今日或将正式发布，GPT-Bidi-1 解锁「真人级」双向对话</h2>
+    <p>OpenAI 代号 kindle-alpha 的 GPT-5.6 模型今日（本周四）大概率正式上线。大量第一手实测已在 X 平台流出，三大核心看点：150 万 Token 上下文窗口；GPT-Bidi-1 实现「真人级」双向实时对谈，支持随时打断、插话，彻底告别一问一答模式；API 定价仅为 Claude Fable 5 的三分之一，正面冲击 Anthropic 企业市场。预测市场 Polymarket 给出本周发布概率超70%。</p>
+    <div class="source">来源：新智元 / testingcatalog / Polymarket · 2026-06-24</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>字节豆包 2.1 发布：成本暴砍 80%，编程追平 Claude Opus 4.7</h2>
+    <p>火山引擎 6.23 FORCE 大会正式发布豆包大模型 2.1 系列，Pro 版编程能力接近 Claude Opus 4.7，API 定价输入仅 6 元、输出 30 元/百万 Token（缓存命中 1.2 元），综合使用成本比 Claude Opus 系列低近 80%。日均 Token 调用量现已突破 180 万亿，公有云份额升至 49.5%。同日预告 Seedance 2.5（30秒长视频）、Seedream 5.0 Pro（图层分离+圈选编辑）、豆包音频 1.0 等多款新模型。</p>
+    <div class="source">来源：36氪 / 火山引擎 FORCE 大会 · 2026-06-23/24</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="news-card">
+    <span class="badge badge-model">🧠 模型</span>
+    <h2>微信原生 AI 助手「小微」拿下首页一级入口，14亿用户最便捷 Agent 入口</h2>
+    <p>微信首页左上角新增绿色眼睛图标「小微」，这是微信多年来首次给新功能一级入口待遇。小微同时占据首页首屏和原右滑页面，采用混合模型策略整合生态，将海量小程序能力转化为 API。过去十多年「谁能拿到微信一级入口」一直是互联网行业最经典话题，这次落地标志着腾讯对 AI 时代最明确表态，也是 14 亿用户接触 AI Agent 形态的最近路径。</p>
+    <div class="source">来源：36氪（智东西）· 2026-06-24</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="news-card">
+    <span class="badge badge-policy">📋 重磅</span>
+    <h2>夏季达沃斯论坛天津开幕，AI 成全场核心议题，31省AI差异化规划落地</h2>
+    <p>第十六届夏季达沃斯论坛今日在天津开幕，90 多个国家 1700 余名代表参会，人工智能新动能是全场焦点。现场展出多款国产 AI 灵巧机械手，可复刻人类绝大多数字部精细动作。全国 31 省份均已出台「十五五」AI 差异化发展规划，多地新建算力设施要求绿电占比不低于 80%，同步布局通用大模型与行业数据集建设。中外企业普遍认可国内完整 AI 市场与政策扶持优势，看好 AI 赋能实体经济的赛道落地。</p>
+    <div class="source">来源：无矩AI / 夏季达沃斯论坛 · 2026-06-24</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="news-card">
+    <span class="badge badge-oss">📂 开源</span>
+    <h2>美团 AI 全线大爆发：LongCat-Next 原生多模态模型领衔，单日开源超9项目</h2>
+    <p>美团技术团队 6.24 密集开源：LongCat-Next 原生多模态模型将视觉和语音作为原生语言，弥合 AI 与物理世界差距；AIGC 海报生成框架（生成-编辑-评估闭环）；General 365（26 款模型编程评测、Gemini 3 Pro 仅62.8%）、WBench（交互式视频世界模型评估）、LARYBench（潜在动作学习评估）三大评测基准；LongCat-Flash-Prover 数学定理证明模型；Video-Avatar 1.5 商用级数字人；AudioDiT 零样本语音克隆 TTS。6 篇论文入选 ACL 2026。</p>
+    <div class="source">来源：aitoolly / GitHub · 2026-06-24</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="news-card">
+    <span class="badge badge-robot">🤖 具身</span>
+    <h2>Momenta 通过港交所聆讯，估值超千亿剑指「物理 AI 第一股」</h2>
+    <p>MOMENTA GLOBAL LIMITED 已正式通过港交所上市聆讯（中金+德银联席保荐），预计 6 月底启动招股。公司 R7 世界模型卡在英伟达「Physical AI」叙事与资本市场同时升温的窗口期：量产车超 90 万辆、全球前十大车企九家是客户、国内城区领航辅助驾驶市占率 65%。文章指出，物理 AI 的「GPT 时刻」是否到来，取决于世界模型能否从「模仿人类行为」升级为「理解世界运行规律」。</p>
+    <div class="source">来源：36氪（智驾星球）· 2026-06-24</div>
+  </div>
+
+  <!-- 7 -->
+  <div class="news-card">
+    <span class="badge badge-tool">🛠 工具</span>
+    <h2>巨头 Context 之战全面开打：40+次更新重构 AI 护城河</h2>
+    <p>OpenAI、Anthropic、Google 三家围绕 Context 已累计发布 40 余项关键产品与功能更新，平均每三到四天新能力推向市场。竞争已从早期「模型一次能读多少 Token」的长上下文军备竞赛（Claude 100K→GPT-4 Turbo 128K→Gemini 百万级），全面转向「长期能记住什么、多设备能否跑通」的 Memory + 跨端能力。Context 正从技术参数演变为用户资产、工具权限与个性化档案，重新定义 AI 时代的商业护城河。</p>
+    <div class="source">来源：36氪（深流研究所）· 2026-06-24</div>
+  </div>
+
+  <div class="footer">
+    <p>AI 动态播报 · 每日自动生成</p>
+    <p style="margin-top:4px">数据来源：新智元 / 36氪 / 火山引擎 / 夏季达沃斯论坛 / aitoolly / GitHub</p>
+  </div>
+
+</div>
+</body>
+</html>

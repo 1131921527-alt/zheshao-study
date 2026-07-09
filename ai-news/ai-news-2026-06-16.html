@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 · 2026-06-16</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:#0a0a0f;
+    color:#e0e0e8;
+    line-height:1.7;
+    min-height:100vh;
+    padding:0 0 60px 0;
+  }
+  .container{max-width:420px;margin:0 auto;padding:0 16px}
+
+  .header{
+    text-align:center;
+    padding:40px 0 28px;
+    position:relative;
+  }
+  .header::after{
+    content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+    width:60px;height:3px;border-radius:2px;
+    background:linear-gradient(90deg,#6c5ce7,#a29bfe);
+  }
+  .header .date{
+    font-size:13px;color:#6c5ce7;letter-spacing:3px;
+    text-transform:uppercase;margin-bottom:8px;
+  }
+  .header h1{
+    font-size:26px;font-weight:800;
+    background:linear-gradient(135deg,#a29bfe,#6c5ce7,#fd79a8);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+  .header .subtitle{
+    font-size:13px;color:#666;margin-top:6px;
+  }
+
+  .card{
+    background:linear-gradient(145deg,#13131f,#0f0f1a);
+    border:1px solid #1e1e35;
+    border-radius:16px;
+    padding:22px 20px;
+    margin-top:20px;
+    position:relative;
+    overflow:hidden;
+    transition:transform .2s,border-color .3s;
+  }
+  .card:active{transform:scale(0.985)}
+  .card:hover{border-color:#2d2d50}
+
+  .card .tag{
+    display:inline-block;
+    font-size:11px;font-weight:700;
+    padding:3px 10px;border-radius:20px;
+    margin-bottom:12px;letter-spacing:1px;
+  }
+  .tag.heavy{background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff}
+  .tag.important{background:linear-gradient(135deg,#6c5ce7,#4834d4);color:#fff}
+  .tag.watch{background:linear-gradient(135deg,#00b894,#00a381);color:#fff}
+
+  .card h2{
+    font-size:17px;font-weight:700;color:#f0f0f8;
+    margin-bottom:10px;line-height:1.5;
+  }
+  .card .body{
+    font-size:14px;color:#a0a0b8;line-height:1.8;
+  }
+  .card .body strong{color:#c8c8e0}
+
+  .card.heavy-glow::before{
+    content:'';position:absolute;top:-40px;right:-40px;
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,rgba(231,76,60,0.12),transparent 70%);
+    pointer-events:none;
+  }
+  .card.important-glow::before{
+    content:'';position:absolute;top:-40px;right:-40px;
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,rgba(108,92,231,0.12),transparent 70%);
+    pointer-events:none;
+  }
+  .card.watch-glow::before{
+    content:'';position:absolute;top:-40px;right:-40px;
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,rgba(0,184,148,0.12),transparent 70%);
+    pointer-events:none;
+  }
+
+  .divider{
+    text-align:center;margin:32px 0 8px;position:relative;
+  }
+  .divider::before{
+    content:'';position:absolute;top:50%;left:0;right:0;
+    height:1px;background:linear-gradient(90deg,transparent,#1e1e35,transparent);
+  }
+  .divider span{
+    position:relative;background:#0a0a0f;
+    padding:0 16px;font-size:12px;color:#444;letter-spacing:2px;
+  }
+
+  .quote-card{
+    background:linear-gradient(145deg,#1a1a30,#13131f);
+    border:1px solid #2d2d50;
+    border-radius:16px;
+    padding:28px 24px;
+    margin-top:24px;
+    text-align:center;
+    position:relative;
+  }
+  .quote-card::before{
+    content:'"';position:absolute;top:8px;left:18px;
+    font-size:52px;color:#6c5ce7;opacity:0.2;
+    font-family:Georgia,serif;line-height:1;
+  }
+  .quote-card .label{
+    font-size:11px;color:#6c5ce7;letter-spacing:2px;margin-bottom:10px;
+  }
+  .quote-card .text{
+    font-size:16px;color:#d0d0e8;line-height:1.8;font-weight:500;
+  }
+
+  .footer{
+    text-align:center;margin-top:36px;padding:20px 0;
+    font-size:11px;color:#333;letter-spacing:1px;
+  }
+
+  .num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:22px;height:22px;border-radius:50%;
+    font-size:11px;font-weight:700;margin-right:8px;
+    flex-shrink:0;
+  }
+  .num.heavy-num{background:#e74c3c;color:#fff}
+  .num.important-num{background:#6c5ce7;color:#fff}
+  .num.watch-num{background:#00b894;color:#fff}
+
+  .title-row{display:flex;align-items:flex-start}
+  .title-row h2{flex:1}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="date">2026 · 06 · 16</div>
+    <h1>AI 动态播报</h1>
+    <div class="subtitle">每日精选 · 7条速览</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="card heavy-glow">
+    <span class="tag heavy">重磅</span>
+    <div class="title-row">
+      <span class="num heavy-num">1</span>
+      <h2>Anthropic率先完成IPO秘密递表，估值或破万亿美元</h2>
+    </div>
+    <div class="body">
+      Anthropic于<strong>6月1日</strong>率先向SEC秘密递交IPO申请，估值区间传出<strong>9000亿至1.2万亿美元</strong>。若成功上市，将成为<strong>AI史上最大IPO</strong>。公司近期ARR突破<strong>100亿美元</strong>，企业客户超<strong>2000家</strong>，Claude Code付费用户3个月增长10倍，直追OpenAI。
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="card heavy-glow">
+    <span class="tag heavy">重磅</span>
+    <div class="title-row">
+      <span class="num heavy-num">2</span>
+      <h2>OpenAI紧随其后秘密递表，最快今秋上市，估值8520亿</h2>
+    </div>
+    <div class="body">
+      OpenAI正式向SEC秘密提交IPO文件，由<strong>高盛、摩根士丹利</strong>主承销，最快<strong>2026年秋季</strong>挂牌。估值传言<strong>8520亿美元</strong>，若成功将成<strong>史上规模第二大IPO</strong>。GPT-5.5企业市场份额持续扩大，Jony Ive AI硬件团队并入，平台+硬件双轮战略成型。
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card important-glow">
+    <span class="tag important">重点</span>
+    <div class="title-row">
+      <span class="num important-num">3</span>
+      <h2>宇树科技科创板IPO过会，73天速通冲击"人形机器人第一股"</h2>
+    </div>
+    <div class="body">
+      上交所审议通过<strong>宇树科技</strong>科创板首发，<strong>从申报到过会仅73天</strong>，拟募资<strong>42亿元</strong>。2025年营收<strong>16.99亿元</strong>，人形机器人<strong>出货量全球第一</strong>，四足机器人累计销量<strong>超3万台</strong>。预计将成为A股"<strong>人形机器人第一股</strong>"，直接带动具身智能板块。
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card important-glow">
+    <span class="tag important">重点</span>
+    <div class="title-row">
+      <span class="num important-num">4</span>
+      <h2>SpaceX SPCX纳斯达克挂牌，史上最大IPO正式诞生</h2>
+    </div>
+    <div class="body">
+      SpaceX以<strong>SPXC</strong>代码登陆纳斯达克，募资规模有望突破<strong>500亿美元</strong>，刷新<strong>人类史上最大IPO</strong>纪录。市场对"航天+AI+算力"三位一体估值高度认可，加速推动全球<strong>超级IPO潮</strong>形成，SpaceX、OpenAI、Anthropic三大科技巨头接连冲刺资本市场。
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="card important-glow">
+    <span class="tag important">重点</span>
+    <div class="title-row">
+      <span class="num important-num">5</span>
+      <h2>英伟达GTC台北重磅演讲，智能体AI全栈战略落地</h2>
+    </div>
+    <div class="body">
+      黄仁勋在Computex 2026 GTC台北演讲中宣布：与<strong>微软合作</strong>推出<strong>RTX Spark超级芯片</strong>，把可在本机运行的<strong>AI Agent</strong>直接带入Windows PC。明确提出"有用的AI"已到来，标志<strong>智能体时代</strong>正式开启，AI从云端走向<strong>端侧+本地</strong>全面开花。
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card watch-glow">
+    <span class="tag watch">关注</span>
+    <div class="title-row">
+      <span class="num watch-num">6</span>
+      <h2>OpenAI、Anthropic、DeepMind三巨头联名致信美国会：立法强制筛查合成DNA</h2>
+    </div>
+    <div class="body">
+      Sam Altman、Dario Amodei、Demis Hassabis<strong>三大AI掌门人罕见联署</strong>，微软Mustafa Suleyman、Meta Alexandr Wang也参与。公开信敦促国会立法强制<strong>基因合成服务商</strong>筛查订单与客户身份，防范<strong>AI辅助生物武器</strong>风险。这是AI头部公司首次在<strong>生物安全治理</strong>上达成统一立场。
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="card watch-glow">
+    <span class="tag watch">关注</span>
+    <div class="title-row">
+      <span class="num watch-num">7</span>
+      <h2>2026未来汽车AI技术展在重庆启幕，AI重构汽车产业</h2>
+    </div>
+    <div class="body">
+      2026未来汽车AI技术展<strong>6月13-16日</strong>在重庆国际博览中心举办。展会聚焦<strong>大模型、自动驾驶、具身智能、智能机器人</strong>四大方向，揭示汽车正从<strong>交通工具</strong>加速演变为<strong>智能移动终端、数据终端、机器人载体</strong>。车企研发模式、生产模式、产业链条全面被AI重构。
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"><span>✦</span></div>
+
+  <!-- Today's Quote -->
+  <div class="quote-card">
+    <div class="label">🔥 今日AI一句话</div>
+    <div class="text">当SpaceX、OpenAI、Anthropic三大巨头接连IPO，人类资本史被永久改写——AI不再是技术叙事，而是一场万亿级的财富大迁徙。</div>
+  </div>
+
+  <div class="footer">
+    AI动态播报 · 每日12:00自动推送<br>
+    Powered by WorkBuddy
+  </div>
+
+</div>
+</body>
+</html>

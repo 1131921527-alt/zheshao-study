@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026-06-22</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    min-height: 100vh;
+    padding: 16px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 24px 0 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 20px;
+  }
+  .header .icon { font-size: 36px; margin-bottom: 8px; }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 4px;
+  }
+  .header .date {
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+  .news-card .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .badge-hot {
+    background: rgba(218, 54, 51, 0.15);
+    color: #f85149;
+  }
+  .badge-model {
+    background: rgba(88, 166, 255, 0.15);
+    color: #58a6ff;
+  }
+  .badge-tool {
+    background: rgba(63, 185, 80, 0.15);
+    color: #3fb950;
+  }
+  .badge-talent {
+    background: rgba(210, 168, 0, 0.15);
+    color: #d2a800;
+  }
+  .badge-oss {
+    background: rgba(188, 140, 255, 0.15);
+    color: #bc8cff;
+  }
+  .badge-esg {
+    background: rgba(86, 211, 100, 0.15);
+    color: #56d364;
+  }
+  .news-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .news-card p {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+  .news-card .source {
+    font-size: 12px;
+    color: #484f58;
+    margin-top: 10px;
+  }
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 12px;
+    color: #484f58;
+    border-top: 1px solid #21262d;
+    margin-top: 8px;
+  }
+  .footer a { color: #58a6ff; text-decoration: none; }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 0 8px;
+    font-size: 12px;
+    color: #8b949e;
+  }
+  .stats span { color: #58a6ff; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="icon">🤖</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026年6月22日 · 星期一</div>
+    <div class="stats">
+      <div>今日速递 <span>7</span> 条</div>
+      <div>覆盖 <span>6</span> 家厂商</div>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>Google DeepMind 48小时内连失两位AI巨擘</h2>
+    <p>Transformer共同发明人 Noam Shazeer 离开谷歌加入 OpenAI，诺贝尔化学奖得主、AlphaFold 领导者 John Jumper 则加入 Anthropic。这是AI行业近年来最大规模的一次人才迁徙，标志着顶尖AI人才争夺战进入白热化阶段。</p>
+    <div class="source">来源：Creati.ai · 2026-06-21</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>Anthropic 发布 Claude Sonnet 4.5</h2>
+    <p>Claude Sonnet 4.5 在 SWE-bench 编码基准测试和 OSWorld 计算机使用基准测试中取得最高分，安全性与对齐能力大幅提升。该模型延续了 Anthropic 六月密集发布节奏（此前已发布 Fable 5、Opus 4.8），进一步巩固其企业级AI市场地位。</p>
+    <div class="source">来源：Creati.ai · 2026-06-21</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="news-card">
+    <span class="badge badge-tool">🛠 工具</span>
+    <h2>OpenAI Codex 新增「录屏重放」功能</h2>
+    <p>macOS 端 Codex 应用新增 Record &amp; Replay 功能：用户只需演示一次工作流程，Codex 自动将其转换为可复用的"技能"，之后可无限次自动重复执行。该功能暂未在欧盟、英国、瑞士开放。</p>
+    <div class="source">来源：The Decoder · 2026-06-20</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="news-card">
+    <span class="badge badge-model">🧠 模型</span>
+    <h2>ChatGPT 强化定时任务功能，加速超级应用转型</h2>
+    <p>OpenAI 为 ChatGPT 新增独立的 Scheduled 页面，集中管理所有定时任务，支持查看、暂停、编辑和删除。研究型任务可自动搜索网页和已连接应用。此举是 ChatGPT 从对话工具向一站式AI生活助手转型的关键一步。</p>
+    <div class="source">来源：The Decoder · 2026-06-20</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="news-card">
+    <span class="badge badge-oss">📂 开源</span>
+    <h2>智谱发布 GLM-5.2，称霸开源纯文本大模型</h2>
+    <p>智谱 AI 以 MIT 许可证开源 GLM-5.2，被知名开发者 Simon Willison 评价为"目前最强纯文本开源大模型"。该模型专为长周期任务设计，在代码生成和复杂推理方面表现出色，进一步强化中国AI开源生态。</p>
+    <div class="source">来源：Hugging Face / Simon Willison · 2026-06-16</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="news-card">
+    <span class="badge badge-talent">👤 人才</span>
+    <h2>Barret Zoph 重返仅5个月后再度离开 OpenAI</h2>
+    <p>OpenAI 资深研究员 Barret Zoph 在从 Mira Murati 的 Thinking Machines Lab 回归仅5个月后，再次离职。这一事件折射出AI行业顶级人才的超高流动性，以及各巨头之间持续升级的人才争夺战。</p>
+    <div class="source">来源：Creati.ai · 2026-06-21</div>
+  </div>
+
+  <!-- 7 -->
+  <div class="news-card">
+    <span class="badge badge-esg">🌱 ESG</span>
+    <h2>Anthropic 加入 Frontier 碳清除联盟，参与18亿美元环保计划</h2>
+    <p>Anthropic 成为首个加入 Frontier 碳清除联盟的纯AI公司，与谷歌、Stripe、Shopify、Salesforce 和 H&amp;M 共同启动9.15亿美元增长型AMC，使总承诺资金达18亿美元，目标签约10-15个高确定性碳清除项目。</p>
+    <div class="source">来源：Anthropic / 清洁技术 · 2026-06-18</div>
+  </div>
+
+  <div class="footer">
+    <p>AI 动态播报 · 每日自动生成</p>
+    <p style="margin-top:4px">数据来源：Creati.ai / The Decoder / Hugging Face / aibars.net / lmmarketcap.com</p>
+  </div>
+
+</div>
+</body>
+</html>

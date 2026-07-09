@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026-07-02</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    min-height: 100vh;
+    padding: 16px;
+    line-height: 1.6;
+  }
+  .container { max-width: 600px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 24px 0 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 20px;
+  }
+  .header .icon { font-size: 36px; margin-bottom: 8px; }
+  .header h1 { font-size: 22px; font-weight: 700; color: #58a6ff; margin-bottom: 4px; }
+  .header .date { font-size: 13px; color: #8b949e; }
+  .news-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+  .news-card:active { border-color: #58a6ff; }
+  .news-card .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .badge-hot { background: rgba(218, 54, 51, 0.15); color: #f85149; }
+  .badge-model { background: rgba(88, 166, 255, 0.15); color: #58a6ff; }
+  .badge-tool { background: rgba(63, 185, 80, 0.15); color: #3fb950; }
+  .badge-policy { background: rgba(255, 138, 0, 0.15); color: #ff8a00; }
+  .badge-hardware { background: rgba(255, 213, 0, 0.15); color: #ffd500; }
+  .news-card h2 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; line-height: 1.4; }
+  .news-card p { font-size: 14px; color: #8b949e; line-height: 1.7; }
+  .news-card .source { font-size: 12px; color: #484f58; margin-top: 10px; }
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 12px;
+    color: #484f58;
+    border-top: 1px solid #21262d;
+    margin-top: 8px;
+  }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 0 8px;
+    font-size: 12px;
+    color: #8b949e;
+  }
+  .stats span { color: #58a6ff; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="icon">🤖</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026年7月2日 · 星期四</div>
+    <div class="stats">
+      <div>今日速递 <span>7</span> 条</div>
+      <div>覆盖 <span>8</span> 家厂商</div>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>Anthropic 恢复 Claude Fable 5，前沿模型首次被政府下线后再复活</h2>
+    <p>Fable 5 于 6 月 9 日发布，6 月 12 日因美国出口管制指令全球下线，7 月 1 日携新分类器安全机制重新上线。高级版 Mythos 5 仍仅限美国批准机构使用。这是前沿 AI 模型首次因政府指令被强制下架后再复活，标志着模型路线图与政策路线图深度绑定，企业采购 AI 必须把监管风险纳入评估。</p>
+    <div class="source">来源：Anthropic / 美国政府 · 2026-07-01</div>
+  </div>
+
+  <div class="news-card">
+    <span class="badge badge-model">🧠 模型</span>
+    <h2>CAIS 发布远程劳动力指数，Fable 5 以 16.1% 领跑真实工作任务</h2>
+    <p>CAIS 与 Scale AI Labs 联合发布覆盖 23 个领域、240 个真实远程工作项目的评测。Fable 5 以 16.1% 的客户接受率位居公开模型第一。这是迄今最贴近真实职场场景的 AI 能力评测，16.1% 的通过率既展示了进步，也说明 AI 替代人类工作仍有巨大差距。</p>
+    <div class="source">来源：CAIS & Scale AI Labs · 2026-07-01</div>
+  </div>
+
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>Together AI 完成 8 亿美元融资，估值跃升至 83 亿美元</h2>
+    <p>本轮融资后 Together AI 估值达 83 亿美元，较 2025 年初的 33 亿美元大幅跃升。公司定位开放模型与新云基础设施，主打更便宜的 AI 选项。资本持续涌入开源 AI 基础设施赛道，预示着与 OpenAI、Anthropic 等闭源巨头的成本竞争将进一步加剧。</p>
+    <div class="source">来源：Together AI · 2026-07-01</div>
+  </div>
+
+  <div class="news-card">
+    <span class="badge badge-policy">📋 行业</span>
+    <h2>AWS 成立 10 亿美元前沿部署工程组织，深入客户内部做 Agent</h2>
+    <p>Amazon Web Services 创建名为 Forward Deployed Engineering 的新组织，将 AWS 前沿团队直接嵌入客户内部，专注构建生产级智能体 AI 系统。AWS 从卖云资源转向深度参与客户 AI 落地，这将加速企业级 AI Agent 从实验走向生产部署。</p>
+    <div class="source">来源：Amazon Web Services · 2026-07-01</div>
+  </div>
+
+  <div class="news-card">
+    <span class="badge badge-tool">🛠 产品</span>
+    <h2>Cognition 推出 Devin Security Swarm，安全扫描进入 Agent 时代</h2>
+    <p>采用 Agentic MapReduce 架构，可扫描大型代码库、在沙箱中验证漏洞可利用性并自动开启修复 PR。在 50 个真实 GHSA 漏洞测试中召回率达 72%，每次运行成本约 90 美元。AI 安全扫描从单点工具升级为自主 Agent 集群，大幅降低了企业代码安全审计的门槛与成本。</p>
+    <div class="source">来源：Cognition · 2026-07-01</div>
+  </div>
+
+  <div class="news-card">
+    <span class="badge badge-hot">🔥 重磅</span>
+    <h2>阿布扎比 MGX 募集 490 亿美元 AI 基金，全球 AI 投资竞赛升温</h2>
+    <p>Bloomberg 报道称，阿布扎比主权基金 MGX 已募集约 490 亿美元的 AI 基金，为有史以来规模最大的 AI 基金之一。中东主权财富资本正大规模押注 AI 基础设施与应用，将重塑全球 AI 投资格局，并可能加速非美国 AI 生态的崛起。</p>
+    <div class="source">来源：阿布扎比 MGX / Bloomberg · 2026-07-01</div>
+  </div>
+
+  <div class="news-card">
+    <span class="badge badge-policy">📋 行业</span>
+    <h2>联合国 AI 科学小组发布首份报告，Bengio 警告协调窗口期正在关闭</h2>
+    <p>报告警告权力集中、安全护栏失效和共同现实受威胁等风险。联合国同步成立 AI 向善全球委员会，由 Salesforce CEO Marc Benioff 与卢旺达总统 Paul Kagame 联合主持。AI 全球治理协调进入关键窗口期，国际社会能否在技术加速前建立有效规则框架，将决定 AI 红利与风险的分配走向。</p>
+    <div class="source">来源：联合国独立国际 AI 科学小组 / Yoshua Bengio · 2026-07-01</div>
+  </div>
+
+  <div class="footer">
+    <p>AI 动态播报 · 每日自动生成</p>
+    <p style="margin-top:4px">数据来源：Anthropic / CAIS / Together AI / AWS / Cognition / MGX / 联合国 / The Neuron</p>
+  </div>
+
+</div>
+</body>
+</html>

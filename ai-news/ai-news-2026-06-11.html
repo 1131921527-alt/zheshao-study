@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI动态播报 | 2026-06-11</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --border: #1e1e2e;
+    --text: #c8c8d4;
+    --text-dim: #6b6b80;
+    --accent: #6366f1;
+    --accent-glow: rgba(99,102,241,0.15);
+    --heavy: #ef4444;
+    --heavy-bg: rgba(239,68,68,0.12);
+    --key: #f59e0b;
+    --key-bg: rgba(245,158,11,0.12);
+    --watch: #22c55e;
+    --watch-bg: rgba(34,197,94,0.12);
+    --gradient-1: #6366f1;
+    --gradient-2: #8b5cf6;
+    --gradient-3: #a855f7;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { -webkit-font-smoothing:antialiased; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    line-height: 1.65;
+    min-height: 100vh;
+    padding: 0 16px 40px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 36px 0 28px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gradient-1), var(--gradient-3));
+    border-radius: 2px;
+  }
+  .header .date-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--accent);
+    background: var(--accent-glow);
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 6px;
+  }
+  .header .subtitle {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 0 28px;
+    flex-wrap: wrap;
+  }
+  .stat-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 16px;
+    text-align: center;
+    min-width: 70px;
+  }
+  .stat-item .num { font-size: 22px; font-weight: 700; }
+  .stat-item .label { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+  .stat-item.heavy .num { color: var(--heavy); }
+  .stat-item.key .num { color: var(--key); }
+  .stat-item.watch .num { color: var(--watch); }
+
+  /* News card */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .news-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+  }
+  .news-card.heavy::before { background: var(--heavy); }
+  .news-card.key::before { background: var(--key); }
+  .news-card.watch::before { background: var(--watch); }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .card-index {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-dim);
+    min-width: 20px;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e8e8f0;
+    line-height: 1.4;
+    flex: 1;
+  }
+  .card-badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .badge-heavy { background: var(--heavy-bg); color: var(--heavy); }
+  .badge-key { background: var(--key-bg); color: var(--key); }
+  .badge-watch { background: var(--watch-bg); color: var(--watch); }
+
+  .card-body {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.7;
+    padding-left: 28px;
+  }
+
+  /* Summary */
+  .summary {
+    max-width: 600px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(139,92,246,0.08));
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: 16px;
+    padding: 20px 18px;
+    position: relative;
+  }
+  .summary::before {
+    content: '💡';
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    font-size: 24px;
+  }
+  .summary-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .summary-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #e0d8f0;
+    line-height: 1.75;
+    font-style: italic;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 32px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    letter-spacing: 1px;
+  }
+
+  /* Glow pulse on the header */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  .pulse-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse 2s infinite;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="date-badge"><span class="pulse-dot"></span>2026年6月11日 · 星期四</div>
+  <h1>AI 动态播报</h1>
+  <div class="subtitle">每日精选 · 全球AI产业要闻速览</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item heavy"><div class="num">3</div><div class="label">重磅</div></div>
+  <div class="stat-item key"><div class="num">3</div><div class="label">重点</div></div>
+  <div class="stat-item watch"><div class="num">1</div><div class="label">关注</div></div>
+</div>
+
+<div class="news-list">
+
+  <!-- Item 1 -->
+  <div class="news-card heavy">
+    <div class="card-header">
+      <span class="card-index">01</span>
+      <span class="card-title">Fable 5 被曝"降智"防蒸馏，开源社区强烈抗议</span>
+      <span class="card-badge badge-heavy">重磅</span>
+    </div>
+    <div class="card-body">
+      Anthropic 刚发布的旗舰模型 Claude Fable 5 陷入争议漩涡——多名研究者和开发者发现，模型疑似内置了"反蒸馏"机制：用户一声"你好"即可触发告警，询问高端技术问题时回答被暗箱降质。Anthropic 同步公布了 Mythos 级模型 30 天数据保留与人工审查政策，白帽安全研究者集体不满，称"Fable 把 80% 的研究价值封在拒答里"。CEO Dario Amodei 同日发布长文呼吁 AI 监管加速，被外界解读为意在巩固自身领先地位。
+    </div>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="news-card heavy">
+    <div class="card-header">
+      <span class="card-index">02</span>
+      <span class="card-title">微信开放平台接入 AI 智能体，超级 App 变身 Agent 平台</span>
+      <span class="card-badge badge-heavy">重磅</span>
+    </div>
+    <div class="card-body">
+      微信宣布开放平台能力，允许开发者主动授权接入微信 AI 生态，智能体可调取小程序完成交易和服务闭环。美团、携程、同程、滴滴成为首批内测应用。这标志着微信从超级 App 向 Agent 平台的战略转型正式起步——10 亿级用户入口叠加小程序生态，AI 智能体落地的最大规模试验场已然成型。
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="news-card heavy">
+    <div class="card-header">
+      <span class="card-index">03</span>
+      <span class="card-title">Google 开源扩散语言模型 DiffusionGemma，打破自回归垄断</span>
+      <span class="card-badge badge-heavy">重磅</span>
+    </div>
+    <div class="card-body">
+      Google 发布实验性开源模型 DiffusionGemma（Apache 2.0 协议），26B 参数 MoE 架构，首次将"文本扩散"范式带入大模型主流。该模型放弃自回归逐 token 生成方式，改用并行去噪输出文本，官方测得最高 4 倍推理加速。这代表 Google 在扩散语言模型赛道正式下注，与 Inception Labs、Meta LLaDA 同台竞争，文本生成的底层范式或迎来变局。
+    </div>
+  </div>
+
+  <!-- Item 4 -->
+  <div class="news-card key">
+    <div class="card-header">
+      <span class="card-index">04</span>
+      <span class="card-title">钉钉换帅：无招卸任，92 年技术极客陈宇森接棒</span>
+      <span class="card-badge badge-key">重点</span>
+    </div>
+    <div class="card-body">
+      阿里巴巴宣布钉钉管理层重大调整：陈航（无招）卸任 CEO，1992 年出生的技术极客陈宇森接任，成为阿里史上最年轻的事业部 CEO。陈宇森 22 岁创办网络安全公司长亭科技（后被阿里云收购），2025 年在阿里云内部创业带队研发 AI Agent 产品 MuleRun。对正在全力推进 AI 化转型的钉钉而言，这次换帅意味着产品路线和组织方式都将进入新的观察周期。
+    </div>
+  </div>
+
+  <!-- Item 5 -->
+  <div class="news-card key">
+    <div class="card-header">
+      <span class="card-index">05</span>
+      <span class="card-title">阶跃星辰 Step 3.7 Flash 登顶 AA 三项第一，性价比碾压 Claude</span>
+      <span class="card-badge badge-key">重点</span>
+    </div>
+    <div class="card-body">
+      阶跃星辰发布 Step 3.7 Flash 模型，在 Artificial Analysis 榜单的速度、性价比、端到端三项指标均排名全球第一。输出速度最高 416 tokens/s，单任务成本约为 Claude Opus 4.6 的 1/9，编程能力达 Claude 的 97%。在 OpenRouter Trending 上冲至全球第二，国产模型在极致性价比赛道上持续领跑。
+    </div>
+  </div>
+
+  <!-- Item 6 -->
+  <div class="news-card key">
+    <div class="card-header">
+      <span class="card-index">06</span>
+      <span class="card-title">前 GitHub CEO 创立 Entire 获 6000 万美元融资，开源 AI Agent 版控</span>
+      <span class="card-badge badge-key">重点</span>
+    </div>
+    <div class="card-body">
+      前 GitHub CEO Thomas Dohmke 创立新公司 Entire，完成 6000 万美元种子轮融资，估值 3 亿美元。其开源 CLI 工具 Checkpoints 将 AI Agent 会话集成至 Git 工作流，支持 Claude Code 和 Gemini CLI，实现 Agent 交互的版本化管理。用 Git 的方式管理 AI 编程——这个概念正从理想走向工程化落地。
+    </div>
+  </div>
+
+  <!-- Item 7 -->
+  <div class="news-card watch">
+    <div class="card-header">
+      <span class="card-index">07</span>
+      <span class="card-title">华为云发布 10 万卡级智算集群 AICS 灵衢与 AgentArts 平台</span>
+      <span class="card-badge badge-watch">关注</span>
+    </div>
+    <div class="card-body">
+      华为云在 INSPIRE 创想者大会上提出 Agentic Infra 新范式，发布 AICS 灵衢智算集群（支持 10 万卡、200 EFLOPS）、AMS Agentic 记忆存储及企业级智能体平台智果 AgentArts。这是国内云厂商首次将 Agent 基础设施提升到战略层级，算力-记忆-沙箱三位一体的架构思路值得持续关注。
+    </div>
+  </div>
+
+</div>
+
+<div class="summary">
+  <div class="summary-label">今日 AI 一句话</div>
+  <div class="summary-text">
+    AI 圈今天的主旋律是"开放与封闭"的拉扯——Fable 5 为防蒸馏设下"降智"护栏引发众怒，而 Google 开源扩散语言模型、微信开放 Agent 生态、阶跃用极致性价比碾压，都在用行动证明：真正的护城河不是锁住模型，而是跑得更快、开放得更彻底。
+  </div>
+</div>
+
+<div class="footer">
+  AI 动态播报 · 每日更新<br>
+  数据来源：36氪 · 量子位 · TechCrunch · 各厂商官方公告<br>
+  2026-06-11 12:00 发布
+</div>
+
+</body>
+</html>

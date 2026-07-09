@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>雅思词汇 Day 1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;padding:12px;max-width:420px;margin:0 auto}
+.header{text-align:center;padding:20px 0 10px;border-bottom:1px solid #21262d}
+.header h1{font-size:22px;color:#58a6ff;font-weight:700}
+.header .day-badge{display:inline-block;background:linear-gradient(135deg,#238636,#2ea043);color:#fff;font-size:13px;padding:4px 14px;border-radius:20px;margin-top:8px;font-weight:600}
+.shuffle-btn{display:block;margin:16px auto;background:linear-gradient(135deg,#1f6feb,#388bfd);color:#fff;border:none;padding:10px 28px;border-radius:24px;font-size:15px;cursor:pointer;font-weight:600}
+.shuffle-btn:active{transform:scale(.95)}
+.card{background:#161b22;border:1px solid #21262d;border-radius:16px;margin:14px 0;padding:16px;transition:transform .2s}
+.card:active{transform:scale(.98)}
+.emoji-card{text-align:center;padding:14px;border-radius:12px;margin-bottom:12px;position:relative;overflow:hidden}
+.emoji-card .emoji{font-size:52px;line-height:1.2}
+.emoji-card .word{font-size:26px;font-weight:700;color:#fff;margin-top:6px}
+.emoji-card .phonetic{font-size:15px;color:#8b949e;margin-top:2px}
+.emoji-card .pos-mean{font-size:16px;color:#c9d1d9;margin-top:4px}
+.word-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
+.pron-btn{background:#21262d;color:#e6edf3;border:1px solid #30363d;border-radius:8px;padding:4px 10px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:4px}
+.pron-btn:active{background:#30363d}
+.story-box{background:#0d1117;border:1px solid #21262d;border-radius:10px;padding:12px;margin:10px 0;font-size:14px;color:#c9d1d9}
+.story-box .story-label{color:#58a6ff;font-size:12px;font-weight:600;margin-bottom:4px}
+.tip-box{background:#1c2128;border-left:3px solid #f0883e;padding:10px 12px;margin:8px 0;font-size:13px;color:#e6edf3;border-radius:0 8px 8px 0}
+.tip-box .tip-label{color:#f0883e;font-size:12px;font-weight:600}
+.sent-section{margin-top:10px}
+.sent-item{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:10px;margin:6px 0;font-size:13px;position:relative}
+.sent-item .en{color:#e6edf3;font-size:14px}
+.sent-item .cn{color:#8b949e;font-size:13px;margin-top:2px}
+.sent-play{position:absolute;top:8px;right:8px;background:#1f6feb;color:#fff;border:none;border-radius:6px;padding:4px 8px;font-size:12px;cursor:pointer}
+.sent-play:active{background:#388bfd}
+.footer{text-align:center;padding:16px 0;color:#8b949e;font-size:12px;border-top:1px solid #21262d;margin-top:20px}
+.audio-tip{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1f6feb;color:#fff;padding:8px 16px;border-radius:8px;font-size:13px;z-index:99}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>雅思核心词汇 📚</h1>
+<span class="day-badge">Day 1 · 15词</span>
+</div>
+
+<button class="shuffle-btn" onclick="shuffleCards()">🔀 乱序排列</button>
+
+<div id="cards-container">
+
+<!-- Word 1: Abundant -->
+<div class="card" data-idx="0">
+<div class="emoji-card" style="background:linear-gradient(135deg,#1a472a,#238636)">
+<div class="emoji">🌾</div>
+<div class="word">abundant</div>
+<div class="phonetic">/əˈbʌndənt/</div>
+<div class="pos-mean">adj. 大量的，丰富的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('abundant',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('abundant',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+田野里谷物🌾堆成山，a+bund(捆绑)+ant→捆了一捆又一捆→丰富的。想象丰收季节，粮仓爆满，这就是abundant的画面。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+常搭配 abundant resources / abundant evidence / abundant opportunities，强调"多到溢出来"的感觉。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">The region has abundant natural resources.</div>
+<div class="cn">该地区拥有丰富的自然资源。</div>
+<button class="sent-play" onclick="playSent('The region has abundant natural resources.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">There is abundant evidence to support this theory.</div>
+<div class="cn">有大量证据支持这一理论。</div>
+<button class="sent-play" onclick="playSent('There is abundant evidence to support this theory.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Fish are abundant in the local river.</div>
+<div class="cn">当地河里鱼类丰富。</div>
+<button class="sent-play" onclick="playSent('Fish are abundant in the local river.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 2: Deteriorate -->
+<div class="card" data-idx="1">
+<div class="emoji-card" style="background:linear-gradient(135deg,#4a2020,#da3633)">
+<div class="emoji">📉</div>
+<div class="word">deteriorate</div>
+<div class="phonetic">/dɪˈtɪəriəreɪt/</div>
+<div class="pos-mean">v. 恶化，变坏</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('deteriorate',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('deteriorate',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+de(向下)+terior(更差)+ate→一路向更差的方向走→恶化。想象股市曲线📉持续下跌，每一天都比前一天更糟，这就是deteriorate。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+常用于 health deteriorate / relationship deteriorate / environment deteriorate，雅思环境类话题高频词。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">His health has deteriorated rapidly.</div>
+<div class="cn">他的健康状况迅速恶化。</div>
+<button class="sent-play" onclick="playSent('His health has deteriorated rapidly.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Air quality continues to deteriorate in urban areas.</div>
+<div class="cn">城市地区的空气质量持续恶化。</div>
+<button class="sent-play" onclick="playSent('Air quality continues to deteriorate in urban areas.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">The relationship between the two countries deteriorated.</div>
+<div class="cn">两国之间的关系恶化了。</div>
+<button class="sent-play" onclick="playSent('The relationship between the two countries deteriorated.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 3: Inevitable -->
+<div class="card" data-idx="2">
+<div class="emoji-card" style="background:linear-gradient(135deg,#2d1a47,#8957e5)">
+<div class="emoji">⏳</div>
+<div class="word">inevitable</div>
+<div class="phonetic">/ɪˈnevɪtəbl/</div>
+<div class="pos-mean">adj. 不可避免的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('inevitable',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('inevitable',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+in(不)+evitable(可避免的)→不可避免。沙漏⏳里的沙子总会漏完，时间流逝是不可逆转的——有些事，你再怎么躲也躲不掉，这就是inevitable。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+雅思写作常用于 it is inevitable that... / an inevitable consequence / inevitable outcome，论证类话题万能词。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Change is inevitable in a rapidly developing society.</div>
+<div class="cn">在快速发展的社会中，变化是不可避免的。</div>
+<button class="sent-play" onclick="playSent('Change is inevitable in a rapidly developing society.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">It was inevitable that the old system would be replaced.</div>
+<div class="cn">旧系统被取代是不可避免的。</div>
+<button class="sent-play" onclick="playSent('It was inevitable that the old system would be replaced.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">An inevitable outcome of globalisation is cultural blending.</div>
+<div class="cn">全球化的必然结果是文化融合。</div>
+<button class="sent-play" onclick="playSent('An inevitable outcome of globalisation is cultural blending.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 4: Controversial -->
+<div class="card" data-idx="3">
+<div class="emoji-card" style="background:linear-gradient(135deg,#3d1f1f,#f0883e)">
+<div class="emoji">🔥</div>
+<div class="word">controversial</div>
+<div class="phonetic">/ˌkɒntrəˈvɜːʃəl/</div>
+<div class="pos-mean">adj. 有争议的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('controversial',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('controversial',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+contro(对抗)+vers(转向)+ial→两边人互相对着转→争议。想象两个人围着火堆🔥各站一边互不相让，谁也不肯转过来——这就是controversial的场面。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+雅思最爱考 controversial issue / controversial topic / highly controversial，议论文必备形容词。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Climate change policy remains a controversial issue.</div>
+<div class="cn">气候变化政策仍是一个有争议的话题。</div>
+<button class="sent-play" onclick="playSent('Climate change policy remains a controversial issue.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">The new law is highly controversial among citizens.</div>
+<div class="cn">新法律在民众中极具争议。</div>
+<button class="sent-play" onclick="playSent('The new law is highly controversial among citizens.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Controversial topics often generate heated debates.</div>
+<div class="cn">争议性话题往往引发激烈辩论。</div>
+<button class="sent-play" onclick="playSent('Controversial topics often generate heated debates.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 5: Phenomenon -->
+<div class="card" data-idx="4">
+<div class="emoji-card" style="background:linear-gradient(135deg,#0d2137,#58a6ff)">
+<div class="emoji">🌟</div>
+<div class="word">phenomenon</div>
+<div class="phonetic">/fɪˈnɒmɪnən/</div>
+<div class="pos-mean">n. 现象</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('phenomenon',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('phenomenon',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+phen(显现)+omenon→显现出来的东西→现象。夜空中突然出现的极光🌟，让你惊叹"这是啥？"——一个让你不得不注意的显现，就叫phenomenon。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+雅思极高频！a common phenomenon / a social phenomenon / natural phenomenon，复数是phenomena（别写成phenomenons！）
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Urbanisation is a widespread phenomenon in modern society.</div>
+<div class="cn">城市化是现代社会的一个普遍现象。</div>
+<button class="sent-play" onclick="playSent('Urbanisation is a widespread phenomenon in modern society.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Scientists are studying this unusual natural phenomenon.</div>
+<div class="cn">科学家正在研究这一罕见的自然现象。</div>
+<button class="sent-play" onclick="playSent('Scientists are studying this unusual natural phenomenon.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">The phenomenon of online shopping has transformed retail.</div>
+<div class="cn">网购现象已经改变了零售业。</div>
+<button class="sent-play" onclick="playSent('The phenomenon of online shopping has transformed retail.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 6: Sustainable -->
+<div class="card" data-idx="5">
+<div class="emoji-card" style="background:linear-gradient(135deg,#0d3320,#3fb950)">
+<div class="emoji">🌱</div>
+<div class="word">sustainable</div>
+<div class="phonetic">/səˈsteɪnəbl/</div>
+<div class="pos-mean">adj. 可持续的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('sustainable',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('sustainable',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+sus(在下面)+tain(保持)+able→能一直保持在下面撑住→可持续。一颗小苗🌱不断生长但不贪资源，年年都能长——不透支未来，这就是sustainable。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+雅思环境类必考！sustainable development / sustainable energy / sustainable growth，几乎每篇环境作文都要写。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Sustainable development is crucial for future generations.</div>
+<div class="cn">可持续发展对后代至关重要。</div>
+<button class="sent-play" onclick="playSent('Sustainable development is crucial for future generations.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">We need to transition to sustainable energy sources.</div>
+<div class="cn">我们需要转向可持续的能源来源。</div>
+<button class="sent-play" onclick="playSent('We need to transition to sustainable energy sources.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Sustainable agriculture reduces environmental damage.</div>
+<div class="cn">可持续农业减少了环境破坏。</div>
+<button class="sent-play" onclick="playSent('Sustainable agriculture reduces environmental damage.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 7: Fluctuate -->
+<div class="card" data-idx="6">
+<div class="emoji-card" style="background:linear-gradient(135deg,#1a2040,#6e40c9)">
+<div class="emoji">〰️</div>
+<div class="word">fluctuate</div>
+<div class="phonetic">/ˈflʌktʃueɪt/</div>
+<div class="pos-mean">v. 波动，起伏</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('fluctuate',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('fluctuate',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+fluct(流动)+uate→像水一样来回流→波动。心电图〰️忽上忽下，股票价格忽高忽低——只要不平稳，来回摇摆，就是fluctuate。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+常搭配 fluctuate between A and B / prices fluctuate / fluctuate widely，雅思图表描述题高频动词。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Oil prices fluctuate depending on global demand.</div>
+<div class="cn">石油价格随全球需求而波动。</div>
+<button class="sent-play" onclick="playSent('Oil prices fluctuate depending on global demand.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">The temperature fluctuates between 10 and 25 degrees.</div>
+<div class="cn">气温在10到25度之间起伏。</div>
+<button class="sent-play" onclick="playSent('The temperature fluctuates between 10 and 25 degrees.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Exchange rates have fluctuated significantly this year.</div>
+<div class="cn">汇率今年波动显著。</div>
+<button class="sent-play" onclick="playSent('Exchange rates have fluctuated significantly this year.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 8: Predominant -->
+<div class="card" data-idx="7">
+<div class="emoji-card" style="background:linear-gradient(135deg,#1f2d1f,#56d364)">
+<div class="emoji">👑</div>
+<div class="word">predominant</div>
+<div class="phonetic">/prɪˈdɒmɪnənt/</div>
+<div class="pos-mean">adj. 主要的，占优势的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('predominant',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('predominant',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+pre(在前)+dominant(统治)→在前面统治→占主导。王冠👑戴在头上，代表他比别人都强、都多——这个最占优势的就是predominant。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+predominant factor / predominant role / predominantly (adv.)，比"main"更正式，雅思写作替换main的首选。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">The predominant factor in success is perseverance.</div>
+<div class="cn">成功的主要因素是坚持。</div>
+<button class="sent-play" onclick="playSent('The predominant factor in success is perseverance.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">English is the predominant language in international trade.</div>
+<div class="cn">英语是国际贸易中的主要语言。</div>
+<button class="sent-play" onclick="playSent('English is the predominant language in international trade.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Predominant concerns about AI include job displacement.</div>
+<div class="cn">关于AI的主要担忧包括岗位替代。</div>
+<button class="sent-play" onclick="playSent('Predominant concerns about AI include job displacement.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 9: Expedite -->
+<div class="card" data-idx="8">
+<div class="emoji-card" style="background:linear-gradient(135deg,#1a3040,#39d353)">
+<div class="emoji">⚡</div>
+<div class="word">expedite</div>
+<div class="phonetic">/ˈekspədaɪt/</div>
+<div class="pos-mean">v. 加速，促进</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('expedite',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('expedite',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+ex(出)+ped(脚)+ite→脚往外迈→走得快→加速。闪电⚡一闪而过，比走路快太多——当你需要让事情跑得更快，就是expedite。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+expedite the process / expedite delivery / expedite a decision，比"speed up"更正式，商务/行政语境常用。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">We need to expedite the approval process.</div>
+<div class="cn">我们需要加速审批流程。</div>
+<button class="sent-play" onclick="playSent('We need to expedite the approval process.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">The company expedited the delivery to meet the deadline.</div>
+<div class="cn">公司加速了配送以赶上截止日期。</div>
+<button class="sent-play" onclick="playSent('The company expedited the delivery to meet the deadline.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Please expedite your decision on this matter.</div>
+<div class="cn">请尽快就此事项做出决定。</div>
+<button class="sent-play" onclick="playSent('Please expedite your decision on this matter.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 10: Mitigate -->
+<div class="card" data-idx="9">
+<div class="emoji-card" style="background:linear-gradient(135deg,#2d1a3d,#bc8cff)">
+<div class="emoji">🛡️</div>
+<div class="word">mitigate</div>
+<div class="phonetic">/ˈmɪtɪɡeɪt/</div>
+<div class="pos-mean">v. 缓和，减轻</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('mitigate',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('mitigate',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+miti(柔和)+gate→让门变得柔和→减轻冲击。盾牌🛡️挡住攻击，把伤害减弱——不是消灭，而是让坏影响变轻一点，这就是mitigate。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+mitigate risks / mitigate effects / mitigate damage，雅思环境/政策类写作超高频，比"reduce"更精准（强调"缓和"而非"消除"）。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Governments must mitigate the effects of climate change.</div>
+<div class="cn">各国政府必须减轻气候变化的影响。</div>
+<button class="sent-play" onclick="playSent('Governments must mitigate the effects of climate change.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Measures were taken to mitigate potential risks.</div>
+<div class="cn">采取了措施以减轻潜在风险。</div>
+<button class="sent-play" onclick="playSent('Measures were taken to mitigate potential risks.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Planting trees can mitigate urban heat.</div>
+<div class="cn">种树可以缓解城市热岛效应。</div>
+<button class="sent-play" onclick="playSent('Planting trees can mitigate urban heat.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 11: Ubiquitous -->
+<div class="card" data-idx="10">
+<div class="emoji-card" style="background:linear-gradient(135deg,#1a2d3d,#79c0ff)">
+<div class="emoji">🌐</div>
+<div class="word">ubiquitous</div>
+<div class="phonetic">/juːˈbɪkwɪtəs/</div>
+<div class="pos-mean">adj. 无处不在的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('ubiquitous',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('ubiquitous',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+ubi(哪里)+que(每个)+ous→每个地方都有→无处不在。互联网🌐铺满全球，走到哪儿都有WiFi——像空气一样弥漫在所有地方，就是ubiquitous。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+ubiquitous presence / ubiquitous technology / smartphones have become ubiquitous，比"everywhere"高级十倍，雅思写作提分利器。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Smartphones have become ubiquitous in daily life.</div>
+<div class="cn">智能手机在日常生活中已无处不在。</div>
+<button class="sent-play" onclick="playSent('Smartphones have become ubiquitous in daily life.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Advertising is ubiquitous in modern cities.</div>
+<div class="cn">广告在现代城市中无处不在。</div>
+<button class="sent-play" onclick="playSent('Advertising is ubiquitous in modern cities.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Social media has a ubiquitous influence on youth.</div>
+<div class="cn">社交媒体对年轻人有着无处不在的影响。</div>
+<button class="sent-play" onclick="playSent('Social media has a ubiquitous influence on youth.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 12: Vulnerable -->
+<div class="card" data-idx="11">
+<div class="emoji-card" style="background:linear-gradient(135deg,#3d1a2d,#ff7b72)">
+<div class="emoji">🥀</div>
+<div class="word">vulnerable</div>
+<div class="phonetic">/ˈvʌlnərəbl/</div>
+<div class="pos-mean">adj. 易受伤害的，脆弱的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('vulnerable',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('vulnerable',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+vuln(伤口)+er+able→容易有伤口→脆弱。一朵花🥀经不起风雨，一碰就碎——没有防护、容易受伤的状态，就是vulnerable。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+vulnerable groups / vulnerable to attack / vulnerable populations，雅思社会类话题必用，老人儿童难民都是vulnerable groups。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Children are particularly vulnerable to air pollution.</div>
+<div class="cn">儿童特别容易受到空气污染的伤害。</div>
+<button class="sent-play" onclick="playSent('Children are particularly vulnerable to air pollution.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Elderly people remain a vulnerable group in society.</div>
+<div class="cn">老年人仍是社会中的弱势群体。</div>
+<button class="sent-play" onclick="playSent('Elderly people remain a vulnerable group in society.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Small businesses are vulnerable to economic downturns.</div>
+<div class="cn">小企业在经济衰退中容易受损。</div>
+<button class="sent-play" onclick="playSent('Small businesses are vulnerable to economic downturns.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 13: Paradox -->
+<div class="card" data-idx="12">
+<div class="emoji-card" style="background:linear-gradient(135deg,#1a1a3d,#d2a8ff)">
+<div class="emoji">🔄</div>
+<div class="word">paradox</div>
+<div class="phonetic">/ˈpærədɒks/</div>
+<div class="pos-mean">n. 矛盾，悖论</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('paradox',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('paradox',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+para(相反)+dox(观点)→相反的观点同时成立→矛盾。圆圈🔄里箭头互相指向对方——看似矛盾却同时真实，越想越拧巴，这就是paradox。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+a curious paradox / the paradox of... / seem like a paradox but...，雅思论述中展示思辨深度的好词。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">There is a paradox that richer nations often have higher stress levels.</div>
+<div class="cn">存在一个悖论：更富裕的国家往往压力水平更高。</div>
+<button class="sent-play" onclick="playSent('There is a paradox that richer nations often have higher stress levels.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">The paradox of choice suggests more options lead to less satisfaction.</div>
+<div class="cn">选择悖论表明，选项越多反而满意度越低。</div>
+<button class="sent-play" onclick="playSent('The paradox of choice suggests more options lead to less satisfaction.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">It is a paradox that technology connects yet isolates us.</div>
+<div class="cn">技术连接了我们却又让我们孤立，这是一个矛盾。</div>
+<button class="sent-play" onclick="playSent('It is a paradox that technology connects yet isolates us.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 14: Pragmatic -->
+<div class="card" data-idx="13">
+<div class="emoji-card" style="background:linear-gradient(135deg,#2d2d1a,#e3b341)">
+<div class="emoji">🔧</div>
+<div class="word">pragmatic</div>
+<div class="phonetic">/præɡˈmætɪk/</div>
+<div class="pos-mean">adj. 实际的，务实的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('pragmatic',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('pragmatic',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+pragma(行为/实践)+matic→关注实践的→务实的。工具箱🔧里的扳手不花哨但能用——不谈理想，只看能不能解决问题，这就是pragmatic。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+pragmatic approach / pragmatic solution / pragmatic decision，比"practical"更正式，雅思论证"务实对策"时用。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">A pragmatic approach is needed to solve this crisis.</div>
+<div class="cn">需要务实的办法来解决这场危机。</div>
+<button class="sent-play" onclick="playSent('A pragmatic approach is needed to solve this crisis.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">The manager made a pragmatic decision based on available data.</div>
+<div class="cn">经理基于现有数据做出了务实决策。</div>
+<button class="sent-play" onclick="playSent('The manager made a pragmatic decision based on available data.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Pragmatic solutions often outperform idealistic ones.</div>
+<div class="cn">务实的方案往往优于理想主义的方案。</div>
+<button class="sent-play" onclick="playSent('Pragmatic solutions often outperform idealistic ones.')">🔊</button>
+</div>
+</div>
+</div>
+
+<!-- Word 15: Resilient -->
+<div class="card" data-idx="14">
+<div class="emoji-card" style="background:linear-gradient(135deg,#0d3320,#3fb950)">
+<div class="emoji">💪</div>
+<div class="word">resilient</div>
+<div class="phonetic">/rɪˈzɪliənt/</div>
+<div class="pos-mean">adj. 有弹性的，能恢复的</div>
+</div>
+<div class="word-row">
+<button class="pron-btn" onclick="playWord('resilient',1)">🇬🇧 GB</button>
+<button class="pron-btn" onclick="playWord('resilient',2)">🇺🇸 US</button>
+</div>
+<div class="story-box">
+<div class="story-label">💡 记忆故事</div>
+re(回)+sili(跳)+ent→能跳回来→弹性。弹簧💪被压下去还能弹回来——被打倒但不倒下，受了伤还能恢复，这就是resilient。
+</div>
+<div class="tip-box">
+<div class="tip-label">📝 用法提示</div>
+resilient economy / resilient communities / resilient infrastructure，雅思环境/社会韧性话题核心词。
+</div>
+<div class="sent-section">
+<div class="sent-item">
+<div class="en">Children are often more resilient than adults assume.</div>
+<div class="cn">儿童往往比大人以为的更有恢复力。</div>
+<button class="sent-play" onclick="playSent('Children are often more resilient than adults assume.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">A resilient economy can withstand external shocks.</div>
+<div class="cn">有韧性的经济能抵御外部冲击。</div>
+<button class="sent-play" onclick="playSent('A resilient economy can withstand external shocks.')">🔊</button>
+</div>
+<div class="sent-item">
+<div class="en">Building resilient cities is essential for future survival.</div>
+<div class="cn">建设韧性城市对未来的生存至关重要。</div>
+<button class="sent-play" onclick="playSent('Building resilient cities is essential for future survival.')">🔊</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="footer">Day 1 · 共15词 · 雅思核心词汇系列</div>
+
+<script>
+// Shuffle cards on load
+function shuffleCards(){
+  const container=document.getElementById('cards-container');
+  const cards=Array.from(container.children);
+  for(let i=cards.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    container.insertBefore(cards[j],cards[i]);
+    [cards[i],cards[j]]=[cards[j],cards[i]];
+  }
+}
+// Auto shuffle on first load
+shuffleCards();
+
+// Word pronunciation via Youdao TTS
+function playWord(word,type){
+  const url='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(word)+'&type='+type;
+  const audio=new Audio(url);
+  audio.play().catch(()=>{});
+}
+
+// Sentence pronunciation via Baidu TTS
+function playSent(text){
+  const url='https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(text);
+  const audio=new Audio(url);
+  audio.play().catch(()=>{});
+}
+</script>
+</body>
+</html>
