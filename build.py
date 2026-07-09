@@ -8,7 +8,7 @@ import os, shutil, re, glob, datetime
 
 SRC = r"E:\workbuddyFIle\腾讯龙虾的成品"
 OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\哲少的学习任务"
-SITE_TITLE = "哲少的学习任务"
+SITE_TITLE = "喆少的学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
@@ -223,7 +223,7 @@ def main_index_html(sections_data):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="哲少的学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
+<meta name="description" content="喆少的学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
 <title>%s</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -239,7 +239,7 @@ def main_index_html(sections_data):
 %s</section>
 
 <section class="support">
-<h2>☕ 请哲少喝杯咖啡</h2>
+<h2>☕ 请喆少喝杯咖啡</h2>
 <p>内容全部免费公开。如果对你有帮助，扫下面的码支持 1 元，就是最大的鼓励。</p>
 <div class="qr-row">
 <div class="qr-card">
@@ -253,7 +253,7 @@ def main_index_html(sections_data):
 <span class="label">支付宝</span>
 </div>
 </div>
-<div class="hint">收款码位置：哲少的学习任务/assets/wechat.png、alipay.png，放进去就自动显示。</div>
+<div class="hint">收款码位置：喆少的学习任务/assets/wechat.png、alipay.png，放进去就自动显示。</div>
 </section>
 </main>
 <footer>腾讯龙虾的成品 · %s<br>内容每日自动更新 · 由 GitHub Pages 托管</footer>
