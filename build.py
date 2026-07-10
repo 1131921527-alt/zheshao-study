@@ -7,7 +7,7 @@
 import os, shutil, re, glob, datetime
 
 SRC = r"E:\workbuddyFIle\腾讯龙虾的成品"
-OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\喆少的学习任务"
+OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\zheshao-study"
 SITE_TITLE = "喆少学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
@@ -192,6 +192,21 @@ def collect(sec):
 
     # 排序：最新在前
     items.sort(key=lambda x: x[2], reverse=True)
+
+    # 对 day/ielts 板块重新按顺序编号（最新=1），避免跳号影响观感
+    if kind == "day":
+        items = [(out, "Day %d" % (i + 1), sk) for i, (out, label, sk) in enumerate(items)]
+    elif kind == "ielts":
+        new_items = []
+        day_i = 0
+        for out, label, sk in items:
+            if sk == 9999:
+                new_items.append((out, label, sk))
+            else:
+                day_i += 1
+                new_items.append((out, "Day %d" % day_i, sk))
+        items = new_items
+
     return items
 
 
