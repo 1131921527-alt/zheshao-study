@@ -12,12 +12,15 @@ SITE_TITLE = "喆少学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
-# ---------- 联系/打赏信息（按需修改） ----------
-# 微信号（留空则不显示“复制微信号”按钮）；个人微信码是加密码，无法被标准解码器读出链接，
+# ---------- 联系/收款信息（按需修改） ----------
+# 支付宝收款码解码出的真实跳转链接（可直接点击跳转）
+ALIPAY_URL = "https://qr.alipay.com/fkx17072tjhicy025mhjk00?0&T=58488-10-14%2017:21:43"
+# 微信号（留空则不显示"复制微信号"按钮）；个人微信码是加密码，无法被标准解码器读出链接，
 # 只能在微信内长按识别，因此这里提供复制微信号作为兜底。
 WECHAT_ID = "Harryalwayslucky"
-# 微信赞赏码图片路径（放在 assets/ 下）
+# 微信 / 支付宝 收款码图片路径（放在 assets/ 下）
 WECHAT_QR = "assets/wechat.png"
+ALIPAY_QR = "assets/alipay.jpg"
 
 # ---------- 实时时钟（注入到每个页面） ----------
 CLOCK_CSS = """
@@ -189,6 +192,21 @@ def collect(sec):
 
     # 排序：最新在前
     items.sort(key=lambda x: x[2], reverse=True)
+
+    # 对 day/ielts 板块重新按顺序编号（最新=1），避免跳号影响观感
+    if kind == "day":
+        items = [(out, "Day %d" % (i + 1), sk) for i, (out, label, sk) in enumerate(items)]
+    elif kind == "ielts":
+        new_items = []
+        day_i = 0
+        for out, label, sk in items:
+            if sk == 9999:
+                new_items.append((out, label, sk))
+            else:
+                day_i += 1
+                new_items.append((out, "Day %d" % day_i, sk))
+        items = new_items
+
     return items
 
 
