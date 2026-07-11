@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Day 3 · AI本地部署 vs 云端，到底怎么选？</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #e0e0e0;
+    --sub: #999;
+    --accent: #60a5fa;
+    --green: #34d399;
+    --orange: #fbbf24;
+    --red: #f87171;
+    --purple: #a78bfa;
+    --tag-bg: #1e2a3a;
+    --code-bg: #0a0a0a;
+    --divider: #222;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .header {
+    text-align: center;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 24px;
+  }
+  .header .day {
+    display: inline-block;
+    background: var(--accent);
+    color: #000;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #fff;
+  }
+  .header .date {
+    color: var(--sub);
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .section {
+    margin-bottom: 28px;
+  }
+  .section-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .card h3 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--sub);
+    line-height: 1.6;
+  }
+  .card .emoji-tag {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .compare-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .compare-col {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+  }
+  .compare-col .icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .compare-col .label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .compare-col ul {
+    list-style: none;
+    font-size: 12px;
+    color: var(--sub);
+    text-align: left;
+    padding: 0;
+  }
+  .compare-col ul li {
+    padding: 3px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-col ul li:last-child { border-bottom: none; }
+  .compare-col ul li::before {
+    content: '✓ ';
+    color: var(--green);
+    font-weight: 700;
+  }
+  .compare-col .bad {
+    color: var(--red);
+  }
+  .compare-col ul li .bad::before {
+    content: '✗ ';
+    color: var(--red);
+    font-weight: 700;
+  }
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  .tag-green { background: #064e3b; color: var(--green); }
+  .tag-orange { background: #451a03; color: var(--orange); }
+  .tag-red { background: #3b0a0a; color: var(--red); }
+  .tag-blue { background: #172554; color: var(--accent); }
+  .prompt-box {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    margin: 10px 0;
+    position: relative;
+  }
+  .prompt-box .prompt-label {
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .prompt-box .prompt-text {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.7;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .prompt-box .prompt-note {
+    font-size: 12px;
+    color: var(--green);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--divider);
+  }
+  .scenario-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .scenario-chip {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    flex: 1 1 calc(50% - 8px);
+    min-width: 130px;
+    text-align: center;
+  }
+  .scenario-chip .chip-emoji {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .scenario-chip .chip-title {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .scenario-chip .chip-verdict {
+    font-size: 11px;
+    color: var(--sub);
+  }
+  .flow-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+  .flow-step:last-child { border-bottom: none; }
+  .flow-num {
+    width: 26px; height: 26px;
+    background: var(--accent);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .flow-step .flow-title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .flow-step .flow-desc {
+    font-size: 12px;
+    color: var(--sub);
+  }
+  .hardware-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hw-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .hw-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .hw-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .hw-info .hw-name {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .hw-info .hw-detail {
+    font-size: 12px;
+    color: var(--sub);
+    margin-top: 2px;
+  }
+  .hw-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    color: var(--sub);
+    font-size: 12px;
+    border-top: 1px solid var(--divider);
+    margin-top: 10px;
+  }
+  .callout {
+    background: #172554;
+    border: 1px solid #1e40af;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #bfdbfe;
+    line-height: 1.7;
+  }
+  .callout strong {
+    color: #fff;
+  }
+  .verdict-box {
+    background: linear-gradient(135deg, #064e3b 0%, #0f0f0f 100%);
+    border: 1px solid var(--green);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 20px 0;
+  }
+  .verdict-box .verdict-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 10px;
+  }
+  .verdict-box p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.7;
+  }
+  .tip-box {
+    background: #451a03;
+    border: 1px solid #78350f;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 16px 0;
+    font-size: 13px;
+    color: #fde68a;
+    line-height: 1.7;
+  }
+  .tip-box::before {
+    content: '💡 ';
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span class="day">Day 3</span>
+  <h1>AI本地部署 vs 云端<br>到底怎么选？</h1>
+  <div class="date">2026年7月9日</div>
+</div>
+
+<!-- 一句话 -->
+<div class="section">
+  <p style="font-size:15px;color:#ccc;line-height:1.8;">
+    <strong style="color:#fff;">一句话：</strong>云端AI就像叫外卖——打开就用，吃完不用洗碗；本地部署就像自家厨房——前期折腾，但想炒什么菜没人管你。
+  </p>
+</div>
+
+<!-- 核心对比 -->
+<div class="section">
+  <div class="section-title">核心区别，一张表看懂</div>
+  <div class="compare-row">
+    <div class="compare-col">
+      <span class="icon">☁️</span>
+      <div class="label">云端 AI</div>
+      <ul>
+        <li>打开网页就能用</li>
+        <li>不用自己买显卡</li>
+        <li>永远是最新版本</li>
+        <li>数据在别人服务器</li>
+        <li>高峰期排队/限流</li>
+        <li>免费额度有限</li>
+      </ul>
+    </div>
+    <div class="compare-col">
+      <span class="icon">💻</span>
+      <div class="label">本地部署</div>
+      <ul>
+        <li>需要自己安装配置</li>
+        <li>要有好显卡（贵）</li>
+        <li>版本自己维护</li>
+        <li>数据全部在本地</li>
+        <li>不限次数不限速</li>
+        <li>电费是唯一开销</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 工具推荐 -->
+<div class="section">
+  <div class="section-title">本地能跑什么？实际能用的方案</div>
+  
+  <div class="hardware-list">
+    <div class="hw-row">
+      <span class="hw-icon">🖥️</span>
+      <div class="hw-info">
+        <div class="hw-name">Ollama + 开源模型</div>
+        <div class="hw-detail">一条命令装好，支持通义千问、DeepSeek、Llama等几十个模型。8G显存就能跑7B模型，日常问答够用了。</div>
+      </div>
+      <span class="hw-tag tag-green">推荐新手</span>
+    </div>
+    <div class="hw-row">
+      <span class="hw-icon">📱</span>
+      <div class="hw-info">
+        <div class="hw-name">Chatbox / Open WebUI</div>
+        <div class="hw-detail">给Ollama套个好看的界面，长得和ChatGPT差不多。手机上也能连家里电脑的AI。</div>
+      </div>
+      <span class="hw-tag tag-blue">界面友好</span>
+    </div>
+    <div class="hw-row">
+      <span class="hw-icon">🖼️</span>
+      <div class="hw-info">
+        <div class="hw-name">Stable Diffusion + ComfyUI</div>
+        <div class="hw-detail">本地出图神器，不用等排队，生成多少张都不花钱。6G显存起步。</div>
+      </div>
+      <span class="hw-tag tag-orange">出图专用</span>
+    </div>
+    <div class="hw-row">
+      <span class="hw-icon">🔧</span>
+      <div class="hw-info">
+        <div class="hw-name">LM Studio</div>
+        <div class="hw-detail">Windows/Mac都能用，下载模型像下载App一样简单。自带图形界面，不用敲命令行。</div>
+      </div>
+      <span class="hw-tag tag-green">最简单</span>
+    </div>
+  </div>
+</div>
+
+<!-- 什么配置能跑 -->
+<div class="section">
+  <div class="section-title">你的电脑能跑吗？真实配置要求</div>
+  
+  <div class="card">
+    <h3>🤏 入门级（日常问答+简单写作）</h3>
+    <p>16G内存 + 8G显存 → 跑 7B-8B 模型</p>
+    <p style="margin-top:6px;font-size:13px;">推荐模型：Qwen2.5-7B、DeepSeek-R1-8B、Llama3-8B</p>
+    <p style="margin-top:4px;font-size:12px;color:var(--orange);">回答质量大概是云端大模型的70-80%，日常聊天、写文案够用</p>
+  </div>
+
+  <div class="card">
+    <h3>✋ 中档级（能写代码+深度分析）</h3>
+    <p>32G内存 + 12G以上显存 → 跑 14B-32B 模型</p>
+    <p style="margin-top:6px;font-size:13px;">推荐模型：Qwen2.5-32B、DeepSeek-R1-32B</p>
+    <p style="margin-top:4px;font-size:12px;color:var(--orange);">效果接近云端了，写代码、翻译、分析文档都不错</p>
+  </div>
+
+  <div class="card">
+    <h3>💪 旗舰级（几乎平替云端）</h3>
+    <p>64G内存 + 24G显存（比如RTX 4090） → 跑 70B+ 模型</p>
+    <p style="margin-top:6px;font-size:13px;">推荐模型：Qwen2.5-72B、DeepSeek-R1-70B</p>
+    <p style="margin-top:4px;font-size:12px;color:var(--orange);">基本和云端顶级模型掰手腕了，但显卡至少1万多</p>
+  </div>
+</div>
+
+<!-- 什么场景该选哪个 -->
+<div class="section">
+  <div class="section-title">真实场景：你该选哪个？</div>
+  
+  <div class="scenario-grid">
+    <div class="scenario-chip">
+      <span class="chip-emoji">📝</span>
+      <div class="chip-title">日常写文案</div>
+      <div class="chip-verdict">→ 云端即可</div>
+    </div>
+    <div class="scenario-chip">
+      <span class="chip-emoji">🔒</span>
+      <div class="chip-title">处理公司机密文件</div>
+      <div class="chip-verdict">→ 必须本地</div>
+    </div>
+    <div class="scenario-chip">
+      <span class="chip-emoji">📚</span>
+      <div class="chip-title">大量文献分析</div>
+      <div class="chip-verdict">→ 云端（上下文长）</div>
+    </div>
+    <div class="scenario-chip">
+      <span class="chip-emoji">🎨</span>
+      <div class="chip-title">高强度AI生图</div>
+      <div class="chip-verdict">→ 本地最划算</div>
+    </div>
+    <div class="scenario-chip">
+      <span class="chip-emoji">📱</span>
+      <div class="chip-title">随时随地用手机问</div>
+      <div class="chip-verdict">→ 云端App</div>
+    </div>
+    <div class="scenario-chip">
+      <span class="chip-emoji">🏢</span>
+      <div class="chip-title">公司内部知识库</div>
+      <div class="chip-verdict">→ 本地部署</div>
+    </div>
+    <div class="scenario-chip">
+      <span class="chip-emoji">💰</span>
+      <div class="chip-title">预算紧张</div>
+      <div class="chip-verdict">→ 云端免费版</div>
+    </div>
+    <div class="scenario-chip">
+      <span class="chip-emoji">🧪</span>
+      <div class="chip-title">学AI开发/调试</div>
+      <div class="chip-verdict">→ 本地折腾</div>
+    </div>
+  </div>
+</div>
+
+<!-- 提示词范例 -->
+<div class="section">
+  <div class="section-title">实战提示词：试试这些</div>
+
+  <div class="prompt-box">
+    <div class="prompt-label">范例① · 让云端AI帮你整理会议纪要</div>
+    <div class="prompt-text">你是个会议助手。下面是一段会议录音的文字稿，帮我把重点摘出来，按"待办事项、决策结论、遗留问题"三个板块整理。用纯文本输出，不要加客套话。
+
+[粘贴你的会议文字]</div>
+    <div class="prompt-note">适用：云端GPT-4o/Claude/豆包 · 上下文长，能一次吞完整场会议</div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="prompt-label">范例② · 让本地AI帮你洗数据（不泄密）</div>
+    <div class="prompt-text">我会给你一批客户反馈的原始文本，每条一行。帮我做三件事：
+1. 去掉所有真实人名和电话号（替换成[姓名]和[电话]）
+2. 把每条归到"表扬/投诉/建议/询问"里
+3. 情绪打分1-5分
+
+直接输出处理后的数据，别解释。</div>
+    <div class="prompt-note">适用：本地Qwen2.5-32B · 数据不出电脑，处理客户信息放心</div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="prompt-label">范例③ · 混合用法：先说云端、再搬本地</div>
+    <div class="prompt-text">【先用云端】
+帮我梳理一下"搭建本地大模型"的步骤清单，面向Win系统、16G内存、8G显存的配置。用最直白的大白话写，每一步控制在两行以内。
+
+【再用本地】
+把上面得到的清单，喂给本地模型让它帮你逐条解释更细的细节。</div>
+    <div class="prompt-note">思路：云端做规划（能力强），本地做执行（省成本）</div>
+  </div>
+</div>
+
+<!-- 新人避坑 -->
+<div class="section">
+  <div class="section-title">新手最容易踩的坑</div>
+
+  <div class="card">
+    <h3>⚠️ 坑1：以为本地部署就是"下个软件就行"</h3>
+    <p>装Ollama确实简单。但想跑得舒服——调参数、选模型版本、处理报错——需要一定的动手能力。不是不会，是需要花时间摸索。</p>
+  </div>
+
+  <div class="card">
+    <h3>⚠️ 坑2：本地模型下载半天，结果跑得巨慢</h3>
+    <p>模型太大，硬件带不动。7B模型跑起来像打字机一样蹦字，是显存不够。先从小模型试水，跑顺了再升。</p>
+  </div>
+
+  <div class="card">
+    <h3>⚠️ 坑3：以为本地模型和云端一样聪明</h3>
+    <p>本地部署的开源模型，和GPT-4o/Claude还是有差距。70B模型能接近，但吃配置。日常够用的标准是"能看懂我的意思就行"，别追求完美。</p>
+  </div>
+</div>
+
+<!-- 总结 -->
+<div class="verdict-box">
+  <div class="verdict-title">🎯 一句话结论</div>
+  <p><strong>普通人日常用AI → 云端，够用且省心。</strong><br>
+  有隐私需求或想省钱（高频用+有好显卡）→ 搞本地，一次折腾长期爽。<br>
+  <strong>最聪明的做法</strong>是：云端+本地组合用。简单事问云端，敏感数据喂本地。</p>
+</div>
+
+<div class="callout">
+  <strong>📌 记住这个口诀：</strong><br>
+  普通聊天用云端，<br>
+  敏感文件喂本地。<br>
+  想省显卡先白嫖，<br>
+  上了瘾再买装备。
+</div>
+
+<div class="footer">
+  AI系统性学习 · Day 3 · 2026.07.09<br>
+  选题：本地部署 vs 云端
+</div>
+
+<style>
+#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
+#liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
+@keyframes lcPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+#liveClockBar .lc-date{color:#8b949e;white-space:nowrap}
+#liveClockBar .lc-time{font-variant-numeric:tabular-nums;font-weight:700;color:#e6edf3;letter-spacing:.5px;font-size:15px}
+#liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
+#liveClockBar .lc-sec{color:#ff7b72}
+#liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
+#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
+#liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
+@media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
+body{padding-top:44px!important}
+</style>
+<div id="liveClockBar">
+<span class="lc-dot"></span>
+<span class="lc-date" id="lcDate">--</span>
+<span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
+<span class="lc-tag">时间正在流逝 ⏳</span>
+<i class="lc-bar" id="lcBar"></i>
+</div>
+<script>
+(function(){
+  var w=['周日','周一','周二','周三','周四','周五','周六'];
+  function p(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var d=new Date();
+    var dt=document.getElementById('lcDate');
+    if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
+    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
+    if(h)h.textContent=p(d.getHours());
+    if(m)m.textContent=p(d.getMinutes());
+    if(s)s.textContent=p(d.getSeconds());
+    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
+  }
+  tick();setInterval(tick,1000);
+  window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
+  window.lcCopyWx=function(){
+    var id="Harryalwayslucky";
+    if(!id) return;
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
+    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
+  };
+})();
+</script></body>
+</html>
