@@ -623,7 +623,7 @@ def main():
     # 6) s-know 加古诗词折叠区
     old_know = '<div class="klist hidden" id="klist-psy"></div>\n      </div>'
     new_know = ('<div class="klist hidden" id="klist-psy"></div>\n'
-                '        <div class="section-title">📜 古诗词 <span class="more" onclick="toggleK(\'poem\')">展开/收起</span></div>\n'
+                '        <div class="section-title k-toggle" onclick="toggleK(\'poem\')">📜 古诗词 <span class="more">展开/收起</span></div>\n'
                 '        <div class="klist hidden" id="klist-poem"></div>\n'
                 '      </div>')
     assert old_know in html, "s-know psy block not found"
