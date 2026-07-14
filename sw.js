@@ -1,5 +1,5 @@
 /* 喆少学习助手 · Service Worker（离线缓存 + 可安装） */
-const CACHE = 'zheshao-v2';
+const CACHE = 'zheshao-v3';
 const ASSETS = [
   './',
   './index.html',
