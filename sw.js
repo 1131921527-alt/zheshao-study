@@ -5,7 +5,8 @@ const ASSETS = [
   './index.html',
   './manifest.webmanifest',
   './assets/icon.svg',
-  './assets/style.css'
+  './assets/style.css',
+  './knowledge/article.css'
 ];
 
 self.addEventListener('install', function (e) {

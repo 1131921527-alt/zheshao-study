@@ -311,10 +311,11 @@ function goTab(id){document.querySelectorAll('.screen').forEach(s=>s.classList.r
 function goKnow(sec){goTab('s-know');var el=document.getElementById('klist-'+sec);if(el){el.classList.remove('hidden');el.scrollIntoView({behavior:'smooth',block:'start'});}}
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),1800);}
 
+const SLUG={hist:["history-preqin","history-qinhan","history-tangsong"],geo:["geo-plate","geo-river","geo-rainforest"],fin:["fin-inflation","fin-compound","fin-stockfund"],psy:["psy-procrastination","psy-bystander","psy-dopamine"]};
 function renderK(){
   const maps={hist:HISTORY,geo:GEO,fin:FIN,psy:PSY};
   for(const k in maps){
-    document.getElementById('klist-'+k).innerHTML=maps[k].map((a,i)=>`<a class="krow" onclick="openArticle('${k}',${i})"><div><div class="kt">${a.t}</div><div class="km">${a.m}</div></div><div class="arr">→</div></a>`).join('');
+    document.getElementById('klist-'+k).innerHTML=maps[k].map((a,i)=>`<a class="krow" href="knowledge/${SLUG[k][i]}.html"><div><div class="kt">${a.t}</div><div class="km">${a.m}</div></div><div class="arr">→</div></a>`).join('');
   }
 }
 function toggleK(w){document.getElementById('klist-'+w).classList.toggle('hidden');}
