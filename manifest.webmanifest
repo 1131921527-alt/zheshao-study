@@ -1,14 +1,14 @@
 {
   "name": "喆少学习助手",
   "short_name": "学习助手",
-  "description": "AI动态播报、系统性学习、提示词技巧、雅思单词，以及中国历史、通识地理等知识板块，每天随手看。",
+  "description": "AI动态播报、系统性学习、提示词技巧、雅思单词，以及中国历史、通识地理、财经科普、心理学等知识板块，每天随手看。",
   "lang": "zh-CN",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F4F6FA",
-  "theme_color": "#1A4DAB",
+  "background_color": "#0B0F17",
+  "theme_color": "#0B0F17",
   "icons": [
     {
       "src": "assets/icon.svg",

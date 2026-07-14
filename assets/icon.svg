@@ -1,11 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1A4DAB"/>
-      <stop offset="1" stop-color="#143A82"/>
+      <stop offset="0" stop-color="#151B2B"/>
+      <stop offset="1" stop-color="#0B0F17"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E4C98C"/>
+      <stop offset="1" stop-color="#C9A86A"/>
     </linearGradient>
   </defs>
   <rect width="192" height="192" rx="42" fill="url(#bg)"/>
-  <circle cx="150" cy="42" r="40" fill="#C9A86A" opacity="0.25"/>
-  <text x="96" y="124" font-size="104" text-anchor="middle" fill="#ffffff" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">学</text>
+  <rect x="6" y="6" width="180" height="180" rx="38" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.5"/>
+  <text x="96" y="128" font-size="104" text-anchor="middle" fill="url(#gold)" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">学</text>
 </svg>
