@@ -1,5 +1,5 @@
 /* 喆少学习助手 · Service Worker（离线缓存 + 可安装） */
-const CACHE = 'zheshao-v1';
+const CACHE = 'zheshao-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -28,6 +28,20 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (e) {
   if (e.request.method !== 'GET') return;
+  // HTML 页面（含根路径与 .html）：network-first，保证每次拿到最新内容
+  if (e.request.mode === 'navigate' || /\.html?($|\?)/.test(new URL(e.request.url).pathname)) {
+    e.respondWith(
+      fetch(e.request).then(function (resp) {
+        const cp = resp.clone();
+        caches.open(CACHE).then(function (c) { c.put(e.request, cp); });
+        return resp;
+      }).catch(function () {
+        return caches.match(e.request).then(function (m) { return m || caches.match('./index.html'); });
+      })
+    );
+    return;
+  }
+  // 静态资源：cache-first，离线可用
   e.respondWith(
     caches.match(e.request).then(function (cached) {
       if (cached) return cached;
