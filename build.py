@@ -7,7 +7,7 @@
 import os, shutil, re, glob, datetime
 
 SRC = r"E:\workbuddyFIle\腾讯龙虾的成品"
-OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\zheshao-study"
+OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\哲少的学习任务"
 SITE_TITLE = "喆少学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
@@ -15,7 +15,7 @@ WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 # ---------- 联系/收款信息（按需修改） ----------
 # 支付宝收款码解码出的真实跳转链接（可直接点击跳转）
 ALIPAY_URL = "https://qr.alipay.com/fkx17072tjhicy025mhjk00?0&T=58488-10-14%2017:21:43"
-# 微信号（留空则不显示“复制微信号”按钮）；个人微信码是加密码，无法被标准解码器读出链接，
+# 微信号（留空则不显示"复制微信号"按钮）；个人微信码是加密码，无法被标准解码器读出链接，
 # 只能在微信内长按识别，因此这里提供复制微信号作为兜底。
 WECHAT_ID = "Harryalwayslucky"
 # 微信 / 支付宝 收款码图片路径（放在 assets/ 下）

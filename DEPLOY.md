@@ -39,8 +39,8 @@ git add -A && git commit -m "daily update" && git push
 ```
 `build.py` 会重新扫描 `腾讯龙虾的成品` 下各板块目录，自动归一化命名、生成首页与各板块历史列表页，所以历史会自动累积。
 
-## 收款码（打赏）
-把你的微信 / 支付宝收款码图片命名为 `wechat.png`、`alipay.png`，放进 `assets/` 目录，首页打赏区块会自动显示。不填则显示占位提示。
+## 赞赏码（打赏）
+把你的微信赞赏码图片命名为 `wechat.png`，放进 `assets/` 目录，首页打赏区块会自动显示。不填则显示占位提示。
 
 ## 目录结构
 ```
@@ -50,6 +50,6 @@ git add -A && git commit -m "daily update" && git push
 ├── ai-knowledge/         # AI系统性学习（Day N）
 ├── ai-prompt/            # 提示词技巧（Day N）
 ├── ielts/                # 雅思单词（Day N + 完整版带音频）
-├── assets/               # style.css + 收款码
+├── assets/               # style.css + 赞赏码
 └── build.py              # 站点生成器（重跑即同步）
 ```
