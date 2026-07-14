@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>提示词技巧 Day 04 - 让AI帮你批量处理文件</title>
+<title>提示词技巧 Day 05 - 一句话让AI帮你做PPT</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#1a1a2e;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;padding:20px 16px 40px}
@@ -33,78 +33,93 @@ h1{font-size:22px;color:#fff;margin-bottom:8px;font-weight:700}
 <body>
 <div class="wrap">
 
-<div class="tag">效率工具 · Day 04</div>
-<h1>让AI帮你批量处理文件</h1>
-<div class="sub">100个文件手动改？让AI一脚搞定</div>
+<div class="tag">PPT制作 · Day 05</div>
+<h1>一句话让AI帮你做PPT</h1>
+<div class="sub">别再从空白页开始憋了，把活儿扔给AI</div>
 
 <div class="card">
-<h2>🤯 你是不是也干过这种活</h2>
-<p>老板丢过来100个Excel，让你统一改格式、重命名、提取关键字段……</p>
-<p>手动操作？一个一个打开、改、保存、关——干完天都黑了。</p>
-<p>其实这种<span style="color:#e94560;font-weight:600">重复性批量操作</span>，是AI最擅长的。你只需要一句话告诉它要干嘛。</p>
+<h2>😩 你做PPT是不是这样</h2>
+<p>打开WPS/PPT，看着空白页发呆——</p>
+<p>写一段话、想一个标题、调一下配色、再来一页……5分钟过去，封面还没做出来。</p>
+<p>其实<span style="color:#e94560;font-weight:600">结构和内容</span>是最耗时的，而这两样恰恰是AI最擅长的。你只要把"要讲啥"说清楚，AI直接吐出完整大纲。</p>
 </div>
 
 <div class="card">
-<h2>✅ 批量处理的万能提示词公式</h2>
-<p>不管处理什么文件，核心就是3个要素：</p>
-<div class="step"><span class="num">1</span><b>输入是什么</b> — 文件类型、数量、在哪</div>
-<div class="step"><span class="num">2</span><b>要做什么</b> — 改什么、删什么、加什么</div>
-<div class="step"><span class="num">3</span><b>输出是什么</b> — 结果格式、保存方式</div>
-<p style="margin-top:12px;color:#aaa;font-size:13px">把这三点说清楚，AI就能帮你写脚本一键搞定。</p>
+<h2>✅ 让AI做PPT的万能公式</h2>
+<p>不管做什么PPT，提示词只要说清这4件事：</p>
+<div class="step"><span class="num">1</span><b>给谁看</b> — 领导/客户/同事/老师</div>
+<div class="step"><span class="num">2</span><b>讲什么主题</b> — 一句话说清楚核心</div>
+<div class="step"><span class="num">3</span><b>要几页</b> — 大概页数（PPT不是越多越好）</div>
+<div class="step"><span class="num">4</span><b>风格/调性</b> — 商务/简洁/活泼/科技感</div>
+<p style="margin-top:12px;color:#aaa;font-size:13px">这4点说全了，AI给出的PPT结构基本就能直接用。</p>
 </div>
 
 <div class="card">
 <h2>📝 3个直接复制的提示词</h2>
 
 <div class="highlight">
-<div class="label">范例1：批量重命名文件</div>
-<pre>帮我写一个Python脚本：
+<div class="label">范例1：工作汇报PPT</div>
+<pre>帮我设计一份工作汇报PPT的大纲：
 
-我有一个文件夹 E:\reports，里面大约80个PDF文件，
-文件名格式是"2026-XX-XX_客户名_产品类型.pdf"
+主题：2026年Q2销售部工作汇报
+听众：公司总经理
+页数：10页左右
+风格：商务简洁，多用数据说话
 
 需求：
-1. 把日期部分从"2026-XX-XX"改成"26XXXX"（去掉横线和前两位年份）
-2. 客户名保持不变
-3. 产品类型改成全大写
-4. 输出到同一文件夹，原文件不动，新文件加前缀"renamed_"
+1. 第1页：封面（标题、汇报人、日期）
+2. 第2页：本期核心成果（3个数据指标）
+3. 第3-4页：主要工作回顾（按项目分）
+4. 第5-6页：销售数据展示（带图表建议）
+5. 第7页：问题和挑战
+6. 第8页：下季度计划
+7. 第9页：需要支持的事项
+8. 第10页：总结展望
 
-请给出完整可运行的脚本。</pre>
+每页请给出：页面标题、3-5个要点、建议的可视化方式（表格/柱状图/饼图等）。</pre>
 <button class="copy-btn" onclick="copyText(this)">复制提示词</button>
 </div>
 
 <div class="highlight">
-<div class="label">范例2：批量提取Excel数据汇总</div>
-<pre>帮我写一个Python脚本：
+<div class="label">范例2：产品介绍PPT</div>
+<pre>帮我设计一份产品介绍PPT：
 
-我有一个文件夹 E:\data，里面有30多个Excel文件(.xlsx)，
-每个文件结构一样，都有"姓名"、"金额"、"日期"三列。
+产品：智能客服SaaS系统
+目标客户：中小企业主
+页数：8页
+风格：科技感，配色蓝白
 
-需求：
-1. 读取所有Excel的这三列数据
-2. 合并到一个总表
-3. 按日期从早到晚排序
-4. 在最后加一行汇总：总金额、总人数
-5. 输出为 summary.xlsx 保存到同一文件夹
+需要包含的板块：
+1. 封面（产品名+Slogan）
+2. 客户痛点（中小企业客服的3大难处）
+3. 我们的解决方案（一句话讲清）
+4. 核心功能介绍（4-5个功能，每个一页）
+5. 客户案例（2-3个真实故事）
+6. 定价方案（3档）
+7. 服务保障（售后、培训等）
+8. 联系方式+行动号召
 
-请给出完整可运行的脚本，用openpyxl库。</pre>
+请用Markdown格式输出，每页标注建议的图示类型。</pre>
 <button class="copy-btn" onclick="copyText(this)">复制提示词</button>
 </div>
 
 <div class="highlight">
-<div class="label">范例3：批量替换文档中的文字</div>
-<pre>帮我写一个Python脚本：
+<div class="label">范例3：学习分享/读书笔记PPT</div>
+<pre>帮我把一本书的核心内容做成15分钟的分享PPT：
 
-我有一个文件夹 E:\docs，里面有50个Word文档(.docx)。
+书名：《Atomic Habits》（原子习惯）
+听众：想养成好习惯的上班族
+页数：12页
+风格：简洁有设计感，多用类比和金句
 
-需求：
-1. 把所有文档中的"旧公司名科技有限公司"替换成"新公司名集团"
-2. 把"2025年"替换成"2026年"
-3. 替换后保存到 E:\docs_updated 文件夹
-4. 原文件不动
-5. 打印每个文件替换了多少处
+要求：
+1. 封面要有冲击力（一句金句+书名）
+2. 不要流水账式罗列章节，要按"为什么/怎么做/怎么坚持"的逻辑重组
+3. 重点讲"身份认同"和"小习惯叠加"两个核心观点
+4. 结尾给3个观众明天就能用的小行动
+5. 中间穿插2-3个生活化的例子
 
-请给出完整可运行的脚本，用python-docx库。</pre>
+输出格式：每页 = 标题 + 要点 + 建议配图描述。</pre>
 <button class="copy-btn" onclick="copyText(this)">复制提示词</button>
 </div>
 </div>
@@ -113,40 +128,41 @@ h1{font-size:22px;color:#fff;margin-bottom:8px;font-weight:700}
 <h2>⚠️ 3个新手容易踩的坑</h2>
 
 <div class="tip-box">
-<div class="tip-label">坑1：不指定文件路径</div>
-<p>只说"帮我处理文件"，AI不知道文件在哪、什么格式，写出来的脚本跑不了。</p>
-<p style="color:#ffd700">✓ 务必写出文件夹路径、文件格式、大概数量</p>
+<div class="tip-label">坑1：只说"帮我做一份PPT"</div>
+<p>AI不知道主题、听众、页数，给你的是万金油模板，根本用不了。</p>
+<p style="color:#ffd700">✓ 至少说清主题+页数+听众这3个关键信息</p>
 </div>
 
 <div class="tip-box">
-<div class="tip-label">坑2：不说明"原文件要不要动"</div>
-<p>脚本直接改原文件，改错了没退路。这是最危险的操作。</p>
-<p style="color:#ffd700">✓ 明确说"输出到新文件夹，原文件不动"</p>
+<div class="tip-label">坑2：让AI直接生成PPT文件</div>
+<p>普通AI聊天工具没法直接生成可编辑的.pptx文件，它只能给你大纲和文案。</p>
+<p style="color:#ffd700">✓ 让AI先出大纲和每页文案，再配合专门工具（Gamma/ChatPPT等）一键生成</p>
 </div>
 
 <div class="tip-box">
-<div class="tip-label">坑3：不要求打印进度</div>
-<p>处理100个文件，脚本默默跑完，你不知道成功了几个、失败了几个。</p>
-<p style="color:#ffd700">✓ 加一句"打印每个文件的处理状态和结果"</p>
+<div class="tip-label">坑3：要求"字越多越好"</div>
+<p>PPT不是Word，每页字数越少越有冲击力。你把500字丢给AI，它就真的写500字在PPT上。</p>
+<p style="color:#ffd700">✓ 在提示词里加一句"每页不超过30字，多用短句和关键词"</p>
 </div>
 </div>
 
 <div class="card">
 <h2>💡 一个进阶小技巧</h2>
-<p>如果你不确定脚本对不对，先加一个<span style="color:#e94560;font-weight:600">测试模式</span>：</p>
+<p>AI出完大纲后，可以再追问一句，<span style="color:#e94560;font-weight:600">让每页文案更"上口"</span>：</p>
 <div class="highlight">
-<pre>脚本请加一个 test_mode 参数：
-- test_mode=True 时，只处理前3个文件，打印详细过程
-- test_mode=False 时，处理全部文件
-
-这样我先小范围测试确认没问题，再全量跑。</pre>
+<pre>你刚才给的PPT大纲，演讲时是我自己讲。
+请把每页的要点改写成"口语化"的演讲稿：
+- 不要书面语，像跟朋友聊天那样
+- 关键数据用"重音"标记，方便我停顿强调
+- 每页演讲时间控制在1-2分钟
+- 给出自然的过渡句（从这一页怎么引到下一页）</pre>
 <button class="copy-btn" onclick="copyText(this)">复制提示词</button>
 </div>
-<p style="color:#aaa;font-size:13px">测试3个没问题，再放开100个。稳。</p>
+<p style="color:#aaa;font-size:13px">先出骨架，再出肉，最后出口语稿——三步走，PPT不愁。</p>
 </div>
 
 <div class="footer">
-提示词技巧 Day 04 · 效率工具 · 每日一期 · 明天见 👋
+提示词技巧 Day 05 · PPT制作 · 每日一期 · 明天见 👋
 </div>
 
 </div>

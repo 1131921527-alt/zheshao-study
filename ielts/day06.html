@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅思核心词汇 Day 06</title>
+<style>
+  :root { --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#c9d1d9; --head:#f0f6fc; --accent:#58a6ff; --sub:#8b949e; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; padding:16px; }
+  header { text-align:center; margin-bottom:18px; }
+  h1 { margin:0; color:var(--head); font-size:1.6rem; }
+  .day-tag { display:inline-block; margin-top:8px; padding:4px 12px; border-radius:999px; background:#21262d; color:var(--accent); font-size:0.9rem; border:1px solid var(--border); }
+  .ctrl { text-align:center; margin-bottom:14px; }
+  .btn-shuffle { background:#21262d; color:var(--accent); border:1px solid var(--border); padding:8px 18px; border-radius:999px; font-size:0.95rem; cursor:pointer; }
+  .btn-shuffle:active { background:#30363d; }
+  #words { display:flex; flex-direction:column; gap:18px; max-width:640px; margin:0 auto; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:18px; }
+  .word-row { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .word { font-size:1.65rem; font-weight:700; color:var(--head); letter-spacing:0.5px; }
+  .ipa { color:var(--sub); font-size:0.95rem; }
+  .tts-btns { display:flex; gap:8px; margin-left:auto; }
+  .tts-btns button { background:#21262d; border:1px solid var(--border); color:var(--text); border-radius:8px; padding:6px 10px; font-size:0.8rem; cursor:pointer; }
+  .tts-btns button:active { background:#30363d; }
+  .meaning { margin-top:10px; font-size:1rem; color:var(--text); }
+  .meaning .pos { color:var(--accent); font-weight:600; }
+  .emoji-card { margin:14px 0; display:flex; align-items:center; justify-content:center; width:100%; height:130px; border-radius:16px; background:linear-gradient(135deg,#1f6feb,#a371f7); font-size:4.5rem; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+  .story, .tip { margin-top:12px; padding:12px; border-radius:12px; background:#0d1117; border-left:4px solid var(--accent); }
+  .story strong, .tip strong { color:var(--head); }
+  .story { color:var(--text); }
+  .tip { color:var(--sub); font-size:0.95rem; }
+  .sentences { margin-top:14px; }
+  .sent-title { font-size:0.9rem; color:var(--sub); margin-bottom:8px; }
+  .sentence { display:flex; gap:10px; align-items:flex-start; background:#0d1117; border:1px solid var(--border); border-radius:12px; padding:12px; margin-bottom:10px; }
+  .sen-text { flex:1; }
+  .sen-en { color:var(--head); font-size:0.98rem; }
+  .sen-cn { color:var(--sub); font-size:0.9rem; margin-top:4px; }
+  .play-btn { background:#21262d; border:1px solid var(--border); border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; cursor:pointer; flex-shrink:0; margin-top:2px; }
+  .play-btn:active { background:#30363d; }
+  .footer { text-align:center; margin-top:24px; color:var(--sub); font-size:0.85rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>雅思核心词汇</h1>
+  <div class="day-tag">Day 06</div>
+</header>
+<div class="ctrl">
+  <button class="btn-shuffle" onclick="renderWords()">🔄 重新乱序</button>
+</div>
+<div id="words"></div>
+<div class="footer">点击 🇬🇧/🇺🇸 听单词，点击 🔊 听例句</div>
+<script>
+const rawWords = [
+  { word:"alleviate", ipa:"/əˈliːvieɪt/", pos:"v.", mean:"减轻，缓解（痛苦/负担）", emoji:"💊", story:"a-（表加强）+ levi（轻）+ ate = 让它变轻，alleviate 就是把痛苦变轻。", tip:"常考搭配：alleviate pain / stress / poverty / burden。", sents:[{en:"The new medicine helps alleviate chronic back pain.", cn:"新药有助于缓解慢性背痛。"},{en:"Solar power can alleviate the energy crisis in rural areas.", cn:"太阳能可以缓解农村地区的能源危机。"},{en:"Her words did little to alleviate his anxiety.", cn:"她的话几乎没能减轻他的焦虑。"}]},
+  { word:"autonomous", ipa:"/ɔːˈtɑːnəməs/", pos:"adj.", mean:"自主的，自治的；独立行动的", emoji:"🤖", story:"auto-自己 + nomous（管理）= 自己管自己，autonomous。", tip:"常考搭配：autonomous vehicle / region / system。", sents:[{en:"Autonomous vehicles are reshaping the future of transportation.", cn:"自动驾驶汽车正在重塑交通运输的未来。"},{en:"Hong Kong is an autonomous region of China.", cn:"中国香港是一个高度自治的地区。"},{en:"The robot can make autonomous decisions without human input.", cn:"这台机器人无需人工干预就能自主决策。"}]},
+  { word:"capitalize", ipa:"/ˈkæpɪtəlaɪz/", pos:"v.", mean:"利用（on）；大写；投资于", emoji:"💰", story:"capital（资本）+ ize（化）= 把事情变成资本，capitalize。", tip:"核心搭配：capitalize on sth.（充分利用某事）。", sents:[{en:"We should capitalize on this opportunity to expand overseas.", cn:"我们应该抓住这次机会拓展海外市场。"},{en:"The company capitalized its reserves for a new project.", cn:"公司将储备金投资于新项目。"},{en:"Be sure to capitalize the first letter of each sentence.", cn:"记得把每句首字母大写。"}]},
+  { word:"concise", ipa:"/kənˈsaɪs/", pos:"adj.", mean:"简洁的，简明的", emoji:"✂️", story:"con-（加强）+ cise（切）= 切掉废话，concise 就是简洁。", tip:"写作中常与 brief、succinct 替换使用。", sents:[{en:"Please keep your report concise and to the point.", cn:"报告请简明扼要。"},{en:"The speaker delivered a concise summary of the research.", cn:"演讲者对研究做了简洁总结。"},{en:"A concise answer often carries more weight than a long one.", cn:"简洁的回答往往比长篇大论更有分量。"}]},
+  { word:"consolidate", ipa:"/kənˈsɑːlɪdeɪt/", pos:"v.", mean:"巩固，加强；合并，整合", emoji:"🧱", story:"con-一起 + solid（坚固）+ ate = 把力量凝成一块，consolidate。", tip:"常考搭配：consolidate power / position / debt。", sents:[{en:"The company is trying to consolidate its position in the Asian market.", cn:"公司正努力巩固其在亚洲市场的地位。"},{en:"Two local banks decided to consolidate into a single firm.", cn:"两家地方银行决定合并成一家公司。"},{en:"He consolidated his influence by winning three more elections.", cn:"他通过赢得三次选举巩固了影响力。"}]},
+  { word:"depict", ipa:"/dɪˈpɪkt/", pos:"v.", mean:"描绘，描述，刻画", emoji:"🎨", story:"de-下 + pict（画）= 把画面画下来，depict。", tip:"写作中可替代 describe，常考 depict sth. as ...。", sents:[{en:"The painting depicts a quiet village at dawn.", cn:"这幅画描绘了黎明时分宁静的村庄。"},{en:"The film depicts life in ancient China vividly.", cn:"这部电影生动地描绘了古代中国的生活。"},{en:"The media often depicts teenagers as rebellious.", cn:"媒体常把青少年描绘成叛逆的。"}]},
+  { word:"diligent", ipa:"/ˈdɪlɪdʒənt/", pos:"adj.", mean:"勤奋的，刻苦的；细致周到的", emoji:"🐝", story:"di-（反复）+ lig（努力）+ ent = 反复努力的蜜蜂，diligent。", tip:"常考搭配：be diligent in doing sth.（在做某事上勤奋）。", sents:[{en:"She is a diligent student who never misses a class.", cn:"她是个勤奋的学生，从不缺课。"},{en:"Diligent research leads to reliable conclusions.", cn:"细致的研究才能得出可靠的结论。"},{en:"He is diligent in updating his professional knowledge.", cn:"他勤于更新自己的专业知识。"}]},
+  { word:"distort", ipa:"/dɪˈstɔːrt/", pos:"v.", mean:"扭曲，曲解；使变形", emoji:"🌀", story:"dis-坏 + tort（扭）= 扭坏了形状，distort。", tip:"常见搭配：distort facts / truth / image。", sents:[{en:"The media sometimes distorts the truth to attract viewers.", cn:"媒体有时为了吸引观众而扭曲事实。"},{en:"Social media can distort our sense of reality.", cn:"社交媒体会扭曲我们对现实的感知。"},{en:"Heat caused the plastic to distort out of shape.", cn:"高温让塑料变形。"}]},
+  { word:"elaborate", ipa:"/ɪˈlæbəreɪt/", pos:"adj./v.", mean:"详尽的；精心制作的 / 详尽阐述", emoji:"🧩", story:"e-出 + labor（劳动）+ ate = 费很多劳动才做出来，elaborate。", tip:"作动词常考 elaborate on（详述）。", sents:[{en:"She prepared an elaborate plan for the marketing campaign.", cn:"她为营销活动准备了详尽的方案。"},{en:"Could you elaborate on the third point of your argument?", cn:"能详细说说你的论点的第三点吗？"},{en:"The bride wore an elaborate dress covered in pearls.", cn:"新娘穿着一件镶满珍珠的精致礼服。"}]},
+  { word:"explicit", ipa:"/ɪkˈsplɪsɪt/", pos:"adj.", mean:"明确的，清楚的；直率的", emoji:"📢", story:"ex-外 + plicit（折叠）= 摊开折叠的部分，explicit 就是完全摊开说清楚。", tip:"与 implicit（含蓄的）相反，常考 explicit instructions / content。", sents:[{en:"The rules are explicit and leave no room for doubt.", cn:"规则清楚明白，不容置疑。"},{en:"The teacher gave explicit instructions on how to format the essay.", cn:"老师对论文格式给出了明确的说明。"},{en:"His criticism was explicit but not unkind.", cn:"他的批评很直率，但不刻薄。"}]},
+  { word:"flourish", ipa:"/ˈflɜːrɪʃ/", pos:"v.", mean:"繁荣，茁壮成长；挥舞", emoji:"🌱", story:"flour（花粉）+ ish = 像花粉一样四散，植物便 flourish。", tip:"常考搭配：flourish in ...（在…中蓬勃发展）。", sents:[{en:"Local businesses have started to flourish in the past year.", cn:"过去一年本地生意开始兴隆起来。"},{en:"Many rare plants flourish in this warm climate.", cn:"许多珍稀植物在这种温暖气候中茁壮生长。"},{en:"He walked in, flourishing his new certificate proudly.", cn:"他挥舞着新证书骄傲地走进来。"}]},
+  { word:"fundamental", ipa:"/ˌfʌndəˈmentl/", pos:"adj./n.", mean:"基本的，根本的；基础", emoji:"🏛️", story:"fundament（基础）+ al = 支撑所有东西的根基，fundamental。", tip:"写作常考：fundamental difference / change / principle。", sents:[{en:"There is a fundamental difference between the two proposals.", cn:"两个提案之间有根本性差异。"},{en:"Honesty is a fundamental value in any relationship.", cn:"诚实是人际关系中最基本的价值。"},{en:"These changes may affect the fundamental structure of the economy.", cn:"这些变化可能影响经济的基本结构。"}]},
+  { word:"generate", ipa:"/ˈdʒenəreɪt/", pos:"v.", mean:"产生（电力/收入/想法）；引起", emoji:"⚡", story:"gener（出生）+ ate = 让它生出来，generate。", tip:"常考搭配：generate electricity / revenue / ideas / employment。", sents:[{en:"Wind farms can generate enough electricity for thousands of homes.", cn:"风电场能为数千户家庭供电。"},{en:"The campaign generated a lot of public interest.", cn:"这次活动引起了公众的广泛兴趣。"},{en:"Small businesses help generate local employment.", cn:"小企业有助于创造本地就业。"}]},
+  { word:"humiliate", ipa:"/hjuːˈmɪlieɪt/", pos:"v.", mean:"使丢脸，羞辱", emoji:"🙇", story:"humili（低）+ ate = 把人按低，humiliate 就是贬低羞辱。", tip:"常考名词 humiliation（丢脸的事）。", sents:[{en:"He was humiliated by the unfair criticism in public.", cn:"他因公开场合受到不公正的批评而感到丢脸。"},{en:"Failing the test publicly can be a humiliating experience.", cn:"当众考试失败是一种丢脸的经历。"},{en:"She refused to let her rival humiliate her again.", cn:"她拒绝让对手再次羞辱她。"}]},
+  { word:"ignite", ipa:"/ɪɡˈnaɪt/", pos:"v.", mean:"点燃，激起，引发", emoji:"🔥", story:"ign（火）+ ite = 一按就出火，ignite。", tip:"比喻用法常指激起情绪、争论、革命。", sents:[{en:"A single spark can ignite a huge forest fire.", cn:"一个火星就能引发森林大火。"},{en:"His speech ignited a passionate debate across the country.", cn:"他的演讲在全国激起了一场激烈辩论。"},{en:"The match failed to ignite in the windy weather.", cn:"火柴在大风天没能点着。"}]}
+];
+
+function play(url){ const a=new Audio(url); a.play().catch(()=>{}); }
+function playWord(word,type){ play('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(word)+'&type='+type); }
+function playSentence(text){ play('https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(text)); }
+function shuffle(arr){ const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+function renderWords(){
+  const list=shuffle(rawWords);
+  const container=document.getElementById('words');
+  container.innerHTML=list.map(w=>{
+    const sents=w.sents.map((s,i)=>`<div class="sentence"><div class="sen-text"><div class="sen-en">${i+1}. ${s.en}</div><div class="sen-cn">${s.cn}</div></div><button class="play-btn" onclick="playSentence('${s.en.replace(/'/g,"\\'")}')">🔊</button></div>`).join('');
+    return `<div class="card">
+      <div class="word-row">
+        <div>
+          <div class="word">${w.word}</div>
+          <div class="ipa">${w.ipa}</div>
+        </div>
+        <div class="tts-btns">
+          <button onclick="playWord('${w.word}',1)">🇬🇧 GB</button>
+          <button onclick="playWord('${w.word}',2)">🇺🇸 US</button>
+        </div>
+      </div>
+      <div class="meaning"><span class="pos">${w.pos}</span> ${w.mean}</div>
+      <div class="emoji-card">${w.emoji}</div>
+      <div class="story"><strong>记忆故事</strong><br>${w.story}</div>
+      <div class="tip"><strong>用法提示</strong><br>${w.tip}</div>
+      <div class="sentences">
+        <div class="sent-title">例句</div>
+        ${sents}
+      </div>
+    </div>`;
+  }).join('');
+}
+renderWords();
+</script>
+<style>
+#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
+#liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
+@keyframes lcPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+#liveClockBar .lc-date{color:#8b949e;white-space:nowrap}
+#liveClockBar .lc-time{font-variant-numeric:tabular-nums;font-weight:700;color:#e6edf3;letter-spacing:.5px;font-size:15px}
+#liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
+#liveClockBar .lc-sec{color:#ff7b72}
+#liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
+#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
+#liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
+@media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
+body{padding-top:44px!important}
+</style>
+<div id="liveClockBar">
+<span class="lc-dot"></span>
+<span class="lc-date" id="lcDate">--</span>
+<span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
+<span class="lc-tag">时间正在流逝 ⏳</span>
+<i class="lc-bar" id="lcBar"></i>
+</div>
+<script>
+(function(){
+  var w=['周日','周一','周二','周三','周四','周五','周六'];
+  function p(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var d=new Date();
+    var dt=document.getElementById('lcDate');
+    if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
+    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
+    if(h)h.textContent=p(d.getHours());
+    if(m)m.textContent=p(d.getMinutes());
+    if(s)s.textContent=p(d.getSeconds());
+    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
+  }
+  tick();setInterval(tick,1000);
+  window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
+  window.lcCopyWx=function(){
+    var id="Harryalwayslucky";
+    if(!id) return;
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
+    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
+  };
+})();
+</script></body>
+</html>

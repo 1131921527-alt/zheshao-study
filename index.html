@@ -2,85 +2,304 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="喆少学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
-<title>喆少学习任务</title>
-<link rel="stylesheet" href="assets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1A4DAB">
+<meta name="description" content="喆少学习助手：AI动态播报、系统性学习、提示词技巧、雅思单词，以及中国历史、通识地理等知识板块，每天随手看，可安装到手机主屏当 App 用。">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<title>喆少学习助手</title>
+<style>
+:root{
+  --c-primary:#1A4DAB;--c-primary-700:#143A82;--c-primary-050:#EEF3FC;--c-primary-100:#DBE6FA;
+  --c-accent:#C9A86A;--c-accent-soft:#F7F1E4;
+  --c-bg:#F4F6FA;--c-surface:#FFFFFF;--c-surface-2:#F8FAFD;
+  --c-text-1:#1A2233;--c-text-2:#5A6478;--c-text-3:#97A1B5;--c-border:#E6EAF2;
+  --c-success:#16A34A;
+  --font:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",system-ui,sans-serif;
+  --fs-12:12px;--fs-13:13px;--fs-14:14px;--fs-15:15px;--fs-16:16px;--fs-18:18px;--fs-20:20px;--fs-24:24px;
+  --s-2:8px;--s-3:12px;--s-4:16px;--s-5:20px;--s-6:24px;
+  --r-md:12px;--r-lg:16px;--r-xl:20px;--r-pill:999px;
+  --sh-1:0 1px 2px rgba(20,40,80,.06);--sh-2:0 4px 14px rgba(20,40,80,.08);--sh-3:0 10px 30px rgba(20,40,80,.12);
+  --t-fast:150ms ease;--t-norm:280ms cubic-bezier(.4,0,.2,1);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:#0E1726;color:var(--c-text-1);-webkit-text-size-adjust:100%}
+.app{max-width:480px;margin:0 auto;min-height:100vh;background:var(--c-bg);position:relative;box-shadow:0 0 60px rgba(0,0,0,.4);display:flex;flex-direction:column;min-height:100dvh}
+
+/* 顶部 */
+.topbar{position:sticky;top:0;z-index:6;background:var(--c-surface);padding:14px 20px 12px;border-bottom:1px solid var(--c-border);display:flex;align-items:center;justify-content:space-between}
+.topbar .brand{display:flex;align-items:center;gap:10px}
+.topbar .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-700));display:grid;place-items:center;font-size:18px}
+.topbar h1{font-size:var(--fs-18);margin:0;font-weight:700;letter-spacing:.3px}
+.topbar .sub{font-size:var(--fs-12);color:var(--c-text-3);font-weight:500}
+.topbar .icon-btn{width:36px;height:36px;border-radius:var(--r-pill);background:var(--c-surface-2);display:grid;place-items:center;font-size:16px;color:var(--c-text-2)}
+
+.screen-wrap{flex:1;position:relative;overflow:hidden}
+.screen{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:84px;opacity:0;transform:translateX(8px);pointer-events:none;transition:opacity var(--t-norm),transform var(--t-norm)}
+.screen.active{opacity:1;transform:none;pointer-events:auto}
+.screen::-webkit-scrollbar{width:0}
+.pad{padding:0 20px}
+.section-title{font-size:var(--fs-15);font-weight:700;margin:24px 0 12px;display:flex;align-items:center;justify-content:space-between}
+.section-title .more{font-size:var(--fs-12);color:var(--c-primary);font-weight:600}
+
+/* Hero */
+.hero{margin:16px 20px 0;background:linear-gradient(135deg,var(--c-primary) 0%,var(--c-primary-700) 100%);border-radius:var(--r-lg);padding:20px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--sh-2)}
+.hero::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,106,.35),transparent 70%)}
+.hero .hi{font-size:var(--fs-13);opacity:.85}
+.hero .name{font-size:var(--fs-20);font-weight:700;margin:4px 0 14px}
+.hero-stats{display:flex;gap:10px}
+.hero-stats .st{flex:1;background:rgba(255,255,255,.12);border-radius:var(--r-md);padding:10px 4px;text-align:center}
+.hero-stats .st .n{font-size:var(--fs-18);font-weight:700}
+.hero-stats .st .l{font-size:var(--fs-11);opacity:.82;margin-top:2px}
+
+/* 安装横幅 */
+.install{margin:16px 20px 0;background:var(--c-accent-soft);border:1px solid #ecd9b0;border-radius:var(--r-md);padding:12px 14px;display:flex;align-items:flex-start;gap:10px}
+.install .ii{font-size:20px}
+.install .it{font-size:var(--fs-13);color:#7a5e1f;line-height:1.5;flex:1}
+.install .it b{color:#5a4413}
+.install .ib{margin-top:8px;display:inline-block;background:var(--c-primary);color:#fff;border:none;border-radius:var(--r-pill);padding:7px 14px;font-size:var(--fs-12);font-weight:700;font-family:var(--font)}
+.install .ix{background:none;border:none;color:#9a7b36;font-size:18px;line-height:1;cursor:pointer}
+
+/* 板块卡 */
+.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 20px 0}
+.qcard{background:var(--c-surface);border-radius:var(--r-lg);padding:16px;box-shadow:var(--sh-1);border:1px solid var(--c-border);cursor:pointer;transition:transform var(--t-fast),box-shadow var(--t-fast);position:relative;overflow:hidden}
+.qcard:active{transform:scale(.98);box-shadow:var(--sh-2)}
+.qcard .qi{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:var(--c-primary-050);color:var(--c-primary)}
+.qcard .qt{font-size:var(--fs-15);font-weight:700;margin-top:10px}
+.qcard .qd{font-size:var(--fs-12);color:var(--c-text-3);margin-top:4px;line-height:1.5}
+.qcard .qbadge{position:absolute;top:12px;right:12px;font-size:var(--fs-11);font-weight:700;padding:3px 8px;border-radius:var(--r-pill);background:var(--c-accent-soft);color:#9a7b36}
+.qcard.new .qi{background:#EAFaf0;color:var(--c-success)}
+
+/* 云/外链卡 */
+.linkcard{display:flex;align-items:center;gap:12px;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--r-lg);padding:16px;margin-bottom:12px;box-shadow:var(--sh-1);text-decoration:none;color:inherit;transition:transform var(--t-fast)}
+.linkcard:active{transform:scale(.99)}
+.linkcard .li{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:var(--c-primary-050);color:var(--c-primary);flex:0 0 auto}
+.linkcard .lc{flex:1}
+.linkcard .lc .t{font-size:var(--fs-15);font-weight:700}
+.linkcard .lc .d{font-size:var(--fs-12);color:var(--c-text-3);margin-top:3px}
+.linkcard .arr{color:var(--c-text-3);font-size:18px}
+
+/* 知识内联列表 */
+.klist{margin-top:6px}
+.klist .krow{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--r-md);margin-bottom:8px;text-decoration:none;color:var(--c-text-1)}
+.klist .krow .kt{font-weight:600;font-size:var(--fs-14)}
+.klist .krow .km{font-size:var(--fs-11);color:var(--c-text-3);margin-top:2px}
+.klist .krow .arr{color:var(--c-text-3)}
+.hidden{display:none!important}
+
+/* 打赏 */
+.support{margin:18px 20px 0;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--r-lg);padding:22px 18px;text-align:center;box-shadow:var(--sh-1)}
+.support h2{font-size:var(--fs-16);margin:0 0 6px}
+.support p{font-size:var(--fs-13);color:var(--c-text-2);line-height:1.6;margin:0 0 14px}
+.support .qr{width:140px;height:140px;border-radius:12px;background:#fff;border:1px solid var(--c-border);object-fit:contain}
+.support .qr-fallback{width:140px;height:140px;margin:0 auto;border-radius:12px;border:1px dashed var(--c-text-3);display:none;align-items:center;justify-content:center;color:var(--c-text-3);font-size:var(--fs-12);padding:10px;text-align:center}
+.support .label{display:block;margin-top:8px;font-size:var(--fs-13);font-weight:600}
+.support .wx{display:inline-block;margin-top:14px;background:var(--c-primary);color:#fff;border:none;border-radius:var(--r-pill);padding:9px 18px;font-size:var(--fs-13);font-weight:700;font-family:var(--font);cursor:pointer}
+.support .hint{font-size:var(--fs-11);color:var(--c-text-3);margin-top:12px;line-height:1.6}
+
+/* 我的 */
+.profile{margin:16px 20px 0;background:var(--c-surface);border-radius:var(--r-lg);padding:18px;display:flex;align-items:center;gap:14px;box-shadow:var(--sh-1);border:1px solid var(--c-border)}
+.avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-700));color:#fff;display:grid;place-items:center;font-size:20px;font-weight:700}
+.profile .pn{font-size:var(--fs-16);font-weight:700}
+.profile .pr{font-size:var(--fs-12);color:var(--c-text-3);margin-top:3px}
+.menu{margin:16px 20px 0;background:var(--c-surface);border-radius:var(--r-lg);border:1px solid var(--c-border);overflow:hidden}
+.menu .mi{display:flex;align-items:center;gap:12px;padding:15px 16px;border-bottom:1px solid var(--c-border);font-size:var(--fs-14)}
+.menu .mi:last-child{border-bottom:none}
+.menu .mi .mi-i{width:30px;height:30px;border-radius:9px;background:var(--c-primary-050);color:var(--c-primary);display:grid;place-items:center;font-size:15px}
+.menu .mi .mi-t{flex:1}
+.menu .mi .mi-a{color:var(--c-text-3);font-size:var(--fs-12)}
+
+/* 底部 Tab */
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:64px;z-index:15;background:var(--c-surface);border-top:1px solid var(--c-border);display:flex;padding:6px 0 4px;padding-bottom:calc(6px + env(safe-area-inset-bottom))}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--c-text-3);font-size:11px;font-weight:600;background:none;border:none;cursor:pointer;transition:color var(--t-fast);font-family:var(--font)}
+.tab .ti{font-size:20px;line-height:1}
+.tab.on{color:var(--c-primary)}
+
+/* 抽屉 */
+.sheet-mask{position:absolute;inset:0;background:rgba(15,23,38,.45);opacity:0;pointer-events:none;transition:opacity var(--t-norm);z-index:20}
+.sheet-mask.show{opacity:1;pointer-events:auto}
+.sheet{position:absolute;left:0;right:0;bottom:0;z-index:21;background:var(--c-bg);border-radius:var(--r-xl) var(--r-xl) 0 0;transform:translateY(100%);transition:transform var(--t-norm);max-height:86%;overflow-y:auto;padding-bottom:24px}
+.sheet.show{transform:none}
+.sheet .grab{width:38px;height:4px;border-radius:2px;background:var(--c-border);margin:10px auto 4px}
+.sheet .s-head{padding:8px 20px 12px;border-bottom:1px solid var(--c-border)}
+.sheet .s-head .st{font-size:var(--fs-20);font-weight:700}
+.sheet .s-head .sm{font-size:var(--fs-12);color:var(--c-accent);font-weight:600;margin-top:4px}
+.sheet .s-body{padding:16px 20px}
+.sheet .s-body p{font-size:var(--fs-14);line-height:1.8;color:var(--c-text-1);margin:0 0 14px}
+
+.toast{position:absolute;left:50%;bottom:90px;transform:translateX(-50%) translateY(10px);background:rgba(26,34,51,.92);color:#fff;padding:9px 16px;border-radius:var(--r-pill);font-size:var(--fs-13);opacity:0;pointer-events:none;transition:all var(--t-norm);z-index:30;white-space:nowrap;max-width:90%}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.footer{text-align:center;color:var(--c-text-3);font-size:var(--fs-12);margin:30px 20px 10px;line-height:1.8}
+</style>
 </head>
 <body>
-<header class="hero">
-<div class="logo">🦞</div>
-<h1>喆少学习任务</h1>
-<div class="tag">每天自动更新 · AI / 雅思 / 提示词 一站式学习</div>
-<div class="sub">已积累 40 期内容 · 手机点开就能看</div>
-</header>
-<main class="wrap">
-<section class="grid">
-<a class="card" style="background:linear-gradient(135deg,#1f3a5f,#0f3460)" href="ai-news/index.html"><span class="icon">📰</span><span class="latest">最新 07-07 周二</span><div class="title">AI动态播报</div><div class="desc">每天AI圈发生了什么，一页看完</div><div class="count">已积累 24 期 →</div></a>
-<a class="card" style="background:linear-gradient(135deg,#3a1a5c,#533483)" href="ai-knowledge/index.html"><span class="icon">🧠</span><span class="latest">最新 Day 1</span><div class="title">AI系统性学习</div><div class="desc">每天一个AI知识点，30天从小白到上手</div><div class="count">已积累 5 期 →</div></a>
-<a class="card" style="background:linear-gradient(135deg,#5c3a1a,#7a4a1a)" href="ai-prompt/index.html"><span class="icon">🎯</span><span class="latest">最新 Day 1</span><div class="title">提示词技巧</div><div class="desc">每天1个提示词技巧，直接复制用</div><div class="count">已积累 4 期 →</div></a>
-<a class="card" style="background:linear-gradient(135deg,#5c1a3a,#7a1a3a)" href="ielts/index.html"><span class="icon">📖</span><span class="latest">最新 完整版 · 带音频</span><div class="title">雅思单词</div><div class="desc">每天15个高频词，例句+记忆法</div><div class="count">已积累 7 期 →</div></a>
-</section>
+<div class="app">
+  <div class="topbar">
+    <div class="brand"><div class="logo">🦞</div><div><div class="sub">喆少 · 每日学习</div><h1>学习助手</h1></div></div>
+    <div class="icon-btn" onclick="toast('已为你同步最新内容')">🔔</div>
+  </div>
 
-<section class="support">
-<h2>☕ 觉得有用，欢迎打赏</h2>
-<p>这些内容会一直免费更新。如果觉得我做得还可以，欢迎扫码打赏，随意就好 —— 也欢迎加我微信一起交流。</p>
-<div class="qr-row">
-  <div class="qr-card">
-    <img class="qr-img" src="assets/wechat.png" alt="微信赞赏码" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>
-    <span class="label">微信赞赏码</span>
+  <div class="screen-wrap">
+    <!-- 首页 -->
+    <section class="screen active" id="s-home">
+      <div class="hero">
+        <div class="hi">每天进步一点点</div>
+        <div class="name">喆少的学习中心</div>
+        <div class="hero-stats">
+          <div class="st"><div class="n">6</div><div class="l">学习板块</div></div>
+          <div class="st"><div class="n">40+</div><div class="l">累计内容</div></div>
+          <div class="st"><div class="n">每日</div><div class="l">自动更新</div></div>
+        </div>
+      </div>
+
+      <div class="install" id="installBar">
+        <span class="ii">📲</span>
+        <div class="it">把这站<b>装到手机桌面</b>：浏览器菜单选「添加到主屏幕」，就能像 App 一样全屏打开、离线看。
+          <br><button class="ib" onclick="copyUrl()">复制本站地址</button>
+          <button class="ib" id="btnInstall" style="display:none;background:var(--c-accent);margin-left:6px" onclick="doInstall()">安装到桌面</button>
+        </div>
+        <button class="ix" onclick="document.getElementById('installBar').style.display='none'">×</button>
+      </div>
+
+      <div class="section-title pad">学习板块</div>
+      <div class="quick-grid">
+        <div class="qcard" onclick="goTab('s-news')"><div class="qi">📰</div><div class="qt">AI动态播报</div><div class="qd">每天AI圈发生了什么</div><div class="qbadge">最新 07-07</div></div>
+        <div class="qcard" onclick="goTab('s-know')"><div class="qi">🧠</div><div class="qt">知识中心</div><div class="qd">系统学习 / 提示词 / 历史 / 地理</div></div>
+        <div class="qcard" onclick="goTab('s-ielts')"><div class="qi">📖</div><div class="qt">雅思单词</div><div class="qd">每天15词·例句+记忆法</div></div>
+        <div class="qcard new" onclick="goTab('s-know')"><div class="qi">🏛️</div><div class="qt">中国历史</div><div class="qd">新增·从文明曙光到唐宋</div><div class="qbadge">NEW</div></div>
+        <div class="qcard new" onclick="goTab('s-know')"><div class="qi">🌍</div><div class="qt">通识地理</div><div class="qd">新增·板块/大河/雨林</div><div class="qbadge">NEW</div></div>
+        <div class="qcard" onclick="goTab('s-me')"><div class="qi">⚙️</div><div class="qt">我的</div><div class="qd">安装指引 / 支持 / 关于</div></div>
+      </div>
+
+      <div class="support">
+        <h2>☕ 觉得有用，欢迎打赏</h2>
+        <p>内容会一直免费更新。觉得做得还行，欢迎扫码打赏，随意就好～</p>
+        <img class="qr" src="assets/wechat.png" alt="微信赞赏码" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>
+        <span class="label">微信赞赏码</span>
+        <button class="wx" onclick="copyWx()">复制微信号 Harryalwayslucky</button>
+        <div class="hint">在微信里打开本页，长按上方二维码即可打赏。</div>
+      </div>
+
+      <div class="footer">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+    </section>
+
+    <!-- 动态 -->
+    <section class="screen" id="s-news">
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">📰</div><div><div class="sub">每天一更</div><h1>AI动态播报</h1></div></div></div>
+      <div class="pad" style="margin-top:16px">
+        <a class="linkcard" href="ai-news/index.html"><div class="li">📰</div><div class="lc"><div class="t">进入 AI动态播报</div><div class="d">24 期历史 · 最新 07-07 周二</div></div><div class="arr">→</div></a>
+        <div class="section-title">板块说明</div>
+        <div class="support" style="margin:0;text-align:left">
+          <p style="margin:0">把每天 AI 圈的重要进展、新品、行业动态浓缩成一页。适合利用碎片时间快速了解大势，不需要深度学习也能跟上节奏。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 知识中心 -->
+    <section class="screen" id="s-know">
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">系统 + 通识</div><h1>知识中心</h1></div></div></div>
+      <div class="pad" style="margin-top:16px">
+        <a class="linkcard" href="ai-knowledge/index.html"><div class="li">🧠</div><div class="lc"><div class="t">AI系统性学习</div><div class="d">30天从小白到上手 · Day 1–33</div></div><div class="arr">→</div></a>
+        <a class="linkcard" href="ai-prompt/index.html"><div class="li">🎯</div><div class="lc"><div class="t">提示词技巧</div><div class="d">每天1个技巧，直接复制用</div></div><div class="arr">→</div></a>
+
+        <div class="section-title">🏛️ 中国历史 <span class="more" onclick="toggleK('hist')">展开/收起</span></div>
+        <div class="klist hidden" id="klist-hist"></div>
+
+        <div class="section-title">🌍 通识地理 <span class="more" onclick="toggleK('geo')">展开/收起</span></div>
+        <div class="klist hidden" id="klist-geo"></div>
+      </div>
+    </section>
+
+    <!-- 雅思 -->
+    <section class="screen" id="s-ielts">
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">📖</div><div><div class="sub">每天15词</div><h1>雅思单词</h1></div></div></div>
+      <div class="pad" style="margin-top:16px">
+        <a class="linkcard" href="ielts/index.html"><div class="li">📖</div><div class="lc"><div class="t">进入雅思单词</div><div class="d">7 期 + 完整版（带音频）</div></div><div class="arr">→</div></a>
+        <div class="section-title">板块说明</div>
+        <div class="support" style="margin:0;text-align:left">
+          <p style="margin:0">每天 15 个高频词，配例句与记忆法，完整版带真人发音。利用通勤、排队等碎片时间积累词汇量。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 我的 -->
+    <section class="screen" id="s-me">
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">⚙️</div><div><div class="sub">设置与关于</div><h1>我的</h1></div></div></div>
+      <div class="profile"><div class="avatar">喆</div><div><div class="pn">喆少</div><div class="pr">学习者 · 每天进步一点点</div></div></div>
+      <div class="menu">
+        <div class="mi" onclick="goTab('s-home')"><div class="mi-i">🏠</div><div class="mi-t">返回首页</div><div class="mi-a">›</div></div>
+        <div class="mi" onclick="document.getElementById('installBar').scrollIntoView()"><div class="mi-i">📲</div><div class="mi-t">安装到手机桌面</div><div class="mi-a">›</div></div>
+        <div class="mi" onclick="copyWx()"><div class="mi-i">💬</div><div class="mi-t">加微信交流</div><div class="mi-a">Harryalwayslucky ›</div></div>
+        <div class="mi" onclick="toast('当前为金融蓝主题 · v2.0')"><div class="mi-i">🎨</div><div class="mi-t">主题外观</div><div class="mi-a">金融蓝 ›</div></div>
+      </div>
+      <div class="support">
+        <h2>☕ 支持一下</h2>
+        <p>内容免费持续更新，你的打赏是我坚持的动力。</p>
+        <img class="qr" src="assets/wechat.png" alt="微信赞赏码" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>
+        <span class="label">微信赞赏码</span>
+        <button class="wx" onclick="copyWx()">复制微信号 Harryalwayslucky</button>
+      </div>
+      <div class="footer">腾讯龙虾的成品 · 喆少学习助手 v2.0<br>由 GitHub Pages 托管</div>
+    </section>
+
+    <!-- 抽屉 -->
+    <div class="sheet-mask" id="sheet-mask" onclick="closeSheet()"></div>
+    <div class="sheet" id="sheet">
+      <div class="grab"></div>
+      <div class="s-head"><div class="st" id="sheet-title"></div><div class="sm" id="sheet-meta"></div></div>
+      <div class="s-body" id="sheet-body"></div>
+    </div>
+
+    <!-- Tabbar -->
+    <nav class="tabbar">
+      <button class="tab on" data-t="s-home" onclick="goTab('s-home')"><span class="ti">🏠</span>首页</button>
+      <button class="tab" data-t="s-news" onclick="goTab('s-news')"><span class="ti">📰</span>动态</button>
+      <button class="tab" data-t="s-know" onclick="goTab('s-know')"><span class="ti">🧠</span>知识</button>
+      <button class="tab" data-t="s-ielts" onclick="goTab('s-ielts')"><span class="ti">📖</span>雅思</button>
+      <button class="tab" data-t="s-me" onclick="goTab('s-me')"><span class="ti">⚙️</span>我的</button>
+    </nav>
+
+    <div class="toast" id="toast"></div>
   </div>
 </div>
-<div class="hint">在微信里打开本页，长按上方二维码即可打赏。</div>
-<div class="hint" style="margin-top:2px">想一起交流？加我微信：<span class="wx-copy" onclick="lcCopyWx()">复制微信号 Harryalwayslucky</span></div>
-</section>
 
-</main>
-<footer>腾讯龙虾的成品 · 喆少学习任务<br>内容每日自动更新 · 由 GitHub Pages 托管</footer>
-<style>
-#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
-#liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
-@keyframes lcPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
-#liveClockBar .lc-date{color:#8b949e;white-space:nowrap}
-#liveClockBar .lc-time{font-variant-numeric:tabular-nums;font-weight:700;color:#e6edf3;letter-spacing:.5px;font-size:15px}
-#liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
-#liveClockBar .lc-sec{color:#ff7b72}
-#liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
-#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
-#liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
-@media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
-body{padding-top:44px!important}
-</style>
-<div id="liveClockBar">
-<span class="lc-dot"></span>
-<span class="lc-date" id="lcDate">--</span>
-<span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
-<span class="lc-tag">时间正在流逝 ⏳</span>
-<i class="lc-bar" id="lcBar"></i>
-</div>
 <script>
-(function(){
-  var w=['周日','周一','周二','周三','周四','周五','周六'];
-  function p(n){return (n<10?'0':'')+n;}
-  function tick(){
-    var d=new Date();
-    var dt=document.getElementById('lcDate');
-    if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
-    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
-    if(h)h.textContent=p(d.getHours());
-    if(m)m.textContent=p(d.getMinutes());
-    if(s)s.textContent=p(d.getSeconds());
-    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
-  }
-  tick();setInterval(tick,1000);
-  window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
-  window.lcCopyWx=function(){
-    var id="Harryalwayslucky";
-    if(!id) return;
-    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
-    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
-  };
-})();
-</script></body>
+const HISTORY=[
+ {t:"文明曙光：从部落联盟到早期国家",m:"先秦 · 史前—前1046",b:"<p>新石器时代晚期，黄河、长江流域已出现发达聚落：仰韶、良渚、龙山等文化相继兴起。其中<b>良渚古城</b>（约公元前3300–2300年）拥有大型水利系统与精美玉器礼制，被视为早期国家的雏形。</p><p>相传<b>夏</b>朝（约前2070年起）是中国第一个王朝，二里头文化或与之对应；<b>商</b>朝（约前1600–前1046）留下甲骨文与青铜器，信史由此开端；<b>周</b>朝推行分封与礼乐制度，奠定了"华夏"认同的雏形。</p>"},
+ {t:"秦汉：统一与制度的奠基",m:"秦汉 · 前221—220",b:"<p>公元前221年，<b>秦</b>灭六国，建立中央集权帝国：统一文字（小篆）、度量衡与车轨，废分封、行郡县，修筑长城与驰道，奠定此后两千年政体骨架。</p><p><b>汉</b>承秦制并巩固：文景之治休养生息，汉武帝推恩令削藩、独尊儒术、通西域。<b>张骞出使西域</b>打通丝绸之路，中原与中亚、西亚的贸易文化交流就此展开；造纸术也在汉代萌芽。</p>"},
+ {t:"唐宋：盛世、开放与科技高峰",m:"唐宋 · 618—1279",b:"<p><b>唐</b>代贞观之治、开元盛世，国力与文化空前繁荣；科举制日臻完善，社会流动增强，长安成为国际大都会，佛教、胡乐与丝路商货汇聚。</p><p><b>宋</b>代商业兴盛、城市崛起，<b>毕昇活字印刷</b>、指南针、火药等发明走向应用，理学（程朱）体系成型。唐宋诗词更是中华文化的巅峰之一，影响深远。</p>"}
+];
+const GEO=[
+ {t:"板块构造：为什么大地会"呼吸"",m:"地球科学 · 板块",b:"<p>地球岩石圈被划分为<b>六大板块</b>（亚欧、非洲、美洲、印度洋、太平洋、南极洲），它们漂浮在炽热的软流圈上缓慢移动。</p><p>板块边界是地质活动最剧烈的地带：<b>张裂处</b>（如东非大裂谷）不断生成新洋壳；<b>碰撞处</b>（如喜马拉雅）隆起高山；<b>俯冲带</b>（环太平洋）多火山地震。日本、智利强震频发，正因地处环太平洋火山地震带。</p>"},
+ {t:"大河文明：河流如何孕育人类",m:"人文地理 · 文明起源",b:"<p>四大文明古国皆傍大河而生：<b>尼罗河</b>定期泛滥带来肥沃淤泥，滋养古埃及；<b>两河</b>（幼发拉底、底格里斯）灌溉出新月沃地，孕育古巴比伦；印度河/恒河、黄河/长江同理成就古印度与古中国。</p><p>河流提供饮水、灌溉、航运与沃土，使农业与城市得以兴起——"逐水而居"是人类早期文明的共同逻辑。</p>"},
+ {t:"地球之肺：热带雨林与气候",m:"自然地理 · 生态",b:"<p>热带雨林集中在赤道附近，以<b>亚马逊、刚果、东南亚</b>三大片为代表。亚马逊雨林面积约550万平方公里，储存巨量碳，并调节全球气候与降水。</p><p>雨林物种极丰富，约占已知物种的一半以上。然而毁林与气候变暖正削弱其"碳汇"能力，威胁生物多样性与全球气候稳定，保护雨林已成为紧迫议题。</p>"}
+];
+
+function goTab(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.t===id));document.getElementById(id).scrollTop=0;}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),1800);}
+
+function renderK(){
+  const h=document.getElementById('klist-hist'),g=document.getElementById('klist-geo');
+  h.innerHTML=HISTORY.map((a,i)=>`<a class="krow" onclick="openArticle('hist',${i})"><div><div class="kt">${a.t}</div><div class="km">${a.m}</div></div><div class="arr">→</div></a>`).join('');
+  g.innerHTML=GEO.map((a,i)=>`<a class="krow" onclick="openArticle('geo',${i})"><div><div class="kt">${a.t}</div><div class="km">${a.m}</div></div><div class="arr">→</div></a>`).join('');
+}
+function toggleK(w){document.getElementById('klist-'+w).classList.toggle('hidden');}
+function openArticle(w,i){const a=(w==='hist'?HISTORY:GEO)[i];document.getElementById('sheet-title').textContent=a.t;document.getElementById('sheet-meta').textContent=a.m;document.getElementById('sheet-body').innerHTML=a.b;document.getElementById('sheet-mask').classList.add('show');document.getElementById('sheet').classList.add('show');}
+function closeSheet(){document.getElementById('sheet-mask').classList.remove('show');document.getElementById('sheet').classList.remove('show');}
+
+function copyWx(){const id='Harryalwayslucky';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(id).then(()=>toast('微信号已复制：'+id));}else{const t=document.createElement('textarea');t.value=id;document.body.appendChild(t);t.select();try{document.execCommand('copy');toast('微信号已复制：'+id);}catch(e){}document.body.removeChild(t);}}
+function copyUrl(){const u=location.href;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(()=>toast('地址已复制，去浏览器粘贴安装'));}else{toast('请手动复制地址栏链接');}}
+
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('btnInstall').style.display='inline-block';});
+function doInstall(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('btnInstall').style.display='none';});}else{toast('请点浏览器菜单「添加到主屏幕」');}}
+renderK();
+
+/* PWA：注册 Service Worker（离线 + 可安装） */
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}
+</script>
+</body>
 </html>

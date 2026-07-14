@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>雅思词汇 Day 04</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:12px;min-height:100vh}
+.header{text-align:center;padding:20px 0 16px;border-bottom:1px solid #21262d;margin-bottom:16px}
+.header h1{font-size:22px;color:#58a6ff;margin-bottom:4px}
+.header p{font-size:13px;color:#8b949e}
+.shuffle-btn{display:inline-block;background:#238636;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:14px;cursor:pointer;margin-top:10px}
+.shuffle-btn:hover{background:#2ea043}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;margin-bottom:16px;padding:16px;overflow:hidden}
+.emoji-box{text-align:center;margin-bottom:12px}
+.emoji-card{display:inline-block;width:100px;height:100px;border-radius:50%;line-height:100px;font-size:48px;text-align:center;position:relative}
+.emoji-card.gc1{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)}
+.emoji-card.gc2{background:linear-gradient(135deg,#2d132c,#801336,#c72c41)}
+.emoji-card.gc3{background:linear-gradient(135deg,#0c2461,#1e3799,#4a69bd)}
+.emoji-card.gc4{background:linear-gradient(135deg,#1b4332,#2d6a4f,#40916c)}
+.emoji-card.gc5{background:linear-gradient(135deg,#4a0e0e,#7b2d26,#c0392b)}
+.emoji-card.gc6{background:linear-gradient(135deg,#1a1a40,#270082,#5c2d91)}
+.emoji-card.gc7{background:linear-gradient(135deg,#0d7377,#14a3a8,#32e0c4)}
+.emoji-card.gc8{background:linear-gradient(135deg,#2c2c54,#40407a,#474787)}
+.emoji-card.gc9{background:linear-gradient(135deg,#3c1642,#642c73,#9b59b6)}
+.emoji-card.gc10{background:linear-gradient(135deg,#1c1c1c,#383838,#585858)}
+.emoji-card.gc11{background:linear-gradient(135deg,#0a3d62,#1e6f5c,#29bb89)}
+.emoji-card.gc12{background:linear-gradient(135deg,#2c061f,#59114d,#833471)}
+.emoji-card.gc13{background:linear-gradient(135deg,#1b1464,#2e86de,#54a0ff)}
+.emoji-card.gc14{background:linear-gradient(135deg,#0c2233,#1a5276,#2980b9)}
+.emoji-card.gc15{background:linear-gradient(135deg,#1f4037,#99d98c,#76c893)}
+.word-title{font-size:24px;color:#58a6ff;font-weight:700;margin-bottom:4px}
+.phonetic{font-size:14px;color:#8b949e;margin-bottom:8px}
+.meaning{font-size:16px;color:#f0883e;margin-bottom:10px;font-weight:500}
+.sound-btns{display:flex;gap:8px;margin-bottom:12px}
+.sound-btn{background:#21262d;color:#e6edf3;border:1px solid #30363d;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:14px}
+.sound-btn:hover{background:#30363d}
+.story-box{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px;margin-bottom:12px;color:#c9d1d9;font-size:14px;line-height:1.6}
+.story-box .label{color:#58a6ff;font-weight:600;margin-bottom:4px}
+.usage-tip{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:10px;margin-bottom:12px;font-size:13px;color:#8b949e}
+.usage-tip .label{color:#f0883e;font-weight:600}
+.examples{margin-top:12px}
+.ex-item{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:10px 12px;margin-bottom:8px;font-size:14px;line-height:1.5}
+.ex-item .en{color:#e6edf3;margin-bottom:2px}
+.ex-item .cn{color:#8b949e;font-size:13px}
+.ex-item .play-btn{display:inline-block;background:#238636;color:#fff;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:12px;margin-top:4px}
+.ex-item .play-btn:hover{background:#2ea043}
+.counter{text-align:center;color:#8b949e;font-size:12px;padding:10px 0}
+@media(max-width:420px){.card{padding:12px}.word-title{font-size:20px}.emoji-card{width:80px;height:80px;line-height:80px;font-size:38px}}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🦐 雅思核心词汇 · Day 04</h1>
+<p>15个新词 · 手机友好 · 点击发音</p>
+<button class="shuffle-btn" onclick="shuffleCards()">🔀 乱序重排</button>
+</div>
+<div id="cards-container"></div>
+<div class="counter">共 15 个词汇 · Day 04</div>
+
+<script>
+const vocabData = [
+{
+word:"articulate",
+ipa:"/ɑːˈtɪkjʊleɪt/",
+pos:"adj. / v.",
+meaning:"清晰表达的；明确有力地表达",
+emoji:"🗣️",
+gc:"gc1",
+story:"站在话筒前🗣️，每个字都精准到位——articulate的人说话有逻辑、有感染力，全场都安静听他讲。",
+usage:"形容表达能力强的人或发言；She is an articulate speaker. / He articulated his vision clearly.",
+examples:[
+{en:"She gave an articulate and persuasive presentation.",cn:"她做了一场表达清晰、有说服力的演示。"},
+{en:"It is difficult to articulate complex emotions in words.",cn:"用语言表达复杂情感并不容易。"},
+{en:"The candidate articulated a bold plan for economic reform.",cn:"这位候选人清晰阐述了一项大胆的经济改革计划。"}
+]
+},
+{
+word:"bolster",
+ipa:"/ˈbəʊlstə/",
+pos:"v.",
+meaning:"支撑，加强",
+emoji:"💪",
+gc:"gc2",
+story:"一副强壮的💪手臂推着快要倒的墙——bolster就是用有力支撑来加固、增强，让原来不够稳固的东西站住脚。",
+usage:"常用在证据、信心、经济等语境；bolster the argument = 支撑论点；bolster confidence = 提振信心",
+examples:[
+{en:"New evidence bolsters the case for climate action.",cn:"新证据加强了气候行动的理由。"},
+{en:"The government announced measures to bolster the economy.",cn:"政府宣布了提振经济的措施。"},
+{en:"Her encouragement bolstered my confidence before the interview.",cn:"她的鼓励在面试前提振了我的信心。"}
+]
+},
+{
+word:"chronic",
+ipa:"/ˈkrɒnɪk/",
+pos:"adj.",
+meaning:"慢性的，长期的",
+emoji:"🕰️",
+gc:"gc3",
+story:"一只走不动的老钟🕰️——chronic形容疾病、问题长期存在、反复发作，不是一下子能好的那种。",
+usage:"常用于医疗、社会问题；chronic disease = 慢性病；chronic unemployment = 长期失业",
+examples:[
+{en:"Chronic stress can lead to serious health problems.",cn:"慢性压力可能导致严重的健康问题。"},
+{en:"The city faces a chronic shortage of affordable housing.",cn:"该城市面临长期的保障性住房短缺。"},
+{en:"He was diagnosed with a chronic back condition.",cn:"他被诊断出患有慢性背部疾病。"}
+]
+},
+{
+word:"daunting",
+ipa:"/ˈdɔːntɪŋ/",
+pos:"adj.",
+meaning:"令人畏惧的，使人气馁的",
+emoji:"🏔️",
+gc:"gc4",
+story:"抬头仰望一座陡峭的🏔️山峰，第一反应是"这怎么可能爬得上去"——daunting就是这种让人望而却步的压迫感。",
+usage:"形容任务、挑战庞大吓人；a daunting task = 一项艰巨的任务",
+examples:[
+{en:"The prospect of moving to a new country can be daunting.",cn:"搬到一个新国家的前景可能令人畏惧。"},
+{en:"She faced the daunting challenge of rebuilding the company from scratch.",cn:"她面临着从零重建公司的艰巨挑战。"},
+{en:"The size of the textbook is daunting for new learners.",cn:"教材的厚度让初学者感到畏惧。"}
+]
+},
+{
+word:"empirical",
+ipa:"/ɪmˈpɪrɪkəl/",
+pos:"adj.",
+meaning:"经验主义的，以观察实验为依据的",
+emoji:"🧪",
+gc:"gc5",
+story:"实验室里🧪烧杯冒泡——empirical就是"拿数据说话"，不靠感觉、不靠理论，全靠实验和观察得出来的结论。",
+usage:"学术写作高频词；empirical evidence = 实证证据；empirical research = 实证研究",
+examples:[
+{en:"The theory lacks empirical evidence to support it.",cn:"该理论缺乏实证证据支撑。"},
+{en:"Researchers conducted empirical studies on the drug's effects.",cn:"研究人员对该药物的效果进行了实证研究。"},
+{en:"His conclusions are based on empirical observations rather than speculation.",cn:"他的结论基于实证观察而非推测。"}
+]
+},
+{
+word:"formidable",
+ipa:"/ˈfɔːmɪdəbəl/",
+pos:"adj.",
+meaning:"强大的，令人敬畏的，难对付的",
+emoji:"🏰",
+gc:"gc6",
+story:"一座固若金汤的🏰城堡横在眼前——formidable不是普通的强，是让人肃然起敬、甚至心生畏惧的那种压倒性实力。",
+usage:"形容对手、挑战、能力；a formidable opponent = 强大的对手",
+examples:[
+{en:"They face a formidable opponent in the semifinals.",cn:"他们在半决赛中面对一个强大的对手。"},
+{en:"She has built a formidable reputation in the legal profession.",cn:"她在法律界建立了令人敬畏的声誉。"},
+{en:"The project involves formidable technical challenges.",cn:"该项目涉及巨大的技术挑战。"}
+]
+},
+{
+word:"hierarchy",
+ipa:"/ˈhaɪərɑːki/",
+pos:"n.",
+meaning:"等级制度，层级",
+emoji:"🪜",
+gc:"gc7",
+story:"一架梯子🪜从低到高——hierarchy就是一层一层的等级结构，谁在谁上面、谁管谁，清清楚楚。",
+usage:"社会学、管理学术语；social hierarchy = 社会等级；command hierarchy = 指挥层级",
+examples:[
+{en:"The company has a strict hierarchy of management.",cn:"公司有着严格的管理层级制度。"},
+{en:"Maslow placed self-actualization at the top of the needs hierarchy.",cn:"马斯洛将自我实现置于需求层次的顶端。"},
+{en:"In traditional societies, age often determines hierarchy.",cn:"在传统社会中，年龄往往决定等级地位。"}
+]
+},
+{
+word:"impair",
+ipa:"/ɪmˈpeə/",
+pos:"v.",
+meaning:"损害，削弱",
+emoji:"👎",
+gc:"gc8",
+story:"一根大拇指👎朝下——impair就是让某种功能、能力或品质受损变差，像开车时被蒙住一只眼。",
+usage:"常用在判断力、视力、功能等场景；impair judgment = 损害判断力",
+examples:[
+{en:"Alcohol can seriously impair your ability to drive.",cn:"酒精会严重损害你的驾驶能力。"},
+{en:"Loud music can impair hearing over time.",cn:"长时间听大声音乐会损害听力。"},
+{en:"The constant noise impaired my concentration during the exam.",cn:"持续的噪音在考试中损害了我的注意力。"}
+]
+},
+{
+word:"inclination",
+ipa:"/ˌɪnklɪˈneɪʃən/",
+pos:"n.",
+meaning:"倾向，意愿；斜坡",
+emoji:"📐",
+gc:"gc9",
+story:"量角器📐指针偏了——inclination就是内心的"偏斜方向"，心里有这个想法、有这个意愿，虽然不一定做。",
+usage:"have no/little inclination to do sth = 没意愿做某事；natural inclination = 天性倾向",
+examples:[
+{en:"He showed little inclination to change his habits.",cn:"他表现出不愿改变习惯的倾向。"},
+{en:"Her natural inclination is to help those in need.",cn:"她的天性就是帮助有需要的人。"},
+{en:"The steep inclination of the road makes cycling difficult.",cn:"道路的陡峭坡度让骑行变得困难。"}
+]
+},
+{
+word:"lavish",
+ipa:"/ˈlævɪʃ/",
+pos:"adj. / v.",
+meaning:"奢华的，铺张的；慷慨给予",
+emoji:"💎",
+gc:"gc10",
+story:"一把💎钻石随手撒出去——lavish就是奢华到极致、花钱如流水，或者对某人毫不吝啬地厚爱。",
+usage:"lavish lifestyle = 奢华的生活；lavish praise on sb = 对某人大加赞赏",
+examples:[
+{en:"The hotel is known for its lavish interior design.",cn:"这家酒店以奢华的室内设计著称。"},
+{en:"The critics lavished praise on the director's latest film.",cn:"评论家对导演最新一部电影大加赞赏。"},
+{en:"He lavished money on luxury cars and designer clothes.",cn:"他把大把的钱花在豪车和名牌服装上。"}
+]
+},
+{
+word:"merchant",
+ipa:"/ˈmɜːtʃənt/",
+pos:"n.",
+meaning:"商人，批发商",
+emoji:"🏪",
+gc:"gc11",
+story:"站在🏪店铺门口招呼生意的老板——merchant就是做生意的人，比shopkeeper更正式，常见于历史、商贸语境。",
+usage:"批发商、贸易商；merchant navy = 商船队；Venetian merchants = 威尼斯商人",
+examples:[
+{en:"Silk Road merchants traded goods between Asia and Europe.",cn:"丝绸之路的商人在亚洲和欧洲之间进行贸易。"},
+{en:"The merchant supplied the town with quality fabrics.",cn:"这位商人向镇上供应优质布料。"},
+{en:"The merchant class played a vital role in the city's prosperity.",cn:"商人阶层在该城市的繁荣中发挥了关键作用。"}
+]
+},
+{
+word:"notion",
+ipa:"/ˈnəʊʃən/",
+pos:"n.",
+meaning:"概念，想法，观念",
+emoji:"💡",
+gc:"gc12",
+story:"脑海里💡一盏灯亮了——notion就是一个冒出来的想法或信念，不一定很成熟，但已经形成了一个"概念"。",
+usage:"写作高频词；have a notion that... = 有…的想法；challenge the notion = 质疑这个观念",
+examples:[
+{en:"The notion that money buys happiness is widely debated.",cn:"金钱买得到幸福这个观念被广泛讨论。"},
+{en:"He rejected the notion that success is measured by wealth.",cn:"他拒绝了成功以财富衡量的观念。"},
+{en:"The film explores the notion of identity in a digital age.",cn:"这部电影探讨了数字时代身份认同的概念。"}
+]
+},
+{
+word:"orthodox",
+ipa:"/ˈɔːθədɒks/",
+pos:"adj.",
+meaning:"正统的，传统的，规范的",
+emoji:"⛪",
+gc:"gc13",
+story:"一座⛪古老的教堂立在那里——orthodox就是"正路子"，符合传统、约定俗成，不走偏门歪道。",
+usage:"宗教、学术、观点中常用；orthodox view = 正统观点；orthodox medicine = 正统医学",
+examples:[
+{en:"His views on education are fairly orthodox.",cn:"他对教育的看法比较传统。"},
+{en:"She challenged the orthodox approach to cancer treatment.",cn:"她挑战了治疗癌症的正统方法。"},
+{en:"In the Orthodox Church, Easter is the most important holiday.",cn:"在东正教中，复活节是最重要的节日。"}
+]
+},
+{
+word:"prominent",
+ipa:"/ˈprɒmɪnənt/",
+pos:"adj.",
+meaning:"突出的，著名的，显眼的",
+emoji:"⭐",
+gc:"gc14",
+story:"夜空中一颗⭐最亮的星——prominent就是在人群中或领域里非常抢眼、名声在外，谁都看得见的那一个。",
+usage:"prominent figure = 知名人物；play a prominent role = 扮演突出角色",
+examples:[
+{en:"She is a prominent scientist in the field of neuroscience.",cn:"她是神经科学领域的著名科学家。"},
+{en:"The tower is the most prominent landmark in the city.",cn:"这座塔是该城市最显眼的地标。"},
+{en:"He played a prominent role in the peace negotiations.",cn:"他在和平谈判中扮演了突出角色。"}
+]
+},
+{
+word:"rigorous",
+ipa:"/ˈrɪɡərəs/",
+pos:"adj.",
+meaning:"严格的，缜密的，严密的",
+emoji:"🔬",
+gc:"gc15",
+story:"显微镜🔬下不放过任何细节——rigorous就是标准高到近乎苛刻，每一步都严格把关，没有任何马虎。",
+usage:"学术研究中高频词；rigorous training = 严格训练；rigorous analysis = 缜密分析",
+examples:[
+{en:"The research was conducted under rigorous scientific standards.",cn:"这项研究在严格的科学标准下进行。"},
+{en:"Admission to the program requires passing a rigorous examination.",cn:"进入该项目需要通过严格的考试。"},
+{en:"We need a rigorous review of the company's financial records.",cn:"我们需要对公司财务记录进行缜密的审查。"}
+]
+}
+];
+
+function shuffleArray(arr){
+for(let i=arr.length-1;i>0;i--){
+const j=Math.floor(Math.random()*(i+1));
+[arr[i],arr[j]]=[arr[j],arr[i]];
+}
+}
+
+function playWord(word,type){
+const url='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(word)+'&type='+type;
+const a=new Audio(url);
+a.play();
+}
+
+function playSentence(text){
+const url='https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(text);
+const a=new Audio(url);
+a.play();
+}
+
+function renderCards(){
+const container=document.getElementById('cards-container');
+shuffleArray(vocabData);
+let html='';
+vocabData.forEach((item,idx)=>{
+html+='<div class="card">'+
+'<div class="emoji-box"><div class="emoji-card '+item.gc+'">'+item.emoji+'</div></div>'+
+'<div class="word-title">'+item.word+'</div>'+
+'<div class="phonetic">'+item.ipa+'</div>'+
+'<div class="meaning">'+item.pos+' '+item.meaning+'</div>'+
+'<div class="sound-btns">'+
+'<button class="sound-btn" onclick="playWord(\''+item.word+'\',1)">\uD83C\uDDEC\uD83C\uDDE7 GB</button>'+
+'<button class="sound-btn" onclick="playWord(\''+item.word+'\',2)">\uD83C\uDDFA\uD83C\uDDF8 US</button>'+
+'</div>'+
+'<div class="story-box"><div class="label">\uD83D\uDCD6 记忆故事</div>'+item.story+'</div>'+
+'<div class="usage-tip"><div class="label">\uD83D\uDCA1 用法提示</div>'+item.usage+'</div>'+
+'<div class="examples">'+
+'<div class="label" style="color:#58a6ff;font-weight:600;margin-bottom:6px">\uD83D\uDCDD 例句</div>'+
+item.examples.map(ex=>'<div class="ex-item">'+
+'<div class="en">'+ex.en+'</div>'+
+'<div class="cn">'+ex.cn+'</div>'+
+'<button class="play-btn" onclick="playSentence(\''+ex.en.replace(/'/g,"\\'")+'\')">\uD83D\uDD0A 播放</button>'+
+'</div>').join('')+
+'</div>'+
+'</div>';
+});
+container.innerHTML=html;
+}
+
+function shuffleCards(){renderCards();}
+renderCards();
+</script>
+<style>
+#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
+#liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
+@keyframes lcPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+#liveClockBar .lc-date{color:#8b949e;white-space:nowrap}
+#liveClockBar .lc-time{font-variant-numeric:tabular-nums;font-weight:700;color:#e6edf3;letter-spacing:.5px;font-size:15px}
+#liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
+#liveClockBar .lc-sec{color:#ff7b72}
+#liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
+#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
+#liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
+@media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
+body{padding-top:44px!important}
+</style>
+<div id="liveClockBar">
+<span class="lc-dot"></span>
+<span class="lc-date" id="lcDate">--</span>
+<span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
+<span class="lc-tag">时间正在流逝 ⏳</span>
+<i class="lc-bar" id="lcBar"></i>
+</div>
+<script>
+(function(){
+  var w=['周日','周一','周二','周三','周四','周五','周六'];
+  function p(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var d=new Date();
+    var dt=document.getElementById('lcDate');
+    if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
+    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
+    if(h)h.textContent=p(d.getHours());
+    if(m)m.textContent=p(d.getMinutes());
+    if(s)s.textContent=p(d.getSeconds());
+    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
+  }
+  tick();setInterval(tick,1000);
+  window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
+  window.lcCopyWx=function(){
+    var id="Harryalwayslucky";
+    if(!id) return;
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
+    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
+  };
+})();
+</script></body>
+</html>
