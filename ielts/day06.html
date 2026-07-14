@@ -2,363 +2,106 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>雅思核心词汇 Day 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅思核心词汇 Day 06</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-body{padding:14px;padding-bottom:80px;max-width:760px;margin:0 auto}
-.header{text-align:center;padding:18px 0 14px;border-bottom:1px solid #21262d;margin-bottom:18px}
-.header h1{font-size:22px;color:#58a6ff;font-weight:700;letter-spacing:.5px}
-.header .sub{font-size:13px;color:#8b949e;margin-top:6px}
-.header .meta{font-size:11px;color:#6e7681;margin-top:4px}
-.toolbar{display:flex;gap:10px;margin-bottom:18px;justify-content:center;flex-wrap:wrap}
-.btn-action{background:linear-gradient(135deg,#238636,#2ea043);color:#fff;border:none;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;box-shadow:0 2px 6px rgba(35,134,54,.3)}
-.btn-action:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(35,134,54,.4)}
-.btn-action:active{transform:translateY(0)}
-.btn-shuffle{background:linear-gradient(135deg,#1f6feb,#388bfd);box-shadow:0 2px 6px rgba(31,111,235,.3)}
-.btn-shuffle:hover{box-shadow:0 4px 10px rgba(31,111,235,.4)}
-.card{background:#161b22;border:1px solid #30363d;border-radius:16px;padding:20px;margin-bottom:18px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
-.card-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.emoji-box{width:78px;height:78px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:46px;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 4px 10px rgba(0,0,0,.3)}
-.word-info{flex:1;min-width:0}
-.word-en{font-size:26px;font-weight:700;color:#f0f6fc;letter-spacing:.3px;word-break:break-word}
-.ipa{font-size:13px;color:#8b949e;margin-top:3px;font-family:"Lucida Sans Unicode",Arial,sans-serif}
-.pos-mean{font-size:14px;color:#c9d1d9;margin-top:6px;line-height:1.5}
-.pos-mean .pos{color:#d2a8ff;font-weight:600;margin-right:6px}
-.tts-row{display:flex;gap:8px;margin:12px 0}
-.tts-btn{flex:1;background:#21262d;border:1px solid #30363d;color:#e6edf3;padding:9px 10px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;transition:all .15s}
-.tts-btn:hover{background:#30363d;border-color:#58a6ff}
-.tts-btn:active{transform:scale(.96)}
-.tts-btn.gb{background:linear-gradient(135deg,#1f6feb33,#388bfd22);border-color:#1f6feb}
-.tts-btn.us{background:linear-gradient(135deg,#d2992233,#e3b34122);border-color:#d29922}
-.story{background:linear-gradient(135deg,#1c2128,#22272e);border-left:3px solid #d2a8ff;padding:12px 14px;border-radius:0 10px 10px 0;margin:12px 0;font-size:13.5px;color:#c9d1d9;line-height:1.7}
-.story .label{color:#d2a8ff;font-weight:700;margin-right:6px;font-size:12px}
-.usage{background:#0d1117;border:1px dashed #30363d;padding:10px 12px;border-radius:8px;margin:10px 0;font-size:12.5px;color:#8b949e;line-height:1.6}
-.usage .label{color:#ffa657;font-weight:700;margin-right:6px}
-.examples-title{font-size:13px;color:#58a6ff;font-weight:700;margin:16px 0 10px;display:flex;align-items:center;gap:6px}
-.examples-title::before{content:"";width:3px;height:13px;background:#58a6ff;border-radius:2px}
-.ex-item{background:#0d1117;border:1px solid #21262d;border-radius:10px;padding:11px 12px;margin-bottom:9px}
-.ex-en{font-size:14px;color:#e6edf3;line-height:1.5;word-break:break-word}
-.ex-en b{color:#7ee787;font-weight:600}
-.ex-cn{font-size:12.5px;color:#8b949e;margin-top:5px;line-height:1.5}
-.ex-tts{margin-top:8px;background:#161b22;border:1px solid #30363d;color:#58a6ff;padding:6px 12px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:all .15s}
-.ex-tts:hover{background:#1f6feb33;border-color:#58a6ff}
-.ex-tts:active{transform:scale(.95)}
-.ex-tts.playing{background:#23863633;border-color:#3fb950;color:#3fb950}
-.footer{text-align:center;padding:20px 0 10px;font-size:11px;color:#6e7681;line-height:1.6}
-.gradient-1{background:linear-gradient(135deg,#ff6b6b33,#ee5a6f22)}
-.gradient-2{background:linear-gradient(135deg,#4ecdc433,#44a08d22)}
-.gradient-3{background:linear-gradient(135deg,#a8edea22,#fed6e322)}
-.gradient-4{background:linear-gradient(135deg,#fbc2eb22,#a6c1ee22)}
-.gradient-5{background:linear-gradient(135deg,#fad0c433,#ffd1ff22)}
-.gradient-6{background:linear-gradient(135deg,#a18cd122,#fbc2eb22)}
-.gradient-7{background:linear-gradient(135deg,#84fab022,#8fd3f422)}
-.gradient-8{background:linear-gradient(135deg,#ffecd222,#fcb69f22)}
-.gradient-9{background:linear-gradient(135deg,#667eea33,#764ba222)}
-.gradient-10{background:linear-gradient(135deg,#f093fb22,#f5576c22)}
-.gradient-11{background:linear-gradient(135deg,#5ee7df22,#b490ca22)}
-.gradient-12{background:linear-gradient(135deg,#c3cfe222,#f5f7fa22)}
-.gradient-13{background:linear-gradient(135deg,#fdcbf122,#e1bee722)}
-.gradient-14{background:linear-gradient(135deg,#ff9a9e22,#fad0c422)}
-.gradient-15{background:linear-gradient(135deg,#a1c4fd22,#c2e9fb22)}
-.fade-in{animation:fadeIn .45s ease-out}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+  :root { --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#c9d1d9; --head:#f0f6fc; --accent:#58a6ff; --sub:#8b949e; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; padding:16px; }
+  header { text-align:center; margin-bottom:18px; }
+  h1 { margin:0; color:var(--head); font-size:1.6rem; }
+  .day-tag { display:inline-block; margin-top:8px; padding:4px 12px; border-radius:999px; background:#21262d; color:var(--accent); font-size:0.9rem; border:1px solid var(--border); }
+  .ctrl { text-align:center; margin-bottom:14px; }
+  .btn-shuffle { background:#21262d; color:var(--accent); border:1px solid var(--border); padding:8px 18px; border-radius:999px; font-size:0.95rem; cursor:pointer; }
+  .btn-shuffle:active { background:#30363d; }
+  #words { display:flex; flex-direction:column; gap:18px; max-width:640px; margin:0 auto; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:18px; }
+  .word-row { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .word { font-size:1.65rem; font-weight:700; color:var(--head); letter-spacing:0.5px; }
+  .ipa { color:var(--sub); font-size:0.95rem; }
+  .tts-btns { display:flex; gap:8px; margin-left:auto; }
+  .tts-btns button { background:#21262d; border:1px solid var(--border); color:var(--text); border-radius:8px; padding:6px 10px; font-size:0.8rem; cursor:pointer; }
+  .tts-btns button:active { background:#30363d; }
+  .meaning { margin-top:10px; font-size:1rem; color:var(--text); }
+  .meaning .pos { color:var(--accent); font-weight:600; }
+  .emoji-card { margin:14px 0; display:flex; align-items:center; justify-content:center; width:100%; height:130px; border-radius:16px; background:linear-gradient(135deg,#1f6feb,#a371f7); font-size:4.5rem; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+  .story, .tip { margin-top:12px; padding:12px; border-radius:12px; background:#0d1117; border-left:4px solid var(--accent); }
+  .story strong, .tip strong { color:var(--head); }
+  .story { color:var(--text); }
+  .tip { color:var(--sub); font-size:0.95rem; }
+  .sentences { margin-top:14px; }
+  .sent-title { font-size:0.9rem; color:var(--sub); margin-bottom:8px; }
+  .sentence { display:flex; gap:10px; align-items:flex-start; background:#0d1117; border:1px solid var(--border); border-radius:12px; padding:12px; margin-bottom:10px; }
+  .sen-text { flex:1; }
+  .sen-en { color:var(--head); font-size:0.98rem; }
+  .sen-cn { color:var(--sub); font-size:0.9rem; margin-top:4px; }
+  .play-btn { background:#21262d; border:1px solid var(--border); border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; cursor:pointer; flex-shrink:0; margin-top:2px; }
+  .play-btn:active { background:#30363d; }
+  .footer { text-align:center; margin-top:24px; color:var(--sub); font-size:0.85rem; }
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>📚 雅思核心词汇 Day 6</h1>
-  <div class="sub">教育学术 + 知识体系</div>
-  <div class="meta">15个高频词 · 每词3例句 · 例句真人发音</div>
+<header>
+  <h1>雅思核心词汇</h1>
+  <div class="day-tag">Day 06</div>
+</header>
+<div class="ctrl">
+  <button class="btn-shuffle" onclick="renderWords()">🔄 重新乱序</button>
 </div>
-
-<div class="toolbar">
-  <button class="btn-action btn-shuffle" onclick="shuffleCards()">🔀 乱序重排</button>
-  <button class="btn-action" onclick="playAll()">▶️ 顺序连播</button>
-</div>
-
-<div id="cards"></div>
-
-<div class="footer">
-  雅思核心词汇 Day 6 · 深色主题<br>
-  单词：有道TTS · 例句：edge-tts Ryan Neural 真人发音
-</div>
-
-<audio id="player" playsinline webkit-playsinline x5-playsinline preload="auto"></audio>
-
+<div id="words"></div>
+<div class="footer">点击 🇬🇧/🇺🇸 听单词，点击 🔊 听例句</div>
 <script>
-const $ = id => document.getElementById(id);
-const player = $('player');
-
-var SENT_BASE = 'ielts-vocab/sentence_';
-
-function playWord(word, type) {
-  var audio = new Audio('audio/' + word.toLowerCase() + (type === 1 ? '_uk.mp3' : '_us.mp3'));
-  audio.play().catch(function() {});
-}
-
-var _sentMap={"the school has recently updated its curriculum to ": "audio/curriculum_sent1.mp3", "a well-designed curriculum balances theory and pra": "audio/curriculum_sent2.mp3", "students are calling for a more diverse curriculum": "audio/curriculum_sent3.mp3", "modern pedagogy emphasizes student-centered learni": "audio/pedagogy_sent1.mp3", "the conference explored new approaches to language": "audio/pedagogy_sent2.mp3", "technology has transformed pedagogy in higher educ": "audio/pedagogy_sent3.mp3", "basic literacy is an essential skill for modern li": "audio/literacy_sent1.mp3", "the government has launched a national literacy ca": "audio/literacy_sent2.mp3", "improving digital literacy among the elderly has b": "audio/literacy_sent3.mp3", "nine-year compulsory education is guaranteed by la": "audio/compulsory_sent1.mp3", "math is a compulsory subject in most high schools.": "audio/compulsory_sent2.mp3", "the wearing of seat belts became compulsory in 198": "audio/compulsory_sent3.mp3", "she was awarded a full scholarship to oxford unive": "audio/scholarship_sent1.mp3", "his scholarship on medieval history is widely resp": "audio/scholarship_sent2.mp3", "without a scholarship, many students would be unab": "audio/scholarship_sent3.mp3", "she spent three years writing her doctoral dissert": "audio/dissertation_sent1.mp3", "his dissertation explores the impact of technology": "audio/dissertation_sent2.mp3", "the dissertation defense is the final step before ": "audio/dissertation_sent3.mp3", "employers often require proof of academic credenti": "audio/credential_sent1.mp3", "his credentials as a researcher are impeccable.": "audio/credential_sent2.mp3", "you need the right credentials to practice medicin": "audio/credential_sent3.mp3", "vocational education prepares students for specifi": "audio/vocational_sent1.mp3", "the government is investing heavily in vocational ": "audio/vocational_sent2.mp3", "he believes that vocational skills are just as imp": "audio/vocational_sent3.mp3", "university tuition fees have risen dramatically in": "audio/tuition_sent1.mp3", "she works part-time to cover her tuition expenses.": "audio/tuition_sent2.mp3", "the company offers tuition reimbursement for emplo": "audio/tuition_sent3.mp3", "the test measures your proficiency in spoken engli": "audio/proficiency_sent1.mp3", "her proficiency in data analysis impressed the int": "audio/proficiency_sent2.mp3", "it takes years to achieve true proficiency in a se": "audio/proficiency_sent3.mp3", "harvard university enjoys enormous prestige around": "audio/prestige_sent1.mp3", "the award brought him great prestige in the scient": "audio/prestige_sent2.mp3", "a company's prestige can be its greatest asset.": "audio/prestige_sent3.mp3", "you must meet the eligibility criteria before appl": "audio/eligibility_sent1.mp3", "his age meant he lost eligibility for the scholars": "audio/eligibility_sent2.mp3", "the university will assess your academic eligibili": "audio/eligibility_sent3.mp3", "she was granted tenure after six years of teaching": "audio/tenure_sent1.mp3", "the professor published extensively during his ten": "audio/tenure_sent2.mp3", "the system of academic tenure is designed to prote": "audio/tenure_sent3.mp3", "the student was expelled for plagiarism.": "audio/plagiarism_sent1.mp3", "many universities use software to detect plagiaris": "audio/plagiarism_sent2.mp3", "always cite your sources to avoid plagiarism.": "audio/plagiarism_sent3.mp3", "more students now have access to tertiary educatio": "audio/tertiary_sent1.mp3", "the tertiary sector accounts for 70 percent of the": "audio/tertiary_sent2.mp3", "enrollment in tertiary institutions has nearly dou": "audio/tertiary_sent3.mp3"};
-var _sentMap={"the school has recently updated its curriculum to ": "audio/curriculum_sent1.mp3", "a well-designed curriculum balances theory and pra": "audio/curriculum_sent2.mp3", "students are calling for a more diverse curriculum": "audio/curriculum_sent3.mp3", "modern pedagogy emphasizes student-centered learni": "audio/pedagogy_sent1.mp3", "the conference explored new approaches to language": "audio/pedagogy_sent2.mp3", "technology has transformed pedagogy in higher educ": "audio/pedagogy_sent3.mp3", "basic literacy is an essential skill for modern li": "audio/literacy_sent1.mp3", "the government has launched a national literacy ca": "audio/literacy_sent2.mp3", "improving digital literacy among the elderly has b": "audio/literacy_sent3.mp3", "nine-year compulsory education is guaranteed by la": "audio/compulsory_sent1.mp3", "math is a compulsory subject in most high schools.": "audio/compulsory_sent2.mp3", "the wearing of seat belts became compulsory in 198": "audio/compulsory_sent3.mp3", "she was awarded a full scholarship to oxford unive": "audio/scholarship_sent1.mp3", "his scholarship on medieval history is widely resp": "audio/scholarship_sent2.mp3", "without a scholarship, many students would be unab": "audio/scholarship_sent3.mp3", "she spent three years writing her doctoral dissert": "audio/dissertation_sent1.mp3", "his dissertation explores the impact of technology": "audio/dissertation_sent2.mp3", "the dissertation defense is the final step before ": "audio/dissertation_sent3.mp3", "employers often require proof of academic credenti": "audio/credential_sent1.mp3", "his credentials as a researcher are impeccable.": "audio/credential_sent2.mp3", "you need the right credentials to practice medicin": "audio/credential_sent3.mp3", "vocational education prepares students for specifi": "audio/vocational_sent1.mp3", "the government is investing heavily in vocational ": "audio/vocational_sent2.mp3", "he believes that vocational skills are just as imp": "audio/vocational_sent3.mp3", "university tuition fees have risen dramatically in": "audio/tuition_sent1.mp3", "she works part-time to cover her tuition expenses.": "audio/tuition_sent2.mp3", "the company offers tuition reimbursement for emplo": "audio/tuition_sent3.mp3", "the test measures your proficiency in spoken engli": "audio/proficiency_sent1.mp3", "her proficiency in data analysis impressed the int": "audio/proficiency_sent2.mp3", "it takes years to achieve true proficiency in a se": "audio/proficiency_sent3.mp3", "harvard university enjoys enormous prestige around": "audio/prestige_sent1.mp3", "the award brought him great prestige in the scient": "audio/prestige_sent2.mp3", "a company's prestige can be its greatest asset.": "audio/prestige_sent3.mp3", "you must meet the eligibility criteria before appl": "audio/eligibility_sent1.mp3", "his age meant he lost eligibility for the scholars": "audio/eligibility_sent2.mp3", "the university will assess your academic eligibili": "audio/eligibility_sent3.mp3", "she was granted tenure after six years of teaching": "audio/tenure_sent1.mp3", "the professor published extensively during his ten": "audio/tenure_sent2.mp3", "the system of academic tenure is designed to prote": "audio/tenure_sent3.mp3", "the student was expelled for plagiarism.": "audio/plagiarism_sent1.mp3", "many universities use software to detect plagiaris": "audio/plagiarism_sent2.mp3", "always cite your sources to avoid plagiarism.": "audio/plagiarism_sent3.mp3", "more students now have access to tertiary educatio": "audio/tertiary_sent1.mp3", "the tertiary sector accounts for 70 percent of the": "audio/tertiary_sent2.mp3", "enrollment in tertiary institutions has nearly dou": "audio/tertiary_sent3.mp3"};
-function playSent(text) {
-  var key = text.replace(/<[^>]+>/g, '').trim().toLowerCase().substring(0, 50);
-  var file = _sentMap[key] || '';
-  if (file) { var audio = new Audio(file); audio.play().catch(function() {}); }
-}
-
-function buildCard(w, i){
-  var exHtml = '';
-  for (var ei = 0; ei < w.examples.length; ei++) {
-    var ex = w.examples[ei];
-    var n = w.sentIdx[ei];
-    exHtml += '<div class="ex-item"><div class="ex-en">' + ex.en + '</div><div class="ex-cn">' + ex.cn + '</div><button class="ex-tts" data-sent="'+escapeHtml(ex.en)+'" onclick="playSent(this.dataset.sent)">🔊 播放本句</button></div>';
-  }
-  return '<div class="card fade-in" data-idx="' + i + '">'
-    + '<div class="card-top"><div class="emoji-box ' + w.grad + '">' + w.emoji + '</div>'
-    + '<div class="word-info"><div class="word-en">' + w.word + '</div>'
-    + '<div class="ipa">' + w.ipa + '</div>'
-    + '<div class="pos-mean"><span class="pos">' + w.pos + '</span>' + w.mean + '</div></div></div>'
-    + '<div class="tts-row">'
-    + '<button class="tts-btn gb" onclick="playWord(\'' + w.word + '\',\'gb\')">🇬🇧 英音 GB</button>'
-    + '<button class="tts-btn us" onclick="playWord(\'' + w.word + '\',\'us\')">🇺🇸 美音 US</button></div>'
-    + '<div class="story"><span class="label">💡 记忆故事</span>' + w.story + '</div>'
-    + '<div class="usage"><span class="label">📝 用法提示</span>' + w.usage + '</div>'
-    + '<div class="examples-title">📖 例句（点击🔊逐句播放·真人发音）</div>'
-    + exHtml + '</div>';
-}
-
-var RAW = [
-  {
-    word:"curriculum", ipa:"/kəˈrɪkjələm/", pos:"n.", mean:"课程；全部课程设置",
-    emoji:"📋", grad:"gradient-1",
-    sentIdx:[1,2,3],
-    story:"cur(跑)+riculum(小径)= 学生要跑完的路线 → 课程体系。curriculum vitae=简历。",
-    usage:"教育话题必备。搭配：school curriculum、core curriculum、curriculum reform。",
-    examples:[
-      {en:"The school has recently updated its <b>curriculum</b> to include coding.", cn:"学校最近更新了课程设置，将编程纳入其中。"},
-      {en:"A well-designed <b>curriculum</b> balances theory and practice.", cn:"一个精心设计的课程体系能平衡理论与实践。"},
-      {en:"Students are calling for a more diverse <b>curriculum</b>.", cn:"学生们呼吁开设更多元化的课程。"}
-    ]
-  },
-  {
-    word:"pedagogy", ipa:"/ˈpedəɡɒdʒi/", pos:"n.", mean:"教学法；教育学",
-    emoji:"🏫", grad:"gradient-2",
-    sentIdx:[4,5,6],
-    story:"ped(儿童)+agog(引导)= 引导儿童的方法 → 教学法。",
-    usage:"教育写作高级词。搭配：modern pedagogy、student-centered pedagogy。",
-    examples:[
-      {en:"Modern <b>pedagogy</b> emphasizes student-centered learning.", cn:"现代教学法强调以学生为中心的学习。"},
-      {en:"The conference explored new approaches to language <b>pedagogy</b>.", cn:"会议探讨了语言教学的新方法。"},
-      {en:"Technology has transformed <b>pedagogy</b> in higher education.", cn:"科技已经改变了高等教育的教学方式。"}
-    ]
-  },
-  {
-    word:"literacy", ipa:"/ˈlɪtərəsi/", pos:"n.", mean:"读写能力；素养",
-    emoji:"📖", grad:"gradient-3",
-    sentIdx:[7,8,9],
-    story:"liter(文字)+acy(状态)= 会认字的状态 → 读写能力。",
-    usage:"社会/教育高频。搭配：digital literacy、computer literacy、financial literacy。",
-    examples:[
-      {en:"Basic <b>literacy</b> is an essential skill for modern life.", cn:"基本的读写能力是现代生活的必备技能。"},
-      {en:"The government has launched a national <b>literacy</b> campaign.", cn:"政府发起了一场全国性的扫盲运动。"},
-      {en:"Improving digital <b>literacy</b> among the elderly has become a priority.", cn:"提升老年人的数字素养已成为一项优先任务。"}
-    ]
-  },
-  {
-    word:"compulsory", ipa:"/kəmˈpʌlsəri/", pos:"adj.", mean:"强制性的；义务的",
-    emoji:"📝", grad:"gradient-4",
-    sentIdx:[10,11,12],
-    story:"com(加强)+puls(推动)= 使劲推你去做 → 强制的。",
-    usage:"教育/法律高频。搭配：compulsory education、compulsory course。",
-    examples:[
-      {en:"Nine-year <b>compulsory</b> education is guaranteed by law.", cn:"九年义务教育受法律保障。"},
-      {en:"Math is a <b>compulsory</b> subject in most high schools.", cn:"数学在大多数高中是一门必修科目。"},
-      {en:"The wearing of seat belts became <b>compulsory</b> in 1983.", cn:"系安全带在1983年成为强制性规定。"}
-    ]
-  },
-  {
-    word:"scholarship", ipa:"/ˈskɒləʃɪp/", pos:"n.", mean:"奖学金；学术研究",
-    emoji:"🎓", grad:"gradient-5",
-    sentIdx:[13,14,15],
-    story:"scholar(学者)+ship= 学者该有的东西 → 奖学金/学识。",
-    usage:"搭配：win a scholarship、full scholarship、scholarship application。",
-    examples:[
-      {en:"She was awarded a full <b>scholarship</b> to Oxford University.", cn:"她获得了牛津大学的全额奖学金。"},
-      {en:"His <b>scholarship</b> on medieval history is widely respected.", cn:"他在中世纪历史方面的学术研究广受尊敬。"},
-      {en:"Without a <b>scholarship</b>, many students would be unable to afford university.", cn:"没有奖学金，许多学生将无法负担大学费用。"}
-    ]
-  },
-  {
-    word:"dissertation", ipa:"/ˌdɪsəˈteɪʃn/", pos:"n.", mean:"学位论文；专题论述",
-    emoji:"📑", grad:"gradient-6",
-    sentIdx:[16,17,18],
-    story:"dis(分开)+sert(讨论)= 分点展开讨论 → 论文。比essay正式得多。",
-    usage:"搭配：doctoral dissertation、write a dissertation、dissertation defense。",
-    examples:[
-      {en:"She spent three years writing her doctoral <b>dissertation</b>.", cn:"她花了三年时间撰写博士论文。"},
-      {en:"His <b>dissertation</b> explores the impact of technology on education.", cn:"他的论文探讨科技对教育的影响。"},
-      {en:"The <b>dissertation</b> defense is the final step before graduation.", cn:"论文答辩是毕业前的最后一步。"}
-    ]
-  },
-  {
-    word:"credential", ipa:"/krəˈdenʃl/", pos:"n.", mean:"证书；资质证明",
-    emoji:"🏅", grad:"gradient-7",
-    sentIdx:[19,20,21],
-    story:"cred(相信)+ential= 让人相信你的东西 → 证书资质。",
-    usage:"职场/教育高频。搭配：professional credentials、academic credentials。",
-    examples:[
-      {en:"Employers often require proof of academic <b>credentials</b>.", cn:"雇主通常要求提供学历证明。"},
-      {en:"His <b>credentials</b> as a researcher are impeccable.", cn:"他作为研究者的资历无可挑剔。"},
-      {en:"You need the right <b>credentials</b> to practice medicine in this country.", cn:"你需要具备相应的资质才能在这个国家行医。"}
-    ]
-  },
-  {
-    word:"vocational", ipa:"/vəʊˈkeɪʃənl/", pos:"adj.", mean:"职业的；职业培训的",
-    emoji:"🔧", grad:"gradient-8",
-    sentIdx:[22,23,24],
-    story:"vocation(职业)+al= 职业相关的。vs. academic(学术的)。",
-    usage:"搭配：vocational training、vocational education、vocational skills。",
-    examples:[
-      {en:"<b>Vocational</b> education prepares students for specific careers.", cn:"职业教育为学生从事特定职业做好准备。"},
-      {en:"The government is investing heavily in <b>vocational</b> training programs.", cn:"政府正在大力投资职业培训项目。"},
-      {en:"He believes that <b>vocational</b> skills are just as important as academic knowledge.", cn:"他认为职业技能与学术知识同等重要。"}
-    ]
-  },
-  {
-    word:"tuition", ipa:"/tjuˈɪʃn/", pos:"n.", mean:"学费；教学",
-    emoji:"💰", grad:"gradient-9",
-    sentIdx:[25,26,27],
-    story:"tuit(看护)+ion= 导师教导 → 学费。",
-    usage:"搭配：tuition fees、pay tuition、tuition assistance。",
-    examples:[
-      {en:"University <b>tuition</b> fees have risen dramatically in recent years.", cn:"近年来大学学费大幅上涨。"},
-      {en:"She works part-time to cover her <b>tuition</b> expenses.", cn:"她做兼职来支付学费开支。"},
-      {en:"The company offers <b>tuition</b> reimbursement for employees.", cn:"公司为员工提供学费报销。"}
-    ]
-  },
-  {
-    word:"proficiency", ipa:"/prəˈfɪʃnsi/", pos:"n.", mean:"熟练；精通",
-    emoji:"🧠", grad:"gradient-10",
-    sentIdx:[28,29,30],
-    story:"pro(向前)+fici(做)= 做到前面的水平 → 精通。",
-    usage:"语言/技能话题高频。搭配：language proficiency、proficiency test。",
-    examples:[
-      {en:"The test measures your <b>proficiency</b> in spoken English.", cn:"这项测试评估你的英语口语水平。"},
-      {en:"Her <b>proficiency</b> in data analysis impressed the interviewers.", cn:"她在数据分析方面的熟练给面试官留下了深刻印象。"},
-      {en:"It takes years to achieve true <b>proficiency</b> in a second language.", cn:"真正精通一门第二语言需要多年时间。"}
-    ]
-  },
-  {
-    word:"prestige", ipa:"/preˈstiːʒ/", pos:"n.", mean:"声望；威望",
-    emoji:"⭐", grad:"gradient-11",
-    sentIdx:[31,32,33],
-    story:"pre(前)+stige(站)= 站在前面 → 声望。prestigious=有声望的。",
-    usage:"搭配：international prestige、prestige of a university、prestigious institution。",
-    examples:[
-      {en:"Harvard University enjoys enormous <b>prestige</b> around the world.", cn:"哈佛大学在全球享有极高声望。"},
-      {en:"The award brought him great <b>prestige</b> in the scientific community.", cn:"这个奖项为他在科学界带来了极高声望。"},
-      {en:"A company's <b>prestige</b> can be its greatest asset.", cn:"一家公司的声望可以是它最大的资产。"}
-    ]
-  },
-  {
-    word:"eligibility", ipa:"/ˌelɪdʒəˈbɪləti/", pos:"n.", mean:"资格；合格",
-    emoji:"✅", grad:"gradient-12",
-    sentIdx:[34,35,36],
-    story:"e(出)+lig(选)+ibility= 被选出来的资格 → 合格性。",
-    usage:"申请/考试话题。搭配：eligibility criteria、check eligibility、meet eligibility requirements。",
-    examples:[
-      {en:"You must meet the <b>eligibility</b> criteria before applying.", cn:"申请前你必须满足资格标准。"},
-      {en:"His age meant he lost <b>eligibility</b> for the scholarship.", cn:"年龄意味着他失去了该奖学金的申请资格。"},
-      {en:"The university will assess your academic <b>eligibility</b> for the program.", cn:"大学将评估你对该项目的学术资格。"}
-    ]
-  },
-  {
-    word:"tenure", ipa:"/ˈtenjə(r)/", pos:"n.", mean:"终身职位；任期",
-    emoji:"🔐", grad:"gradient-13",
-    sentIdx:[37,38,39],
-    story:"ten(持有)+ure= 长期持有的职位 → 终身教职。",
-    usage:"学术/职场话题。搭配：academic tenure、grant tenure、during one's tenure。",
-    examples:[
-      {en:"She was granted <b>tenure</b> after six years of teaching.", cn:"她在教学六年后获得了终身教职。"},
-      {en:"The professor published extensively during his <b>tenure</b> at the university.", cn:"该教授在任职期间发表了大量论文。"},
-      {en:"The system of academic <b>tenure</b> is designed to protect intellectual freedom.", cn:"学术终身制的设计是为了保护思想自由。"}
-    ]
-  },
-  {
-    word:"plagiarism", ipa:"/ˈpleɪdʒərɪzəm/", pos:"n.", mean:"抄袭；剽窃",
-    emoji:"🚫", grad:"gradient-14",
-    sentIdx:[40,41,42],
-    story:"plag(劫持)+arism= 劫持别人的文字 → 抄袭。学术界大忌。",
-    usage:"学术高频。搭配：accused of plagiarism、plagiarism detection、avoid plagiarism。",
-    examples:[
-      {en:"The student was expelled for <b>plagiarism</b>.", cn:"该学生因抄袭被开除。"},
-      {en:"Many universities use software to detect <b>plagiarism</b>.", cn:"许多大学使用软件来检测抄袭。"},
-      {en:"Always cite your sources to avoid <b>plagiarism</b>.", cn:"永远标注你的引用来源以避免抄袭。"}
-    ]
-  },
-  {
-    word:"tertiary", ipa:"/ˈtɜːʃəri/", pos:"adj.", mean:"第三的；高等教育的",
-    emoji:"🏛", grad:"gradient-15",
-    sentIdx:[43,44,45],
-    story:"terti(第三)+ary= 第三级的 → 高等教育的。primary-secondary-tertiary三级体系。",
-    usage:"搭配：tertiary education、tertiary sector、tertiary institution。",
-    examples:[
-      {en:"More students now have access to <b>tertiary</b> education.", cn:"现在更多学生有机会接受高等教育。"},
-      {en:"The <b>tertiary</b> sector accounts for 70 percent of the workforce.", cn:"第三产业占劳动力的70%。"},
-      {en:"Enrollment in <b>tertiary</b> institutions has nearly doubled in a decade.", cn:"高等教育机构入学人数在十年内几乎翻了一番。"}
-    ]
-  }
+const rawWords = [
+  { word:"alleviate", ipa:"/əˈliːvieɪt/", pos:"v.", mean:"减轻，缓解（痛苦/负担）", emoji:"💊", story:"a-（表加强）+ levi（轻）+ ate = 让它变轻，alleviate 就是把痛苦变轻。", tip:"常考搭配：alleviate pain / stress / poverty / burden。", sents:[{en:"The new medicine helps alleviate chronic back pain.", cn:"新药有助于缓解慢性背痛。"},{en:"Solar power can alleviate the energy crisis in rural areas.", cn:"太阳能可以缓解农村地区的能源危机。"},{en:"Her words did little to alleviate his anxiety.", cn:"她的话几乎没能减轻他的焦虑。"}]},
+  { word:"autonomous", ipa:"/ɔːˈtɑːnəməs/", pos:"adj.", mean:"自主的，自治的；独立行动的", emoji:"🤖", story:"auto-自己 + nomous（管理）= 自己管自己，autonomous。", tip:"常考搭配：autonomous vehicle / region / system。", sents:[{en:"Autonomous vehicles are reshaping the future of transportation.", cn:"自动驾驶汽车正在重塑交通运输的未来。"},{en:"Hong Kong is an autonomous region of China.", cn:"中国香港是一个高度自治的地区。"},{en:"The robot can make autonomous decisions without human input.", cn:"这台机器人无需人工干预就能自主决策。"}]},
+  { word:"capitalize", ipa:"/ˈkæpɪtəlaɪz/", pos:"v.", mean:"利用（on）；大写；投资于", emoji:"💰", story:"capital（资本）+ ize（化）= 把事情变成资本，capitalize。", tip:"核心搭配：capitalize on sth.（充分利用某事）。", sents:[{en:"We should capitalize on this opportunity to expand overseas.", cn:"我们应该抓住这次机会拓展海外市场。"},{en:"The company capitalized its reserves for a new project.", cn:"公司将储备金投资于新项目。"},{en:"Be sure to capitalize the first letter of each sentence.", cn:"记得把每句首字母大写。"}]},
+  { word:"concise", ipa:"/kənˈsaɪs/", pos:"adj.", mean:"简洁的，简明的", emoji:"✂️", story:"con-（加强）+ cise（切）= 切掉废话，concise 就是简洁。", tip:"写作中常与 brief、succinct 替换使用。", sents:[{en:"Please keep your report concise and to the point.", cn:"报告请简明扼要。"},{en:"The speaker delivered a concise summary of the research.", cn:"演讲者对研究做了简洁总结。"},{en:"A concise answer often carries more weight than a long one.", cn:"简洁的回答往往比长篇大论更有分量。"}]},
+  { word:"consolidate", ipa:"/kənˈsɑːlɪdeɪt/", pos:"v.", mean:"巩固，加强；合并，整合", emoji:"🧱", story:"con-一起 + solid（坚固）+ ate = 把力量凝成一块，consolidate。", tip:"常考搭配：consolidate power / position / debt。", sents:[{en:"The company is trying to consolidate its position in the Asian market.", cn:"公司正努力巩固其在亚洲市场的地位。"},{en:"Two local banks decided to consolidate into a single firm.", cn:"两家地方银行决定合并成一家公司。"},{en:"He consolidated his influence by winning three more elections.", cn:"他通过赢得三次选举巩固了影响力。"}]},
+  { word:"depict", ipa:"/dɪˈpɪkt/", pos:"v.", mean:"描绘，描述，刻画", emoji:"🎨", story:"de-下 + pict（画）= 把画面画下来，depict。", tip:"写作中可替代 describe，常考 depict sth. as ...。", sents:[{en:"The painting depicts a quiet village at dawn.", cn:"这幅画描绘了黎明时分宁静的村庄。"},{en:"The film depicts life in ancient China vividly.", cn:"这部电影生动地描绘了古代中国的生活。"},{en:"The media often depicts teenagers as rebellious.", cn:"媒体常把青少年描绘成叛逆的。"}]},
+  { word:"diligent", ipa:"/ˈdɪlɪdʒənt/", pos:"adj.", mean:"勤奋的，刻苦的；细致周到的", emoji:"🐝", story:"di-（反复）+ lig（努力）+ ent = 反复努力的蜜蜂，diligent。", tip:"常考搭配：be diligent in doing sth.（在做某事上勤奋）。", sents:[{en:"She is a diligent student who never misses a class.", cn:"她是个勤奋的学生，从不缺课。"},{en:"Diligent research leads to reliable conclusions.", cn:"细致的研究才能得出可靠的结论。"},{en:"He is diligent in updating his professional knowledge.", cn:"他勤于更新自己的专业知识。"}]},
+  { word:"distort", ipa:"/dɪˈstɔːrt/", pos:"v.", mean:"扭曲，曲解；使变形", emoji:"🌀", story:"dis-坏 + tort（扭）= 扭坏了形状，distort。", tip:"常见搭配：distort facts / truth / image。", sents:[{en:"The media sometimes distorts the truth to attract viewers.", cn:"媒体有时为了吸引观众而扭曲事实。"},{en:"Social media can distort our sense of reality.", cn:"社交媒体会扭曲我们对现实的感知。"},{en:"Heat caused the plastic to distort out of shape.", cn:"高温让塑料变形。"}]},
+  { word:"elaborate", ipa:"/ɪˈlæbəreɪt/", pos:"adj./v.", mean:"详尽的；精心制作的 / 详尽阐述", emoji:"🧩", story:"e-出 + labor（劳动）+ ate = 费很多劳动才做出来，elaborate。", tip:"作动词常考 elaborate on（详述）。", sents:[{en:"She prepared an elaborate plan for the marketing campaign.", cn:"她为营销活动准备了详尽的方案。"},{en:"Could you elaborate on the third point of your argument?", cn:"能详细说说你的论点的第三点吗？"},{en:"The bride wore an elaborate dress covered in pearls.", cn:"新娘穿着一件镶满珍珠的精致礼服。"}]},
+  { word:"explicit", ipa:"/ɪkˈsplɪsɪt/", pos:"adj.", mean:"明确的，清楚的；直率的", emoji:"📢", story:"ex-外 + plicit（折叠）= 摊开折叠的部分，explicit 就是完全摊开说清楚。", tip:"与 implicit（含蓄的）相反，常考 explicit instructions / content。", sents:[{en:"The rules are explicit and leave no room for doubt.", cn:"规则清楚明白，不容置疑。"},{en:"The teacher gave explicit instructions on how to format the essay.", cn:"老师对论文格式给出了明确的说明。"},{en:"His criticism was explicit but not unkind.", cn:"他的批评很直率，但不刻薄。"}]},
+  { word:"flourish", ipa:"/ˈflɜːrɪʃ/", pos:"v.", mean:"繁荣，茁壮成长；挥舞", emoji:"🌱", story:"flour（花粉）+ ish = 像花粉一样四散，植物便 flourish。", tip:"常考搭配：flourish in ...（在…中蓬勃发展）。", sents:[{en:"Local businesses have started to flourish in the past year.", cn:"过去一年本地生意开始兴隆起来。"},{en:"Many rare plants flourish in this warm climate.", cn:"许多珍稀植物在这种温暖气候中茁壮生长。"},{en:"He walked in, flourishing his new certificate proudly.", cn:"他挥舞着新证书骄傲地走进来。"}]},
+  { word:"fundamental", ipa:"/ˌfʌndəˈmentl/", pos:"adj./n.", mean:"基本的，根本的；基础", emoji:"🏛️", story:"fundament（基础）+ al = 支撑所有东西的根基，fundamental。", tip:"写作常考：fundamental difference / change / principle。", sents:[{en:"There is a fundamental difference between the two proposals.", cn:"两个提案之间有根本性差异。"},{en:"Honesty is a fundamental value in any relationship.", cn:"诚实是人际关系中最基本的价值。"},{en:"These changes may affect the fundamental structure of the economy.", cn:"这些变化可能影响经济的基本结构。"}]},
+  { word:"generate", ipa:"/ˈdʒenəreɪt/", pos:"v.", mean:"产生（电力/收入/想法）；引起", emoji:"⚡", story:"gener（出生）+ ate = 让它生出来，generate。", tip:"常考搭配：generate electricity / revenue / ideas / employment。", sents:[{en:"Wind farms can generate enough electricity for thousands of homes.", cn:"风电场能为数千户家庭供电。"},{en:"The campaign generated a lot of public interest.", cn:"这次活动引起了公众的广泛兴趣。"},{en:"Small businesses help generate local employment.", cn:"小企业有助于创造本地就业。"}]},
+  { word:"humiliate", ipa:"/hjuːˈmɪlieɪt/", pos:"v.", mean:"使丢脸，羞辱", emoji:"🙇", story:"humili（低）+ ate = 把人按低，humiliate 就是贬低羞辱。", tip:"常考名词 humiliation（丢脸的事）。", sents:[{en:"He was humiliated by the unfair criticism in public.", cn:"他因公开场合受到不公正的批评而感到丢脸。"},{en:"Failing the test publicly can be a humiliating experience.", cn:"当众考试失败是一种丢脸的经历。"},{en:"She refused to let her rival humiliate her again.", cn:"她拒绝让对手再次羞辱她。"}]},
+  { word:"ignite", ipa:"/ɪɡˈnaɪt/", pos:"v.", mean:"点燃，激起，引发", emoji:"🔥", story:"ign（火）+ ite = 一按就出火，ignite。", tip:"比喻用法常指激起情绪、争论、革命。", sents:[{en:"A single spark can ignite a huge forest fire.", cn:"一个火星就能引发森林大火。"},{en:"His speech ignited a passionate debate across the country.", cn:"他的演讲在全国激起了一场激烈辩论。"},{en:"The match failed to ignite in the windy weather.", cn:"火柴在大风天没能点着。"}]}
 ];
 
-var currentOrder = [];
-for (var k = 0; k < RAW.length; k++) currentOrder.push(k);
+function play(url){ const a=new Audio(url); a.play().catch(()=>{}); }
+function playWord(word,type){ play('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(word)+'&type='+type); }
+function playSentence(text){ play('https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(text)); }
+function shuffle(arr){ const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
-function render(){
-  var h = '';
-  for (var j = 0; j < currentOrder.length; j++){
-    h += buildCard(RAW[currentOrder[j]], currentOrder[j]);
-  }
-  $('cards').innerHTML = h;
-  window.scrollTo({top:0,behavior:'smooth'});
+function renderWords(){
+  const list=shuffle(rawWords);
+  const container=document.getElementById('words');
+  container.innerHTML=list.map(w=>{
+    const sents=w.sents.map((s,i)=>`<div class="sentence"><div class="sen-text"><div class="sen-en">${i+1}. ${s.en}</div><div class="sen-cn">${s.cn}</div></div><button class="play-btn" onclick="playSentence('${s.en.replace(/'/g,"\\'")}')">🔊</button></div>`).join('');
+    return `<div class="card">
+      <div class="word-row">
+        <div>
+          <div class="word">${w.word}</div>
+          <div class="ipa">${w.ipa}</div>
+        </div>
+        <div class="tts-btns">
+          <button onclick="playWord('${w.word}',1)">🇬🇧 GB</button>
+          <button onclick="playWord('${w.word}',2)">🇺🇸 US</button>
+        </div>
+      </div>
+      <div class="meaning"><span class="pos">${w.pos}</span> ${w.mean}</div>
+      <div class="emoji-card">${w.emoji}</div>
+      <div class="story"><strong>记忆故事</strong><br>${w.story}</div>
+      <div class="tip"><strong>用法提示</strong><br>${w.tip}</div>
+      <div class="sentences">
+        <div class="sent-title">例句</div>
+        ${sents}
+      </div>
+    </div>`;
+  }).join('');
 }
-
-function shuffleCards(){
-  for (var i = currentOrder.length - 1; i > 0; i--){
-    var r = Math.floor(Math.random() * (i + 1));
-    var tmp = currentOrder[i];
-    currentOrder[i] = currentOrder[r];
-    currentOrder[r] = tmp;
-  }
-  render();
-}
-
-var playQueue = [];
-var playIdx = 0;
-function playAll(){
-  playQueue = currentOrder.slice();
-  playIdx = 0;
-  playNext();
-}
-function playNext(){
-  if (playIdx >= playQueue.length) return;
-  var wi = playQueue[playIdx];
-  var cardEl = document.querySelector('.card[data-idx="' + wi + '"]');
-  if (cardEl) cardEl.scrollIntoView({behavior:'smooth',block:'start'});
-  playWord(RAW[wi].word, 'gb');
-  player.onended = function(){ playIdx++; playNext(); };
-}
-
-function initShuffle(){
-  for (var i = currentOrder.length - 1; i > 0; i--){
-    var r = Math.floor(Math.random() * (i + 1));
-    var tmp = currentOrder[i];
-    currentOrder[i] = currentOrder[r];
-    currentOrder[r] = tmp;
-  }
-}
-
-initShuffle();
-render();
+renderWords();
 </script>
 <style>
 #liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}

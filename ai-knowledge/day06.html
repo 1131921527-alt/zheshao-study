@@ -1,241 +1,207 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>AI做短视频脚本 - Day 6</title>
-    <style>
-        :root {
-            --bg: #0f1115;
-            --card: #1a1d23;
-            --card-2: #22262e;
-            --text: #e7e9ef;
-            --text-sub: #9aa3b2;
-            --accent: #ff7a45;
-            --accent-2: #00d4aa;
-            --border: #2a2e38;
-            --shadow: 0 8px 24px rgba(0,0,0,0.35);
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            line-height: 1.7;
-            padding: 18px;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 22px;
-        }
-        .day-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent), #ff9a3d);
-            color: #fff;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-        h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; line-height: 1.3; }
-        .sub { color: var(--text-sub); font-size: 14px; }
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 18px;
-            margin-bottom: 16px;
-            box-shadow: var(--shadow);
-        }
-        .card h2 {
-            font-size: 17px;
-            color: var(--accent);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .card h3 {
-            font-size: 15px;
-            color: var(--accent-2);
-            margin: 14px 0 8px;
-        }
-        p, li { font-size: 15px; color: var(--text); margin-bottom: 10px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 6px; }
-        .highlight {
-            background: rgba(255,122,69,0.12);
-            border-left: 3px solid var(--accent);
-            padding: 12px;
-            border-radius: 8px;
-            margin: 12px 0;
-            font-size: 14px;
-        }
-        .prompt-box {
-            background: var(--card-2);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 14px;
-            margin: 12px 0;
-            font-size: 14px;
-            white-space: pre-wrap;
-            word-break: break-word;
-            color: #d1d5db;
-            line-height: 1.6;
-        }
-        .tag {
-            display: inline-block;
-            background: var(--card-2);
-            color: var(--text-sub);
-            font-size: 12px;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-right: 6px;
-            margin-bottom: 8px;
-            border: 1px solid var(--border);
-        }
-        .step {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 14px;
-        }
-        .step-num {
-            min-width: 28px;
-            height: 28px;
-            background: var(--accent);
-            color: #fff;
-            font-weight: 800;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-top: 2px;
-        }
-        .step-body { flex: 1; }
-        .step-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
-        .step-desc { color: var(--text-sub); font-size: 14px; }
-        .footer {
-            text-align: center;
-            color: var(--text-sub);
-            font-size: 13px;
-            margin-top: 20px;
-            padding-bottom: 20px;
-        }
-        strong { color: var(--accent-2); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>AI系统性学习 Day 6 · 手机端AI助手对比</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a2e;color:#e8e8e8;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:16px 12px 40px}
+.card{background:#16213e;border-radius:12px;padding:18px 14px;margin-bottom:14px;border:1px solid #0f3460}
+.badge{display:inline-block;background:#e94560;color:#fff;font-size:12px;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+h1{font-size:22px;color:#00d2ff;text-align:center;margin-bottom:6px}
+.subtitle{text-align:center;color:#aaa;font-size:13px;margin-bottom:18px}
+h2{font-size:17px;color:#00d2ff;margin-bottom:10px;border-bottom:2px solid #0f3460;padding-bottom:6px}
+h3{font-size:15px;color:#e94560;margin:12px 0 6px}
+p{font-size:14px;margin-bottom:8px}
+.tag{display:inline-block;background:#0f3460;color:#00d2ff;font-size:12px;padding:2px 8px;border-radius:4px;margin:2px 4px 2px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+th{background:#0f3460;color:#00d2ff;padding:8px 6px;text-align:left;font-weight:600}
+td{background:#16213e;padding:8px 6px;border-bottom:1px solid #1a1a2e}
+.prompt-box{background:#0a0a23;border:2px solid #e94560;border-radius:10px;padding:14px;margin:10px 0}
+.prompt-box .label{color:#e94560;font-size:12px;margin-bottom:4px;font-weight:600}
+.prompt-box pre{color:#e8e8e8;font-size:13px;white-space:pre-wrap;word-break:break-all;font-family:inherit}
+.tips{background:#16213e;border-left:4px solid #e94560;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0}
+.tips .title{color:#e94560;font-weight:600;font-size:14px}
+.compare-row{display:flex;gap:8px;margin:10px 0}
+.compare-item{flex:1;background:#0f3460;border-radius:10px;padding:12px;text-align:center}
+.compare-item .icon{font-size:28px;margin-bottom:4px}
+.compare-item .name{color:#00d2ff;font-size:14px;font-weight:600}
+.compare-item .desc{color:#aaa;font-size:12px;margin-top:4px}
+.footer{text-align:center;color:#555;font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid #0f3460}
+ul{padding-left:18px;font-size:14px;margin:6px 0}
+li{margin-bottom:4px}
+</style>
 </head>
 <body>
-    <div class="header">
-        <div class="day-badge">AI系统性学习 · Day 6</div>
-        <h1>AI做短视频脚本<br>一个人也能顶半个编导</h1>
-        <p class="sub">选题：AI工具实战｜用时5分钟，看完就能用</p>
-    </div>
 
-    <div class="card">
-        <h2>🎬 先说人话</h2>
-        <p>做短视频最头疼的不是拍，是想脚本。AI能帮你把“我想拍个视频”变成“第几秒说啥、画面配啥、字幕怎么打”。你只要告诉它你的目标观众、想讲什么、想要啥风格，它就能给你一版能直接拍的脚本。</p>
-        <div class="highlight">
-            <strong>核心好处：</strong>省脑子、出活快、结构不容易散。尤其适合口播号、知识分享、带货种草、Vlog旁白。
-        </div>
-    </div>
+<div class="badge">Day 6 · AI系统性学习</div>
+<h1>📱 手机端AI助手对比</h1>
+<p class="subtitle">手机上用AI，到底哪个靠谱？一文搞定选手机助手</p>
 
-    <div class="card">
-        <h2>🛠️ 推荐工具</h2>
-        <span class="tag">ChatGPT</span>
-        <span class="tag">Claude</span>
-        <span class="tag">Kimi</span>
-        <span class="tag">豆包</span>
-        <span class="tag">DeepSeek</span>
-        <span class="tag">通义千问</span>
-        <p style="margin-top:12px">别纠结用哪个，能打开哪个用哪个。重点不是工具，而是你给的指令够不够清楚。</p>
-    </div>
-
-    <div class="card">
-        <h2>📝 四步出脚本</h2>
-        <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-                <div class="step-title">定目标</div>
-                <div class="step-desc">这条视频要干嘛？让人点赞、关注、下单、还是收藏？目标不同，脚本写法完全不一样。</div>
-            </div>
-        </div>
-        <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-                <div class="step-title">喂素材</div>
-                <div class="step-desc">把你要讲的内容、卖点、金句、案例，随便丢给AI。越具体，AI越懂你。</div>
-            </div>
-        </div>
-        <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-                <div class="step-title">下指令</div>
-                <div class="step-desc">用下面的万能模板，告诉AI格式、时长、风格、目标人群。</div>
-            </div>
-        </div>
-        <div class="step">
-            <div class="step-num">4</div>
-            <div class="step-body">
-                <div class="step-title">改两遍</div>
-                <div class="step-desc">AI第一稿通常能用但不精。让它加钩子、改开头、补画面提示，润两次就能拍。</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>💡 万能提示词模板</h2>
-        <p>复制这段，把括号里的内容换成你自己的：</p>
-        <div class="prompt-box">请帮我写一条短视频口播脚本，要求如下：
-- 目标观众：【25-35岁职场人，对效率工具感兴趣】
-- 视频主题：【介绍一款时间管理App】
-- 时长：【60秒左右】
-- 风格：【口语化、有节奏、开头要抓人】
-- 结构：黄金3秒开头 + 痛点 + 解决方案 + 演示 + 结尾引导关注
-- 输出格式：每10秒一段，包含【口播文案】和【画面/字幕建议】
-- 额外要求：开头加一句反常识金句，结尾加一句互动提问</div>
-        <h3>再给你一个带货种草版：</h3>
-        <div class="prompt-box">请帮我写一条30秒短视频带货脚本。
-- 产品：【便携式榨汁杯】
-- 目标人群：【上班族、健身党】
-- 核心卖点：【10秒出汁、可随身带、易清洗】
-- 场景：【早上赶时间/健身后补充】
-- 要求：开头2秒留住人，中间说人话不讲参数，结尾给一个购买理由和行动指令
-- 输出：分镜表（时间、画面、口播、字幕、音效）
+<!-- 核心问题 -->
+<div class="card">
+<h2>🤔 先搞清楚：手机上用AI到底干嘛？</h2>
+<p>说白了，手机端AI就干三件事：<strong>聊天问答、拍照识图、语音输入</strong>。</p>
+<p>你要是不在电脑旁边，想随手问个问题、翻译一段话、识别一个东西——手机端就是你的主力工具。</p>
+<p>但各家手机AI助手差异很大，有的能画图有的不行，有的免费有的要钱，有的只能打字有的能语音对话。今天就掰开揉碎讲清楚。</p>
 </div>
-    </div>
 
-    <div class="card">
-        <h2>🚀 三个让脚本更香的技巧</h2>
-        <ul>
-            <li><strong>开头要狠：</strong>别铺垫，直接抛问题、冲突或反常识。前3秒没人划走，后面才有戏。</li>
-            <li><strong>说人话：</strong>把AI写得太书面化的句子改成“你平时是不是也这样……”“说白了……”这种口语。</li>
-            <li><strong>加画面提示：</strong>让AI输出里包含“画面”或“字幕”建议，这样后期剪片更省力。</li>
-        </ul>
-    </div>
+<!-- 六大手机AI助手对比 -->
+<div class="card">
+<h2>📊 六大手机端AI助手横评</h2>
+<table>
+<tr>
+<th>助手</th><th>平台</th><th>免费？</th><th>能画图？</th><th>能语音？</th><th>拍照识图？</th><th>一句话评价</th>
+</tr>
+<tr>
+<td>ChatGPT App</td><td>iOS/Android</td><td>基础免费</td><td>✅ DALL·E</td><td>✅ 语音对话</td><td>✅</td><td>功能最全，但国内用要翻墙</td>
+</tr>
+<tr>
+<td>豆包</td><td>iOS/Android</td><td>完全免费</td><td>✅</td><td>✅ 语音对话</td><td>✅</td><td>国内最方便，语音体验好</td>
+</tr>
+<tr>
+<td>Kimi</td><td>iOS/Android</td><td>完全免费</td><td>❌</td><td>⚠️ 语音输入</td><td>✅</td><td>长文档阅读最强，适合看PDF</td>
+</tr>
+<tr>
+<td>DeepSeek</td><td>iOS/Android</td><td>完全免费</td><td>❌</td><td>⚠️ 语音输入</td><td>❌</td><td>逻辑推理最强，但功能较简单</td>
+</tr>
+<tr>
+<td>百度文心一言</td><td>iOS/Android</td><td>基础免费</td><td>✅</td><td>✅ 语音对话</td><td>✅</td><td>中文搜索结合好，但回答偏短</td>
+</tr>
+<tr>
+<td>Google Gemini</td><td>iOS/Android</td><td>基础免费</td><td>✅ Imagen</td><td>✅ 语音对话</td><td>✅</td><td>多模态强，国内同样要翻墙</td>
+</tr>
+</table>
+</div>
 
-    <div class="card">
-        <h2>⚠️ 新手常踩的坑</h2>
-        <ul>
-            <li>指令太泛：只说“帮我写个脚本”，AI只能给大路货。</li>
-            <li>完全照搬：AI的稿子要口语化改一遍，不然像念作文。</li>
-            <li>不看平台：抖音、小红书、视频号用户习惯不一样，开头和节奏要调。</li>
-            <li>没留互动：结尾光说“关注我”不够，得让人想评论，比如“你用的是哪款？”</li>
-        </ul>
-    </div>
+<!-- 按需求选 -->
+<div class="card">
+<h2>🎯 按你的需求选，别纠结</h2>
+<div class="compare-row">
+<div class="compare-item">
+<div class="icon">🗣️</div>
+<div class="name">语音聊天为主</div>
+<div class="desc">→ 豆包或ChatGPT<br>语音对话最流畅</div>
+</div>
+<div class="compare-item">
+<div class="icon">📄</div>
+<div class="name">看长文档/PDF</div>
+<div class="desc">→ Kimi<br>一键传PDF秒读</div>
+</div>
+<div class="compare-item">
+<div class="icon">🧠</div>
+<div class="name">推理/写代码</div>
+<div class="desc">→ DeepSeek<br>逻辑强、速度快</div>
+</div>
+</div>
+<div class="compare-row">
+<div class="compare-item">
+<div class="icon">🎨</div>
+<div class="name">想画图/做图</div>
+<div class="desc">→ ChatGPT或豆包<br>文字直接出图</div>
+</div>
+<div class="compare-item">
+<div class="icon">📸</div>
+<div class="name">拍照识别东西</div>
+<div class="desc">→ 豆包或ChatGPT<br>拍照识图+追问</div>
+</div>
+<div class="compare-item">
+<div class="icon">🔍</div>
+<div class="name">中文搜索需求</div>
+<div class="desc">→ 文心一言<br>搜索+AI结合</div>
+</div>
+</div>
+</div>
 
-    <div class="card">
-        <h2>🎯 一句话总结</h2>
-        <p>AI不是替你拍视频，是把你脑子里的零散想法，快速变成能拍的结构。你只要把目标、人群、风格讲清楚，它就能当半个编导用。</p>
-    </div>
+<!-- 手机端 vs 电脑端 -->
+<div class="card">
+<h2>💡 手机端和电脑端用AI，差别在哪？</h2>
+<table>
+<tr><th>对比项</th><th>📱 手机端</th><th>💻 电脑端</th></tr>
+<tr><td>输入方式</td><td>语音为主，打字慢</td><td>键盘打字，速度快</td></tr>
+<tr><td>输出长度</td><td>回答偏短，适合快速问</td><td>可以长文输出</td></tr>
+<tr><td>附件处理</td><td>拍照/录音直接上传</td><td>文件拖拽上传</td></tr>
+<tr><td>使用场景</td><td>碎片时间，随手问</td><td>坐下来认真干活</td></tr>
+<tr><td>画图能力</td><td>能出图但没法编辑</td><td>能出图+下载+二次编辑</td></tr>
+<tr><td>上下文记忆</td><td>手机App有的会丢上下文</td><td>网页版记忆更稳</td></tr>
+</table>
+<p><strong>一句话：手机是"随手问"，电脑是"认真做"</strong>。别在手机上让AI写万字长文，也别在电脑上问"今天深圳天气多少度"这种随手的事。</p>
+</div>
 
-    <div class="footer">
-        每日AI系统性学习 · Day 6 · 明天见
-    </div>
+<!-- 提示词范例 -->
+<div class="card">
+<h2>✍️ 三组手机端实战提示词</h2>
+
+<h3>1️⃣ 语音快速问（适合随手查）</h3>
+<div class="prompt-box">
+<div class="label">💡 提示词范例 · 语音快问</div>
+<pre>深圳今天下午会不会下雨？如果会的话，建议我出门带伞还是改室内活动？</pre>
+</div>
+<p>👉 手机语音输入一句话就够了，别啰嗦。关键信息：地点+时间+你要做什么决策。</p>
+
+<h3>2️⃣ 拍照识别追问（适合实物识别）</h3>
+<div class="prompt-box">
+<div class="label">💡 提示词范例 · 拍照识别</div>
+<pre>这是我拍的一张植物照片，帮我识别这是什么植物，然后告诉我：
+1. 它叫什么名字（中文+英文）
+2. 养护要点（光照/浇水/温度）
+3. 有没有毒性，家里有小孩能放吗？</pre>
+</div>
+<p>👉 拍照后追问结构化信息，别只问"这是什么"就完了——追问才有价值。</p>
+
+<h3>3️⃣ 手机端读文档提炼（适合看PDF）</h3>
+<div class="prompt-box">
+<div class="label">💡 提示词范例 · 手机读文档</div>
+<pre>我上传了一份产品说明书PDF，帮我提炼出：
+1. 核心功能清单（不超过5条）
+2. 和上一代相比最大的3个变化
+3. 常见问题的解答（挑最重要的3个）
+用口语讲，别用专业术语。</pre>
+</div>
+<p>👉 手机上看PDF很累，让AI帮你提炼才是正确用法。Kimi最适合干这个。</p>
+</div>
+
+<!-- 避坑 -->
+<div class="card">
+<h2>⚠️ 手机端用AI，三个常见坑</h2>
+
+<div class="tips">
+<div class="title">坑1：以为所有App都一样</div>
+<p>不一样。豆包能语音对话，DeepSeek只能语音输入（说完还得看文字回复）。Kimi能传PDF，ChatGPT能画图——<strong>选错了助手就是浪费时间</strong>。</p>
+</div>
+
+<div class="tips">
+<div class="title">坑2：在手机上要求写长文</div>
+<p>手机屏幕小、打字慢，让AI写3000字报告然后你在手机上改？<strong>这种事放电脑上干</strong>。手机端就该问短问题、拿快速答案。</p>
+</div>
+
+<div class="tips">
+<div class="title">坑3：拍照后只问"这是什么"</div>
+<p>一句"这是什么"只能拿到一个名字。<strong>追问才有价值</strong>：识别之后立刻问用途、注意事项、和X的区别——这才是手机AI真正省时间的地方。</p>
+</div>
+</div>
+
+<!-- 速查表 -->
+<div class="card">
+<h2>📋 30秒速查：选哪个？</h2>
+<table>
+<tr><th>你要干嘛</th><th>推荐助手</th></tr>
+<tr><td>随手语音问问题</td><td>豆包 🏆</td></tr>
+<tr><td>拍照识别动植物/商品</td><td>豆包 / ChatGPT</td></tr>
+<tr><td>手机上看长PDF</td><td>Kimi 🏆</td></tr>
+<tr><td>推理分析/写代码</td><td>DeepSeek 🏆</td></tr>
+<tr><td>文字描述生成图片</td><td>ChatGPT / 豆包</td></tr>
+<tr><td>中文搜索+AI结合</td><td>文心一言</td></tr>
+<tr><td>能翻墙，要最全能的</td><td>ChatGPT 🏆</td></tr>
+</table>
+<p style="color:#00d2ff;font-weight:600;">在国内不翻墙的情况下：豆包是综合体验最好的手机AI助手。</p>
+</div>
+
+<div class="footer">
+AI系统性学习 · Day 6 · 手机端AI助手对比 · 2026-07-14
+</div>
+
 <style>
 #liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
 #liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
