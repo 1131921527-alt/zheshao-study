@@ -7,7 +7,9 @@
 import os, shutil, re, glob, datetime
 
 SRC = r"E:\workbuddyFIle\腾讯龙虾的成品"
-OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\哲少的学习任务"
+# OUT 指向线上仓库目录本身。build.py 只更新各板块内容(ai-news/ai-knowledge/ai-prompt/ielts)
+# 与其 index.html、assets/style.css、archive.html；**绝不会覆盖手动维护的根 index.html**(App版)。
+OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\zheshao-study"
 SITE_TITLE = "泽少学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
