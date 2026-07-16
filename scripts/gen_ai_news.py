@@ -8,8 +8,8 @@
 # 幂等：若今日文件已存在则跳过生成（仍确保 index 同步）。
 import io, os, re, sys, json, datetime
 
-DEST_AI = r"E:\workbuddyFIle\腾讯龙虾的成品\zheshao-study\ai-news"
-SRC_AI  = r"E:\workbuddyFIle\腾讯龙虾的成品\AI动态播报"
+DEST_AI = r"E:\workbuddyFIle\腾讯龙虾的成品\03-学习网站\zheshao-study\ai-news"
+SRC_AI  = r"E:\workbuddyFIle\腾讯龙虾的成品\03-学习网站\AI动态播报"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 WEEK = ["周一","周二","周三","周四","周五","周六","周日"]
