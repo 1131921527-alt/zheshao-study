@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-gen_more3.py — 给「喆少学习助手」知识中心每个板块再 +3 篇文章（共 18 篇）。
+gen_more3.py — 给「泽少学习助手」知识中心每个板块再 +3 篇文章（共 18 篇）。
 修复历史遗留 orphan：SLUG 原先只登记了每个板块前 3 个 slug，导致 hist-/geo-/fin- 前缀的
 额外 section 无法被列表渲染（点击打开 art-undefined）。本脚本一次性把 SLUG 补全为
 「已有全部 slug + 新增 slug」的完整有序列表，使所有文章可达。
@@ -413,7 +413,7 @@ def section_html(a):
         "<div class=\"body\">\n"
         "{body}\n"
         "\n</div>\n"
-        "<div class=\"afoot\">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>\n"
+        "<div class=\"afoot\">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>\n"
         "      </article>\n"
         "    </section>\n"
     ).format(slug=a["slug"], m=a["m"], t=a["t"], body=a["body"])

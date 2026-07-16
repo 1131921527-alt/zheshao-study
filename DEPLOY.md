@@ -1,4 +1,4 @@
-# 喆少的学习任务 · 部署到 GitHub Pages
+# 泽少的学习任务 · 部署到 GitHub Pages
 
 站点已在本机生成并初始化 git 仓库（分支 main，已提交），远程 origin 已指向 GitHub 仓库 `1131921527-alt/zheshao-study`。
 
@@ -44,7 +44,7 @@ git add -A && git commit -m "daily update" && git push
 
 ## 目录结构
 ```
-喆少的学习任务/
+泽少的学习任务/
 ├── index.html            # 首页：4板块卡片 + 打赏
 ├── ai-news/              # AI动态播报（按日期，历史可看）
 ├── ai-knowledge/         # AI系统性学习（Day N）

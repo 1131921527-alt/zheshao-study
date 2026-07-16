@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# 喆少学习助手 · 知识长文批量生成器
+# 泽少学习助手 · 知识长文批量生成器
 # 把 20 篇长文（历史4/地理3/财经3/心理6/古诗词4）注入 zheshao-study/index.html
 # 重跑本脚本即可重建（幂等：先不做去重，生产环境手动跑一次即可）
 import io, json
@@ -569,7 +569,7 @@ def section(a):
 '  <h1>%s</h1>\n'
 '</header>\n'
 '<div class="body">\n\n%s\n\n</div>\n'
-'<div class="afoot">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>\n'
+'<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>\n'
 '      </article>\n'
 '    </section>\n\n'
     ) % (a["slug"], a["meta"], a["title"], a["html"])

@@ -54,7 +54,7 @@ ARTICLES = [
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
   </article>
 </section>""",
     },
@@ -99,7 +99,7 @@ ARTICLES = [
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
   </article>
 </section>""",
     },
@@ -142,7 +142,7 @@ ARTICLES = [
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
   </article>
 </section>""",
     },
@@ -185,7 +185,7 @@ ARTICLES = [
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
   </article>
 </section>""",
     },
@@ -228,7 +228,7 @@ ARTICLES = [
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 喆少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
   </article>
 </section>""",
     },

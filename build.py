@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-喆少学习任务 · 站点生成器
+泽少学习任务 · 站点生成器
 扫描 腾讯龙虾的成品 下各自动化产出目录，归一化命名后生成静态站点。
 重跑本脚本即可把新内容 + 历史同步进站点，随后 git push 即上线。
 """
@@ -8,7 +8,7 @@ import os, shutil, re, glob, datetime
 
 SRC = r"E:\workbuddyFIle\腾讯龙虾的成品"
 OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\哲少的学习任务"
-SITE_TITLE = "喆少学习任务"
+SITE_TITLE = "泽少学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
@@ -42,7 +42,7 @@ CLOCK_HTML = """
 <span class="lc-dot"></span>
 <span class="lc-date" id="lcDate">--</span>
 <span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
-<span class="lc-tag">时间正在流逝 ⏳</span>
+<span class="lc-tag">time goes by</span>
 <i class="lc-bar" id="lcBar"></i>
 </div>
 """
@@ -336,7 +336,7 @@ def main_index_html(sections_data):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="喆少学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
+<meta name="description" content="泽少学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
 <title>%s</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
