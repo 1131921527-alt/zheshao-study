@@ -1,0 +1,4403 @@
+[
+ {
+  "word": "abundant",
+  "ipa": "/əˈbʌndənt/",
+  "pos": "adj. 大量的，丰富的",
+  "story": "",
+  "tip": "",
+  "en": "The region has abundant natural resources.",
+  "cn": "该地区拥有丰富的自然资源。"
+ },
+ {
+  "word": "deteriorate",
+  "ipa": "/dɪˈtɪəriəreɪt/",
+  "pos": "v. 恶化，变坏",
+  "story": "",
+  "tip": "",
+  "en": "His health has deteriorated rapidly.",
+  "cn": "他的健康状况迅速恶化。"
+ },
+ {
+  "word": "inevitable",
+  "ipa": "/ɪˈnevɪtəbl/",
+  "pos": "adj. 不可避免的",
+  "story": "",
+  "tip": "",
+  "en": "Change is inevitable in a rapidly developing society.",
+  "cn": "在快速发展的社会中，变化是不可避免的。"
+ },
+ {
+  "word": "controversial",
+  "ipa": "/ˌkɒntrəˈvɜːʃəl/",
+  "pos": "adj. 有争议的",
+  "story": "",
+  "tip": "",
+  "en": "Climate change policy remains a controversial issue.",
+  "cn": "气候变化政策仍是一个有争议的话题。"
+ },
+ {
+  "word": "phenomenon",
+  "ipa": "/fɪˈnɒmɪnən/",
+  "pos": "n. 现象",
+  "story": "",
+  "tip": "",
+  "en": "Urbanisation is a widespread phenomenon in modern society.",
+  "cn": "城市化是现代社会的一个普遍现象。"
+ },
+ {
+  "word": "sustainable",
+  "ipa": "/səˈsteɪnəbl/",
+  "pos": "adj. 可持续的",
+  "story": "",
+  "tip": "",
+  "en": "Sustainable development is crucial for future generations.",
+  "cn": "可持续发展对后代至关重要。"
+ },
+ {
+  "word": "fluctuate",
+  "ipa": "/ˈflʌktʃueɪt/",
+  "pos": "v. 波动，起伏",
+  "story": "",
+  "tip": "",
+  "en": "Oil prices fluctuate depending on global demand.",
+  "cn": "石油价格随全球需求而波动。"
+ },
+ {
+  "word": "predominant",
+  "ipa": "/prɪˈdɒmɪnənt/",
+  "pos": "adj. 主要的，占优势的",
+  "story": "",
+  "tip": "",
+  "en": "The predominant factor in success is perseverance.",
+  "cn": "成功的主要因素是坚持。"
+ },
+ {
+  "word": "expedite",
+  "ipa": "/ˈekspədaɪt/",
+  "pos": "v. 加速，促进",
+  "story": "",
+  "tip": "",
+  "en": "We need to expedite the approval process.",
+  "cn": "我们需要加速审批流程。"
+ },
+ {
+  "word": "mitigate",
+  "ipa": "/ˈmɪtɪɡeɪt/",
+  "pos": "v. 缓和，减轻",
+  "story": "",
+  "tip": "",
+  "en": "Governments must mitigate the effects of climate change.",
+  "cn": "各国政府必须减轻气候变化的影响。"
+ },
+ {
+  "word": "ubiquitous",
+  "ipa": "/juːˈbɪkwɪtəs/",
+  "pos": "adj. 无处不在的",
+  "story": "",
+  "tip": "",
+  "en": "Smartphones have become ubiquitous in daily life.",
+  "cn": "智能手机在日常生活中已无处不在。"
+ },
+ {
+  "word": "vulnerable",
+  "ipa": "/ˈvʌlnərəbl/",
+  "pos": "adj. 易受伤害的，脆弱的",
+  "story": "",
+  "tip": "",
+  "en": "Children are particularly vulnerable to air pollution.",
+  "cn": "儿童特别容易受到空气污染的伤害。"
+ },
+ {
+  "word": "paradox",
+  "ipa": "/ˈpærədɒks/",
+  "pos": "n. 矛盾，悖论",
+  "story": "",
+  "tip": "",
+  "en": "There is a paradox that richer nations often have higher stress levels.",
+  "cn": "存在一个悖论：更富裕的国家往往压力水平更高。"
+ },
+ {
+  "word": "pragmatic",
+  "ipa": "/præɡˈmætɪk/",
+  "pos": "adj. 实际的，务实的",
+  "story": "",
+  "tip": "",
+  "en": "A pragmatic approach is needed to solve this crisis.",
+  "cn": "需要务实的办法来解决这场危机。"
+ },
+ {
+  "word": "aesthetic",
+  "ipa": "/iːsˈθetɪk/",
+  "pos": "adj. 美学的；审美的；有美感的",
+  "story": "把 'a' 想成 'a(一)'，'esth' 像 '爱死它'，'ic' 是形容词后缀。想象：一件美的东西让人爱死它——这就是aesthetic美学的境界。",
+  "tip": "雅思大作文艺术类高频词。搭配：aesthetic value(审美价值)、aesthetic appeal(美感)、aesthetic standards(审美标准)。",
+  "en": "The building has great aesthetic appeal despite its small size.",
+  "cn": "这座建筑虽小，但具有很强的美感。"
+ },
+ {
+  "word": "depict",
+  "ipa": "/dɪˈpɪkt/",
+  "pos": "v. 描绘；描述；刻画",
+  "story": "'de' (向下) + 'pict' (画，picture的词根) = 画下来 → 描绘。画家把看到的东西用画笔depict下来。",
+  "tip": "写作描述类必背。搭配：depict sth as...(把某物描绘成...)、be depicted in...(在...中被描绘)。",
+  "en": "The painting depicts a serene mountain landscape at dawn.",
+  "cn": "这幅画描绘了黎明时分宁静的山景。"
+ },
+ {
+  "word": "genre",
+  "ipa": "/ˈʒɑːnrə/",
+  "pos": "n. 体裁；类型；流派",
+  "story": "法语词 'genre'，意为'种类、类型'。电影有genre（动作/爱情/科幻），文学有genre（小说/诗歌/散文）。",
+  "tip": "口语和写作都常用。搭配：a genre of music(一种音乐类型)、science fiction genre(科幻类)、hybrid genre(混合类型)。",
+  "en": "Science fiction is a popular genre among young readers.",
+  "cn": "科幻小说在年轻读者中很受欢迎。"
+ },
+ {
+  "word": "narrative",
+  "ipa": "/ˈnærətɪv/",
+  "pos": "n. 叙述；故事；叙事",
+  "story": "'narr' 来自拉丁 narrare (讲述)，'-ive' 名词后缀 = 讲述出来的东西 = 叙事/故事。",
+  "tip": "雅思写作task 2神器。搭配：dominant narrative(主流叙事)、narrative structure(叙事结构)、challenge the narrative(挑战主流说法)。",
+  "en": "The film uses a non-linear narrative to tell the story.",
+  "cn": "这部电影用非线性叙事来讲故事。"
+ },
+ {
+  "word": "propaganda",
+  "ipa": "/ˌprɒpəˈɡændə/",
+  "pos": "n. 宣传；鼓动（多含贬义）",
+  "story": "源自拉丁 'propagare'(繁殖、传播)。原本是中性词指'传播观念'，后因政治宣传多带操控色彩，演变为贬义词。",
+  "tip": "媒体类话题高频词。区分：propaganda(贬义宣传) vs. publicity/promotion(中性推广)。",
+  "en": "The regime used propaganda to control public opinion.",
+  "cn": "该政权利用宣传来控制舆论。"
+ },
+ {
+  "word": "satire",
+  "ipa": "/ˈsætaɪə/",
+  "pos": "n. 讽刺；讽刺作品",
+  "story": "拉丁 'satura'(杂拌、拼盘)演变而来。原指把不同内容拼在一起的杂剧，后专指讽刺作品。",
+  "tip": "艺术文化话题高频。搭配：political satire(政治讽刺)、social satire(社会讽刺)、a satire on/upon...(对...的讽刺)。",
+  "en": "The novel is a sharp satire on modern politics.",
+  "cn": "这部小说是对现代政治的尖锐讽刺。"
+ },
+ {
+  "word": "stereotype",
+  "ipa": "/ˈsteriətaɪp/",
+  "pos": "n./v. 刻板印象；成见",
+  "story": "'stereo' (固体的) + 'type' (类型) = 固定的类型 → 刻板印象。把人固定归类的思维陷阱。",
+  "tip": "雅思写作task 2高频词。搭配：break/challenge stereotypes(打破刻板印象)、gender/racial stereotypes(性别/种族刻板印象)、stereotypical view。",
+  "en": "It's unfair to judge people based on stereotypes.",
+  "cn": "基于刻板印象评判人是不公平的。"
+ },
+ {
+  "word": "rhetoric",
+  "ipa": "/ˈretərɪk/",
+  "pos": "n. 修辞；华丽辞藻；雄辩",
+  "story": "希腊 'rhetor' (演说家) 演变而来。古代修辞学家教人如何雄辩 → rhetoric 既指修辞术，也指华而不实的言辞。",
+  "tip": "写作高分替换词。搭配：political rhetoric(政治辞令)、empty rhetoric(空洞辞藻)、rhetorical question(反问句)。",
+  "en": "His speech was full of rhetoric but lacked substance.",
+  "cn": "他的演讲满是华丽辞藻，却缺乏实质内容。"
+ },
+ {
+  "word": "allegory",
+  "ipa": "/ˈæləɡɔːri/",
+  "pos": "n. 寓言；讽喻",
+  "story": "希腊 'allos' (其他) + 'agoreuein' (说话) = 说别的事 = 借彼说此。动物王国的故事讲人类社会的道理。",
+  "tip": "文学分析必备。搭配：political allegory(政治寓言)、moral allegory(道德寓言)、'Animal Farm' is an allegory of...(《动物农场》是...的寓言)。",
+  "en": "Orwell's 'Animal Farm' is a famous political allegory.",
+  "cn": "奥威尔的《动物农场》是一部著名的政治寓言。"
+ },
+ {
+  "word": "convey",
+  "ipa": "/kənˈveɪ/",
+  "pos": "v. 传达；传递；表达",
+  "story": "'con' (一起) + 'vey' (路，看convey/way) = 一起走同一条路 → 把信息传递过去。",
+  "tip": "雅思口语写作万能动词。搭配：convey a message(传达信息)、convey emotions(表达情感)、convey meaning(表达含义)。",
+  "en": "Words often fail to convey our deepest emotions.",
+  "cn": "言语常常无法表达我们最深的情感。"
+ },
+ {
+  "word": "portray",
+  "ipa": "/pɔːˈtreɪ/",
+  "pos": "v. 描绘；扮演；展现",
+  "story": "法语 'portraire'(画出)演变而来。画家把人物画出来 = portray。也可指演员扮演角色。",
+  "tip": "媒体人物描写高频词。搭配：portray sb as...(把某人描绘成...)、be portrayed by...(由...扮演)、accurately portray(准确描绘)。",
+  "en": "The film portrays the king as a cruel tyrant.",
+  "cn": "这部电影把国王描绘成一个残酷的暴君。"
+ },
+ {
+  "word": "subtle",
+  "ipa": "/ˈsʌtl/",
+  "pos": "adj. 微妙的；细微的；狡猾的",
+  "story": "拉丁 'subtilis'(精细的)演变 → 细微到不易察觉的。区别：subtle(微妙的) vs. obvious(明显的)。",
+  "tip": "写作替换 very good/bad 的高分词。搭配：subtle difference(细微差别)、subtle humor(含蓄幽默)、subtle changes(微妙变化)。",
+  "en": "There are subtle differences between the two theories.",
+  "cn": "这两种理论之间有细微的差别。"
+ },
+ {
+  "word": "explicit",
+  "ipa": "/ɪkˈsplɪsɪt/",
+  "pos": "adj. 明确的；清楚的；直率的",
+  "story": "拉丁 'explicare'(展开、解释) = 展开来说清楚 = 明确的。注意与 implicit(隐含的)相反。",
+  "tip": "写作论证必备。搭配：explicit instructions(明确指示)、be explicit about...(对...态度明确)、explicit content(露骨内容)。",
+  "en": "The contract includes explicit terms about the deadline.",
+  "cn": "合同中包含关于截止日期的明确条款。"
+ },
+ {
+  "word": "omnipresent",
+  "ipa": "/ˌɒmnɪˈpreznt/",
+  "pos": "adj. 无处不在的；普遍存在的",
+  "story": "拉丁 'omni'(全部) + 'praesens'(在场) = 处处都在场 = 无处不在的。和 ubiquitous 意思相近。",
+  "tip": "高分替换 everywhere。搭配：omnipresent media(无处不在的媒体)、omnipresent technology(普及的技术)、be omnipresent in...(在...中无处不在)。",
+  "en": "Smartphones have become omnipresent in modern society.",
+  "cn": "智能手机在现代社会已无处不在。"
+ },
+ {
+  "word": "versatile",
+  "ipa": "/ˈvɜːsətaɪl/",
+  "pos": "adj. 多才多艺的；多用途的；通用的",
+  "story": "拉丁 'versare'(转动) + '-ile' = 能转动的、能多面用的。瑞士军刀就是versatile的极致。",
+  "tip": "人物描述和物品评价万能词。搭配：versatile actor(多才多艺的演员)、versatile material(多用途材料)、versatile tool(多功能工具)。",
+  "en": "She is a versatile actress capable of playing many roles.",
+  "cn": "她是一位多才多艺的演员，能胜任多种角色。"
+ },
+ {
+  "word": "empathy",
+  "ipa": "/ˈempəθi/",
+  "pos": "n. 共情；同理心；感同身受",
+  "story": "em(进入)+pathy(感受，path感受的词根)= 进入他人的感受 = 共情。把自己代入对方的世界去体会。",
+  "tip": "写作情感/社会话题必备。搭配：show empathy(表现出共情)、lack of empathy(缺乏同理心)、empathy for(对...的共情)。",
+  "en": "A good therapist must show empathy toward every client.",
+  "cn": "一位好的治疗师必须对每位客户表现出共情。"
+ },
+ {
+  "word": "anxious",
+  "ipa": "/ˈæŋkʃəs/",
+  "pos": "adj. 焦虑的；担忧的；渴望的",
+  "story": "anx(苦恼)+ious(形容词后缀)= 心里很苦恼的样子 → 焦虑。注意 anxious about(对...焦虑) vs. eager(急切)。",
+  "tip": "雅思口语高频情绪词。搭配：feel anxious about(对...感到焦虑)、anxious to do(急于做某事)、anxious for(渴望)。",
+  "en": "She felt anxious about her upcoming job interview.",
+  "cn": "她对即将到来的工作面试感到焦虑。"
+ },
+ {
+  "word": "vulnerable",
+  "ipa": "/ˈvʌlnərəbl/",
+  "pos": "adj. 脆弱的；易受伤的；易受影响的",
+  "story": "vuln(伤口，vulnerable的词根)+erable(易...的)= 容易受伤的 → 脆弱的。和 susceptible, prone to 同义。",
+  "tip": "社会议题高频。搭配：be vulnerable to(易受...影响)、vulnerable groups(弱势群体)、economically vulnerable(经济脆弱的)。",
+  "en": "Elderly people are particularly vulnerable to the disease.",
+  "cn": "老年人特别容易感染这种疾病。"
+ },
+ {
+  "word": "resent",
+  "ipa": "/rɪˈzent/",
+  "pos": "v. 愤恨；怨恨；对...感到愤愤不平",
+  "story": "re(反)+sent(感觉)= 反过来感觉 = 心里过不去。别人对自己不公，平时忍着但心里resent。",
+  "tip": "情绪描写高级词。搭配：resent sb for doing(怨恨某人做某事)、deeply resent(深恶痛绝)、resent the fact that(对...事实感到愤恨)。",
+  "en": "She resented being treated as a child.",
+  "cn": "她对被当作小孩对待感到愤愤不平。"
+ },
+ {
+  "word": "compassion",
+  "ipa": "/kəmˈpæʃn/",
+  "pos": "n. 同情；怜悯；慈悲",
+  "story": "com(共同)+passion(受难、感受)= 共同感受他人的痛苦 → 慈悲。compassion 比 sympathy 更深一层。",
+  "tip": "写作替换 pity 的高分词。搭配：show compassion(展现慈悲)、feel compassion for(对...感到怜悯)、compassion fatigue(同情疲劳)。",
+  "en": "She spoke with deep compassion for the refugees.",
+  "cn": "她对难民们深表同情。"
+ },
+ {
+  "word": "endorse",
+  "ipa": "/ɪnˈdɔːs/",
+  "pos": "v. 赞同；支持；背书；代言",
+  "story": "en(进入)+dorse(背面)= 在背面签字 → 公开支持、签字背书。明星endorse某个品牌，意味着把名声押上去。",
+  "tip": "社会/广告话题高频。搭配：endorsed by(由...背书)、publicly endorse(公开支持)、refuse to endorse(拒绝支持)。",
+  "en": "Several celebrities endorsed the new environmental campaign.",
+  "cn": "几位名人为这项新的环保活动背书。"
+ },
+ {
+  "word": "alienate",
+  "ipa": "/ˈeɪliəneɪt/",
+  "pos": "v. 疏远；使...疏离；离间",
+  "story": "alien(外国的、他人的)+ate(使...)= 让某人觉得你是外人 → 疏远。和 estrange 同义。",
+  "tip": "人际/社会话题高频。搭配：alienate sb from(使某人疏远...)、feel alienated(感到被疏远)、alienate the audience(让观众疏远)。",
+  "en": "His arrogant behavior alienated many of his colleagues.",
+  "cn": "他傲慢的态度让许多同事疏远了他。"
+ },
+ {
+  "word": "reconcile",
+  "ipa": "/ˈrekənsaɪl/",
+  "pos": "v. 和解；调和；使一致",
+  "story": "re(再)+con(共同)+cile(召集)= 再次召集到一起 → 调解、和解。夫妻吵架后要reconcile。",
+  "tip": "社会/人际话题。搭配：reconcile with(与...和解)、reconcile A with B(协调A与B)、become reconciled(达成和解)。",
+  "en": "The two brothers finally reconciled after years of conflict.",
+  "cn": "兄弟俩在多年冲突后终于和解了。"
+ },
+ {
+  "word": "anticipate",
+  "ipa": "/ænˈtɪsɪpeɪt/",
+  "pos": "v. 预期；预料；期待",
+  "story": "anti(预先)+cip(抓)+ate= 预先抓住 → 提前预料。anticipate 比 expect 更有把握、更有准备。",
+  "tip": "写作高分替换 expect。搭配：anticipate doing(预期做某事)、anticipated demand(预期需求)、as anticipated(正如预期)。",
+  "en": "We anticipate strong demand for the new product.",
+  "cn": "我们预期新产品会有强劲的需求。"
+ },
+ {
+  "word": "hostile",
+  "ipa": "/ˈhɒstaɪl/",
+  "pos": "adj. 敌对的；敌意的；不友善的",
+  "story": "host(主人、敌人)+ile(形容词)= 敌意的。词根来自拉丁 hostis(敌人)。",
+  "tip": "写作/阅读高频。搭配：hostile attitude(敌对态度)、hostile environment(敌对环境)、hostile takeover(恶意收购)。",
+  "en": "The refugees were met with a hostile reception.",
+  "cn": "难民们受到了充满敌意的接待。"
+ },
+ {
+  "word": "jealous",
+  "ipa": "/ˈdʒeləs/",
+  "pos": "adj. 妒忌的；羡慕的；猜疑的",
+  "story": "来自希腊 zealos(热心)，后演变为妒忌。注意 jealous(妒忌，多指感情) vs. envious(羡慕，多指财物)。",
+  "tip": "情绪描写必备。搭配：feel jealous of(妒忌...)、jealousy in relationships(感情中的嫉妒)、be jealous of one's success(妒忌某人的成功)。",
+  "en": "She was jealous of her sister's achievements.",
+  "cn": "她妒忌姐姐的成就。"
+ },
+ {
+  "word": "esteem",
+  "ipa": "/ɪˈstiːm/",
+  "pos": "v./n. 尊重；敬重；自尊",
+  "story": "estem 来自拉丁 aestimare(估价、评价)。esteem sb = 给予高度评价 → 尊重。",
+  "tip": "写作替换 respect 的高分词。搭配：self-esteem(自尊)、hold sb in high esteem(对某人有高度敬意)、esteem for(对...的尊重)。",
+  "en": "She is held in high esteem by her colleagues.",
+  "cn": "她在同事中受到高度尊敬。"
+ },
+ {
+  "word": "manipulate",
+  "ipa": "/məˈnɪpjuleɪt/",
+  "pos": "v. 操纵；操控；篡改",
+  "story": "mani(手)+pul(操作)+ate= 用手操作 → 操控。贬义时指暗箱操作，褒义时指熟练操作。",
+  "tip": "社会/媒体话题高频。搭配：manipulate data(篡改数据)、emotionally manipulate(情感操控)、manipulate sb into doing(操纵某人做某事)。",
+  "en": "Advertisers often try to manipulate consumers' emotions.",
+  "cn": "广告商常常试图操控消费者的情绪。"
+ },
+ {
+  "word": "empathetic",
+  "ipa": "/ˌempəˈθetɪk/",
+  "pos": "adj. 共情的；感同身受的",
+  "story": "em(进入)+path(感受)+etic(形容词后缀)= 进入别人感受的 → 善解人意的。empathy 的形容词形式。",
+  "tip": "人物描写必备。搭配：empathetic listener(善解人意的倾听者)、empathetic response(共情回应)、empathetic approach(共情式方法)。",
+  "en": "An empathetic doctor listens carefully to every patient.",
+  "cn": "一位有共情力的医生会认真倾听每一位病人。"
+ },
+ {
+  "word": "intimidate",
+  "ipa": "/ɪnˈtɪmɪdeɪt/",
+  "pos": "v. 恐吓；威胁；威逼",
+  "story": "in(进入)+timid(胆怯)+ate(使...)= 使人变得胆怯 → 恐吓。timid 本来就是胆小的意思。",
+  "tip": "社会/职场话题。搭配：intimidate sb into doing(威逼某人做某事)、intimidated by(被...吓倒)、intimidating atmosphere(令人窒息的氛围)。",
+  "en": "The older students tried to intimidate the new arrivals.",
+  "cn": "高年级学生试图恐吓新生。"
+ },
+ {
+  "word": "curriculum",
+  "ipa": "/kəˈrɪkjələm/",
+  "pos": "n. 课程；全部课程设置",
+  "story": "cur(跑)+riculum(小径)= 学生要跑完的路线 → 课程体系。curriculum vitae=简历。",
+  "tip": "教育话题必备。搭配：school curriculum、core curriculum、curriculum reform。",
+  "en": "The school has recently updated its curriculum to include coding.",
+  "cn": "学校最近更新了课程设置，将编程纳入其中。"
+ },
+ {
+  "word": "pedagogy",
+  "ipa": "/ˈpedəɡɒdʒi/",
+  "pos": "n. 教学法；教育学",
+  "story": "ped(儿童)+agog(引导)= 引导儿童的方法 → 教学法。",
+  "tip": "教育写作高级词。搭配：modern pedagogy、student-centered pedagogy。",
+  "en": "Modern pedagogy emphasizes student-centered learning.",
+  "cn": "现代教学法强调以学生为中心的学习。"
+ },
+ {
+  "word": "literacy",
+  "ipa": "/ˈlɪtərəsi/",
+  "pos": "n. 读写能力；素养",
+  "story": "liter(文字)+acy(状态)= 会认字的状态 → 读写能力。",
+  "tip": "社会/教育高频。搭配：digital literacy、computer literacy、financial literacy。",
+  "en": "Basic literacy is an essential skill for modern life.",
+  "cn": "基本的读写能力是现代生活的必备技能。"
+ },
+ {
+  "word": "compulsory",
+  "ipa": "/kəmˈpʌlsəri/",
+  "pos": "adj. 强制性的；义务的",
+  "story": "com(加强)+puls(推动)= 使劲推你去做 → 强制的。",
+  "tip": "教育/法律高频。搭配：compulsory education、compulsory course。",
+  "en": "Nine-year compulsory education is guaranteed by law.",
+  "cn": "九年义务教育受法律保障。"
+ },
+ {
+  "word": "scholarship",
+  "ipa": "/ˈskɒləʃɪp/",
+  "pos": "n. 奖学金；学术研究",
+  "story": "scholar(学者)+ship= 学者该有的东西 → 奖学金/学识。",
+  "tip": "搭配：win a scholarship、full scholarship、scholarship application。",
+  "en": "She was awarded a full scholarship to Oxford University.",
+  "cn": "她获得了牛津大学的全额奖学金。"
+ },
+ {
+  "word": "dissertation",
+  "ipa": "/ˌdɪsəˈteɪʃn/",
+  "pos": "n. 学位论文；专题论述",
+  "story": "dis(分开)+sert(讨论)= 分点展开讨论 → 论文。比essay正式得多。",
+  "tip": "搭配：doctoral dissertation、write a dissertation、dissertation defense。",
+  "en": "She spent three years writing her doctoral dissertation.",
+  "cn": "她花了三年时间撰写博士论文。"
+ },
+ {
+  "word": "credential",
+  "ipa": "/krəˈdenʃl/",
+  "pos": "n. 证书；资质证明",
+  "story": "cred(相信)+ential= 让人相信你的东西 → 证书资质。",
+  "tip": "职场/教育高频。搭配：professional credentials、academic credentials。",
+  "en": "Employers often require proof of academic credentials.",
+  "cn": "雇主通常要求提供学历证明。"
+ },
+ {
+  "word": "vocational",
+  "ipa": "/vəʊˈkeɪʃənl/",
+  "pos": "adj. 职业的；职业培训的",
+  "story": "vocation(职业)+al= 职业相关的。vs. academic(学术的)。",
+  "tip": "搭配：vocational training、vocational education、vocational skills。",
+  "en": "Vocational education prepares students for specific careers.",
+  "cn": "职业教育为学生从事特定职业做好准备。"
+ },
+ {
+  "word": "tuition",
+  "ipa": "/tjuˈɪʃn/",
+  "pos": "n. 学费；教学",
+  "story": "tuit(看护)+ion= 导师教导 → 学费。",
+  "tip": "搭配：tuition fees、pay tuition、tuition assistance。",
+  "en": "University tuition fees have risen dramatically in recent years.",
+  "cn": "近年来大学学费大幅上涨。"
+ },
+ {
+  "word": "proficiency",
+  "ipa": "/prəˈfɪʃnsi/",
+  "pos": "n. 熟练；精通",
+  "story": "pro(向前)+fici(做)= 做到前面的水平 → 精通。",
+  "tip": "语言/技能话题高频。搭配：language proficiency、proficiency test。",
+  "en": "The test measures your proficiency in spoken English.",
+  "cn": "这项测试评估你的英语口语水平。"
+ },
+ {
+  "word": "prestige",
+  "ipa": "/preˈstiːʒ/",
+  "pos": "n. 声望；威望",
+  "story": "pre(前)+stige(站)= 站在前面 → 声望。prestigious=有声望的。",
+  "tip": "搭配：international prestige、prestige of a university、prestigious institution。",
+  "en": "Harvard University enjoys enormous prestige around the world.",
+  "cn": "哈佛大学在全球享有极高声望。"
+ },
+ {
+  "word": "eligibility",
+  "ipa": "/ˌelɪdʒəˈbɪləti/",
+  "pos": "n. 资格；合格",
+  "story": "e(出)+lig(选)+ibility= 被选出来的资格 → 合格性。",
+  "tip": "申请/考试话题。搭配：eligibility criteria、check eligibility、meet eligibility requirements。",
+  "en": "You must meet the eligibility criteria before applying.",
+  "cn": "申请前你必须满足资格标准。"
+ },
+ {
+  "word": "tenure",
+  "ipa": "/ˈtenjə(r)/",
+  "pos": "n. 终身职位；任期",
+  "story": "ten(持有)+ure= 长期持有的职位 → 终身教职。",
+  "tip": "学术/职场话题。搭配：academic tenure、grant tenure、during one's tenure。",
+  "en": "She was granted tenure after six years of teaching.",
+  "cn": "她在教学六年后获得了终身教职。"
+ },
+ {
+  "word": "plagiarism",
+  "ipa": "/ˈpleɪdʒərɪzəm/",
+  "pos": "n. 抄袭；剽窃",
+  "story": "plag(劫持)+arism= 劫持别人的文字 → 抄袭。学术界大忌。",
+  "tip": "学术高频。搭配：accused of plagiarism、plagiarism detection、avoid plagiarism。",
+  "en": "The student was expelled for plagiarism.",
+  "cn": "该学生因抄袭被开除。"
+ },
+ {
+  "word": "tertiary",
+  "ipa": "/ˈtɜːʃəri/",
+  "pos": "adj. 第三的；高等教育的",
+  "story": "terti(第三)+ary= 第三级的 → 高等教育的。primary-secondary-tertiary三级体系。",
+  "tip": "搭配：tertiary education、tertiary sector、tertiary institution。",
+  "en": "More students now have access to tertiary education.",
+  "cn": "现在更多学生有机会接受高等教育。"
+ },
+ {
+  "word": "abolish",
+  "ipa": "/əˈbɒl.ɪʃ/",
+  "pos": "v. 废除，废止",
+  "story": "想象有人把一本过时的法律书扔进碎纸机🗑️——abolish就是把旧制度彻底销毁。英国abolish死刑花了近两个世纪。",
+  "tip": "常搭配 law / system / death penalty。注意：abolish强调官方正式废除，不是随便扔掉。",
+  "en": "Many countries have abolished the death penalty.",
+  "cn": "许多国家已经废除了死刑。"
+ },
+ {
+  "word": "accumulate",
+  "ipa": "/əˈkjuː.mjə.leɪt/",
+  "pos": "v. 积累，积聚",
+  "story": "书架上的书一本本摞起来📚，知识在不知不觉中accumulate。从ac-(向)+cumulus(堆)，就像蚂蚁一点点搬粮食。",
+  "tip": "可搭配 wealth / knowledge / evidence / debt。及物和不及物都可以：accumulate wealth / wealth accumulates。",
+  "en": "Over the years, she has accumulated a vast collection of rare books.",
+  "cn": "多年来，她积累了大量的珍本藏书。"
+ },
+ {
+  "word": "arbitrary",
+  "ipa": "/ˈɑː.bɪ.trər.i/",
+  "pos": "adj. 任意的，武断的",
+  "story": "掷骰子决定生死🎲——这就是arbitrary的本质：没有规则、没有理由、全凭心情。arbiter在拉丁语里是\"裁判\"，一个arbitrary的决定就是裁判乱来的结果。",
+  "tip": "常用于批评不合理的决定或规则：an arbitrary decision / rule / distinction。近义词：random, capricious。",
+  "en": "The company's hiring policy seemed completely arbitrary and unfair.",
+  "cn": "这家公司的招聘政策显得完全武断且不公平。"
+ },
+ {
+  "word": "attribute",
+  "ipa": "/əˈtrɪb.juːt/",
+  "pos": "v. 归因于，归咎于",
+  "story": "给成功贴上\"努力\"的标签🏷️，这就是attribute——把结果和原因挂钩。at-(向)+tribuere(分配)，把功劳或责任分配给某人或某事。",
+  "tip": "固定搭配 attribute A to B（把A归因于B）。名词读法不同：/ˈæt.rɪ.bjuːt/（属性）。",
+  "en": "Experts attribute the economic recovery to the government's stimulus package.",
+  "cn": "专家将经济复苏归因于政府的刺激计划。"
+ },
+ {
+  "word": "bias",
+  "ipa": "/ˈbaɪ.əs/",
+  "pos": "n. 偏见，偏向",
+  "story": "天平应该是平的，但如果一边偷偷加了砝码⚖️——这就是bias。面试官因为你的母校就给你打高分，这是confirmation bias（确认偏误）的一种。",
+  "tip": "常见搭配：gender bias / racial bias / unconscious bias / media bias。也可作动词：bias sb against/ towards sth。",
+  "en": "The study was criticized for showing a clear bias towards the pharmaceutical industry.",
+  "cn": "这项研究因明显偏向制药行业而受到批评。"
+ },
+ {
+  "word": "breach",
+  "ipa": "/briːtʃ/",
+  "pos": "n./v. 违反，破坏",
+  "story": "大坝裂开一道口子💥，水汹涌而出——breach就是打破防线、违反约定。原意是\"打破、裂开\"，breach of contract（违约）是商业里最常见的用法。",
+  "tip": "breach of contract / trust / privacy / security。注意和breech(臀部/炮尾)拼写区别。",
+  "en": "The company was sued for breach of contract after failing to deliver on time.",
+  "cn": "该公司因未能按时交货而被起诉违约。"
+ },
+ {
+  "word": "cease",
+  "ipa": "/siːs/",
+  "pos": "v. 停止，终止",
+  "story": "红灯亮起🛑，一切活动cease。来自拉丁语cessare（停止），比stop更正式、更彻底。ceasefire（停火）是国际新闻高频词。",
+  "tip": "cease to do / cease doing 都可以。ceasefire(停火)、ceaseless(不停的)。注意区分seize(抓住)。",
+  "en": "The factory was ordered to cease operations immediately due to safety violations.",
+  "cn": "由于安全违规，工厂被责令立即停止运营。"
+ },
+ {
+  "word": "chronic",
+  "ipa": "/ˈkrɒn.ɪk/",
+  "pos": "adj. 慢性的，长期的",
+  "story": "慢性病就像一个永远走不准的钟🕰️——拖很久、反复发作、让人筋疲力尽。chron-在希腊语里是\"时间\"的意思（想想chronology年表），chronic就是\"和时间较劲的\"。",
+  "tip": "chronic disease / unemployment / shortage / pain。反义词是acute(急性的)。",
+  "en": "The region suffers from a chronic shortage of clean drinking water.",
+  "cn": "该地区长期缺乏清洁饮用水。"
+ },
+ {
+  "word": "civil",
+  "ipa": "/ˈsɪv.əl/",
+  "pos": "adj. 公民的，民用的",
+  "story": "国会议事堂🏛️代表civil的核心——关于公民、关于社会。civil rights（民权）、civil war（内战）、civil engineering（土木工程），全部跟\"公民社会\"有关。",
+  "tip": "多义词：civil war内战 / civil rights民权 / civil servant公务员 / civil engineering土木工程 / civil marriage世俗婚姻。",
+  "en": "The civil rights movement transformed American society in the 1960s.",
+  "cn": "民权运动在20世纪60年代改变了美国社会。"
+ },
+ {
+  "word": "commodity",
+  "ipa": "/kəˈmɒd.ə.ti/",
+  "pos": "n. 商品，日用品",
+  "story": "港口堆满集装箱📦，里面全是commodities——从石油到咖啡豆。com-(共同)+modus(方式)→大家都按统一标准交易的东西。在经济学里，commodity指的是可互换的大宗商品。",
+  "tip": "注意：commodity常指大宗商品（石油、黄金、农产品等），不同于product(产品)或goods(货物)。commodity market商品市场。",
+  "en": "Oil is one of the most actively traded commodities in the world.",
+  "cn": "石油是世界上交易最活跃的大宗商品之一。"
+ },
+ {
+  "word": "compensate",
+  "ipa": "/ˈkɒm.pen.seɪt/",
+  "pos": "v. 补偿，赔偿",
+  "story": "打碎邻居的窗户，赶紧掏钱赔偿💰——compensate就是为自己的过错买单。com-(一起)+pensare(称重)→放在天平上称一称，该赔多少赔多少。",
+  "tip": "compensate sb for sth（为某事补偿某人）。compensate for = make up for（弥补）。compensation(名词)赔偿金。",
+  "en": "The airline offered to compensate passengers for the 12-hour delay.",
+  "cn": "航空公司提出为12小时的延误赔偿乘客。"
+ },
+ {
+  "word": "compile",
+  "ipa": "/kəmˈpaɪl/",
+  "pos": "v. 汇编，编译",
+  "story": "把散落的文件一张张整理进文件夹📋——compile就是从各处收集信息汇编成册。程序员天天compile代码，研究人员compile数据。com-(一起)+pilare(压实)→把东西压到一起。",
+  "tip": "compile data / a report / a list / a dictionary。计算机领域：compile code编译代码。名词：compilation。",
+  "en": "The research team spent months compiling data from over 500 participants.",
+  "cn": "研究团队花了数月时间汇编来自500多名参与者的数据。"
+ },
+ {
+  "word": "conceive",
+  "ipa": "/kənˈsiːv/",
+  "pos": "v. 构想，设想",
+  "story": "灯泡亮起的瞬间💡，一个新想法在脑中诞生——这就是conceive。con-(完全)+capere(抓住)→在脑海里抓住一个想法。乔布斯conceive了iPhone这个概念，改变了世界。",
+  "tip": "conceive of sth(想出某事)、conceive a plan / idea。也指\"怀孕\"(conceive a child)。名词：concept / conception。",
+  "en": "It is difficult to conceive of a world without the internet today.",
+  "cn": "今天很难想象一个没有互联网的世界。"
+ },
+ {
+  "word": "confine",
+  "ipa": "/kənˈfaɪn/",
+  "pos": "v. 限制，局限",
+  "story": "被锁在房间里🔒，活动的范围就是四面墙——confine就是把东西关在一个边界内。con-(一起)+finis(边界)→把东西圈在同一个边界里。近义词restrict。",
+  "tip": "confine sth to sth(把…限制在…)、be confined to(被限制于)。名词：confinement(监禁/分娩)。",
+  "en": "The discussion should be confined to the main topic rather than going off on tangents.",
+  "cn": "讨论应局限于主要话题，而不是跑题。"
+ },
+ {
+  "word": "confront",
+  "ipa": "/kənˈfrʌnt/",
+  "pos": "v. 面对，对抗",
+  "story": "站上擂台，正面迎击对手🥊——confront就是直面挑战，不逃避。con-(一起)+frons(额头/正面)→面对面、额头顶额头地对峙。人生中很多问题不能回避，只能confront。",
+  "tip": "confront sb with sth(用某事与某人对质)、be confronted with(面临)。名词：confrontation(对抗)。",
+  "en": "We need to confront the reality of climate change rather than ignore it.",
+  "cn": "我们需要面对气候变化的现实，而不是忽视它。"
+ },
+ {
+  "word": "diagnose",
+  "ipa": "/ˈdaɪəɡnoʊz/",
+  "pos": "v. 诊断；判断",
+  "story": "医生拿着听诊器🩺，说\"I diagnose you with awesomeness\"——诊断出你最帅的病。记住：diagnose = 诊断，di-ag-nose，拆开是\"对着鼻子看\"。",
+  "tip": "💡 雅思写作常用结构：be diagnosed with + 疾病名。口语中也常说 diagnose the problem，不限于医学。",
+  "en": "The doctor diagnosed her with an early stage of lung cancer.",
+  "cn": "医生诊断她患有早期肺癌。"
+ },
+ {
+  "word": "epidemic",
+  "ipa": "/ˌepɪˈdemɪk/",
+  "pos": "n./adj. 流行病；流行的",
+  "story": "一只病毒🦠在大街上开派对，邀请所有人参加——这就是epidemic。epi（在…之上）+ dem（人民）= 在人民头上传播的东西。",
+  "tip": "💡 注意 epidemic 和 pandemic 的区别：epidemic 是局部流行，pandemic 是全球大流行（pan- = 全部）。",
+  "en": "Obesity has become a global epidemic affecting millions of children.",
+  "cn": "肥胖已成为影响数百万儿童的全球性流行病。"
+ },
+ {
+  "word": "hereditary",
+  "ipa": "/həˈredɪteri/",
+  "pos": "adj. 遗传的；世袭的",
+  "story": "你的DNA螺旋🧬里藏着祖传的秘密——hereditary就是\"从祖宗那继承来的\"。he-red-it-ary，红色基因传下来的。",
+  "tip": "💡 搭配 hereditary disease（遗传病）、hereditary title（世袭头衔）。注意和 inherited 的区别：hereditary 更正式。",
+  "en": "Heart disease can be hereditary, so regular check-ups are essential.",
+  "cn": "心脏病可能是遗传性的，因此定期体检至关重要。"
+ },
+ {
+  "word": "hygiene",
+  "ipa": "/ˈhaɪdʒiːn/",
+  "pos": "n. 卫生；保健",
+  "story": "肥皂🧼在手，细菌全走——hygiene就是\"洗干净\"。发音像\"还洁净\"，洗了才洁净。",
+  "tip": "💡 高频搭配：personal hygiene（个人卫生）、oral hygiene（口腔卫生）、food hygiene（食品卫生）。写作环保/健康话题常用。",
+  "en": "Good hand hygiene is the simplest way to prevent infections.",
+  "cn": "良好的手部卫生是预防感染的最简单方法。"
+ },
+ {
+  "word": "infectious",
+  "ipa": "/ɪnˈfekʃəs/",
+  "pos": "adj. 传染性的；有感染力的",
+  "story": "戴口罩😷是因为怕被infectious——会传染的东西。记住 in-fect-ious，fect 跟\"感染\"有关，加上 ious 就是形容词。",
+  "tip": "💡 不仅指疾病，也可说 infectious laughter / enthusiasm（有感染力的笑声/热情），雅思口语用这个很加分。",
+  "en": "The flu is highly infectious and spreads through airborne droplets.",
+  "cn": "流感传染性极强，通过飞沫传播。"
+ },
+ {
+  "word": "mortality",
+  "ipa": "/mɔːrˈtæləti/",
+  "pos": "n. 死亡率；必死性",
+  "story": "医院的数据图表📊上有一条下降的曲线——那就是mortality rate 在降低。mort = 死亡（想想 mortuary 太平间），al + ity = 名词。",
+  "tip": "💡 雅思写作数据描述必会词：mortality rate（死亡率）、infant mortality（婴儿死亡率）。对比 life expectancy（预期寿命）。",
+  "en": "Infant mortality rates have dropped significantly in the past decade.",
+  "cn": "过去十年婴儿死亡率大幅下降。"
+ },
+ {
+  "word": "nutrition",
+  "ipa": "/nuːˈtrɪʃən/",
+  "pos": "n. 营养；营养学",
+  "story": "一碗沙拉🥗里全是nutrition——各种营养素。nutri = 滋养，tion = 名词后缀。吃好的，才有营养。",
+  "tip": "💡 搭配：balanced nutrition（均衡营养）、nutrition facts（营养成分表）。形容词 nutritious = 有营养的，别和 nutritional 混了。",
+  "en": "Adequate nutrition is vital for children's physical and mental development.",
+  "cn": "充足的营养对儿童的身心发育至关重要。"
+ },
+ {
+  "word": "prescribe",
+  "ipa": "/prɪˈskraɪb/",
+  "pos": "v. 开处方；规定",
+  "story": "医生在处方单上写下药丸💊的名字——这就是prescribe。pre（提前）+ scribe（写）= 提前写好药方。",
+  "tip": "💡 搭配：prescribe medication / treatment（开药/治疗方案）。名词是 prescription（处方）。不要和 proscribe（禁止）搞混，意思完全相反！",
+  "en": "The doctor prescribed antibiotics to treat the bacterial infection.",
+  "cn": "医生开了抗生素来治疗细菌感染。"
+ },
+ {
+  "word": "rehabilitation",
+  "ipa": "/ˌriːəˌbɪlɪˈteɪʃən/",
+  "pos": "n. 康复；改造；恢复",
+  "story": "医院🏥里的康复中心——rehabilitation就是让人重新站起来。re（重新）+ habilit（能力）+ ation = 恢复能力的过程。",
+  "tip": "💡 口语可简说 rehab。搭配：drug rehabilitation（戒毒康复）、rehabilitation centre（康复中心）。写作社会话题高频词。",
+  "en": "After the surgery, he underwent six months of rehabilitation to regain full mobility.",
+  "cn": "手术后，他经历了六个月的康复治疗以恢复完全活动能力。"
+ },
+ {
+  "word": "symptom",
+  "ipa": "/ˈsɪmptəm/",
+  "pos": "n. 症状；征兆",
+  "story": "发烧捂额头🤒是生病的symptom——症状。sym（一起）+ ptom（落下）= 一起出现的迹象。记住：symptom 是你能感觉到的，sign 是医生能看到的。",
+  "tip": "💡 不仅指疾病，也可说 symptom of a problem（问题的征兆）。雅思写作表达\"显示问题\"的高级说法。",
+  "en": "Common symptoms of COVID include fever, cough, and loss of taste.",
+  "cn": "新冠的常见症状包括发烧、咳嗽和味觉丧失。"
+ },
+ {
+  "word": "therapy",
+  "ipa": "/ˈθerəpi/",
+  "pos": "n. 治疗；疗法",
+  "story": "瑜伽冥想🧘是一种therapy——不一定是吃药，也可能是心理治疗、物理治疗。希腊语 therapeia = 治愈、服务。",
+  "tip": "💡 高频搭配：physical therapy（物理治疗）、cognitive therapy（认知疗法）、retail therapy（购物疗法，口语俏皮说法）。",
+  "en": "Cognitive behavioural therapy is effective for treating anxiety disorders.",
+  "cn": "认知行为疗法对治疗焦虑症很有效。"
+ },
+ {
+  "word": "transmit",
+  "ipa": "/trænzˈmɪt/",
+  "pos": "v. 传播；传递；传送",
+  "story": "信号塔📡在transmit信息——发射、传递。trans（跨越）+ mit（发送）= 从一个地方发送到另一个地方。",
+  "tip": "💡 搭配：transmit data/signals（传输数据/信号）、transmit diseases（传播疾病）。名词是 transmission。",
+  "en": "Mosquitoes can transmit malaria and other deadly diseases.",
+  "cn": "蚊子可以传播疟疾和其他致命疾病。"
+ },
+ {
+  "word": "verdict",
+  "ipa": "/ˈvɜːrdɪkt/",
+  "pos": "n. 裁决；结论；意见",
+  "story": "天平⚖️落下，法官宣布verdict——最终裁决。ver（真实）+ dict（说）= 说出真相。和 dictionary（字典，记录词语真相）同根。",
+  "tip": "💡 搭配：reach a verdict（达成裁决）、guilty verdict（有罪判决）。口语中也可说 What's your verdict? = 你觉得怎么样？",
+  "en": "The jury returned a unanimous verdict of not guilty after three days.",
+  "cn": "陪审团经过三天做出了无异议的无罪裁决。"
+ },
+ {
+  "word": "warrant",
+  "ipa": "/ˈwɒrənt/",
+  "pos": "n./v. 授权令；保证；使有必要",
+  "story": "警察亮出搜查令🔖——这就是warrant。古法语 warant = 担保、授权。做动词时表示\"值得、使有必要\"。",
+  "tip": "💡 n. 常见：search warrant（搜查令）、arrest warrant（逮捕令）。v. 写作高级词：warrant attention / investigation（值得关注/调查）。",
+  "en": "The police obtained a search warrant before entering the suspect's house.",
+  "cn": "警方在进入嫌疑人家中前获得了搜查令。"
+ },
+ {
+  "word": "yield",
+  "ipa": "/jiːld/",
+  "pos": "v./n. 屈服；产出；产量",
+  "story": "金黄的麦田🌾丰收了——这就是yield，既表示\"产出\"也表示\"屈服\"（麦子熟了会弯腰）。一个词，两个意思，完美！",
+  "tip": "💡 yield to = 屈服于，yield results = 产生结果。雅思写作万能词：high-yield investment（高收益投资）、crop yield（作物产量）。",
+  "en": "The company refused to yield to pressure from its competitors.",
+  "cn": "该公司拒绝屈服于竞争对手的压力。"
+ },
+ {
+  "word": "acknowledge",
+  "ipa": "/əkˈnɒlɪdʒ/",
+  "pos": "v. 承认",
+  "story": "a+know+ledge：知道(ledge)就‘承认’",
+  "tip": "常用于 acknowledge that...",
+  "en": "She acknowledged that she was wrong.",
+  "cn": "她承认自己错了。"
+ },
+ {
+  "word": "adequate",
+  "ipa": "/ˈædɪkwət/",
+  "pos": "adj. 足够的",
+  "story": "ad+eat：能吃下就‘够’了",
+  "tip": "反义词 inadequate",
+  "en": "The room has adequate lighting.",
+  "cn": "房间采光充足。"
+ },
+ {
+  "word": "allocate",
+  "ipa": "/ˈæləkeɪt/",
+  "pos": "v. 分配",
+  "story": "al+locate(放置)：把资源‘放’到各处",
+  "tip": "allocate funds/time to",
+  "en": "We allocated more time to revision.",
+  "cn": "我们给复习分配了更多时间。"
+ },
+ {
+  "word": "ambiguous",
+  "ipa": "/æmˈbɪɡjuəs/",
+  "pos": "adj. 模糊的",
+  "story": "ambi(两)+iguous：两种意思→含糊",
+  "tip": "反义 clear/unambiguous",
+  "en": "His reply was ambiguous.",
+  "cn": "他的回答含糊其辞。"
+ },
+ {
+  "word": "anticipate",
+  "ipa": "/ænˈtɪsɪpeɪt/",
+  "pos": "v. 预期",
+  "story": "anti(前)+cip(拿)：提前拿→预料",
+  "tip": "= expect，更正式",
+  "en": "We anticipate a rise in costs.",
+  "cn": "我们预计成本会上升。"
+ },
+ {
+  "word": "apparent",
+  "ipa": "/əˈpærənt/",
+  "pos": "adj. 明显的",
+  "story": "ap+parent(明显的)：一眼看出",
+  "tip": "it is apparent that...",
+  "en": "It is apparent that he lied.",
+  "cn": "显然他说了谎。"
+ },
+ {
+  "word": "arbitrary",
+  "ipa": "/ˈɑːbɪtrəri/",
+  "pos": "adj. 武断的",
+  "story": "arbit(判断)+ary：凭自己判断→随意",
+  "tip": "反义 reasonable",
+  "en": "The decision seemed arbitrary.",
+  "cn": "这个决定显得武断。"
+ },
+ {
+  "word": "articulate",
+  "ipa": "/ɑːˈtɪkjuleɪt/",
+  "pos": "v. 清晰表达",
+  "story": "article(文章)+ate：把想法写成/说出‘条理’",
+  "tip": "形容词发音变 /ɑːˈtɪkjələt/",
+  "en": "She articulated her ideas well.",
+  "cn": "她把想法表达得很清楚。"
+ },
+ {
+  "word": "assess",
+  "ipa": "/əˈses/",
+  "pos": "v. 评估",
+  "story": "as(加强)+sess(坐)：坐下来细看→评定",
+  "tip": "assess the impact/risk",
+  "en": "We must assess the risk.",
+  "cn": "我们必须评估风险。"
+ },
+ {
+  "word": "assume",
+  "ipa": "/əˈsjuːm/",
+  "pos": "v. 假定",
+  "story": "as+sume(拿)：先‘拿’一个前提",
+  "tip": "assume (that)...",
+  "en": "I assume he is honest.",
+  "cn": "我假定他是诚实的。"
+ },
+ {
+  "word": "attribute",
+  "ipa": "/əˈtrɪbjuːt/",
+  "pos": "v. 归因于",
+  "story": "at+tribute(赋予)：把结果‘归’给原因",
+  "tip": "attribute A to B",
+  "en": "He attributed his success to luck.",
+  "cn": "他把成功归因于运气。"
+ },
+ {
+  "word": "bias",
+  "ipa": "/ˈbaɪəs/",
+  "pos": "n. 偏见",
+  "story": "bias 音似‘偏好’",
+  "tip": "cognitive bias 认知偏差",
+  "en": "The report shows a clear bias.",
+  "cn": "这份报告有明显的偏见。"
+ },
+ {
+  "word": "coincide",
+  "ipa": "/ˌkəʊɪnˈsaɪd/",
+  "pos": "v. 同时发生",
+  "story": "co(共同)+incide(落下)：一起落下→巧合",
+  "tip": "coincide with",
+  "en": "The holiday coincides with my birthday.",
+  "cn": "假期正好碰上我生日。"
+ },
+ {
+  "word": "compensate",
+  "ipa": "/ˈkɒmpenseɪt/",
+  "pos": "v. 补偿",
+  "story": "com+pens(钱)+ate：用钱补",
+  "tip": "compensate for",
+  "en": "Nothing can compensate for lost time.",
+  "cn": "什么也补偿不了逝去的时间。"
+ },
+ {
+  "word": "compile",
+  "ipa": "/kəmˈpaɪl/",
+  "pos": "v. 编纂",
+  "story": "com+pile(堆)：堆到一起→汇编",
+  "tip": "compile a list/report",
+  "en": "They compiled a vocabulary list.",
+  "cn": "他们编了一份词汇表。"
+ },
+ {
+  "word": "comprehend",
+  "ipa": "/ˌkɒmprɪˈhend/",
+  "pos": "v. 理解",
+  "story": "com+prehend(抓)：全抓住→懂",
+  "tip": "= understand，较正式",
+  "en": "I cannot comprehend this theory.",
+  "cn": "我无法理解这个理论。"
+ },
+ {
+  "word": "conceive",
+  "ipa": "/kənˈsiːv/",
+  "pos": "v. 构想",
+  "story": "con+ceive(拿)：心里‘拿’出主意",
+  "tip": "conceive of / an idea",
+  "en": "He conceived a new plan.",
+  "cn": "他构想出一个新计划。"
+ },
+ {
+  "word": "concurrent",
+  "ipa": "/kənˈkʌrənt/",
+  "pos": "adj. 同时的",
+  "story": "con+current(流)：一起流→并发",
+  "tip": "concurrent events",
+  "en": "Two concurrent meetings clashed.",
+  "cn": "两个同时的会议冲突了。"
+ },
+ {
+  "word": "consolidate",
+  "ipa": "/kənˈsɒlɪdeɪt/",
+  "pos": "v. 巩固",
+  "story": "con+solid(固)+ate：变 solid",
+  "tip": "consolidate one's power",
+  "en": "The company consolidated its lead.",
+  "cn": "公司巩固了领先地位。"
+ },
+ {
+  "word": "constitute",
+  "ipa": "/ˈkɒnstɪtjuːt/",
+  "pos": "v. 构成",
+  "story": "con+stitute(站)：站在一起组成",
+  "tip": "constitute a threat/majority",
+  "en": "Women constitute half the team.",
+  "cn": "女性占团队一半。"
+ },
+ {
+  "word": "constrain",
+  "ipa": "/kənˈstreɪn/",
+  "pos": "v. 限制",
+  "story": "con+strain(拉紧)：拉住→约束",
+  "tip": "constrained by budget",
+  "en": "We are constrained by time.",
+  "cn": "我们受时间限制。"
+ },
+ {
+  "word": "contemplate",
+  "ipa": "/ˈkɒntəmpleɪt/",
+  "pos": "v. 沉思",
+  "story": "con+temple(庙)：庙里冥想",
+  "tip": "contemplate doing",
+  "en": "He contemplated quitting.",
+  "cn": "他考虑过辞职。"
+ },
+ {
+  "word": "contribute",
+  "ipa": "/kənˈtrɪbjuːt/",
+  "pos": "v. 贡献",
+  "story": "con+tribute(给)：一起给",
+  "tip": "contribute to",
+  "en": "Exercise contributes to health.",
+  "cn": "运动有助于健康。"
+ },
+ {
+  "word": "crucial",
+  "ipa": "/ˈkruːʃl/",
+  "pos": "adj. 关键的",
+  "story": "cruc(十字)+ial：十字路口→决定性",
+  "tip": "crucial for/to",
+  "en": "Sleep is crucial for memory.",
+  "cn": "睡眠对记忆至关重要。"
+ },
+ {
+  "word": "cultivate",
+  "ipa": "/ˈkʌltɪveɪt/",
+  "pos": "v. 培养",
+  "story": "cult(耕)+ivate：耕耘→培养",
+  "tip": "cultivate a habit/Relationship",
+  "en": "Cultivate the habit of reading.",
+  "cn": "培养阅读习惯。"
+ },
+ {
+  "word": "demonstrate",
+  "ipa": "/ˈdemənstreɪt/",
+  "pos": "v. 证明",
+  "story": "de+monstr(展示)+ate：展示出来",
+  "tip": "demonstrate that...",
+  "en": "The study demonstrates the link.",
+  "cn": "研究证明了其中的关联。"
+ },
+ {
+  "word": "denote",
+  "ipa": "/dɪˈnəʊt/",
+  "pos": "v. 表示",
+  "story": "de+note(记号)：用记号‘指’",
+  "tip": "denote A as B",
+  "en": "A red flag denotes danger.",
+  "cn": "红旗表示危险。"
+ },
+ {
+  "word": "derive",
+  "ipa": "/dɪˈraɪv/",
+  "pos": "v. 源自",
+  "story": "de+rive(河)：从河里引出",
+  "tip": "derive from",
+  "en": "Many words derive from Latin.",
+  "cn": "许多词源自拉丁语。"
+ },
+ {
+  "word": "diminish",
+  "ipa": "/dɪˈmɪnɪʃ/",
+  "pos": "v. 减少",
+  "story": "di+min(小)+ish：变小",
+  "tip": "diminish in value",
+  "en": "His influence diminished.",
+  "cn": "他的影响力下降了。"
+ },
+ {
+  "word": "disperse",
+  "ipa": "/dɪˈspɜːs/",
+  "pos": "v. 分散",
+  "story": "dis+perse(撒)：撒开→驱散",
+  "tip": "disperse the crowd",
+  "en": "Police dispersed the crowd.",
+  "cn": "警察驱散了人群。"
+ },
+ {
+  "word": "distinct",
+  "ipa": "/dɪˈstɪŋkt/",
+  "pos": "adj. 明显的",
+  "story": "di+stinct(刺)：扎眼→清晰",
+  "tip": "distinct from",
+  "en": "The two ideas are distinct.",
+  "cn": "这两个想法明显不同。"
+ },
+ {
+  "word": "distribute",
+  "ipa": "/dɪˈstrɪbjuːt/",
+  "pos": "v. 分发",
+  "story": "dis+tribute(给)：分开给",
+  "tip": "distribute among",
+  "en": "They distributed food to victims.",
+  "cn": "他们向灾民分发食物。"
+ },
+ {
+  "word": "diverse",
+  "ipa": "/daɪˈvɜːs/",
+  "pos": "adj. 多样的",
+  "story": "di+verse(转)：转向各方→多元",
+  "tip": "culturally diverse",
+  "en": "The city is culturally diverse.",
+  "cn": "这座城市文化多元。"
+ },
+ {
+  "word": "dominate",
+  "ipa": "/ˈdɒmɪneɪt/",
+  "pos": "v. 主导",
+  "story": "domin(统治)+ate",
+  "tip": "dominate the market",
+  "en": "The brand dominates the market.",
+  "cn": "该品牌主导市场。"
+ },
+ {
+  "word": "eliminate",
+  "ipa": "/ɪˈlɪmɪneɪt/",
+  "pos": "v. 消除",
+  "story": "e(出)+limin(门槛)+ate：踢出门",
+  "tip": "eliminate errors",
+  "en": "We must eliminate errors.",
+  "cn": "我们必须消除错误。"
+ },
+ {
+  "word": "emphasize",
+  "ipa": "/ˈemfəsaɪz/",
+  "pos": "v. 强调",
+  "story": "em+phase(阶段)+ize：突出",
+  "tip": "emphasize the need to",
+  "en": "He emphasized the need for care.",
+  "cn": "他强调需要谨慎。"
+ },
+ {
+  "word": "enhance",
+  "ipa": "/ɪnˈhɑːns/",
+  "pos": "v. 提升",
+  "story": "en+hance(高)：变高→增强",
+  "tip": "enhance performance",
+  "en": "Music enhances concentration.",
+  "cn": "音乐提升专注力。"
+ },
+ {
+  "word": "erosion",
+  "ipa": "/ɪˈrəʊʒn/",
+  "pos": "n. 侵蚀",
+  "story": "e(出)+ros(咬)+ion：咬掉",
+  "tip": "soil/coast erosion",
+  "en": "Erosion damaged the coast.",
+  "cn": "侵蚀破坏了海岸。"
+ },
+ {
+  "word": "establish",
+  "ipa": "/ɪˈstæblɪʃ/",
+  "pos": "v. 建立",
+  "story": "e+stable(稳)+ish：立稳",
+  "tip": "establish a system",
+  "en": "They established a new rule.",
+  "cn": "他们确立了新规则。"
+ },
+ {
+  "word": "evaluate",
+  "ipa": "/ɪˈvæljueɪt/",
+  "pos": "v. 评价",
+  "story": "e+value(价值)+ate：估价值",
+  "tip": "evaluate the effect",
+  "en": "We evaluated the results.",
+  "cn": "我们评估了结果。"
+ },
+ {
+  "word": "evident",
+  "ipa": "/ˈevɪdənt/",
+  "pos": "adj. 明显的",
+  "story": "e+vid(看)+ent：看得见的",
+  "tip": "self-evident",
+  "en": "The benefit is evident.",
+  "cn": "好处是显而易见的。"
+ },
+ {
+  "word": "exceed",
+  "ipa": "/ɪkˈsiːd/",
+  "pos": "v. 超过",
+  "story": "ex(出)+ceed(走)：走过头",
+  "tip": "exceed the limit",
+  "en": "Costs exceeded the budget.",
+  "cn": "成本超出了预算。"
+ },
+ {
+  "word": "exclude",
+  "ipa": "/ɪkˈskluːd/",
+  "pos": "v. 排除",
+  "story": "ex+clude(关)：关在外面",
+  "tip": "exclude from",
+  "en": "Children are excluded.",
+  "cn": "儿童被排除在外。"
+ },
+ {
+  "word": "explicit",
+  "ipa": "/ɪkˈsplɪsɪt/",
+  "pos": "adj. 明确的",
+  "story": "ex+plic(折)+it：摊开说→清楚",
+  "tip": "explicit instruction",
+  "en": "He gave explicit instructions.",
+  "cn": "他给了明确的指示。"
+ },
+ {
+  "word": "extract",
+  "ipa": "/ɪkˈstrækt/",
+  "pos": "v. 提取",
+  "story": "ex+tract(拉)：拉出来",
+  "tip": "extract data/information",
+  "en": "We extracted the key points.",
+  "cn": "我们提取了要点。"
+ },
+ {
+  "word": "facilitate",
+  "ipa": "/fəˈsɪlɪteɪt/",
+  "pos": "v. 促进",
+  "story": "facil(易)+ate：让事变易",
+  "tip": "facilitate communication",
+  "en": "The app facilitates learning.",
+  "cn": "这款应用促进学习。"
+ },
+ {
+  "word": "feasible",
+  "ipa": "/ˈfiːzəbl/",
+  "pos": "adj. 可行的",
+  "story": "feas(做)+ible：能做的",
+  "tip": "it is feasible to",
+  "en": "The plan is feasible.",
+  "cn": "这个计划可行。"
+ },
+ {
+  "word": "formulate",
+  "ipa": "/ˈfɔːmjuleɪt/",
+  "pos": "v. 制定",
+  "story": "form(形)+ulate：定形→阐述",
+  "tip": "formulate a policy",
+  "en": "They formulated a strategy.",
+  "cn": "他们制定了战略。"
+ },
+ {
+  "word": "fundamental",
+  "ipa": "/ˌfʌndəˈmentl/",
+  "pos": "adj. 基本的",
+  "story": "fund(基)+mental：地基的",
+  "tip": "fundamental difference",
+  "en": "Trust is fundamental.",
+  "cn": "信任是根本。"
+ },
+ {
+  "word": "generate",
+  "ipa": "/ˈdʒenəreɪt/",
+  "pos": "v. 产生",
+  "story": "gener(生)+ate：生出",
+  "tip": "generate income/ideas",
+  "en": "Solar panels generate power.",
+  "cn": "太阳能板发电。"
+ },
+ {
+  "word": "genuine",
+  "ipa": "/ˈdʒenjuɪn/",
+  "pos": "adj. 真正的",
+  "story": "genu(生)+ine：原生→真",
+  "tip": "genuine interest",
+  "en": "She showed genuine concern.",
+  "cn": "她表现出真正的关心。"
+ },
+ {
+  "word": "hierarchy",
+  "ipa": "/ˈhaɪərɑːki/",
+  "pos": "n. 等级",
+  "story": "hier(圣)+archy(统治)：等级制",
+  "tip": "social hierarchy",
+  "en": "There is a clear hierarchy.",
+  "cn": "有明显的等级结构。"
+ },
+ {
+  "word": "hypothesis",
+  "ipa": "/haɪˈpɒθəsɪs/",
+  "pos": "n. 假设",
+  "story": "hypo(下)+thesis(论点)：待证论点",
+  "tip": "test a hypothesis",
+  "en": "The hypothesis was proved.",
+  "cn": "该假设被证实了。"
+ },
+ {
+  "word": "identify",
+  "ipa": "/aɪˈdentɪfaɪ/",
+  "pos": "v. 识别",
+  "story": "ident(相同)+ify：认出",
+  "tip": "identify the cause",
+  "en": "We identified the problem.",
+  "cn": "我们找出了问题。"
+ },
+ {
+  "word": "illustrate",
+  "ipa": "/ˈɪləstreɪt/",
+  "pos": "v. 说明",
+  "story": "il+lustr(光)+ate：照亮→阐明",
+  "tip": "illustrate with an example",
+  "en": "Let me illustrate with a case.",
+  "cn": "我用一个案例说明。"
+ },
+ {
+  "word": "imply",
+  "ipa": "/ɪmˈplaɪ/",
+  "pos": "v. 暗示",
+  "story": "im(入)+ply(折)：折进去→暗含",
+  "tip": "易混 imply(暗示) vs infer(推断)",
+  "en": "Her tone implied doubt.",
+  "cn": "她的语气暗示了怀疑。"
+ },
+ {
+  "word": "incentive",
+  "ipa": "/ɪnˈsentɪv/",
+  "pos": "n. 激励",
+  "story": "in+cent(唱)+ive：让人行动的刺激",
+  "tip": "financial incentive",
+  "en": "Tax cuts are an incentive.",
+  "cn": "减税是一种激励。"
+ },
+ {
+  "word": "incorporate",
+  "ipa": "/ɪnˈkɔːpəreɪt/",
+  "pos": "v. 纳入",
+  "story": "in+corpor(体)+ate：并入一体",
+  "tip": "incorporate into",
+  "en": "We incorporated feedback.",
+  "cn": "我们采纳了反馈。"
+ },
+ {
+  "word": "indicate",
+  "ipa": "/ˈɪndɪkeɪt/",
+  "pos": "v. 表明",
+  "story": "in+dic(说)+ate：指出",
+  "tip": "indicate that...",
+  "en": "Data indicates a trend.",
+  "cn": "数据表明了一种趋势。"
+ },
+ {
+  "word": "inherent",
+  "ipa": "/ɪnˈhɪərənt/",
+  "pos": "adj. 固有的",
+  "story": "in+her(黏)+ent：黏在里→天生",
+  "tip": "inherent risk",
+  "en": "Every plan has inherent risk.",
+  "cn": "每个计划都有固有风险。"
+ },
+ {
+  "word": "innovate",
+  "ipa": "/ˈɪnəveɪt/",
+  "pos": "v. 创新",
+  "story": "in+nov(新)+ate：弄新",
+  "tip": "innovate in",
+  "en": "Firms must innovate to survive.",
+  "cn": "企业必须创新才能生存。"
+ },
+ {
+  "word": "integral",
+  "ipa": "/ˈɪntɪɡrəl/",
+  "pos": "adj. 不可或缺的",
+  "story": "integr(整)+al：整体一部分",
+  "tip": "integral part of",
+  "en": "Trust is integral to team.",
+  "cn": "信任是团队不可或缺的部分。"
+ },
+ {
+  "word": "interpret",
+  "ipa": "/ɪnˈtɜːprɪt/",
+  "pos": "v. 解读",
+  "story": "inter(间)+pret(说)：在中间说→阐释",
+  "tip": "interpret the data",
+  "en": "How do you interpret this?",
+  "cn": "你如何解读这个？"
+ },
+ {
+  "word": "intervene",
+  "ipa": "/ˌɪntəˈviːn/",
+  "pos": "v. 干预",
+  "story": "inter(间)+vene(来)：来到中间",
+  "tip": "intervene in",
+  "en": "The UN intervened.",
+  "cn": "联合国进行了干预。"
+ },
+ {
+  "word": "invoke",
+  "ipa": "/ɪnˈvəʊk/",
+  "pos": "v. 援引",
+  "story": "in+vok(呼)+e：呼求",
+  "tip": "invoke a law/rule",
+  "en": "They invoked an old law.",
+  "cn": "他们援引了一条旧法。"
+ },
+ {
+  "word": "isolation",
+  "ipa": "/ˌaɪsəˈleɪʃn/",
+  "pos": "n. 孤立",
+  "story": "isol(岛)+ation：像岛一样",
+  "tip": "in isolation",
+  "en": "He lived in isolation.",
+  "cn": "他离群索居。"
+ },
+ {
+  "word": "legitimate",
+  "ipa": "/lɪˈdʒɪtɪmət/",
+  "pos": "adj. 合法的",
+  "story": "leg(法)+itimate：合法律的",
+  "tip": "a legitimate concern",
+  "en": "That is a legitimate worry.",
+  "cn": "那是个合理的担忧。"
+ },
+ {
+  "word": "maintain",
+  "ipa": "/meɪnˈteɪn/",
+  "pos": "v. 维持",
+  "story": "main(手)+tain(握)：握牢",
+  "tip": "maintain order/contact",
+  "en": "We must maintain contact.",
+  "cn": "我们必须保持联系。"
+ },
+ {
+  "word": "manipulate",
+  "ipa": "/məˈnɪpjuleɪt/",
+  "pos": "v. 操纵",
+  "story": "mani(手)+pulate：用手摆布",
+  "tip": "manipulate data",
+  "en": "He manipulated the figures.",
+  "cn": "他篡改了数据。"
+ },
+ {
+  "word": "mediate",
+  "ipa": "/ˈmiːdieɪt/",
+  "pos": "v. 调解",
+  "story": "medi(中)+ate：在中间",
+  "tip": "mediate between",
+  "en": "They mediated the dispute.",
+  "cn": "他们调解了争端。"
+ },
+ {
+  "word": "minimize",
+  "ipa": "/ˈmɪnɪmaɪz/",
+  "pos": "v. 最小化",
+  "story": "mini(小)+ize：弄到最小",
+  "tip": "minimize risk",
+  "en": "We minimized the risk.",
+  "cn": "我们把风险降到最低。"
+ },
+ {
+  "word": "mutual",
+  "ipa": "/ˈmjuːtʃuəl/",
+  "pos": "adj. 相互的",
+  "story": "mutu(交换)+al：互换的",
+  "tip": "mutual benefit",
+  "en": "We have mutual respect.",
+  "cn": "我们相互尊重。"
+ },
+ {
+  "word": "neglect",
+  "ipa": "/nɪˈɡlekt/",
+  "pos": "v. 忽视",
+  "story": "neg(不)+lect(选)：不选→忽略",
+  "tip": "neglect one's duty",
+  "en": "He neglected his health.",
+  "cn": "他忽视了健康。"
+ },
+ {
+  "word": "notion",
+  "ipa": "/ˈnəʊʃn/",
+  "pos": "n. 概念",
+  "story": "not(知)+ion：知道的东西→观念",
+  "tip": "the notion that...",
+  "en": "The notion is outdated.",
+  "cn": "这个观念过时了。"
+ },
+ {
+  "word": "objective",
+  "ipa": "/əbˈdʒektɪv/",
+  "pos": "adj. 客观的",
+  "story": "object(对象)+ive：看对象→客观",
+  "tip": "stay objective",
+  "en": "Journalists should be objective.",
+  "cn": "记者应当客观。"
+ },
+ {
+  "word": "obtain",
+  "ipa": "/əbˈteɪn/",
+  "pos": "v. 获得",
+  "story": "ob+tain(拿)：拿到",
+  "tip": "obtain a degree",
+  "en": "She obtained a degree.",
+  "cn": "她获得了学位。"
+ },
+ {
+  "word": "obvious",
+  "ipa": "/ˈɒbviəs/",
+  "pos": "adj. 明显的",
+  "story": "ob+vi(路)+ous：挡路的→显然",
+  "tip": "it is obvious that",
+  "en": "The answer is obvious.",
+  "cn": "答案很明显。"
+ },
+ {
+  "word": "occupy",
+  "ipa": "/ˈɒkjupaɪ/",
+  "pos": "v. 占据",
+  "story": "oc+cupy(抓)：抓住→占领",
+  "tip": "occupy one's mind",
+  "en": "The task occupied him.",
+  "cn": "这项任务占满了他的心思。"
+ },
+ {
+  "word": "perceive",
+  "ipa": "/pəˈsiːv/",
+  "pos": "v. 感知",
+  "story": "per(全)+ceive(拿)：全抓住→察觉",
+  "tip": "perceive as",
+  "en": "She is perceived as strict.",
+  "cn": "她被认为很严厉。"
+ },
+ {
+  "word": "precise",
+  "ipa": "/prɪˈsaɪs/",
+  "pos": "adj. 精确的",
+  "story": "pre(前)+cise(切)：切得准",
+  "tip": "to be precise",
+  "en": "Give a precise figure.",
+  "cn": "给个精确的数字。"
+ },
+ {
+  "word": "presume",
+  "ipa": "/prɪˈzjuːm/",
+  "pos": "v. 推测",
+  "story": "pre(前)+sume(拿)：先拿结论",
+  "tip": "presume that...",
+  "en": "I presume you agree.",
+  "cn": "我推测你同意。"
+ },
+ {
+  "word": "prevalent",
+  "ipa": "/ˈprevələnt/",
+  "pos": "adj. 普遍的",
+  "story": "pre+val(强)+ent：占上风→流行",
+  "tip": "prevalent among",
+  "en": "This view is prevalent.",
+  "cn": "这种观点很普遍。"
+ },
+ {
+  "word": "promote",
+  "ipa": "/prəˈməʊt/",
+  "pos": "v. 促进",
+  "story": "pro(前)+mote(动)：向前推",
+  "tip": "promote growth",
+  "en": "The policy promotes growth.",
+  "cn": "政策促进增长。"
+ },
+ {
+  "word": "propose",
+  "ipa": "/prəˈpəʊz/",
+  "pos": "v. 提议",
+  "story": "pro(前)+pose(放)：摆出方案",
+  "tip": "propose a plan",
+  "en": "He proposed a solution.",
+  "cn": "他提出了一个方案。"
+ },
+ {
+  "word": "prospective",
+  "ipa": "/prəˈspektɪv/",
+  "pos": "adj. 预期的",
+  "story": "pro+spect(看)+ive：向前看的",
+  "tip": "prospective student",
+  "en": "A prospective buyer came.",
+  "cn": "一位潜在买家来了。"
+ },
+ {
+  "word": "radical",
+  "ipa": "/ˈrædɪkl/",
+  "pos": "adj. 激进的",
+  "story": "radic(根)+al：连根拔→彻底",
+  "tip": "radical change",
+  "en": "The reform is radical.",
+  "cn": "改革很彻底。"
+ },
+ {
+  "word": "random",
+  "ipa": "/ˈrændəm/",
+  "pos": "adj. 随机的",
+  "story": "random 音似‘乱动’",
+  "tip": "at random",
+  "en": "Pick a card at random.",
+  "cn": "随机抽一张牌。"
+ },
+ {
+  "word": "rational",
+  "ipa": "/ˈræʃnəl/",
+  "pos": "adj. 理性的",
+  "story": "ratio(比)+nal：讲比例的→合理",
+  "tip": "a rational choice",
+  "en": "Make a rational decision.",
+  "cn": "做个理性的决定。"
+ },
+ {
+  "word": "react",
+  "ipa": "/riˈækt/",
+  "pos": "v. 反应",
+  "story": "re(回)+act(动)：回动→反应",
+  "tip": "react to",
+  "en": "How did he react?",
+  "cn": "他有何反应？"
+ },
+ {
+  "word": "recover",
+  "ipa": "/rɪˈkʌvə/",
+  "pos": "v. 恢复",
+  "story": "re(再)+cover(盖)：重新盖好→复原",
+  "tip": "recover from",
+  "en": "He recovered quickly.",
+  "cn": "他恢复得很快。"
+ },
+ {
+  "word": "reflect",
+  "ipa": "/rɪˈflekt/",
+  "pos": "v. 反映",
+  "story": "re(回)+flect(折)：折回→反映",
+  "tip": "reflect on",
+  "en": "The book reflects society.",
+  "cn": "这本书反映了社会。"
+ },
+ {
+  "word": "regulate",
+  "ipa": "/ˈreɡjuleɪt/",
+  "pos": "v. 监管",
+  "story": "reg(规)+ulate：用规则管",
+  "tip": "regulate the market",
+  "en": "The state regulates banks.",
+  "cn": "国家监管银行。"
+ },
+ {
+  "word": "reinforce",
+  "ipa": "/ˌriːɪnˈfɔːs/",
+  "pos": "v. 加强",
+  "story": "re+in+force：再加力",
+  "tip": "reinforce a habit",
+  "en": "Praise reinforces learning.",
+  "cn": "表扬强化学习。"
+ },
+ {
+  "word": "reluctant",
+  "ipa": "/rɪˈlʌktənt/",
+  "pos": "adj. 不情愿的",
+  "story": "re(反)+luct(挣扎)+ant：挣扎不愿",
+  "tip": "be reluctant to",
+  "en": "He was reluctant to go.",
+  "cn": "他不情愿去。"
+ },
+ {
+  "word": "reveal",
+  "ipa": "/rɪˈviːl/",
+  "pos": "v. 揭示",
+  "story": "re(再)+veal(面纱)：掀开",
+  "tip": "reveal the truth",
+  "en": "The data revealed a trend.",
+  "cn": "数据揭示了趋势。"
+ },
+ {
+  "word": "sustain",
+  "ipa": "/səˈsteɪn/",
+  "pos": "v. 维持",
+  "story": "sus(下)+tain(握)：从下托住",
+  "tip": "sustain growth",
+  "en": "The economy sustained growth.",
+  "cn": "经济保持了增长。"
+ },
+ {
+  "word": "irrespective",
+  "ipa": "/ˌɪrɪˈspektɪv/",
+  "pos": "adj. 不顾的",
+  "story": "ir(不)+respect(看)+ive：不看",
+  "tip": "irrespective of",
+  "en": "Open to all, irrespective of age.",
+  "cn": "对所有人开放，不论年龄。"
+ },
+ {
+  "word": "simultaneous",
+  "ipa": "/ˌsɪmlˈteɪniəs/",
+  "pos": "adj. 同时的",
+  "story": "simul(同)+taneous：同一时刻",
+  "tip": "simultaneous translation",
+  "en": "同声传译是 simultaneous。",
+  "cn": "同声传译即同步翻译。"
+ },
+ {
+  "word": "straightforward",
+  "ipa": "/ˌstreɪtˈfɔːwəd/",
+  "pos": "adj. 简单的",
+  "story": "straight+forward：直往前→直白",
+  "tip": "a straightforward task",
+  "en": "The task is straightforward.",
+  "cn": "任务很简单。"
+ },
+ {
+  "word": "undergo",
+  "ipa": "/ˌʌndəˈɡəʊ/",
+  "pos": "v. 经历",
+  "story": "under+go：在下面走→经受",
+  "tip": "undergo changes",
+  "en": "The city underwent reform.",
+  "cn": "城市经历了改革。"
+ },
+ {
+  "word": "seminar",
+  "ipa": "/ˈsemɪnɑː(r)/",
+  "pos": "n. 研讨班",
+  "story": "semi(半)+nar→半大不大的课→研讨班",
+  "tip": "大学里小规模的讨论课",
+  "en": "We had a lively seminar on climate policy.",
+  "cn": "我们上了一节关于气候政策的生动研讨课。"
+ },
+ {
+  "word": "tutorial",
+  "ipa": "/tjuːˈtɔːriəl/",
+  "pos": "n. 辅导课",
+  "story": "tutor(导师)+ial→导师带的小课",
+  "tip": "一对一或小组辅导",
+  "en": "The tutorial helped me understand the essay question.",
+  "cn": "辅导课帮我理解了论文题目。"
+ },
+ {
+  "word": "enroll",
+  "ipa": "/ɪnˈrəʊl/",
+  "pos": "v. 注册入学",
+  "story": "en(使)+roll(名单)→登上名单→注册",
+  "tip": "enroll in/at",
+  "en": "She enrolled in a language course.",
+  "cn": "她注册了一门语言课程。"
+ },
+ {
+  "word": "assignment",
+  "ipa": "/əˈsaɪnmənt/",
+  "pos": "n. 作业任务",
+  "story": "assign(分配)+ment→分配下来的事→作业",
+  "tip": "常指课程作业",
+  "en": "The assignment is due next Friday.",
+  "cn": "作业下周五截止。"
+ },
+ {
+  "word": "thesis",
+  "ipa": "/ˈθiːsɪs/",
+  "pos": "n. 论文论点",
+  "story": "the-sis→论文/论点",
+  "tip": "也指学位论文",
+  "en": "His thesis argues that cities are overheating.",
+  "cn": "他的论文主张城市正在过热。"
+ },
+ {
+  "word": "campus",
+  "ipa": "/ˈkæmpəs/",
+  "pos": "n. 校园",
+  "story": "camp(营地)+us→我们的营地→校园",
+  "tip": "on campus",
+  "en": "The new library is at the heart of campus.",
+  "cn": "新图书馆位于校园中心。"
+ },
+ {
+  "word": "graduate",
+  "ipa": "/ˈɡrædʒuət/",
+  "pos": "n./v. 毕业生/毕业",
+  "story": "grade(等级)+uate→达到等级→毕业",
+  "tip": "graduate from",
+  "en": "She graduated with honours.",
+  "cn": "她以优异成绩毕业。"
+ },
+ {
+  "word": "undergraduate",
+  "ipa": "/ˌʌndəˈɡrædʒuət/",
+  "pos": "n. 本科生",
+  "story": "under(在…下)+graduate→还没毕业的→本科生",
+  "tip": "区别于 postgraduate",
+  "en": "Undergraduate fees vary by country.",
+  "cn": "本科生学费因国家而异。"
+ },
+ {
+  "word": "bachelor",
+  "ipa": "/ˈbætʃələ(r)/",
+  "pos": "n. 学士",
+  "story": "bachelor→学士学位",
+  "tip": "bachelor's degree",
+  "en": "He earned a bachelor's in economics.",
+  "cn": "他获得了经济学学士学位。"
+ },
+ {
+  "word": "faculty",
+  "ipa": "/ˈfæklti/",
+  "pos": "n. 院系教职",
+  "story": "fact(做)+ulty→做学问的群体→院系",
+  "tip": "指全体教员",
+  "en": "The faculty supported the reform.",
+  "cn": "全体教员支持这项改革。"
+ },
+ {
+  "word": "mentor",
+  "ipa": "/ˈmentɔː(r)/",
+  "pos": "n. 导师",
+  "story": "门特→门特别正的老师→导师",
+  "tip": "经验上的引路人",
+  "en": "A good mentor changes your career.",
+  "cn": "好导师改变你的职业生涯。"
+ },
+ {
+  "word": "dropout",
+  "ipa": "/ˈdrɒpaʊt/",
+  "pos": "n. 辍学者",
+  "story": "drop(掉)+out(出)→掉出去→辍学",
+  "tip": "school dropout",
+  "en": "The dropout rate fell after reform.",
+  "cn": "改革后辍学率下降了。"
+ },
+ {
+  "word": "numeracy",
+  "ipa": "/ˈnjuːmərəsi/",
+  "pos": "n. 计算能力",
+  "story": "numer(数字)+acy→数字能力→计算力",
+  "tip": "与 literacy 对应",
+  "en": "Basic numeracy is taught early.",
+  "cn": "基础计算能力很早就开始教。"
+ },
+ {
+  "word": "cohort",
+  "ipa": "/ˈkəʊhɔːt/",
+  "pos": "n. 同期群体",
+  "story": "co(一起)+hort→一起的一拨人→同期群",
+  "tip": "常用于研究分组",
+  "en": "The 1990 cohort was tracked for 20 years.",
+  "cn": "1990年同期群被追踪了20年。"
+ },
+ {
+  "word": "consensus",
+  "ipa": "/kənˈsensəs/",
+  "pos": "n. 共识",
+  "story": "con(共同)+sens(感觉)→共同感觉→共识",
+  "tip": "reach a consensus",
+  "en": "There is broad consensus on the goal.",
+  "cn": "在目标上已有广泛共识。"
+ },
+ {
+  "word": "norm",
+  "ipa": "/nɔːm/",
+  "pos": "n. 规范",
+  "story": "norm→标准规范",
+  "tip": "social norm",
+  "en": "Smiling is the norm here.",
+  "cn": "微笑在这里是常态。"
+ },
+ {
+  "word": "ethnic",
+  "ipa": "/ˈeθnɪk/",
+  "pos": "adj. 种族的",
+  "story": "eth(民族)+nic→民族的",
+  "tip": "ethnic minority",
+  "en": "The city is ethnically diverse.",
+  "cn": "这座城市种族多元。"
+ },
+ {
+  "word": "migrant",
+  "ipa": "/ˈmaɪɡrənt/",
+  "pos": "n. 移民",
+  "story": "migr(移动)+ant→移动的人→移民",
+  "tip": "与 immigrant 区分",
+  "en": "Migrant workers send money home.",
+  "cn": "外来务工者往家里寄钱。"
+ },
+ {
+  "word": "refugee",
+  "ipa": "/ˌrefjuˈdʒiː/",
+  "pos": "n. 难民",
+  "story": "refug(避难)+ee→避难的人→难民",
+  "tip": "因迫害或战争逃离",
+  "en": "The camp hosts 10,000 refugees.",
+  "cn": "难民营容纳了一万名难民。"
+ },
+ {
+  "word": "census",
+  "ipa": "/ˈsensəs/",
+  "pos": "n. 人口普查",
+  "story": "cens(评估)+us→清点人口",
+  "tip": "每十年一次",
+  "en": "The census counts every resident.",
+  "cn": "人口普查统计每一位居民。"
+ },
+ {
+  "word": "demographic",
+  "ipa": "/ˌdeməˈɡræfɪk/",
+  "pos": "adj./n. 人口统计的",
+  "story": "demo(人民)+graphic(图)→人口图形",
+  "tip": "demographic change",
+  "en": "Demographic ageing is accelerating.",
+  "cn": "人口老化正在加速。"
+ },
+ {
+  "word": "segregation",
+  "ipa": "/ˌseɡrɪˈɡeɪʃn/",
+  "pos": "n. 隔离",
+  "story": "se(分开)+greg(群)+ation→把群分开",
+  "tip": "racial segregation",
+  "en": "School segregation was ruled illegal.",
+  "cn": "学校种族隔离被裁定为非法。"
+ },
+ {
+  "word": "inequality",
+  "ipa": "/ˌɪnkwlˈɒləti/",
+  "pos": "n. 不平等",
+  "story": "in(不)+equal(平等)+ity→不平等",
+  "tip": "income inequality",
+  "en": "Inequality widens between regions.",
+  "cn": "地区间不平等在扩大。"
+ },
+ {
+  "word": "poverty",
+  "ipa": "/ˈpɒvəti/",
+  "pos": "n. 贫困",
+  "story": "破+verty→贫困",
+  "tip": "live in poverty",
+  "en": "Poverty fell by a third in a decade.",
+  "cn": "十年间贫困率下降了三分之一。"
+ },
+ {
+  "word": "welfare",
+  "ipa": "/ˈwelfeə(r)/",
+  "pos": "n. 福利",
+  "story": "wel(好)+fare(过)→过得好→福利",
+  "tip": "welfare state",
+  "en": "The welfare system needs reform.",
+  "cn": "福利体系需要改革。"
+ },
+ {
+  "word": "legislature",
+  "ipa": "/ˈledʒɪsleɪtʃə(r)/",
+  "pos": "n. 立法机构",
+  "story": "legis(法律)+lature→立法机关",
+  "tip": "与 executive/judiciary 并列",
+  "en": "The legislature passed the bill.",
+  "cn": "立法机构通过了法案。"
+ },
+ {
+  "word": "parliament",
+  "ipa": "/ˈpɑːləmənt/",
+  "pos": "n. 议会",
+  "story": "parli(谈论)+ament→讨论国事的场所",
+  "tip": "member of parliament",
+  "en": "Parliament debated the treaty.",
+  "cn": "议会辩论了该项条约。"
+ },
+ {
+  "word": "constitution",
+  "ipa": "/ˌkɒnstɪˈtjuːʃn/",
+  "pos": "n. 宪法",
+  "story": "con(共同)+stit(建立)+tion→共同建立的根本法",
+  "tip": "根本大法",
+  "en": "The constitution protects free speech.",
+  "cn": "宪法保护言论自由。"
+ },
+ {
+  "word": "sanction",
+  "ipa": "/ˈsæŋkʃn/",
+  "pos": "n./v. 制裁",
+  "story": "sanct(批准/惩罚)+ion→制裁",
+  "tip": "经济制裁",
+  "en": "The UN imposed sanctions.",
+  "cn": "联合国实施了制裁。"
+ },
+ {
+  "word": "treaty",
+  "ipa": "/ˈtriːti/",
+  "pos": "n. 条约",
+  "story": "treat(处理)+y→处理关系的文件",
+  "tip": "sign a treaty",
+  "en": "The treaty took effect in 2020.",
+  "cn": "该条约于2020年生效。"
+ },
+ {
+  "word": "sovereignty",
+  "ipa": "/ˈsɒvrənti/",
+  "pos": "n. 主权",
+  "story": "sover(统治)+eignty→统治权→主权",
+  "tip": "national sovereignty",
+  "en": "The island claims sovereignty.",
+  "cn": "该岛声称拥有主权。"
+ },
+ {
+  "word": "diplomat",
+  "ipa": "/ˈdɪpləmæt/",
+  "pos": "n. 外交官",
+  "story": "diploma(外交)+t→外交人员",
+  "tip": "外交",
+  "en": "A diplomat negotiated the ceasefire.",
+  "cn": "一名外交官谈判了停火。"
+ },
+ {
+  "word": "ambassador",
+  "ipa": "/æmˈbæsədə(r)/",
+  "pos": "n. 大使",
+  "story": "ambassador→大使",
+  "tip": "ambassador to",
+  "en": "She was appointed ambassador to France.",
+  "cn": "她被任命为驻法国大使。"
+ },
+ {
+  "word": "emissions",
+  "ipa": "/iˈmɪʃnz/",
+  "pos": "n. 排放",
+  "story": "e(出)+miss(送)+ions→送出物→排放",
+  "tip": "carbon emissions",
+  "en": "Emissions must fall by 2030.",
+  "cn": "排放必须在2030年前下降。"
+ },
+ {
+  "word": "deforestation",
+  "ipa": "/diːˌfɒrɪˈsteɪʃn/",
+  "pos": "n. 毁林",
+  "story": "de(去)+forest(森林)+ation→去森林",
+  "tip": "反义词 reforestation",
+  "en": "Deforestation accelerates warming.",
+  "cn": "毁林加速变暖。"
+ },
+ {
+  "word": "biodiversity",
+  "ipa": "/ˌbaɪəʊdaɪˈvɜːsəti/",
+  "pos": "n. 生物多样性",
+  "story": "bio(生命)+diversity(多样)→生物多样性",
+  "tip": "保护目标",
+  "en": "Biodiversity is declining fast.",
+  "cn": "生物多样性正在快速下降。"
+ },
+ {
+  "word": "ecosystem",
+  "ipa": "/ˈiːkəʊsɪstəm/",
+  "pos": "n. 生态系统",
+  "story": "eco(生态)+system(系统)→生态系统",
+  "tip": "fragile ecosystem",
+  "en": "The reef is a rich ecosystem.",
+  "cn": "该礁石是丰富的生态系统。"
+ },
+ {
+  "word": "conservation",
+  "ipa": "/ˌkɒnsəˈveɪʃn/",
+  "pos": "n. 保护",
+  "story": "con(共同)+serv(保持)+ation→共同保持",
+  "tip": "nature conservation",
+  "en": "Conservation protects habitats.",
+  "cn": "保护守护栖息地。"
+ },
+ {
+  "word": "renewable",
+  "ipa": "/rɪˈnjuːəbl/",
+  "pos": "adj. 可再生的",
+  "story": "re(再)+new(新)+able→可再新",
+  "tip": "renewable energy",
+  "en": "Solar is renewable and clean.",
+  "cn": "太阳能可再生且清洁。"
+ },
+ {
+  "word": "pollution",
+  "ipa": "/pəˈluːʃn/",
+  "pos": "n. 污染",
+  "story": "poll(弄脏)+ution→污染",
+  "tip": "air/water pollution",
+  "en": "Pollution harms children most.",
+  "cn": "污染对儿童危害最大。"
+ },
+ {
+  "word": "greenhouse",
+  "ipa": "/ˈɡriːnhaʊs/",
+  "pos": "n. 温室",
+  "story": "green(绿)+house(屋)→温室",
+  "tip": "greenhouse gas",
+  "en": "Greenhouse gases trap heat.",
+  "cn": "温室气体锁住热量。"
+ },
+ {
+  "word": "fossil",
+  "ipa": "/ˈfɒsl/",
+  "pos": "n. 化石",
+  "story": "fossil→化石燃料",
+  "tip": "fossil fuels",
+  "en": "Fossil fuels dominate energy.",
+  "cn": "化石燃料主导能源。"
+ },
+ {
+  "word": "carbon",
+  "ipa": "/ˈkɑːbən/",
+  "pos": "n. 碳",
+  "story": "carbon→碳",
+  "tip": "carbon footprint",
+  "en": "We must cut carbon emissions.",
+  "cn": "我们必须削减碳排放。"
+ },
+ {
+  "word": "recycle",
+  "ipa": "/ˌriːˈsaɪkl/",
+  "pos": "v. 回收",
+  "story": "re(再)+cycle(循环)→再循环",
+  "tip": "recycle waste",
+  "en": "Cities should recycle more.",
+  "cn": "城市应当增加回收。"
+ },
+ {
+  "word": "habitat",
+  "ipa": "/ˈhæbɪtæt/",
+  "pos": "n. 栖息地",
+  "story": "habit(居住)+at→居住的地方",
+  "tip": "natural habitat",
+  "en": "Logging destroys animal habitat.",
+  "cn": "伐木破坏了动物栖息地。"
+ },
+ {
+  "word": "extinction",
+  "ipa": "/ɪkˈstɪŋkʃn/",
+  "pos": "n. 灭绝",
+  "story": "ex(出)+stinct(熄灭)+ion→消失",
+  "tip": "face extinction",
+  "en": "The species faces extinction.",
+  "cn": "该物种面临灭绝。"
+ },
+ {
+  "word": "landfill",
+  "ipa": "/ˈlændfɪl/",
+  "pos": "n. 垃圾填埋场",
+  "story": "land(地)+fill(填)→填地",
+  "tip": "垃圾处理方式",
+  "en": "Landfill space is running out.",
+  "cn": "填埋场空间正在耗尽。"
+ },
+ {
+  "word": "ozone",
+  "ipa": "/ˈəʊzəʊn/",
+  "pos": "n. 臭氧",
+  "story": "臭氧",
+  "tip": "ozone layer",
+  "en": "The ozone layer is recovering.",
+  "cn": "臭氧层正在恢复。"
+ },
+ {
+  "word": "drought",
+  "ipa": "/draʊt/",
+  "pos": "n. 干旱",
+  "story": "干+ought→干旱",
+  "tip": "severe drought",
+  "en": "Drought ruined the harvest.",
+  "cn": "干旱毁掉了收成。"
+ },
+ {
+  "word": "algorithm",
+  "ipa": "/ˈælɡərɪðəm/",
+  "pos": "n. 算法",
+  "story": "algo(运算)+rithm→算法",
+  "tip": "推荐算法",
+  "en": "The algorithm ranks the posts.",
+  "cn": "算法对帖子排序。"
+ },
+ {
+  "word": "automation",
+  "ipa": "/ˌɔːtəˈmeɪʃn/",
+  "pos": "n. 自动化",
+  "story": "auto(自动)+mation→自动化",
+  "tip": "与就业的关系",
+  "en": "Automation replaces routine jobs.",
+  "cn": "自动化取代常规工作。"
+ },
+ {
+  "word": "bandwidth",
+  "ipa": "/ˈbændwɪdθ/",
+  "pos": "n. 带宽",
+  "story": "band(带)+width(宽)→带宽",
+  "tip": "网络速度",
+  "en": "Low bandwidth slows the call.",
+  "cn": "低带宽拖慢通话。"
+ },
+ {
+  "word": "cyber",
+  "ipa": "/ˈsaɪbə(r)/",
+  "pos": "adj. 网络的",
+  "story": "cyber→网络/赛博",
+  "tip": "cyber attack",
+  "en": "Cyber crime is rising fast.",
+  "cn": "网络犯罪快速上升。"
+ },
+ {
+  "word": "digital",
+  "ipa": "/ˈdɪdʒɪtl/",
+  "pos": "adj. 数字的",
+  "story": "digit(数字)+al→数字的",
+  "tip": "digital divide",
+  "en": "The digital divide excludes many.",
+  "cn": "数字鸿沟把许多人排除在外。"
+ },
+ {
+  "word": "encrypt",
+  "ipa": "/ɪnˈkrɪpt/",
+  "pos": "v. 加密",
+  "story": "en(使)+crypt(隐藏)→加密",
+  "tip": "数据安全",
+  "en": "Messages are encrypted end-to-end.",
+  "cn": "消息端到端加密。"
+ },
+ {
+  "word": "interface",
+  "ipa": "/ˈɪntəfeɪs/",
+  "pos": "n. 界面",
+  "story": "inter(之间)+face(面)→之间的面",
+  "tip": "user interface",
+  "en": "The interface is intuitive.",
+  "cn": "界面很直观。"
+ },
+ {
+  "word": "network",
+  "ipa": "/ˈnetwɜːk/",
+  "pos": "n. 网络",
+  "story": "net(网)+work(工作)→网",
+  "tip": "social network",
+  "en": "The network went down.",
+  "cn": "网络中断了。"
+ },
+ {
+  "word": "software",
+  "ipa": "/ˈsɒftweə(r)/",
+  "pos": "n. 软件",
+  "story": "soft(软)+ware(件)→软件",
+  "tip": "与 hardware 相对",
+  "en": "The software crashed again.",
+  "cn": "软件又崩溃了。"
+ },
+ {
+  "word": "hardware",
+  "ipa": "/ˈhɑːdweə(r)/",
+  "pos": "n. 硬件",
+  "story": "hard(硬)+ware(件)→硬件",
+  "tip": "设备",
+  "en": "The hardware needs upgrading.",
+  "cn": "硬件需要升级。"
+ },
+ {
+  "word": "database",
+  "ipa": "/ˈdeɪtəbeɪs/",
+  "pos": "n. 数据库",
+  "story": "data(数据)+base(库)→数据库",
+  "tip": "存储",
+  "en": "The database was breached.",
+  "cn": "数据库遭到入侵。"
+ },
+ {
+  "word": "virtual",
+  "ipa": "/ˈvɜːtʃuəl/",
+  "pos": "adj. 虚拟的",
+  "story": "virt(虚)+ual→虚拟的",
+  "tip": "virtual reality",
+  "en": "Classes moved to virtual space.",
+  "cn": "课程转到虚拟空间。"
+ },
+ {
+  "word": "simulate",
+  "ipa": "/ˈsɪmjuleɪt/",
+  "pos": "v. 模拟",
+  "story": "simil(像)+ate→模拟",
+  "tip": "仿真",
+  "en": "The model simulates the climate.",
+  "cn": "模型模拟气候。"
+ },
+ {
+  "word": "gadget",
+  "ipa": "/ˈɡædʒɪt/",
+  "pos": "n. 小装置",
+  "story": "gadget→数码小玩意",
+  "tip": "数码小装置",
+  "en": "This gadget tracks sleep.",
+  "cn": "这个小装置追踪睡眠。"
+ },
+ {
+  "word": "obsolete",
+  "ipa": "/ˈɒbsəliːt/",
+  "pos": "adj. 过时的",
+  "story": "ob(against)+sole(使用)+te→不再使用",
+  "tip": "反义词 current",
+  "en": "The tech is now obsolete.",
+  "cn": "该技术现已过时。"
+ },
+ {
+  "word": "prototype",
+  "ipa": "/ˈprəʊtətaɪp/",
+  "pos": "n. 原型",
+  "story": "proto(第一)+type(型)→第一型",
+  "tip": "产品原型",
+  "en": "We built a working prototype.",
+  "cn": "我们造出了可用的原型。"
+ },
+ {
+  "word": "cognition",
+  "ipa": "/kɒɡˈnɪʃn/",
+  "pos": "n. 认知",
+  "story": "cogn(知道)+ition→认知",
+  "tip": "与 emotion 相对",
+  "en": "Sleep boosts cognition.",
+  "cn": "睡眠提升认知。"
+ },
+ {
+  "word": "perception",
+  "ipa": "/pəˈsepʃn/",
+  "pos": "n. 感知",
+  "story": "per(完全)+cept(拿)+ion→感知",
+  "tip": "public perception",
+  "en": "Perception shapes behaviour.",
+  "cn": "感知塑造行为。"
+ },
+ {
+  "word": "instinct",
+  "ipa": "/ˈɪnstɪŋkt/",
+  "pos": "n. 本能",
+  "story": "in(内)+stinct(刺)→内在冲动→本能",
+  "tip": "by instinct",
+  "en": "Survival is an instinct.",
+  "cn": "求生是本能。"
+ },
+ {
+  "word": "motive",
+  "ipa": "/ˈməʊtɪv/",
+  "pos": "n. 动机",
+  "story": "mot(动)+ive→推动的原因",
+  "tip": "hidden motive",
+  "en": "What was his motive?",
+  "cn": "他的动机是什么？"
+ },
+ {
+  "word": "impulse",
+  "ipa": "/ˈɪmpʌls/",
+  "pos": "n. 冲动",
+  "story": "im(向)+puls(推)→冲动",
+  "tip": "on impulse",
+  "en": "He bought it on impulse.",
+  "cn": "他一时冲动买了它。"
+ },
+ {
+  "word": "stimulus",
+  "ipa": "/ˈstɪmjələs/",
+  "pos": "n. 刺激物",
+  "story": "stim(刺)+ulus→刺激",
+  "tip": "复数 stimuli",
+  "en": "Tax cuts are an economic stimulus.",
+  "cn": "减税是经济刺激。"
+ },
+ {
+  "word": "cognitive",
+  "ipa": "/ˈkɒɡnətɪv/",
+  "pos": "adj. 认知的",
+  "story": "cogn(知)+itive→认知的",
+  "tip": "cognitive skill",
+  "en": "Games train cognitive skills.",
+  "cn": "游戏训练认知技能。"
+ },
+ {
+  "word": "unconscious",
+  "ipa": "/ʌnˈkɒnʃəs/",
+  "pos": "adj. 无意识的",
+  "story": "un(不)+conscious(意识)→无意识",
+  "tip": "unconscious bias",
+  "en": "Much of bias is unconscious.",
+  "cn": "许多偏见是无意识的。"
+ },
+ {
+  "word": "intuition",
+  "ipa": "/ˌɪntjuˈɪʃn/",
+  "pos": "n. 直觉",
+  "story": "in(内)+tuit(保护)+ion→直觉",
+  "tip": "trust your intuition",
+  "en": "Her intuition was right.",
+  "cn": "她的直觉是对的。"
+ },
+ {
+  "word": "irrational",
+  "ipa": "/ɪˈræʃənl/",
+  "pos": "adj. 不理性的",
+  "story": "ir(不)+rational(理性)→不理性",
+  "tip": "irrational fear",
+  "en": "Panic is irrational.",
+  "cn": "恐慌是不理性的。"
+ },
+ {
+  "word": "prejudice",
+  "ipa": "/ˈpredʒudɪs/",
+  "pos": "n. 偏见",
+  "story": "pre(先)+jud(判断)+ice→偏见",
+  "tip": "与 bias 近义",
+  "en": "Prejudice harms trust.",
+  "cn": "偏见损害信任。"
+ },
+ {
+  "word": "discriminate",
+  "ipa": "/dɪˈskrɪmɪneɪt/",
+  "pos": "v. 歧视",
+  "story": "dis(分开)+crimin(分)+ate→歧视",
+  "tip": "discriminate against",
+  "en": "Law forbids discriminating by age.",
+  "cn": "法律禁止年龄歧视。"
+ },
+ {
+  "word": "attitude",
+  "ipa": "/ˈætɪtjuːd/",
+  "pos": "n. 态度",
+  "story": "attitude→态度",
+  "tip": "attitude toward",
+  "en": "Attitude affects outcomes.",
+  "cn": "态度影响结果。"
+ },
+ {
+  "word": "mindset",
+  "ipa": "/ˈmaɪndset/",
+  "pos": "n. 心态",
+  "story": "mind(心)+set(定)→心态",
+  "tip": "growth mindset",
+  "en": "A fixed mindset blocks growth.",
+  "cn": "固定型心态阻碍成长。"
+ },
+ {
+  "word": "revenue",
+  "ipa": "/ˈrevənjuː/",
+  "pos": "n. 收入",
+  "story": "re(回)+ven(来)+ue→收入",
+  "tip": "政府或企业收入",
+  "en": "Tax revenue rose this year.",
+  "cn": "今年税收收入上升。"
+ },
+ {
+  "word": "deficit",
+  "ipa": "/ˈdefɪsɪt/",
+  "pos": "n. 赤字",
+  "story": "de(不足)+fic(做)+it→赤字",
+  "tip": "budget deficit",
+  "en": "The deficit widened again.",
+  "cn": "赤字再次扩大。"
+ },
+ {
+  "word": "tariff",
+  "ipa": "/ˈtærɪf/",
+  "pos": "n. 关税",
+  "story": "tariff→关税",
+  "tip": "trade tariff",
+  "en": "The tariff hit exporters.",
+  "cn": "关税打击了出口商。"
+ },
+ {
+  "word": "subsidy",
+  "ipa": "/ˈsʌbsədi/",
+  "pos": "n. 补贴",
+  "story": "sub(下)+sid(坐)+y→补贴",
+  "tip": "government subsidy",
+  "en": "Farmers got a subsidy.",
+  "cn": "农民获得了补贴。"
+ },
+ {
+  "word": "monopoly",
+  "ipa": "/məˈnɒpəli/",
+  "pos": "n. 垄断",
+  "story": "mono(单一)+poly(卖)→垄断",
+  "tip": "break a monopoly",
+  "en": "The firm held a monopoly.",
+  "cn": "该公司握有垄断。"
+ },
+ {
+  "word": "fiscal",
+  "ipa": "/ˈfɪskl/",
+  "pos": "adj. 财政的",
+  "story": "fisc(国库)+al→财政的",
+  "tip": "fiscal year",
+  "en": "Fiscal policy tightened.",
+  "cn": "财政政策收紧了。"
+ },
+ {
+  "word": "monetary",
+  "ipa": "/ˈmʌnɪtri/",
+  "pos": "adj. 货币的",
+  "story": "monet(钱)+ary→货币的",
+  "tip": "monetary policy",
+  "en": "The bank eased monetary policy.",
+  "cn": "央行放松了货币政策。"
+ },
+ {
+  "word": "export",
+  "ipa": "/ˈekspɔːt/",
+  "pos": "n./v. 出口",
+  "story": "ex(出)+port(运)→出口",
+  "tip": "反义词 import",
+  "en": "The country exports oil.",
+  "cn": "该国出口石油。"
+ },
+ {
+  "word": "import",
+  "ipa": "/ˈɪmpɔːt/",
+  "pos": "n./v. 进口",
+  "story": "im(入)+port(运)→进口",
+  "tip": "import from",
+  "en": "We import most food.",
+  "cn": "我们进口大部分食品。"
+ },
+ {
+  "word": "invest",
+  "ipa": "/ɪnˈvest/",
+  "pos": "v. 投资",
+  "story": "in(入)+vest(外衣)→投入",
+  "tip": "invest in",
+  "en": "They invested in clean energy.",
+  "cn": "他们投资了清洁能源。"
+ },
+ {
+  "word": "capital",
+  "ipa": "/ˈkæpɪtl/",
+  "pos": "n. 资本",
+  "story": "capit(头)+al→资本",
+  "tip": "human capital",
+  "en": "Education builds human capital.",
+  "cn": "教育积累人力资本。"
+ },
+ {
+  "word": "labor",
+  "ipa": "/ˈleɪbə(r)/",
+  "pos": "n. 劳动",
+  "story": "labor→劳动",
+  "tip": "labor market",
+  "en": "Labor costs are rising.",
+  "cn": "劳动力成本在上升。"
+ },
+ {
+  "word": "consumer",
+  "ipa": "/kənˈsjuːmə(r)/",
+  "pos": "n. 消费者",
+  "story": "con(完全)+sum(取)+er→消费者",
+  "tip": "consumer demand",
+  "en": "Consumer confidence fell.",
+  "cn": "消费者信心下降。"
+ },
+ {
+  "word": "merchant",
+  "ipa": "/ˈmɜːtʃənt/",
+  "pos": "n. 商人",
+  "story": "merchant→商人",
+  "tip": "古义或电商",
+  "en": "The merchant sold spices.",
+  "cn": "那个商人卖香料。"
+ },
+ {
+  "word": "bankruptcy",
+  "ipa": "/ˈbæŋkrʌptsi/",
+  "pos": "n. 破产",
+  "story": "bank(银行)+rupt(断)+cy→破产",
+  "tip": "与 insolvency 近义",
+  "en": "The chain faced bankruptcy.",
+  "cn": "该连锁店面临破产。"
+ },
+ {
+  "word": "entrepreneur",
+  "ipa": "/ˌɒntrəprəˈnɜː(r)/",
+  "pos": "n. 企业家",
+  "story": "entre(在…间)+prend(拿)+eur→企业家",
+  "tip": "创业者",
+  "en": "The entrepreneur launched a startup.",
+  "cn": "这位企业家创办了初创公司。"
+ },
+ {
+  "word": "empirical",
+  "ipa": "/ɪmˈpɪrɪkl/",
+  "pos": "adj. 实证的",
+  "story": "em(在…中)+pir(经验)+ical→实证",
+  "tip": "empirical evidence",
+  "en": "The claim lacks empirical support.",
+  "cn": "该主张缺乏实证支持。"
+ },
+ {
+  "word": "variable",
+  "ipa": "/ˈveəriəbl/",
+  "pos": "n./adj. 变量/可变的",
+  "story": "vari(变)+able→可变/变量",
+  "tip": "研究变量",
+  "en": "We controlled for each variable.",
+  "cn": "我们控制了每个变量。"
+ },
+ {
+  "word": "correlate",
+  "ipa": "/ˈkɒrəleɪt/",
+  "pos": "v. 相关",
+  "story": "cor(共同)+relate(关联)→相关",
+  "tip": "correlate with",
+  "en": "Screen time correlates with sleep loss.",
+  "cn": "屏幕时间与睡眠不足相关。"
+ },
+ {
+  "word": "analysis",
+  "ipa": "/əˈnæləsɪs/",
+  "pos": "n. 分析",
+  "story": "ana(再)+lys(松)+is→分析",
+  "tip": "复数 analyses",
+  "en": "The analysis revealed a trend.",
+  "cn": "分析揭示了一个趋势。"
+ },
+ {
+  "word": "synthesis",
+  "ipa": "/ˈsɪnθəsɪs/",
+  "pos": "n. 综合",
+  "story": "syn(一起)+thesis(放)→综合",
+  "tip": "反义词 analysis",
+  "en": "The essay needs synthesis.",
+  "cn": "这篇文章需要综合。"
+ },
+ {
+  "word": "contaminate",
+  "ipa": "/kənˈtæmɪneɪt/",
+  "pos": "v. 污染",
+  "story": "con(共同)+tamin(触碰)+ate：弄脏",
+  "tip": "contaminate the soil/water",
+  "en": "Factories contaminated the river.",
+  "cn": "工厂污染了河流。"
+ },
+ {
+  "word": "degrade",
+  "ipa": "/dɪˈɡreɪd/",
+  "pos": "v. 退化",
+  "story": "de(下)+grade(级)：降级",
+  "tip": "degrade the environment",
+  "en": "Plastic degrades slowly.",
+  "cn": "塑料降解很慢。"
+ },
+ {
+  "word": "irrigation",
+  "ipa": "/ˌɪrɪˈɡeɪʃn/",
+  "pos": "n. 灌溉",
+  "story": "ir(入)+rig(水)+ation",
+  "tip": "irrigation system",
+  "en": "Irrigation supports dry farming.",
+  "cn": "灌溉支撑旱地农业。"
+ },
+ {
+  "word": "glacier",
+  "ipa": "/ˈɡlæsiə/",
+  "pos": "n. 冰川",
+  "story": "glaci(冰)+er",
+  "tip": "melting glacier",
+  "en": "Glaciers store fresh water.",
+  "cn": "冰川储存淡水。"
+ },
+ {
+  "word": "terrain",
+  "ipa": "/təˈreɪn/",
+  "pos": "n. 地形",
+  "story": "terr(地)+ain",
+  "tip": "mountainous terrain",
+  "en": "The terrain is rugged.",
+  "cn": "地形崎岖。"
+ },
+ {
+  "word": "vegetation",
+  "ipa": "/ˌvedʒəˈteɪʃn/",
+  "pos": "n. 植被",
+  "story": "veget(植物)+ation",
+  "tip": "dense vegetation",
+  "en": "Vegetation covers the slope.",
+  "cn": "植被覆盖山坡。"
+ },
+ {
+  "word": "pollutant",
+  "ipa": "/pəˈluːtənt/",
+  "pos": "n. 污染物",
+  "story": "pollut(污染)+ant",
+  "tip": "air pollutant",
+  "en": "Cars emit pollutants.",
+  "cn": "汽车排放污染物。"
+ },
+ {
+  "word": "thermal",
+  "ipa": "/ˈθɜːml/",
+  "pos": "adj. 热的",
+  "story": "therm(热)+al",
+  "tip": "thermal energy",
+  "en": "Geothermal is clean.",
+  "cn": "地热是清洁能源。"
+ },
+ {
+  "word": "binary",
+  "ipa": "/ˈbaɪnəri/",
+  "pos": "adj. 二进制的",
+  "story": "bi(二)+nary",
+  "tip": "binary code",
+  "en": "Computers use binary.",
+  "cn": "计算机用二进制。"
+ },
+ {
+  "word": "cache",
+  "ipa": "/kæʃ/",
+  "pos": "n. 缓存",
+  "story": "cache 音似'现金'→临时存放",
+  "tip": "clear the cache",
+  "en": "Clear your browser cache.",
+  "cn": "清理浏览器缓存。"
+ },
+ {
+  "word": "compute",
+  "ipa": "/kəmˈpjuːt/",
+  "pos": "v. 计算",
+  "story": "com(共同)+pute(想)",
+  "tip": "compute the result",
+  "en": "The chip computes fast.",
+  "cn": "芯片计算很快。"
+ },
+ {
+  "word": "debug",
+  "ipa": "/diːˈbʌɡ/",
+  "pos": "v. 调试",
+  "story": "de(去)+bug(虫)：去掉虫子",
+  "tip": "debug the code",
+  "en": "We debugged the app.",
+  "cn": "我们调试了应用。"
+ },
+ {
+  "word": "firmware",
+  "ipa": "/ˈfɜːmweə/",
+  "pos": "n. 固件",
+  "story": "firm(固)+ware(件)",
+  "tip": "update firmware",
+  "en": "Update the router firmware.",
+  "cn": "更新路由器固件。"
+ },
+ {
+  "word": "latency",
+  "ipa": "/ˈleɪtənsi/",
+  "pos": "n. 延迟",
+  "story": "lat(迟)+ency",
+  "tip": "low latency",
+  "en": "Gamers want low latency.",
+  "cn": "玩家想要低延迟。"
+ },
+ {
+  "word": "metadata",
+  "ipa": "/ˈmetədeɪtə/",
+  "pos": "n. 元数据",
+  "story": "meta(元)+data",
+  "tip": "image metadata",
+  "en": "Metadata stores info.",
+  "cn": "元数据存储信息。"
+ },
+ {
+  "word": "neural",
+  "ipa": "/ˈnjʊərəl/",
+  "pos": "adj. 神经的",
+  "story": "neur(神经)+al",
+  "tip": "neural network",
+  "en": "Neural nets power AI.",
+  "cn": "神经网络驱动AI。"
+ },
+ {
+  "word": "node",
+  "ipa": "/nəʊd/",
+  "pos": "n. 节点",
+  "story": "node 音似'诺的'→连接点",
+  "tip": "network node",
+  "en": "Each node shares data.",
+  "cn": "每个节点共享数据。"
+ },
+ {
+  "word": "protocol",
+  "ipa": "/ˈprəʊtəkɒl/",
+  "pos": "n. 协议",
+  "story": "proto(首)+col",
+  "tip": "communication protocol",
+  "en": "Protocols govern data.",
+  "cn": "协议规范数据。"
+ },
+ {
+  "word": "render",
+  "ipa": "/ˈrendə/",
+  "pos": "v. 渲染",
+  "story": "render 音似'渲染'",
+  "tip": "render a video",
+  "en": "The GPU renders fast.",
+  "cn": "显卡渲染很快。"
+ },
+ {
+  "word": "sensor",
+  "ipa": "/ˈsensə/",
+  "pos": "n. 传感器",
+  "story": "sens(感觉)+or",
+  "tip": "motion sensor",
+  "en": "Phones have sensors.",
+  "cn": "手机有传感器。"
+ },
+ {
+  "word": "antibiotic",
+  "ipa": "/ˌæntɪbaɪˈɒtɪk/",
+  "pos": "n. 抗生素",
+  "story": "anti(抗)+bio(生命)+tic",
+  "tip": "take antibiotics",
+  "en": "Antibiotics fight infection.",
+  "cn": "抗生素对抗感染。"
+ },
+ {
+  "word": "benign",
+  "ipa": "/bɪˈnaɪn/",
+  "pos": "adj. 良性的",
+  "story": "beni(好)+gn",
+  "tip": "benign tumour",
+  "en": "The tumour is benign.",
+  "cn": "肿瘤是良性的。"
+ },
+ {
+  "word": "clinical",
+  "ipa": "/ˈklɪnɪkl/",
+  "pos": "adj. 临床的",
+  "story": "clin(床)+ical",
+  "tip": "clinical trial",
+  "en": "The trial is clinical.",
+  "cn": "试验是临床的。"
+ },
+ {
+  "word": "disability",
+  "ipa": "/ˌdɪsəˈbɪləti/",
+  "pos": "n. 残疾",
+  "story": "dis(不)+ability(能力)",
+  "tip": "physical disability",
+  "en": "She has a disability.",
+  "cn": "她有残疾。"
+ },
+ {
+  "word": "dosage",
+  "ipa": "/ˈdəʊsɪdʒ/",
+  "pos": "n. 剂量",
+  "story": "dos(给)+age",
+  "tip": "correct dosage",
+  "en": "Follow the dosage.",
+  "cn": "按剂量服用。"
+ },
+ {
+  "word": "gene",
+  "ipa": "/dʒiːn/",
+  "pos": "n. 基因",
+  "story": "gene 音似'基因'",
+  "tip": "a dominant gene",
+  "en": "Genes shape traits.",
+  "cn": "基因决定性状。"
+ },
+ {
+  "word": "immune",
+  "ipa": "/ɪˈmjuːn/",
+  "pos": "adj. 免疫的",
+  "story": "im(不)+mune(服务)：不服役→免疫",
+  "tip": "immune system",
+  "en": "Exercise boosts immunity.",
+  "cn": "运动增强免疫力。"
+ },
+ {
+  "word": "malignant",
+  "ipa": "/məˈlɪɡnənt/",
+  "pos": "adj. 恶性的",
+  "story": "mali(坏)+gnant",
+  "tip": "malignant tumour",
+  "en": "The growth is malignant.",
+  "cn": "该增生是恶性的。"
+ },
+ {
+  "word": "outbreak",
+  "ipa": "/ˈaʊtbreɪk/",
+  "pos": "n. 爆发",
+  "story": "out+break(破)",
+  "tip": "an outbreak of flu",
+  "en": "An outbreak hit the city.",
+  "cn": "该市爆发流感。"
+ },
+ {
+  "word": "overdose",
+  "ipa": "/ˈəʊvədəʊs/",
+  "pos": "n. 过量",
+  "story": "over(过)+dose(剂量)",
+  "tip": "drug overdose",
+  "en": "He died of overdose.",
+  "cn": "他死于用药过量。"
+ },
+ {
+  "word": "parasite",
+  "ipa": "/ˈpærəsaɪt/",
+  "pos": "n. 寄生虫",
+  "story": "para(旁)+site(食物)",
+  "tip": "a intestinal parasite",
+  "en": "Parasites harm hosts.",
+  "cn": "寄生虫伤害宿主。"
+ },
+ {
+  "word": "vaccine",
+  "ipa": "/ˈvæksiːn/",
+  "pos": "n. 疫苗",
+  "story": "vacc(牛)+ine：牛痘由来",
+  "tip": "get a vaccine",
+  "en": "The vaccine works.",
+  "cn": "疫苗有效。"
+ },
+ {
+  "word": "virus",
+  "ipa": "/ˈvaɪrəs/",
+  "pos": "n. 病毒",
+  "story": "virus 音似'病毒'",
+  "tip": "a computer virus",
+  "en": "The virus spread fast.",
+  "cn": "病毒传播很快。"
+ },
+ {
+  "word": "academy",
+  "ipa": "/əˈkædəmi/",
+  "pos": "n. 学院",
+  "story": "academ(学术)+y",
+  "tip": "a military academy",
+  "en": "He entered the academy.",
+  "cn": "他进入学院。"
+ },
+ {
+  "word": "alumnus",
+  "ipa": "/əˈlʌmnəs/",
+  "pos": "n. 校友",
+  "story": "al(养)+umnus：被养育的人",
+  "tip": "an alumnus of Peking Univ.",
+  "en": "He is an alumnus.",
+  "cn": "他是校友。"
+ },
+ {
+  "word": "bilingual",
+  "ipa": "/ˌbaɪˈlɪŋɡwəl/",
+  "pos": "adj. 双语的",
+  "story": "bi(二)+lingu(语言)+al",
+  "tip": "bilingual education",
+  "en": "She is bilingual.",
+  "cn": "她会双语。"
+ },
+ {
+  "word": "dean",
+  "ipa": "/diːn/",
+  "pos": "n. 院长",
+  "story": "dean 音似'院长'",
+  "tip": "the dean of students",
+  "en": "The dean approved it.",
+  "cn": "院长批准了。"
+ },
+ {
+  "word": "discipline",
+  "ipa": "/ˈdɪsəplɪn/",
+  "pos": "n. 学科",
+  "story": "disci(学)+pline",
+  "tip": "academic discipline",
+  "en": "Math is a discipline.",
+  "cn": "数学是一门学科。"
+ },
+ {
+  "word": "examine",
+  "ipa": "/ɪɡˈzæmɪn/",
+  "pos": "v. 检查",
+  "story": "ex(出)+amine(称)",
+  "tip": "examine the evidence",
+  "en": "The doctor examined him.",
+  "cn": "医生给他做了检查。"
+ },
+ {
+  "word": "major",
+  "ipa": "/ˈmeɪdʒə/",
+  "pos": "n. 专业",
+  "story": "major 音似'专业'",
+  "tip": "也可作 adj. 主要的",
+  "en": "Her major is finance.",
+  "cn": "她的专业是金融。"
+ },
+ {
+  "word": "module",
+  "ipa": "/ˈmɒdjuːl/",
+  "pos": "n. 模块",
+  "story": "mod(量)+ule",
+  "tip": "a training module",
+  "en": "Each module is short.",
+  "cn": "每个模块很短。"
+ },
+ {
+  "word": "pupil",
+  "ipa": "/ˈpjuːpl/",
+  "pos": "n. 学生",
+  "story": "pupil 音似' pupils'→小学生",
+  "tip": "a bright pupil",
+  "en": "The pupil excelled.",
+  "cn": "这名学生很出色。"
+ },
+ {
+  "word": "syllabus",
+  "ipa": "/ˈsɪləbəs/",
+  "pos": "n. 教学大纲",
+  "story": "syl(总)+lab(拿)+us",
+  "tip": "the course syllabus",
+  "en": "Read the syllabus.",
+  "cn": "读教学大纲。"
+ },
+ {
+  "word": "tutor",
+  "ipa": "/ˈtjuːtə/",
+  "pos": "n. 导师",
+  "story": "tut(保护)+or",
+  "tip": "a private tutor",
+  "en": "She hired a tutor.",
+  "cn": "她请了导师。"
+ },
+ {
+  "word": "acquire",
+  "ipa": "/əˈkwaɪə/",
+  "pos": "v. 收购",
+  "story": "ac(向)+quire(求)",
+  "tip": "acquire a company",
+  "en": "They acquired a rival.",
+  "cn": "他们收购了对手。"
+ },
+ {
+  "word": "assets",
+  "ipa": "/ˈæsets/",
+  "pos": "n. 资产",
+  "story": "as(足够)+set(放)",
+  "tip": "fixed assets",
+  "en": "Assets exceeded debts.",
+  "cn": "资产超过负债。"
+ },
+ {
+  "word": "audit",
+  "ipa": "/ˈɔːdɪt/",
+  "pos": "n. 审计",
+  "story": "aud(听)+it：听账",
+  "tip": "annual audit",
+  "en": "The audit found errors.",
+  "cn": "审计发现了错误。"
+ },
+ {
+  "word": "bond",
+  "ipa": "/bɒnd/",
+  "pos": "n. 债券",
+  "story": "bond 音似'绑的'→绑定投资",
+  "tip": "government bond",
+  "en": "Bonds are safer.",
+  "cn": "债券更安全。"
+ },
+ {
+  "word": "depreciation",
+  "ipa": "/dɪˌpriːʃiˈeɪʃn/",
+  "pos": "n. 贬值",
+  "story": "de(下)+preci(价值)+ation",
+  "tip": "asset depreciation",
+  "en": "Depreciation cuts tax.",
+  "cn": "折旧能抵税。"
+ },
+ {
+  "word": "dividend",
+  "ipa": "/ˈdɪvɪdend/",
+  "pos": "n. 股息",
+  "story": "divid(分)+end",
+  "tip": "pay a dividend",
+  "en": "The firm paid dividends.",
+  "cn": "公司派了股息。"
+ },
+ {
+  "word": "equilibrium",
+  "ipa": "/ˌiːkwɪˈlɪbriəm/",
+  "pos": "n. 平衡",
+  "story": "equi(等)+libr(秤)+ium",
+  "tip": "market equilibrium",
+  "en": "Prices reach equilibrium.",
+  "cn": "价格达到平衡。"
+ },
+ {
+  "word": "equity",
+  "ipa": "/ˈekwəti/",
+  "pos": "n. 股权",
+  "story": "equ(平)+ity",
+  "tip": "shareholder equity",
+  "en": "Equity fell this year.",
+  "cn": "股权今年下降。"
+ },
+ {
+  "word": "expenditure",
+  "ipa": "/ɪkˈspendɪtʃə/",
+  "pos": "n. 支出",
+  "story": "ex(出)+pend(付)+iture",
+  "tip": "public expenditure",
+  "en": "Expenditure rose.",
+  "cn": "支出上升了。"
+ },
+ {
+  "word": "forecast",
+  "ipa": "/ˈfɔːkɑːst/",
+  "pos": "v. 预测",
+  "story": "fore(前)+cast(扔)",
+  "tip": "forecast demand",
+  "en": "We forecast growth.",
+  "cn": "我们预测增长。"
+ },
+ {
+  "word": "franchise",
+  "ipa": "/ˈfræntʃaɪz/",
+  "pos": "n. 特许经营",
+  "story": "franc(自由)+ise",
+  "tip": "a fast-food franchise",
+  "en": "He bought a franchise.",
+  "cn": "他买了特许经营权。"
+ },
+ {
+  "word": "inflation",
+  "ipa": "/ɪnˈfleɪʃn/",
+  "pos": "n. 通胀",
+  "story": "in(入)+flat(吹)+ion：吹涨",
+  "tip": "control inflation",
+  "en": "Inflation hurts savers.",
+  "cn": "通胀伤害储户。"
+ },
+ {
+  "word": "inventory",
+  "ipa": "/ˈɪnvəntri/",
+  "pos": "n. 库存",
+  "story": "in(入)+vent(来)+ory",
+  "tip": "manage inventory",
+  "en": "Inventory is low.",
+  "cn": "库存偏低。"
+ },
+ {
+  "word": "invoice",
+  "ipa": "/ˈɪnvɔɪs/",
+  "pos": "n. 发票",
+  "story": "in+voice(声音)：开声要钱",
+  "tip": "issue an invoice",
+  "en": "We sent the invoice.",
+  "cn": "我们开了发票。"
+ },
+ {
+  "word": "liability",
+  "ipa": "/ˌlaɪəˈbɪləti/",
+  "pos": "n. 负债",
+  "story": "li(绑)+ability",
+  "tip": "long-term liability",
+  "en": "Liabilities grew.",
+  "cn": "负债增加了。"
+ },
+ {
+  "word": "liquidation",
+  "ipa": "/ˌlɪkwɪˈdeɪʃn/",
+  "pos": "n. 清算",
+  "story": "liquid(液)+ation：变现金",
+  "tip": "go into liquidation",
+  "en": "The firm was liquidated.",
+  "cn": "公司被清算。"
+ },
+ {
+  "word": "lucrative",
+  "ipa": "/ˈluːkrətɪv/",
+  "pos": "adj. 赚钱的",
+  "story": "lucr(钱)+ative",
+  "tip": "a lucrative job",
+  "en": "Tech is lucrative.",
+  "cn": "科技很赚钱。"
+ },
+ {
+  "word": "merger",
+  "ipa": "/ˈmɜːdʒə/",
+  "pos": "n. 合并",
+  "story": "merge(合)+er",
+  "tip": "a bank merger",
+  "en": "The merger cleared.",
+  "cn": "合并获批。"
+ },
+ {
+  "word": "mortgage",
+  "ipa": "/ˈmɔːɡɪdʒ/",
+  "pos": "n. 抵押",
+  "story": "mort(死)+gage(押)",
+  "tip": "a home mortgage",
+  "en": "They took a mortgage.",
+  "cn": "他们办了房贷。"
+ },
+ {
+  "word": "overhead",
+  "ipa": "/ˈəʊvəhed/",
+  "pos": "n. 管理费用",
+  "story": "over+head：头顶开销",
+  "tip": "cut overhead",
+  "en": "Overhead is high.",
+  "cn": "管理费用很高。"
+ },
+ {
+  "word": "portfolio",
+  "ipa": "/pɔːtˈfəʊliəʊ/",
+  "pos": "n. 投资组合",
+  "story": "port(拿)+folio",
+  "tip": "an investment portfolio",
+  "en": "Diversify your portfolio.",
+  "cn": "分散你的投资组合。"
+ },
+ {
+  "word": "procurement",
+  "ipa": "/prəˈkjʊəmənt/",
+  "pos": "n. 采购",
+  "story": "pro(前)+cur(关心)+ment",
+  "tip": "public procurement",
+  "en": "Procurement is strict.",
+  "cn": "采购很严格。"
+ },
+ {
+  "word": "profitability",
+  "ipa": "/ˌprɒfɪtəˈbɪləti/",
+  "pos": "n. 盈利能力",
+  "story": "profit(利)+ability",
+  "tip": "improve profitability",
+  "en": "Profitability rose.",
+  "cn": "盈利能力上升。"
+ },
+ {
+  "word": "shareholder",
+  "ipa": "/ˈʃeəhəʊldə/",
+  "pos": "n. 股东",
+  "story": "share(股)+holder",
+  "tip": "protect shareholders",
+  "en": "Shareholders voted.",
+  "cn": "股东投票了。"
+ },
+ {
+  "word": "turnover",
+  "ipa": "/ˈtɜːnəʊvə/",
+  "pos": "n. 营业额",
+  "story": "turn+over：周转",
+  "tip": "high turnover",
+  "en": "Turnover doubled.",
+  "cn": "营业额翻倍。"
+ },
+ {
+  "word": "valuation",
+  "ipa": "/ˌvæljuˈeɪʃn/",
+  "pos": "n. 估值",
+  "story": "value(价值)+ation",
+  "tip": "a fair valuation",
+  "en": "The valuation is high.",
+  "cn": "估值很高。"
+ },
+ {
+  "word": "venture",
+  "ipa": "/ˈventʃə/",
+  "pos": "n. 风险",
+  "story": "vent(来)+ure",
+  "tip": "a joint venture",
+  "en": "They launched a venture.",
+  "cn": "他们启动了一个风险项目。"
+ },
+ {
+  "word": "wholesale",
+  "ipa": "/ˈhəʊlseɪl/",
+  "pos": "adj. 批发的",
+  "story": "whole(整)+sale",
+  "tip": "wholesale prices",
+  "en": "Wholesale is cheaper.",
+  "cn": "批发更便宜。"
+ },
+ {
+  "word": "amendment",
+  "ipa": "/əˈmendmənt/",
+  "pos": "n. 修正案",
+  "story": "a+mend(修)+ment",
+  "tip": "a constitutional amendment",
+  "en": "The amendment passed.",
+  "cn": "修正案通过了。"
+ },
+ {
+  "word": "autonomy",
+  "ipa": "/ɔːˈtɒnəmi/",
+  "pos": "n. 自治",
+  "story": "auto(自己)+nomy(法则)",
+  "tip": "regional autonomy",
+  "en": "They demand autonomy.",
+  "cn": "他们要求自治。"
+ },
+ {
+  "word": "bureaucracy",
+  "ipa": "/bjʊəˈrɒkrəsi/",
+  "pos": "n. 官僚",
+  "story": "bureau(局)+cracy",
+  "tip": "cut bureaucracy",
+  "en": "Bureaucracy slows things.",
+  "cn": "官僚作风拖慢事情。"
+ },
+ {
+  "word": "citizenship",
+  "ipa": "/ˈsɪtɪzənʃɪp/",
+  "pos": "n. 公民身份",
+  "story": "citizen(公民)+ship",
+  "tip": "apply for citizenship",
+  "en": "He gained citizenship.",
+  "cn": "他获得了公民身份。"
+ },
+ {
+  "word": "coalition",
+  "ipa": "/ˌkəʊəˈlɪʃn/",
+  "pos": "n. 联盟",
+  "story": "co(共同)+alit(长大)+ion",
+  "tip": "a ruling coalition",
+  "en": "The coalition won.",
+  "cn": "联盟获胜了。"
+ },
+ {
+  "word": "corrupt",
+  "ipa": "/kəˈrʌpt/",
+  "pos": "adj. 腐败的",
+  "story": "cor(全)+rupt(破)",
+  "tip": "corrupt official",
+  "en": "The official was corrupt.",
+  "cn": "该官员腐败。"
+ },
+ {
+  "word": "decree",
+  "ipa": "/dɪˈkriː/",
+  "pos": "n. 法令",
+  "story": "de(下)+cree(判)",
+  "tip": "issue a decree",
+  "en": "The king issued a decree.",
+  "cn": "国王颁布了法令。"
+ },
+ {
+  "word": "democracy",
+  "ipa": "/dɪˈmɒkrəsi/",
+  "pos": "n. 民主",
+  "story": "demo(人民)+cracy",
+  "tip": "a vibrant democracy",
+  "en": "Democracy needs debate.",
+  "cn": "民主需要辩论。"
+ },
+ {
+  "word": "dictatorship",
+  "ipa": "/ˌdɪkˈteɪtəʃɪp/",
+  "pos": "n. 独裁",
+  "story": "dictat(命令)+ship",
+  "tip": "a brutal dictatorship",
+  "en": "The dictatorship fell.",
+  "cn": "独裁政权倒台了。"
+ },
+ {
+  "word": "electorate",
+  "ipa": "/ɪˈlektərət/",
+  "pos": "n. 选民",
+  "story": "elect(选)+orate",
+  "tip": "mobilize the electorate",
+  "en": "The electorate is divided.",
+  "cn": "选民意见分裂。"
+ },
+ {
+  "word": "embargo",
+  "ipa": "/ɪmˈbɑːɡəʊ/",
+  "pos": "n. 禁运",
+  "story": "em(入)+bar(栏)+go",
+  "tip": "lift an embargo",
+  "en": "They lifted the embargo.",
+  "cn": "他们解除了禁运。"
+ },
+ {
+  "word": "federation",
+  "ipa": "/ˌfedəˈreɪʃn/",
+  "pos": "n. 联邦",
+  "story": "feder(信)+ation",
+  "tip": "a loose federation",
+  "en": "The federation held.",
+  "cn": "联邦维持住了。"
+ },
+ {
+  "word": "ideology",
+  "ipa": "/ˌaɪdiˈɒlədʒi/",
+  "pos": "n. 意识形态",
+  "story": "ideo(思想)+logy",
+  "tip": "political ideology",
+  "en": "Ideology divides them.",
+  "cn": "意识形态使他们分裂。"
+ },
+ {
+  "word": "impeachment",
+  "ipa": "/ɪmˈpiːtʃmənt/",
+  "pos": "n. 弹劾",
+  "story": "im(入)+peach(阻碍)",
+  "tip": "face impeachment",
+  "en": "He faced impeachment.",
+  "cn": "他面临弹劾。"
+ },
+ {
+  "word": "jurisdiction",
+  "ipa": "/ˌdʒʊərɪsˈdɪkʃn/",
+  "pos": "n. 管辖权",
+  "story": "juris(法)+dict(说)+ion",
+  "tip": "within jurisdiction",
+  "en": "It is outside our jurisdiction.",
+  "cn": "这不在我们管辖内。"
+ },
+ {
+  "word": "liberty",
+  "ipa": "/ˈlɪbəti/",
+  "pos": "n. 自由",
+  "story": "liber(自由)+ty",
+  "tip": "fight for liberty",
+  "en": "They cherish liberty.",
+  "cn": "他们珍视自由。"
+ },
+ {
+  "word": "oppression",
+  "ipa": "/əˈpreʃn/",
+  "pos": "n. 压迫",
+  "story": "op(反)+press(压)+ion",
+  "tip": "end oppression",
+  "en": "The people ended oppression.",
+  "cn": "人民终结了压迫。"
+ },
+ {
+  "word": "petition",
+  "ipa": "/pəˈtɪʃn/",
+  "pos": "n. 请愿",
+  "story": "pet(寻求)+ition",
+  "tip": "sign a petition",
+  "en": "They signed a petition.",
+  "cn": "他们签署了请愿书。"
+ },
+ {
+  "word": "ratify",
+  "ipa": "/ˈrætɪfaɪ/",
+  "pos": "v. 批准",
+  "story": "rat(判)+ify",
+  "tip": "ratify a treaty",
+  "en": "The senate ratified it.",
+  "cn": "参议院批准了。"
+ },
+ {
+  "word": "suffrage",
+  "ipa": "/ˈsʌfrɪdʒ/",
+  "pos": "n. 选举权",
+  "story": "suffr(投票)+age",
+  "tip": "universal suffrage",
+  "en": "Suffrage was extended.",
+  "cn": "选举权扩大了。"
+ },
+ {
+  "word": "totalitarian",
+  "ipa": "/təʊˌtælɪˈteəriən/",
+  "pos": "adj. 极权的",
+  "story": "total(全)+itarian",
+  "tip": "a totalitarian regime",
+  "en": "The regime was totalitarian.",
+  "cn": "该政权是极权的。"
+ },
+ {
+  "word": "unilateral",
+  "ipa": "/ˌjuːnɪˈlætrəl/",
+  "pos": "adj. 单边的",
+  "story": "uni(单)+later(边)+al",
+  "tip": "a unilateral decision",
+  "en": "It was a unilateral move.",
+  "cn": "这是单边行动。"
+ },
+ {
+  "word": "affection",
+  "ipa": "/əˈfekʃn/",
+  "pos": "n. 喜爱",
+  "story": "af+fect(做)+ion：做出来的情感",
+  "tip": "mutual affection",
+  "en": "She felt affection.",
+  "cn": "她心怀喜爱。"
+ },
+ {
+  "word": "amnesia",
+  "ipa": "/æmˈniːʒə/",
+  "pos": "n. 失忆",
+  "story": "a(无)+mnes(记忆)+ia",
+  "tip": "suffer amnesia",
+  "en": "He suffered amnesia.",
+  "cn": "他患了失忆症。"
+ },
+ {
+  "word": "aversion",
+  "ipa": "/əˈvɜːʃn/",
+  "pos": "n. 厌恶",
+  "story": "a(反)+vers(转)+ion",
+  "tip": "risk aversion",
+  "en": "Investors show aversion.",
+  "cn": "投资者表现出厌恶。"
+ },
+ {
+  "word": "compulsion",
+  "ipa": "/kəmˈpʌlʃn/",
+  "pos": "n. 冲动",
+  "story": "com(共同)+puls(推)+ion",
+  "tip": "a compulsive habit",
+  "en": "He felt a compulsion.",
+  "cn": "他感到一种冲动。"
+ },
+ {
+  "word": "conformity",
+  "ipa": "/kənˈfɔːməti/",
+  "pos": "n. 从众",
+  "story": "con(共同)+form(形)+ity",
+  "tip": "peer conformity",
+  "en": "Conformity is strong.",
+  "cn": "从众心理很强。"
+ },
+ {
+  "word": "conscience",
+  "ipa": "/ˈkɒnʃəns/",
+  "pos": "n. 良心",
+  "story": "con(共同)+sci(知)+ence",
+  "tip": "a clear conscience",
+  "en": "He had a clear conscience.",
+  "cn": "他问心无愧。"
+ },
+ {
+  "word": "abstract",
+  "ipa": "/ˈæbstrækt/",
+  "pos": "adj. 抽象的",
+  "story": "abs(离)+tract(拉)：抽离具体",
+  "tip": "an abstract concept",
+  "en": "Math is abstract.",
+  "cn": "数学是抽象的。"
+ },
+ {
+  "word": "access",
+  "ipa": "/ˈækses/",
+  "pos": "n. 通道",
+  "story": "ac(向)+cess(走)",
+  "tip": "access to data",
+  "en": "Access is limited.",
+  "cn": "访问受限。"
+ },
+ {
+  "word": "accommodate",
+  "ipa": "/əˈkɒmədeɪt/",
+  "pos": "v. 容纳",
+  "story": "ac+commod(适合)+ate",
+  "tip": "accommodate 500 guests",
+  "en": "The hall accommodates many.",
+  "cn": "大厅能容纳很多人。"
+ },
+ {
+  "word": "accompany",
+  "ipa": "/əˈkʌmpəni/",
+  "pos": "v. 陪伴",
+  "story": "ac+company(同伴)",
+  "tip": "accompany a friend",
+  "en": "She accompanied him.",
+  "cn": "她陪着他。"
+ },
+ {
+  "word": "accurate",
+  "ipa": "/ˈækjərət/",
+  "pos": "adj. 精确的",
+  "story": "ac+curate(细)",
+  "tip": "an accurate figure",
+  "en": "Give an accurate number.",
+  "cn": "给个精确数字。"
+ },
+ {
+  "word": "achieve",
+  "ipa": "/əˈtʃiːv/",
+  "pos": "v. 达成",
+  "story": "a+chieve(首领)",
+  "tip": "achieve a goal",
+  "en": "They achieved their aim.",
+  "cn": "他们达成了目标。"
+ },
+ {
+  "word": "adapt",
+  "ipa": "/əˈdæpt/",
+  "pos": "v. 适应",
+  "story": "ad(向)+apt(适合)",
+  "tip": "adapt to change",
+  "en": "Firms must adapt.",
+  "cn": "企业必须适应。"
+ },
+ {
+  "word": "adjust",
+  "ipa": "/əˈdʒʌst/",
+  "pos": "v. 调整",
+  "story": "ad+just(正好)",
+  "tip": "adjust the plan",
+  "en": "We adjusted the plan.",
+  "cn": "我们调整了计划。"
+ },
+ {
+  "word": "admit",
+  "ipa": "/ədˈmɪt/",
+  "pos": "v. 承认",
+  "story": "ad+mit(送)：接纳",
+  "tip": "admit a mistake",
+  "en": "He admitted the error.",
+  "cn": "他承认了错误。"
+ },
+ {
+  "word": "adopt",
+  "ipa": "/əˈdɒpt/",
+  "pos": "v. 采纳",
+  "story": "ad+opt(选)",
+  "tip": "adopt a policy",
+  "en": "They adopted the plan.",
+  "cn": "他们采纳了该计划。"
+ },
+ {
+  "word": "advance",
+  "ipa": "/ədˈvɑːns/",
+  "pos": "v. 前进",
+  "story": "ad+van(前)+ce",
+  "tip": "advance the cause",
+  "en": "Science advanced.",
+  "cn": "科学进步了。"
+ },
+ {
+  "word": "adverse",
+  "ipa": "/ˈædvɜːs/",
+  "pos": "adj. 不利的",
+  "story": "ad+verse(转)：转向坏",
+  "tip": "adverse effects",
+  "en": "The effects were adverse.",
+  "cn": "效果不利。"
+ },
+ {
+  "word": "advocate",
+  "ipa": "/ˈædvəkeɪt/",
+  "pos": "v. 提倡",
+  "story": "ad+voc(声)+ate",
+  "tip": "advocate reform",
+  "en": "He advocated change.",
+  "cn": "他提倡变革。"
+ },
+ {
+  "word": "affect",
+  "ipa": "/əˈfekt/",
+  "pos": "v. 影响",
+  "story": "af+fect(做)",
+  "tip": "affect the outcome",
+  "en": "It affects results.",
+  "cn": "它影响结果。"
+ },
+ {
+  "word": "afford",
+  "ipa": "/əˈfɔːd/",
+  "pos": "v. 负担",
+  "story": "af+ford(向前)",
+  "tip": "afford the cost",
+  "en": "Few can afford it.",
+  "cn": "很少人负担得起。"
+ },
+ {
+  "word": "aggregate",
+  "ipa": "/ˈæɡrɪɡət/",
+  "pos": "v. 聚集",
+  "story": "ag+greg(群)+ate",
+  "tip": "aggregate the data",
+  "en": "We aggregated scores.",
+  "cn": "我们汇总了分数。"
+ },
+ {
+  "word": "aid",
+  "ipa": "/eɪd/",
+  "pos": "n. 援助",
+  "story": "aid 音似'帮助'",
+  "tip": "foreign aid",
+  "en": "They sent aid.",
+  "cn": "他们送了援助。"
+ },
+ {
+  "word": "alarm",
+  "ipa": "/əˈlɑːm/",
+  "pos": "n. 警报",
+  "story": "al+arm(武器)",
+  "tip": "raise the alarm",
+  "en": "He raised the alarm.",
+  "cn": "他拉响了警报。"
+ },
+ {
+  "word": "alert",
+  "ipa": "/əˈlɜːt/",
+  "pos": "adj. 警觉",
+  "story": "al+ert(活动)",
+  "tip": "stay alert",
+  "en": "Drivers must stay alert.",
+  "cn": "司机须保持警觉。"
+ },
+ {
+  "word": "alien",
+  "ipa": "/ˈeɪliən/",
+  "pos": "adj. 外星的",
+  "story": "ali(其他)+en",
+  "tip": "alien culture",
+  "en": "The custom seemed alien.",
+  "cn": "这习俗显得陌生。"
+ },
+ {
+  "word": "alive",
+  "ipa": "/əˈlaɪv/",
+  "pos": "adj. 活着的",
+  "story": "a+live(活)",
+  "tip": "stay alive",
+  "en": "They stayed alive.",
+  "cn": "他们活了下来。"
+ },
+ {
+  "word": "allow",
+  "ipa": "/əˈlaʊ/",
+  "pos": "v. 允许",
+  "story": "al+low(许可)",
+  "tip": "allow mistakes",
+  "en": "We allow errors.",
+  "cn": "我们允许犯错。"
+ },
+ {
+  "word": "alter",
+  "ipa": "/ˈɔːltə/",
+  "pos": "v. 改变",
+  "story": "alter 音似'变更'",
+  "tip": "alter the design",
+  "en": "They altered it.",
+  "cn": "他们改了它。"
+ },
+ {
+  "word": "alternative",
+  "ipa": "/ɔːlˈtɜːnətɪv/",
+  "pos": "n. 替代",
+  "story": "alter(变)+native",
+  "tip": "offer an alternative",
+  "en": "We need an alternative.",
+  "cn": "我们需要替代方案。"
+ },
+ {
+  "word": "amazing",
+  "ipa": "/əˈmeɪzɪŋ/",
+  "pos": "adj. 惊人的",
+  "story": "a+maze(迷宫)+ing",
+  "tip": "an amazing result",
+  "en": "The result was amazing.",
+  "cn": "结果惊人。"
+ },
+ {
+  "word": "ambition",
+  "ipa": "/æmˈbɪʃn/",
+  "pos": "n. 野心",
+  "story": "ambi(二)+tion",
+  "tip": "political ambition",
+  "en": "He has ambition.",
+  "cn": "他有野心。"
+ },
+ {
+  "word": "amend",
+  "ipa": "/əˈmend/",
+  "pos": "v. 修正",
+  "story": "a+mend(修)",
+  "tip": "amend the law",
+  "en": "They amended it.",
+  "cn": "他们修正了它。"
+ },
+ {
+  "word": "amount",
+  "ipa": "/əˈmaʊnt/",
+  "pos": "n. 数量",
+  "story": "a+mount(山)",
+  "tip": "a large amount",
+  "en": "The amount grew.",
+  "cn": "数量增加了。"
+ },
+ {
+  "word": "ample",
+  "ipa": "/ˈæmpl/",
+  "pos": "adj. 充足的",
+  "story": "ampl(大)+e",
+  "tip": "ample evidence",
+  "en": "There is ample proof.",
+  "cn": "有充足证据。"
+ },
+ {
+  "word": "amplify",
+  "ipa": "/ˈæmplɪfaɪ/",
+  "pos": "v. 放大",
+  "story": "ampl(大)+ify",
+  "tip": "amplify the signal",
+  "en": "We amplified it.",
+  "cn": "我们放大了它。"
+ },
+ {
+  "word": "ancient",
+  "ipa": "/ˈeɪnʃənt/",
+  "pos": "adj. 古老的",
+  "story": "anc(前)+ient",
+  "tip": "ancient ruins",
+  "en": "They found ruins.",
+  "cn": "他们发现了遗迹。"
+ },
+ {
+  "word": "announce",
+  "ipa": "/əˈnaʊns/",
+  "pos": "v. 宣布",
+  "story": "an+nounce(说)",
+  "tip": "announce a deal",
+  "en": "They announced it.",
+  "cn": "他们宣布了。"
+ },
+ {
+  "word": "annual",
+  "ipa": "/ˈænjuəl/",
+  "pos": "adj. 年度的",
+  "story": "ann(年)+ual",
+  "tip": "annual report",
+  "en": "The report is annual.",
+  "cn": "报告是年度的。"
+ },
+ {
+  "word": "anonymous",
+  "ipa": "/əˈnɒnɪməs/",
+  "pos": "adj. 匿名的",
+  "story": "an(无)+onym(名)+ous",
+  "tip": "anonymous source",
+  "en": "The source was anonymous.",
+  "cn": "消息来源匿名。"
+ },
+ {
+  "word": "answer",
+  "ipa": "/ˈɑːnsə/",
+  "pos": "v. 回答",
+  "story": "answer 基础词",
+  "tip": "answer a question",
+  "en": "She answered it.",
+  "cn": "她回答了。"
+ },
+ {
+  "word": "appeal",
+  "ipa": "/əˈpiːl/",
+  "pos": "v. 吸引",
+  "story": "ap+peal(拉)",
+  "tip": "appeal to youth",
+  "en": "It appeals to teens.",
+  "cn": "它吸引青少年。"
+ },
+ {
+  "word": "appear",
+  "ipa": "/əˈpɪə/",
+  "pos": "v. 出现",
+  "story": "ap+pear(出现)",
+  "tip": "appear in public",
+  "en": "He appeared calm.",
+  "cn": "他显得冷静。"
+ },
+ {
+  "word": "applicable",
+  "ipa": "/əˈplɪkəbl/",
+  "pos": "adj. 适用的",
+  "story": "ap+plic(折)+able",
+  "tip": "applicable rule",
+  "en": "The rule is applicable.",
+  "cn": "该规则适用。"
+ },
+ {
+  "word": "apply",
+  "ipa": "/əˈplaɪ/",
+  "pos": "v. 申请",
+  "story": "ap+ply(贴)",
+  "tip": "apply for a job",
+  "en": "She applied.",
+  "cn": "她申请了。"
+ },
+ {
+  "word": "appreciate",
+  "ipa": "/əˈpriːʃieɪt/",
+  "pos": "v. 欣赏",
+  "story": "ap+preci(价值)+ate",
+  "tip": "appreciate the help",
+  "en": "He appreciated it.",
+  "cn": "他感激帮助。"
+ },
+ {
+  "word": "approach",
+  "ipa": "/əˈprəʊtʃ/",
+  "pos": "n. 方法",
+  "story": "ap+proach(近)",
+  "tip": "a new approach",
+  "en": "We need an approach.",
+  "cn": "我们需要方法。"
+ },
+ {
+  "word": "appropriate",
+  "ipa": "/əˈprəʊpriət/",
+  "pos": "adj. 恰当的",
+  "story": "ap+propri(合适)+ate",
+  "tip": "appropriate response",
+  "en": "The reply was apt.",
+  "cn": "回复恰当。"
+ },
+ {
+  "word": "approve",
+  "ipa": "/əˈpruːv/",
+  "pos": "v. 批准",
+  "story": "ap+prove(证)",
+  "tip": "approve a plan",
+  "en": "They approved it.",
+  "cn": "他们批准了。"
+ },
+ {
+  "word": "approximate",
+  "ipa": "/əˈprɒksɪmət/",
+  "pos": "adj. 近似",
+  "story": "ap+proxim(近)+ate",
+  "tip": "an approximate cost",
+  "en": "Give an approximate.",
+  "cn": "给个近似值。"
+ },
+ {
+  "word": "arise",
+  "ipa": "/əˈraɪz/",
+  "pos": "v. 出现",
+  "story": "a+rise(升)",
+  "tip": "problems arise",
+  "en": "Issues arose.",
+  "cn": "问题出现了。"
+ },
+ {
+  "word": "array",
+  "ipa": "/əˈreɪ/",
+  "pos": "n. 阵列",
+  "story": "ar+ray(排)",
+  "tip": "a wide array",
+  "en": "An array of choices.",
+  "cn": "一系列选择。"
+ },
+ {
+  "word": "artificial",
+  "ipa": "/ˌɑːtɪˈfɪʃl/",
+  "pos": "adj. 人造的",
+  "story": "art(技)+ificial",
+  "tip": "artificial intelligence",
+  "en": "AI is artificial.",
+  "cn": "AI是人造的。"
+ },
+ {
+  "word": "aspect",
+  "ipa": "/ˈæspekt/",
+  "pos": "n. 方面",
+  "story": "a+spect(看)",
+  "tip": "every aspect",
+  "en": "Consider each aspect.",
+  "cn": "考虑每个方面。"
+ },
+ {
+  "word": "assemble",
+  "ipa": "/əˈsembl/",
+  "pos": "v. 组装",
+  "story": "as+semble(一起)",
+  "tip": "assemble a team",
+  "en": "We assembled it.",
+  "cn": "我们组装好了。"
+ },
+ {
+  "word": "assert",
+  "ipa": "/əˈsɜːt/",
+  "pos": "v. 断言",
+  "story": "as+sert(加)",
+  "tip": "assert a right",
+  "en": "He asserted it.",
+  "cn": "他主张了权利。"
+ },
+ {
+  "word": "assign",
+  "ipa": "/əˈsaɪn/",
+  "pos": "v. 分配",
+  "story": "as+sign(标)",
+  "tip": "assign a task",
+  "en": "They assigned it.",
+  "cn": "他们分派了任务。"
+ },
+ {
+  "word": "assist",
+  "ipa": "/əˈsɪst/",
+  "pos": "v. 协助",
+  "story": "as+sist(站)",
+  "tip": "assist the poor",
+  "en": "We assisted them.",
+  "cn": "我们协助了他们。"
+ },
+ {
+  "word": "assure",
+  "ipa": "/əˈʃʊə/",
+  "pos": "v. 保证",
+  "story": "as+sure(确)",
+  "tip": "assure safety",
+  "en": "He assured us.",
+  "cn": "他向我们保证。"
+ },
+ {
+  "word": "attach",
+  "ipa": "/əˈtætʃ/",
+  "pos": "v. 附加",
+  "story": "at+tach(固)",
+  "tip": "attach a file",
+  "en": "She attached it.",
+  "cn": "她附上了文件。"
+ },
+ {
+  "word": "attain",
+  "ipa": "/əˈteɪn/",
+  "pos": "v. 达到",
+  "story": "at+tain(触)",
+  "tip": "attain a goal",
+  "en": "They attained it.",
+  "cn": "他们达到了。"
+ },
+ {
+  "word": "attempt",
+  "ipa": "/əˈtempt/",
+  "pos": "v. 尝试",
+  "story": "at+tempt(试)",
+  "tip": "attempt a record",
+  "en": "He attempted it.",
+  "cn": "他尝试了。"
+ },
+ {
+  "word": "attract",
+  "ipa": "/əˈtrækt/",
+  "pos": "v. 吸引",
+  "story": "at+tract(拉)",
+  "tip": "attract talent",
+  "en": "It attracts talent.",
+  "cn": "它吸引人才。"
+ },
+ {
+  "word": "author",
+  "ipa": "/ˈɔːθə/",
+  "pos": "n. 作者",
+  "story": "auth(创)+or",
+  "tip": "the author of the book",
+  "en": "He is the author.",
+  "cn": "他是作者。"
+ },
+ {
+  "word": "authority",
+  "ipa": "/ɔːˈθɒrəti/",
+  "pos": "n. 权威",
+  "story": "author(创)+ity",
+  "tip": "in authority",
+  "en": "He has authority.",
+  "cn": "他有权威。"
+ },
+ {
+  "word": "available",
+  "ipa": "/əˈveɪləbl/",
+  "pos": "adj. 可用的",
+  "story": "a+vail(用)+able",
+  "tip": "available now",
+  "en": "It is available.",
+  "cn": "它现在可用。"
+ },
+ {
+  "word": "average",
+  "ipa": "/ˈævərɪdʒ/",
+  "pos": "adj. 平均的",
+  "story": "average 基础词",
+  "tip": "above average",
+  "en": "It is above average.",
+  "cn": "高于平均。"
+ },
+ {
+  "word": "aware",
+  "ipa": "/əˈweə/",
+  "pos": "adj. 意识到的",
+  "story": "a+ware(注意)",
+  "tip": "aware of risk",
+  "en": "Be aware of danger.",
+  "cn": "意识到危险。"
+ },
+ {
+  "word": "awkward",
+  "ipa": "/ˈɔːkwəd/",
+  "pos": "adj. 尴尬的",
+  "story": "awkward 基础词",
+  "tip": "an awkward silence",
+  "en": "There was silence.",
+  "cn": "一阵尴尬的沉默。"
+ },
+ {
+  "word": "absorb",
+  "ipa": "/əbˈzɔːb/",
+  "pos": "v. 吸收",
+  "story": "ab+sorb(吸)",
+  "tip": "absorb knowledge",
+  "en": "He absorbed it.",
+  "cn": "他吸收了。"
+ },
+ {
+  "word": "accelerate",
+  "ipa": "/əkˈseləreɪt/",
+  "pos": "v. 加速",
+  "story": "ac+celer(快)+ate",
+  "tip": "accelerate growth",
+  "en": "It accelerated.",
+  "cn": "它加速了。"
+ },
+ {
+  "word": "accept",
+  "ipa": "/əkˈsept/",
+  "pos": "v. 接受",
+  "story": "ac+cept(拿)",
+  "tip": "accept a job",
+  "en": "She accepted.",
+  "cn": "她接受了。"
+ },
+ {
+  "word": "accomplish",
+  "ipa": "/əˈkʌmplɪʃ/",
+  "pos": "v. 完成",
+  "story": "ac+compl(满)+ish",
+  "tip": "accomplish a task",
+  "en": "They accomplished it.",
+  "cn": "他们完成了。"
+ },
+ {
+  "word": "account",
+  "ipa": "/əˈkaʊnt/",
+  "pos": "n. 账户",
+  "story": "ac+count(数)",
+  "tip": "open an account",
+  "en": "He opened one.",
+  "cn": "他开了账户。"
+ },
+ {
+  "word": "accuse",
+  "ipa": "/əˈkjuːz/",
+  "pos": "v. 指责",
+  "story": "ac+cuse(因)",
+  "tip": "accuse of theft",
+  "en": "They accused him.",
+  "cn": "他们指控他。"
+ },
+ {
+  "word": "acquaint",
+  "ipa": "/əˈkweɪnt/",
+  "pos": "v. 使熟悉",
+  "story": "ac+quaint(知)",
+  "tip": "acquaint with facts",
+  "en": "He acquainted us.",
+  "cn": "他让我们了解。"
+ },
+ {
+  "word": "act",
+  "ipa": "/ækt/",
+  "pos": "v. 行动",
+  "story": "act 基础词",
+  "tip": "act now",
+  "en": "We must act.",
+  "cn": "我们必须行动。"
+ },
+ {
+  "word": "active",
+  "ipa": "/ˈæktɪv/",
+  "pos": "adj. 活跃的",
+  "story": "act+ive",
+  "tip": "stay active",
+  "en": "Keep active.",
+  "cn": "保持活跃。"
+ },
+ {
+  "word": "actual",
+  "ipa": "/ˈæktʃuəl/",
+  "pos": "adj. 实际的",
+  "story": "act+ual",
+  "tip": "the actual cost",
+  "en": "The actual cost is high.",
+  "cn": "实际成本很高。"
+ },
+ {
+  "word": "add",
+  "ipa": "/æd/",
+  "pos": "v. 添加",
+  "story": "add 基础词",
+  "tip": "add a point",
+  "en": "She added one.",
+  "cn": "她加了一条。"
+ },
+ {
+  "word": "admission",
+  "ipa": "/ədˈmɪʃn/",
+  "pos": "n. 录取",
+  "story": "ad+miss(送)+ion",
+  "tip": "gain admission",
+  "en": "He won admission.",
+  "cn": "他被录取了。"
+ },
+ {
+  "word": "adversity",
+  "ipa": "/ədˈvɜːsəti/",
+  "pos": "n. 逆境",
+  "story": "ad+vers(转)+ity",
+  "tip": "in adversity",
+  "en": "He faced adversity.",
+  "cn": "他面对逆境。"
+ },
+ {
+  "word": "advice",
+  "ipa": "/ədˈvaɪs/",
+  "pos": "n. 建议",
+  "story": "ad+vice(看)",
+  "tip": "seek advice",
+  "en": "He sought advice.",
+  "cn": "他寻求建议。"
+ },
+ {
+  "word": "advise",
+  "ipa": "/ədˈvaɪz/",
+  "pos": "v. 建议",
+  "story": "ad+vice(看)+e",
+  "tip": "advise a client",
+  "en": "She advised him.",
+  "cn": "她建议他。"
+ },
+ {
+  "word": "affiliate",
+  "ipa": "/əˈfɪlieɪt/",
+  "pos": "v. 附属",
+  "story": "af+fil(子)+ate",
+  "tip": "an affiliated unit",
+  "en": "It is affiliated.",
+  "cn": "它是附属的。"
+ },
+ {
+  "word": "agenda",
+  "ipa": "/əˈdʒendə/",
+  "pos": "n. 议程",
+  "story": "ag+enda(做)",
+  "tip": "set the agenda",
+  "en": "They set it.",
+  "cn": "他们定了议程。"
+ },
+ {
+  "word": "aggressive",
+  "ipa": "/əˈɡresɪv/",
+  "pos": "adj. 好斗的",
+  "story": "ag+gress(走)+ive",
+  "tip": "aggressive marketing",
+  "en": "The push was aggressive.",
+  "cn": "推广很激进。"
+ },
+ {
+  "word": "akin",
+  "ipa": "/əˈkɪn/",
+  "pos": "adj. 类似的",
+  "story": "a+kin(亲)",
+  "tip": "akin to mine",
+  "en": "It is akin.",
+  "cn": "它类似。"
+ },
+ {
+  "word": "alliance",
+  "ipa": "/əˈlaɪəns/",
+  "pos": "n. 联盟",
+  "story": "ally(同盟)+ance",
+  "tip": "form an alliance",
+  "en": "They formed one.",
+  "cn": "他们结了盟。"
+ },
+ {
+  "word": "allowance",
+  "ipa": "/əˈlaʊəns/",
+  "pos": "n. 津贴",
+  "story": "allow+ance",
+  "tip": "a monthly allowance",
+  "en": "He gets an allowance.",
+  "cn": "他有津贴。"
+ },
+ {
+  "word": "amiable",
+  "ipa": "/ˈeɪmiəbl/",
+  "pos": "adj. 和蔼的",
+  "story": "am(爱)+iable",
+  "tip": "an amiable boss",
+  "en": "The boss is amiable.",
+  "cn": "老板很和蔼。"
+ },
+ {
+  "word": "analog",
+  "ipa": "/ˈænəlɒɡ/",
+  "pos": "adj. 模拟的",
+  "story": "ana(类似)+log",
+  "tip": "analog signal",
+  "en": "It is analog.",
+  "cn": "它是模拟的。"
+ },
+ {
+  "word": "anecdote",
+  "ipa": "/ˈænɪkdəʊt/",
+  "pos": "n. 轶事",
+  "story": "an+ec(外)+dote",
+  "tip": "tell an anecdote",
+  "en": "He told one.",
+  "cn": "他讲了个轶事。"
+ },
+ {
+  "word": "animate",
+  "ipa": "/ˈænɪmeɪt/",
+  "pos": "v. 使生动",
+  "story": "anim(生命)+ate",
+  "tip": "animate the talk",
+  "en": "He animated it.",
+  "cn": "他讲得生动。"
+ },
+ {
+  "word": "annex",
+  "ipa": "/əˈneks/",
+  "pos": "v. 吞并",
+  "story": "an+nex(连)",
+  "tip": "annex the land",
+  "en": "They annexed it.",
+  "cn": "他们吞并了。"
+ },
+ {
+  "word": "annihilate",
+  "ipa": "/əˈnaɪəleɪt/",
+  "pos": "v. 消灭",
+  "story": "an+nihil(无)+ate",
+  "tip": "annihilate the enemy",
+  "en": "They annihilated it.",
+  "cn": "他们消灭了敌人。"
+ },
+ {
+  "word": "annotate",
+  "ipa": "/ˈænəteɪt/",
+  "pos": "v. 注释",
+  "story": "an+not(标)+ate",
+  "tip": "annotate the text",
+  "en": "She annotated it.",
+  "cn": "她加了注释。"
+ },
+ {
+  "word": "absurd",
+  "ipa": "/əbˈsɜːd/",
+  "pos": "adj. 荒谬的",
+  "story": "ab+surd(聋)",
+  "tip": "an absurd claim",
+  "en": "The claim is absurd.",
+  "cn": "说法荒谬。"
+ },
+ {
+  "word": "abuse",
+  "ipa": "/əˈbjuːz/",
+  "pos": "v. 滥用",
+  "story": "ab+use(用)",
+  "tip": "abuse power",
+  "en": "He abused it.",
+  "cn": "他滥用了权力。"
+ },
+ {
+  "word": "academic",
+  "ipa": "/ˌækəˈdemɪk/",
+  "pos": "adj. 学术的",
+  "story": "academy+ic",
+  "tip": "academic research",
+  "en": "It is academic.",
+  "cn": "这是学术的。"
+ },
+ {
+  "word": "accord",
+  "ipa": "/əˈkɔːd/",
+  "pos": "v. 一致",
+  "story": "ac+cord(心)",
+  "tip": "accord with facts",
+  "en": "It accords.",
+  "cn": "它一致。"
+ },
+ {
+  "word": "accusation",
+  "ipa": "/ˌækjuˈzeɪʃn/",
+  "pos": "n. 指控",
+  "story": "accuse+ation",
+  "tip": "face an accusation",
+  "en": "He faced one.",
+  "cn": "他面临指控。"
+ },
+ {
+  "word": "acid",
+  "ipa": "/ˈæsɪd/",
+  "pos": "adj. 酸的",
+  "story": "acid 基础词",
+  "tip": "acid rain",
+  "en": "Acid rain harms soil.",
+  "cn": "酸雨危害土壤。"
+ },
+ {
+  "word": "acoustic",
+  "ipa": "/əˈkuːstɪk/",
+  "pos": "adj. 声学的",
+  "story": "acou(听)+stic",
+  "tip": "acoustic design",
+  "en": "The design is acoustic.",
+  "cn": "设计是声学的。"
+ },
+ {
+  "word": "acquit",
+  "ipa": "/əˈkwɪt/",
+  "pos": "v. 宣判无罪",
+  "story": "ac+quit(释)",
+  "tip": "acquit the defendant",
+  "en": "They acquitted him.",
+  "cn": "他们判他无罪。"
+ },
+ {
+  "word": "acute",
+  "ipa": "/əˈkjuːt/",
+  "pos": "adj. 严重的",
+  "story": "acu(尖)+te",
+  "tip": "an acute crisis",
+  "en": "The crisis is acute.",
+  "cn": "危机严重。"
+ }
+]
