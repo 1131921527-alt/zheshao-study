@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0B0F17">
-<meta name="description" content="泽少学习助手：AI动态播报 + 知识类（历史 / 文化·文学 / 地理 / 心理学17篇 / 雅思单词489词），适合碎片化学习。深色黑金质感，可安装到手机主屏当 App。">
+<meta name="description" content="泽少学习助手：AI动态播报 + 知识类（历史 / 文化·文学 / 地理 / 心理学17篇 / 运动健康10篇 / 雅思单词489词），适合碎片化学习。深色黑金质感，可安装到手机主屏当 App。">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="knowledge/article.css">
 <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -182,8 +182,8 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="hi">每天进步一点点</div>
         <div class="name">泽少的学习中心</div>
         <div class="hero-stats">
-          <div class="st"><div class="n">5</div><div class="l">知识类目</div></div>
-          <div class="st"><div class="n">50+</div><div class="l">长文知识</div></div>
+          <div class="st"><div class="n">6</div><div class="l">知识类目</div></div>
+          <div class="st"><div class="n">60+</div><div class="l">长文知识</div></div>
           <div class="st"><div class="n">489</div><div class="l">雅思词汇</div></div>
           <div class="st"><div class="n">每日</div><div class="l">自动更新</div></div>
         </div>
@@ -210,6 +210,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="qcard" onclick="goKnow('geo')"><div class="qi">🌍</div><div class="qt">地理</div><div class="qd">板块 · 气候 · 城市</div></div>
         <div class="qcard" onclick="goKnowPsyEq()"><div class="qi">🧠</div><div class="qt">心理学</div><div class="qd">认知 · 情绪 · 情商</div><div class="qbadge">新增5篇</div></div>
         <div class="qcard" onclick="goKnow('ielts')"><div class="qi">📖</div><div class="qt">雅思单词</div><div class="qd">每天15词 · 带音频</div></div>
+        <div class="qcard" onclick="goKnowSport()"><div class="qi">🏃</div><div class="qt">运动健康</div><div class="qd">HYROX · 运动康复</div><div class="qbadge">新增10篇</div></div>
       </div>
 
       <div class="section-title pad">💡 今日金句</div>
@@ -248,11 +249,11 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
     <!-- 知识中心 -->
     <section class="screen" id="s-know">
-      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文化·文学 · 地理 · 心理 · 雅思</div><h1>知识中心</h1></div></div></div>
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文化·文学 · 地理 · 心理 · 运动 · 雅思</div><h1>知识中心</h1></div></div></div>
       <div class="pad" style="margin-top:16px">
 
         <div class="know-intro">
-          <p>五大类通识知识，<b>历史</b>看文明的来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>雅思单词</b>背词攒分。点分类展开，长文点开就读。</p>
+          <p>六大类通识知识，<b>历史</b>看文明的来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>运动健康</b>看身体怎么练怎么修、<b>雅思单词</b>背词攒分。点分类展开，长文点开就读。</p>
         </div>
 
         <div class="section-title k-toggle" onclick="toggleK('hist')">🏛️ 历史 <span class="more">展开/收起</span></div>
@@ -270,6 +271,9 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="section-title k-toggle" onclick="toggleK('ielts')">📖 雅思单词 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-ielts"></div>
 
+        <div class="section-title k-toggle" onclick="toggleKSport()">🏃 运动健康 <span class="more">展开/收起</span></div>
+        <div class="klist hidden" id="klist-sport"></div>
+
       </div>
     </section>
 
@@ -283,7 +287,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       <div class="pad" style="margin-top:16px">
         <div class="mini-tip">
           <h3>🗺️ 学习地图</h3>
-          <p>本站共 <b>5 大类</b>通识知识：<b>历史</b>看文明来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>雅思单词</b>背词攒分。点首页「📚 知识类」即可进入。</p>
+          <p>本站共 <b>6 大类</b>通识知识：<b>历史</b>看文明来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>运动健康</b>看身体怎么练怎么修、<b>雅思单词</b>背词攒分。点首页「📚 知识类」即可进入。</p>
         </div>
         <div class="mini-tip">
           <h3>⏱️ 建议节奏</h3>
@@ -2628,6 +2632,319 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
   </div>
 </div>
 
+    <!-- 长文：sport-hyrox-what -->
+    <section class="screen" id="art-sport-hyrox-what">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 健身赛事 · HYROX</div>
+  <h1>什么是 HYROX：当健身变成一场能比高低的考试</h1>
+</header>
+<div class="body">
+<p class="lead">同学们，最近朋友圈是不是老刷到有人晒「HYROX 完赛奖牌」？这玩意儿 2017 年才在德国冒出来，现在已经火到全球几十个城市，门票提前几个月就被抢光。它到底是个啥？今天给你讲明白，免得别人聊你插不上嘴。</p>
+
+<h2>一、一句话说清：把「跑步 + 撸铁」打包成一场考试</h2>
+<p>HYROX 是一场室内健身赛。规则极简单：总共跑 8 公里，中间插 8 个功能训练关卡（推雪橇、拉雪橇、农夫行走、药球砸墙……）。跑一段、做一个站、再跑一段，循环 8 次。全程固定，全球统一。</p>
+
+<h2>二、它为什么能火：标准化，所以能比</h2>
+<p>跟 CrossFit 每场都不一样不同，HYROX 全球同一个赛道、同一种器械、同一套重量。你在芝加哥跑的，柏林、新加坡、悉尼的人也在跑——成绩能直接横向比。它把「我今天练得怎么样」变成了一个可以全球排名的数字。这是它最聪明的地方。</p>
+
+<h2>三、谁都能上：不是只有肌肉男</h2>
+<p>HYROX 没有高难动作（没有体操、没有奥运举重），你只要会跑、会深蹲、能搬东西就能参赛。分 Open（标准）、Pro（更重）、双人、接力几个组别，新手报 Open 就行。官方说，能跑个 5 公里、一周撸两次铁的人，练 10–12 周就能完赛。</p>
+<div class="callout"><span class="ct">💡 划重点</span>HYROX 比的从来不是谁力气最大，是「又能跑、又能扛、还扛得住累」的综合体力。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>HYROX = 8km 跑 + 8 个功能训练站，全球统一赛道，成绩能横向排名。</li>
+<li>它火在「标准化」：你的成绩和全世界同组人直接比，不用猜谁更强。</li>
+<li>门槛不高，会跑会蹲就能报 Open 组，新手练 10–12 周可完赛。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-hyrox-stations -->
+    <section class="screen" id="art-sport-hyrox-stations">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 健身赛事 · HYROX关卡</div>
+  <h1>HYROX 的 8 个关卡：跑步和功能训练怎么排</h1>
+</header>
+<div class="body">
+<p class="lead">上篇讲了 HYROX 是啥，这篇拆它的「考卷」：8 公里跑步被切成 8 段，每段中间塞一个训练站。顺序固定、全球统一，所以芝加哥和柏林的成绩能直接拉到一起比。</p>
+
+<h2>一、节奏：跑 1 公里 → 做一个站 → 再跑 1 公里</h2>
+<p>赛制是「跑—站—跑—站」交替，一共 8 次跑（每次 1km）+ 8 个站。最狠的地方在这：每一公里都是「腿已经累了」才开始跑的。所以 HYROX 最练的不是单项强，是「累了还能跑、跑了还能扛」。</p>
+
+<h2>二、8 个站逐个数（顺序固定）</h2>
+<p>1) SkiErg 滑雪机 1000m；2) Sled Push 雪橇推 50m；3) Sled Pull 雪橇拉 50m；4) Burpee Broad Jumps 波比跳远 80m；5) RowErg 划船机 1000m；6) Farmers Carry 农夫行走 200m（男 2×24kg / 女 2×16kg）；7) Sandbag Lunges 沙袋箭步 100m（男 20kg / 女 10kg）；8) Wall Balls 药球砸墙 100 次（男 6kg / 女 4kg）。Open 组重量如上，Pro 组更狠（推车男 202kg、女 152kg）。</p>
+
+<h2>三、最容易翻车的站</h2>
+<p>雪橇推/拉是「比赛崩不崩」的分水岭——很多人一上来猛推，后面直接没劲；波比跳远最耗心肺，一冲快就崩。划船机反而是中场喘息（坐着划，腿能缓一缓）。</p>
+<div class="callout"><span class="ct">💡 划重点</span>记住顺序：滑雪→推→拉→波比→划船→农夫→沙袋→药球。练的时候也按这个顺序模拟，别乱。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>节奏是「跑1km+1站」重复8次，累腿跑是核心难点。</li>
+<li>8站：滑雪/推/拉/波比/划船/农夫/沙袋/药球，顺序全球固定。</li>
+<li>雪橇和波比最易崩，划船是中场喘息；模拟训练要按真实顺序来。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-hyrox-train -->
+    <section class="screen" id="art-sport-hyrox-train">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 训练 · HYROX</div>
+  <h1>想跑 HYROX？训练往这四个方向走</h1>
+</header>
+<div class="body">
+<p class="lead">看完前两篇心动、想报名了？先别急着冲。HYROX 看着动作简单，真上场多半被「累腿跑」教做人。这篇说清楚训练往哪使力，少走弯路。</p>
+
+<h2>一、四根支柱：有氧、力量、疲劳跑、模拟赛</h2>
+<p>①有氧跑：打底子，长距离慢跑（Z2 心率）堆心肺。②力量：深蹲、硬拉、箭步、农夫行走，把推拉扛的底子练厚。③疲劳跑（compromised running）：腿酸了再去跑——这是最像比赛的训练。④模拟赛：按真实顺序连做几个站，提前适应节奏。</p>
+
+<h2>二、最大误区：把跑和练分开练</h2>
+<p>很多人周一跑步、周三撸铁、各练各的。但 HYROX 是「跑完立刻扛」，分开练永远接不上。正确做法是把跑和力量揉一起：比如「跑 1km + 25 个药球」循环 5 组。新手最该改的就是这点。</p>
+
+<h2>三、新手路线：Open 组，10–12 周够了</h2>
+<p>有底子（能跑 5k、一周撸两次铁）的人，12 周系统练就能完赛；纯小白可能要 16–20 周。别一上来冲 Pro，先用 Open 组把流程跑通。鞋要抓地（雪橇推全靠鞋底咬地），别穿碳板竞速鞋。</p>
+<div class="callout"><span class="ct">💡 划重点</span>训练核心就一句：把「跑」和「扛」放在同一次训练里，别分开。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>四支柱：有氧底子 + 力量 + 疲劳跑 + 按序模拟赛。</li>
+<li>最大坑是跑练分离；要把「跑后立刻扛」揉进同一次训练。</li>
+<li>新手报 Open，10–12 周可完赛，抓地鞋比碳板鞋重要。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-flatfoot-cause -->
+    <section class="screen" id="art-sport-flatfoot-cause">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 足踝 · 扁平足成因</div>
+  <h1>扁平足是怎么长出来的：足弓塌掉的根</h1>
+</header>
+<div class="body">
+<p class="lead">说完好玩的，说点扎心的。很多人走路脚疼、鞋跟外侧磨得快、站久了腰累，一查：扁平足，足弓塌了。它不是一天塌的，也不是只能认命。先搞清它是怎么没的。</p>
+
+<h2>一、足弓是干嘛的：人体的减震弹簧</h2>
+<p>脚底那道弯，不是装饰。它像拱桥，把体重均匀分散到脚跟和前脚掌，落地时缓冲冲击、走路时当弹簧省劲。足弓一塌，缓冲没了，力全砸在膝盖、腰上——所以扁平足的人常常「脚没事，膝盖腰先废」。</p>
+
+<h2>二、天生的 vs 后天的</h2>
+<p>一部分人天生韧带松弛、足弓发育不全（遗传或小时候没长好）。但更多人，是后天把足弓「坐塌」「站塌」的。婴幼儿几乎都是平足，大部分会随年龄长出来；长大还塌，多半有后天推手。</p>
+
+<h2>三、后天塌的三大推手</h2>
+<p>①体重增加：肚子大了、体重涨了，足弓天天扛超额，慢慢被压扁。②久站久走不练：小腿后侧太紧、足底筋膜长期被拉长，弓就松了。③穿错鞋：鞋底太软太塌、没有支撑，脚底肌肉「用进废退」越来越弱。久坐 + 肥胖 + 软鞋，是扁平足三件套。</p>
+<div class="callout"><span class="ct">💡 划重点</span>足弓是「用进废退」的——你不让它干活，它真会塌给你看。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>足弓是减震弹簧，塌了冲击全转嫁到膝和腰。</li>
+<li>分天生（韧带松）和后天（多数）；后天多因超重、久站、软鞋。</li>
+<li>久坐 + 肥胖 + 无支撑鞋，是足弓塌陷的三件套。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-flatfoot-rehab -->
+    <section class="screen" id="art-sport-flatfoot-rehab">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 康复 · 扁平足</div>
+  <h1>扁平足康复：不是垫个鞋垫就完事</h1>
+</header>
+<div class="body">
+<p class="lead">确诊扁平足别慌，也不是只能一辈子垫鞋垫。康复的核心就一句：把足弓重新「练」起来。鞋垫是辅助，肌肉才是根本。</p>
+
+<h2>一、先分清：柔性还是僵硬性</h2>
+<p>坐着抬起脚还能看出一点弓——这叫「柔性扁平足」，有救，靠练。如果脚抬起来弓也不出现、还疼——「僵硬性」，可能有关节问题，得看医生，别自己瞎练。</p>
+
+<h2>二、居家练足弓的 3 个动作</h2>
+<p>①抓毛巾：脚下踩毛巾，用脚趾一张一合把毛巾抓拢，每组 15 下。②缩足（short foot）：站立时把前脚掌和脚跟往中间「收」，让足弓鼓起来，保持 5 秒，像把脚缩短。③踮脚走：扶墙踮脚尖走，强化小腿和足底。每天 2–3 组，关键在「天天做」。</p>
+
+<h2>三、鞋和鞋垫怎么选</h2>
+<p>选有足弓支撑、鞋底不太软太塌的鞋（别穿人字拖、软底帆布乱跑）。鞋垫选带支撑弧度的，别买那种纯软硅胶——它只舒服，不撑弓。体重大的先减重，足弓压力直接减半。</p>
+
+<h2>四、什么时候必须看医生</h2>
+<p>走路疼、脚踝反复扭伤、一只脚突然变扁、小孩 6 岁后还是全平——这些情况别硬练，挂骨科或康复科。</p>
+<div class="callout"><span class="ct">💡 划重点</span>鞋垫是「拐杖」，足底肌肉才是「腿」；拐杖能借，腿得自己长。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>先分柔性（可练）和僵硬性（要看医生）。</li>
+<li>居家三动作：抓毛巾、缩足、踮脚走，贵在天天做。</li>
+<li>鞋要支撑、别太软；体重大的先减重；持续疼痛要就医。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-arch-collapse -->
+    <section class="screen" id="art-sport-arch-collapse">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 力线 · 连锁反应</div>
+  <h1>足弓内塌的连锁反应：从脚歪到骨盆一路歪</h1>
+</header>
+<div class="body">
+<p class="lead">这篇是重点，也是最多人忽略的：脚底下塌了，真不是脚的事，是全身的事。人体是根链条，脚是链头，它一歪，整条链跟着歪。</p>
+
+<h2>一、力线从脚底开始</h2>
+<p>正常站立，力从脚底→踝→膝→髋→腰→脊柱，一条笔直的力线。足弓一塌，脚底那块「支撑点」往内侧滑，脚就呈「外八字」、踝往里扣。这一步看似小，上面全跟着歪。</p>
+
+<h2>二、塌 → 膝内扣 → 髋代偿</h2>
+<p>脚踝往里扣，膝盖被迫跟着往内（膝内扣），大腿骨内旋，髋关节为了稳住骨盆开始「多干活」——臀肌、腰方肌拼命代偿。久了，膝盖内侧软骨磨、腰开始酸。你以为的「腰疼」，根可能在脚。</p>
+
+<h2>三、再往上：肩和脖子也跑不掉</h2>
+<p>骨盆一歪，脊柱为了找平衡会侧弯、肩膀一高一低，脖子为了把头摆正又得用力。所以扁平足严重的人，常伴随高低肩、脖子僵。一环扣一环，源头却在脚底那道弓。</p>
+<div class="callout"><span class="ct">💡 划重点</span>身体是联动的——你修腰，不如先看看脚；脚正了，上面才正得了。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>力线从脚起，足弓塌→脚外八→踝内扣，整条链开始歪。</li>
+<li>膝内扣→髋代偿→腰酸，根源常在脚而非腰。</li>
+<li>连锁到肩颈：高低肩、脖子僵也可能从扁平足来。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-bowlegs -->
+    <section class="screen" id="art-sport-bowlegs">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 腿型 · O型腿</div>
+  <h1>O型腿：不只是不好看，是力线全乱了</h1>
+</header>
+<div class="body">
+<p class="lead">接上篇。足弓塌久了，膝盖往外撇，两腿并拢时中间漏风——这就是 O 型腿。很多人觉得「只是不好看」，错，它是力线乱了的信号。</p>
+
+<h2>一、O型腿本质是力线歪</h2>
+<p>正常腿并拢，膝和踝都挨着。O 型腿是膝盖往外张、踝并拢而膝分开。从生物力学上，体重的力线偏离了膝盖正中，全压在关节某一侧，软骨和半月板被单侧磨。</p>
+
+<h2>二、扁平足怎么导成 O 型腿</h2>
+<p>足弓塌→踝内扣→小腿骨内旋→膝盖为了对冲，往外甩（膝外翻的反向代偿），腿就成 O。简单说：脚没撑住，膝盖自己找平衡，结果把腿掰弯了。这也是为啥小孩扁平足不干预，长大容易 O 型腿。</p>
+
+<h2>三、能掰回来吗</h2>
+<p>柔性的、肌肉失衡导致的 O 型腿，靠松解+强化能改善：放松大腿内侧、练臀中肌和外展肌把膝拉回中线。僵硬的、骨性的（真骨头弯了）只能靠支具或手术，别信「绑腿矫正带」的神话。先去康复科评估是哪种。</p>
+<div class="callout"><span class="ct">💡 划重点</span>O 型腿不是丑，是膝盖在替脚背锅；先正脚，再正膝。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>O 型腿是力线偏了，体重压在膝盖单侧，软骨被磨。</li>
+<li>扁平足→踝内扣→膝外甩，是常见成因链。</li>
+<li>肌肉性的可练回来，骨性的要支具/手术，先评估再动手。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-pelvis -->
+    <section class="screen" id="art-sport-pelvis">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 骨盆 · 代偿</div>
+  <h1>骨盆代偿：你的腰疼，源头可能在脚</h1>
+</header>
+<div class="body">
+<p class="lead">脚歪→膝歪→骨盆就坐不住了。它开始前倾、后倾、左右歪，腰成了替罪羊。这篇讲清骨盆怎么被脚「连累」。</p>
+
+<h2>一、骨盆是身体的「地基」</h2>
+<p>骨盆承上启下：上接脊柱和内脏，下连双腿。它正，脊柱力线才正；它歪，上面全得歪着将就。很多人练核心、练腰，却从不看骨盆——等于地基歪了去装修墙面。</p>
+
+<h2>二、扁平足如何撼动骨盆</h2>
+<p>足弓塌→踝内扣→大腿内旋→骨盆为了不塌，一侧被拉前倾、一侧被顶后倾，左右还不对称。结果：腰方肌一边紧一边松，腰骶关节压力不均。你躺下腰悬空、站着腰发酸，可能都是骨盆歪惹的。</p>
+
+<h2>三、腰痛先查「地基」</h2>
+<p>慢性腰痛、久坐更疼、换姿势能缓——先别急着按摩腰。去查足弓、查骨盆：扁平足和骨盆倾斜，是腰痛两大常被忽略的源头。把脚撑起来、把骨盆摆正，很多人腰疼自己就退了。</p>
+<div class="callout"><span class="ct">💡 划重点</span>腰痛别只按腰——地基（脚+骨盆）不正，墙面（腰）永远歪。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>骨盆是身体地基，它歪整条脊柱力线都歪。</li>
+<li>扁平足经踝、髋传导，让骨盆前后/左右倾斜，腰替它受压。</li>
+<li>慢性腰痛先查脚和骨盆，源头正了腰常自缓。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-gait -->
+    <section class="screen" id="art-sport-gait">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 步态 · 自我观察</div>
+  <h1>步态异常：你走路的样子，出卖了全身</h1>
+</header>
+<div class="body">
+<p class="lead">把前面几篇串起来：脚、膝、骨盆、腰，全写在你走路的姿势里。这篇教你怎么「看」自己的步态，早发现问题。</p>
+
+<h2>一、正常步态长啥样</h2>
+<p>正常走：脚尖朝前微外（约 5–10°）、足弓有弹性、膝盖顺着脚尖、骨盆稳稳水平微摆、上身不晃。落脚先脚跟、再滚到前掌、最后蹬出。整个像一根稳定的弹簧在走。</p>
+
+<h2>二、几种常见异常步态</h2>
+<p>①外八字/内八字：脚尖明显外撇或内扣，多半足弓或髋的问题。②拖步：脚抬不起来、蹭地走，可能小腿无力或神经问题。③骨盆左右晃（企鹅步）：走路像企鹅摆，常是臀中肌弱、骨盆兜不住。④脚外翻塌陷：每一步脚掌内侧拍地，就是扁平足典型。</p>
+
+<h2>三、怎么自己观察</h2>
+<p>让家人拍你侧面和背后走路的视频；看鞋底磨损——外侧磨=可能外翻不足，内侧前掌磨狠=扁平足。发现明显异常、走久了某处疼，去康复科做步态评估，比瞎练强。</p>
+<div class="callout"><span class="ct">💡 划重点</span>鞋底磨损是身体的「行车记录仪」——看磨损，就知道你哪歪了。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>正常步态：脚尖微外、足弓弹、膝顺尖、骨盆稳、上身不晃。</li>
+<li>外/内八、拖步、企鹅晃、脚掌拍地，都是异常信号。</li>
+<li>拍视频 + 看鞋底磨损，能早发现；异常疼痛去步态评估。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：sport-rehab-overview -->
+    <section class="screen" id="art-sport-rehab-overview">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">运动健康 · 康复理念 · 总览</div>
+  <h1>运动康复总览：把身体当系统来修</h1>
+</header>
+<div class="body">
+<p class="lead">最后一篇，把「运动康复」这事说透。它不是按摩放松，也不是忍痛硬练，是把身体当一套联动的系统，找源头、修链条。</p>
+
+<h2>一、运动康复是啥</h2>
+<p>运动康复（physiotherapy / sports rehab）是用运动训练，恢复或改善因损伤、姿势、疾病导致的功能障碍。它和「推拿按摩」不同：按摩松肌肉，康复是让你自己长出能稳住身体的能力。目标不是不疼，是「不疼还能用」。</p>
+
+<h2>二、核心思路：治源头，不是只压疼点</h2>
+<p>腰疼只按腰，是治标。康复问的是：腰为啥疼？脚？骨盆？久坐？它顺着力线往上找，找到那个「第一张倒的多米诺骨牌」，先把它扶正。所以康复常从脚、从呼吸、从核心开始，而不是直接怼疼的地方。</p>
+
+<h2>三、普通人能用的四步</h2>
+<p>①评估：先搞清楚哪歪了、哪弱了（别瞎练）。②松解：紧张的肌肉/筋膜先放松（滚轴、拉伸）。③强化：把弱的练起来（足底、臀中肌、核心）。④整合：回到日常动作（走、蹲、跑）里把新能力用上。顺序是「先松再练，最后整合」，反了容易伤。</p>
+<div class="callout"><span class="ct">💡 划重点</span>康复的本质：不是让你不疼，是让你「不疼还能稳稳地用」。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>运动康复是用训练恢复功能，不是按摩也不是硬扛。</li>
+<li>核心治源头：顺着力线找第一张骨牌，而非只压疼点。</li>
+<li>四步：评估→松解→强化→整合，顺序别反。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
 <script>
 const HISTORY=[
  {e:"🏺",t:"文明曙光：从部落联盟到早期国家",m:"先秦 · 史前—前1046",b:"<p>新石器时代晚期，黄河、长江流域已出现发达聚落：仰韶、良渚、龙山等文化相继兴起。其中<b>良渚古城</b>（约公元前3300–2300年）拥有大型水利系统与精美玉器礼制，被视为早期国家的雏形。</p><p>相传<b>夏</b>朝（约前2070年起）是中国第一个王朝，二里头文化或与之对应；<b>商</b>朝（约前1600–前1046）留下甲骨文与青铜器，信史由此开端；<b>周</b>朝推行分封与礼乐制度，奠定了「华夏」认同的雏形。</p>"},
@@ -2682,6 +2999,19 @@ const PSY=[
       /*MORE3:psy*/
 ];
 
+const SPORT=[
+ {e:"🏟️",t:"什么是 HYROX：当健身变成一场能比高低的考试",m:"运动健康 · 健身赛事 · HYROX",b:"HYROX 是 2017 年发源于德国的室内健身赛：8 公里跑 + 8 个功能训练站，全球统一赛道，成绩可直接横向排名。门槛不高，会跑会蹲就能报 Open 组。"},
+ {e:"🏋️",t:"HYROX 的 8 个关卡：跑步和功能训练怎么排",m:"运动健康 · 健身赛事 · 关卡",b:"8 站顺序固定：滑雪机→雪橇推→雪橇拉→波比跳远→划船→农夫行走→沙袋箭步→药球砸墙，每段中间跑 1 公里。雪橇和波比最易崩，划船是中场喘息。"},
+ {e:"🎯",t:"想跑 HYROX？训练往这四个方向走",m:"运动健康 · 训练 · HYROX",b:"四支柱：有氧底子、力量、疲劳跑、按序模拟赛。最大坑是跑练分离，要把「跑后立刻扛」揉进同一次训练。新手报 Open，10–12 周可完赛。"},
+ {e:"🦶",t:"扁平足是怎么长出来的：足弓塌掉的根",m:"运动健康 · 足踝 · 扁平足成因",b:"足弓是减震弹簧，塌了冲击转嫁到膝和腰。分天生和后天；后天多因超重、久站、软鞋——久坐+肥胖+无支撑鞋是三件套。"},
+ {e:"💪",t:"扁平足康复：不是垫个鞋垫就完事",m:"运动健康 · 康复 · 扁平足",b:"先分柔性（可练）和僵硬性（要看医生）。居家三动作：抓毛巾、缩足、踮脚走，贵在天天做。鞋要支撑、别太软，体重大的先减重。"},
+ {e:"🦵",t:"足弓内塌的连锁反应：从脚歪到骨盆一路歪",m:"运动健康 · 力线 · 连锁反应",b:"力线从脚起，足弓塌→脚外八→踝内扣，整条链跟着歪；膝内扣→髋代偿→腰酸，源头常在脚而非腰。身体是联动的，修腰不如先看脚。"},
+ {e:"🦵",t:"O型腿：不只是不好看，是力线全乱了",m:"运动健康 · 腿型 · O型腿",b:"O 型腿是力线偏了，体重压在膝盖单侧磨软骨。扁平足→踝内扣→膝外甩是常见成因链。肌肉性的可练回，骨性的要支具/手术，先评估。"},
+ {e:"🩻",t:"骨盆代偿：你的腰疼，源头可能在脚",m:"运动健康 · 骨盆 · 代偿",b:"骨盆是身体地基，扁平足经踝髋传导让骨盆倾斜，腰替它受压。慢性腰痛先查脚和骨盆，源头正了腰常自缓。"},
+ {e:"👣",t:"步态异常：你走路的样子，出卖了全身",m:"运动健康 · 步态 · 自我观察",b:"正常步态脚尖微外、足弓弹、骨盆稳。外/内八、拖步、企鹅晃、脚掌拍地都是异常。拍视频+看鞋底磨损能早发现。"},
+ {e:"🔧",t:"运动康复总览：把身体当系统来修",m:"运动健康 · 康复理念 · 总览",b:"运动康复是用训练恢复功能，不是按摩也不是硬扛。核心治源头：顺力线找第一张骨牌。四步：评估→松解→强化→整合，顺序别反。"}
+];
+
 const POEM=[ {e:"🌾",t:"《诗经》：三千年前的民歌有多野",m:"古诗词 · 先秦 · 诗经",b:"诗经是三千年前的诗歌总集，国风最鲜活，写尽恋爱劳作与不平；赋比兴是诗歌源头，孔子赞其思无邪。"},
  {e:"🌕",t:"唐诗为什么封神：盛唐的那口气",m:"古诗词 · 唐 · 唐诗",b:"唐诗因科举开放与积累而爆发；李杜双峰（仙与圣）；格律成熟内容广，把汉语推到巅峰故称封神。"},
  {e:"🎼",t:"宋词：中国人的另一种浪漫",m:"古诗词 · 宋 · 宋词",b:"宋词是宋代流行歌词，诗言志、词缘情；分豪放与婉约；因城市繁荣雅俗共赏，是中国人的情绪词典。"},
@@ -2713,9 +3043,9 @@ const IELTS=[
  {t:"Day 8",d:"第8期 · 15个高频词 + 例句",href:"ielts/day08.html"}
 ];
 
-const SLUG={hist:["history-preqin","history-qinhan","history-tangsong","hist-weijin","hist-silkroad","hist-rome","hist-renaissance","hist-culture","hist-discovery","hist-revolution"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"]};
+const SLUG={hist:["history-preqin","history-qinhan","history-tangsong","hist-weijin","hist-silkroad","hist-rome","hist-renaissance","hist-culture","hist-discovery","hist-revolution"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"],sport:["sport-hyrox-what","sport-hyrox-stations","sport-hyrox-train","sport-flatfoot-cause","sport-flatfoot-rehab","sport-arch-collapse","sport-bowlegs","sport-pelvis","sport-gait","sport-rehab-overview"]};
 function renderK(){
-  const maps={hist:HISTORY,geo:GEO,psy:PSY,poem:POEM,eq:EQ};
+  const maps={hist:HISTORY,geo:GEO,psy:PSY,poem:POEM,eq:EQ,sport:SPORT};
   for(const k in maps){
     document.getElementById('klist-'+k).innerHTML=maps[k].map((a,i)=>`<a class="krow" onclick="goArt('art-${SLUG[k][i]}')"><div><div class="kt">${a.t}</div><div class="km">${a.m}</div></div><div class="arr">→</div></a>`).join('');
   }
@@ -2725,6 +3055,8 @@ function renderK(){
 function toggleK(w){document.getElementById('klist-'+w).classList.toggle('hidden');}
 function toggleKPsyEq(){var a=document.getElementById('klist-psy'),b=document.getElementById('klist-eq');a.classList.toggle('hidden');b.classList.toggle('hidden');}
 function goKnowPsyEq(){goTab('s-know');document.getElementById('klist-psy').classList.remove('hidden');document.getElementById('klist-eq').classList.remove('hidden');document.getElementById('klist-psy').scrollIntoView({behavior:'smooth',block:'start'});}
+function goKnowSport(){goTab('s-know');document.getElementById('klist-sport').classList.remove('hidden');document.getElementById('klist-sport').scrollIntoView({behavior:'smooth',block:'start'});}
+function toggleKSport(){document.getElementById('klist-sport').classList.toggle('hidden');}
 function openArticle(k,i){const a=({hist:HISTORY,geo:GEO,psy:PSY,poem:POEM,eq:EQ})[k][i];curLight={e:a.e,t:a.t};document.getElementById('sheet-emoji').textContent=a.e;document.getElementById('sheet-title').textContent=a.t;document.getElementById('sheet-meta').textContent=a.m;document.getElementById('sheet-body').innerHTML=a.b;document.getElementById('sheet-mask').classList.add('show');document.getElementById('sheet').classList.add('show');}
 function closeSheet(){document.getElementById('sheet-mask').classList.remove('show');document.getElementById('sheet').classList.remove('show');}
 function openLight(){if(!curLight.e)return;document.getElementById('lb-emoji').textContent=curLight.e;document.getElementById('lb-title').textContent=curLight.t;document.getElementById('lightbox').classList.add('show');}
