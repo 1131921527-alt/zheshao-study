@@ -21,8 +21,18 @@ EMOJIS = ["📚","🧠","💡","🔤","✍️","🌟","📝","🎯","🧩","⚡"
 def clean(s):
     if not s:
         return ""
+    # 先处理实体编码标签（full.html 里常见 &lt;b&gt;word&lt;/b&gt;）
+    for ent in ["&lt;b&gt;", "&lt;/b&gt;", "&lt;B&gt;", "&lt;/B&gt;",
+                "&lt;strong&gt;", "&lt;/strong&gt;",
+                '&lt;span class="highlight"&gt;', "&lt;/span&gt;"]:
+        s = s.replace(ent, "")
     s = _html.unescape(s)
-    s = re.sub(r"<[^>]+>", "", s)
+    # 递归剥离所有剩余 HTML 标签（<b>, <span ...>, <strong> 等）
+    for _ in range(5):
+        n = re.sub(r"<[a-zA-Z/][^>]*>", "", s)
+        if n == s:
+            break
+        s = n
     s = s.replace(" ", "").replace("\u200b", "").strip()
     # 只剩标签文字（无真正内容）视为空
     if s in ("", "💡 记忆故事", "📝 用法提示", "记忆故事", "用法提示"):
