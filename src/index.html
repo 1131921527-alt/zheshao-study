@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>鑫汇保险 · 银保产品助手（H5 原型）</title>
+<style>
+  /* ============================================================
+     设计令牌 Design Tokens — 移动端 H5 / 专业稳重金融蓝
+     ============================================================ */
+  :root{
+    /* 品牌色 */
+    --c-primary:        #1A4DAB;  /* 信任蓝 主色 */
+    --c-primary-700:    #143A82;  /* 深蓝 按压/标题 */
+    --c-primary-050:    #EEF3FC;  /* 浅蓝 背景底 */
+    --c-primary-100:    #DBE6FA;  /* 浅蓝 标签底 */
+    --c-accent:         #C9A86A;  /* 金 高端点缀 */
+    --c-accent-soft:    #F7F1E4;  /* 金 浅底 */
+
+    /* 中性 / 背景 */
+    --c-bg:        #F4F6FA;
+    --c-surface:   #FFFFFF;
+    --c-surface-2: #F8FAFD;
+    --c-text-1:    #1A2233;  /* 主文字 */
+    --c-text-2:    #5A6478;  /* 次文字 */
+    --c-text-3:    #97A1B5;  /* 辅助文字 */
+    --c-border:    #E6EAF2;
+
+    /* 语义色 */
+    --c-success: #16A34A;
+    --c-warning: #D97706;
+    --c-error:   #DC2626;
+    --c-info:    #1A4DAB;
+
+    /* 字体 */
+    --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", system-ui, sans-serif;
+
+    /* 字号 */
+    --fs-12: 12px; --fs-13: 13px; --fs-14: 14px; --fs-15: 15px;
+    --fs-16: 16px; --fs-18: 18px; --fs-20: 20px; --fs-24: 24px; --fs-28: 28px;
+
+    /* 间距（4px 基准） */
+    --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:20px;
+    --s-6:24px; --s-8:32px; --s-10:40px; --s-12:48px;
+
+    /* 圆角 */
+    --r-sm:8px; --r-md:12px; --r-lg:16px; --r-xl:20px; --r-pill:999px;
+
+    /* 阴影 */
+    --sh-1: 0 1px 2px rgba(20,40,80,.06);
+    --sh-2: 0 4px 14px rgba(20,40,80,.08);
+    --sh-3: 0 10px 30px rgba(20,40,80,.12);
+
+    /* 动效 */
+    --t-fast: 150ms ease;
+    --t-norm: 280ms cubic-bezier(.4,0,.2,1);
+  }
+
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:var(--font);
+    background:#0E1726;
+    color:var(--c-text-1);
+    display:flex; justify-content:center;
+    min-height:100vh;
+    padding:24px 12px;
+  }
+
+  /* 手机外壳 */
+  .phone{
+    width:390px; height:844px;
+    background:var(--c-bg);
+    border-radius:44px;
+    border:10px solid #1c2433;
+    box-shadow:0 30px 70px rgba(0,0,0,.5);
+    position:relative; overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .statusbar{
+    height:44px; flex:0 0 44px;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 22px; font-size:13px; font-weight:600; color:var(--c-text-1);
+    background:var(--c-surface);
+  }
+  .statusbar .dots{ display:flex; gap:5px; align-items:center; }
+  .statusbar .dots i{ width:6px;height:6px;border-radius:50%;background:var(--c-text-1);display:inline-block; }
+
+  /* 可滚动内容区 */
+  .screen-wrap{ flex:1; position:relative; overflow:hidden; }
+  .screen{
+    position:absolute; inset:0;
+    overflow-y:auto; -webkit-overflow-scrolling:touch;
+    padding-bottom:84px;
+    opacity:0; transform:translateX(8px); pointer-events:none;
+    transition:opacity var(--t-norm), transform var(--t-norm);
+  }
+  .screen.active{ opacity:1; transform:none; pointer-events:auto; }
+  .screen::-webkit-scrollbar{ width:0; }
+
+  /* 顶部标题栏 */
+  .topbar{
+    position:sticky; top:0; z-index:5;
+    background:var(--c-surface);
+    padding:14px 20px 12px;
+    border-bottom:1px solid var(--c-border);
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .topbar h1{ font-size:var(--fs-18); margin:0; font-weight:700; letter-spacing:.3px; }
+  .topbar .sub{ font-size:var(--fs-12); color:var(--c-text-3); font-weight:500; }
+  .topbar .icon-btn{
+    width:36px;height:36px;border-radius:var(--r-pill);
+    background:var(--c-surface-2); display:grid; place-items:center;
+    font-size:16px; color:var(--c-text-2);
+  }
+
+  /* 通用容器 */
+  .pad{ padding:0 20px; }
+  .section-title{ font-size:var(--fs-15); font-weight:700; margin:24px 0 12px; display:flex; align-items:center; justify-content:space-between; }
+  .section-title .more{ font-size:var(--fs-12); color:var(--c-primary); font-weight:600; }
+
+  /* ===================== 首页 ===================== */
+  .hero{
+    margin:16px 20px 0;
+    background:linear-gradient(135deg,var(--c-primary) 0%, var(--c-primary-700) 100%);
+    border-radius:var(--r-lg);
+    padding:20px; color:#fff; position:relative; overflow:hidden;
+    box-shadow:var(--sh-2);
+  }
+  .hero::after{
+    content:""; position:absolute; right:-30px; top:-30px;
+    width:140px;height:140px;border-radius:50%;
+    background:radial-gradient(circle, rgba(201,168,106,.35), transparent 70%);
+  }
+  .hero .hi{ font-size:var(--fs-13); opacity:.85; }
+  .hero .name{ font-size:var(--fs-20); font-weight:700; margin:4px 0 14px; }
+  .hero-stats{ display:flex; gap:22px; }
+  .hero-stats .st .n{ font-size:var(--fs-20); font-weight:700; }
+  .hero-stats .st .l{ font-size:var(--fs-12); opacity:.8; margin-top:2px; }
+
+  .quick-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:18px 20px 0; }
+  .quick{
+    background:var(--c-surface); border-radius:var(--r-md); padding:14px 6px;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    box-shadow:var(--sh-1); border:1px solid var(--c-border);
+  }
+  .quick .qi{
+    width:40px;height:40px;border-radius:12px; display:grid;place-items:center;
+    font-size:20px; background:var(--c-primary-050); color:var(--c-primary);
+  }
+  .quick .ql{ font-size:var(--fs-12); color:var(--c-text-2); font-weight:600; }
+
+  /* 产品卡 */
+  .card{
+    background:var(--c-surface); border-radius:var(--r-lg);
+    border:1px solid var(--c-border); box-shadow:var(--sh-1);
+    padding:16px; margin-bottom:12px; transition:transform var(--t-fast), box-shadow var(--t-fast);
+  }
+  .card:active{ transform:scale(.985); box-shadow:var(--sh-2); }
+  .pcard .row1{ display:flex; align-items:center; justify-content:space-between; }
+  .pcard .pname{ font-size:var(--fs-16); font-weight:700; }
+  .tag{
+    font-size:var(--fs-11); font-weight:600; padding:3px 8px; border-radius:var(--r-pill);
+    background:var(--c-primary-050); color:var(--c-primary);
+  }
+  .tag.gold{ background:var(--c-accent-soft); color:#9A7B36; }
+  .tag.green{ background:#E7F6EC; color:var(--c-success); }
+  .pcard .desc{ font-size:var(--fs-13); color:var(--c-text-2); margin:8px 0 12px; line-height:1.5; }
+  .pcard .meta{ display:flex; gap:18px; }
+  .pcard .meta .m .v{ font-size:var(--fs-15); font-weight:700; color:var(--c-text-1); }
+  .pcard .meta .m .k{ font-size:var(--fs-11); color:var(--c-text-3); margin-top:2px; }
+  .pcard .foot{ display:flex; align-items:center; justify-content:space-between; margin-top:14px; padding-top:12px; border-top:1px dashed var(--c-border); }
+  .pcard .foot .rate{ font-size:var(--fs-12); color:var(--c-text-3); }
+  .pcard .foot .rate b{ color:var(--c-accent); font-size:var(--fs-15); }
+  .btn{
+    border:none; cursor:pointer; font-family:var(--font); font-weight:600;
+    border-radius:var(--r-pill); padding:8px 16px; font-size:var(--fs-13);
+    transition:all var(--t-fast);
+  }
+  .btn-primary{ background:var(--c-primary); color:#fff; }
+  .btn-primary:active{ background:var(--c-primary-700); }
+  .btn-ghost{ background:var(--c-primary-050); color:var(--c-primary); }
+  .btn-outline{ background:transparent; color:var(--c-primary); border:1px solid var(--c-primary-100); }
+
+  /* ===================== 产品库 ===================== */
+  .search{
+    margin:16px 20px 0; display:flex; align-items:center; gap:8px;
+    background:var(--c-surface); border:1px solid var(--c-border);
+    border-radius:var(--r-pill); padding:10px 16px; box-shadow:var(--sh-1);
+  }
+  .search input{ border:none; outline:none; flex:1; font-size:var(--fs-14); font-family:var(--font); background:transparent; color:var(--c-text-1); }
+  .search .si{ color:var(--c-text-3); }
+  .filters{ display:flex; gap:8px; padding:14px 20px 4px; overflow-x:auto; }
+  .filters::-webkit-scrollbar{ height:0; }
+  .chip{
+    flex:0 0 auto; padding:7px 14px; border-radius:var(--r-pill);
+    background:var(--c-surface); border:1px solid var(--c-border);
+    font-size:var(--fs-13); color:var(--c-text-2); font-weight:600;
+  }
+  .chip.on{ background:var(--c-primary); color:#fff; border-color:var(--c-primary); }
+
+  /* ===================== 对比 ===================== */
+  .compare-bar{
+    position:absolute; left:0; right:0; bottom:64px; z-index:8;
+    margin:0 20px; padding:10px 14px; border-radius:var(--r-lg);
+    background:var(--c-primary-700); color:#fff; box-shadow:var(--sh-3);
+    display:flex; align-items:center; justify-content:space-between;
+    transform:translateY(140%); transition:transform var(--t-norm);
+  }
+  .compare-bar.show{ transform:none; }
+  .compare-bar .cnt{ font-size:var(--fs-13); }
+  .compare-bar .cnt b{ font-size:var(--fs-16); }
+  .compare-bar .acts{ display:flex; gap:8px; }
+  .compare-bar .acts .btn{ padding:7px 14px; }
+  .compare-bar .acts .clear{ background:rgba(255,255,255,.15); color:#fff; }
+
+  .cmp-item{ display:flex; align-items:center; gap:12px; }
+  .cmp-check{
+    width:22px;height:22px;border-radius:7px; border:2px solid var(--c-border);
+    flex:0 0 auto; display:grid; place-items:center; color:#fff; font-size:13px;
+    transition:all var(--t-fast);
+  }
+  .cmp-check.on{ background:var(--c-primary); border-color:var(--c-primary); }
+
+  /* 对比结果表 */
+  .ctable{ width:100%; border-collapse:collapse; font-size:var(--fs-13); }
+  .ctable th, .ctable td{ padding:12px 10px; text-align:left; border-bottom:1px solid var(--c-border); vertical-align:top; }
+  .ctable thead th{ background:var(--c-surface-2); font-weight:700; color:var(--c-text-1); position:sticky; top:0; }
+  .ctable th.row-h{ color:var(--c-text-2); font-weight:600; width:84px; background:var(--c-surface-2); }
+  .ctable td .hl{ color:var(--c-primary); font-weight:700; }
+  .ctable .pcol .pn{ font-weight:700; font-size:var(--fs-14); }
+  .ctable .pcol .pt{ font-size:var(--fs-11); color:var(--c-text-3); margin-top:2px; }
+
+  /* ===================== 我的 ===================== */
+  .profile{
+    margin:16px 20px 0; background:var(--c-surface); border-radius:var(--r-lg);
+    padding:18px; display:flex; align-items:center; gap:14px; box-shadow:var(--sh-1); border:1px solid var(--c-border);
+  }
+  .avatar{ width:52px;height:52px;border-radius:50%; background:linear-gradient(135deg,var(--c-primary),var(--c-primary-700)); color:#fff; display:grid; place-items:center; font-size:20px; font-weight:700; }
+  .profile .pn{ font-size:var(--fs-16); font-weight:700; }
+  .profile .pr{ font-size:var(--fs-12); color:var(--c-text-3); margin-top:3px; }
+  .menu{ margin:16px 20px 0; background:var(--c-surface); border-radius:var(--r-lg); border:1px solid var(--c-border); overflow:hidden; }
+  .menu .mi{ display:flex; align-items:center; gap:12px; padding:15px 16px; border-bottom:1px solid var(--c-border); font-size:var(--fs-14); }
+  .menu .mi:last-child{ border-bottom:none; }
+  .menu .mi .mi-i{ width:30px;height:30px;border-radius:9px; background:var(--c-primary-050); color:var(--c-primary); display:grid;place-items:center; font-size:15px; }
+  .menu .mi .mi-t{ flex:1; }
+  .menu .mi .mi-a{ color:var(--c-text-3); }
+
+  /* 利益演示（CSS 柱状图） */
+  .chart{ display:flex; align-items:flex-end; gap:10px; height:150px; padding:8px 4px 0; }
+  .chart .bar{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:6px; }
+  .chart .bar .col{ width:100%; max-width:34px; border-radius:6px 6px 0 0; background:linear-gradient(180deg,var(--c-primary),var(--c-primary-700)); }
+  .chart .bar .col.g{ background:linear-gradient(180deg,var(--c-accent),#A9842F); }
+  .chart .bar .yr{ font-size:var(--fs-11); color:var(--c-text-3); }
+  .legend{ display:flex; gap:16px; margin-top:10px; font-size:var(--fs-12); color:var(--c-text-2); }
+  .legend i{ width:10px;height:10px;border-radius:3px; display:inline-block; margin-right:5px; vertical-align:middle; }
+
+  /* ===================== 产品详情抽屉 ===================== */
+  .sheet-mask{
+    position:absolute; inset:0; background:rgba(15,23,38,.45);
+    opacity:0; pointer-events:none; transition:opacity var(--t-norm); z-index:20;
+  }
+  .sheet-mask.show{ opacity:1; pointer-events:auto; }
+  .sheet{
+    position:absolute; left:0; right:0; bottom:0; z-index:21;
+    background:var(--c-bg); border-radius:var(--r-xl) var(--r-xl) 0 0;
+    transform:translateY(100%); transition:transform var(--t-norm);
+    max-height:88%; overflow-y:auto; padding-bottom:90px;
+  }
+  .sheet.show{ transform:none; }
+  .sheet .grab{ width:38px;height:4px;border-radius:2px;background:var(--c-border); margin:10px auto 4px; }
+  .sheet .s-hero{ margin:8px 20px 0; background:linear-gradient(135deg,var(--c-primary),var(--c-primary-700)); border-radius:var(--r-lg); padding:18px; color:#fff; }
+  .sheet .s-hero .t{ font-size:var(--fs-20); font-weight:700; }
+  .sheet .s-hero .d{ font-size:var(--fs-13); opacity:.85; margin-top:6px; line-height:1.5; }
+  .sheet .s-actions{ position:sticky; bottom:0; background:var(--c-surface); border-top:1px solid var(--c-border); padding:12px 20px; display:flex; gap:10px; }
+  .sheet .s-actions .btn{ flex:1; padding:12px; font-size:var(--fs-15); }
+
+  .kv{ display:flex; justify-content:space-between; padding:13px 0; border-bottom:1px solid var(--c-border); font-size:var(--fs-14); }
+  .kv .k{ color:var(--c-text-2); }
+  .kv .v{ font-weight:600; text-align:right; max-width:62%; }
+
+  /* ===================== 底部导航 ===================== */
+  .tabbar{
+    position:absolute; left:0; right:0; bottom:0; height:64px; z-index:15;
+    background:var(--c-surface); border-top:1px solid var(--c-border);
+    display:flex; padding:6px 0 4px;
+  }
+  .tab{
+    flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
+    color:var(--c-text-3); font-size:11px; font-weight:600; background:none; border:none; cursor:pointer;
+    transition:color var(--t-fast);
+  }
+  .tab .ti{ font-size:21px; line-height:1; }
+  .tab.on{ color:var(--c-primary); }
+  .tab.on .ti{ transform:translateY(-1px); }
+
+  .toast{
+    position:absolute; left:50%; bottom:90px; transform:translateX(-50%) translateY(10px);
+    background:rgba(26,34,51,.92); color:#fff; padding:9px 16px; border-radius:var(--r-pill);
+    font-size:var(--fs-13); opacity:0; pointer-events:none; transition:all var(--t-norm); z-index:30; white-space:nowrap;
+  }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  .hidden{ display:none !important; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar">
+    <span>9:41</span>
+    <span class="dots"><i></i><i></i><i></i> 5G &nbsp;🔋</span>
+  </div>
+
+  <div class="screen-wrap">
+
+    <!-- ============ 首页 ============ -->
+    <section class="screen active" id="s-home">
+      <div class="topbar">
+        <div>
+          <div class="sub">银保渠道专属</div>
+          <h1>产品助手</h1>
+        </div>
+        <div class="icon-btn">🔔</div>
+      </div>
+
+      <div class="hero">
+        <div class="hi">下午好，</div>
+        <div class="name">张经理 · 招行私行部</div>
+        <div class="hero-stats">
+          <div class="st"><div class="n">6</div><div class="l">在售产品</div></div>
+          <div class="st"><div class="n">3</div><div class="l">今日对比</div></div>
+          <div class="st"><div class="n">92%</div><div class="l">方案匹配率</div></div>
+        </div>
+      </div>
+
+      <div class="quick-grid">
+        <div class="quick" onclick="goTab('s-lib')"><div class="qi">📚</div><div class="ql">产品库</div></div>
+        <div class="quick" onclick="goTab('s-cmp')"><div class="qi">⚖️</div><div class="ql">产品对比</div></div>
+        <div class="quick" onclick="openSheet('p1')"><div class="qi">📈</div><div class="ql">利益演示</div></div>
+        <div class="quick" onclick="toast('已生成产品一页纸，可转发客户')"><div class="qi">📄</div><div class="ql">一键出单</div></div>
+      </div>
+
+      <div class="section-title pad">热门推荐 <span class="more" onclick="goTab('s-lib')">查看全部 ›</span></div>
+      <div class="pad" id="home-list"></div>
+    </section>
+
+    <!-- ============ 产品库 ============ -->
+    <section class="screen" id="s-lib">
+      <div class="topbar">
+        <h1>产品库</h1>
+        <div class="icon-btn" onclick="toast('已按你的渠道偏好排序')">↕️</div>
+      </div>
+      <div class="search">
+        <span class="si">🔍</span>
+        <input placeholder="搜索产品名称 / 关键词" oninput="filterLib(this.value)">
+      </div>
+      <div class="filters" id="lib-filters">
+        <div class="chip on" data-cat="all" onclick="setCat(this,'all')">全部</div>
+        <div class="chip" data-cat="终身寿" onclick="setCat(this,'终身寿')">终身寿险</div>
+        <div class="chip" data-cat="年金" onclick="setCat(this,'年金')">年金险</div>
+        <div class="chip" data-cat="增额寿" onclick="setCat(this,'增额寿')">增额终身寿</div>
+        <div class="chip" data-cat="重疾" onclick="setCat(this,'重疾')">重疾险</div>
+        <div class="chip" data-cat="医疗" onclick="setCat(this,'医疗')">医疗险</div>
+      </div>
+      <div class="pad" id="lib-list" style="margin-top:8px;"></div>
+    </section>
+
+    <!-- ============ 对比 ============ -->
+    <section class="screen" id="s-cmp">
+      <div class="topbar">
+        <h1>产品对比</h1>
+        <div class="icon-btn" onclick="clearCmp()">🗑️</div>
+      </div>
+      <div class="pad" style="margin-top:14px;color:var(--c-text-2);font-size:var(--fs-13);line-height:1.6;">
+        勾选产品加入对比，最多 3 款。已选 <b id="cmp-count" style="color:var(--c-primary)">0</b> / 3。
+      </div>
+      <div class="pad" id="cmp-list" style="margin-top:6px;"></div>
+      <div id="cmp-result" class="hidden pad" style="margin-top:10px;"></div>
+
+      <div class="compare-bar" id="cmp-bar">
+        <div class="cnt">已选 <b id="cmp-bar-count">0</b> 款产品</div>
+        <div class="acts">
+          <button class="btn clear" onclick="clearCmp()">清空</button>
+          <button class="btn btn-primary" onclick="showCmp()">开始对比</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 我的 ============ -->
+    <section class="screen" id="s-me">
+      <div class="topbar"><h1>我的</h1></div>
+      <div class="profile">
+        <div class="avatar">张</div>
+        <div>
+          <div class="pn">张经理</div>
+          <div class="pr">招行私行渠道 · 认证客户经理</div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="mi"><div class="mi-i">⭐</div><div class="mi-t">我的收藏</div><div class="mi-a">›</div></div>
+        <div class="mi"><div class="mi-i">📊</div><div class="mi-t">业绩看板</div><div class="mi-a">›</div></div>
+        <div class="mi"><div class="mi-i">📎</div><div class="mi-t">话术素材库</div><div class="mi-a">›</div></div>
+        <div class="mi"><div class="mi-i">🎨</div><div class="mi-t">主题外观</div><div class="mi-a">金融蓝（默认）›</div></div>
+        <div class="mi"><div class="mi-i">⚙️</div><div class="mi-t">设置</div><div class="mi-a">›</div></div>
+      </div>
+      <div class="pad" style="margin-top:18px;color:var(--c-text-3);font-size:var(--fs-12);text-align:center;line-height:1.7;">
+        鑫汇保险 · 银保产品助手 v1.0<br>仅限渠道内部使用
+      </div>
+    </section>
+
+    <!-- 产品详情抽屉 -->
+    <div class="sheet-mask" id="sheet-mask" onclick="closeSheet()"></div>
+    <div class="sheet" id="sheet"></div>
+
+    <!-- 底部导航 -->
+    <nav class="tabbar">
+      <button class="tab on" data-t="s-home" onclick="goTab('s-home')"><span class="ti">🏠</span>首页</button>
+      <button class="tab" data-t="s-lib" onclick="goTab('s-lib')"><span class="ti">📚</span>产品库</button>
+      <button class="tab" data-t="s-cmp" onclick="goTab('s-cmp')"><span class="ti">⚖️</span>对比</button>
+      <button class="tab" data-t="s-me" onclick="goTab('s-me')"><span class="ti">👤</span>我的</button>
+    </nav>
+
+    <div class="toast" id="toast"></div>
+  </div>
+</div>
+
+<script>
+/* ===================== 数据 ===================== */
+const PRODUCTS = [
+  { id:'p1', name:'宏御世家终身寿险（分红型）', cat:'终身寿', tag:'主推', tagType:'gold',
+    desc:'保额终身增长，享年度分红，兼顾身故保障与财富传承。',
+    age:'出生满30天–70周岁', pay:'3/5/10年交', term:'终身', min:'5万元', rate:'演示IRR 3.0%',
+    items:[['投保年龄','出生满30天–70周岁'],['交费期间','3/5/10年交'],['保障期限','终身'],['起投门槛','5万元'],['红利方式','现金领取/累积生息'],['核心优势','保额递增+分红，传承属性强']],
+    chart:[8,14,22,33,47,64], chartG:[6,11,18,27,39,53] },
+  { id:'p2', name:'鑫享一生年金保险', cat:'年金', tag:'稳健', tagType:'',
+    desc:'约定年龄起年年领年金，活到老领到老，补充养老现金流。',
+    age:'18–60周岁', pay:'趸交/3/5/10年', term:'至105周岁', min:'1万元', rate:'领取比值高',
+    items:[['投保年龄','18–60周岁'],['交费期间','趸交/3/5/10年'],['保障期限','至105周岁'],['起投门槛','1万元'],['年金起领','第5/10保单年度'],['核心优势','稳定现金流，养老补充']],
+    chart:[5,10,18,30,45,60], chartG:[4,9,16,26,40,55] },
+  { id:'p3', name:'传家宝增额终身寿A款', cat:'增额寿', tag:'热销', tagType:'green',
+    desc:'现金价值按约3.0%复利递增，支持减保取现，灵活规划。',
+    age:'出生满28天–75周岁', pay:'趸交/3/5/10年', term:'终身', min:'1万元', rate:'IRR≈3.0%',
+    items:[['投保年龄','出生满28天–75周岁'],['交费期间','趸交/3/5/10年'],['保障期限','终身'],['起投门槛','1万元'],['现价增速','约3.0%复利'],['核心优势','现价透明，减保灵活']],
+    chart:[6,12,20,31,45,62], chartG:[5,10,17,26,38,52] },
+  { id:'p4', name:'健康无忧重疾险（尊享版）', cat:'重疾', tag:'保障', tagType:'',
+    desc:'覆盖120种重疾+中症+轻症，自带保费豁免，守护家庭。',
+    age:'0–60周岁', pay:'趸交/5/10/20年', term:'至70/终身', min:'3千元', rate:'覆盖广',
+    items:[['投保年龄','0–60周岁'],['交费期间','趸交/5/10/20年'],['保障期限','至70岁/终身'],['起投门槛','3千元'],['重疾数量','120种'],['核心优势','多次赔付，自带豁免']],
+    chart:[0,0,0,0,0,0], chartG:[0,0,0,0,0,0] },
+  { id:'p5', name:'医无忧百万医疗', cat:'医疗', tag:'普惠', tagType:'',
+    desc:'最高600万医疗报销，含质子重离子，免健康告知可续保。',
+    age:'0–65周岁', pay:'年交', term:'1年期可续', min:'几百元', rate:'高杠杆',
+    items:[['投保年龄','0–65周岁'],['交费期间','年交'],['保障期限','1年期（可续保）'],['起投门槛','几百元/年'],['保额','最高600万'],['核心优势','低保费高保额，杠杆高']],
+    chart:[0,0,0,0,0,0], chartG:[0,0,0,0,0,0] },
+  { id:'p6', name:'锦绣前程教育年金', cat:'年金', tag:'规划', tagType:'',
+    desc:'专项教育金，大学阶段年年领，婚嫁/创业金到期给付。',
+    age:'0–17周岁', pay:'3/5/10年交', term:'至30周岁', min:'5千元', rate:'专款专用',
+    items:[['投保年龄','0–17周岁（少儿）'],['交费期间','3/5/10年交'],['保障期限','至30周岁'],['起投门槛','5千元'],['领取阶段','18–21岁年金'],['核心优势','教育专款，强制储蓄']],
+    chart:[4,8,15,26,40,55], chartG:[3,7,13,22,35,50] },
+];
+
+/* ===================== 工具 ===================== */
+let curCat='all', curLib='';
+const $ = s=>document.querySelector(s);
+const $$ = s=>document.querySelectorAll(s);
+function goTab(id){
+  $$('.screen').forEach(s=>s.classList.remove('active'));
+  $('#'+id).classList.add('active');
+  $$('.tab').forEach(t=>t.classList.toggle('on', t.dataset.t===id));
+  $('#'+id).scrollTop=0;
+}
+function toast(msg){
+  const t=$('#toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),1800);
+}
+
+/* ===================== 渲染卡片 ===================== */
+function cardHTML(p){
+  return `<div class="card pcard" onclick="openSheet('${p.id}')">
+    <div class="row1"><div class="pname">${p.name}</div><span class="tag ${p.tagType}">${p.tag}</span></div>
+    <div class="desc">${p.desc}</div>
+    <div class="meta">
+      <div class="m"><div class="v">${p.min}</div><div class="k">起投门槛</div></div>
+      <div class="m"><div class="v">${p.term.replace('至','')}</div><div class="k">保障期限</div></div>
+      <div class="m"><div class="v">${p.cat}</div><div class="k">险种</div></div>
+    </div>
+    <div class="foot">
+      <div class="rate">${p.rate.includes('%')? '演示收益 <b>'+p.rate+'</b>' : p.rate}</div>
+      <button class="btn btn-primary" onclick="event.stopPropagation();openSheet('${p.id}')">查看 ›</button>
+    </div>
+  </div>`;
+}
+function renderHome(){
+  $('#home-list').innerHTML = PRODUCTS.slice(0,4).map(cardHTML).join('');
+}
+function renderLib(){
+  let list=PRODUCTS.filter(p=> curCat==='all'||p.cat===curCat);
+  if(curLib) list=list.filter(p=> (p.name+p.desc).includes(curLib));
+  $('#lib-list').innerHTML = list.length? list.map(cardHTML).join('') :
+    `<div style="text-align:center;color:var(--c-text-3);padding:40px 0;font-size:var(--fs-13)">没有匹配的产品</div>`;
+}
+function setCat(el,cat){ curCat=cat; $$('#lib-filters .chip').forEach(c=>c.classList.remove('on')); el.classList.add('on'); renderLib(); }
+function filterLib(v){ curLib=v.trim(); renderLib(); }
+
+/* ===================== 产品详情抽屉 ===================== */
+function openSheet(id){
+  const p=PRODUCTS.find(x=>x.id===id); if(!p) return;
+  let chartHTML='';
+  if(p.chart.some(v=>v>0)){
+    const max=Math.max(...p.chart, ...p.chartG);
+    chartHTML=`<div class="section-title pad" style="margin-top:18px">现金价值演示（每万元保费）</div>
+      <div class="pad"><div class="card">
+        <div class="chart">${p.chart.map((v,i)=>{
+          const h=Math.round(v/max*100); const gh=Math.round(p.chartG[i]/max*100);
+          return `<div class="bar"><div class="col" style="height:${h}%"></div><div class="col g" style="height:${gh}%"></div><div class="yr">${[10,20,30,40,50,60][i]}年</div></div>`;
+        }).join('')}</div>
+        <div class="legend"><span><i style="background:var(--c-primary)"></i>已交保费累积</span><span><i style="background:var(--c-accent)"></i>预期现金价值</span></div>
+      </div></div>`;
+  }
+  $('#sheet').innerHTML=`
+    <div class="grab"></div>
+    <div class="s-hero"><div class="t">${p.name}</div><div class="d">${p.desc}</div></div>
+    <div class="pad" style="margin-top:14px">
+      <div class="card">${p.items.map(it=>`<div class="kv"><span class="k">${it[0]}</span><span class="v">${it[1]}</span></div>`).join('')}</div>
+      ${chartHTML}
+      <div class="section-title pad">核心卖点</div>
+      <div class="pad" style="display:flex;flex-wrap:wrap;gap:8px">
+        <span class="tag">${p.cat}</span><span class="tag gold">${p.tag}</span>
+        <span class="tag" style="background:var(--c-surface-2);color:var(--c-text-2)">${p.rate}</span>
+        <span class="tag" style="background:var(--c-surface-2);color:var(--c-text-2)">起投 ${p.min}</span>
+      </div>
+    </div>
+    <div class="s-actions">
+      <button class="btn btn-outline" onclick="addCmp('${p.id}')">加入对比</button>
+      <button class="btn btn-primary" onclick="toast('已生成「${p.name}」客户一页纸')">生成一页纸</button>
+    </div>`;
+  $('#sheet-mask').classList.add('show');
+  $('#sheet').classList.add('show');
+}
+function closeSheet(){ $('#sheet-mask').classList.remove('show'); $('#sheet').classList.remove('show'); }
+
+/* ===================== 对比 ===================== */
+let cmp=[];
+function addCmp(id){
+  if(cmp.includes(id)){ toast('已在对比清单中'); return; }
+  if(cmp.length>=3){ toast('最多对比 3 款产品'); return; }
+  cmp.push(id); closeSheet(); renderCmp(); toast('已加入对比');
+}
+function toggleCmp(id){
+  if(cmp.includes(id)) cmp=cmp.filter(x=>x!==id);
+  else { if(cmp.length>=3){ toast('最多对比 3 款产品'); return; } cmp.push(id); }
+  renderCmp();
+}
+function clearCmp(){ cmp=[]; renderCmp(); $('#cmp-result').classList.add('hidden'); toast('已清空'); }
+function renderCmp(){
+  $('#cmp-count').textContent=cmp.length;
+  $('#cmp-bar-count').textContent=cmp.length;
+  $('#cmp-bar').classList.toggle('show', cmp.length>0);
+  const rows=PRODUCTS.map(p=>{
+    const on=cmp.includes(p.id);
+    return `<div class="card pcard" style="display:flex;align-items:center;gap:12px" onclick="toggleCmp('${p.id}')">
+      <div class="cmp-check ${on?'on':''}">${on?'✓':''}</div>
+      <div style="flex:1">
+        <div style="font-weight:700;font-size:var(--fs-14)">${p.name}</div>
+        <div style="font-size:var(--fs-12);color:var(--c-text-3);margin-top:3px">${p.cat} · ${p.min}</div>
+      </div>
+      <span class="tag ${p.tagType}">${p.tag}</span>
+    </div>`;
+  }).join('');
+  $('#cmp-list').innerHTML=rows;
+}
+function showCmp(){
+  if(cmp.length<2){ toast('请至少选择 2 款产品'); return; }
+  const ps=cmp.map(id=>PRODUCTS.find(x=>x.id===id));
+  const fields=[['险种类型',p=>p.cat],['投保年龄',p=>p.age],['交费期间',p=>p.pay],
+    ['保障期限',p=>p.term],['起投门槛',p=>p.min],['核心优势',p=>p.items[5][1]]];
+  let html=`<div class="section-title">对比结果 <span class="more" onclick="clearCmp()">退出 ›</span></div><div class="card" style="padding:0;overflow:hidden"><table class="ctable"><thead><tr><th class="row-h"></th>${ps.map(p=>`<th class="pcol"><div class="pn">${p.name.replace(/（.*?）/,'')}</div><div class="pt">${p.tag} · ${p.cat}</div></th>`).join('')}</tr></thead><tbody>`;
+  fields.forEach(f=>{ html+=`<tr><th class="row-h">${f[0]}</th>${ps.map(p=>`<td>${f[1](p)}</td>`).join('')}</tr>`; });
+  html+=`</tbody></table></div>`;
+  $('#cmp-result').innerHTML=html;
+  $('#cmp-result').classList.remove('hidden');
+  $('#cmp-result').scrollIntoView({behavior:'smooth'});
+}
+
+/* ===================== 初始化 ===================== */
+renderHome(); renderLib(); renderCmp();
+</script>
+</body>
+</html>
