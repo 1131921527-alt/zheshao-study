@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0B0F17">
-<meta name="description" content="泽少学习助手：AI 独立板块（AI动态播报）+ 知识类（历史 / 文化·文学 / 地理 / 心理学），共 46 篇长文与 289 个雅思词，适合年轻人碎片化学习。深色黑金质感，可安装到手机主屏当 App。">
+<meta name="description" content="泽少学习助手：AI动态播报 + 知识类（历史 / 文化·文学 / 地理 / 心理学17篇 / 雅思单词289词），适合碎片化学习。深色黑金质感，可安装到手机主屏当 App。">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="knowledge/article.css">
 <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -143,6 +143,29 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .toast{position:absolute;left:50%;bottom:90px;transform:translateX(-50%) translateY(10px);background:var(--gold);color:#0B0F17;padding:9px 16px;border-radius:var(--r-pill);font-size:var(--fs-13);font-weight:600;opacity:0;pointer-events:none;transition:all var(--t-norm);z-index:30;white-space:nowrap;max-width:90%}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .footer{text-align:center;color:var(--text-3);font-size:var(--fs-12);margin:30px 20px 10px;line-height:1.8}
+
+/* 今日金句卡片 */
+.quote-card{margin:0 20px;background:linear-gradient(135deg,#1c2438,#131a2b);border:1px solid var(--border-strong);border-radius:var(--r-lg);padding:18px 18px 16px;position:relative;overflow:hidden;box-shadow:var(--sh-1);min-height:78px;display:flex;flex-direction:column;justify-content:center}
+.quote-card::before{content:"";position:absolute;left:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,106,.22),transparent 70%)}
+.quote-card .q-icon{font-size:22px;margin-bottom:6px}
+.quote-card .q-text{font-size:var(--fs-14);line-height:1.7;color:var(--text-1);font-weight:600}
+.quote-card .q-text em{color:var(--gold);font-style:normal;font-weight:700}
+.quote-card .q-from{font-size:var(--fs-11);color:var(--text-3);margin-top:8px;text-align:right}
+.quote-card .q-refresh{position:absolute;right:14px;top:14px;font-size:14px;color:var(--text-3);background:none;border:none;cursor:pointer;padding:4px;transition:transform var(--t-fast),color var(--t-fast)}
+.quote-card .q-refresh:active{transform:rotate(180deg);color:var(--gold)}
+
+/* 知识中心说明卡 */
+.know-intro{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;margin-bottom:8px}
+.know-intro p{font-size:var(--fs-13);line-height:1.7;color:var(--text-2);margin:0}
+.know-intro b{color:var(--gold);font-weight:700}
+
+/* 雅思小徽章 */
+.ki-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:var(--r-pill);background:var(--gold-soft);color:var(--gold);margin-left:6px;vertical-align:middle}
+
+/* 板块说明小卡（用于内嵌段落） */
+.mini-tip{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;margin:14px 0}
+.mini-tip p{font-size:var(--fs-13);line-height:1.7;color:var(--text-2);margin:0}
+.mini-tip h3{font-size:var(--fs-14);color:var(--gold);margin:0 0 8px;font-weight:700}
 </style>
 </head>
 <body>
@@ -159,8 +182,9 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="hi">每天进步一点点</div>
         <div class="name">泽少的学习中心</div>
         <div class="hero-stats">
-          <div class="st"><div class="n">6</div><div class="l">知识类目</div></div>
-          <div class="st"><div class="n">340+</div><div class="l">篇/词内容</div></div>
+          <div class="st"><div class="n">5</div><div class="l">知识类目</div></div>
+          <div class="st"><div class="n">50+</div><div class="l">长文知识</div></div>
+          <div class="st"><div class="n">289</div><div class="l">雅思词汇</div></div>
           <div class="st"><div class="n">每日</div><div class="l">自动更新</div></div>
         </div>
       </div>
@@ -184,12 +208,17 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="qcard" onclick="goKnow('hist')"><div class="qi">🏛️</div><div class="qt">历史</div><div class="qd">中国史 · 世界史</div></div>
         <div class="qcard" onclick="goKnow('poem')"><div class="qi">📜</div><div class="qt">文化·文学</div><div class="qd">诗词 · 楚辞 · 元曲</div></div>
         <div class="qcard" onclick="goKnow('geo')"><div class="qi">🌍</div><div class="qt">地理</div><div class="qd">板块 · 气候 · 城市</div></div>
+        <div class="qcard" onclick="goKnowPsyEq()"><div class="qi">🧠</div><div class="qt">心理学</div><div class="qd">认知 · 情绪 · 情商</div><div class="qbadge">新增5篇</div></div>
+        <div class="qcard" onclick="goKnow('ielts')"><div class="qi">📖</div><div class="qt">雅思单词</div><div class="qd">每天15词 · 带音频</div></div>
       </div>
 
-      <div class="section-title pad">🛠️ 学习工具</div>
+      <div class="section-title pad">💡 今日金句</div>
+      <div class="quote-card" id="dailyQuote">加载中...</div>
+
+      <div class="section-title pad">⚡ 快捷入口</div>
       <div class="quick-grid">
-        <div class="qcard" onclick="goTab('s-ielts')"><div class="qi">📖</div><div class="qt">雅思单词</div><div class="qd">289 词 · 例句+记忆法</div></div>
-        <div class="qcard" onclick="goTab('s-me')"><div class="qi">⚙️</div><div class="qt">我的</div><div class="qd">安装指引 / 支持</div></div>
+        <div class="qcard" onclick="goTab('s-news')"><div class="qi">🤖</div><div class="qt">AI动态</div><div class="qd">每日 AI 圈大事</div></div>
+        <div class="qcard" onclick="goTab('s-me')"><div class="qi">⚙️</div><div class="qt">我的</div><div class="qd">安装 / 打赏</div></div>
       </div>
 
       <div class="support">
@@ -219,8 +248,12 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
     <!-- 知识中心 -->
     <section class="screen" id="s-know">
-      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文化·文学 · 地理 · 心理学</div><h1>知识中心</h1></div></div></div>
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文化·文学 · 地理 · 心理 · 雅思</div><h1>知识中心</h1></div></div></div>
       <div class="pad" style="margin-top:16px">
+
+        <div class="know-intro">
+          <p>五大类通识知识，<b>历史</b>看文明的来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>雅思单词</b>背词攒分。点分类展开，长文点开就读。</p>
+        </div>
 
         <div class="section-title k-toggle" onclick="toggleK('hist')">🏛️ 历史 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-hist"></div>
@@ -234,25 +267,30 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="ksub">情商沟通</div>
         <div class="klist hidden" id="klist-eq"></div>
 
+        <div class="section-title k-toggle" onclick="toggleK('ielts')">📖 雅思单词 <span class="more">展开/收起</span></div>
+        <div class="klist hidden" id="klist-ielts"></div>
+
       </div>
     </section>
 
-    <!-- 雅思 -->
-    <section class="screen" id="s-ielts">
-      <div class="topbar" style="position:static"><div class="brand"><div class="logo">📖</div><div><div class="sub">每天15词</div><h1>雅思单词</h1></div></div></div>
-      <div class="pad" style="margin-top:16px">
-        <a class="linkcard" href="ielts/index.html"><div class="li">📖</div><div class="lc"><div class="t">进入雅思单词</div><div class="d">多期 + 完整版（带音频）</div></div><div class="arr">→</div></a>
-        <div class="section-title">板块说明</div>
-        <div class="support" style="margin:0;text-align:left">
-          <p style="margin:0;color:var(--text-2)">每天 15 个高频词，配例句与记忆法，完整版带真人发音。通勤、排队等碎片时间积累词汇量。</p>
-        </div>
-      </div>
-    </section>
+    <!-- 雅思（已移入知识中心） -->
 
     <!-- 我的 -->
     <section class="screen" id="s-me">
       <div class="topbar" style="position:static"><div class="brand"><div class="logo">⚙️</div><div><div class="sub">设置与关于</div><h1>我的</h1></div></div></div>
       <div class="profile"><div class="avatar">喆</div><div><div class="pn">泽少</div><div class="pr">学习者 · 每天进步一点点</div></div></div>
+
+      <div class="pad" style="margin-top:16px">
+        <div class="mini-tip">
+          <h3>🗺️ 学习地图</h3>
+          <p>本站共 <b>5 大类</b>通识知识：<b>历史</b>看文明来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>雅思单词</b>背词攒分。点首页「📚 知识类」即可进入。</p>
+        </div>
+        <div class="mini-tip">
+          <h3>⏱️ 建议节奏</h3>
+          <p>每天 1 篇长文 + 15 个雅思词 + 1 条 AI 动态，约 15 分钟。<b>不求快，求连。</b>知识是复利，今天看的一篇，某天会突然和另一篇串起来。</p>
+        </div>
+      </div>
+
       <div class="menu">
         <div class="mi" onclick="goTab('s-home')"><div class="mi-i">🏠</div><div class="mi-t">返回首页</div><div class="mi-a">›</div></div>
         <div class="mi" onclick="document.getElementById('installBar').scrollIntoView()"><div class="mi-i">📲</div><div class="mi-t">安装到手机桌面</div><div class="mi-a">›</div></div>
@@ -2219,6 +2257,162 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       </article>
     </section>
 
+    <!-- 长文：psy-reactance -->
+    <section class="screen" id="art-psy-reactance">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">心理学 · 动机 · 阻抗效应</div>
+  <h1>阻抗效应：你越逼我，我越不做</h1>
+</header>
+<div class="body">
+<p class="lead">同学们，对号入座一下：催婚催生催相亲，你越催我越不结；deadline逼近你妈还来催进度，你干脆躺下刷手机；老板说「这个必须周五前给我」，你心里立刻冒出一句「凭啥」。<strong>这不是叛逆，这是你大脑的本能反弹——叫「阻抗效应」。</strong>今天咱们把这股「逆反劲儿」拆了。</p>
+
+<h2>一、什么是阻抗效应</h2>
+<p>1966年心理学家布雷姆提了个说法：人都有「<strong>选择自由感</strong>」，一旦感觉这玩意儿被威胁，本能反应不是顺从，而是反弹——你说往东我偏往西，不是为了跟你对着干，是为了证明「我有自主权」。所以催婚越凶，你越不想谈；老板越压，你越摆烂。这不是你坏，是大脑在守卫「我说了算」这条底线。</p>
+
+<h2>二、为什么催=帮倒忙</h2>
+<p>催的人以为自己是在「推动」，可对被催的人来说，催=「你不信我自己能搞定」。这种不信任感一上来，阻抗直接拉满。更扎心的是：你越催，对方越拖延，越拖延你越催——死循环。亲密关系里尤甚：催对方回消息、催对方改毛病，最后催成「我不想理你」。</p>
+
+<h2>三、破法：把「必须」换成「我选择」</h2>
+<p>对外：别用命令式，换成邀请式。把「你必须周五给我」改成「你看看周五能不能给我，不行我们再聊时间」。一句话的事，反抗感就消了大半。</p>
+<p>对内：自己拖延时，别骂自己「我必须做」，改成「<strong>我选择做这件事，因为做完我能……</strong>」。把「被逼」换成「主动选」，大脑立刻就不那么抗拒了。人啊，不怕累，怕被使唤。</p>
+<div class="callout"><span class="ct">💡 划重点</span>阻抗效应的根源是「选择权被夺」。守得住选择权，态度就软；选不了「做不做」，至少选「怎么做」。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>人都有「选择自由感」，被威胁就反弹——越催越不做，不是叛逆是本能。</li>
+<li>催=不信任，越催越拖，越拖越催，死循环。</li>
+<li>破法：把「必须」改成「我选择」，把命令改成邀请——给选择权，态度就软。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：psy-prophecy -->
+    <section class="screen" id="art-psy-prophecy">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">心理学 · 认知 · 自我实现预言</div>
+  <h1>自我实现预言：你觉得会搞砸，就真的搞砸了</h1>
+</header>
+<div class="body">
+<p class="lead">同学们，有没有这种玄学：面试前心里一直嘀咕「这次肯定黄」，结果真黄了；上台前一直想「我会卡壳」，结果真卡壳了。你以为是你预言准？不是。<strong>是你用信念把自己的行为带歪了，然后「应验」了你自己。</strong>这就是「自我实现预言」。</p>
+
+<h2>一、信念 → 行为 → 结果 → 信念，是个闭环</h2>
+<p>这玩意儿是1948年社会学家默顿提出的。逻辑链是这样：你信「我不行」→ 紧张、怯场、不准备 → 表现差 → 印证「看吧我就说我不行」→ 下次更没信心。反过来也成立：你信「我能行」→ 放松、准备充分、敢接话 → 表现好 → 印证「看吧我就说我能行」→ 信心螺旋上升。<strong>信念不是空话，它会通过行为把自己变成真的。</strong></p>
+
+<h2>二、为什么反向预言更危险</h2>
+<p>正向预言失败了，你顶多尴尬一下；负向预言成功了，它会一茬一茬长出来。怕社交的人，每次都躲，越躲越不会聊，越不会聊越躲——最后真成了「我社交无能」。其实你不是无能，你是<strong>没给自己练的机会</strong>。这套闭环最阴的地方在于：它让你以为「事实如此」，其实只是「你让事实如此」。</p>
+
+<h2>三、破法：先假装能行，慢慢就真行</h2>
+<p>社会心理学家艾米·卡蒂有个研究：面试前做两分钟「高能量姿势」（双手叉腰、挺胸），表现真的会变好。原理是身体反过来骗大脑——「我准备好了」。<strong>你不需要真信，你只需要先假装。</strong>把「我不行」改成「我试试看」，把「我肯定搞砸」改成「就算搞砸也是经验」。一个小词的替换，行为就被松绑了。</p>
+<div class="callout blue"><span class="ct">🧊 冷知识</span>「皮格马利翁效应」是自我实现预言的对外版：老师觉得某几个学生聪明，多关注多鼓励，结果这几个学生真的变聪明了——其实他们一开始是随机抽的。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>信念不是空话，它会通过行为把自己变成真的——正向反向都成立。</li>
+<li>反向预言更阴险：它让你以为「事实如此」，其实只是「你让事实如此」。</li>
+<li>破法：先假装能行，把「我不行」改成「我试试看」，行为松绑，结果就松了。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：psy-zeigarnik -->
+    <section class="screen" id="art-psy-zeigarnik">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">心理学 · 记忆 · 蔡加尼克效应</div>
+  <h1>蔡加尼克效应：没做完的事总在脑子里转</h1>
+</header>
+<div class="body">
+<p class="lead">同学们，问个扎心的：睡前脑子里是不是老想起十年前那件尴尬事？或者那个还没交的报告、没回的微信、没打完的电话？<strong>已经做完的事你早就忘了，没做完的事却像开了后台进程，一直耗你的电。</strong>这玩意儿叫「蔡加尼克效应」，今天拆给你看。</p>
+
+<h2>一、 waitress 实验和大脑的「未完成执念」</h2>
+<p>1927年苏联心理学家蔡加尼克发现一件事：餐厅服务员能记住没结账的桌子的复杂订单，但客人一买单，订单立刻忘光。她回去做实验证实：人记住未完成任务的概率，远高于记住已完成的。大脑有个机制——<strong>任务开了头不完成，就一直在「待机状态」，占着内存不释放</strong>。这就是你脑子里那些杂音的来源。</p>
+
+<h2>二、为什么 to-do list 能解压</h2>
+<p>很多人以为列 to-do 是为了「不忘记」，其实更深层的作用是<strong>把任务从脑子里挪到纸上</strong>。一旦写下来，大脑就觉得「这事有交代了」，后台进程就可以关了——你立刻轻松。这也是为什么写日记能安眠：那些晚上转来转去的事，写下来就停了。大脑不区分「真的做了」和「写下来准备做」，只要不在「待机」状态，它就放你过。</p>
+
+<h2>三、破法：把脑子里的杂事外化</h2>
+<p>第一，<strong>未完成的事写下来</strong>。哪怕只是潦草几个字，立刻停止后台耗电。第二，<strong>给「尴尬旧事」一个收尾</strong>。十年前那件事为什么还在转？因为你当时没给它一个「结束」。现在补——写出来、跟人聊出来、或者干脆对自己说一句「这事到此为止」，给它一个句号。第三，<strong>做事别开太多头</strong>。同时开5个任务=同时开5个后台进程，脑子直接卡。一次只做一件事，做完再开下一件。</p>
+<div class="callout"><span class="ct">💡 划重点</span>大脑讨厌「未完成」。要么做完它，要么写下来——总之别让它悬着，悬着就耗你电。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>未完成的事像后台进程，一直占内存耗电，这就是睡前杂音的来源。</li>
+<li>写下来=关进程，大脑立刻轻松；to-do list 真正的作用是「外化」，不是「不忘记」。</li>
+<li>少开头、多收尾——别让脑子同时挂太多未完成的事。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：psy-survivor -->
+    <section class="screen" id="art-psy-survivor">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">心理学 · 认知 · 幸存者偏差</div>
+  <h1>幸存者偏差：你看到的成功，都是没失败的</h1>
+</header>
+<div class="body">
+<p class="lead">同学们，喝过这种鸡汤没：「比尔·盖茨辍学成首富」「乔布斯退学造苹果」「张三炒股三年财务自由」——潜台词是「读书无用」「退学也能成」「股市好赚」。<strong>等等，你看到的只是「活下来的」。死掉的、亏光的、退学潦倒的，没机会说话。</strong>这就是「幸存者偏差」，今天给你扯明白。</p>
+
+<h2>一、二战的那个飞机弹孔故事</h2>
+<p>1943年盟军想给轰炸机加装甲。统计返航的飞机，发现机翼弹孔多、机尾弹孔少。直觉是：机翼挨打多，加机翼。可数学家沃尔德拍桌子说：<strong>反过来！加机尾</strong>。理由是：机尾中弹的飞机根本没飞回来——你能统计的，都是「幸存」的。机翼弹孔多是因为机翼挨打还能飞回来，机尾挨打直接坠毁。后来按这个思路加装甲，损失真的降了。这就是「幸存者偏差」的成名战。</p>
+
+<h2>二、为什么「成功学」是门坏生意</h2>
+<p>市面上所有「我是怎么成功的」类书，都有这个毛病。能写书的人已经成功了，他们的经验你照搬未必有用——<strong>因为同样做的人里，99个失败了，没机会出书</strong>。你看了1本成功故事，以为是「规律」，其实只是「巧合」。炒股更典型：群里晒收益的都是赚的，亏的早退群了——你以为「大家都在赚」，其实是「能发声的都在赚」。</p>
+
+<h2>三、破法：看成功时多问一句「失败的呢」</h2>
+<p>下次看到一个「成功案例」打动你之前，问三个问题：<strong>①做同样事的人有多少？②失败的人长什么样？③他们失败的原因，和这个成功者的成功原因，是不是同一套？</strong>多数时候你会发现：成功者的「秘诀」和失败者的「教训」是同一套——只是结果不同。能这么想，你就不容易被「幸存者」忽悠了。</p>
+<div class="callout blue"><span class="ct">🧊 冷知识</span>「死人不会说话」是幸存者偏差的另一面。统计心脏病死亡率的论文，永远统计不到「在医院外就死了来不及送医的」——所以医院死亡率看起来低，其实是被「没机会统计的」拉低的。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>你看到的所有「成功案例」都是活下来的——死掉的没机会说话。</li>
+<li>成功学的陷阱：1个成功者的「秘诀」背后，是99个用同样方法失败的人。</li>
+<li>破法：看成功时多问一句「失败的人长什么样」，三个问题让你不被带偏。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
+    <!-- 长文：psy-spotlight -->
+    <section class="screen" id="art-psy-spotlight">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">心理学 · 社会 · 聚光灯效应</div>
+  <h1>聚光灯效应：你以为全世界都在看你，其实没有</h1>
+</header>
+<div class="body">
+<p class="lead">同学们，对号入座：衣服穿反了，觉得整栋楼都在笑你；开会说错一句话，三天都在想「全公司都记着吧」；剪了个失败的头发，恨不得戴帽子过完这个月。<strong>真相是：除了你自己，没人记得超过24小时。</strong>这玩意儿叫「聚光灯效应」，今天帮你把心里的那盏灯关掉。</p>
+
+<h2>一、你以为的观众，根本不存在</h2>
+<p>2000年心理学家季洛维奇做了个实验：让学生穿一件很丑的T恤在校园走，然后问「你觉得多少人注意到你了？」学生猜「至少一半人」。真相呢？不到四分之一。这个差距叫「聚光灯效应」——<strong>你把自己当成舞台中央，以为所有人都在看你</strong>。其实每个人都在当自己舞台的主角，没空当你的观众。</p>
+
+<h2>二、为什么会这样</h2>
+<p>两个原因。第一，<strong>锚定效应</strong>：你对自己的关注度是100%，就以100%为锚点估别人对你的关注度，结果严重高估。第二，<strong>自我中心主义</strong>是大脑的默认设置——你看世界是从「我」出发的，自然以为别人也以「我」为中心。但别人的世界中心是他们自己，不是你。所以你「社死」的瞬间，别人甚至没注意到发生过。</p>
+
+<h2>三、破法：放轻松，你没那么重要——这是好事</h2>
+<p>下次紧张到不行，告诉自己三句话：<strong>第一，没人在看；第二，就算看了，5分钟后他们自己也有事要紧张；第三，就算记着，他们的记忆也是断章取义，根本不是你以为的那个版本。</strong>把「全世界都在看我」换成「我连自己的观众都算不上」，立刻松。这不是消极，这是自由——<strong>你不用活给别人看，因为根本没人看。</strong>该穿啥穿啥，该说啥说啥，错就错了，谁记得呢。</p>
+<div class="callout"><span class="ct">💡 划重点</span>聚光灯效应让你高估别人对你的关注。真相是：每个人都在当自己舞台的主角，没空当你的观众。这是好事——你自由了。</div>
+
+<div class="summary"><span class="st">📌 一句话收尾</span><ul>
+<li>你以为全世界都在看你，其实除了你自己，没人记得超过24小时。</li>
+<li>原因：你以「我」为锚点估别人，自然高估——但别人中心是他们自己。</li>
+<li>破法：告诉自己「没人在看，就算看了5分钟就忘」——你自由了。</li>
+</ul></div>
+
+</div>
+<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      </article>
+    </section>
+
     <!-- 长文：poem-chuci -->
     <section class="screen" id="art-poem-chuci">
       <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
@@ -2427,7 +2621,6 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       <button class="tab on" data-t="s-home" onclick="goTab('s-home')"><span class="ti">🏠</span>首页</button>
       <button class="tab" data-t="s-news" onclick="goTab('s-news')"><span class="ti">📰</span>动态</button>
       <button class="tab" data-t="s-know" onclick="goTab('s-know')"><span class="ti">🧠</span>知识</button>
-      <button class="tab" data-t="s-ielts" onclick="goTab('s-ielts')"><span class="ti">📖</span>雅思</button>
       <button class="tab" data-t="s-me" onclick="goTab('s-me')"><span class="ti">⚙️</span>我的</button>
     </nav>
 
@@ -2480,6 +2673,12 @@ const PSY=[
  {e:"😱",t:"恐惧：你怕的到底是老虎，还是你脑子里的剧本",m:"心理学 · 情绪 · 恐惧",b:"恐惧分两种：真老虎来了的「生理恐惧」，和「万一失败怎么办」的「想象恐惧」。后者才是现代人内耗的主力。"},
  {e:"🔁",t:"习惯：你立flag必倒，是因为搞错了「起点」",m:"心理学 · 行为 · 习惯回路",b:"习惯不是靠意志力撑的，是靠「线索—行为—奖励」的回路养的。想改变，从把起点小到不可能失败开始。"},
  {e:"💞",t:"亲密关系：为什么越爱的人，越能把你气哭",m:"心理学 · 关系 · 亲密关系",b:"亲密关系里你最脆弱，所以对方一句话就能精准爆雷。吵架大多不是为事，是为「你有没有在乎我」。"},
+
+ {e:"🎭",t:"阻抗效应：你越逼我，我越不做",m:"心理学 · 动机 · 阻抗效应",b:"强制感=被剥夺选择权，大脑本能反弹：催婚催生催进度，越催越拖。破法是把「必须做」改成「我选择做」，把选择权拿回手里。"},
+ {e:"🪞",t:"自我实现预言：你觉得会搞砸，就真的搞砸了",m:"心理学 · 认知 · 自我实现预言",b:"信念→行为→结果→印证信念，是个闭环。觉得不行就紧张，紧张就出错，出错就更信「我不行」。反向也成立——先假装能行，慢慢就真行。"},
+ {e:"🎯",t:"蔡加尼克效应：没做完的事总在脑子里转",m:"心理学 · 记忆 · 蔡加尼克效应",b:"大脑对「未完成」有执念，像开了后台进程耗电。写下来=关掉进程；to-do list 能解压、写日记能安眠，都是这个道理。"},
+ {e:"📊",t:"幸存者偏差：你看到的成功，都是没失败的",m:"心理学 · 认知 · 幸存者偏差",b:"死人不会说话。看比尔盖茨辍学成首富，没看辍学失败的一万个。看成功学时多问一句「失败的人长什么样」，才不会被带偏。"},
+ {e:"💡",t:"聚光灯效应：你以为全世界都在看你，其实没有",m:"心理学 · 社会 · 聚光灯效应",b:"衣服穿反了觉得全楼都在笑你、说错一句话觉得全公司都记着。其实每个人都是自己世界的主角，没人有空当你的观众。放轻松，你没那么重要——这是好事。"},
       /*MORE3:psy*/
 ];
 
@@ -2502,12 +2701,26 @@ function toast(m){const t=document.getElementById('toast');t.textContent=m;t.cla
 
 const EQ=[ {e:"💡",t:"高情商的本质：让别人舒服，也不委屈自己",m:"情商沟通 · 认知 · 高情商",b:"高情商不是讨好，是清晰表达+共情，先接情绪再处理事，既利他又不损己。"}, {e:"🗣️",t:"非暴力沟通：把「你总是」换成「我感到」",m:"情商沟通 · 沟通 · 非暴力沟通",b:"非暴力沟通四步：观察-感受-需要-请求，把评判换成事实，把指责换成需求。"}, {e:"🧑‍💼",t:"职场向上管理：让老板放心把事交给你",m:"情商沟通 · 职场 · 向上管理",b:"向上管理是管理信息差与预期：主动同步、带方案来、管理承诺、对齐目标。"}, {e:"🚧",t:"职场边界感：情绪劳动与体面拒绝",m:"情商沟通 · 职场 · 边界感",b:"边界不是冷漠，是保护关系；用『肯定+原因+替代』体面拒绝，减少情绪劳动透支。"}, {e:"🤝",t:"闲聊与破冰：把尴尬变成关系的起点",m:"情商沟通 · 沟通 · 破冰",b:"闲聊是低风险试探，从环境切入、多听少说、适度自我暴露，弱关系往往最有用。"},  {e:"🤝",t:"职场关系：别把同事处成敌人",m:"情商沟通 · 职场 · 人际关系",b:"同事不是朋友也不是敌人，是「长期合作的陌生人」。守住边界、少情绪化、兑现小事，关系就不会烂。"},  {e:"📣",t:"向上反馈：怎么提意见不挨骂",m:"情商沟通 · 职场 · 向上反馈",b:"给老板提意见，先肯定再建议、带方案来、选对时机。你不是在挑刺，是在帮他省麻烦。"},  {e:"🔥",t:"冲突处理：把火药味变成推进力",m:"情商沟通 · 职场 · 冲突管理",b:"冲突不是坏事，是信息差摊牌。先降温、再对焦利益、最后找方案，火药味能化成推进力。"} /*MORE3:eq*/];
 
-const SLUG={hist:["history-preqin","history-qinhan","history-tangsong","hist-weijin","hist-silkroad","hist-rome","hist-renaissance","hist-culture","hist-discovery","hist-revolution"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"]};
+const IELTS=[
+ {t:"完整版 · 带音频",d:"所有单词 + 真人发音，一站式背词",href:"ielts/full.html",badge:"推荐"},
+ {t:"Day 1",d:"第1期 · 15个高频词 + 例句",href:"ielts/day01.html"},
+ {t:"Day 2",d:"第2期 · 15个高频词 + 例句",href:"ielts/day02.html"},
+ {t:"Day 3",d:"第3期 · 15个高频词 + 例句",href:"ielts/day03.html"},
+ {t:"Day 4",d:"第4期 · 15个高频词 + 例句",href:"ielts/day04.html"},
+ {t:"Day 5",d:"第5期 · 15个高频词 + 例句",href:"ielts/day05.html"},
+ {t:"Day 6",d:"第6期 · 15个高频词 + 例句",href:"ielts/day06.html"},
+ {t:"Day 7",d:"第7期 · 15个高频词 + 例句",href:"ielts/day07.html"},
+ {t:"Day 8",d:"第8期 · 15个高频词 + 例句",href:"ielts/day08.html"}
+];
+
+const SLUG={hist:["history-preqin","history-qinhan","history-tangsong","hist-weijin","hist-silkroad","hist-rome","hist-renaissance","hist-culture","hist-discovery","hist-revolution"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"]};
 function renderK(){
   const maps={hist:HISTORY,geo:GEO,psy:PSY,poem:POEM,eq:EQ};
   for(const k in maps){
     document.getElementById('klist-'+k).innerHTML=maps[k].map((a,i)=>`<a class="krow" onclick="goArt('art-${SLUG[k][i]}')"><div><div class="kt">${a.t}</div><div class="km">${a.m}</div></div><div class="arr">→</div></a>`).join('');
   }
+  // 雅思：链接型，直接跳转外部页面（独立 HTML）
+  document.getElementById('klist-ielts').innerHTML=IELTS.map(a=>`<a class="krow" href="${a.href}"><div><div class="kt">${a.t}${a.badge?'<span class="ki-badge">'+a.badge+'</span>':''}</div><div class="km">${a.d}</div></div><div class="arr">↗</div></a>`).join('');
 }
 function toggleK(w){document.getElementById('klist-'+w).classList.toggle('hidden');}
 function toggleKPsyEq(){var a=document.getElementById('klist-psy'),b=document.getElementById('klist-eq');a.classList.toggle('hidden');b.classList.toggle('hidden');}
@@ -2524,6 +2737,35 @@ let deferredPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('btnInstall').style.display='inline-block';});
 function doInstall(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('btnInstall').style.display='none';});}else{toast('请点浏览器菜单「添加到主屏幕」');}}
 renderK();
+
+/* 今日金句：随机一条，点 ↻ 换一条 */
+const QUOTES=[
+ {t:"拖延不是因为懒，是因为<em>情绪</em>劫持了你的大脑。",f:"心理学 · 拖延症"},
+ {t:"完成比完美更重要——<em>第一稿</em>不必是最后一稿。",f:"心理学 · 完美主义"},
+ {t:"你怕的从来不是事，是脑子里的<em>剧本</em>。",f:"心理学 · 恐惧"},
+ {t:"习惯是<em>回路</em>不是意志，小到不可能失败才养得成。",f:"心理学 · 习惯"},
+ {t:"亲密关系里的气，八成是<em>在乎</em>的变形。",f:"心理学 · 亲密关系"},
+ {t:"你越催我越不做——这不是叛逆，是大脑在守<em>选择权</em>。",f:"心理学 · 阻抗效应"},
+ {t:"信念不是空话，它会通过行为把自己<em>变成真的</em>。",f:"心理学 · 自我实现预言"},
+ {t:"没做完的事像后台进程——<em>写下来</em>就关了。",f:"心理学 · 蔡加尼克效应"},
+ {t:"你看到的所有成功，都是<em>没失败的</em>。",f:"心理学 · 幸存者偏差"},
+ {t:"你以为全世界都在看你，其实<em>没人在看</em>——这是好事。",f:"心理学 · 聚光灯效应"},
+ {t:"锚点不是真理，是<em>第一个数字</em>。",f:"心理学 · 锚定效应"},
+ {t:"已经亏的，别再赔上<em>未来</em>。",f:"心理学 · 沉没成本"},
+ {t:"越不懂越自信——<em>空杯</em>才不会闹笑话。",f:"心理学 · 达克效应"},
+ {t:"高情商不是讨好，是<em>既让别人舒服又不委屈自己</em>。",f:"情商沟通"},
+ {t:"非暴力沟通：把「你总是」换成<em>「我感到」</em>。",f:"情商沟通 · 非暴力沟通"},
+ {t:"读书是为了<em>想清楚</em>，而不是为了记住。",f:"知识中心"},
+ {t:"文明的活力，来自<em>开放</em>而不是封闭。",f:"历史 · 丝绸之路"},
+ {t:"人是地理的产物，但<em>地理不决定人</em>。",f:"地理 · 人文地理"}
+];
+function renderQuote(){
+  const el=document.getElementById('dailyQuote');
+  if(!el)return;
+  const q=QUOTES[Math.floor(Math.random()*QUOTES.length)];
+  el.innerHTML='<div class="q-icon">💭</div><div class="q-text">'+q.t+'</div><div class="q-from">— '+q.f+'</div><button class="q-refresh" onclick="renderQuote()" title="换一条">↻</button>';
+}
+renderQuote();
 
 if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}
 </script>
