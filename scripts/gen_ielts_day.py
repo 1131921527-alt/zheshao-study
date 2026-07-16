@@ -101,8 +101,20 @@ def split_pos(pos):
 def jd(s):
     return json.dumps(s, ensure_ascii=False)
 
+def extract_sentmap():
+    """从 full.html 提取完整的 _sentMap（例句→音频文件映射），保证 day 页面和 full.html 同步"""
+    h = io.open(FULL_HTML, encoding="utf-8").read()
+    m = re.search(r'var _sentMap\s*=\s*(\{[^}]+\});', h)
+    if m:
+        return m.group(1)
+    return "{}"
+
 def gen_day(nn, words):
     tpl = io.open(TEMPLATE, encoding="utf-8").read()
+    # 从 full.html 提取最新 _sentMap 并注入模板（保证 day 页面有完整音频映射）
+    sentmap = extract_sentmap()
+    tpl = re.sub(r'var _sentMap\s*=\s*\{[^}]*\};',
+                 'var _sentMap=' + sentmap + ';', tpl, count=1)
     blocks = []
     for i, w in enumerate(words, 1):
         p, zh = split_pos(w["pos"])
