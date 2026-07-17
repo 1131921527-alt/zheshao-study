@@ -662,7 +662,6 @@ function playWord(word, type) {
     var url = 'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(word) + '&type=' + type;
     var a = new Audio(url); a.play().catch(function() { tts(word, type===1?'en-GB':'en-US'); });
   });
-});
 }
 
 // Sentence pronunciation via Baidu TTS
@@ -673,8 +672,7 @@ function playSentence(text){
   var url='https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(text);
   var a=new Audio(url); a.play().catch(function(){ tts(text,'en-US'); });
 }
-function playSent(text){ playSentence(text); });
-}
+function playSent(text){ playSentence(text); }
 </script>
 <style>
 #liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}

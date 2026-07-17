@@ -306,9 +306,6 @@ function playWord(word, type) {
     var url = 'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(word) + '&type=' + type;
     var a = new Audio(url); a.play().catch(function() { tts(word, type===1?'en-GB':'en-US'); });
   });
-}&type=${type}`;
-const a=new Audio(url);
-a.play();
 }
 
 function playSentence(text){
@@ -317,9 +314,6 @@ function playSentence(text){
   if(file){ var a=new Audio(file); a.play().catch(function(){}); return; }
   var url='https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(text);
   var a=new Audio(url); a.play().catch(function(){ tts(text,'en-US'); });
-}`;
-const a=new Audio(url);
-a.play();
 }
 
 function renderCards(){

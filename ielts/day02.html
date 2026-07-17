@@ -403,10 +403,9 @@ function playWord(word, type) {
     var url = 'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(word) + '&type=' + type;
     var a = new Audio(url); a.play().catch(function() { tts(word, type===1?'en-GB':'en-US'); });
   });
-}&type=${type}`;
-    }
+}
 
-    function playSentence(text){
+function playSentence(text){
   var key = text.replace(/<[^>]+>/g,'').trim().toLowerCase().substring(0,50);
   var file = _sentMap[key];
   if(file){ var a=new Audio(file); a.play().catch(function(){}); return; }
