@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI动态播报 · 2026-07-17</title>
+<style>
+  :root{
+    --bg:#0b0f1a;
+    --card:#141b2d;
+    --card2:#1b2236;
+    --accent:#3b82f6;
+    --accent2:#22d3ee;
+    --text:#e8edf7;
+    --muted:#93a0b8;
+    --line:#26304a;
+    --tag:#1e293b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:linear-gradient(180deg,#0b0f1a 0%,#0e1424 100%);
+    color:var(--text);
+    line-height:1.6;
+    padding:16px 14px 40px;
+    max-width:680px;
+    margin:0 auto;
+  }
+  .hero{
+    text-align:center;
+    padding:26px 16px 20px;
+    background:radial-gradient(120% 120% at 50% 0%,rgba(59,130,246,.22),transparent 60%);
+    border:1px solid var(--line);
+    border-radius:18px;
+    margin-bottom:18px;
+  }
+  .hero .kicker{
+    font-size:13px;letter-spacing:3px;color:var(--accent2);
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{font-size:26px;font-weight:800;margin:8px 0 4px;letter-spacing:.5px;}
+  .hero .date{font-size:14px;color:var(--muted);}
+  .hero .sub{font-size:12px;color:var(--muted);margin-top:6px;}
+  .count{
+    display:inline-block;background:var(--tag);color:var(--accent2);
+    font-size:12px;padding:3px 10px;border-radius:20px;margin-top:10px;
+    border:1px solid var(--line);
+  }
+  .news{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:16px 16px 14px;
+    margin-bottom:14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .news::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:linear-gradient(180deg,var(--accent),var(--accent2));
+  }
+  .news .head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+  .badge{
+    font-size:11px;font-weight:700;padding:3px 9px;border-radius:8px;
+    color:#fff;white-space:nowrap;
+  }
+  .b-openai{background:#10a37f;}
+  .b-anthropic{background:#d97757;}
+  .b-google{background:#4285f4;}
+  .b-deepseek{background:#4d6bfe;}
+  .b-china{background:#e23b3b;}
+  .b-xai{background:#7c3aed;}
+  .b-reg{background:#f59e0b;}
+  .b-tencent{background:#12b7f5;}
+  .news h2{font-size:17px;font-weight:700;line-height:1.4;margin:2px 0 8px;}
+  .news p{font-size:14.5px;color:#cfd8ea;margin-bottom:8px;}
+  .news .meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .news .meta a{color:var(--accent2);text-decoration:none;font-weight:600;}
+  .news .meta a:active{opacity:.7;}
+  .num{
+    position:absolute;right:14px;top:10px;font-size:34px;font-weight:900;
+    color:rgba(59,130,246,.13);line-height:1;
+  }
+  footer{
+    text-align:center;color:var(--muted);font-size:12px;margin-top:24px;
+    border-top:1px solid var(--line);padding-top:16px;
+  }
+  footer .dot{color:var(--accent2);}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="kicker">AI Daily Brief</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026 年 7 月 17 日 · 周五</div>
+    <div class="sub">主流厂商最新发布 · 重大更新 · 行业要闻</div>
+    <span class="count">今日精选 8 条</span>
+  </div>
+
+<div class="news">
+    <span class="num">1</span>
+    <div class="head"><span class="badge b-china">月之暗面</span></div>
+    <h2>月之暗面发布 Kimi K3：2.8 万亿参数，全球最大开源模型</h2>
+    <p>7 月 16 日，月之暗面正式发布新一代开源基础模型 Kimi K3，总参数达 2.8 万亿（MoE 架构），同步上线 API 与开发者文档。模型原生支持视觉理解，具备 100 万 Token 上下文窗口，面向长周期软件工程、复杂推理与知识工作优化，被新华社报道为目前全球参数最大的开源模型。</p>
+    <div class="meta"><span>来源：创业邦 / 新华社</span><a href="https://www.toutiao.com/article/7663275186044633640">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">2</span>
+    <div class="head"><span class="badge b-openai">Thinking Machines</span></div>
+    <h2>OpenAI 前 CTO 创立的 Thinking Machines Lab 发布开放权重模型 Inkling</h2>
+    <p>7 月 16 日，Mira Murati 创办的 Thinking Machines Lab 发布首个多模态 MoE 开放权重模型 Inkling，总参数 9750 亿、激活 410 亿，借鉴 DeepSeek-V3 架构并用 Kimi K2.5 数据优化，在美国开放权重模型中排名第一。</p>
+    <div class="meta"><span>来源：智东西 / 腾讯新闻</span><a href="https://new.qq.com/rain/a/20260717A09M1I00">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">3</span>
+    <div class="head"><span class="badge b-openai">OpenAI</span></div>
+    <h2>OpenAI 官宣入局消费硬件：无屏移动 AI 音箱打造家庭智能伴侣</h2>
+    <p>7 月 17 日报道，OpenAI 首款自研终端为一款无屏可移动智能音箱，集成 ChatGPT 全套能力、搭载 GPT-Live 语音模型，支持全屋移动与主动预判，计划今年展示、2027 年上市。受此冲击，Sonos 盘后跌超 10%。</p>
+    <div class="meta"><span>来源：XR 控 / 腾讯新闻</span><a href="https://new.qq.com/rain/a/20260717A09M1I00">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">4</span>
+    <div class="head"><span class="badge b-china">智谱</span></div>
+    <h2>智谱 ARR 破 10 亿美元，成国内首家跨过门槛的基础模型公司</h2>
+    <p>7 月 17 日 WAIC 开幕当天，行业测算智谱 ARR 已达 10 亿美元（RRR 口径），从 1 亿到 10 亿仅用约 5 个月，增长核心引擎为 Coding 赛道，GLM-5.2 在 Code Arena 盲测位列全球可用模型第一。</p>
+    <div class="meta"><span>来源：钛媒体 APP</span><a href="https://new.qq.com/rain/a/20260717A09M1I00">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">5</span>
+    <div class="head"><span class="badge b-anthropic">Anthropic</span></div>
+    <h2>Anthropic 拟举行 IPO 投资者会议，估值升至 9650 亿美元</h2>
+    <p>据 7 月 17 日极客头条，Anthropic 正筹备 IPO 投资者会议，公司估值升至约 9650 亿美元；与此同时微软正研发类 Mythos 的 AI 漏洞检测工具，巨头在模型能力与商业化上的竞争持续升温。</p>
+    <div class="meta"><span>来源：CSDN 极客头条</span><a href="https://dy.163.com/article/L21GAKMR0511FQO9">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">6</span>
+    <div class="head"><span class="badge b-reg">国际治理</span></div>
+    <h2>世界人工智能合作组织（WAICO）在上海成立，总部设中国</h2>
+    <p>7 月 16 日，成立世界人工智能合作组织协定签署仪式在上海举行。该组织是独立的政府间国际组织，总部设于上海，旨在促进人工智能国际合作与全球治理，确保 AI 朝着有益、安全、公平方向健康有序发展。</p>
+    <div class="meta"><span>来源：上观新闻 / 新华社</span><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7156a595c3f92552">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">7</span>
+    <div class="head"><span class="badge b-deepseek">DeepSeek</span></div>
+    <h2>DeepSeek 估值超 3500 亿元，完成本轮融资并启动第二轮</h2>
+    <p>开润股份 16 日晚间公告意外披露 DeepSeek 最新估值约 3510 亿元。接近公司人士确认，本轮融资完成后已启动第二轮融资；是否年底冲刺科创板尚未确定，国产大模型头部公司的资本热度持续走高。</p>
+    <div class="meta"><span>来源：上证报 / 创业邦</span><a href="https://www.toutiao.com/article/7663275186044633640">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">8</span>
+    <div class="head"><span class="badge b-google">Google</span></div>
+    <h2>谷歌据悉推迟发布 Gemini 3.5 Pro，持续提升模型编程能力</h2>
+    <p>据 7 月 17 日极客头条，谷歌推迟 Gemini 3.5 Pro 的发布节奏，重心放在持续提升模型编程（Agentic Coding）能力上。此前 Gemini 3.5 Flash 已全面开放，Omni 视频生成模型也在 Gemini App 与 YouTube 上线。</p>
+    <div class="meta"><span>来源：CSDN 极客头条</span><a href="https://dy.163.com/article/L21GAKMR0511FQO9">查看原文 ↗</a></div>
+  </div>
+
+  <footer>
+    AI 动态播报 · 每日自动生成 <span class="dot">●</span> 数据来源公开网络，仅供参考<br>
+    生成时间：2026-07-17 · 由 AI 助手自动整理
+  </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "date": "2026-07-17",
+  "items": [
+    {
+      "badge_class": "b-china",
+      "badge_text": "月之暗面",
+      "title": "月之暗面发布 Kimi K3：2.8 万亿参数，全球最大开源模型",
+      "summary": "7 月 16 日，月之暗面正式发布新一代开源基础模型 Kimi K3，总参数达 2.8 万亿（MoE 架构），同步上线 API 与开发者文档。模型原生支持视觉理解，具备 100 万 Token 上下文窗口，面向长周期软件工程、复杂推理与知识工作优化，被新华社报道为目前全球参数最大的开源模型。",
+      "source": "创业邦 / 新华社",
+      "url": "https://www.toutiao.com/article/7663275186044633640"
+    },
+    {
+      "badge_class": "b-openai",
+      "badge_text": "Thinking Machines",
+      "title": "OpenAI 前 CTO 创立的 Thinking Machines Lab 发布开放权重模型 Inkling",
+      "summary": "7 月 16 日，Mira Murati 创办的 Thinking Machines Lab 发布首个多模态 MoE 开放权重模型 Inkling，总参数 9750 亿、激活 410 亿，借鉴 DeepSeek-V3 架构并用 Kimi K2.5 数据优化，在美国开放权重模型中排名第一。",
+      "source": "智东西 / 腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260717A09M1I00"
+    },
+    {
+      "badge_class": "b-openai",
+      "badge_text": "OpenAI",
+      "title": "OpenAI 官宣入局消费硬件：无屏移动 AI 音箱打造家庭智能伴侣",
+      "summary": "7 月 17 日报道，OpenAI 首款自研终端为一款无屏可移动智能音箱，集成 ChatGPT 全套能力、搭载 GPT-Live 语音模型，支持全屋移动与主动预判，计划今年展示、2027 年上市。受此冲击，Sonos 盘后跌超 10%。",
+      "source": "XR 控 / 腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260717A09M1I00"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "智谱",
+      "title": "智谱 ARR 破 10 亿美元，成国内首家跨过门槛的基础模型公司",
+      "summary": "7 月 17 日 WAIC 开幕当天，行业测算智谱 ARR 已达 10 亿美元（RRR 口径），从 1 亿到 10 亿仅用约 5 个月，增长核心引擎为 Coding 赛道，GLM-5.2 在 Code Arena 盲测位列全球可用模型第一。",
+      "source": "钛媒体 APP",
+      "url": "https://new.qq.com/rain/a/20260717A09M1I00"
+    },
+    {
+      "badge_class": "b-anthropic",
+      "badge_text": "Anthropic",
+      "title": "Anthropic 拟举行 IPO 投资者会议，估值升至 9650 亿美元",
+      "summary": "据 7 月 17 日极客头条，Anthropic 正筹备 IPO 投资者会议，公司估值升至约 9650 亿美元；与此同时微软正研发类 Mythos 的 AI 漏洞检测工具，巨头在模型能力与商业化上的竞争持续升温。",
+      "source": "CSDN 极客头条",
+      "url": "https://dy.163.com/article/L21GAKMR0511FQO9"
+    },
+    {
+      "badge_class": "b-reg",
+      "badge_text": "国际治理",
+      "title": "世界人工智能合作组织（WAICO）在上海成立，总部设中国",
+      "summary": "7 月 16 日，成立世界人工智能合作组织协定签署仪式在上海举行。该组织是独立的政府间国际组织，总部设于上海，旨在促进人工智能国际合作与全球治理，确保 AI 朝着有益、安全、公平方向健康有序发展。",
+      "source": "上观新闻 / 新华社",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7156a595c3f92552"
+    },
+    {
+      "badge_class": "b-deepseek",
+      "badge_text": "DeepSeek",
+      "title": "DeepSeek 估值超 3500 亿元，完成本轮融资并启动第二轮",
+      "summary": "开润股份 16 日晚间公告意外披露 DeepSeek 最新估值约 3510 亿元。接近公司人士确认，本轮融资完成后已启动第二轮融资；是否年底冲刺科创板尚未确定，国产大模型头部公司的资本热度持续走高。",
+      "source": "上证报 / 创业邦",
+      "url": "https://www.toutiao.com/article/7663275186044633640"
+    },
+    {
+      "badge_class": "b-google",
+      "badge_text": "Google",
+      "title": "谷歌据悉推迟发布 Gemini 3.5 Pro，持续提升模型编程能力",
+      "summary": "据 7 月 17 日极客头条，谷歌推迟 Gemini 3.5 Pro 的发布节奏，重心放在持续提升模型编程（Agentic Coding）能力上。此前 Gemini 3.5 Flash 已全面开放，Omni 视频生成模型也在 Gemini App 与 YouTube 上线。",
+      "source": "CSDN 极客头条",
+      "url": "https://dy.163.com/article/L21GAKMR0511FQO9"
+    }
+  ]
+}
