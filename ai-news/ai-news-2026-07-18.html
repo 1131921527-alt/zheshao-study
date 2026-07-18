@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI动态播报 · 2026-07-18</title>
+<style>
+  :root{
+    --bg:#0b0f1a;
+    --card:#141b2d;
+    --card2:#1b2236;
+    --accent:#3b82f6;
+    --accent2:#22d3ee;
+    --text:#e8edf7;
+    --muted:#93a0b8;
+    --line:#26304a;
+    --tag:#1e293b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:linear-gradient(180deg,#0b0f1a 0%,#0e1424 100%);
+    color:var(--text);
+    line-height:1.6;
+    padding:16px 14px 40px;
+    max-width:680px;
+    margin:0 auto;
+  }
+  .hero{
+    text-align:center;
+    padding:26px 16px 20px;
+    background:radial-gradient(120% 120% at 50% 0%,rgba(59,130,246,.22),transparent 60%);
+    border:1px solid var(--line);
+    border-radius:18px;
+    margin-bottom:18px;
+  }
+  .hero .kicker{
+    font-size:13px;letter-spacing:3px;color:var(--accent2);
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{font-size:26px;font-weight:800;margin:8px 0 4px;letter-spacing:.5px;}
+  .hero .date{font-size:14px;color:var(--muted);}
+  .hero .sub{font-size:12px;color:var(--muted);margin-top:6px;}
+  .count{
+    display:inline-block;background:var(--tag);color:var(--accent2);
+    font-size:12px;padding:3px 10px;border-radius:20px;margin-top:10px;
+    border:1px solid var(--line);
+  }
+  .news{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:16px 16px 14px;
+    margin-bottom:14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .news::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:linear-gradient(180deg,var(--accent),var(--accent2));
+  }
+  .news .head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+  .badge{
+    font-size:11px;font-weight:700;padding:3px 9px;border-radius:8px;
+    color:#fff;white-space:nowrap;
+  }
+  .b-openai{background:#10a37f;}
+  .b-anthropic{background:#d97757;}
+  .b-google{background:#4285f4;}
+  .b-deepseek{background:#4d6bfe;}
+  .b-china{background:#e23b3b;}
+  .b-xai{background:#7c3aed;}
+  .b-reg{background:#f59e0b;}
+  .b-tencent{background:#12b7f5;}
+  .news h2{font-size:17px;font-weight:700;line-height:1.4;margin:2px 0 8px;}
+  .news p{font-size:14.5px;color:#cfd8ea;margin-bottom:8px;}
+  .news .meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .news .meta a{color:var(--accent2);text-decoration:none;font-weight:600;}
+  .news .meta a:active{opacity:.7;}
+  .num{
+    position:absolute;right:14px;top:10px;font-size:34px;font-weight:900;
+    color:rgba(59,130,246,.13);line-height:1;
+  }
+  footer{
+    text-align:center;color:var(--muted);font-size:12px;margin-top:24px;
+    border-top:1px solid var(--line);padding-top:16px;
+  }
+  footer .dot{color:var(--accent2);}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="kicker">AI Daily Brief</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026 年 7 月 18 日 · 周六</div>
+    <div class="sub">主流厂商最新发布 · 重大更新 · 行业要闻</div>
+    <span class="count">今日精选 8 条</span>
+  </div>
+
+<div class="news">
+    <span class="num">1</span>
+    <div class="head"><span class="badge b-china">月之暗面</span></div>
+    <h2>月之暗面发布 Kimi K3：2.8 万亿参数，刷新全球最大开源模型纪录</h2>
+    <p>7 月 17 日凌晨，月之暗面正式发布新一代开源基础模型 Kimi K3，总参数达 2.8 万亿（MoE 架构，896 个专家动态激活 16 个），原生支持文本/图像/视频多模态与 100 万 Token 上下文窗口。模型在长周期软件工程基准表现突出，综合智能水平仅次于 Claude Fable 5 与 GPT-5.6 Sol；更完成 48 小时零人工干预自主设计验证一颗推理芯片的概念验证。完整权重将于 7 月 27 日向全球开发者开放，马斯克二度公开点赞。</p>
+    <div class="meta"><span>来源：新浪财经 / 快讯</span><a href="https://k.sina.com.cn/article_6033314970_1679d149a02002c9s2.html">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">2</span>
+    <div class="head"><span class="badge b-openai">OpenAI</span></div>
+    <h2>OpenAI 推出 ChatGPT Work，正面挑战 Google Workspace 与 Microsoft 365</h2>
+    <p>7 月 16 日，OpenAI 发布 ChatGPT Work 文档编辑与生产力功能，整合 GPT-5.6 模型族（Sol 推理速度快 61%、成本低一半）与 Codex 引擎，支持跨应用操作与数小时复杂任务执行，标志 AI Agent 从“对话助手”向“替代型数字员工”转型。定价为每百万输入 Token 5 美元、输出 30 美元，企业级订阅最高每月 100 美元。</p>
+    <div class="meta"><span>来源：钛媒体 Edge AI Daily</span><a href="https://www.tmtpost.com/8068104.html">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">3</span>
+    <div class="head"><span class="badge b-xai">xAI</span></div>
+    <h2>xAI 发布 Grok 4.5：首个专为编程与智能体训练的模型</h2>
+    <p>过去两周 AI 模型密集发布潮中，马斯克旗下 xAI 推出 Grok 4.5，定位为首个“专门为编程和智能体（Agent）训练”的模型，与 OpenAI 的 GPT-5.6 Sol、Meta 的 Muse Spark 1.1 同台竞技，编程能力成为本轮大模型竞争的核心战场。同期谷歌 Gemini 3.5 Pro 因编程能力未达内部目标而延期数月，股价一度跌超 4%。</p>
+    <div class="meta"><span>来源：网易 / 新浪财经</span><a href="https://www.163.com/dy/article/L21KOEJ705568W0A.html">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">4</span>
+    <div class="head"><span class="badge b-reg">欧盟监管</span></div>
+    <h2>欧盟依《数字市场法》限制谷歌：须向 OpenAI 等开放安卓与搜索数据</h2>
+    <p>7 月 16 日，欧盟委员会依《数字市场法》向谷歌发布两项约束性规范：要求安卓向 OpenAI 等第三方 AI 助手开放系统级入口，并自 2027 年 1 月起向具备搜索功能的 AI 聊天机器人共享匿名化搜索数据。ChatGPT 有望获得与 Gemini 同级的系统权限，补齐搜索与分发短板。相关变化将于 2027 年 7 月随下一代安卓系统向用户开放。</p>
+    <div class="meta"><span>来源：财联社</span><a href="https://www.cls.cn/detail/2428913">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">5</span>
+    <div class="head"><span class="badge b-reg">国内监管</span></div>
+    <h2>《人工智能拟人化互动服务管理暂行办法》落地，大厂集体下架相关智能体</h2>
+    <p>7 月 15 日，国家网信办、发改委、工信部、公安部、市场监管总局五部门联合发布的《人工智能拟人化互动服务管理暂行办法》正式施行，为国内首部针对 AI 情感陪伴、虚拟伴侣场景的国家级监管法规。受高昂合规成本与风险不确定性影响，豆包、千问于 7 月 15 日关停用户自建智能体功能，腾讯元宝已于 6 月 30 日下线类似功能，AI 陪伴赛道告别“野蛮生长”。</p>
+    <div class="meta"><span>来源：央视财经 / 每日经济新闻</span><a href="https://finance.cctv.cn/2026/07/16/ARTI8z9RttcpQoQNQwIniqzV260716.shtml">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">6</span>
+    <div class="head"><span class="badge b-china">阿里千问</span></div>
+    <h2>千问在 WAIC 推出 AI 智能体眼镜，并联合 Bose 发布首款智能体耳机</h2>
+    <p>7 月 17 日世界人工智能大会首日，阿里千问将 AI 眼镜升级为智能体眼镜，搭载全双工语音、眼动追踪、体征监测（可测心率血氧、提醒用眼疲劳）技术，并可按需调用第三方 Skill 与 Agent；已发售的 S1、G1 眼镜将通过 OTA 获得智能体能力。同时联合 Bose 推出首款耳夹式 AI 智能体耳机，支持同声传译、会议纪要、健康记录等功能。</p>
+    <div class="meta"><span>来源：狐讯 / IT之家</span><a href="https://dy.163.com/article/L2399U4Q0511CMF5.html">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">7</span>
+    <div class="head"><span class="badge b-deepseek">DeepSeek</span></div>
+    <h2>DeepSeek 估值升至 3200–3500 亿元，已启动第二轮融资</h2>
+    <p>7 月 16 日晚，开润股份、汤臣倍健相继公告间接投资细节，按穿透比例推算 DeepSeek 本轮融资后估值约 3200–3500 亿元（接近 3510 亿）。首轮融资由腾讯领投，宁德时代、网易、京东、IDG 及国家人工智能产业基金参投；接近公司人士确认已启动第二轮融资，以加快自建智算中心、锁定稀缺算力，年底是否冲刺科创板尚未确定。</p>
+    <div class="meta"><span>来源：证券日报 / 每日经济新闻</span><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6086a59640786652">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">8</span>
+    <div class="head"><span class="badge b-china">申通</span></div>
+    <h2>申通发布快递业首个智能体平台 SClaw，明确“物理 AI”战略</h2>
+    <p>7 月 17 日客户开放日，申通快递发布快递行业首个将 LLM、智能体（Agent）与 CLI 深度耦合的平台 SClaw，面向美妆、服装等八大品类商家开放小件员数字分身、AI 数智客服、AI 路由规划三大场景，并开放 CLI 接口启动生态合作，标志快递物流行业从信息化迈向智能体化运营。</p>
+    <div class="meta"><span>来源：潮新闻 / 腾讯新闻</span><a href="https://new.qq.com/rain/a/20260718A05MJN00">查看原文 ↗</a></div>
+  </div>
+
+  <footer>
+    AI 动态播报 · 每日自动生成 <span class="dot">●</span> 数据来源公开网络，仅供参考<br>
+    生成时间：2026-07-18 · 由 AI 助手自动整理
+  </footer>
+</body>
+</html>

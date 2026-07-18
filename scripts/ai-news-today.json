@@ -1,69 +1,69 @@
 {
-  "date": "2026-07-17",
+  "date": "2026-07-18",
   "items": [
     {
       "badge_class": "b-china",
       "badge_text": "月之暗面",
-      "title": "月之暗面发布 Kimi K3：2.8 万亿参数，全球最大开源模型",
-      "summary": "7 月 16 日，月之暗面正式发布新一代开源基础模型 Kimi K3，总参数达 2.8 万亿（MoE 架构），同步上线 API 与开发者文档。模型原生支持视觉理解，具备 100 万 Token 上下文窗口，面向长周期软件工程、复杂推理与知识工作优化，被新华社报道为目前全球参数最大的开源模型。",
-      "source": "创业邦 / 新华社",
-      "url": "https://www.toutiao.com/article/7663275186044633640"
-    },
-    {
-      "badge_class": "b-openai",
-      "badge_text": "Thinking Machines",
-      "title": "OpenAI 前 CTO 创立的 Thinking Machines Lab 发布开放权重模型 Inkling",
-      "summary": "7 月 16 日，Mira Murati 创办的 Thinking Machines Lab 发布首个多模态 MoE 开放权重模型 Inkling，总参数 9750 亿、激活 410 亿，借鉴 DeepSeek-V3 架构并用 Kimi K2.5 数据优化，在美国开放权重模型中排名第一。",
-      "source": "智东西 / 腾讯新闻",
-      "url": "https://new.qq.com/rain/a/20260717A09M1I00"
+      "title": "月之暗面发布 Kimi K3：2.8 万亿参数，刷新全球最大开源模型纪录",
+      "summary": "7 月 17 日凌晨，月之暗面正式发布新一代开源基础模型 Kimi K3，总参数达 2.8 万亿（MoE 架构，896 个专家动态激活 16 个），原生支持文本/图像/视频多模态与 100 万 Token 上下文窗口。模型在长周期软件工程基准表现突出，综合智能水平仅次于 Claude Fable 5 与 GPT-5.6 Sol；更完成 48 小时零人工干预自主设计验证一颗推理芯片的概念验证。完整权重将于 7 月 27 日向全球开发者开放，马斯克二度公开点赞。",
+      "source": "新浪财经 / 快讯",
+      "url": "https://k.sina.com.cn/article_6033314970_1679d149a02002c9s2.html"
     },
     {
       "badge_class": "b-openai",
       "badge_text": "OpenAI",
-      "title": "OpenAI 官宣入局消费硬件：无屏移动 AI 音箱打造家庭智能伴侣",
-      "summary": "7 月 17 日报道，OpenAI 首款自研终端为一款无屏可移动智能音箱，集成 ChatGPT 全套能力、搭载 GPT-Live 语音模型，支持全屋移动与主动预判，计划今年展示、2027 年上市。受此冲击，Sonos 盘后跌超 10%。",
-      "source": "XR 控 / 腾讯新闻",
-      "url": "https://new.qq.com/rain/a/20260717A09M1I00"
+      "title": "OpenAI 推出 ChatGPT Work，正面挑战 Google Workspace 与 Microsoft 365",
+      "summary": "7 月 16 日，OpenAI 发布 ChatGPT Work 文档编辑与生产力功能，整合 GPT-5.6 模型族（Sol 推理速度快 61%、成本低一半）与 Codex 引擎，支持跨应用操作与数小时复杂任务执行，标志 AI Agent 从“对话助手”向“替代型数字员工”转型。定价为每百万输入 Token 5 美元、输出 30 美元，企业级订阅最高每月 100 美元。",
+      "source": "钛媒体 Edge AI Daily",
+      "url": "https://www.tmtpost.com/8068104.html"
     },
     {
-      "badge_class": "b-china",
-      "badge_text": "智谱",
-      "title": "智谱 ARR 破 10 亿美元，成国内首家跨过门槛的基础模型公司",
-      "summary": "7 月 17 日 WAIC 开幕当天，行业测算智谱 ARR 已达 10 亿美元（RRR 口径），从 1 亿到 10 亿仅用约 5 个月，增长核心引擎为 Coding 赛道，GLM-5.2 在 Code Arena 盲测位列全球可用模型第一。",
-      "source": "钛媒体 APP",
-      "url": "https://new.qq.com/rain/a/20260717A09M1I00"
-    },
-    {
-      "badge_class": "b-anthropic",
-      "badge_text": "Anthropic",
-      "title": "Anthropic 拟举行 IPO 投资者会议，估值升至 9650 亿美元",
-      "summary": "据 7 月 17 日极客头条，Anthropic 正筹备 IPO 投资者会议，公司估值升至约 9650 亿美元；与此同时微软正研发类 Mythos 的 AI 漏洞检测工具，巨头在模型能力与商业化上的竞争持续升温。",
-      "source": "CSDN 极客头条",
-      "url": "https://dy.163.com/article/L21GAKMR0511FQO9"
+      "badge_class": "b-xai",
+      "badge_text": "xAI",
+      "title": "xAI 发布 Grok 4.5：首个专为编程与智能体训练的模型",
+      "summary": "过去两周 AI 模型密集发布潮中，马斯克旗下 xAI 推出 Grok 4.5，定位为首个“专门为编程和智能体（Agent）训练”的模型，与 OpenAI 的 GPT-5.6 Sol、Meta 的 Muse Spark 1.1 同台竞技，编程能力成为本轮大模型竞争的核心战场。同期谷歌 Gemini 3.5 Pro 因编程能力未达内部目标而延期数月，股价一度跌超 4%。",
+      "source": "网易 / 新浪财经",
+      "url": "https://www.163.com/dy/article/L21KOEJ705568W0A.html"
     },
     {
       "badge_class": "b-reg",
-      "badge_text": "国际治理",
-      "title": "世界人工智能合作组织（WAICO）在上海成立，总部设中国",
-      "summary": "7 月 16 日，成立世界人工智能合作组织协定签署仪式在上海举行。该组织是独立的政府间国际组织，总部设于上海，旨在促进人工智能国际合作与全球治理，确保 AI 朝着有益、安全、公平方向健康有序发展。",
-      "source": "上观新闻 / 新华社",
-      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7156a595c3f92552"
+      "badge_text": "欧盟监管",
+      "title": "欧盟依《数字市场法》限制谷歌：须向 OpenAI 等开放安卓与搜索数据",
+      "summary": "7 月 16 日，欧盟委员会依《数字市场法》向谷歌发布两项约束性规范：要求安卓向 OpenAI 等第三方 AI 助手开放系统级入口，并自 2027 年 1 月起向具备搜索功能的 AI 聊天机器人共享匿名化搜索数据。ChatGPT 有望获得与 Gemini 同级的系统权限，补齐搜索与分发短板。相关变化将于 2027 年 7 月随下一代安卓系统向用户开放。",
+      "source": "财联社",
+      "url": "https://www.cls.cn/detail/2428913"
+    },
+    {
+      "badge_class": "b-reg",
+      "badge_text": "国内监管",
+      "title": "《人工智能拟人化互动服务管理暂行办法》落地，大厂集体下架相关智能体",
+      "summary": "7 月 15 日，国家网信办、发改委、工信部、公安部、市场监管总局五部门联合发布的《人工智能拟人化互动服务管理暂行办法》正式施行，为国内首部针对 AI 情感陪伴、虚拟伴侣场景的国家级监管法规。受高昂合规成本与风险不确定性影响，豆包、千问于 7 月 15 日关停用户自建智能体功能，腾讯元宝已于 6 月 30 日下线类似功能，AI 陪伴赛道告别“野蛮生长”。",
+      "source": "央视财经 / 每日经济新闻",
+      "url": "https://finance.cctv.cn/2026/07/16/ARTI8z9RttcpQoQNQwIniqzV260716.shtml"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "阿里千问",
+      "title": "千问在 WAIC 推出 AI 智能体眼镜，并联合 Bose 发布首款智能体耳机",
+      "summary": "7 月 17 日世界人工智能大会首日，阿里千问将 AI 眼镜升级为智能体眼镜，搭载全双工语音、眼动追踪、体征监测（可测心率血氧、提醒用眼疲劳）技术，并可按需调用第三方 Skill 与 Agent；已发售的 S1、G1 眼镜将通过 OTA 获得智能体能力。同时联合 Bose 推出首款耳夹式 AI 智能体耳机，支持同声传译、会议纪要、健康记录等功能。",
+      "source": "狐讯 / IT之家",
+      "url": "https://dy.163.com/article/L2399U4Q0511CMF5.html"
     },
     {
       "badge_class": "b-deepseek",
       "badge_text": "DeepSeek",
-      "title": "DeepSeek 估值超 3500 亿元，完成本轮融资并启动第二轮",
-      "summary": "开润股份 16 日晚间公告意外披露 DeepSeek 最新估值约 3510 亿元。接近公司人士确认，本轮融资完成后已启动第二轮融资；是否年底冲刺科创板尚未确定，国产大模型头部公司的资本热度持续走高。",
-      "source": "上证报 / 创业邦",
-      "url": "https://www.toutiao.com/article/7663275186044633640"
+      "title": "DeepSeek 估值升至 3200–3500 亿元，已启动第二轮融资",
+      "summary": "7 月 16 日晚，开润股份、汤臣倍健相继公告间接投资细节，按穿透比例推算 DeepSeek 本轮融资后估值约 3200–3500 亿元（接近 3510 亿）。首轮融资由腾讯领投，宁德时代、网易、京东、IDG 及国家人工智能产业基金参投；接近公司人士确认已启动第二轮融资，以加快自建智算中心、锁定稀缺算力，年底是否冲刺科创板尚未确定。",
+      "source": "证券日报 / 每日经济新闻",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_6086a59640786652"
     },
     {
-      "badge_class": "b-google",
-      "badge_text": "Google",
-      "title": "谷歌据悉推迟发布 Gemini 3.5 Pro，持续提升模型编程能力",
-      "summary": "据 7 月 17 日极客头条，谷歌推迟 Gemini 3.5 Pro 的发布节奏，重心放在持续提升模型编程（Agentic Coding）能力上。此前 Gemini 3.5 Flash 已全面开放，Omni 视频生成模型也在 Gemini App 与 YouTube 上线。",
-      "source": "CSDN 极客头条",
-      "url": "https://dy.163.com/article/L21GAKMR0511FQO9"
+      "badge_class": "b-china",
+      "badge_text": "申通",
+      "title": "申通发布快递业首个智能体平台 SClaw，明确“物理 AI”战略",
+      "summary": "7 月 17 日客户开放日，申通快递发布快递行业首个将 LLM、智能体（Agent）与 CLI 深度耦合的平台 SClaw，面向美妆、服装等八大品类商家开放小件员数字分身、AI 数智客服、AI 路由规划三大场景，并开放 CLI 接口启动生态合作，标志快递物流行业从信息化迈向智能体化运营。",
+      "source": "潮新闻 / 腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260718A05MJN00"
     }
   ]
 }
