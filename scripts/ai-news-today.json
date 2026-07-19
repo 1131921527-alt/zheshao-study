@@ -1,69 +1,69 @@
 {
-  "date": "2026-07-18",
+  "date": "2026-07-19",
   "items": [
     {
       "badge_class": "b-china",
-      "badge_text": "月之暗面",
-      "title": "月之暗面发布 Kimi K3：2.8 万亿参数，刷新全球最大开源模型纪录",
-      "summary": "7 月 17 日凌晨，月之暗面正式发布新一代开源基础模型 Kimi K3，总参数达 2.8 万亿（MoE 架构，896 个专家动态激活 16 个），原生支持文本/图像/视频多模态与 100 万 Token 上下文窗口。模型在长周期软件工程基准表现突出，综合智能水平仅次于 Claude Fable 5 与 GPT-5.6 Sol；更完成 48 小时零人工干预自主设计验证一颗推理芯片的概念验证。完整权重将于 7 月 27 日向全球开发者开放，马斯克二度公开点赞。",
-      "source": "新浪财经 / 快讯",
-      "url": "https://k.sina.com.cn/article_6033314970_1679d149a02002c9s2.html"
-    },
-    {
-      "badge_class": "b-openai",
-      "badge_text": "OpenAI",
-      "title": "OpenAI 推出 ChatGPT Work，正面挑战 Google Workspace 与 Microsoft 365",
-      "summary": "7 月 16 日，OpenAI 发布 ChatGPT Work 文档编辑与生产力功能，整合 GPT-5.6 模型族（Sol 推理速度快 61%、成本低一半）与 Codex 引擎，支持跨应用操作与数小时复杂任务执行，标志 AI Agent 从“对话助手”向“替代型数字员工”转型。定价为每百万输入 Token 5 美元、输出 30 美元，企业级订阅最高每月 100 美元。",
-      "source": "钛媒体 Edge AI Daily",
-      "url": "https://www.tmtpost.com/8068104.html"
+      "badge_text": "商汤",
+      "title": "商汤在 WAIC 发布 SenseNova U1 Pro：从「内容生成」走向「系统级交付」",
+      "summary": "7 月 18 日世界人工智能大会上，商汤发布旗舰多模态智能体基座 SenseNova U1 Pro，围绕「一个复杂目标持续理解、规划、执行、检查、修正」提供交付级能力：支持 8K 原生分辨率输出、极低文字渲染出错率，以及数十轮 Agentic Generation Loop 智能体生成循环。底层依赖 NEO-unify 内核统一语言与视觉表征，GitHub 上 SenseNova 相关项目 Star 已突破 8000。",
+      "source": "环球网 / 网易科技",
+      "url": "https://www.163.com/dy/article/L26QQMSS0514R9OJ.html"
     },
     {
       "badge_class": "b-xai",
       "badge_text": "xAI",
-      "title": "xAI 发布 Grok 4.5：首个专为编程与智能体训练的模型",
-      "summary": "过去两周 AI 模型密集发布潮中，马斯克旗下 xAI 推出 Grok 4.5，定位为首个“专门为编程和智能体（Agent）训练”的模型，与 OpenAI 的 GPT-5.6 Sol、Meta 的 Muse Spark 1.1 同台竞技，编程能力成为本轮大模型竞争的核心战场。同期谷歌 Gemini 3.5 Pro 因编程能力未达内部目标而延期数月，股价一度跌超 4%。",
-      "source": "网易 / 新浪财经",
-      "url": "https://www.163.com/dy/article/L21KOEJ705568W0A.html"
+      "title": "马斯克：Grok 4.6 下周完成初始训练，参数规模达 2 万亿",
+      "summary": "7 月 18 日马斯克在 X 上透露，xAI 正在训练的 Grok 4.6 参数规模将达 2 万亿，预计下周完成初始训练；他称其在各方面优于当前 1.5 万亿参数的 Grok 4.5，推理速度与 Token 效率接近，并猜测会超过月之暗面最新的 Kimi K3。xAI 尚未公布正式发布时间与完整技术指标。",
+      "source": "IT之家 / 极客公园",
+      "url": "https://www.163.com/dy/article/L26FTCGQ05119FMA.html"
+    },
+    {
+      "badge_class": "b-openai",
+      "badge_text": "OpenAI",
+      "title": "OpenAI 推出 GPT-Live-1 / mini 语音模型，实现「边听边说」实时对话",
+      "summary": "OpenAI 发布最新语音模型 GPT-Live-1 与 GPT-Live-mini，最大亮点是打破传统「听-思考-说」串行模式，能在听到用户说话的同时开始生成回应，大幅降低对话延迟，让 AI 语音交互更接近真人聊天。该能力对语音助手、客服机器人、实时翻译等场景有直接价值。",
+      "source": "IT之家 / 量子位",
+      "url": "https://www.ithome.com/0/974/277.htm"
     },
     {
       "badge_class": "b-reg",
-      "badge_text": "欧盟监管",
-      "title": "欧盟依《数字市场法》限制谷歌：须向 OpenAI 等开放安卓与搜索数据",
-      "summary": "7 月 16 日，欧盟委员会依《数字市场法》向谷歌发布两项约束性规范：要求安卓向 OpenAI 等第三方 AI 助手开放系统级入口，并自 2027 年 1 月起向具备搜索功能的 AI 聊天机器人共享匿名化搜索数据。ChatGPT 有望获得与 Gemini 同级的系统权限，补齐搜索与分发短板。相关变化将于 2027 年 7 月随下一代安卓系统向用户开放。",
-      "source": "财联社",
-      "url": "https://www.cls.cn/detail/2428913"
-    },
-    {
-      "badge_class": "b-reg",
-      "badge_text": "国内监管",
-      "title": "《人工智能拟人化互动服务管理暂行办法》落地，大厂集体下架相关智能体",
-      "summary": "7 月 15 日，国家网信办、发改委、工信部、公安部、市场监管总局五部门联合发布的《人工智能拟人化互动服务管理暂行办法》正式施行，为国内首部针对 AI 情感陪伴、虚拟伴侣场景的国家级监管法规。受高昂合规成本与风险不确定性影响，豆包、千问于 7 月 15 日关停用户自建智能体功能，腾讯元宝已于 6 月 30 日下线类似功能，AI 陪伴赛道告别“野蛮生长”。",
-      "source": "央视财经 / 每日经济新闻",
-      "url": "https://finance.cctv.cn/2026/07/16/ARTI8z9RttcpQoQNQwIniqzV260716.shtml"
+      "badge_text": "美国监管",
+      "title": "白宫推出「金鹰计划」，强化对前沿 AI 模型发布的管控",
+      "summary": "7 月 18 日消息，特朗普政府推出名为「金鹰」（Gold Eagle）的计划，要求政府明确批准哪些企业可访问新发布的前沿大模型，自愿参与可能走向强制。此前 OpenAI 的 GPT-5.6、Anthropic 的 Mythos 5 / Fable 5 已被要求实施准入管控或一度被封禁；美方称动因是网络安全风险与中国低价开放权重模型快速追赶。",
+      "source": "新浪财经 / CNBC",
+      "url": "https://k.sina.com.cn/article_5953466437_162dab0450670b2fxc.html"
     },
     {
       "badge_class": "b-china",
-      "badge_text": "阿里千问",
-      "title": "千问在 WAIC 推出 AI 智能体眼镜，并联合 Bose 发布首款智能体耳机",
-      "summary": "7 月 17 日世界人工智能大会首日，阿里千问将 AI 眼镜升级为智能体眼镜，搭载全双工语音、眼动追踪、体征监测（可测心率血氧、提醒用眼疲劳）技术，并可按需调用第三方 Skill 与 Agent；已发售的 S1、G1 眼镜将通过 OTA 获得智能体能力。同时联合 Bose 推出首款耳夹式 AI 智能体耳机，支持同声传译、会议纪要、健康记录等功能。",
-      "source": "狐讯 / IT之家",
-      "url": "https://dy.163.com/article/L2399U4Q0511CMF5.html"
-    },
-    {
-      "badge_class": "b-deepseek",
-      "badge_text": "DeepSeek",
-      "title": "DeepSeek 估值升至 3200–3500 亿元，已启动第二轮融资",
-      "summary": "7 月 16 日晚，开润股份、汤臣倍健相继公告间接投资细节，按穿透比例推算 DeepSeek 本轮融资后估值约 3200–3500 亿元（接近 3510 亿）。首轮融资由腾讯领投，宁德时代、网易、京东、IDG 及国家人工智能产业基金参投；接近公司人士确认已启动第二轮融资，以加快自建智算中心、锁定稀缺算力，年底是否冲刺科创板尚未确定。",
-      "source": "证券日报 / 每日经济新闻",
-      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_6086a59640786652"
+      "badge_text": "阿里云",
+      "title": "阿里云在 WAIC 发布 Agent Native Cloud，让智能体成为企业原生能力",
+      "summary": "7 月 18 日阿里云在世界人工智能大会发布 Agent Native Cloud，配套 AgentTeams、无影 Agentic Computer 等工具：15 个智能体可实现 7×24 小时服务、处理 85% 答疑量、运营支持时长降 90%；无影 Agentic Computer 支持 Token 预算全局可视、运维人效提升 10 倍以上，Skill 与策略可跨场景复用。",
+      "source": "亿欧网 / 腾讯新闻",
+      "url": "https://view.inews.qq.com/a/20260718A0AA6200"
     },
     {
       "badge_class": "b-china",
-      "badge_text": "申通",
-      "title": "申通发布快递业首个智能体平台 SClaw，明确“物理 AI”战略",
-      "summary": "7 月 17 日客户开放日，申通快递发布快递行业首个将 LLM、智能体（Agent）与 CLI 深度耦合的平台 SClaw，面向美妆、服装等八大品类商家开放小件员数字分身、AI 数智客服、AI 路由规划三大场景，并开放 CLI 接口启动生态合作，标志快递物流行业从信息化迈向智能体化运营。",
-      "source": "潮新闻 / 腾讯新闻",
-      "url": "https://new.qq.com/rain/a/20260718A05MJN00"
+      "badge_text": "阿里云百炼",
+      "title": "阿里云百炼上线 HappyOyster 1.0，阿里发布企业级 AI 创作平台「秒悟团队版」",
+      "summary": "7 月 18 日 WAIC 期间，阿里云百炼平台正式上线新一代模型 HappyOyster 1.0；同期阿里巴巴发布企业级 AI 应用创作平台「秒悟团队版」（Meoo Team），主打统一身份管理、采购与额度管控、精细化权限和团队资产共享，面向电商、内容、营销、财务等团队的 AI 协同提效。",
+      "source": "每日经济新闻",
+      "url": "https://www.nbd.com.cn/articles/2026-07-19/4477165.html"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "Rokid",
+      "title": "Rokid 智能体商店上架 440+ 智能体，发布智能眼镜原生 OS YodaOS",
+      "summary": "7 月 19 日梳理显示，Rokid 智能体商店上线 6 个月累计上架 440 余个智能体、5000 余个在开发中，开发者社区注册超 3.5 万人，智能体使用次数已超系统自带核心功能；同时发布全球首款智能眼镜原生 OS YodaOS，响应延迟 0.2 秒，反映 WAIC 期间的终端智能体热潮。",
+      "source": "21 世纪经济报道 / 腾讯新闻",
+      "url": "https://view.inews.qq.com/a/20260719A03U8Y00"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "英特尔",
+      "title": "英特尔携 QClaw 等推「智能体 PC」Skill 生态，推理成本省 69%",
+      "summary": "7 月 18 日英特尔披露「智能体 PC」概念提出三个月已落地 20 余项场景，联合 QClaw、TRAE、Marvis 等桌面智能体厂商繁荣 Skills 生态，宣称可将推理成本降低 69%。这标志 AI 智能体竞争从云端模型延伸到本地 PC 端的系统级入口与成本优化。",
+      "source": "AI 智能体信息日报 / 腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260719A05P3500?refer=cp_1009"
     }
   ]
 }
