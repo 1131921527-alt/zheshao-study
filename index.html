@@ -168,7 +168,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .mini-tip h3{font-size:var(--fs-14);color:var(--gold);margin:0 0 8px;font-weight:700}
 
 /* ====== 桌面端适配 ====== */
-@media(min-width:600px){body{background:#080C14}.app{max-width:480px;margin:0 auto;border-radius:16px;border-left:1px solid var(--border);border-right:1px solid var(--border)}.tabbar{border-radius:0 0 16px 16px}}
+@media(min-width:600px){body{background:linear-gradient(180deg,#080C14 0%,#0a1020 100%);min-height:100vh}.app{max-width:540px;margin:16px auto;border-radius:16px;border-left:1px solid var(--border);border-right:1px solid var(--border);box-shadow:0 8px 60px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,106,.06);min-height:calc(100vh - 32px);overflow:hidden}.tabbar{border-radius:0 0 16px 16px}}
 </style>
 </head>
 <body>
@@ -237,11 +237,11 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 (function(){
   var list=document.getElementById('aiNewsList');if(!list)return;
   var items=[
-    {t:'AI Agent 正在重塑软件开发流程',d:'2026-07-20 · 编程效率提升300%',href:'ai-news/index.html'},
-    {t:'大模型推理成本再降40%，边缘部署成真',d:'2026-07-19 · 端侧AI新突破',href:'ai-news/index.html'},
-    {t:'多模态理解能力逼近人类基准',d:'2026-07-18 · 视觉+文本联合推理',href:'ai-news/index.html'},
-    {t:'AI 安全治理框架全球共识形成',d:'2026-07-17 · 12国联合声明',href:'ai-news/index.html'},
-    {t:'开源模型首次在数学奥赛级别解题',d:'2026-07-16 · 推理能力跃升',href:'ai-news/index.html'}
+    {t:'AI Agent 正在重塑软件开发流程',d:'2026-07-20 · 编程效率提升300%',href:'ai-news/ai-news-2026-07-20.html'},
+    {t:'大模型推理成本再降40%，边缘部署成真',d:'2026-07-19 · 端侧AI新突破',href:'ai-news/ai-news-2026-07-19.html'},
+    {t:'多模态理解能力逼近人类基准',d:'2026-07-18 · 视觉+文本联合推理',href:'ai-news/ai-news-2026-07-18.html'},
+    {t:'AI 安全治理框架全球共识形成',d:'2026-07-17 · 12国联合声明',href:'ai-news/ai-news-2026-07-17.html'},
+    {t:'开源模型首次在数学奥赛级别解题',d:'2026-07-16 · 推理能力跃升',href:'ai-news/ai-news-2026-07-16.html'}
   ];
   list.innerHTML=items.map(function(it){return '<a class=\"linkcard\" href=\"'+it.href+'\"><div class=\"li\">🤖</div><div class=\"lc\"><div class=\"t\">'+it.t+'</div><div class=\"d\">'+it.d+'</div></div><div class=\"arr\">→</div></a>';}).join('');
 })();
