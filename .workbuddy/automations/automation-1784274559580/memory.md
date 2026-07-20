@@ -11,3 +11,9 @@
 - `ielts/index.html` 列表与期数（共 13 期）已更新。
 - 已 `git add -A && commit && push` 到 GitHub（commit c630664，main 分支）。
 - 幂等正常：day12 不存在时正常生成，无重复。
+
+## 2026-07-20
+- 运行 `scripts/gen_ielts_day.py`，生成 `ielts/day13.html`，15 词（全部带记忆故事）。
+- `ielts/index.html` 列表与期数（共 14 期）已更新。
+- 已 `git add -A && commit && push` 到 GitHub（commit bc814cb，main 分支）。
+- 幂等正常：day13 不存在时正常生成，无重复。

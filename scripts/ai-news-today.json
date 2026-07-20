@@ -1,69 +1,69 @@
 {
-  "date": "2026-07-19",
+  "date": "2026-07-20",
   "items": [
     {
       "badge_class": "b-china",
-      "badge_text": "商汤",
-      "title": "商汤在 WAIC 发布 SenseNova U1 Pro：从「内容生成」走向「系统级交付」",
-      "summary": "7 月 18 日世界人工智能大会上，商汤发布旗舰多模态智能体基座 SenseNova U1 Pro，围绕「一个复杂目标持续理解、规划、执行、检查、修正」提供交付级能力：支持 8K 原生分辨率输出、极低文字渲染出错率，以及数十轮 Agentic Generation Loop 智能体生成循环。底层依赖 NEO-unify 内核统一语言与视觉表征，GitHub 上 SenseNova 相关项目 Star 已突破 8000。",
-      "source": "环球网 / 网易科技",
-      "url": "https://www.163.com/dy/article/L26QQMSS0514R9OJ.html"
+      "badge_text": "阿里",
+      "title": "阿里 Qwen3.8 即将发布：2.4 万亿参数，官方称性能仅次于 Fable 5",
+      "summary": "7 月 19 日消息，阿里巴巴最新大模型 Qwen3.8 即将正式发布，参数量高达 2.4 万亿，官方称其为当今最强模型之一，性能仅次于 Anthropic 的 Fable 5，且兼容主流前沿 AI 架构。目前 Qwen3.8-Max 预览版已率先登陆阿里巴巴 Token 计划、Qoder 及 QoderWork 平台，用户可抢先体验，正式版预计近期跟进。",
+      "source": "界面新闻 / 网易科技",
+      "url": "https://dy.163.com/article/L292EPT70534A4SC.html"
     },
     {
-      "badge_class": "b-xai",
-      "badge_text": "xAI",
-      "title": "马斯克：Grok 4.6 下周完成初始训练，参数规模达 2 万亿",
-      "summary": "7 月 18 日马斯克在 X 上透露，xAI 正在训练的 Grok 4.6 参数规模将达 2 万亿，预计下周完成初始训练；他称其在各方面优于当前 1.5 万亿参数的 Grok 4.5，推理速度与 Token 效率接近，并猜测会超过月之暗面最新的 Kimi K3。xAI 尚未公布正式发布时间与完整技术指标。",
-      "source": "IT之家 / 极客公园",
-      "url": "https://www.163.com/dy/article/L26FTCGQ05119FMA.html"
+      "badge_class": "b-china",
+      "badge_text": "蚂蚁数科",
+      "title": "蚂蚁数科在 WAIC 发布 Agentar 2.0，要做「商业智能体超级工厂」",
+      "summary": "7 月 19 日世界人工智能大会上，蚂蚁数科正式发布商业智能体超级工厂平台 Agentar 2.0。首批预置 200 个岗位级数字专家模板，并提供数百个可订阅、开箱即用的 Skills 级智能体工具，面向企业把招聘、财务、运营等岗位能力封装成可调度数字员工，标志智能体从演示走向岗位级交付。",
+      "source": "界面新闻 / 网易科技",
+      "url": "https://dy.163.com/article/L292EPT70534A4SC.html"
     },
     {
-      "badge_class": "b-openai",
-      "badge_text": "OpenAI",
-      "title": "OpenAI 推出 GPT-Live-1 / mini 语音模型，实现「边听边说」实时对话",
-      "summary": "OpenAI 发布最新语音模型 GPT-Live-1 与 GPT-Live-mini，最大亮点是打破传统「听-思考-说」串行模式，能在听到用户说话的同时开始生成回应，大幅降低对话延迟，让 AI 语音交互更接近真人聊天。该能力对语音助手、客服机器人、实时翻译等场景有直接价值。",
-      "source": "IT之家 / 量子位",
-      "url": "https://www.ithome.com/0/974/277.htm"
+      "badge_class": "b-deepseek",
+      "badge_text": "DeepSeek",
+      "title": "DeepSeek 估值约 3510 亿元，创始人梁文锋登顶全球 AI 公司新首富",
+      "summary": "7 月 20 日，开润股份一则公告披露人工智能公司 DeepSeek 最新估值约为 3510 亿元人民币，公司已启动第二轮融资。据彭博亿万富豪指数，创始人梁文锋身价飙升至约 360 亿美元，超越 Anthropic 与 OpenAI 联合创始人，成为全球 AI 公司领域新首富；DeepSeek 年内年化营收已突破 10 亿美元级别。",
+      "source": "上证报 / IT之家 / AIGC日报",
+      "url": "https://weibo.com/7905315703/5322676978582812"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "阶跃星辰",
+      "title": "阶跃星辰 STEPX Neo 摘得 WAIC 镇馆之宝，定义 AI 手机新范式",
+      "summary": "7 月 20 日梳理显示，阶跃星辰 STEPX Neo 在 2026 世界人工智能大会上获评「镇馆之宝」。该模型主打端侧多模态与主动感知能力，被业界视为定义「AI 手机」新范式的关键力量——把大模型能力从云端下沉到手机本地，实现低延迟、隐私友好的实时智能交互，带动国产端侧智能赛道升温。",
+      "source": "AIGC日报 / 腾讯新闻",
+      "url": "https://weibo.com/7905315703/5322676978582812"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "华为",
+      "title": "华为昇腾 950 预计 9 月商用，国产 AI 超节点集体亮相 WAIC",
+      "summary": "7 月 20 日 WAIC 期间，国产 AI 算力芯片三大技术路线成型，推理需求主导市场。其中华为昇腾 950 芯片预计 9 月正式商用，配合国产超节点服务器集体亮相，意味着大规模国产算力从「建得成」走向「用得好、服务广、可复制」，为国产大模型训练与推理提供底层支撑。",
+      "source": "AIGC日报 / 央视财经",
+      "url": "https://weibo.com/7905315703/5322676978582812"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "中科曙光",
+      "title": "「曙光 8000（登峰）」真机首秀：中国首个全国产十万卡 AI 超集群",
+      "summary": "7 月 20 日央视财经报道，在中科院与产业链协同下，「曙光 8000（登峰）」真机首次公开亮相，这是中国首个全国产十万卡 AI 超集群，意味着大规模国产算力从纸面规划走向真实部署。同期智慧药房机器人、首款主动智能机器人 Bubbo1 等落地民生场景，反映 WAIC 期间「算力+终端」双线突破。",
+      "source": "央视财经 / 微博",
+      "url": "https://weibo.com/2041117703/5322850764327999"
+    },
+    {
+      "badge_class": "b-tencent",
+      "badge_text": "腾讯",
+      "title": "腾讯推操作系统级 AI 助手 Marvis，WorkBuddy 移动端三端上线",
+      "summary": "7 月 20 日，腾讯操作系统级 AI 助手 Marvis 正式上线，官网开放下载、无需邀请码；它将终端系统、文件、应用、算力与跨端连接纳入同一 AI 中间层，出厂预置 6 个 Agent 协同的「AI 团队」。同日腾讯 WorkBuddy 移动应用上线 iOS、Android 与鸿蒙三端，可远程连接本地电脑调用完整桌面能力，腾讯云 ADP 4.0 海外版也同步发布。",
+      "source": "AAStocks / 腾讯新闻",
+      "url": "https://www.aastocks.com/tc/stocks/news/aafn-con/now.1525570/industry-news/source"
     },
     {
       "badge_class": "b-reg",
-      "badge_text": "美国监管",
-      "title": "白宫推出「金鹰计划」，强化对前沿 AI 模型发布的管控",
-      "summary": "7 月 18 日消息，特朗普政府推出名为「金鹰」（Gold Eagle）的计划，要求政府明确批准哪些企业可访问新发布的前沿大模型，自愿参与可能走向强制。此前 OpenAI 的 GPT-5.6、Anthropic 的 Mythos 5 / Fable 5 已被要求实施准入管控或一度被封禁；美方称动因是网络安全风险与中国低价开放权重模型快速追赶。",
-      "source": "新浪财经 / CNBC",
-      "url": "https://k.sina.com.cn/article_5953466437_162dab0450670b2fxc.html"
-    },
-    {
-      "badge_class": "b-china",
-      "badge_text": "阿里云",
-      "title": "阿里云在 WAIC 发布 Agent Native Cloud，让智能体成为企业原生能力",
-      "summary": "7 月 18 日阿里云在世界人工智能大会发布 Agent Native Cloud，配套 AgentTeams、无影 Agentic Computer 等工具：15 个智能体可实现 7×24 小时服务、处理 85% 答疑量、运营支持时长降 90%；无影 Agentic Computer 支持 Token 预算全局可视、运维人效提升 10 倍以上，Skill 与策略可跨场景复用。",
-      "source": "亿欧网 / 腾讯新闻",
-      "url": "https://view.inews.qq.com/a/20260718A0AA6200"
-    },
-    {
-      "badge_class": "b-china",
-      "badge_text": "阿里云百炼",
-      "title": "阿里云百炼上线 HappyOyster 1.0，阿里发布企业级 AI 创作平台「秒悟团队版」",
-      "summary": "7 月 18 日 WAIC 期间，阿里云百炼平台正式上线新一代模型 HappyOyster 1.0；同期阿里巴巴发布企业级 AI 应用创作平台「秒悟团队版」（Meoo Team），主打统一身份管理、采购与额度管控、精细化权限和团队资产共享，面向电商、内容、营销、财务等团队的 AI 协同提效。",
-      "source": "每日经济新闻",
-      "url": "https://www.nbd.com.cn/articles/2026-07-19/4477165.html"
-    },
-    {
-      "badge_class": "b-china",
-      "badge_text": "Rokid",
-      "title": "Rokid 智能体商店上架 440+ 智能体，发布智能眼镜原生 OS YodaOS",
-      "summary": "7 月 19 日梳理显示，Rokid 智能体商店上线 6 个月累计上架 440 余个智能体、5000 余个在开发中，开发者社区注册超 3.5 万人，智能体使用次数已超系统自带核心功能；同时发布全球首款智能眼镜原生 OS YodaOS，响应延迟 0.2 秒，反映 WAIC 期间的终端智能体热潮。",
-      "source": "21 世纪经济报道 / 腾讯新闻",
-      "url": "https://view.inews.qq.com/a/20260719A03U8Y00"
-    },
-    {
-      "badge_class": "b-china",
-      "badge_text": "英特尔",
-      "title": "英特尔携 QClaw 等推「智能体 PC」Skill 生态，推理成本省 69%",
-      "summary": "7 月 18 日英特尔披露「智能体 PC」概念提出三个月已落地 20 余项场景，联合 QClaw、TRAE、Marvis 等桌面智能体厂商繁荣 Skills 生态，宣称可将推理成本降低 69%。这标志 AI 智能体竞争从云端模型延伸到本地 PC 端的系统级入口与成本优化。",
-      "source": "AI 智能体信息日报 / 腾讯新闻",
-      "url": "https://new.qq.com/rain/a/20260719A05P3500?refer=cp_1009"
+      "badge_text": "中国治理",
+      "title": "中国发布国际 AI 伦理治理行动计划与智能体国际合作倡议",
+      "summary": "7 月 18 日 WAIC 期间，工信部牵头发布《国际人工智能伦理治理行动计划》，在联合国「未来契约」框架下倡导全生命周期伦理治理、分级风险防控与敏捷治理机制；同日国家网信办发布智能体信任、互联与互操作国际合作倡议，呼吁各国加大 Agent 身份识别、跨平台互操作等基础技术投入，推动全球 AI 协同治理。",
+      "source": "中国网 / 中国日报",
+      "url": "https://www.163.com/dy/article/L24DKCL20514DG98.html"
     }
   ]
 }

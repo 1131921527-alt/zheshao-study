@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI动态播报 · 2026-07-20</title>
+<style>
+  :root{
+    --bg:#0b0f1a;
+    --card:#141b2d;
+    --card2:#1b2236;
+    --accent:#3b82f6;
+    --accent2:#22d3ee;
+    --text:#e8edf7;
+    --muted:#93a0b8;
+    --line:#26304a;
+    --tag:#1e293b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:linear-gradient(180deg,#0b0f1a 0%,#0e1424 100%);
+    color:var(--text);
+    line-height:1.6;
+    padding:16px 14px 40px;
+    max-width:680px;
+    margin:0 auto;
+  }
+  .hero{
+    text-align:center;
+    padding:26px 16px 20px;
+    background:radial-gradient(120% 120% at 50% 0%,rgba(59,130,246,.22),transparent 60%);
+    border:1px solid var(--line);
+    border-radius:18px;
+    margin-bottom:18px;
+  }
+  .hero .kicker{
+    font-size:13px;letter-spacing:3px;color:var(--accent2);
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{font-size:26px;font-weight:800;margin:8px 0 4px;letter-spacing:.5px;}
+  .hero .date{font-size:14px;color:var(--muted);}
+  .hero .sub{font-size:12px;color:var(--muted);margin-top:6px;}
+  .count{
+    display:inline-block;background:var(--tag);color:var(--accent2);
+    font-size:12px;padding:3px 10px;border-radius:20px;margin-top:10px;
+    border:1px solid var(--line);
+  }
+  .news{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:16px 16px 14px;
+    margin-bottom:14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .news::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:linear-gradient(180deg,var(--accent),var(--accent2));
+  }
+  .news .head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+  .badge{
+    font-size:11px;font-weight:700;padding:3px 9px;border-radius:8px;
+    color:#fff;white-space:nowrap;
+  }
+  .b-openai{background:#10a37f;}
+  .b-anthropic{background:#d97757;}
+  .b-google{background:#4285f4;}
+  .b-deepseek{background:#4d6bfe;}
+  .b-china{background:#e23b3b;}
+  .b-xai{background:#7c3aed;}
+  .b-reg{background:#f59e0b;}
+  .b-tencent{background:#12b7f5;}
+  .news h2{font-size:17px;font-weight:700;line-height:1.4;margin:2px 0 8px;}
+  .news p{font-size:14.5px;color:#cfd8ea;margin-bottom:8px;}
+  .news .meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .news .meta a{color:var(--accent2);text-decoration:none;font-weight:600;}
+  .news .meta a:active{opacity:.7;}
+  .num{
+    position:absolute;right:14px;top:10px;font-size:34px;font-weight:900;
+    color:rgba(59,130,246,.13);line-height:1;
+  }
+  footer{
+    text-align:center;color:var(--muted);font-size:12px;margin-top:24px;
+    border-top:1px solid var(--line);padding-top:16px;
+  }
+  footer .dot{color:var(--accent2);}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="kicker">AI Daily Brief</div>
+    <h1>AI 动态播报</h1>
+    <div class="date">2026 年 7 月 20 日 · 周一</div>
+    <div class="sub">主流厂商最新发布 · 重大更新 · 行业要闻</div>
+    <span class="count">今日精选 8 条</span>
+  </div>
+
+<div class="news">
+    <span class="num">1</span>
+    <div class="head"><span class="badge b-china">阿里</span></div>
+    <h2>阿里 Qwen3.8 即将发布：2.4 万亿参数，官方称性能仅次于 Fable 5</h2>
+    <p>7 月 19 日消息，阿里巴巴最新大模型 Qwen3.8 即将正式发布，参数量高达 2.4 万亿，官方称其为当今最强模型之一，性能仅次于 Anthropic 的 Fable 5，且兼容主流前沿 AI 架构。目前 Qwen3.8-Max 预览版已率先登陆阿里巴巴 Token 计划、Qoder 及 QoderWork 平台，用户可抢先体验，正式版预计近期跟进。</p>
+    <div class="meta"><span>来源：界面新闻 / 网易科技</span><a href="https://dy.163.com/article/L292EPT70534A4SC.html">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">2</span>
+    <div class="head"><span class="badge b-china">蚂蚁数科</span></div>
+    <h2>蚂蚁数科在 WAIC 发布 Agentar 2.0，要做「商业智能体超级工厂」</h2>
+    <p>7 月 19 日世界人工智能大会上，蚂蚁数科正式发布商业智能体超级工厂平台 Agentar 2.0。首批预置 200 个岗位级数字专家模板，并提供数百个可订阅、开箱即用的 Skills 级智能体工具，面向企业把招聘、财务、运营等岗位能力封装成可调度数字员工，标志智能体从演示走向岗位级交付。</p>
+    <div class="meta"><span>来源：界面新闻 / 网易科技</span><a href="https://dy.163.com/article/L292EPT70534A4SC.html">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">3</span>
+    <div class="head"><span class="badge b-deepseek">DeepSeek</span></div>
+    <h2>DeepSeek 估值约 3510 亿元，创始人梁文锋登顶全球 AI 公司新首富</h2>
+    <p>7 月 20 日，开润股份一则公告披露人工智能公司 DeepSeek 最新估值约为 3510 亿元人民币，公司已启动第二轮融资。据彭博亿万富豪指数，创始人梁文锋身价飙升至约 360 亿美元，超越 Anthropic 与 OpenAI 联合创始人，成为全球 AI 公司领域新首富；DeepSeek 年内年化营收已突破 10 亿美元级别。</p>
+    <div class="meta"><span>来源：上证报 / IT之家 / AIGC日报</span><a href="https://weibo.com/7905315703/5322676978582812">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">4</span>
+    <div class="head"><span class="badge b-china">阶跃星辰</span></div>
+    <h2>阶跃星辰 STEPX Neo 摘得 WAIC 镇馆之宝，定义 AI 手机新范式</h2>
+    <p>7 月 20 日梳理显示，阶跃星辰 STEPX Neo 在 2026 世界人工智能大会上获评「镇馆之宝」。该模型主打端侧多模态与主动感知能力，被业界视为定义「AI 手机」新范式的关键力量——把大模型能力从云端下沉到手机本地，实现低延迟、隐私友好的实时智能交互，带动国产端侧智能赛道升温。</p>
+    <div class="meta"><span>来源：AIGC日报 / 腾讯新闻</span><a href="https://weibo.com/7905315703/5322676978582812">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">5</span>
+    <div class="head"><span class="badge b-china">华为</span></div>
+    <h2>华为昇腾 950 预计 9 月商用，国产 AI 超节点集体亮相 WAIC</h2>
+    <p>7 月 20 日 WAIC 期间，国产 AI 算力芯片三大技术路线成型，推理需求主导市场。其中华为昇腾 950 芯片预计 9 月正式商用，配合国产超节点服务器集体亮相，意味着大规模国产算力从「建得成」走向「用得好、服务广、可复制」，为国产大模型训练与推理提供底层支撑。</p>
+    <div class="meta"><span>来源：AIGC日报 / 央视财经</span><a href="https://weibo.com/7905315703/5322676978582812">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">6</span>
+    <div class="head"><span class="badge b-china">中科曙光</span></div>
+    <h2>「曙光 8000（登峰）」真机首秀：中国首个全国产十万卡 AI 超集群</h2>
+    <p>7 月 20 日央视财经报道，在中科院与产业链协同下，「曙光 8000（登峰）」真机首次公开亮相，这是中国首个全国产十万卡 AI 超集群，意味着大规模国产算力从纸面规划走向真实部署。同期智慧药房机器人、首款主动智能机器人 Bubbo1 等落地民生场景，反映 WAIC 期间「算力+终端」双线突破。</p>
+    <div class="meta"><span>来源：央视财经 / 微博</span><a href="https://weibo.com/2041117703/5322850764327999">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">7</span>
+    <div class="head"><span class="badge b-tencent">腾讯</span></div>
+    <h2>腾讯推操作系统级 AI 助手 Marvis，WorkBuddy 移动端三端上线</h2>
+    <p>7 月 20 日，腾讯操作系统级 AI 助手 Marvis 正式上线，官网开放下载、无需邀请码；它将终端系统、文件、应用、算力与跨端连接纳入同一 AI 中间层，出厂预置 6 个 Agent 协同的「AI 团队」。同日腾讯 WorkBuddy 移动应用上线 iOS、Android 与鸿蒙三端，可远程连接本地电脑调用完整桌面能力，腾讯云 ADP 4.0 海外版也同步发布。</p>
+    <div class="meta"><span>来源：AAStocks / 腾讯新闻</span><a href="https://www.aastocks.com/tc/stocks/news/aafn-con/now.1525570/industry-news/source">查看原文 ↗</a></div>
+  </div>
+<div class="news">
+    <span class="num">8</span>
+    <div class="head"><span class="badge b-reg">中国治理</span></div>
+    <h2>中国发布国际 AI 伦理治理行动计划与智能体国际合作倡议</h2>
+    <p>7 月 18 日 WAIC 期间，工信部牵头发布《国际人工智能伦理治理行动计划》，在联合国「未来契约」框架下倡导全生命周期伦理治理、分级风险防控与敏捷治理机制；同日国家网信办发布智能体信任、互联与互操作国际合作倡议，呼吁各国加大 Agent 身份识别、跨平台互操作等基础技术投入，推动全球 AI 协同治理。</p>
+    <div class="meta"><span>来源：中国网 / 中国日报</span><a href="https://www.163.com/dy/article/L24DKCL20514DG98.html">查看原文 ↗</a></div>
+  </div>
+
+  <footer>
+    AI 动态播报 · 每日自动生成 <span class="dot">●</span> 数据来源公开网络，仅供参考<br>
+    生成时间：2026-07-20 · 由 AI 助手自动整理
+  </footer>
+</body>
+</html>
