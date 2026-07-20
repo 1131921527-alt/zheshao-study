@@ -210,7 +210,6 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="qcard" onclick="goKnowPsyEq()"><div class="qi">🧠</div><div class="qt">心理学</div><div class="qd">认知 · 情绪 · 情商</div><div class="qbadge">新增5篇</div></div>
         <div class="qcard" onclick="goKnow('ielts')"><div class="qi">📖</div><div class="qt">雅思单词</div><div class="qd">每天15词 · 带音频</div></div>
         <div class="qcard" onclick="goKnowSport()"><div class="qi">🏃</div><div class="qt">运动健康</div><div class="qd">HYROX · 运动康复</div><div class="qbadge">新增10篇</div></div>
-        <div class="qcard" onclick="goKnow('fin')"><div class="qi">💰</div><div class="qt">财经科普</div><div class="qd">通胀 · 复利 · 理财</div><div class="qbadge">新上线</div></div>
         <div class="qcard" onclick="goKnow('tech')"><div class="qi">🤖</div><div class="qt">科技前沿</div><div class="qd">大模型 · 算力 · AI</div><div class="qbadge">新上线</div></div>
       </div>
 
@@ -255,7 +254,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </section>
     <!-- 知识中心 -->
     <section class="screen" id="s-know">
-      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文学 · 地理 · 心理 · 财经 · 科技 · 运动 · 雅思</div><h1>知识中心</h1></div></div></div>
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文学 · 地理 · 心理 · 科技 · 运动 · 雅思</div><h1>知识中心</h1></div></div></div>
       <div class="pad" style="margin-top:16px">
 
         <div class="section-title k-toggle" onclick="toggleK('hist')">🏛️ 历史 <span class="more">展开/收起</span></div>
@@ -276,93 +275,10 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="section-title k-toggle" onclick="toggleKSport()">🏃 运动健康 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-sport"></div>
 
-        <div class="section-title k-toggle" onclick="toggleK('fin')">💰 财经科普 <span class="more">展开/收起</span></div>
-        <div class="klist hidden" id="klist-fin"></div>
         <div class="section-title k-toggle" onclick="toggleK('tech')">🤖 科技前沿 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-tech"></div>
 
       </div>
-    </section>
-
-    <!-- 长文：fin-inflation -->
-    <section class="screen" id="art-fin-inflation">
-      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
-<header class="art-head">
-  <div class="ah-meta">财经科普 · 基础 · 通胀</div>
-  <h1>💸 钱为什么会变毛：通胀到底怎么回事</h1>
-</header>
-<div class="body">
-<p class="lead">你有没有发现，小时候五毛钱一根的冰棍，现在要三块？不是冰棍变金贵了，是你的钱「变毛」了。背后这只看不见的手，叫<strong>通货膨胀</strong>。今天用大白话讲清楚它到底是什么、怎么来的、又怎么偷走你的钱。</p>
-<h2>一、通胀到底是什么：钱多了，东西就贵了</h2>
-<p>一句话：通胀就是<strong>货币购买力悄悄缩水</strong>。市面上商品就那么多，如果钱印得多、大家手里的钱变多了，买同样东西就得花更多钱——物价就被顶上去了。反过来，如果钱变少、东西变多，物价就会跌（那叫通缩，更难受）。通胀不是某样东西涨价，而是<strong>整体物价水平的持续上行</strong>。</p>
-<div class="callout"><span class="ct">💡 划重点</span>通胀的本质是「钱相对于东西变多了」。衡量它最常用的是 CPI（居民消费价格指数），比如「CPI 涨了 2%」，意思就是一篮子日常开销比去年贵了 2%。</div>
-<h2>二、通胀为什么会来：三个常见推手</h2>
-<p>第一，<strong>需求拉动</strong>：大家兜里有钱、抢着买，供不应求，价格自然涨。第二，<strong>成本推动</strong>：原材料、人工、房租涨了，商家把成本转嫁给你。第三，也是最关键的，<strong>货币超发</strong>：当市场上的钱增长速度远超真实财富增长速度，多出来的钱总要找个出口，最后就体现为物价上涨。</p>
-<h2>三、温和通胀不可怕，现金躺平才最亏</h2>
-<p>别一听通胀就慌。每年 2% 左右的温和通胀，其实是经济健康运转的信号——说明钱在流动、大家在消费。真正要命的是<strong>把钱纯现金放着不动</strong>：每年悄无声息贬值 2%~3%，十年下来购买力就缩水掉一大截。对抗通胀的核心思路只有一个：<strong>让你的资产增值速度跑过物价</strong>。</p>
-<div class="callout blue"><span class="ct">🧊 冷知识</span>历史上最狠的通胀：1923 年德国魏玛共和国，一沓钞票还不如一张纸值钱，老百姓烧钱取暖比买煤便宜；津巴布韦 2008 年通胀率一度达到百分之百亿级别，面额印到 100 万亿。那才叫「钱变纸」。</div>
-<div class="summary"><span class="st">📌 一句话收尾</span><ul>
-<li>通胀 = 货币购买力的慢性流失，不是某样东西贵了，是整体物价在涨。</li>
-<li>温和通胀正常，可怕的是现金躺平——钱会自己「缩水」。</li>
-<li>对抗通胀的唯一办法：让钱去能增值的地方，而不是压在枕头底下。</li>
-</ul></div>
-</div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
-      </article>
-    </section>
-
-    <!-- 长文：fin-compound -->
-    <section class="screen" id="art-fin-compound">
-      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
-<header class="art-head">
-  <div class="ah-meta">财经科普 · 基础 · 复利</div>
-  <h1>📈 复利：时间给你的礼物，也可能是陷阱</h1>
-</header>
-<div class="body">
-<p class="lead">爱因斯坦有句名言（虽然没考证出处）：复利是世界第八大奇迹，懂它的人赚，不懂的人被它收割。它听起来玄乎，其实就是「利滚利」——但滚起来的力量，远超绝大多数人的直觉。</p>
-<h2>一、复利是什么：让钱自己生小钱</h2>
-<p>你存 100 块，年利率 10%，一年后是 110。单利是每年只拿本金的 10%；<strong>复利</strong>是第二年拿「110 的 10%」——利息也变成了本金，继续生利息。一开始差距小到看不出，但年头一长，曲线会陡然翘起来，这就是所谓的「复利曲线」。</p>
-<div class="callout"><span class="ct">💡 划重点</span>复利的三个要素：本金、收益率、时间。其中<strong>时间往往比本金更重要</strong>——因为时间是指数项的指数。</div>
-<h2>二、72 法则：多久能翻一倍</h2>
-<p>不用算复杂的公式，记住<strong>72 法则</strong>：用 72 除以你的年化收益率，约等于本金翻倍需要的年数。比如年收益 6%，72÷6=12 年翻倍；年收益 12%，6 年翻倍。这就是为什么「早开始」这么重要：25 岁开始每月存一点，到 60 岁的成果，可能比 35 岁开始存双倍还多。</p>
-<h2>三、复利的另一面：负债也会利滚利</h2>
-<p>复利不挑好坏。你拿它理财，它是朋友；信用卡、消费贷拿它算你，它就是镰刀。欠款不还，利息变本金、再长利息，雪球越滚越大——很多人就是被「最低还款」的复利慢慢拖垮的。</p>
-<div class="callout blue"><span class="ct">🧊 冷知识</span>「爱因斯坦说复利是第八大奇迹」这句其实查无实据，大概率是后人安上的。但道理不假：巴菲特的财富绝大部分是 50 岁之后才攒出来的，靠的就是几十年复利。</div>
-<div class="summary"><span class="st">📌 一句话收尾</span><ul>
-<li>复利 = 利滚利，时间越长威力越大，早开始比多投更关键。</li>
-<li>72 法则：72÷年化收益率 ≈ 翻倍年数，随手就能算。</li>
-<li>用在资产上是朋友，用在负债上是敌人——别让信用卡利滚利。</li>
-</ul></div>
-</div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
-      </article>
-    </section>
-
-    <!-- 长文：fin-fund-stock -->
-    <section class="screen" id="art-fin-fund-stock">
-      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
-<header class="art-head">
-  <div class="ah-meta">财经科普 · 入门 · 投资</div>
-  <h1>🏦 基金和股票，普通人到底怎么选</h1>
-</header>
-<div class="body">
-<p class="lead">想让钱生钱，打开理财 App 却懵了：股票、基金、ETF 到底啥区别？这篇不荐股，只给你一张「选择地图」，帮你搞清楚每个工具是干嘛的、适合谁。</p>
-<h2>一、股票：你当老板，也当赌徒</h2>
-<p>买股票，等于买下一家公司的一小份所有权。公司赚钱分红、市场看好它，股价就涨，你跟着赚；反之就亏。好处是潜力大、自己说了算；坏处是<strong>波动剧烈、需要自己研究</strong>，新手很容易追涨杀跌、被情绪带着跑。</p>
-<h2>二、基金：把钱交给专业选手</h2>
-<p>基金就是把很多人的钱凑一起，交给基金经理帮你买一篮子资产。<strong>主动基金</strong>靠经理选股，收管理费；<strong>指数基金（含 ETF）</strong>不挑不选，直接复制沪深300、标普500这类指数，费率低、省心。对普通人来说，基金最大的价值是<strong>分散风险</strong>——不会因为一只股票暴雷就全军覆没。</p>
-<div class="callout"><span class="ct">💡 划重点</span>不懂不投。任何投资前，先搞清三件事：这笔钱多久不用（流动性）、能承受多大波动（风险）、你自己愿不愿意花时间研究（精力）。</div>
-<h2>三、普通人怎么选：三个自问</h2>
-<p>问自己：① 风险承受力如何？亏 20% 睡得着吗？② 这笔钱几年后用？③ 愿意花多少时间盯盘？如果答案是「中等风险、中长期、没空研究」，<strong>宽基指数基金定投</strong>往往是性价比最高的起点。长期看，大部分主动基金其实跑不赢指数——这是被反复验证过的事实。</p>
-<div class="callout blue"><span class="ct">🧊 冷知识</span>「定投」不是稳赚咒语，它只是用纪律摊平成本、对抗人性。市场长期向上时它好用，单边下跌时它也会亏——只是亏得更平滑、更扛得住。</div>
-<div class="summary"><span class="st">📌 一句话收尾</span><ul>
-<li>股票=自己当老板也当赌徒，要研究；基金=交给专业选手买一篮子，省心分散。</li>
-<li>普通人没时间研究，宽基指数基金定投通常是性价比最高的起点。</li>
-<li>本文是通识科普，不是投资建议；投资有风险，下单前先搞懂再下场。</li>
-</ul></div>
-</div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
-      </article>
     </section>
 
     <!-- 长文：tech-llm -->
@@ -2097,8 +2013,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
 <div class="summary"><span class="st">📌 一句话收尾</span><ul>
 <li>城市的核心商品是「高密度连接」，它催生机会也催生内卷。</li>
-<li>规模效应让大城市在基建和服务上更划算，但拥挤成本要靠治理消化。</li>
-<li>聊完地，下一组聊钱——财经。</li>
+        <li>规模效应让大城市在基建和服务上更划算，但拥挤成本要靠治理消化。</li>
 </ul></div>
 
 </div>
@@ -3271,29 +3186,93 @@ const EQ=[ {e:"💡",t:"高情商的本质：让别人舒服，也不委屈自�
 
 const IELTS=[
  {t:"完整版 · 带音频",d:"所有单词 + 真人发音，一站式背词",href:"ielts/full.html",badge:"推荐"},
- {t:"07-11",d:"Day 1 ·  · 15个高频词 + 例句",href:"ielts/day01.html"},
- {t:"07-12",d:"Day 2 ·  · 15个高频词 + 例句",href:"ielts/day02.html"},
- {t:"07-13",d:"Day 3 ·  · 15个高频词 + 例句",href:"ielts/day03.html"},
- {t:"07-14",d:"Day 4 ·  · 15个高频词 + 例句",href:"ielts/day04.html"},
- {t:"07-15",d:"Day 5 ·  · 15个高频词 + 例句",href:"ielts/day05.html"},
- {t:"07-16",d:"Day 6 ·  · 15个高频词 + 例句",href:"ielts/day06.html"},
- {t:"07-17",d:"Day 7 ·  · 15个高频词 + 例句",href:"ielts/day07.html"},
- {t:"07-18",d:"Day 8 ·  · 15个高频词 + 例句",href:"ielts/day08.html"}
+ {t:"Day 1",d:"15个高频词 + 例句",href:"ielts/day01.html"},
+ {t:"Day 2",d:"15个高频词 + 例句",href:"ielts/day02.html"},
+ {t:"Day 3",d:"15个高频词 + 例句",href:"ielts/day03.html"},
+ {t:"Day 4",d:"15个高频词 + 例句",href:"ielts/day04.html"},
+ {t:"Day 5",d:"15个高频词 + 例句",href:"ielts/day05.html"},
+ {t:"Day 6",d:"15个高频词 + 例句",href:"ielts/day06.html"},
+ {t:"Day 7",d:"15个高频词 + 例句",href:"ielts/day07.html"},
+ {t:"Day 8",d:"15个高频词 + 例句",href:"ielts/day08.html"},
+ {t:"Day 9",d:"15个高频词 + 例句",href:"ielts/day09.html"},
+ {t:"Day 10",d:"15个高频词 + 例句",href:"ielts/day10.html"},
+ {t:"Day 11",d:"15个高频词 + 例句",href:"ielts/day11.html"},
+ {t:"Day 12",d:"15个高频词 + 例句",href:"ielts/day12.html"},
+ {t:"Day 13",d:"15个高频词 + 例句",href:"ielts/day13.html"},
+ {t:"Day 14",d:"15个高频词 + 例句",href:"ielts/day14.html"},
+ {t:"Day 15",d:"15个高频词 + 例句",href:"ielts/day15.html"},
+ {t:"Day 16",d:"15个高频词 + 例句",href:"ielts/day16.html"},
+ {t:"Day 17",d:"15个高频词 + 例句",href:"ielts/day17.html"},
+ {t:"Day 18",d:"15个高频词 + 例句",href:"ielts/day18.html"},
+ {t:"Day 19",d:"15个高频词 + 例句",href:"ielts/day19.html"},
+ {t:"Day 20",d:"15个高频词 + 例句",href:"ielts/day20.html"},
+ {t:"Day 21",d:"15个高频词 + 例句",href:"ielts/day21.html"},
+ {t:"Day 22",d:"15个高频词 + 例句",href:"ielts/day22.html"},
+ {t:"Day 23",d:"15个高频词 + 例句",href:"ielts/day23.html"},
+ {t:"Day 24",d:"15个高频词 + 例句",href:"ielts/day24.html"},
+ {t:"Day 25",d:"15个高频词 + 例句",href:"ielts/day25.html"},
+ {t:"Day 26",d:"15个高频词 + 例句",href:"ielts/day26.html"},
+ {t:"Day 27",d:"15个高频词 + 例句",href:"ielts/day27.html"},
+ {t:"Day 28",d:"15个高频词 + 例句",href:"ielts/day28.html"},
+ {t:"Day 29",d:"15个高频词 + 例句",href:"ielts/day29.html"},
+ {t:"Day 30",d:"15个高频词 + 例句",href:"ielts/day30.html"},
+ {t:"Day 31",d:"15个高频词 + 例句",href:"ielts/day31.html"},
+ {t:"Day 32",d:"15个高频词 + 例句",href:"ielts/day32.html"},
+ {t:"Day 33",d:"15个高频词 + 例句",href:"ielts/day33.html"},
+ {t:"Day 34",d:"15个高频词 + 例句",href:"ielts/day34.html"},
+ {t:"Day 35",d:"15个高频词 + 例句",href:"ielts/day35.html"},
+ {t:"Day 36",d:"15个高频词 + 例句",href:"ielts/day36.html"},
+ {t:"Day 37",d:"15个高频词 + 例句",href:"ielts/day37.html"},
+ {t:"Day 38",d:"15个高频词 + 例句",href:"ielts/day38.html"},
+ {t:"Day 39",d:"15个高频词 + 例句",href:"ielts/day39.html"},
+ {t:"Day 40",d:"15个高频词 + 例句",href:"ielts/day40.html"},
+ {t:"Day 41",d:"15个高频词 + 例句",href:"ielts/day41.html"},
+ {t:"Day 42",d:"15个高频词 + 例句",href:"ielts/day42.html"},
+ {t:"Day 43",d:"15个高频词 + 例句",href:"ielts/day43.html"},
+ {t:"Day 44",d:"15个高频词 + 例句",href:"ielts/day44.html"},
+ {t:"Day 45",d:"15个高频词 + 例句",href:"ielts/day45.html"},
+ {t:"Day 46",d:"15个高频词 + 例句",href:"ielts/day46.html"},
+ {t:"Day 47",d:"15个高频词 + 例句",href:"ielts/day47.html"},
+ {t:"Day 48",d:"15个高频词 + 例句",href:"ielts/day48.html"},
+ {t:"Day 49",d:"15个高频词 + 例句",href:"ielts/day49.html"},
+ {t:"Day 50",d:"15个高频词 + 例句",href:"ielts/day50.html"},
+ {t:"Day 51",d:"15个高频词 + 例句",href:"ielts/day51.html"},
+ {t:"Day 52",d:"15个高频词 + 例句",href:"ielts/day52.html"},
+ {t:"Day 53",d:"15个高频词 + 例句",href:"ielts/day53.html"},
+ {t:"Day 54",d:"15个高频词 + 例句",href:"ielts/day54.html"},
+ {t:"Day 55",d:"15个高频词 + 例句",href:"ielts/day55.html"},
+ {t:"Day 56",d:"15个高频词 + 例句",href:"ielts/day56.html"},
+ {t:"Day 57",d:"15个高频词 + 例句",href:"ielts/day57.html"},
+ {t:"Day 58",d:"15个高频词 + 例句",href:"ielts/day58.html"},
+ {t:"Day 59",d:"15个高频词 + 例句",href:"ielts/day59.html"},
+ {t:"Day 60",d:"15个高频词 + 例句",href:"ielts/day60.html"},
+ {t:"Day 61",d:"15个高频词 + 例句",href:"ielts/day61.html"},
+ {t:"Day 62",d:"15个高频词 + 例句",href:"ielts/day62.html"},
+ {t:"Day 63",d:"15个高频词 + 例句",href:"ielts/day63.html"},
+ {t:"Day 64",d:"15个高频词 + 例句",href:"ielts/day64.html"},
+ {t:"Day 65",d:"15个高频词 + 例句",href:"ielts/day65.html"},
+ {t:"Day 66",d:"15个高频词 + 例句",href:"ielts/day66.html"},
+ {t:"Day 67",d:"15个高频词 + 例句",href:"ielts/day67.html"},
+ {t:"Day 68",d:"15个高频词 + 例句",href:"ielts/day68.html"},
+ {t:"Day 69",d:"15个高频词 + 例句",href:"ielts/day69.html"},
+ {t:"Day 70",d:"15个高频词 + 例句",href:"ielts/day70.html"},
+ {t:"Day 71",d:"15个高频词 + 例句",href:"ielts/day71.html"},
+ {t:"Day 72",d:"15个高频词 + 例句",href:"ielts/day72.html"},
+ {t:"Day 73",d:"15个高频词 + 例句",href:"ielts/day73.html"},
+ {t:"Day 74",d:"15个高频词 + 例句",href:"ielts/day74.html"},
+ {t:"Day 75",d:"15个高频词 + 例句",href:"ielts/day75.html"},
+ {t:"Day 76",d:"15个高频词 + 例句",href:"ielts/day76.html"},
+ {t:"Day 77",d:"15个高频词 + 例句",href:"ielts/day77.html"},
 ];
 
-const SLUG={hist:["hist-qinshihuang","hist-liubang","hist-libai","hist-caocao","hist-wuzetian","hist-sushi","hist-genghis","hist-wangyangming","hist-napoleon","hist-einstein"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"],sport:["sport-hyrox-what","sport-hyrox-stations","sport-hyrox-train","sport-flatfoot-cause","sport-flatfoot-rehab","sport-arch-collapse","sport-bowlegs","sport-pelvis","sport-gait","sport-rehab-overview","sport-split-ppl","sport-split-push","sport-split-pull-leg","sport-abs","sport-hypertrophy"],fin:["fin-inflation","fin-compound","fin-fund-stock"],tech:["tech-llm","tech-compute","tech-ml"]};
-const FIN=[
- {e:"💸",t:"钱为什么会变毛：通胀到底怎么回事",m:"财经科普 · 基础 · 通胀",b:"通胀就是货币购买力悄悄缩水。钱印多了、大家抢着买、成本涨了，物价就往上走。温和通胀是经济健康的信号，现金躺枕头底最亏。"},
- {e:"📈",t:"复利：时间给你的礼物，也可能是陷阱",m:"财经科普 · 基础 · 复利",b:"利滚利，让小钱随时间长大。72法则估翻倍年数；早开始、别断供是关键。但它反向也成立——信用卡、消费贷的复利是镰刀。"},
- {e:"🏦",t:"基金和股票，普通人到底怎么选",m:"财经科普 · 入门 · 投资",b:"股票=当老板也当赌徒，要自己研究；基金=把钱交给专业选手买一篮子。不懂不投，指数基金适合大多数人。本文是科普不是投资建议。"}
-];
+const SLUG={hist:["hist-qinshihuang","hist-liubang","hist-libai","hist-caocao","hist-wuzetian","hist-sushi","hist-genghis","hist-wangyangming","hist-napoleon","hist-einstein"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"],sport:["sport-hyrox-what","sport-hyrox-stations","sport-hyrox-train","sport-flatfoot-cause","sport-flatfoot-rehab","sport-arch-collapse","sport-bowlegs","sport-pelvis","sport-gait","sport-rehab-overview","sport-split-ppl","sport-split-push","sport-split-pull-leg","sport-abs","sport-hypertrophy"],tech:["tech-llm","tech-compute","tech-ml"]};
 const TECH=[
  {e:"🧠",t:"大模型（LLM）到底是个啥",m:"科技前沿 · AI · 大模型",b:"大模型本质是个超强的「接话茬」机器：吞下海量文本，学会预测下一个字。它不真理解，是在概率上逼近人类表达。强，但不完美。"},
  {e:"⚡",t:"算力到底是什么，为什么比黄金还贵",m:"科技前沿 · AI · 算力",b:"算力是AI的「马力」，靠GPU/TPU堆出来。贵在稀缺、耗电、全球抢。训练一次大模型的电够一个家庭用几十年。谁有算力谁有话语权。"},
  {e:"🤖",t:"机器学习：让机器自己「学」的魔法",m:"科技前沿 · AI · 机器学习",b:"不写规则，给机器一堆数据和答案，让它自己找规律。监督/无监督/强化三种学法，撑起推荐、识别、预测。数据质量决定上限。"}
 ];
 function renderK(){
-  const maps={hist:HISTORY,geo:GEO,psy:PSY,poem:POEM,eq:EQ,sport:SPORT,fin:FIN,tech:TECH};
+  const maps={hist:HISTORY,geo:GEO,psy:PSY,poem:POEM,eq:EQ,sport:SPORT,tech:TECH};
   for(const k in maps){
     document.getElementById('klist-'+k).innerHTML=maps[k].map((a,i)=>`<a class="krow" onclick="goArt('art-${SLUG[k][i]}')"><div><div class="kt">${a.t}</div><div class="km">${a.m}</div></div><div class="arr">→</div></a>`).join('');
   }

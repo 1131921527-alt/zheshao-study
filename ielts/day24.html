@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅思核心词汇 Day 24 — 每日15词自动更新</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+.header {
+  background: linear-gradient(135deg, #1a2332 0%, #0d1117 100%);
+  padding: 28px 16px 20px;
+  text-align: center;
+  border-bottom: 1px solid #21262d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+.header h1 { font-size: 24px; font-weight: 700; color: #58a6ff; margin-bottom: 4px; }
+.header .sub { font-size: 13px; color: #8b949e; }
+.header .controls { margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  background: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn:active { background: #30363d; transform: scale(0.97); }
+.btn-shuffle { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+.card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 14px;
+  margin: 16px 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+}
+.emoji-box {
+  width: 72px; height: 72px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  flex-shrink: 0;
+}
+.gradient-1 { background: linear-gradient(135deg, #ff6b6b22, #ee5a2422); }
+.gradient-2 { background: linear-gradient(135deg, #4834d422, #686de022); }
+.gradient-3 { background: linear-gradient(135deg, #22a6b322, #be2edd22); }
+.gradient-4 { background: linear-gradient(135deg, #f0932b22, #f9ca2422); }
+.gradient-5 { background: linear-gradient(135deg, #6ab04c22, #badc5822); }
+.gradient-6 { background: linear-gradient(135deg, #eb4d4b22, #ff797922); }
+.gradient-7 { background: linear-gradient(135deg, #130f4022, #5352ed22); }
+.gradient-8 { background: linear-gradient(135deg, #30336b22, #7ed6df22); }
+.gradient-9 { background: linear-gradient(135deg, #b7154022, #e77f6722); }
+.gradient-10 { background: linear-gradient(135deg, #0abde322, #54a0ff22); }
+.gradient-11 { background: linear-gradient(135deg, #01a3a422, #f368e022); }
+.gradient-12 { background: linear-gradient(135deg, #c4456922, #cf6a8722); }
+.gradient-13 { background: linear-gradient(135deg, #3dc1d322, #63cdda22); }
+.gradient-14 { background: linear-gradient(135deg, #e15f4122, #f8a5c222); }
+.gradient-15 { background: linear-gradient(135deg, #574b9022, #786fa622); }
+.word-info { flex: 1; min-width: 0; }
+.word-en { font-size: 22px; font-weight: 700; color: #f0f6fc; letter-spacing: 0.5px; }
+.word-num { font-size: 12px; color: #58a6ff; font-weight: 600; }
+.ipa { font-size: 14px; color: #8b949e; margin: 2px 0; }
+.pos-zh { font-size: 14px; color: #7ee787; font-weight: 500; }
+.audio-btns { display: flex; gap: 6px; margin-top: 6px; }
+.audio-btn {
+  background: #21262d;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s;
+}
+.audio-btn:active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+.playing { background: #1f6feb !important; color: #fff !important; border-color: #1f6feb !important; }
+.memory-story {
+  background: #1c2128;
+  border-top: 1px solid #21262d;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #8b949e;
+  line-height: 1.7;
+}
+.memory-story strong { color: #d2a8ff; }
+.usage-tip {
+  background: #1c2128;
+  border-top: 1px solid #21262d;
+  padding: 10px 16px;
+  font-size: 12px;
+  color: #8b949e;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.usage-tip span:first-child { flex-shrink: 0; }
+.sentences {
+  border-top: 1px solid #21262d;
+  padding: 10px 16px;
+}
+.sent-title { font-size: 12px; color: #58a6ff; font-weight: 600; margin-bottom: 8px; }
+.sent-item {
+  background: #0d1117;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+.sent-item:last-child { margin-bottom: 0; }
+.sent-en { font-size: 14px; color: #e6edf3; margin-bottom: 3px; line-height: 1.5; }
+.sent-en .highlight { color: #ffa657; font-weight: 600; }
+.sent-zh { font-size: 12px; color: #8b949e; margin-bottom: 4px; }
+.sent-play {
+  background: none;
+  border: 1px solid #30363d;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: 11px;
+  color: #8b949e;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.15s;
+}
+.sent-play:active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+.sent-play.playing { background: #1f6feb !important; color: #fff !important; border-color: #1f6feb !important; }
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 16px;
+  justify-content: center;
+}
+.toc-btn {
+  background: #21262d;
+  color: #8b949e;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.toc-btn:active { background: #30363d; color: #c9d1d9; }
+audio { display: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📖 雅思核心词汇 Day 8</h1>
+  <div class="sub">健康医疗 + 法律公正 · 15词 · 45例句 · 上次Day16</div>
+  <div class="controls">
+    <button class="btn btn-shuffle" onclick="shuffleCards()">🔀 乱序排列</button>
+    <button class="btn" onclick="resetOrder()">📋 恢复默认</button>
+  </div>
+</div>
+
+<div class="toc" id="toc"></div>
+
+<div id="cards-container"></div>
+
+<audio id="player" playsinline webkit-playsinline x5-playsinline></audio>
+
+<script>
+const WORDS = [
+  {
+    id: 1,
+    en: "capital", ipa: "/ˈkæpɪtl/", pos: "n.", zh: "资本",
+    emoji: "🧠", grad: "gradient-2",
+    story: "capit(头)+al→资本",
+    tip: "human capital",
+    sentences: [
+      { en: "Education builds human capital.", zh: "教育积累人力资本。" }
+    ]
+  },
+  {
+    id: 2,
+    en: "labor", ipa: "/ˈleɪbə(r)/", pos: "n.", zh: "劳动",
+    emoji: "💡", grad: "gradient-3",
+    story: "labor→劳动",
+    tip: "labor market",
+    sentences: [
+      { en: "Labor costs are rising.", zh: "劳动力成本在上升。" }
+    ]
+  },
+  {
+    id: 3,
+    en: "consumer", ipa: "/kənˈsjuːmə(r)/", pos: "n.", zh: "消费者",
+    emoji: "🔤", grad: "gradient-4",
+    story: "con(完全)+sum(取)+er→消费者",
+    tip: "consumer demand",
+    sentences: [
+      { en: "Consumer confidence fell.", zh: "消费者信心下降。" }
+    ]
+  },
+  {
+    id: 4,
+    en: "merchant", ipa: "/ˈmɜːtʃənt/", pos: "n.", zh: "商人",
+    emoji: "✍️", grad: "gradient-5",
+    story: "merchant→商人",
+    tip: "古义或电商",
+    sentences: [
+      { en: "The merchant sold spices.", zh: "那个商人卖香料。" }
+    ]
+  },
+  {
+    id: 5,
+    en: "bankruptcy", ipa: "/ˈbæŋkrʌptsi/", pos: "n.", zh: "破产",
+    emoji: "🌟", grad: "gradient-6",
+    story: "bank(银行)+rupt(断)+cy→破产",
+    tip: "与 insolvency 近义",
+    sentences: [
+      { en: "The chain faced bankruptcy.", zh: "该连锁店面临破产。" }
+    ]
+  },
+  {
+    id: 6,
+    en: "entrepreneur", ipa: "/ˌɒntrəprəˈnɜː(r)/", pos: "n.", zh: "企业家",
+    emoji: "📝", grad: "gradient-7",
+    story: "entre(在…间)+prend(拿)+eur→企业家",
+    tip: "创业者",
+    sentences: [
+      { en: "The entrepreneur launched a startup.", zh: "这位企业家创办了初创公司。" }
+    ]
+  },
+  {
+    id: 7,
+    en: "empirical", ipa: "/ɪmˈpɪrɪkl/", pos: "adj.", zh: "实证的",
+    emoji: "🎯", grad: "gradient-8",
+    story: "em(在…中)+pir(经验)+ical→实证",
+    tip: "empirical evidence",
+    sentences: [
+      { en: "The claim lacks empirical support.", zh: "该主张缺乏实证支持。" }
+    ]
+  },
+  {
+    id: 8,
+    en: "variable", ipa: "/ˈveəriəbl/", pos: "n.", zh: "/adj. 变量/可变的",
+    emoji: "🧩", grad: "gradient-9",
+    story: "vari(变)+able→可变/变量",
+    tip: "研究变量",
+    sentences: [
+      { en: "We controlled for each variable.", zh: "我们控制了每个变量。" }
+    ]
+  },
+  {
+    id: 9,
+    en: "correlate", ipa: "/ˈkɒrəleɪt/", pos: "v.", zh: "相关",
+    emoji: "⚡", grad: "gradient-10",
+    story: "cor(共同)+relate(关联)→相关",
+    tip: "correlate with",
+    sentences: [
+      { en: "Screen time correlates with sleep loss.", zh: "屏幕时间与睡眠不足相关。" }
+    ]
+  },
+  {
+    id: 10,
+    en: "analysis", ipa: "/əˈnæləsɪs/", pos: "n.", zh: "分析",
+    emoji: "🌈", grad: "gradient-11",
+    story: "ana(再)+lys(松)+is→分析",
+    tip: "复数 analyses",
+    sentences: [
+      { en: "The analysis revealed a trend.", zh: "分析揭示了一个趋势。" }
+    ]
+  },
+  {
+    id: 11,
+    en: "synthesis", ipa: "/ˈsɪnθəsɪs/", pos: "n.", zh: "综合",
+    emoji: "🔑", grad: "gradient-12",
+    story: "syn(一起)+thesis(放)→综合",
+    tip: "反义词 analysis",
+    sentences: [
+      { en: "The essay needs synthesis.", zh: "这篇文章需要综合。" }
+    ]
+  },
+  {
+    id: 12,
+    en: "contaminate", ipa: "/kənˈtæmɪneɪt/", pos: "v.", zh: "污染",
+    emoji: "📌", grad: "gradient-13",
+    story: "con(共同)+tamin(触碰)+ate：弄脏",
+    tip: "contaminate the soil/water",
+    sentences: [
+      { en: "Factories contaminated the river.", zh: "工厂污染了河流。" }
+    ]
+  },
+  {
+    id: 13,
+    en: "degrade", ipa: "/dɪˈɡreɪd/", pos: "v.", zh: "退化",
+    emoji: "🚀", grad: "gradient-14",
+    story: "de(下)+grade(级)：降级",
+    tip: "degrade the environment",
+    sentences: [
+      { en: "Plastic degrades slowly.", zh: "塑料降解很慢。" }
+    ]
+  },
+  {
+    id: 14,
+    en: "irrigation", ipa: "/ˌɪrɪˈɡeɪʃn/", pos: "n.", zh: "灌溉",
+    emoji: "💎", grad: "gradient-15",
+    story: "ir(入)+rig(水)+ation",
+    tip: "irrigation system",
+    sentences: [
+      { en: "Irrigation supports dry farming.", zh: "灌溉支撑旱地农业。" }
+    ]
+  },
+  {
+    id: 15,
+    en: "glacier", ipa: "/ˈɡlæsiə/", pos: "n.", zh: "冰川",
+    emoji: "📚", grad: "gradient-1",
+    story: "glaci(冰)+er",
+    tip: "melting glacier",
+    sentences: [
+      { en: "Glaciers store fresh water.", zh: "冰川储存淡水。" }
+    ]
+  }
+];
+
+const PLAYER = document.getElementById('player');
+let currentActiveBtn = null;
+
+function urlEncode(text) {
+  return encodeURIComponent(text);
+}
+
+function tts(text, lang){
+  try{ if(!window.speechSynthesis) return; var u=new SpeechSynthesisUtterance(text); u.lang=lang||'en-US'; u.rate=0.95; window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); }catch(e){}
+}
+function playWord(word, type) {
+  var audio = new Audio('audio/' + word.toLowerCase() + (type === 1 ? '_uk.mp3' : '_us.mp3'));
+  audio.play().catch(function() { tts(word, type===1?'en-GB':'en-US'); });
+}
+
+var _sentMap={"the region has abundant natural resources.":"audio/abundant_sent1.mp3","his health has deteriorated rapidly.":"audio/deteriorate_sent1.mp3","change is inevitable in a rapidly developing socie":"audio/inevitable_sent1.mp3","climate change policy remains a controversial issu":"audio/controversial_sent1.mp3","urbanisation is a widespread phenomenon in modern ":"audio/phenomenon_sent1.mp3","sustainable development is crucial for future gene":"audio/sustainable_sent1.mp3","oil prices fluctuate depending on global demand.":"audio/fluctuate_sent1.mp3","the predominant factor in success is perseverance.":"audio/predominant_sent1.mp3","we need to expedite the approval process.":"audio/expedite_sent1.mp3","governments must mitigate the effects of climate c":"audio/mitigate_sent1.mp3","smartphones have become ubiquitous in daily life.":"audio/ubiquitous_sent1.mp3","children are particularly vulnerable to air pollut":"audio/vulnerable_sent1.mp3","there is a paradox that richer nations often have ":"audio/paradox_sent1.mp3","a pragmatic approach is needed to solve this crisi":"audio/pragmatic_sent1.mp3","the building has great aesthetic appeal despite it":"audio/aesthetic_sent1.mp3","philosophers have long debated the nature of aesth":"audio/aesthetic_sent2.mp3","modern architecture often prioritizes function ove":"audio/aesthetic_sent3.mp3","the painting depicts a serene mountain landscape a":"audio/depict_sent1.mp3","the novel depicts life in a small coastal village.":"audio/depict_sent2.mp3","media often depicts young people as irresponsible.":"audio/depict_sent3.mp3","science fiction is a popular genre among young rea":"audio/genre_sent1.mp3","she enjoys writing in the mystery genre.":"audio/genre_sent2.mp3","this film blends several genres, including comedy ":"audio/genre_sent3.mp3","the film uses a non-linear narrative to tell the s":"audio/narrative_sent1.mp3","historians are revising the traditional narrative ":"audio/narrative_sent2.mp3","social media has changed how we construct personal":"audio/narrative_sent3.mp3","the regime used propaganda to control public opini":"audio/propaganda_sent1.mp3","that advertisement is nothing more than commercial":"audio/propaganda_sent2.mp3","citizens grew weary of constant political propagan":"audio/propaganda_sent3.mp3","the novel is a sharp satire on modern politics.":"audio/satire_sent1.mp3","swift's 'gulliver's travels' is a famous work of s":"audio/satire_sent2.mp3","the tv show uses satire to critique social norms.":"audio/satire_sent3.mp3","it's unfair to judge people based on stereotypes.":"audio/stereotype_sent1.mp3","the film challenges stereotypes about elderly peop":"audio/stereotype_sent2.mp3","media often stereotypes certain professions in a n":"audio/stereotype_sent3.mp3","his speech was full of rhetoric but lacked substan":"audio/rhetoric_sent1.mp3","the politician's rhetoric often fails to match his":"audio/rhetoric_sent2.mp3","'why should we care?' is a classic rhetorical ques":"audio/rhetoric_sent3.mp3","orwell's 'animal farm' is a famous political alleg":"audio/allegory_sent1.mp3","the play can be read as an allegory for totalitari":"audio/allegory_sent2.mp3","medieval artists often used allegory in their pain":"audio/allegory_sent3.mp3","words often fail to convey our deepest emotions.":"audio/convey_sent1.mp3","the painting conveys a sense of melancholy and iso":"audio/convey_sent2.mp3","body language can convey more than spoken words.":"audio/convey_sent3.mp3","the film portrays the king as a cruel tyrant.":"audio/portray_sent1.mp3","she was portrayed as a strong and independent woma":"audio/portray_sent2.mp3","the actor portrayed hamlet with great passion.":"audio/portray_sent3.mp3","there are subtle differences between the two theor":"audio/subtle_sent1.mp3","her writing is known for its subtle humor and iron":"audio/subtle_sent2.mp3","the artist uses subtle shades of gray in this pain":"audio/subtle_sent3.mp3","the contract includes explicit terms about the dea":"audio/explicit_sent1.mp3","she was explicit about her reasons for leaving the":"audio/explicit_sent2.mp3","the film contains explicit scenes of violence.":"audio/explicit_sent3.mp3","smartphones have become omnipresent in modern soci":"audio/omnipresent_sent1.mp3","advertising is omnipresent in public spaces.":"audio/omnipresent_sent2.mp3","the influence of social media is omnipresent in ou":"audio/omnipresent_sent3.mp3","she is a versatile actress capable of playing many":"audio/versatile_sent1.mp3","this versatile jacket can be worn in any season.":"audio/versatile_sent2.mp3","plastic is a versatile material used in many indus":"audio/versatile_sent3.mp3","a good therapist must show empathy toward every cl":"audio/empathy_sent1.mp3","his speech was full of empathy for the victims of ":"audio/empathy_sent2.mp3","reading fiction can increase our capacity for empa":"audio/empathy_sent3.mp3","she felt anxious about her upcoming job interview.":"audio/anxious_sent1.mp3","parents are often anxious for their children's suc":"audio/anxious_sent2.mp3","he was anxious to make a good impression on his ne":"audio/anxious_sent3.mp3","elderly people are particularly vulnerable to the ":"audio/vulnerable_sent1.mp3","children are often the most vulnerable victims of ":"audio/vulnerable_sent2.mp3","sharing personal stories online can make you feel ":"audio/vulnerable_sent3.mp3","she resented being treated as a child.":"audio/resent_sent1.mp3","many workers resent the long working hours imposed":"audio/resent_sent2.mp3","he deeply resents his brother's success.":"audio/resent_sent3.mp3","she spoke with deep compassion for the refugees.":"audio/compassion_sent1.mp3","true leaders are guided by compassion, not by powe":"audio/compassion_sent2.mp3","volunteering can cultivate a sense of compassion i":"audio/compassion_sent3.mp3","several celebrities endorsed the new environmental":"audio/endorse_sent1.mp3","the senator endorsed the proposed healthcare refor":"audio/endorse_sent2.mp3","many athletes refuse to endorse products containin":"audio/endorse_sent3.mp3","his arrogant behavior alienated many of his collea":"audio/alienate_sent1.mp3","modern city life can alienate people from nature.":"audio/alienate_sent2.mp3","young voters feel alienated from the political sys":"audio/alienate_sent3.mp3","the two brothers finally reconciled after years of":"audio/reconcile_sent1.mp3","it is hard to reconcile his public statements with":"audio/reconcile_sent2.mp3","she tried to reconcile her career ambitions with f":"audio/reconcile_sent3.mp3","we anticipate strong demand for the new product.":"audio/anticipate_sent1.mp3","economists anticipated the recession long before i":"audio/anticipate_sent2.mp3","she anticipated his arrival and prepared dinner in":"audio/anticipate_sent3.mp3","the refugees were met with a hostile reception.":"audio/hostile_sent1.mp3","his proposal received hostile criticism from the b":"audio/hostile_sent2.mp3","the two nations have been in a hostile relationshi":"audio/hostile_sent3.mp3","she was jealous of her sister's achievements.":"audio/jealous_sent1.mp3","a jealous partner can quickly destroy a relationsh":"audio/jealous_sent2.mp3","he felt jealous when he saw others succeeding.":"audio/jealous_sent3.mp3","she is held in high esteem by her colleagues.":"audio/esteem_sent1.mp3","parents should help build their children's self-es":"audio/esteem_sent2.mp3","his esteem for his teacher has only grown over the":"audio/esteem_sent3.mp3","advertisers often try to manipulate consumers' emo":"audio/manipulate_sent1.mp3","the politician was accused of manipulating the sta":"audio/manipulate_sent2.mp3","he manipulated his younger brother into doing his ":"audio/manipulate_sent3.mp3","an empathetic doctor listens carefully to every pa":"audio/empathetic_sent1.mp3","she gave an empathetic smile that put him at ease.":"audio/empathetic_sent2.mp3","teachers need to be empathetic toward students fro":"audio/empathetic_sent3.mp3","the older students tried to intimidate the new arr":"audio/intimidate_sent1.mp3","she refused to be intimidated by his aggressive to":"audio/intimidate_sent2.mp3","the witness was intimidated into silence.":"audio/intimidate_sent3.mp3","the school has recently updated its curriculum to ":"audio/curriculum_sent1.mp3","a well-designed curriculum balances theory and pra":"audio/curriculum_sent2.mp3","students are calling for a more diverse curriculum":"audio/curriculum_sent3.mp3","modern pedagogy emphasizes student-centered learni":"audio/pedagogy_sent1.mp3","the conference explored new approaches to language":"audio/pedagogy_sent2.mp3","technology has transformed pedagogy in higher educ":"audio/pedagogy_sent3.mp3","basic literacy is an essential skill for modern li":"audio/literacy_sent1.mp3","the government has launched a national literacy ca":"audio/literacy_sent2.mp3","improving digital literacy among the elderly has b":"audio/literacy_sent3.mp3","nine-year compulsory education is guaranteed by la":"audio/compulsory_sent1.mp3","math is a compulsory subject in most high schools.":"audio/compulsory_sent2.mp3","the wearing of seat belts became compulsory in 198":"audio/compulsory_sent3.mp3","she was awarded a full scholarship to oxford unive":"audio/scholarship_sent1.mp3","his scholarship on medieval history is widely resp":"audio/scholarship_sent2.mp3","without a scholarship, many students would be unab":"audio/scholarship_sent3.mp3","she spent three years writing her doctoral dissert":"audio/dissertation_sent1.mp3","his dissertation explores the impact of technology":"audio/dissertation_sent2.mp3","the dissertation defense is the final step before ":"audio/dissertation_sent3.mp3","employers often require proof of academic credenti":"audio/credential_sent1.mp3","his credentials as a researcher are impeccable.":"audio/credential_sent2.mp3","you need the right credentials to practice medicin":"audio/credential_sent3.mp3","vocational education prepares students for specifi":"audio/vocational_sent1.mp3","the government is investing heavily in vocational ":"audio/vocational_sent2.mp3","he believes that vocational skills are just as imp":"audio/vocational_sent3.mp3","university tuition fees have risen dramatically in":"audio/tuition_sent1.mp3","she works part-time to cover her tuition expenses.":"audio/tuition_sent2.mp3","the company offers tuition reimbursement for emplo":"audio/tuition_sent3.mp3","the test measures your proficiency in spoken engli":"audio/proficiency_sent1.mp3","her proficiency in data analysis impressed the int":"audio/proficiency_sent2.mp3","it takes years to achieve true proficiency in a se":"audio/proficiency_sent3.mp3","harvard university enjoys enormous prestige around":"audio/prestige_sent1.mp3","the award brought him great prestige in the scient":"audio/prestige_sent2.mp3","a company's prestige can be its greatest asset.":"audio/prestige_sent3.mp3","you must meet the eligibility criteria before appl":"audio/eligibility_sent1.mp3","his age meant he lost eligibility for the scholars":"audio/eligibility_sent2.mp3","the university will assess your academic eligibili":"audio/eligibility_sent3.mp3","she was granted tenure after six years of teaching":"audio/tenure_sent1.mp3","the professor published extensively during his ten":"audio/tenure_sent2.mp3","the system of academic tenure is designed to prote":"audio/tenure_sent3.mp3","the student was expelled for plagiarism.":"audio/plagiarism_sent1.mp3","many universities use software to detect plagiaris":"audio/plagiarism_sent2.mp3","always cite your sources to avoid plagiarism.":"audio/plagiarism_sent3.mp3","more students now have access to tertiary educatio":"audio/tertiary_sent1.mp3","the tertiary sector accounts for 70 percent of the":"audio/tertiary_sent2.mp3","enrollment in tertiary institutions has nearly dou":"audio/tertiary_sent3.mp3","many countries have abolished the death penalty.":"audio/abolish_sent1.mp3","the tax was abolished after widespread public prot":"audio/abolish_sent2.mp3","there are calls to abolish the outdated regulation":"audio/abolish_sent3.mp3","over the years, she has accumulated a vast collect":"audio/accumulate_sent1.mp3","toxic chemicals can accumulate in the food chain o":"audio/accumulate_sent2.mp3","it is important to accumulate practical experience":"audio/accumulate_sent3.mp3","the company's hiring policy seemed completely arbi":"audio/arbitrary_sent1.mp3","there is no scientific basis for such an arbitrary":"audio/arbitrary_sent2.mp3","the judge ruled that the fine was arbitrary and or":"audio/arbitrary_sent3.mp3","experts attribute the economic recovery to the gov":"audio/attribute_sent1.mp3","many health problems can be attributed to poor die":"audio/attribute_sent2.mp3","she attributed her success to years of hard work a":"audio/attribute_sent3.mp3","the study was criticized for showing a clear bias ":"audio/bias_sent1.mp3","unconscious bias can affect hiring decisions witho":"audio/bias_sent2.mp3","journalists are expected to report the news withou":"audio/bias_sent3.mp3","the company was sued for breach of contract after ":"audio/breach_sent1.mp3","the data breach exposed millions of users' persona":"audio/breach_sent2.mp3","his actions constitute a serious breach of profess":"audio/breach_sent3.mp3","the factory was ordered to cease operations immedi":"audio/cease_sent1.mp3","the rain finally ceased after three days of contin":"audio/cease_sent2.mp3","once the contract expires, all obligations under i":"audio/cease_sent3.mp3","the region suffers from a chronic shortage of clea":"audio/chronic_sent1.mp3","chronic stress can lead to serious health problems":"audio/chronic_sent2.mp3","the city's chronic traffic congestion has become a":"audio/chronic_sent3.mp3","the civil rights movement transformed american soc":"audio/civil_sent1.mp3","a civil lawsuit can take years to resolve through ":"audio/civil_sent2.mp3","all citizens have a civil duty to participate in t":"audio/civil_sent3.mp3","oil is one of the most actively traded commodities":"audio/commodity_sent1.mp3","in the digital age, personal data has become a val":"audio/commodity_sent2.mp3","the price of agricultural commodities fluctuates g":"audio/commodity_sent3.mp3","the airline offered to compensate passengers for t":"audio/compensate_sent1.mp3","hard work alone cannot compensate for a lack of re":"audio/compensate_sent2.mp3","workers who were injured on the job are entitled t":"audio/compensate_sent3.mp3","the research team spent months compiling data from":"audio/compile_sent1.mp3","she compiled a comprehensive reading list for her ":"audio/compile_sent2.mp3","the report was compiled from various government an":"audio/compile_sent3.mp3","it is difficult to conceive of a world without the":"audio/conceive_sent1.mp3","the original design was conceived by a team of eng":"audio/conceive_sent2.mp3","many great inventions were conceived during moment":"audio/conceive_sent3.mp3","the discussion should be confined to the main topi":"audio/confine_sent1.mp3","patients with infectious diseases may need to be c":"audio/confine_sent2.mp3","do not confine your learning to textbooks alone; r":"audio/confine_sent3.mp3","we need to confront the reality of climate change ":"audio/confront_sent1.mp3","the manager decided to confront the employee direc":"audio/confront_sent2.mp3","when confronted with evidence, the suspect finally":"audio/confront_sent3.mp3","the doctor diagnosed her with an early stage of lu":"audio/diagnose_sent1.mp3","engineers are trying to diagnose the cause of the ":"audio/diagnose_sent2.mp3","it took three specialists to diagnose the rare gen":"audio/diagnose_sent3.mp3","obesity has become a global epidemic affecting mil":"audio/epidemic_sent1.mp3","the government declared a public health emergency ":"audio/epidemic_sent2.mp3","social media addiction is reaching epidemic propor":"audio/epidemic_sent3.mp3","heart disease can be hereditary, so regular check-":"audio/hereditary_sent1.mp3","the family's hereditary wealth has been passed dow":"audio/hereditary_sent2.mp3","scientists have identified the hereditary gene res":"audio/hereditary_sent3.mp3","good hand hygiene is the simplest way to prevent i":"audio/hygiene_sent1.mp3","the restaurant was closed due to poor food hygiene":"audio/hygiene_sent2.mp3","schools should educate children about personal hyg":"audio/hygiene_sent3.mp3","the flu is highly infectious and spreads through a":"audio/infectious_sent1.mp3","her infectious smile instantly brightened the enti":"audio/infectious_sent2.mp3","patients with infectious diseases must be isolated":"audio/infectious_sent3.mp3","infant mortality rates have dropped significantly ":"audio/mortality_sent1.mp3","smoking is one of the leading causes of premature ":"audio/mortality_sent2.mp3","the report highlighted the link between air pollut":"audio/mortality_sent3.mp3","adequate nutrition is vital for children's physica":"audio/nutrition_sent1.mp3","the school launched a campaign to promote healthy ":"audio/nutrition_sent2.mp3","processed foods often lack the nutrition found in ":"audio/nutrition_sent3.mp3","the doctor prescribed antibiotics to treat the bac":"audio/prescribe_sent1.mp3","the law prescribes strict penalties for wildlife t":"audio/prescribe_sent2.mp3","doctors should avoid prescribing unnecessary medic":"audio/prescribe_sent3.mp3","after the surgery, he underwent six months of reha":"audio/rehabilitation_sent1.mp3","the prison system should focus on rehabilitation r":"audio/rehabilitation_sent2.mp3","the government has allocated funds for the rehabil":"audio/rehabilitation_sent3.mp3","common symptoms of covid include fever, cough, and":"audio/symptom_sent1.mp3","rising inflation is a symptom of deeper economic p":"audio/symptom_sent2.mp3","if symptoms persist for more than a week, consult ":"audio/symptom_sent3.mp3","cognitive behavioural therapy is effective for tre":"audio/therapy_sent1.mp3","she attends weekly speech therapy sessions to impr":"audio/therapy_sent2.mp3","music therapy has been shown to reduce stress leve":"audio/therapy_sent3.mp3","mosquitoes can transmit malaria and other deadly d":"audio/transmit_sent1.mp3","the satellite transmits data back to the ground st":"audio/transmit_sent2.mp3","traditional stories were transmitted orally from o":"audio/transmit_sent3.mp3","the jury returned a unanimous verdict of not guilt":"audio/verdict_sent1.mp3","the public's verdict on the new policy has been ov":"audio/verdict_sent2.mp3","we are still waiting for the court to deliver its ":"audio/verdict_sent3.mp3","the police obtained a search warrant before enteri":"audio/warrant_sent1.mp3","the seriousness of the situation warrants an immed":"audio/warrant_sent2.mp3","this product comes with a two-year warrant against":"audio/warrant_sent3.mp3","the company refused to yield to pressure from its ":"audio/yield_sent1.mp3","the research project yielded some unexpected but v":"audio/yield_sent2.mp3","farmers reported a record yield of wheat this harv":"audio/yield_sent3.mp3"};
+function playSentence(text, btn) {
+  if (currentActiveBtn) currentActiveBtn.classList.remove('playing');
+  var key = text.replace(/<[^>]+>/g, '').trim().toLowerCase().substring(0, 50);
+  var file = _sentMap[key] || '';
+  if (file) {
+    PLAYER.src = file;
+    btn.classList.add('playing');
+    currentActiveBtn = btn;
+    PLAYER.play().catch(function() {});
+    PLAYER.onended = function() { btn.classList.remove('playing'); currentActiveBtn = null; };
+    PLAYER.onerror = function() { btn.classList.remove('playing'); currentActiveBtn = null; };
+  } else {
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    setTimeout(function(){ btn.classList.remove('playing'); }, 1400);
+  }
+}
+
+function stripTags(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+}
+
+function renderCards(words) {
+  const container = document.getElementById('cards-container');
+  const toc = document.getElementById('toc');
+  let html = '';
+  let tocHtml = '';
+
+  words.forEach((w, idx) => {
+    tocHtml += `<button class="toc-btn" onclick="document.getElementById('card-${w.id}').scrollIntoView({behavior:'smooth',block:'start'})">${w.en}</button>`;
+
+    html += `<div class="card" id="card-${w.id}" data-original="${idx}">`;
+    html += `<div class="card-top">`;
+    html += `<div class="emoji-box ${w.grad}">${w.emoji}</div>`;
+    html += `<div class="word-info">`;
+    html += `<div class="word-num">No.${idx + 1} · 雅思核心</div>`;
+    html += `<div class="word-en">${w.en}</div>`;
+    html += `<div class="ipa">${w.ipa}</div>`;
+    html += `<div class="pos-zh">${w.pos} ${w.zh}</div>`;
+    html += `<div class="audio-btns">`;
+    html += `<button class="audio-btn" onclick="event.stopPropagation();playWord('${w.en}',1)">🇬🇧 GB</button>`;
+    html += `<button class="audio-btn" onclick="event.stopPropagation();playWord('${w.en}',2)">🇺🇸 US</button>`;
+    html += `</div></div></div>`;
+    html += `<div class="memory-story">${w.story}</div>`;
+    html += `<div class="usage-tip"><span>📌</span><span>${w.tip}</span></div>`;
+    html += `<div class="sentences">`;
+    html += `<div class="sent-title">📝 例句</div>`;
+    w.sentences.forEach((s, si) => {
+      const plainText = stripTags(s.en);
+      html += `<div class="sent-item">`;
+      html += `<div class="sent-en">${si + 1}. ${s.en}</div>`;
+      html += `<div class="sent-zh">${s.zh}</div>`;
+      html += `<button class="sent-play" data-text="${plainText.replace(/"/g, '&quot;')}">🔊 播放</button>`;
+      html += `</div>`;
+    });
+    html += `</div></div>`;
+  });
+
+  toc.innerHTML = tocHtml;
+  container.innerHTML = html;
+
+  // Attach sentence play handlers
+  document.querySelectorAll('.sent-play').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      playSentence(this.dataset.text, this);
+    });
+  });
+}
+
+function shuffleCards() {
+  const shuffled = [...WORDS].sort(() => Math.random() - 0.5);
+  renderCards(shuffled);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetOrder() {
+  renderCards([...WORDS]);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Init
+renderCards([...WORDS]);
+</script>
+
+<style>
+#liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
+#liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
+@keyframes lcPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+#liveClockBar .lc-date{color:#8b949e;white-space:nowrap}
+#liveClockBar .lc-time{font-variant-numeric:tabular-nums;font-weight:700;color:#e6edf3;letter-spacing:.5px;font-size:15px}
+#liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
+#liveClockBar .lc-sec{color:#ff7b72}
+#liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
+#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
+#liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
+@media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
+body{padding-top:44px!important}
+</style>
+<div id="liveClockBar">
+<span class="lc-dot"></span>
+<span class="lc-date" id="lcDate">--</span>
+<span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
+<span class="lc-tag">time goes by</span>
+<i class="lc-bar" id="lcBar"></i>
+</div>
+<script>
+(function(){
+  var w=['周日','周一','周二','周三','周四','周五','周六'];
+  function p(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var d=new Date();
+    var dt=document.getElementById('lcDate');
+    if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
+    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
+    if(h)h.textContent=p(d.getHours());
+    if(m)m.textContent=p(d.getMinutes());
+    if(s)s.textContent=p(d.getSeconds());
+    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
+  }
+  tick();setInterval(tick,1000);
+  window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
+  window.lcCopyWx=function(){
+    var id="Harryalwayslucky";
+    if(!id) return;
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
+    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
+  };
+})();
+</script><style>/*zsframe*/
+@media (min-width: 600px) {
+  html, body { background: #06090F !important; }
+  .wrap, .lesson {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    overflow: hidden !important; padding-top: 12px !important; }
+  .back { margin-top: 10px !important; }
+  body:not(:has(.app)):not(:has(.wrap)):not(:has(.lesson)) {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    min-height: calc(100vh - 32px) !important; padding-top: 12px !important; }
+  .grid { grid-template-columns: 1fr !important; }
+  .qr-row { flex-direction: column; align-items: center; }
+}
+</style></body>
+</html>

@@ -4399,5 +4399,5963 @@
   "tip": "an acute crisis",
   "en": "The crisis is acute.",
   "cn": "危机严重。"
+ },
+ {
+  "word": "abandon",
+  "ipa": "/əˈbændən/",
+  "pos": "v. 抛弃，放弃",
+  "story": "a+band(乐队)+on：乐队散了→抛弃",
+  "tip": "abandon doing / abandoned adj.",
+  "en": "They abandoned the sinking ship.",
+  "cn": "他们弃船而逃。"
+ },
+ {
+  "word": "adjacent",
+  "ipa": "/əˈdʒeɪsənt/",
+  "pos": "adj. 相邻的",
+  "story": "ad+jac(躺)+ent：躺旁边",
+  "tip": "adjacent to",
+  "en": "The two buildings are adjacent.",
+  "cn": "两栋楼相邻。"
+ },
+ {
+  "word": "administer",
+  "ipa": "/ədˈmɪnɪstə/",
+  "pos": "v. 管理；执行",
+  "story": "ad+minister(部长)：像部长管事",
+  "tip": "administer a test / a country",
+  "en": "She administers the project.",
+  "cn": "她管理这个项目。"
+ },
+ {
+  "word": "adolescent",
+  "ipa": "/ˌædəˈlesnt/",
+  "pos": "n./adj. 青少年(的)",
+  "story": "ad+olesc(长大)+ent",
+  "tip": "adolescent students",
+  "en": "Adolescents need guidance.",
+  "cn": "青少年需要引导。"
+ },
+ {
+  "word": "ambitious",
+  "ipa": "/æmˈbɪʃəs/",
+  "pos": "adj. 有雄心的",
+  "story": "ambit(环绕)+ious：想包围更多",
+  "tip": "an ambitious plan",
+  "en": "She has ambitious goals.",
+  "cn": "她目标远大。"
+ },
+ {
+  "word": "analogous",
+  "ipa": "/əˈnæləɡəs/",
+  "pos": "adj. 类似的",
+  "story": "ana(类似)+log(说)+ous",
+  "tip": "analogous to",
+  "en": "This is analogous to that.",
+  "cn": "这与那个类似。"
+ },
+ {
+  "word": "analyse",
+  "ipa": "/ˈænəlaɪz/",
+  "pos": "v. 分析",
+  "story": "ana(贯穿)+lyse(松)：拆开看",
+  "tip": "analyse the data",
+  "en": "We analysed the results.",
+  "cn": "我们分析了结果。"
+ },
+ {
+  "word": "anxiety",
+  "ipa": "/æŋˈzaɪəti/",
+  "pos": "n. 焦虑",
+  "story": "anx(窄)+iety：心发紧",
+  "tip": "feel anxiety",
+  "en": "Exam anxiety is common.",
+  "cn": "考前焦虑很常见。"
+ },
+ {
+  "word": "applaud",
+  "ipa": "/əˈplɔːd/",
+  "pos": "v. 鼓掌；称赞",
+  "story": "ap+plaud(拍)",
+  "tip": "applaud the effort",
+  "en": "The audience applauded.",
+  "cn": "观众鼓掌。"
+ },
+ {
+  "word": "argue",
+  "ipa": "/ˈɑːɡjuː/",
+  "pos": "v. 争论；主张",
+  "story": "arg(亮)+ue",
+  "tip": "argue that / argue for",
+  "en": "He argued for change.",
+  "cn": "他主张变革。"
+ },
+ {
+  "word": "automatic",
+  "ipa": "/ˌɔːtəˈmætɪk/",
+  "pos": "adj. 自动的",
+  "story": "auto(自)+matic",
+  "tip": "automatic door",
+  "en": "The process is automatic.",
+  "cn": "流程是自动的。"
+ },
+ {
+  "word": "bais",
+  "ipa": "/ˈbeɪs/",
+  "pos": "n. 偏见；v. 使偏向",
+  "story": "bias 音似‘偏好’",
+  "tip": "cognitive bias",
+  "en": "The test shows a bias.",
+  "cn": "测试显示出偏见。"
+ },
+ {
+  "word": "barrier",
+  "ipa": "/ˈbæriə/",
+  "pos": "n. 障碍",
+  "story": "barr(栏)+ier",
+  "tip": "language barrier",
+  "en": "The wall is a barrier.",
+  "cn": "这墙是个障碍。"
+ },
+ {
+  "word": "behalf",
+  "ipa": "/bɪˈhɑːf/",
+  "pos": "n. 代表；利益",
+  "story": "be+list(列)：列名下",
+  "tip": "on behalf of",
+  "en": "I speak on his behalf.",
+  "cn": "我代表他发言。"
+ },
+ {
+  "word": "behave",
+  "ipa": "/bɪˈheɪv/",
+  "pos": "v. 表现；举止",
+  "story": "be+have(有)：有样",
+  "tip": "behave well",
+  "en": "Children should behave.",
+  "cn": "孩子应有礼貌。"
+ },
+ {
+  "word": "believe",
+  "ipa": "/bɪˈliːv/",
+  "pos": "v. 相信",
+  "story": "be+lieve(爱)",
+  "tip": "believe in / believe that",
+  "en": "I believe he is honest.",
+  "cn": "我相信他是诚实的。"
+ },
+ {
+  "word": "benefit",
+  "ipa": "/ˈbenɪfɪt/",
+  "pos": "n. 益处；v. 受益",
+  "story": "bene(好)+fit",
+  "tip": "benefit from",
+  "en": "We benefit from exercise.",
+  "cn": "我们受益于运动。"
+ },
+ {
+  "word": "boost",
+  "ipa": "/buːst/",
+  "pos": "v./n. 提升，推动",
+  "story": "boost 音似‘补斯特’",
+  "tip": "boost morale",
+  "en": "The ad boosted sales.",
+  "cn": "广告提振了销量。"
+ },
+ {
+  "word": "bound",
+  "ipa": "/baʊnd/",
+  "pos": "adj. 必定的；受约束的",
+  "story": "bound 音似‘绑的’",
+  "tip": "be bound to",
+  "en": "He is bound to succeed.",
+  "cn": "他必定会成功。"
+ },
+ {
+  "word": "breif",
+  "ipa": "/briːf/",
+  "pos": "adj. 简短的",
+  "story": "breif 音似‘brief’",
+  "tip": "in brief / a brief meeting",
+  "en": "Give a brief summary.",
+  "cn": "做个简短总结。"
+ },
+ {
+  "word": "broad",
+  "ipa": "/brɔːd/",
+  "pos": "adj. 宽阔的",
+  "story": "broad 与‘宽’联想",
+  "tip": "broad support",
+  "en": "The road is broad.",
+  "cn": "这条路很宽。"
+ },
+ {
+  "word": "budget",
+  "ipa": "/ˈbʌdʒɪt/",
+  "pos": "n. 预算",
+  "story": "budget 音似‘巴结它’",
+  "tip": "within budget",
+  "en": "We are over budget.",
+  "cn": "我们超预算了。"
+ },
+ {
+  "word": "bureau",
+  "ipa": "/ˈbjʊərəʊ/",
+  "pos": "n. 局，办事处",
+  "story": "bureau 音似‘局’",
+  "tip": "a government bureau",
+  "en": "The bureau issued a rule.",
+  "cn": "该局发布了一项规定。"
+ },
+ {
+  "word": "bypass",
+  "ipa": "/ˈbaɪpɑːs/",
+  "pos": "v. 绕过",
+  "story": "by+pass(过)",
+  "tip": "bypass the problem",
+  "en": "They bypassed the queue.",
+  "cn": "他们绕过了排队。"
+ },
+ {
+  "word": "capable",
+  "ipa": "/ˈkeɪpəbl/",
+  "pos": "adj. 有能力的",
+  "story": "cap(抓)+able：抓得住",
+  "tip": "capable of",
+  "en": "She is capable ofleading.",
+  "cn": "她有能力领导。"
+ },
+ {
+  "word": "capacity",
+  "ipa": "/kəˈpæsəti/",
+  "pos": "n. 容量；能力",
+  "story": "cap(抓)+acity",
+  "tip": "seating capacity",
+  "en": "The hall has great capacity.",
+  "cn": "大厅容量很大。"
+ },
+ {
+  "word": "category",
+  "ipa": "/ˈkætəɡəri/",
+  "pos": "n. 类别",
+  "story": "cata(下)+gory(组)",
+  "tip": "in the same category",
+  "en": "Sort them by category.",
+  "cn": "按类别分类。"
+ },
+ {
+  "word": "challenge",
+  "ipa": "/ˈtʃælɪndʒ/",
+  "pos": "n./v. 挑战",
+  "story": "challenge 音似‘差林治’",
+  "tip": "face a challenge",
+  "en": "This is a real challenge.",
+  "cn": "这是个真正的挑战。"
+ },
+ {
+  "word": "channel",
+  "ipa": "/ˈtʃænl/",
+  "pos": "n. 渠道；频道",
+  "story": "channel 音似‘渠道’",
+  "tip": "through official channels",
+  "en": "Use the right channel.",
+  "cn": "用对渠道。"
+ },
+ {
+  "word": "chapter",
+  "ipa": "/ˈtʃæptə/",
+  "pos": "n. 章节",
+  "story": "chapt(头)+er：一段开头",
+  "tip": "read a chapter",
+  "en": "Finish this chapter.",
+  "cn": "读完这一章。"
+ },
+ {
+  "word": "characteristic",
+  "ipa": "/ˌkærəktəˈrɪstɪk/",
+  "pos": "n./adj. 特征(的)",
+  "story": "character+istic",
+  "tip": "a key characteristic",
+  "en": "Honesty is a trait.",
+  "cn": "诚实是一种特质。"
+ },
+ {
+  "word": "citizen",
+  "ipa": "/ˈsɪtɪzn/",
+  "pos": "n. 公民",
+  "story": "citi(城市)+zen",
+  "tip": "a responsible citizen",
+  "en": "Every citizen has duties.",
+  "cn": "每个公民都有义务。"
+ },
+ {
+  "word": "clarify",
+  "ipa": "/ˈklærɪfaɪ/",
+  "pos": "v. 澄清",
+  "story": "clar(清)+ify(使)",
+  "tip": "clarify the point",
+  "en": "Let me clarify my view.",
+  "cn": "让我澄清观点。"
+ },
+ {
+  "word": "classic",
+  "ipa": "/ˈklæsɪk/",
+  "pos": "adj. 经典的",
+  "story": "class(级)+ic",
+  "tip": "a classic novel",
+  "en": "This is a classic book.",
+  "cn": "这是一本经典书。"
+ },
+ {
+  "word": "clue",
+  "ipa": "/kluː/",
+  "pos": "n. 线索",
+  "story": "clue 音似‘刻路’",
+  "tip": "a vital clue",
+  "en": "The clue solved the case.",
+  "cn": "线索破了案。"
+ },
+ {
+  "word": "collaborate",
+  "ipa": "/kəˈlæbəreɪt/",
+  "pos": "v. 合作",
+  "story": "col+labour(劳动)+ate",
+  "tip": "collaborate with",
+  "en": "They collaborated on the paper.",
+  "cn": "他们合作写了论文。"
+ },
+ {
+  "word": "collapse",
+  "ipa": "/kəˈlæps/",
+  "pos": "v./n. 倒塌；崩溃",
+  "story": "col+lapse(滑)：一起滑倒",
+  "tip": "the economy collapsed",
+  "en": "The bridge collapsed.",
+  "cn": "桥塌了。"
+ },
+ {
+  "word": "colleague",
+  "ipa": "/ˈkɒliːɡ/",
+  "pos": "n. 同事",
+  "story": "col+league(联盟)",
+  "tip": "a trusted colleague",
+  "en": "My colleagues are helpful.",
+  "cn": "我的同事很帮忙。"
+ },
+ {
+  "word": "commence",
+  "ipa": "/kəˈmens/",
+  "pos": "v. 开始",
+  "story": "com+mence(开始)",
+  "tip": "commence with",
+  "en": "The meeting commenced.",
+  "cn": "会议开始了。"
+ },
+ {
+  "word": "comment",
+  "ipa": "/ˈkɒment/",
+  "pos": "n./v. 评论",
+  "story": "com+ment(心)：说心里话",
+  "tip": "comment on",
+  "en": "She commented on the news.",
+  "cn": "她评论了这则新闻。"
+ },
+ {
+  "word": "commission",
+  "ipa": "/kəˈmɪʃn/",
+  "pos": "n. 委员会；佣金",
+  "story": "com+miss(派)+ion",
+  "tip": "a commission of inquiry",
+  "en": "The commission investigated.",
+  "cn": "委员会展开了调查。"
+ },
+ {
+  "word": "commit",
+  "ipa": "/kəˈmɪt/",
+  "pos": "v. 承诺；犯(错)",
+  "story": "com+mit(派)：把自己交出去",
+  "tip": "commit to",
+  "en": "He committed to the plan.",
+  "cn": "他承诺执行计划。"
+ },
+ {
+  "word": "compel",
+  "ipa": "/kəmˈpel/",
+  "pos": "v. 强迫",
+  "story": "com+pel(推)：一起推",
+  "tip": "be compelled to",
+  "en": "He was compelled to leave.",
+  "cn": "他被迫离开。"
+ },
+ {
+  "word": "complement",
+  "ipa": "/ˈkɒmplɪment/",
+  "pos": "n./v. 补充；补足",
+  "story": "com+ple(满)+ment",
+  "tip": "易混 complement vs compliment",
+  "en": "Wine complements food.",
+  "cn": "酒与食物相得益彰。"
+ },
+ {
+  "word": "complex",
+  "ipa": "/ˈkɒmpleks/",
+  "pos": "adj. 复杂的",
+  "story": "com+plex(折)：多折",
+  "tip": "a complex issue",
+  "en": "The system is complex.",
+  "cn": "系统很复杂。"
+ },
+ {
+  "word": "comply",
+  "ipa": "/kəmˈplaɪ/",
+  "pos": "v. 遵从",
+  "story": "com+ply(满)：凑满规则",
+  "tip": "comply with",
+  "en": "We comply with the law.",
+  "cn": "我们遵守法律。"
+ },
+ {
+  "word": "component",
+  "ipa": "/kəmˈpəʊnənt/",
+  "pos": "n. 组成部分",
+  "story": "com+pon(放)+ent",
+  "tip": "a key component",
+  "en": "Trust is a component.",
+  "cn": "信任是一个组成部分。"
+ },
+ {
+  "word": "comprise",
+  "ipa": "/kəmˈpraɪz/",
+  "pos": "v. 包含；由…组成",
+  "story": "com+prise(抓)：全抓在里",
+  "tip": "be comprised of",
+  "en": "The team comprises 10.",
+  "cn": "团队由10人组成。"
+ },
+ {
+  "word": "concentrate",
+  "ipa": "/ˈkɒnsntreɪt/",
+  "pos": "v. 集中；专注",
+  "story": "con+centr(中)+ate",
+  "tip": "concentrate on",
+  "en": "Concentrate on your work.",
+  "cn": "专心工作。"
+ },
+ {
+  "word": "concept",
+  "ipa": "/ˈkɒnsept/",
+  "pos": "n. 概念",
+  "story": "con+cept(抓)：抓到的想法",
+  "tip": "a new concept",
+  "en": "This is a hard concept.",
+  "cn": "这是个难懂的概念。"
+ },
+ {
+  "word": "concern",
+  "ipa": "/kənˈsɜːn/",
+  "pos": "v./n. 关心；担忧",
+  "story": "con+cern(分)：牵扯",
+  "tip": "be concerned about",
+  "en": "We are concerned for him.",
+  "cn": "我们为他担心。"
+ },
+ {
+  "word": "conclude",
+  "ipa": "/kənˈkluːd/",
+  "pos": "v. 总结；断定",
+  "story": "con+clude(关)：收尾",
+  "tip": "conclude that...",
+  "en": "We concluded the meeting.",
+  "cn": "我们结束了会议。"
+ },
+ {
+  "word": "condemn",
+  "ipa": "/kənˈdem/",
+  "pos": "v. 谴责",
+  "story": "con+demn(判)：重判",
+  "tip": "condemn the act",
+  "en": "They condemned the attack.",
+  "cn": "他们谴责了袭击。"
+ },
+ {
+  "word": "condense",
+  "ipa": "/kənˈdens/",
+  "pos": "v. 压缩；浓缩",
+  "story": "con+dense(密)",
+  "tip": "condense the report",
+  "en": "Condense it into one page.",
+  "cn": "把它压缩到一页。"
+ },
+ {
+  "word": "conduct",
+  "ipa": "/kənˈdʌkt/",
+  "pos": "v. 实施；引导",
+  "story": "con+duct(引)",
+  "tip": "conduct a study",
+  "en": "They conducted research.",
+  "cn": "他们开展了研究。"
+ },
+ {
+  "word": "confer",
+  "ipa": "/kənˈfɜː/",
+  "pos": "v. 授予；商议",
+  "story": "con+fer(带)：一起带",
+  "tip": "confer a degree",
+  "en": "The university conferred it.",
+  "cn": "大学授予了学位。"
+ },
+ {
+  "word": "confirm",
+  "ipa": "/kənˈfɜːm/",
+  "pos": "v. 确认",
+  "story": "con+firm(坚)",
+  "tip": "confirm the booking",
+  "en": "Please confirm receipt.",
+  "cn": "请确认收到。"
+ },
+ {
+  "word": "conflict",
+  "ipa": "/ˈkɒnflɪkt/",
+  "pos": "n./v. 冲突",
+  "story": "con+flict(击)：互打",
+  "tip": "in conflict with",
+  "en": "Their views conflict.",
+  "cn": "他们的观点冲突。"
+ },
+ {
+  "word": "conform",
+  "ipa": "/kənˈfɔːm/",
+  "pos": "v. 遵守；符合",
+  "story": "con+form(形)：同形",
+  "tip": "conform to",
+  "en": "Conform to the rules.",
+  "cn": "遵守规则。"
+ },
+ {
+  "word": "confuse",
+  "ipa": "/kənˈfjuːz/",
+  "pos": "v. 使困惑",
+  "story": "con+fuse(流)：混流",
+  "tip": "be confused by",
+  "en": "Don't confuse the two.",
+  "cn": "别把两者混淆。"
+ },
+ {
+  "word": "congress",
+  "ipa": "/ˈkɒŋɡres/",
+  "pos": "n. 国会；大会",
+  "story": "con+gress(走)：走到一起",
+  "tip": "a medical congress",
+  "en": "The congress met annually.",
+  "cn": "大会每年召开。"
+ },
+ {
+  "word": "connect",
+  "ipa": "/kəˈnekt/",
+  "pos": "v. 连接",
+  "story": "con+nect(绑)",
+  "tip": "connect to",
+  "en": "Connect the cable.",
+  "cn": "接上电缆。"
+ },
+ {
+  "word": "consent",
+  "ipa": "/kənˈsent/",
+  "pos": "n./v. 同意",
+  "story": "con+sent(感觉)：同感",
+  "tip": "give one's consent",
+  "en": "She consented to it.",
+  "cn": "她同意了。"
+ },
+ {
+  "word": "consequence",
+  "ipa": "/ˈkɒnsɪkwəns/",
+  "pos": "n. 后果",
+  "story": "con+sequ(跟随)+ence",
+  "tip": "as a consequence",
+  "en": "Pollution has consequences.",
+  "cn": "污染有后果。"
+ },
+ {
+  "word": "conservative",
+  "ipa": "/kənˈsɜːvətɪv/",
+  "pos": "adj. 保守的",
+  "story": "con+serv(保)+ative",
+  "tip": "a conservative view",
+  "en": "He holds conservative views.",
+  "cn": "他持保守观点。"
+ },
+ {
+  "word": "consider",
+  "ipa": "/kənˈsɪdə/",
+  "pos": "v. 考虑",
+  "story": "con+sider(星)：细看",
+  "tip": "consider doing",
+  "en": "Consider all options.",
+  "cn": "考虑所有方案。"
+ },
+ {
+  "word": "consist",
+  "ipa": "/kənˈsɪst/",
+  "pos": "v. 由…组成",
+  "story": "con+sist(站)：站在一起",
+  "tip": "consist of",
+  "en": "The team consists of 5.",
+  "cn": "团队由5人组成。"
+ },
+ {
+  "word": "console",
+  "ipa": "/kənˈsəʊl/",
+  "pos": "v. 安慰",
+  "story": "con+sole(独)：同担",
+  "tip": "console the grieving",
+  "en": "She consoled her friend.",
+  "cn": "她安慰了朋友。"
+ },
+ {
+  "word": "construct",
+  "ipa": "/kənˈstrʌkt/",
+  "pos": "v. 建造",
+  "story": "con+struct(建)",
+  "tip": "construct a model",
+  "en": "They constructed a bridge.",
+  "cn": "他们建了一座桥。"
+ },
+ {
+  "word": "consult",
+  "ipa": "/kənˈsʌlt/",
+  "pos": "v. 咨询",
+  "story": "con+sult(坐)：同坐商议",
+  "tip": "consult a doctor",
+  "en": "Consult an expert first.",
+  "cn": "先咨询专家。"
+ },
+ {
+  "word": "consume",
+  "ipa": "/kənˈsjuːm/",
+  "pos": "v. 消耗；消费",
+  "story": "con+sume(取)：全取",
+  "tip": "consume energy",
+  "en": "Cars consume fuel.",
+  "cn": "汽车消耗燃料。"
+ },
+ {
+  "word": "contact",
+  "ipa": "/ˈkɒntækt/",
+  "pos": "n./v. 联系",
+  "story": "con+tact(触)",
+  "tip": "keep in contact",
+  "en": "Stay in contact with us.",
+  "cn": "和我们保持联系。"
+ },
+ {
+  "word": "contemporary",
+  "ipa": "/kənˈtemprəri/",
+  "pos": "adj. 当代的；同时代的",
+  "story": "con+tempor(时)+ary",
+  "tip": "contemporary art",
+  "en": "This is contemporary art.",
+  "cn": "这是当代艺术。"
+ },
+ {
+  "word": "contend",
+  "ipa": "/kənˈtend/",
+  "pos": "v. 主张；竞争",
+  "story": "con+tend(伸)：一同争",
+  "tip": "contend that...",
+  "en": "He contends it is wrong.",
+  "cn": "他主张这是错的。"
+ },
+ {
+  "word": "context",
+  "ipa": "/ˈkɒntekst/",
+  "pos": "n. 背景；语境",
+  "story": "con+text(织)：织在一起",
+  "tip": "in context",
+  "en": "Read it in context.",
+  "cn": "结合语境读。"
+ },
+ {
+  "word": "continual",
+  "ipa": "/kənˈtɪnjuəl/",
+  "pos": "adj. 持续的",
+  "story": "con+tinu(保持)+al",
+  "tip": "continual improvement",
+  "en": "There is continual change.",
+  "cn": "变化持续不断。"
+ },
+ {
+  "word": "contract",
+  "ipa": "/ˈkɒntrækt/",
+  "pos": "n. 合同；v. 收缩",
+  "story": "con+tract(拉)：拉到一起",
+  "tip": "sign a contract",
+  "en": "They signed a contract.",
+  "cn": "他们签了合同。"
+ },
+ {
+  "word": "contradict",
+  "ipa": "/ˌkɒntrəˈdɪkt/",
+  "pos": "v. 反驳；矛盾",
+  "story": "contra(反)+dict(说)",
+  "tip": "contradict oneself",
+  "en": "His words contradict.",
+  "cn": "他的话自相矛盾。"
+ },
+ {
+  "word": "contrary",
+  "ipa": "/ˈkɒntrəri/",
+  "pos": "adj. 相反的",
+  "story": "contra(反)+ry",
+  "tip": "on the contrary",
+  "en": "On the contrary, he agreed.",
+  "cn": "相反，他同意了。"
+ },
+ {
+  "word": "controversy",
+  "ipa": "/ˈkɒntrəvɜːsi/",
+  "pos": "n. 争议",
+  "story": "contro(反)+vers(转)+y",
+  "tip": "a political controversy",
+  "en": "The topic sparked controversy.",
+  "cn": "该话题引发争议。"
+ },
+ {
+  "word": "convene",
+  "ipa": "/kənˈviːn/",
+  "pos": "v. 召集；集会",
+  "story": "con+vene(来)",
+  "tip": "convene a meeting",
+  "en": "They convened a summit.",
+  "cn": "他们召开了峰会。"
+ },
+ {
+  "word": "convention",
+  "ipa": "/kənˈvenʃn/",
+  "pos": "n. 会议；惯例",
+  "story": "con+vent(来)+ion",
+  "tip": "by convention",
+  "en": "It is a social convention.",
+  "cn": "这是社会惯例。"
+ },
+ {
+  "word": "convert",
+  "ipa": "/kənˈvɜːt/",
+  "pos": "v. 转变",
+  "story": "con+vert(转)",
+  "tip": "convert into",
+  "en": "They converted the loft.",
+  "cn": "他们改造了阁楼。"
+ },
+ {
+  "word": "convince",
+  "ipa": "/kənˈvɪns/",
+  "pos": "v. 使信服",
+  "story": "con+vince(胜)：完全胜过",
+  "tip": "convince sb of",
+  "en": "He convinced the jury.",
+  "cn": "他说服了陪审团。"
+ },
+ {
+  "word": "cooperate",
+  "ipa": "/kəʊˈɒpəreɪt/",
+  "pos": "v. 合作",
+  "story": "co+oper(工作)+ate",
+  "tip": "cooperate with",
+  "en": "They cooperated closely.",
+  "cn": "他们紧密合作。"
+ },
+ {
+  "word": "cope",
+  "ipa": "/kəʊp/",
+  "pos": "v. 应付，处理",
+  "story": "cope 音似‘扛破’",
+  "tip": "cope with",
+  "en": "She coped with stress.",
+  "cn": "她扛住了压力。"
+ },
+ {
+  "word": "correspond",
+  "ipa": "/ˌkɒrəˈspɒnd/",
+  "pos": "v. 对应；通信",
+  "story": "cor+respond(回应)",
+  "tip": "correspond to / with",
+  "en": "Profits correspond to effort.",
+  "cn": "收益与努力对应。"
+ },
+ {
+  "word": "council",
+  "ipa": "/ˈkaʊnsl/",
+  "pos": "n. 委员会；理事会",
+  "story": "coun(劝)+cil",
+  "tip": "易混 council vs counsel",
+  "en": "The city council met.",
+  "cn": "市议会开会了。"
+ },
+ {
+  "word": "counsel",
+  "ipa": "/ˈkaʊnsl/",
+  "pos": "n./v. 建议；法律顾问",
+  "story": "coun(劝)+sel",
+  "tip": "易混 counsel vs council",
+  "en": "Seek legal counsel.",
+  "cn": "寻求法律建议。"
+ },
+ {
+  "word": "create",
+  "ipa": "/kriˈeɪt/",
+  "pos": "v. 创造",
+  "story": "cre(长)+ate：长出来",
+  "tip": "create value",
+  "en": "Art creates emotion.",
+  "cn": "艺术创造情感。"
+ },
+ {
+  "word": "credit",
+  "ipa": "/ˈkredɪt/",
+  "pos": "n. 信用；学分",
+  "story": "cred(信)+it",
+  "tip": "on credit / course credit",
+  "en": "Buy it on credit.",
+  "cn": "赊账买它。"
+ },
+ {
+  "word": "crisis",
+  "ipa": "/ˈkraɪsɪs/",
+  "pos": "n. 危机",
+  "story": "cris(判)+is：决断时刻",
+  "tip": "a financial crisis",
+  "en": "The crisis worsened.",
+  "cn": "危机恶化了。"
+ },
+ {
+  "word": "cumulative",
+  "ipa": "/ˈkjuːmjələtɪv/",
+  "pos": "adj. 累积的",
+  "story": "cumul(堆)+ative",
+  "tip": "cumulative effect",
+  "en": "The effect is cumulative.",
+  "cn": "效果是累积的。"
+ },
+ {
+  "word": "currency",
+  "ipa": "/ˈkʌrənsi/",
+  "pos": "n. 货币；流通",
+  "story": "cur(流)+ency",
+  "tip": "a strong currency",
+  "en": "The currency weakened.",
+  "cn": "货币贬值了。"
+ },
+ {
+  "word": "cycle",
+  "ipa": "/ˈsaɪkl/",
+  "pos": "n./v. 循环",
+  "story": "cycle 音似‘赛可’",
+  "tip": "the water cycle",
+  "en": "The cycle repeats yearly.",
+  "cn": "循环每年重复。"
+ },
+ {
+  "word": "debate",
+  "ipa": "/dɪˈbeɪt/",
+  "pos": "n./v. 辩论",
+  "story": "de+bate(打)：言辞交锋",
+  "tip": "a heated debate",
+  "en": "They debated the policy.",
+  "cn": "他们辩论了政策。"
+ },
+ {
+  "word": "decade",
+  "ipa": "/ˈdekeɪd/",
+  "pos": "n. 十年",
+  "story": "dec(十)+ade",
+  "tip": "over the past decade",
+  "en": "The last decade saw change.",
+  "cn": "过去十年变化巨大。"
+ },
+ {
+  "word": "decay",
+  "ipa": "/dɪˈkeɪ/",
+  "pos": "v./n. 衰退；腐烂",
+  "story": "de+way(路)：走下坡",
+  "tip": "tooth decay",
+  "en": "The building decayed.",
+  "cn": "建筑腐朽了。"
+ },
+ {
+  "word": "decline",
+  "ipa": "/dɪˈklaɪn/",
+  "pos": "v./n. 下降；拒绝",
+  "story": "de+cline(倾)",
+  "tip": "on the decline",
+  "en": "Profits declined sharply.",
+  "cn": "利润骤降。"
+ },
+ {
+  "word": "dedicate",
+  "ipa": "/ˈdedɪkeɪt/",
+  "pos": "v. 致力于",
+  "story": "de+dic(说)+ate：宣示",
+  "tip": "dedicate oneself to",
+  "en": "She dedicated her life to it.",
+  "cn": "她毕生奉献于此。"
+ },
+ {
+  "word": "defence",
+  "ipa": "/dɪˈfens/",
+  "pos": "n. 防御",
+  "story": "de+fence(打)：挡开",
+  "tip": "in defence of",
+  "en": "They fought in defence.",
+  "cn": "他们奋起防卫。"
+ },
+ {
+  "word": "define",
+  "ipa": "/dɪˈfaɪn/",
+  "pos": "v. 定义",
+  "story": "de+fine(终)：定下边界",
+  "tip": "define the term",
+  "en": "Define the word clearly.",
+  "cn": "明确定义这个词。"
+ },
+ {
+  "word": "definite",
+  "ipa": "/ˈdefɪnət/",
+  "pos": "adj. 明确的",
+  "story": "de+fin(终)+ite",
+  "tip": "a definite answer",
+  "en": "We need a definite plan.",
+  "cn": "我们需要明确计划。"
+ },
+ {
+  "word": "deliberate",
+  "ipa": "/dɪˈlɪbərət/",
+  "pos": "adj. 故意的；v. 深思",
+  "story": "de+liber(权衡)+ate",
+  "tip": "a deliberate act",
+  "en": "It was a deliberate lie.",
+  "cn": "那是蓄意谎言。"
+ },
+ {
+  "word": "delicate",
+  "ipa": "/ˈdelɪkət/",
+  "pos": "adj. 精致的；脆弱的",
+  "story": "de+lic(诱)+ate",
+  "tip": "a delicate situation",
+  "en": "The matter is delicate.",
+  "cn": "此事很微妙。"
+ },
+ {
+  "word": "demand",
+  "ipa": "/dɪˈmɑːnd/",
+  "pos": "n./v. 要求；需求",
+  "story": "de+mand(命令)",
+  "tip": "meet the demand",
+  "en": "Demand exceeds supply.",
+  "cn": "供不应求。"
+ },
+ {
+  "word": "deny",
+  "ipa": "/dɪˈnaɪ/",
+  "pos": "v. 否认",
+  "story": "de+ny(否)",
+  "tip": "deny doing",
+  "en": "He denied the charge.",
+  "cn": "他否认了指控。"
+ },
+ {
+  "word": "deprive",
+  "ipa": "/dɪˈpraɪv/",
+  "pos": "v. 剥夺",
+  "story": "de+prive(夺)",
+  "tip": "deprive sb of",
+  "en": "War deprived them of home.",
+  "cn": "战争夺走了他们的家。"
+ },
+ {
+  "word": "descend",
+  "ipa": "/dɪˈsend/",
+  "pos": "v. 下降",
+  "story": "de+scend(爬)",
+  "tip": "descend from",
+  "en": "They descended the hill.",
+  "cn": "他们下了山。"
+ },
+ {
+  "word": "deserve",
+  "ipa": "/dɪˈzɜːv/",
+  "pos": "v. 应得",
+  "story": "de+serve(服务)：该被服务",
+  "tip": "deserve credit",
+  "en": "He deserves praise.",
+  "cn": "他应受表扬。"
+ },
+ {
+  "word": "design",
+  "ipa": "/dɪˈzaɪn/",
+  "pos": "v./n. 设计",
+  "story": "de+sign(记号)：定下标记",
+  "tip": "design a system",
+  "en": "She designed the logo.",
+  "cn": "她设计了标志。"
+ },
+ {
+  "word": "desire",
+  "ipa": "/dɪˈzaɪə/",
+  "pos": "n./v. 渴望",
+  "story": "de+sire(星)：仰望所求",
+  "tip": "a strong desire",
+  "en": "He has a desire to win.",
+  "cn": "他有求胜之心。"
+ },
+ {
+  "word": "detect",
+  "ipa": "/dɪˈtekt/",
+  "pos": "v. 探测；察觉",
+  "story": "de+tect(盖)：揭开",
+  "tip": "detect a problem",
+  "en": "Sensors detected smoke.",
+  "cn": "传感器探测到烟。"
+ },
+ {
+  "word": "deviate",
+  "ipa": "/ˈdiːvieɪt/",
+  "pos": "v. 偏离",
+  "story": "de+vi(路)+ate：离路",
+  "tip": "deviate from",
+  "en": "Do not deviate from the plan.",
+  "cn": "别偏离计划。"
+ },
+ {
+  "word": "disclose",
+  "ipa": "/dɪsˈkləʊz/",
+  "pos": "v. 披露",
+  "story": "dis+close(关)：打开",
+  "tip": "disclose the truth",
+  "en": "They disclosed the data.",
+  "cn": "他们披露了数据。"
+ },
+ {
+  "word": "document",
+  "ipa": "/ˈdɒkjument/",
+  "pos": "n. 文件；v. 记录",
+  "story": "docu(教)+ment",
+  "tip": "a legal document",
+  "en": "Keep the document safe.",
+  "cn": "保管好文件。"
+ },
+ {
+  "word": "domain",
+  "ipa": "/dəˈmeɪn/",
+  "pos": "n. 领域；域名",
+  "story": "dom(家)+ain",
+  "tip": "in the domain of",
+  "en": "This is outside my domain.",
+  "cn": "这超出我的领域。"
+ },
+ {
+  "word": "domestic",
+  "ipa": "/dəˈmestɪk/",
+  "pos": "adj. 国内的；家庭的",
+  "story": "dom(家)+estic",
+  "tip": "domestic market",
+  "en": "Domestic sales grew.",
+  "cn": "国内销售增长。"
+ },
+ {
+  "word": "draft",
+  "ipa": "/drɑːft/",
+  "pos": "n. 草稿；v. 起草",
+  "story": "draft 音似‘抓夫特’",
+  "tip": "a rough draft",
+  "en": "He drafted a letter.",
+  "cn": "他起草了一封信。"
+ },
+ {
+  "word": "dramatic",
+  "ipa": "/drəˈmætɪk/",
+  "pos": "adj. 戏剧性的；显著的",
+  "story": "drama+tic",
+  "tip": "a dramatic change",
+  "en": "There was a dramatic rise.",
+  "cn": "出现了显著上升。"
+ },
+ {
+  "word": "duration",
+  "ipa": "/djʊˈreɪʃn/",
+  "pos": "n. 持续时间",
+  "story": "dur(持续)+ation",
+  "tip": "for the duration",
+  "en": "The duration is short.",
+  "cn": "持续时间很短。"
+ },
+ {
+  "word": "dynamic",
+  "ipa": "/daɪˈnæmɪk/",
+  "pos": "adj. 动态的；n. 动力",
+  "story": "dyna(力)+mic",
+  "tip": "a dynamic market",
+  "en": "The economy is dynamic.",
+  "cn": "经济充满活力。"
+ },
+ {
+  "word": "economy",
+  "ipa": "/ɪˈkɒnəmi/",
+  "pos": "n. 经济",
+  "story": "eco(家)+nomy(法)",
+  "tip": "a weak economy",
+  "en": "The economy is recovering.",
+  "cn": "经济正在复苏。"
+ },
+ {
+  "word": "Edition",
+  "ipa": "/ɪˈdɪʃn/",
+  "pos": "n. 版本；版次",
+  "story": "edit(编辑)+ion",
+  "tip": "the first edition",
+  "en": "This is the second edition.",
+  "cn": "这是第二版。"
+ },
+ {
+  "word": "elaborate",
+  "ipa": "/ɪˈlæbərət/",
+  "pos": "adj. 详尽的；v. 详述",
+  "story": "e+labor(劳动)+ate：精心做",
+  "tip": "elaborate on",
+  "en": "Please elaborate your point.",
+  "cn": "请详述你的观点。"
+ },
+ {
+  "word": "embrace",
+  "ipa": "/ɪmˈbreɪs/",
+  "pos": "v. 拥抱；欣然接受",
+  "story": "em+brace(臂)：入怀",
+  "tip": "embrace change",
+  "en": "They embraced the idea.",
+  "cn": "他们欣然接受了这想法。"
+ },
+ {
+  "word": "emerge",
+  "ipa": "/ɪˈmɜːdʒ/",
+  "pos": "v. 出现；浮现",
+  "story": "e(出)+merge(沉)：浮出",
+  "tip": "emerge from",
+  "en": "A new leader emerged.",
+  "cn": "一位新领袖出现了。"
+ },
+ {
+  "word": "emphasis",
+  "ipa": "/ˈemfəsɪs/",
+  "pos": "n. 强调",
+  "story": "em+phas(显)+is",
+  "tip": "place emphasis on",
+  "en": "We place emphasis on safety.",
+  "cn": "我们重视安全。"
+ },
+ {
+  "word": "enable",
+  "ipa": "/ɪˈneɪbl/",
+  "pos": "v. 使能够",
+  "story": "en+able(能)",
+  "tip": "enable sb to",
+  "en": "The tool enables learning.",
+  "cn": "这工具让人能学习。"
+ },
+ {
+  "word": "encounter",
+  "ipa": "/ɪnˈkaʊntə/",
+  "pos": "v./n. 遭遇；遇到",
+  "story": "en+counter(对立)",
+  "tip": "encounter a problem",
+  "en": "We encountered difficulties.",
+  "cn": "我们遇到了困难。"
+ },
+ {
+  "word": "endeavour",
+  "ipa": "/ɪnˈdevə/",
+  "pos": "v./n. 努力；尝试",
+  "story": "en+deavour(应得)",
+  "tip": "make an endeavour",
+  "en": "They endeavoured to help.",
+  "cn": "他们努力帮忙。"
+ },
+ {
+  "word": "enormous",
+  "ipa": "/ɪˈnɔːməs/",
+  "pos": "adj. 巨大的",
+  "story": "e(出)+norm(规则)+ous：超规",
+  "tip": "an enormous amount",
+  "en": "There was enormous pressure.",
+  "cn": "压力巨大。"
+ },
+ {
+  "word": "ensure",
+  "ipa": "/ɪnˈʃʊə/",
+  "pos": "v. 确保",
+  "story": "en+sure(确实)",
+  "tip": "ensure that...",
+  "en": "Ensure the door is locked.",
+  "cn": "确保门锁好。"
+ },
+ {
+  "word": "entitle",
+  "ipa": "/ɪnˈtaɪtl/",
+  "pos": "v. 使有权利；题名",
+  "story": "en+title(名)",
+  "tip": "be entitled to",
+  "en": "You are entitled to a refund.",
+  "cn": "你有权退款。"
+ },
+ {
+  "word": "environment",
+  "ipa": "/ɪnˈvaɪrənmənt/",
+  "pos": "n. 环境",
+  "story": "en+viron(围)+ment",
+  "tip": "protect the environment",
+  "en": "We must save the environment.",
+  "cn": "我们必须保护环境。"
+ },
+ {
+  "word": "equip",
+  "ipa": "/ɪˈkwɪp/",
+  "pos": "v. 装备；使具备",
+  "story": "equip 音似‘一奎普’",
+  "tip": "equip with",
+  "en": "Schools equip students.",
+  "cn": "学校装备学生。"
+ },
+ {
+  "word": "erase",
+  "ipa": "/ɪˈreɪz/",
+  "pos": "v. 擦除",
+  "story": "e+rase(刮)",
+  "tip": "erase the mistake",
+  "en": "He erased the file.",
+  "cn": "他删除了文件。"
+ },
+ {
+  "word": "error",
+  "ipa": "/ˈerə/",
+  "pos": "n. 错误",
+  "story": "err(错)+or",
+  "tip": "a fatal error",
+  "en": "The report had an error.",
+  "cn": "报告有个错误。"
+ },
+ {
+  "word": "estate",
+  "ipa": "/ɪˈsteɪt/",
+  "pos": "n. 地产；财产",
+  "story": "e+state(站)：立下的产业",
+  "tip": "real estate",
+  "en": "He invests in real estate.",
+  "cn": "他投资房地产。"
+ },
+ {
+  "word": "estimate",
+  "ipa": "/ˈestɪmeɪt/",
+  "pos": "v./n. 估计",
+  "story": "e+stim(估)+ate",
+  "tip": "estimate the cost",
+  "en": "We estimated the loss.",
+  "cn": "我们估了损失。"
+ },
+ {
+  "word": "eventual",
+  "ipa": "/ɪˈventʃuəl/",
+  "pos": "adj. 最终的",
+  "story": "event(事)+ual",
+  "tip": "the eventual winner",
+  "en": "The eventual outcome was good.",
+  "cn": "最终结果不错。"
+ },
+ {
+  "word": "evolve",
+  "ipa": "/ɪˈvɒlv/",
+  "pos": "v. 进化；演变",
+  "story": "e+volv(滚)：滚出",
+  "tip": "evolve into",
+  "en": "Cities evolve over time.",
+  "cn": "城市随时间演变。"
+ },
+ {
+  "word": "exclusive",
+  "ipa": "/ɪkˈskluːsɪv/",
+  "pos": "adj. 独占的；排外的",
+  "story": "ex+clus(关)+ive",
+  "tip": "an exclusive club",
+  "en": "It is an exclusive right.",
+  "cn": "这是独占权。"
+ },
+ {
+  "word": "execute",
+  "ipa": "/ˈeksɪkjuːt/",
+  "pos": "v. 执行；处决",
+  "story": "ex+ecute(跟)：跟完",
+  "tip": "execute a plan",
+  "en": "They executed the strategy.",
+  "cn": "他们执行了战略。"
+ },
+ {
+  "word": "exert",
+  "ipa": "/ɪɡˈzɜːt/",
+  "pos": "v. 施加；运用",
+  "story": "ex+sert(束)：伸出力",
+  "tip": "exert pressure",
+  "en": "He exerted influence.",
+  "cn": "他施加了影响。"
+ },
+ {
+  "word": "exhaust",
+  "ipa": "/ɪɡˈzɔːst/",
+  "pos": "v. 耗尽；使精疲",
+  "story": "ex+haust(抽)：抽干",
+  "tip": "exhaust the funds",
+  "en": "I am exhausted today.",
+  "cn": "我今天累坏了。"
+ },
+ {
+  "word": "exhibit",
+  "ipa": "/ɪɡˈzɪbɪt/",
+  "pos": "v. 展示；n. 展品",
+  "story": "ex+hibit(持)：拿出",
+  "tip": "exhibit a skill",
+  "en": "The museum exhibits art.",
+  "cn": "博物馆展出艺术品。"
+ },
+ {
+  "word": "expand",
+  "ipa": "/ɪkˈspænd/",
+  "pos": "v. 扩张",
+  "story": "ex+pand(展开)",
+  "tip": "expand the business",
+  "en": "The company expanded.",
+  "cn": "公司扩张了。"
+ },
+ {
+  "word": "expert",
+  "ipa": "/ˈekspɜːt/",
+  "pos": "n. 专家；adj. 专业的",
+  "story": "ex+pert(试)：试过",
+  "tip": "an expert in",
+  "en": "He is an expert coder.",
+  "cn": "他是编程专家。"
+ },
+ {
+  "word": "exploit",
+  "ipa": "/ɪkˈsplɔɪt/",
+  "pos": "v. 开发；剥削",
+  "story": "ex+ploit(用)",
+  "tip": "exploit resources",
+  "en": "They exploited the oil.",
+  "cn": "他们开发了石油。"
+ },
+ {
+  "word": "explore",
+  "ipa": "/ɪkˈsplɔː/",
+  "pos": "v. 探索",
+  "story": "ex+plore(吹)：吹开",
+  "tip": "explore the idea",
+  "en": "We explored the options.",
+  "cn": "我们探讨了选项。"
+ },
+ {
+  "word": "expose",
+  "ipa": "/ɪkˈspəʊz/",
+  "pos": "v. 暴露；使接触",
+  "story": "ex+pose(放)",
+  "tip": "expose to",
+  "en": "Don't expose it to light.",
+  "cn": "别让它见光。"
+ },
+ {
+  "word": "express",
+  "ipa": "/ɪkˈspres/",
+  "pos": "v. 表达；adj. 特快的",
+  "story": "ex+press(压)：挤出",
+  "tip": "express one's view",
+  "en": "She expressed her anger.",
+  "cn": "她表达了愤怒。"
+ },
+ {
+  "word": "extend",
+  "ipa": "/ɪkˈstend/",
+  "pos": "v. 延伸；延长",
+  "story": "ex+tend(伸)",
+  "tip": "extend the deadline",
+  "en": "They extended the stay.",
+  "cn": "他们延长了逗留。"
+ },
+ {
+  "word": "extraordinary",
+  "ipa": "/ɪkˈstrɔːdnri/",
+  "pos": "adj. 非凡的",
+  "story": "extra(超)+ordinary",
+  "tip": "an extraordinary talent",
+  "en": "She has extraordinary skill.",
+  "cn": "她才华非凡。"
+ },
+ {
+  "word": "fabric",
+  "ipa": "/ˈfæbrɪk/",
+  "pos": "n. 织物；结构",
+  "story": "fabr(做)+ic",
+  "tip": "the social fabric",
+  "en": "The fabric of society.",
+  "cn": "社会结构。"
+ },
+ {
+  "word": "factor",
+  "ipa": "/ˈfæktə/",
+  "pos": "n. 因素",
+  "story": "fact(做)+or",
+  "tip": "a key factor",
+  "en": "Price is a factor.",
+  "cn": "价格是个因素。"
+ },
+ {
+  "word": "feature",
+  "ipa": "/ˈfiːtʃə/",
+  "pos": "n. 特征；v. 以…为特色",
+  "story": "feat(做)+ure",
+  "tip": "a key feature",
+  "en": "The phone has features.",
+  "cn": "这手机有特色功能。"
+ },
+ {
+  "word": "federal",
+  "ipa": "/ˈfedərəl/",
+  "pos": "adj. 联邦的",
+  "story": "feder(联盟)+al",
+  "tip": "a federal system",
+  "en": "The country is federal.",
+  "cn": "该国是联邦制。"
+ },
+ {
+  "word": "fee",
+  "ipa": "/fiː/",
+  "pos": "n. 费用",
+  "story": "fee 音似‘费’",
+  "tip": "a registration fee",
+  "en": "The fee is 50 yuan.",
+  "cn": "费用是50元。"
+ },
+ {
+  "word": "final",
+  "ipa": "/ˈfaɪnl/",
+  "pos": "adj. 最终的",
+  "story": "fin(终)+al",
+  "tip": "the final decision",
+  "en": "This is the final round.",
+  "cn": "这是最后一轮。"
+ },
+ {
+  "word": "finance",
+  "ipa": "/ˈfaɪnæns/",
+  "pos": "n. 财政；v. 融资",
+  "story": "fin(终)+ance：结清",
+  "tip": "public finance",
+  "en": "She works in finance.",
+  "cn": "她做金融。"
+ },
+ {
+  "word": "finite",
+  "ipa": "/ˈfaɪnaɪt/",
+  "pos": "adj. 有限的",
+  "story": "fin(终)+ite：有终点",
+  "tip": "a finite resource",
+  "en": "Oil is finite.",
+  "cn": "石油是有限的。"
+ },
+ {
+  "word": "flexible",
+  "ipa": "/ˈfleksəbl/",
+  "pos": "adj. 灵活的",
+  "story": "flex(弯)+ible",
+  "tip": "a flexible schedule",
+  "en": "We offer flexible hours.",
+  "cn": "我们提供弹性工时。"
+ },
+ {
+  "word": "fluent",
+  "ipa": "/ˈfluːənt/",
+  "pos": "adj. 流利的",
+  "story": "flu(流)+ent",
+  "tip": "fluent English",
+  "en": "She is fluent in French.",
+  "cn": "她法语流利。"
+ },
+ {
+  "word": "focus",
+  "ipa": "/ˈfəʊkəs/",
+  "pos": "n./v. 焦点；集中",
+  "story": "focus 音似‘佛卡斯’",
+  "tip": "focus on",
+  "en": "Focus on the goal.",
+  "cn": "专注于目标。"
+ },
+ {
+  "word": "foreast",
+  "ipa": "/ˈfɔːkɑːst/",
+  "pos": "n./v. 预测",
+  "story": "fore(前)+cast(掷)：向前推",
+  "tip": "a weather forecast",
+  "en": "The forecast was wrong.",
+  "cn": "预测错了。"
+ },
+ {
+  "word": "formal",
+  "ipa": "/ˈfɔːml/",
+  "pos": "adj. 正式的",
+  "story": "form(形)+al",
+  "tip": "a formal letter",
+  "en": "Wear formal clothes.",
+  "cn": "穿正式服装。"
+ },
+ {
+  "word": "format",
+  "ipa": "/ˈfɔːmæt/",
+  "pos": "n. 格式；v. 格式化",
+  "story": "form(形)+at",
+  "tip": "in a new format",
+  "en": "Change the file format.",
+  "cn": "改一下文件格式。"
+ },
+ {
+  "word": "formula",
+  "ipa": "/ˈfɔːmjələ/",
+  "pos": "n. 公式；配方",
+  "story": "form(形)+ula",
+  "tip": "a simple formula",
+  "en": "Use this formula.",
+  "cn": "用这个公式。"
+ },
+ {
+  "word": "forthcoming",
+  "ipa": "/ˌfɔːθˈkʌmɪŋ/",
+  "pos": "adj. 即将到来的",
+  "story": "forth(向前)+coming",
+  "tip": "the forthcoming event",
+  "en": "The summit is forthcoming.",
+  "cn": "峰会即将召开。"
+ },
+ {
+  "word": "foundation",
+  "ipa": "/faʊnˈdeɪʃn/",
+  "pos": "n. 基础；基金会",
+  "story": "found(基)+ation",
+  "tip": "the foundation of",
+  "en": "Trust is the foundation.",
+  "cn": "信任是基础。"
+ },
+ {
+  "word": "framework",
+  "ipa": "/ˈfreɪmwɜːk/",
+  "pos": "n. 框架",
+  "story": "frame(框)+work",
+  "tip": "a legal framework",
+  "en": "Build a clear framework.",
+  "cn": "建立清晰框架。"
+ },
+ {
+  "word": "function",
+  "ipa": "/ˈfʌŋkʃn/",
+  "pos": "n. 功能；v. 运转",
+  "story": "funct(做)+ion",
+  "tip": "a core function",
+  "en": "The device functions well.",
+  "cn": "设备运转良好。"
+ },
+ {
+  "word": "gender",
+  "ipa": "/ˈdʒendə/",
+  "pos": "n. 性别",
+  "story": "gender 音似‘性别’",
+  "tip": "gender equality",
+  "en": "They promote gender equality.",
+  "cn": "他们促进性别平等。"
+ },
+ {
+  "word": "generous",
+  "ipa": "/ˈdʒenərəs/",
+  "pos": "adj. 慷慨的",
+  "story": "gener(生)+ous：肯给",
+  "tip": "a generous gift",
+  "en": "He is very generous.",
+  "cn": "他很大方。"
+ },
+ {
+  "word": "global",
+  "ipa": "/ˈɡləʊbl/",
+  "pos": "adj. 全球的",
+  "story": "glob(球)+al",
+  "tip": "a global issue",
+  "en": "Climate is a global issue.",
+  "cn": "气候是全球性问题。"
+ },
+ {
+  "word": "goal",
+  "ipa": "/ɡəʊl/",
+  "pos": "n. 目标",
+  "story": "goal 音似‘够欧’",
+  "tip": "achieve a goal",
+  "en": "Set a clear goal.",
+  "cn": "设定清晰目标。"
+ },
+ {
+  "word": "grade",
+  "ipa": "/ɡreɪd/",
+  "pos": "n. 等级；v. 评分",
+  "story": "grad(级)+e",
+  "tip": "a high grade",
+  "en": "The grade reflects effort.",
+  "cn": "成绩反映努力。"
+ },
+ {
+  "word": "gradual",
+  "ipa": "/ˈɡrædʒuəl/",
+  "pos": "adj. 逐渐的",
+  "story": "grad(级)+ual",
+  "tip": "a gradual change",
+  "en": "There was gradual progress.",
+  "cn": "进展是渐进的。"
+ },
+ {
+  "word": "grand",
+  "ipa": "/ɡrænd/",
+  "pos": "adj. 宏伟的",
+  "story": "grand 音似‘冠的’",
+  "tip": "a grand plan",
+  "en": "They held a grand ceremony.",
+  "cn": "他们举行了盛大仪式。"
+ },
+ {
+  "word": "grant",
+  "ipa": "/ɡrɑːnt/",
+  "pos": "v. 授予；n. 拨款",
+  "story": "grant 音似‘贯特’",
+  "tip": "grant a wish",
+  "en": "The fund granted money.",
+  "cn": "基金拨了款。"
+ },
+ {
+  "word": "gravity",
+  "ipa": "/ˈɡrævəti/",
+  "pos": "n. 重力；严重性",
+  "story": "grav(重)+ity",
+  "tip": "the law of gravity",
+  "en": "He didn't grasp the gravity.",
+  "cn": "他没意识到严重性。"
+ },
+ {
+  "word": "guarantee",
+  "ipa": "/ˌɡærənˈtiː/",
+  "pos": "n./v. 保证",
+  "story": "guar(守)+antee",
+  "tip": "a money-back guarantee",
+  "en": "We guarantee quality.",
+  "cn": "我们保证质量。"
+ },
+ {
+  "word": "guidance",
+  "ipa": "/ˈɡaɪdns/",
+  "pos": "n. 指导",
+  "story": "guid(导)+ance",
+  "tip": "under sb's guidance",
+  "en": "He gave me guidance.",
+  "cn": "他给了我指导。"
+ },
+ {
+  "word": "highlight",
+  "ipa": "/ˈhaɪlaɪt/",
+  "pos": "v. 突出；n. 亮点",
+  "story": "high+light(光)",
+  "tip": "highlight the risk",
+  "en": "The report highlights it.",
+  "cn": "报告突出了这点。"
+ },
+ {
+  "word": "ignorant",
+  "ipa": "/ˈɪɡnərənt/",
+  "pos": "adj. 无知的",
+  "story": "i(不)+gnor(知)+ant",
+  "tip": "be ignorant of",
+  "en": "He was ignorant of the law.",
+  "cn": "他对法律无知。"
+ },
+ {
+  "word": "immediate",
+  "ipa": "/ɪˈmiːdiət/",
+  "pos": "adj. 立即的",
+  "story": "im(无)+medi(中)+ate：无间隔",
+  "tip": "an immediate response",
+  "en": "We need immediate action.",
+  "cn": "我们需要立即行动。"
+ },
+ {
+  "word": "impact",
+  "ipa": "/ˈɪmpækt/",
+  "pos": "n./v. 影响；冲击",
+  "story": "im+pact(压)",
+  "tip": "have an impact on",
+  "en": "The policy had impact.",
+  "cn": "政策产生了影响。"
+ },
+ {
+  "word": "implement",
+  "ipa": "/ˈɪmplɪment/",
+  "pos": "v. 实施",
+  "story": "im+ple(满)+ment：填满执行",
+  "tip": "implement a plan",
+  "en": "They implemented reforms.",
+  "cn": "他们实施了改革。"
+ },
+ {
+  "word": "implicate",
+  "ipa": "/ˈɪmplɪkeɪt/",
+  "pos": "v. 牵连；暗示",
+  "story": "im+plic(折)+ate",
+  "tip": "be implicated in",
+  "en": "He was implicated in it.",
+  "cn": "他牵扯其中。"
+ },
+ {
+  "word": "implicit",
+  "ipa": "/ɪmˈplɪsɪt/",
+  "pos": "adj. 含蓄的；隐含的",
+  "story": "im+plic(折)+it：折在里面",
+  "tip": "implicit trust",
+  "en": "There was implicit trust.",
+  "cn": "存在一种默契的信任。"
+ },
+ {
+  "word": "incidence",
+  "ipa": "/ˈɪnsɪdəns/",
+  "pos": "n. 发生率",
+  "story": "in+cid(落)+ence",
+  "tip": "a high incidence",
+  "en": "The incidence is rising.",
+  "cn": "发生率在上升。"
+ },
+ {
+  "word": "incline",
+  "ipa": "/ɪnˈklaɪn/",
+  "pos": "v. 倾向于；倾斜",
+  "story": "in+cline(倾)",
+  "tip": "be inclined to",
+  "en": "I am inclined to agree.",
+  "cn": "我倾向于同意。"
+ },
+ {
+  "word": "index",
+  "ipa": "/ˈɪndeks/",
+  "pos": "n. 指数；索引",
+  "story": "in+dex(示)",
+  "tip": "a price index",
+  "en": "The index rose slightly.",
+  "cn": "指数小幅上升。"
+ },
+ {
+  "word": "indifferent",
+  "ipa": "/ɪnˈdɪfrənt/",
+  "pos": "adj. 漠不关心的",
+  "story": "in+differ(不同)+ent：无差别",
+  "tip": "be indifferent to",
+  "en": "He was indifferent to it.",
+  "cn": "他对此漠不关心。"
+ },
+ {
+  "word": "indigenous",
+  "ipa": "/ɪnˈdɪdʒənəs/",
+  "pos": "adj. 本土的",
+  "story": "indi(内)+gen(生)+ous",
+  "tip": "indigenous people",
+  "en": "They protect indigenous culture.",
+  "cn": "他们保护本土文化。"
+ },
+ {
+  "word": "infer",
+  "ipa": "/ɪnˈfɜː/",
+  "pos": "v. 推断",
+  "story": "in+fer(带)：带出结论",
+  "tip": "易混 infer vs imply",
+  "en": "We inferred his meaning.",
+  "cn": "我们推断了他的意思。"
+ },
+ {
+  "word": "initial",
+  "ipa": "/ɪˈnɪʃl/",
+  "pos": "adj. 最初的",
+  "story": "in+it(走)+ial：刚走",
+  "tip": "the initial stage",
+  "en": "The initial response was good.",
+  "cn": "初步反应不错。"
+ },
+ {
+  "word": "initiate",
+  "ipa": "/ɪˈnɪʃieɪt/",
+  "pos": "v. 发起；开始",
+  "story": "in+it(走)+iate",
+  "tip": "initiate a reform",
+  "en": "They initiated talks.",
+  "cn": "他们启动了谈判。"
+ },
+ {
+  "word": "injure",
+  "ipa": "/ˈɪndʒə/",
+  "pos": "v. 伤害",
+  "story": "in+jure(法)：伤到",
+  "tip": "be injured in",
+  "en": "He was injured at work.",
+  "cn": "他工伤了。"
+ },
+ {
+  "word": "input",
+  "ipa": "/ˈɪnpʊt/",
+  "pos": "n./v. 输入",
+  "story": "in+put(放)",
+  "tip": "user input",
+  "en": "Your input matters.",
+  "cn": "你的输入很重要。"
+ },
+ {
+  "word": "insight",
+  "ipa": "/ˈɪnsaɪt/",
+  "pos": "n. 洞察力",
+  "story": "in+sight(看)",
+  "tip": "gain insight into",
+  "en": "She has great insight.",
+  "cn": "她很有洞察力。"
+ },
+ {
+  "word": "insist",
+  "ipa": "/ɪnˈsɪst/",
+  "pos": "v. 坚持要求",
+  "story": "in+sist(站)：站定",
+  "tip": "insist on",
+  "en": "He insisted on paying.",
+  "cn": "他坚持付钱。"
+ },
+ {
+  "word": "inspire",
+  "ipa": "/ɪnˈspaɪə/",
+  "pos": "v. 激励；启发",
+  "story": "in+spire(气)：吹入气息",
+  "tip": "inspire sb to",
+  "en": "The book inspired me.",
+  "cn": "这本书启发了我。"
+ },
+ {
+  "word": "install",
+  "ipa": "/ɪnˈstɔːl/",
+  "pos": "v. 安装；任命",
+  "story": "in+stall(站)：就位",
+  "tip": "install software",
+  "en": "Install the app first.",
+  "cn": "先安装应用。"
+ },
+ {
+  "word": "instant",
+  "ipa": "/ˈɪnstənt/",
+  "pos": "adj. 立即的；n. 瞬间",
+  "story": "in+stant(站)：立到",
+  "tip": "an instant reply",
+  "en": "We need an instant fix.",
+  "cn": "我们需要立刻解决。"
+ },
+ {
+  "word": "institute",
+  "ipa": "/ˈɪnstɪtjuːt/",
+  "pos": "n. 机构；v. 制定",
+  "story": "in+stitute(站)",
+  "tip": "a research institute",
+  "en": "The institute published it.",
+  "cn": "该机构发表了它。"
+ },
+ {
+  "word": "instruct",
+  "ipa": "/ɪnˈstrʌkt/",
+  "pos": "v. 指示；教导",
+  "story": "in+struct(建)",
+  "tip": "instruct sb to",
+  "en": "He instructed them to wait.",
+  "cn": "他指示他们等候。"
+ },
+ {
+  "word": "integrate",
+  "ipa": "/ˈɪntɪɡreɪt/",
+  "pos": "v. 整合；使融入",
+  "story": "integr(整)+ate",
+  "tip": "integrate into",
+  "en": "Immigrants integrate slowly.",
+  "cn": "移民缓慢融入。"
+ },
+ {
+  "word": "integrity",
+  "ipa": "/ɪnˈteɡrəti/",
+  "pos": "n. 正直；完整",
+  "story": "integr(整)+ity",
+  "tip": "a man of integrity",
+  "en": "He is known for integrity.",
+  "cn": "他以正直著称。"
+ },
+ {
+  "word": "intellectual",
+  "ipa": "/ˌɪntəˈlektʃuəl/",
+  "pos": "adj. 智力的；n. 知识分子",
+  "story": "intel(间)+lect(选)+ual",
+  "tip": "intellectual property",
+  "en": "IP means intellectual property.",
+  "cn": "IP 即知识产权。"
+ },
+ {
+  "word": "intense",
+  "ipa": "/ɪnˈtens/",
+  "pos": "adj. 强烈的",
+  "story": "in+tens(拉)+e：拉满",
+  "tip": "intense pressure",
+  "en": "There was intense debate.",
+  "cn": "辩论很激烈。"
+ },
+ {
+  "word": "interact",
+  "ipa": "/ˌɪntərˈækt/",
+  "pos": "v. 互动",
+  "story": "inter(间)+act",
+  "tip": "interact with",
+  "en": "Users interact with it.",
+  "cn": "用户与之互动。"
+ },
+ {
+  "word": "interfere",
+  "ipa": "/ˌɪntəˈfɪə/",
+  "pos": "v. 干涉；干扰",
+  "story": "inter(间)+fere(打)",
+  "tip": "interfere with",
+  "en": "Don't interfere in this.",
+  "cn": "别干涉此事。"
+ },
+ {
+  "word": "intermittent",
+  "ipa": "/ˌɪntəˈmɪtənt/",
+  "pos": "adj. 间歇的",
+  "story": "inter(间)+mitt(放)+ent",
+  "tip": "intermittent rain",
+  "en": "There was intermittent rain.",
+  "cn": "雨时下时停。"
+ },
+ {
+  "word": "interval",
+  "ipa": "/ˈɪntəvl/",
+  "pos": "n. 间隔",
+  "story": "inter(间)+val(墙)",
+  "tip": "at intervals",
+  "en": "Rest at regular intervals.",
+  "cn": "定时休息。"
+ },
+ {
+  "word": "intimate",
+  "ipa": "/ˈɪntɪmət/",
+  "pos": "adj. 亲密的；暗示的",
+  "story": "intim(内)+ate",
+  "tip": "an intimate friend",
+  "en": "They are intimate friends.",
+  "cn": "他们是密友。"
+ },
+ {
+  "word": "investigate",
+  "ipa": "/ɪnˈvestɪɡeɪt/",
+  "pos": "v. 调查",
+  "story": "in+vestig(踪)+ate",
+  "tip": "investigate the case",
+  "en": "Police investigated it.",
+  "cn": "警方调查了此事。"
+ },
+ {
+  "word": "involve",
+  "ipa": "/ɪnˈvɒlv/",
+  "pos": "v. 涉及；使参与",
+  "story": "in+volv(滚)",
+  "tip": "involve sb in",
+  "en": "The job involves travel.",
+  "cn": "这工作要出差。"
+ },
+ {
+  "word": "isolate",
+  "ipa": "/ˈaɪsəleɪt/",
+  "pos": "v. 孤立",
+  "story": "isol(岛)+ate",
+  "tip": "isolate from",
+  "en": "They isolated the patient.",
+  "cn": "他们隔离了病人。"
+ },
+ {
+  "word": "issue",
+  "ipa": "/ˈɪʃuː/",
+  "pos": "n. 问题；v. 发行",
+  "story": "issue 音似‘议题’",
+  "tip": "a key issue",
+  "en": "We issued a statement.",
+  "cn": "我们发表了声明。"
+ },
+ {
+  "word": "item",
+  "ipa": "/ˈaɪtəm/",
+  "pos": "n. 项目；条款",
+  "story": "item 音似‘爱特木’",
+  "tip": "the first item",
+  "en": "This is item number one.",
+  "cn": "这是第一条。"
+ },
+ {
+  "word": "job",
+  "ipa": "/dʒɒb/",
+  "pos": "n. 工作",
+  "story": "job 音似‘ job’",
+  "tip": "a full-time job",
+  "en": "He lost his job.",
+  "cn": "他失业了。"
+ },
+ {
+  "word": "joint",
+  "ipa": "/dʒɔɪnt/",
+  "pos": "adj. 联合的；n. 关节",
+  "story": "join(连)+t",
+  "tip": "a joint effort",
+  "en": "It was a joint project.",
+  "cn": "这是联合项目。"
+ },
+ {
+  "word": "journal",
+  "ipa": "/ˈdʒɜːnl/",
+  "pos": "n. 期刊；日记",
+  "story": "journ(日)+al",
+  "tip": "a medical journal",
+  "en": "She published in a journal.",
+  "cn": "她在期刊上发表了文章。"
+ },
+ {
+  "word": "justice",
+  "ipa": "/ˈdʒʌstɪs/",
+  "pos": "n. 正义；司法",
+  "story": "just(正)+ice",
+  "tip": "social justice",
+  "en": "They fought for justice.",
+  "cn": "他们为正义而战。"
+ },
+ {
+  "word": "justify",
+  "ipa": "/ˈdʒʌstɪfaɪ/",
+  "pos": "v. 证明…正当",
+  "story": "just(正)+ify",
+  "tip": "justify the cost",
+  "en": "He justified the expense.",
+  "cn": "他证明了开支合理。"
+ },
+ {
+  "word": "label",
+  "ipa": "/ˈleɪbl/",
+  "pos": "n. 标签；v. 贴标签",
+  "story": "label 音似‘累包’",
+  "tip": "put a label on",
+  "en": "The label shows the price.",
+  "cn": "标签显示了价格。"
+ },
+ {
+  "word": "lack",
+  "ipa": "/læk/",
+  "pos": "n./v. 缺乏",
+  "story": "lack 音似‘拉客’",
+  "tip": "a lack of",
+  "en": "There is a lack of trust.",
+  "cn": "缺乏信任。"
+ },
+ {
+  "word": "lag",
+  "ipa": "/læɡ/",
+  "pos": "v./n. 落后",
+  "story": "lag 音似‘拉格’",
+  "tip": "lag behind",
+  "en": "The economy lagged.",
+  "cn": "经济落后了。"
+ },
+ {
+  "word": "landscape",
+  "ipa": "/ˈlændskeɪp/",
+  "pos": "n. 风景；局势",
+  "story": "land+scape(景)",
+  "tip": "the political landscape",
+  "en": "The landscape changed.",
+  "cn": "局势变了。"
+ },
+ {
+  "word": "launch",
+  "ipa": "/lɔːntʃ/",
+  "pos": "v./n. 发起；发射",
+  "story": "launch 音似‘落地启’",
+  "tip": "launch a product",
+  "en": "They launched the app.",
+  "cn": "他们发布了应用。"
+ },
+ {
+  "word": "layer",
+  "ipa": "/ˈleɪə/",
+  "pos": "n. 层",
+  "story": "lay(铺)+er",
+  "tip": "a thin layer",
+  "en": "Add a layer of soil.",
+  "cn": "加一层土。"
+ },
+ {
+  "word": "lecture",
+  "ipa": "/ˈlektʃə/",
+  "pos": "n./v. 讲座；训诫",
+  "story": "lect(读)+ure",
+  "tip": "attend a lecture",
+  "en": "I missed the lecture.",
+  "cn": "我错过了讲座。"
+ },
+ {
+  "word": "legacy",
+  "ipa": "/ˈleɡəsi/",
+  "pos": "n. 遗产；遗留",
+  "story": "leg(法)+acy",
+  "tip": "a cultural legacy",
+  "en": "They left a rich legacy.",
+  "cn": "他们留下了丰厚遗产。"
+ },
+ {
+  "word": "legal",
+  "ipa": "/ˈliːɡl/",
+  "pos": "adj. 法律的",
+  "story": "leg(法)+al",
+  "tip": "legal advice",
+  "en": "Seek legal help.",
+  "cn": "寻求法律帮助。"
+ },
+ {
+  "word": "levy",
+  "ipa": "/ˈlevi/",
+  "pos": "v. 征收；n. 税款",
+  "story": "levy 音似‘累维’",
+  "tip": "levy a tax",
+  "en": "The state levies tax.",
+  "cn": "国家征税。"
+ },
+ {
+  "word": "liable",
+  "ipa": "/ˈlaɪəbl/",
+  "pos": "adj. 有责任的；易…的",
+  "story": "li(绑)+able",
+  "tip": "be liable for",
+  "en": "You are liable for damages.",
+  "cn": "你对损失负责。"
+ },
+ {
+  "word": "liberal",
+  "ipa": "/ˈlɪbərəl/",
+  "pos": "adj. 自由的；开明的",
+  "story": "liber(自由)+al",
+  "tip": "a liberal attitude",
+  "en": "He has liberal views.",
+  "cn": "他观点开明。"
+ },
+ {
+  "word": "license",
+  "ipa": "/ˈlaɪsns/",
+  "pos": "n. 执照；v. 许可",
+  "story": "lic(准)+ense",
+  "tip": "a driving license",
+  "en": "Renew your license.",
+  "cn": "续你的执照。"
+ },
+ {
+  "word": "link",
+  "ipa": "/lɪŋk/",
+  "pos": "n./v. 联系",
+  "story": "link 音似‘领扣’",
+  "tip": "a strong link",
+  "en": "There is a link between them.",
+  "cn": "两者有联系。"
+ },
+ {
+  "word": "locate",
+  "ipa": "/ləʊˈkeɪt/",
+  "pos": "v. 位于；查找",
+  "story": "loc(地方)+ate",
+  "tip": "be located in",
+  "en": "The office is located downtown.",
+  "cn": "办公室位于市中心。"
+ },
+ {
+  "word": "logic",
+  "ipa": "/ˈlɒdʒɪk/",
+  "pos": "n. 逻辑",
+  "story": "log(说)+ic",
+  "tip": "faulty logic",
+  "en": "His logic is sound.",
+  "cn": "他逻辑严密。"
+ },
+ {
+  "word": "loose",
+  "ipa": "/luːs/",
+  "pos": "adj. 松散的",
+  "story": "loose 音似‘路丝’",
+  "tip": "a loose tie",
+  "en": "The screw is loose.",
+  "cn": "螺丝松了。"
+ },
+ {
+  "word": "manifest",
+  "ipa": "/ˈmænɪfest/",
+  "pos": "adj. 明显的；v. 显示",
+  "story": "mani(手)+fest(击)：打在手上让人见",
+  "tip": "manifest itself",
+  "en": "The trend manifested clearly.",
+  "cn": "趋势清晰显现。"
+ },
+ {
+  "word": "manual",
+  "ipa": "/ˈmænjuəl/",
+  "pos": "adj. 手动的；n. 手册",
+  "story": "manu(手)+al",
+  "tip": "a manual task",
+  "en": "Read the user manual.",
+  "cn": "读用户手册。"
+ },
+ {
+  "word": "margin",
+  "ipa": "/ˈmɑːdʒɪn/",
+  "pos": "n. 边缘；利润",
+  "story": "margin 音似‘马金’",
+  "tip": "on the margin",
+  "en": "The profit margin is thin.",
+  "cn": "利润微薄。"
+ },
+ {
+  "word": "mass",
+  "ipa": "/mæs/",
+  "pos": "n. 群众；adj. 大量的",
+  "story": "mass 音似‘马斯’",
+  "tip": "the masses",
+  "en": "Mass production began.",
+  "cn": "批量生产开始了。"
+ },
+ {
+  "word": "means",
+  "ipa": "/miːnz/",
+  "pos": "n. 手段；财富",
+  "story": "mean(手段)+s",
+  "tip": "by all means",
+  "en": "Education is a means to it.",
+  "cn": "教育是一种手段。"
+ },
+ {
+  "word": "mechanism",
+  "ipa": "/ˈmekənɪzəm/",
+  "pos": "n. 机制",
+  "story": "mechan(机械)+ism",
+  "tip": "a defence mechanism",
+  "en": "The mechanism is unclear.",
+  "cn": "机制尚不清楚。"
+ },
+ {
+  "word": "media",
+  "ipa": "/ˈmiːdiə/",
+  "pos": "n. 媒体",
+  "story": "medi(中)+a",
+  "tip": "social media",
+  "en": "The media reported it.",
+  "cn": "媒体报道了此事。"
+ },
+ {
+  "word": "medical",
+  "ipa": "/ˈmedɪkl/",
+  "pos": "adj. 医学的",
+  "story": "medic(医)+al",
+  "tip": "medical care",
+  "en": "He needs medical help.",
+  "cn": "他需要医疗帮助。"
+ },
+ {
+  "word": "medium",
+  "ipa": "/ˈmiːdiəm/",
+  "pos": "n. 媒介；adj. 中等的",
+  "story": "medi(中)+um",
+  "tip": "through the medium of",
+  "en": "It is a medium size.",
+  "cn": "这是中号。"
+ },
+ {
+  "word": "mere",
+  "ipa": "/mɪə/",
+  "pos": "adj. 仅仅的",
+  "story": "mere 音似‘弥尔’",
+  "tip": "a mere child",
+  "en": "It is a mere excuse.",
+  "cn": "那只是借口。"
+ },
+ {
+  "word": "migrate",
+  "ipa": "/maɪˈɡreɪt/",
+  "pos": "v. 迁移",
+  "story": "migr(移)+ate",
+  "tip": "migrate to cities",
+  "en": "Birds migrate south.",
+  "cn": "鸟南迁。"
+ },
+ {
+  "word": "military",
+  "ipa": "/ˈmɪlətri/",
+  "pos": "adj. 军事的",
+  "story": "milit(兵)+ary",
+  "tip": "military service",
+  "en": "He has military experience.",
+  "cn": "他有军旅经历。"
+ },
+ {
+  "word": "minimal",
+  "ipa": "/ˈmɪnɪml/",
+  "pos": "adj. 最小的",
+  "story": "mini(小)+mal",
+  "tip": "minimal risk",
+  "en": "The change is minimal.",
+  "cn": "变化极小。"
+ },
+ {
+  "word": "minimum",
+  "ipa": "/ˈmɪnɪməm/",
+  "pos": "n./adj. 最小(的)",
+  "story": "mini(小)+mum",
+  "tip": "a minimum wage",
+  "en": "Set a minimum price.",
+  "cn": "设个最低价。"
+ },
+ {
+  "word": "ministry",
+  "ipa": "/ˈmɪnɪstri/",
+  "pos": "n. (政府)部",
+  "story": "mini(小)+stry",
+  "tip": "the health ministry",
+  "en": "The ministry issued rules.",
+  "cn": "该部发布了规定。"
+ },
+ {
+  "word": "minor",
+  "ipa": "/ˈmaɪnə/",
+  "pos": "adj. 较小的；n. 未成年人",
+  "story": "min(小)+or",
+  "tip": "a minor issue",
+  "en": "It is a minor problem.",
+  "cn": "这是小问题。"
+ },
+ {
+  "word": "mobile",
+  "ipa": "/ˈməʊbaɪl/",
+  "pos": "adj. 移动的",
+  "story": "mob(动)+ile",
+  "tip": "a mobile phone",
+  "en": "Mobile payment is common.",
+  "cn": "移动支付很普遍。"
+ },
+ {
+  "word": "mode",
+  "ipa": "/məʊd/",
+  "pos": "n. 模式；方式",
+  "story": "mode 音似‘模德’",
+  "tip": "a new mode",
+  "en": "Switch to night mode.",
+  "cn": "切到夜间模式。"
+ },
+ {
+  "word": "modify",
+  "ipa": "/ˈmɒdɪfaɪ/",
+  "pos": "v. 修改",
+  "story": "mod(量)+ify：调量",
+  "tip": "modify the plan",
+  "en": "We modified the design.",
+  "cn": "我们修改了设计。"
+ },
+ {
+  "word": "monitor",
+  "ipa": "/ˈmɒnɪtə/",
+  "pos": "v. 监控；n. 显示器",
+  "story": "monit(警)+or",
+  "tip": "monitor progress",
+  "en": "They monitored the rate.",
+  "cn": "他们监控了比率。"
+ },
+ {
+  "word": "narrow",
+  "ipa": "/ˈnærəʊ/",
+  "pos": "adj. 狭窄的；v. 缩小",
+  "story": "narrow 音似‘窄罗’",
+  "tip": "a narrow road",
+  "en": "Narrow the focus.",
+  "cn": "缩小焦点。"
+ },
+ {
+  "word": "nation",
+  "ipa": "/ˈneɪʃn/",
+  "pos": "n. 国家；民族",
+  "story": "nat(生)+ion",
+  "tip": "a developing nation",
+  "en": "The nation is growing.",
+  "cn": "国家在发展。"
+ },
+ {
+  "word": "native",
+  "ipa": "/ˈneɪtɪv/",
+  "pos": "adj. 本地的；n. 本地人",
+  "story": "nat(生)+ive",
+  "tip": "native speakers",
+  "en": "She is a native speaker.",
+  "cn": "她是母语者。"
+ },
+ {
+  "word": "natural",
+  "ipa": "/ˈnætʃrəl/",
+  "pos": "adj. 自然的",
+  "story": "nat(生)+ural",
+  "tip": "natural resources",
+  "en": "We waste natural gas.",
+  "cn": "我们浪费天然气。"
+ },
+ {
+  "word": "negotiate",
+  "ipa": "/nɪˈɡəʊʃieɪt/",
+  "pos": "v. 谈判",
+  "story": "neg(无)+oti(轻松)+ate：认真谈",
+  "tip": "negotiate a deal",
+  "en": "They negotiated a contract.",
+  "cn": "他们谈成了一笔合同。"
+ },
+ {
+  "word": "neutral",
+  "ipa": "/ˈnjuːtrəl/",
+  "pos": "adj. 中立的；中性的",
+  "story": "neutr(中)+al",
+  "tip": "a neutral stance",
+  "en": "The country stayed neutral.",
+  "cn": "该国保持中立。"
+ },
+ {
+  "word": "nuclear",
+  "ipa": "/ˈnjuːkliə/",
+  "pos": "adj. 核能的；核心的",
+  "story": "nucle(核)+ar",
+  "tip": "nuclear energy",
+  "en": "They debated nuclear power.",
+  "cn": "他们辩论了核能。"
+ },
+ {
+  "word": "obligation",
+  "ipa": "/ˌɒblɪˈɡeɪʃn/",
+  "pos": "n. 义务",
+  "story": "ob+lig(绑)+ation",
+  "tip": "a legal obligation",
+  "en": "We have an obligation.",
+  "cn": "我们有义务。"
+ },
+ {
+  "word": "observe",
+  "ipa": "/əbˈzɜːv/",
+  "pos": "v. 观察；遵守",
+  "story": "ob+serve(守)",
+  "tip": "observe the rule",
+  "en": "He observed the stars.",
+  "cn": "他观测了星空。"
+ },
+ {
+  "word": "occur",
+  "ipa": "/əˈkɜː/",
+  "pos": "v. 发生；想到",
+  "story": "oc+cur(跑)：跑来",
+  "tip": "occur to sb",
+  "en": "An idea occurred to me.",
+  "cn": "我想到一个主意。"
+ },
+ {
+  "word": "odd",
+  "ipa": "/ɒd/",
+  "pos": "adj. 奇怪的；奇数的",
+  "story": "odd 音似‘奥德’",
+  "tip": "an odd number",
+  "en": "That is rather odd.",
+  "cn": "那有点怪。"
+ },
+ {
+  "word": "offence",
+  "ipa": "/əˈfens/",
+  "pos": "n. 冒犯；罪行",
+  "story": "of+fence(打)",
+  "tip": "an offence against",
+  "en": "It is an offence to cheat.",
+  "cn": "作弊是犯罪。"
+ },
+ {
+  "word": "offset",
+  "ipa": "/ˈɒfset/",
+  "pos": "v. 抵消",
+  "story": "off+set(放)",
+  "tip": "offset the cost",
+  "en": "The gain offset the loss.",
+  "cn": "收益抵消了损失。"
+ },
+ {
+  "word": "ongoing",
+  "ipa": "/ˈɒnɡəʊɪŋ/",
+  "pos": "adj. 持续的",
+  "story": "on+going",
+  "tip": "an ongoing project",
+  "en": "The debate is ongoing.",
+  "cn": "辩论仍在继续。"
+ },
+ {
+  "word": "online",
+  "ipa": "/ˌɒnˈlaɪn/",
+  "pos": "adj./adv. 在线的",
+  "story": "on+line",
+  "tip": "an online course",
+  "en": "Take an online class.",
+  "cn": "上一门线上课。"
+ },
+ {
+  "word": "onset",
+  "ipa": "/ˈɒnset/",
+  "pos": "n. 开始；发作",
+  "story": "on+set(落)",
+  "tip": "the onset of",
+  "en": "the onset of winter",
+  "cn": "冬天伊始。"
+ },
+ {
+  "word": "opacity",
+  "ipa": "/əʊˈpæsəti/",
+  "pos": "n. 不透明；含糊",
+  "story": "opac(暗)+ity",
+  "tip": "political opacity",
+  "en": "The opacity of the rule.",
+  "cn": "规则含糊。"
+ },
+ {
+  "word": "operate",
+  "ipa": "/ˈɒpəreɪt/",
+  "pos": "v. 运转；操作",
+  "story": "oper(工作)+ate",
+  "tip": "operate a machine",
+  "en": "The hospital operates well.",
+  "cn": "医院运转良好。"
+ },
+ {
+  "word": "opinion",
+  "ipa": "/əˈpɪnjən/",
+  "pos": "n. 意见",
+  "story": "opin(认为)+ion",
+  "tip": "in my opinion",
+  "en": "It is a matter of opinion.",
+  "cn": "这是见仁见智。"
+ },
+ {
+  "word": "opponent",
+  "ipa": "/əˈpəʊnənt/",
+  "pos": "n. 对手",
+  "story": "op+pon(放)+ent：放在对面",
+  "tip": "a worthy opponent",
+  "en": "He beat his opponent.",
+  "cn": "他击败了对手。"
+ },
+ {
+  "word": "opportunity",
+  "ipa": "/ˌɒpəˈtjuːnəti/",
+  "pos": "n. 机会",
+  "story": "op+port(港)+unity：好风靠港",
+  "tip": "a golden opportunity",
+  "en": "Seize the opportunity.",
+  "cn": "抓住机会。"
+ },
+ {
+  "word": "oppose",
+  "ipa": "/əˈpəʊz/",
+  "pos": "v. 反对",
+  "story": "op+pose(放)：放在对面",
+  "tip": "oppose a plan",
+  "en": "They opposed the law.",
+  "cn": "他们反对该法。"
+ },
+ {
+  "word": "optical",
+  "ipa": "/ˈɒptɪkl/",
+  "pos": "adj. 光学的",
+  "story": "opt(看)+ical",
+  "tip": "optical fibre",
+  "en": "Optical fibre is fast.",
+  "cn": "光纤很快。"
+ },
+ {
+  "word": "optimistic",
+  "ipa": "/ˌɒptɪˈmɪstɪk/",
+  "pos": "adj. 乐观的",
+  "story": "optim(最佳)+istic",
+  "tip": "an optimistic view",
+  "en": "She is optimistic about it.",
+  "cn": "她对此乐观。"
+ },
+ {
+  "word": "option",
+  "ipa": "/ˈɒpʃn/",
+  "pos": "n. 选择",
+  "story": "opt(选)+ion",
+  "tip": "keep your options open",
+  "en": "We have several options.",
+  "cn": "我们有几个选项。"
+ },
+ {
+  "word": "orbit",
+  "ipa": "/ˈɔːbɪt/",
+  "pos": "n. 轨道；v. 绕行",
+  "story": "orbit 音似‘奥比特’",
+  "tip": "in orbit",
+  "en": "The satellite is in orbit.",
+  "cn": "卫星在轨运行。"
+ },
+ {
+  "word": "order",
+  "ipa": "/ˈɔːdə/",
+  "pos": "n./v. 秩序；命令",
+  "story": "order 音似‘奥德’",
+  "tip": "in order",
+  "en": "Put it in order.",
+  "cn": "把它整理好。"
+ },
+ {
+  "word": "organ",
+  "ipa": "/ˈɔːɡən/",
+  "pos": "n. 器官；机构",
+  "story": "organ 音似‘奥根’",
+  "tip": "a government organ",
+  "en": "The organ published it.",
+  "cn": "该机构发表了它。"
+ },
+ {
+  "word": "organism",
+  "ipa": "/ˈɔːɡənɪzəm/",
+  "pos": "n. 生物；有机体",
+  "story": "organ+ism",
+  "tip": "a living organism",
+  "en": "A cell is an organism.",
+  "cn": "细胞是有机体。"
+ },
+ {
+  "word": "organize",
+  "ipa": "/ˈɔːɡənaɪz/",
+  "pos": "v. 组织",
+  "story": "organ+ize",
+  "tip": "organize an event",
+  "en": "They organized a rally.",
+  "cn": "他们组织了集会。"
+ },
+ {
+  "word": "outcome",
+  "ipa": "/ˈaʊtkʌm/",
+  "pos": "n. 结果",
+  "story": "out+come(来)",
+  "tip": "the final outcome",
+  "en": "The outcome was positive.",
+  "cn": "结果积极。"
+ },
+ {
+  "word": "outlet",
+  "ipa": "/ˈaʊtlet/",
+  "pos": "n. 出口；销路",
+  "story": "out+let(放)",
+  "tip": "a retail outlet",
+  "en": "Find an outlet for stress.",
+  "cn": "给压力找个出口。"
+ },
+ {
+  "word": "outline",
+  "ipa": "/ˈaʊtlaɪn/",
+  "pos": "n. 大纲；v. 概述",
+  "story": "out+line(线)",
+  "tip": "an outline of",
+  "en": "Give an outline first.",
+  "cn": "先给个大纲。"
+ },
+ {
+  "word": "output",
+  "ipa": "/ˈaʊtpʊt/",
+  "pos": "n. 产出",
+  "story": "out+put(放)",
+  "tip": "industrial output",
+  "en": "Output has increased.",
+  "cn": "产出增加了。"
+ },
+ {
+  "word": "overall",
+  "ipa": "/ˌəʊvərˈɔːl/",
+  "pos": "adj. 总体的",
+  "story": "over+all",
+  "tip": "the overall trend",
+  "en": "The overall picture is good.",
+  "cn": "总体向好。"
+ },
+ {
+  "word": "overcome",
+  "ipa": "/ˌəʊvəˈkʌm/",
+  "pos": "v. 克服",
+  "story": "over+come(来)",
+  "tip": "overcome difficulties",
+  "en": "We overcame the crisis.",
+  "cn": "我们克服了危机。"
+ },
+ {
+  "word": "overlap",
+  "ipa": "/ˌəʊvəˈlæp/",
+  "pos": "v./n. 重叠",
+  "story": "over+lap(折)",
+  "tip": "overlap with",
+  "en": "The tasks overlap.",
+  "cn": "任务有重叠。"
+ },
+ {
+  "word": "overseas",
+  "ipa": "/ˌəʊvəˈsiːz/",
+  "pos": "adj./adv. 海外的",
+  "story": "over+seas",
+  "tip": "overseas markets",
+  "en": "They expanded overseas.",
+  "cn": "他们向海外扩张。"
+ },
+ {
+  "word": "oversee",
+  "ipa": "/ˌəʊvəˈsiː/",
+  "pos": "v. 监督",
+  "story": "over+see(看)",
+  "tip": "oversee the project",
+  "en": "He oversaw the build.",
+  "cn": "他监督了建设。"
+ },
+ {
+  "word": "overturn",
+  "ipa": "/ˌəʊvəˈtɜːn/",
+  "pos": "v. 推翻；倾覆",
+  "story": "over+turn(转)",
+  "tip": "overturn a verdict",
+  "en": "The court overturned it.",
+  "cn": "法院推翻了判决。"
+ },
+ {
+  "word": "overwhelm",
+  "ipa": "/ˌəʊvəˈwelm/",
+  "pos": "v. 淹没；压倒",
+  "story": "over+whelm(浪)",
+  "tip": "be overwhelmed by",
+  "en": "She was overwhelmed by work.",
+  "cn": "她被工作压垮。"
+ },
+ {
+  "word": "pace",
+  "ipa": "/peɪs/",
+  "pos": "n. 步伐；v. 踱步",
+  "story": "pace 音似‘佩斯’",
+  "tip": "keep pace with",
+  "en": "We kept pace with demand.",
+  "cn": "我们跟上了需求。"
+ },
+ {
+  "word": "panel",
+  "ipa": "/ˈpænl/",
+  "pos": "n. 专家小组；面板",
+  "story": "panel 音似‘盘尔’",
+  "tip": "a review panel",
+  "en": "The panel met today.",
+  "cn": "小组今天开会了。"
+ },
+ {
+  "word": "paradigm",
+  "ipa": "/ˈpærədaɪm/",
+  "pos": "n. 范式",
+  "story": "para(旁)+digm(示)",
+  "tip": "a new paradigm",
+  "en": "This is a paradigm shift.",
+  "cn": "这是范式转变。"
+ },
+ {
+  "word": "parallel",
+  "ipa": "/ˈpærəlel/",
+  "pos": "adj. 平行的；n. 相似处",
+  "story": "para(旁)+llel(彼此)",
+  "tip": "in parallel with",
+  "en": "There is a parallel case.",
+  "cn": "有个类似案例。"
+ },
+ {
+  "word": "parity",
+  "ipa": "/ˈpærəti/",
+  "pos": "n. 平等；等价",
+  "story": "par(等)+ity",
+  "tip": "achieve parity",
+  "en": "They sought wage parity.",
+  "cn": "他们争取同工同酬。"
+ },
+ {
+  "word": "participate",
+  "ipa": "/pɑːˈtɪsɪpeɪt/",
+  "pos": "v. 参与",
+  "story": "parti(部分)+cip(取)+ate",
+  "tip": "participate in",
+  "en": "She participated actively.",
+  "cn": "她积极参与。"
+ },
+ {
+  "word": "particular",
+  "ipa": "/pəˈtɪkjələ/",
+  "pos": "adj. 特别的；n. 细节",
+  "story": "part(部分)+icular",
+  "tip": "in particular",
+  "en": "He loves music in particular.",
+  "cn": "他尤其爱音乐。"
+ },
+ {
+  "word": "passive",
+  "ipa": "/ˈpæsɪv/",
+  "pos": "adj. 被动的",
+  "story": "pass(受)+ive",
+  "tip": "a passive role",
+  "en": "He took a passive stance.",
+  "cn": "他采取被动姿态。"
+ },
+ {
+  "word": "pastime",
+  "ipa": "/ˈpɑːstaɪm/",
+  "pos": "n. 消遣",
+  "story": "pas(过)+time",
+  "tip": "a popular pastime",
+  "en": "Reading is my pastime.",
+  "cn": "阅读是我的消遣。"
+ },
+ {
+  "word": "patch",
+  "ipa": "/pætʃ/",
+  "pos": "n. 补丁；v. 修补",
+  "story": "patch 音似‘帕奇’",
+  "tip": "a software patch",
+  "en": "They patched the bug.",
+  "cn": "他们修补了漏洞。"
+ },
+ {
+  "word": "patent",
+  "ipa": "/ˈpeɪtnt/",
+  "pos": "n. 专利；adj. 明显的",
+  "story": "pat(开)+ent：公开",
+  "tip": "file a patent",
+  "en": "He holds a patent.",
+  "cn": "他持有一项专利。"
+ },
+ {
+  "word": "pathway",
+  "ipa": "/ˈpɑːθweɪ/",
+  "pos": "n. 路径",
+  "story": "path+way",
+  "tip": "a clear pathway",
+  "en": "We found a pathway.",
+  "cn": "我们找到了路径。"
+ },
+ {
+  "word": "patience",
+  "ipa": "/ˈpeɪʃns/",
+  "pos": "n. 耐心",
+  "story": "pati(受)+ence",
+  "tip": "with patience",
+  "en": "Patience is a virtue.",
+  "cn": "耐心是美德。"
+ },
+ {
+  "word": "pattern",
+  "ipa": "/ˈpætn/",
+  "pos": "n. 模式；v. 仿制",
+  "story": "pattern 音似‘帕特恩’",
+  "tip": "a clear pattern",
+  "en": "We saw a pattern.",
+  "cn": "我们看出一种模式。"
+ },
+ {
+  "word": "peak",
+  "ipa": "/piːk/",
+  "pos": "n. 顶峰；adj. 最高的",
+  "story": "peak 音似‘匹克’",
+  "tip": "at its peak",
+  "en": "Sales peaked in June.",
+  "cn": "销量在六月达峰。"
+ },
+ {
+  "word": "peer",
+  "ipa": "/pɪə/",
+  "pos": "n. 同龄人；v. 凝视",
+  "story": "peer 音似‘皮尔’",
+  "tip": "a peer group",
+  "en": "He was judged by peers.",
+  "cn": "由同侪评判他。"
+ },
+ {
+  "word": "penalty",
+  "ipa": "/ˈpenəlti/",
+  "pos": "n. 惩罚；罚金",
+  "story": "pen(罚)+alty",
+  "tip": "a heavy penalty",
+  "en": "The penalty is severe.",
+  "cn": "处罚很重。"
+ },
+ {
+  "word": "pending",
+  "ipa": "/ˈpendɪŋ/",
+  "pos": "adj. 待定的",
+  "story": "pend(挂)+ing：挂着",
+  "tip": "a pending case",
+  "en": "The case is pending.",
+  "cn": "案件待审。"
+ },
+ {
+  "word": "perfect",
+  "ipa": "/ˈpɜːfɪkt/",
+  "pos": "adj. 完美的",
+  "story": "per(全)+fect(做)：做到极致",
+  "tip": "a perfect match",
+  "en": "The fit is perfect.",
+  "cn": "契合完美。"
+ },
+ {
+  "word": "perform",
+  "ipa": "/pəˈfɔːm/",
+  "pos": "v. 执行；表演",
+  "story": "per+form(形)：成形",
+  "tip": "perform a task",
+  "en": "They performed well.",
+  "cn": "他们表现出色。"
+ },
+ {
+  "word": "permanent",
+  "ipa": "/ˈpɜːmənənt/",
+  "pos": "adj. 永久的",
+  "story": "per(全)+man(留)+ent",
+  "tip": "a permanent job",
+  "en": "He seeks permanent work.",
+  "cn": "他找固定工作。"
+ },
+ {
+  "word": "permeate",
+  "ipa": "/ˈpɜːmieɪt/",
+  "pos": "v. 渗透；弥漫",
+  "story": "per+meate(通过)",
+  "tip": "permeate through",
+  "en": "The smell permeated the room.",
+  "cn": "气味弥漫房间。"
+ },
+ {
+  "word": "permission",
+  "ipa": "/pəˈmɪʃn/",
+  "pos": "n. 许可",
+  "story": "per+miss(放)+ion",
+  "tip": "with permission",
+  "en": "Ask for permission first.",
+  "cn": "先请求许可。"
+ },
+ {
+  "word": "permit",
+  "ipa": "/pəˈmɪt/",
+  "pos": "v. 允许；n. 许可证",
+  "story": "per+mit(放)",
+  "tip": "permit sb to",
+  "en": "Smoking is not permitted.",
+  "cn": "禁止吸烟。"
+ },
+ {
+  "word": "persist",
+  "ipa": "/pəˈsɪst/",
+  "pos": "v. 坚持；持续",
+  "story": "per+sist(站)",
+  "tip": "persist in",
+  "en": "He persisted despite failure.",
+  "cn": "他虽败仍坚持。"
+ },
+ {
+  "word": "personnel",
+  "ipa": "/ˌpɜːsəˈnel/",
+  "pos": "n. 人员",
+  "story": "person+nel",
+  "tip": "medical personnel",
+  "en": "The personnel were trained.",
+  "cn": "人员受过训练。"
+ },
+ {
+  "word": "perspective",
+  "ipa": "/pəˈspektɪv/",
+  "pos": "n. 视角",
+  "story": "per+spect(看)+ive",
+  "tip": "from my perspective",
+  "en": "It offers a new perspective.",
+  "cn": "它提供新视角。"
+ },
+ {
+  "word": "persuade",
+  "ipa": "/pəˈsweɪd/",
+  "pos": "v. 说服",
+  "story": "per+suade(甜)：说软话",
+  "tip": "persuade sb to",
+  "en": "She persuaded him to stay.",
+  "cn": "她劝他留下。"
+ },
+ {
+  "word": "pessimistic",
+  "ipa": "/ˌpesɪˈmɪstɪk/",
+  "pos": "adj. 悲观的",
+  "story": "pessim(最差)+istic",
+  "tip": "a pessimistic view",
+  "en": "He is pessimistic about it.",
+  "cn": "他对此悲观。"
+ },
+ {
+  "word": "philosophy",
+  "ipa": "/fəˈlɒsəfi/",
+  "pos": "n. 哲学",
+  "story": "philo(爱)+sophy(智)",
+  "tip": "a philosophy of life",
+  "en": "He has a clear philosophy.",
+  "cn": "他有清晰的人生观。"
+ },
+ {
+  "word": "physical",
+  "ipa": "/ˈfɪzɪkl/",
+  "pos": "adj. 身体的；物理的",
+  "story": "physic(自然)+al",
+  "tip": "physical health",
+  "en": "Exercise improves physical health.",
+  "cn": "运动改善身体健康。"
+ },
+ {
+  "word": "pilot",
+  "ipa": "/ˈpaɪlət/",
+  "pos": "n. 飞行员；adj. 试点的",
+  "story": "pilot 音似‘派勒特’",
+  "tip": "a pilot project",
+  "en": "They launched a pilot.",
+  "cn": "他们启动了试点。"
+ },
+ {
+  "word": "plateau",
+  "ipa": "/ˈplætəʊ/",
+  "pos": "n. 高原；v. 停滞",
+  "story": "plateau 音似‘普拉托’",
+  "tip": "reach a plateau",
+  "en": "Growth reached a plateau.",
+  "cn": "增长陷入停滞。"
+ },
+ {
+  "word": "platform",
+  "ipa": "/ˈplætfɔːm/",
+  "pos": "n. 平台",
+  "story": "plat(平)+form",
+  "tip": "an online platform",
+  "en": "The platform connects users.",
+  "cn": "平台连接用户。"
+ },
+ {
+  "word": "plausible",
+  "ipa": "/ˈplɔːzəbl/",
+  "pos": "adj. 看似合理的",
+  "story": "plaus(赞)+ible",
+  "tip": "a plausible excuse",
+  "en": "His story is plausible.",
+  "cn": "他的说法看似合理。"
+ },
+ {
+  "word": "plead",
+  "ipa": "/pliːd/",
+  "pos": "v. 恳求；辩护",
+  "story": "plead 音似‘普利德’",
+  "tip": "plead guilty",
+  "en": "He pleaded for mercy.",
+  "cn": "他恳求宽恕。"
+ },
+ {
+  "word": "pledge",
+  "ipa": "/pledʒ/",
+  "pos": "n./v. 承诺；抵押",
+  "story": "pledge 音似‘普莱吉’",
+  "tip": "make a pledge",
+  "en": "They pledged support.",
+  "cn": "他们承诺支持。"
+ },
+ {
+  "word": "policy",
+  "ipa": "/ˈpɒləsi/",
+  "pos": "n. 政策",
+  "story": "poli(城)+cy",
+  "tip": "a foreign policy",
+  "en": "The policy changed.",
+  "cn": "政策变了。"
+ },
+ {
+  "word": "polish",
+  "ipa": "/ˈpɒlɪʃ/",
+  "pos": "v. 磨光；n. 润色",
+  "story": "polish 音似‘抛光’",
+  "tip": "polish the draft",
+  "en": "Polish your writing.",
+  "cn": "润色你的文章。"
+ },
+ {
+  "word": "portion",
+  "ipa": "/ˈpɔːʃn/",
+  "pos": "n. 部分；v. 分配",
+  "story": "port(分)+ion",
+  "tip": "a large portion",
+  "en": "A portion goes to tax.",
+  "cn": "一部分交了税。"
+ },
+ {
+  "word": "pose",
+  "ipa": "/pəʊz/",
+  "pos": "v. 造成；摆姿",
+  "story": "pose 音似‘剖兹’",
+  "tip": "pose a risk",
+  "en": "It poses a threat.",
+  "cn": "它构成威胁。"
+ },
+ {
+  "word": "posit",
+  "ipa": "/ˈpɒzɪt/",
+  "pos": "v. 假定；安置",
+  "story": "pos(放)+it",
+  "tip": "posit that...",
+  "en": "He posited a theory.",
+  "cn": "他提出了一个理论。"
+ },
+ {
+  "word": "potential",
+  "ipa": "/pəˈtenʃl/",
+  "pos": "adj. 潜在的；n. 潜力",
+  "story": "poten(能)+tial",
+  "tip": "a potential risk",
+  "en": "She has great potential.",
+  "cn": "她潜力巨大。"
+ },
+ {
+  "word": "predict",
+  "ipa": "/prɪˈdɪkt/",
+  "pos": "v. 预测",
+  "story": "pre+dict(说)",
+  "tip": "predict the result",
+  "en": "Economists predicted it.",
+  "cn": "经济学家预测了它。"
+ },
+ {
+  "word": "preference",
+  "ipa": "/ˈprefrəns/",
+  "pos": "n. 偏好",
+  "story": "pre+fer(带)+ence：先拿来",
+  "tip": "a strong preference",
+  "en": "She has a preference.",
+  "cn": "她有偏好。"
+ },
+ {
+  "word": "preliminary",
+  "ipa": "/prɪˈlɪmɪnəri/",
+  "pos": "adj. 初步的",
+  "story": "pre+limin(门槛)+ary",
+  "tip": "a preliminary study",
+  "en": "This is a preliminary step.",
+  "cn": "这是初步步骤。"
+ },
+ {
+  "word": "presence",
+  "ipa": "/ˈprezns/",
+  "pos": "n. 存在；在场",
+  "story": "pre+sence(在)",
+  "tip": "in the presence of",
+  "en": "His presence calmed us.",
+  "cn": "他在场让我们安心。"
+ },
+ {
+  "word": "present",
+  "ipa": "/ˈpreznt/",
+  "pos": "adj. 当前的；v. 呈现",
+  "story": "pre+sent(在)",
+  "tip": "at present",
+  "en": "He presented his view.",
+  "cn": "他陈述了观点。"
+ },
+ {
+  "word": "preserve",
+  "ipa": "/prɪˈzɜːv/",
+  "pos": "v. 保护；保存",
+  "story": "pre+serve(守)",
+  "tip": "preserve the forest",
+  "en": "We must preserve nature.",
+  "cn": "我们必须保护自然。"
+ },
+ {
+  "word": "press",
+  "ipa": "/pres/",
+  "pos": "v./n. 压；新闻界",
+  "story": "press 音似‘普雷斯’",
+  "tip": "the free press",
+  "en": "The press reported it.",
+  "cn": "新闻界报道了。"
+ },
+ {
+  "word": "prevail",
+  "ipa": "/prɪˈveɪl/",
+  "pos": "v. 盛行；获胜",
+  "story": "pre+vail(强)",
+  "tip": "prevail over",
+  "en": "Reason prevailed.",
+  "cn": "理性占了上风。"
+ },
+ {
+  "word": "prevent",
+  "ipa": "/prɪˈvent/",
+  "pos": "v. 预防；阻止",
+  "story": "pre+vent(来)：挡在前面",
+  "tip": "prevent from",
+  "en": "We must prevent it.",
+  "cn": "我们必须阻止它。"
+ },
+ {
+  "word": "previous",
+  "ipa": "/ˈpriːviəs/",
+  "pos": "adj. 先前的",
+  "story": "pre+vi(路)+ous：前面的路",
+  "tip": "on a previous occasion",
+  "en": "As mentioned previously.",
+  "cn": "如先前所述。"
+ },
+ {
+  "word": "primary",
+  "ipa": "/ˈpraɪməri/",
+  "pos": "adj. 主要的；初级的",
+  "story": "prim(首)+ary",
+  "tip": "a primary goal",
+  "en": "Education is primary.",
+  "cn": "教育是第一位的。"
+ },
+ {
+  "word": "prime",
+  "ipa": "/praɪm/",
+  "pos": "adj. 首要的；n. 盛年",
+  "story": "prim(首)",
+  "tip": "a prime example",
+  "en": "This is a prime case.",
+  "cn": "这是典型例子。"
+ },
+ {
+  "word": "principal",
+  "ipa": "/ˈprɪnsəpl/",
+  "pos": "adj. 主要的；n. 校长",
+  "story": "prin(首)+cip(取)+al",
+  "tip": "易混 principal vs principle",
+  "en": "The principal agreed.",
+  "cn": "校长同意了。"
+ },
+ {
+  "word": "principle",
+  "ipa": "/ˈprɪnsəpl/",
+  "pos": "n. 原则",
+  "story": "prin(首)+cip+le",
+  "tip": "易混 principle vs principal",
+  "en": "He stood by his principle.",
+  "cn": "他坚守原则。"
+ },
+ {
+  "word": "priority",
+  "ipa": "/praɪˈɒrəti/",
+  "pos": "n. 优先事项",
+  "story": "prior(前)+ity",
+  "tip": "top priority",
+  "en": "Safety is the priority.",
+  "cn": "安全是头等大事。"
+ },
+ {
+  "word": "prohibit",
+  "ipa": "/prəˈhɪbɪt/",
+  "pos": "v. 禁止",
+  "story": "pro+hibit(持)：在前拦住",
+  "tip": "prohibit smoking",
+  "en": "Smoking is prohibited.",
+  "cn": "禁止吸烟。"
+ },
+ {
+  "word": "prompt",
+  "ipa": "/prɒmpt/",
+  "pos": "adj. 迅速的；v. 促使",
+  "story": "prompt 音似‘普绕姆普特’",
+  "tip": "a prompt reply",
+  "en": "The crisis prompted action.",
+  "cn": "危机促使了行动。"
+ },
+ {
+  "word": "pronounce",
+  "ipa": "/prəˈnaʊns/",
+  "pos": "v. 发音；宣布",
+  "story": "pro+nounce(说)",
+  "tip": "pronounce clearly",
+  "en": "Pronounce each word.",
+  "cn": "把每个词读清。"
+ },
+ {
+  "word": "proof",
+  "ipa": "/pruːf/",
+  "pos": "n. 证据；adj. 防…的",
+  "story": "proof 音似‘普鲁夫’",
+  "tip": "solid proof",
+  "en": "We need proof.",
+  "cn": "我们需要证据。"
+ },
+ {
+  "word": "proper",
+  "ipa": "/ˈprɒpə/",
+  "pos": "adj. 适当的",
+  "story": "pro+per(通过)",
+  "tip": "proper procedure",
+  "en": "Follow proper steps.",
+  "cn": "按正确步骤来。"
+ },
+ {
+  "word": "property",
+  "ipa": "/ˈprɒpəti/",
+  "pos": "n. 财产；性质",
+  "story": "pro+per(拥有)+ty",
+  "tip": "private property",
+  "en": "Respect private property.",
+  "cn": "尊重私有财产。"
+ },
+ {
+  "word": "proportion",
+  "ipa": "/prəˈpɔːʃn/",
+  "pos": "n. 比例",
+  "story": "pro+port(分)+ion",
+  "tip": "a large proportion",
+  "en": "A proportion stayed.",
+  "cn": "一部分人留了下来。"
+ },
+ {
+  "word": "prospect",
+  "ipa": "/ˈprɒspekt/",
+  "pos": "n. 前景；v. 勘探",
+  "story": "pro+spect(看)",
+  "tip": "a bright prospect",
+  "en": "The prospect is good.",
+  "cn": "前景不错。"
+ },
+ {
+  "word": "protect",
+  "ipa": "/prəˈtekt/",
+  "pos": "v. 保护",
+  "story": "pro+tect(盖)",
+  "tip": "protect from",
+  "en": "Protect your eyes.",
+  "cn": "保护你的眼睛。"
+ },
+ {
+  "word": "provide",
+  "ipa": "/prəˈvaɪd/",
+  "pos": "v. 提供",
+  "story": "pro+vid(看)：向前看顾",
+  "tip": "provide for",
+  "en": "They provided aid.",
+  "cn": "他们提供了援助。"
+ },
+ {
+  "word": "provoke",
+  "ipa": "/prəˈvəʊk/",
+  "pos": "v. 挑衅；激起",
+  "story": "pro+vok(呼)+e：引出",
+  "tip": "provoke a reaction",
+  "en": "His words provoked anger.",
+  "cn": "他的话激起了愤怒。"
+ },
+ {
+  "word": "publish",
+  "ipa": "/ˈpʌblɪʃ/",
+  "pos": "v. 出版；发布",
+  "story": "publ(公众)+ish",
+  "tip": "publish a book",
+  "en": "She published a novel.",
+  "cn": "她出版了一本小说。"
+ },
+ {
+  "word": "pursue",
+  "ipa": "/pəˈsjuː/",
+  "pos": "v. 追求；从事",
+  "story": "pur(前)+sue(跟随)",
+  "tip": "pursue a career",
+  "en": "He pursued his dream.",
+  "cn": "他追求梦想。"
+ },
+ {
+  "word": "qualify",
+  "ipa": "/ˈkwɒlɪfaɪ/",
+  "pos": "v. 使合格；限定",
+  "story": "qual(质)+ify",
+  "tip": "qualify for",
+  "en": "She qualified as a doctor.",
+  "cn": "她取得了医生资格。"
+ },
+ {
+  "word": "quality",
+  "ipa": "/ˈkwɒləti/",
+  "pos": "n. 质量；adj. 优质的",
+  "story": "qual(质)+ity",
+  "tip": "high quality",
+  "en": "We value quality.",
+  "cn": "我们看重质量。"
+ },
+ {
+  "word": "quantify",
+  "ipa": "/ˈkwɒntɪfaɪ/",
+  "pos": "v. 量化",
+  "story": "quant(量)+ify",
+  "tip": "quantify the impact",
+  "en": "We cannot quantify it.",
+  "cn": "我们无法量化它。"
+ },
+ {
+  "word": "quarter",
+  "ipa": "/ˈkwɔːtə/",
+  "pos": "n. 四分之一；季度",
+  "story": "quarter 音似‘括特’",
+  "tip": "in the first quarter",
+  "en": "Sales rose this quarter.",
+  "cn": "本季销量上升。"
+ },
+ {
+  "word": "questionnaire",
+  "ipa": "/ˌkwestʃəˈneə/",
+  "pos": "n. 问卷",
+  "story": "question+naire",
+  "tip": "fill in a questionnaire",
+  "en": "Complete the questionnaire.",
+  "cn": "填好问卷。"
+ },
+ {
+  "word": "range",
+  "ipa": "/reɪndʒ/",
+  "pos": "n. 范围；v. 变动",
+  "story": "range 音似‘润吉’",
+  "tip": "a wide range",
+  "en": "Prices range from 10 to 50.",
+  "cn": "价格从10到50不等。"
+ },
+ {
+  "word": "rank",
+  "ipa": "/ræŋk/",
+  "pos": "n. 等级；v. 排名",
+  "story": "rank 音似‘朗克’",
+  "tip": "a high rank",
+  "en": "He ranks first.",
+  "cn": "他排第一。"
+ },
+ {
+  "word": "rapid",
+  "ipa": "/ˈræpɪd/",
+  "pos": "adj. 迅速的",
+  "story": "rapid 音似‘瑞皮德’",
+  "tip": "rapid growth",
+  "en": "There was rapid change.",
+  "cn": "变化迅速。"
+ },
+ {
+  "word": "realm",
+  "ipa": "/relm/",
+  "pos": "n. 领域；王国",
+  "story": "realm 音似‘瑞尔姆’",
+  "tip": "in the realm of",
+  "en": "This is in my realm.",
+  "cn": "这在我领域之内。"
+ },
+ {
+  "word": "rebel",
+  "ipa": "/ˈrebl/",
+  "pos": "n. 反叛者；v. 反叛",
+  "story": "re+bel(战)",
+  "tip": "rebel against",
+  "en": "They rebelled against it.",
+  "cn": "他们反抗它。"
+ },
+ {
+  "word": "recall",
+  "ipa": "/rɪˈkɔːl/",
+  "pos": "v. 回想起；召回",
+  "story": "re+call(叫)",
+  "tip": "recall an event",
+  "en": "I recall the day clearly.",
+  "cn": "我清晰记得那天。"
+ },
+ {
+  "word": "receive",
+  "ipa": "/rɪˈsiːv/",
+  "pos": "v. 收到",
+  "story": "re+ceive(拿)",
+  "tip": "receive a letter",
+  "en": "She received good news.",
+  "cn": "她收到了好消息。"
+ },
+ {
+  "word": "recession",
+  "ipa": "/rɪˈseʃn/",
+  "pos": "n. 经济衰退",
+  "story": "re+cess(退)+ion",
+  "tip": "a deep recession",
+  "en": "The recession ended.",
+  "cn": "衰退结束了。"
+ },
+ {
+  "word": "recipe",
+  "ipa": "/ˈresəpi/",
+  "pos": "n. 食谱；诀窍",
+  "story": "re+cipe(取)",
+  "tip": "a recipe for success",
+  "en": "Diligence is the recipe.",
+  "cn": "勤奋是成功诀窍。"
+ },
+ {
+  "word": "recognize",
+  "ipa": "/ˈrekəɡnaɪz/",
+  "pos": "v. 认出；承认",
+  "story": "re+cogn(知)+ize",
+  "tip": "recognize a face",
+  "en": "They recognized the risk.",
+  "cn": "他们认清了风险。"
+ },
+ {
+  "word": "recommend",
+  "ipa": "/ˌrekəˈmend/",
+  "pos": "v. 推荐",
+  "story": "re+commend(委托)",
+  "tip": "recommend doing",
+  "en": "I recommend this book.",
+  "cn": "我推荐这本书。"
+ },
+ {
+  "word": "recruit",
+  "ipa": "/rɪˈkruːt/",
+  "pos": "v. 招募；n. 新兵",
+  "story": "re+cruit(长)",
+  "tip": "recruit staff",
+  "en": "They recruited engineers.",
+  "cn": "他们招募了工程师。"
+ },
+ {
+  "word": "reduce",
+  "ipa": "/rɪˈdjuːs/",
+  "pos": "v. 减少",
+  "story": "re+duce(引)：往回引",
+  "tip": "reduce costs",
+  "en": "We reduced waste.",
+  "cn": "我们减少了浪费。"
+ },
+ {
+  "word": "redundant",
+  "ipa": "/rɪˈdʌndənt/",
+  "pos": "adj. 冗余的",
+  "story": "re+und(波)+ant：多馀",
+  "tip": "make sb redundant",
+  "en": "The post became redundant.",
+  "cn": "该职位被裁撤。"
+ },
+ {
+  "word": "refer",
+  "ipa": "/rɪˈfɜː/",
+  "pos": "v. 提及；参考",
+  "story": "re+fer(带)",
+  "tip": "refer to",
+  "en": "The note refers to it.",
+  "cn": "备注提到了它。"
+ },
+ {
+  "word": "reform",
+  "ipa": "/rɪˈfɔːm/",
+  "pos": "v./n. 改革",
+  "story": "re+form(形)",
+  "tip": "reform the system",
+  "en": "They reformed education.",
+  "cn": "他们改革了教育。"
+ },
+ {
+  "word": "refuse",
+  "ipa": "/rɪˈfjuːz/",
+  "pos": "v. 拒绝",
+  "story": "re+fuse(流)：往回挡",
+  "tip": "refuse to do",
+  "en": "He refused the offer.",
+  "cn": "他拒绝了提议。"
+ },
+ {
+  "word": "regard",
+  "ipa": "/rɪˈɡɑːd/",
+  "pos": "v. 看待；n. 尊敬",
+  "story": "re+gard(看)",
+  "tip": "with regard to",
+  "en": "I regard him highly.",
+  "cn": "我很敬重他。"
+ },
+ {
+  "word": "regime",
+  "ipa": "/reɪˈʒiːm/",
+  "pos": "n. 政权；体制",
+  "story": "reg(统治)+ime",
+  "tip": "a new regime",
+  "en": "The regime collapsed.",
+  "cn": "政权垮台了。"
+ },
+ {
+  "word": "region",
+  "ipa": "/ˈriːdʒən/",
+  "pos": "n. 地区",
+  "story": "reg(统治)+ion",
+  "tip": "in the region of",
+  "en": "The region is mountainous.",
+  "cn": "该地区多山。"
+ },
+ {
+  "word": "register",
+  "ipa": "/ˈredʒɪstə/",
+  "pos": "v. 登记；n. 登记簿",
+  "story": "re+gister(载)",
+  "tip": "register a birth",
+  "en": "You must register first.",
+  "cn": "你必须先登记。"
+ },
+ {
+  "word": "reject",
+  "ipa": "/rɪˈdʒekt/",
+  "pos": "v. 拒绝；驳回",
+  "story": "re+ject(投)：往回扔",
+  "tip": "reject a claim",
+  "en": "The paper was rejected.",
+  "cn": "论文被拒了。"
+ },
+ {
+  "word": "relate",
+  "ipa": "/rɪˈleɪt/",
+  "pos": "v. 有关联；讲述",
+  "story": "re+late(带)",
+  "tip": "relate to",
+  "en": "She related her story.",
+  "cn": "她讲述了经历。"
+ },
+ {
+  "word": "release",
+  "ipa": "/rɪˈliːs/",
+  "pos": "v./n. 释放；发布",
+  "story": "re+lease(松)",
+  "tip": "release a film",
+  "en": "They released the report.",
+  "cn": "他们发布了报告。"
+ },
+ {
+  "word": "relevant",
+  "ipa": "/ˈreləvənt/",
+  "pos": "adj. 相关的",
+  "story": "re+lev(举)+ant：举出关系",
+  "tip": "relevant to",
+  "en": "This is relevant to us.",
+  "cn": "这与我们相关。"
+ },
+ {
+  "word": "reliable",
+  "ipa": "/rɪˈlaɪəbl/",
+  "pos": "adj. 可靠的",
+  "story": "re+li(靠)+able",
+  "tip": "a reliable source",
+  "en": "He is a reliable friend.",
+  "cn": "他是可靠的朋友。"
+ },
+ {
+  "word": "relief",
+  "ipa": "/rɪˈliːf/",
+  "pos": "n. 缓解；宽慰",
+  "story": "re+lief(举)：卸下",
+  "tip": "a sense of relief",
+  "en": "The aid brought relief.",
+  "cn": "援助带来了缓解。"
+ },
+ {
+  "word": "religion",
+  "ipa": "/rɪˈlɪdʒən/",
+  "pos": "n. 宗教",
+  "story": "re+lig(绑)+ion",
+  "tip": "freedom of religion",
+  "en": "They respect all religions.",
+  "cn": "他们尊重所有宗教。"
+ },
+ {
+  "word": "rely",
+  "ipa": "/rɪˈlaɪ/",
+  "pos": "v. 依赖",
+  "story": "re+ly(靠)",
+  "tip": "rely on",
+  "en": "We rely on data.",
+  "cn": "我们依赖数据。"
+ },
+ {
+  "word": "remain",
+  "ipa": "/rɪˈmeɪn/",
+  "pos": "v. 保持；剩余",
+  "story": "re+main(留)",
+  "tip": "remain calm",
+  "en": "Much remains to be done.",
+  "cn": "仍有许多待办。"
+ },
+ {
+  "word": "remark",
+  "ipa": "/rɪˈmɑːk/",
+  "pos": "v./n. 评论；注意",
+  "story": "re+mark(标)",
+  "tip": "remark on",
+  "en": "She remarked on the change.",
+  "cn": "她评论了变化。"
+ },
+ {
+  "word": "remedy",
+  "ipa": "/ˈremədi/",
+  "pos": "n. 补救；v. 纠正",
+  "story": "re+medy(治)",
+  "tip": "a legal remedy",
+  "en": "There is no easy remedy.",
+  "cn": "没有简单的补救。"
+ },
+ {
+  "word": "remember",
+  "ipa": "/rɪˈmembə/",
+  "pos": "v. 记得",
+  "story": "re+member(忆)",
+  "tip": "remember to",
+  "en": "I remember the song.",
+  "cn": "我记得那首歌。"
+ },
+ {
+  "word": "remind",
+  "ipa": "/rɪˈmaɪnd/",
+  "pos": "v. 提醒",
+  "story": "re+mind(心)",
+  "tip": "remind sb of",
+  "en": "Remind me later.",
+  "cn": "稍后提醒我。"
+ },
+ {
+  "word": "remote",
+  "ipa": "/rɪˈməʊt/",
+  "pos": "adj. 遥远的；远程的",
+  "story": "re+mote(移)：移远",
+  "tip": "remote areas",
+  "en": "He works remotely.",
+  "cn": "他远程工作。"
+ },
+ {
+  "word": "remove",
+  "ipa": "/rɪˈmuːv/",
+  "pos": "v. 移除",
+  "story": "re+move(动)",
+  "tip": "remove a barrier",
+  "en": "Remove the obstacle.",
+  "cn": "移除障碍。"
+ },
+ {
+  "word": "renovate",
+  "ipa": "/ˈrenəveɪt/",
+  "pos": "v. 翻新",
+  "story": "re+nov(新)+ate",
+  "tip": "renovate a house",
+  "en": "They renovated the office.",
+  "cn": "他们翻新了办公室。"
+ },
+ {
+  "word": "repair",
+  "ipa": "/rɪˈpeə/",
+  "pos": "v./n. 修理",
+  "story": "re+pair(修)",
+  "tip": "repair the damage",
+  "en": "We repaired the roof.",
+  "cn": "我们修了屋顶。"
+ },
+ {
+  "word": "repeat",
+  "ipa": "/rɪˈpiːt/",
+  "pos": "v. 重复",
+  "story": "re+peat(求)",
+  "tip": "repeat after me",
+  "en": "Repeat the sentence.",
+  "cn": "跟读这句。"
+ },
+ {
+  "word": "replace",
+  "ipa": "/rɪˈpleɪs/",
+  "pos": "v. 取代；更换",
+  "story": "re+place(位)",
+  "tip": "replace with",
+  "en": "We replaced the old system.",
+  "cn": "我们换掉了旧系统。"
+ },
+ {
+  "word": "report",
+  "ipa": "/rɪˈpɔːt/",
+  "pos": "v./n. 报告",
+  "story": "re+port(运)",
+  "tip": "report on",
+  "en": "She reported the findings.",
+  "cn": "她汇报了发现。"
+ },
+ {
+  "word": "represent",
+  "ipa": "/ˌreprɪˈzent/",
+  "pos": "v. 代表；象征",
+  "story": "re+present(呈现)",
+  "tip": "represent a group",
+  "en": "He represents the firm.",
+  "cn": "他代表公司。"
+ },
+ {
+  "word": "republish",
+  "ipa": "/riːˈpʌblɪʃ/",
+  "pos": "v. 重印；重申",
+  "story": "re+publish",
+  "tip": "republish the article",
+  "en": "They republished the essay.",
+  "cn": "他们重刊了文章。"
+ },
+ {
+  "word": "request",
+  "ipa": "/rɪˈkwest/",
+  "pos": "v./n. 请求",
+  "story": "re+quest(求)",
+  "tip": "request a copy",
+  "en": "He requested a meeting.",
+  "cn": "他请求开会。"
+ },
+ {
+  "word": "require",
+  "ipa": "/rɪˈkwaɪə/",
+  "pos": "v. 需要",
+  "story": "re+quire(求)",
+  "tip": "require sb to",
+  "en": "The job requires skill.",
+  "cn": "这工作需要技术。"
+ },
+ {
+  "word": "rescue",
+  "ipa": "/ˈreskjuː/",
+  "pos": "v./n. 救援",
+  "story": "re+scue(抖)",
+  "tip": "rescue a child",
+  "en": "They rescued the cat.",
+  "cn": "他们救了猫。"
+ },
+ {
+  "word": "research",
+  "ipa": "/rɪˈsɜːtʃ/",
+  "pos": "n./v. 研究",
+  "story": "re+search(查)",
+  "tip": "do research on",
+  "en": "She researches climate.",
+  "cn": "她研究气候。"
+ },
+ {
+  "word": "resemble",
+  "ipa": "/rɪˈzembl/",
+  "pos": "v. 类似",
+  "story": "re+semble(同)",
+  "tip": "resemble each other",
+  "en": "They resemble their father.",
+  "cn": "他们像父亲。"
+ },
+ {
+  "word": "reserve",
+  "ipa": "/rɪˈzɜːv/",
+  "pos": "v. 保留；n. 储备",
+  "story": "re+serve(守)",
+  "tip": "reserve a seat",
+  "en": "We reserve the right.",
+  "cn": "我们保留权利。"
+ },
+ {
+  "word": "reside",
+  "ipa": "/rɪˈzaɪd/",
+  "pos": "v. 居住；存在",
+  "story": "re+side(坐)",
+  "tip": "reside in",
+  "en": "He resides abroad.",
+  "cn": "他旅居海外。"
+ },
+ {
+  "word": "resign",
+  "ipa": "/rɪˈzaɪn/",
+  "pos": "v. 辞职；顺从",
+  "story": "re+sign(签)：交回签",
+  "tip": "resign from",
+  "en": "He resigned last month.",
+  "cn": "他上月辞职了。"
+ },
+ {
+  "word": "resist",
+  "ipa": "/rɪˈzɪst/",
+  "pos": "v. 抵抗",
+  "story": "re+sist(站)",
+  "tip": "resist temptation",
+  "en": "She resisted the urge.",
+  "cn": "她抵抗了冲动。"
+ },
+ {
+  "word": "resolve",
+  "ipa": "/rɪˈzɒlv/",
+  "pos": "v. 解决；决心",
+  "story": "re+solve(松)",
+  "tip": "resolve a conflict",
+  "en": "They resolved the dispute.",
+  "cn": "他们解决了争端。"
+ },
+ {
+  "word": "resource",
+  "ipa": "/rɪˈsɔːs/",
+  "pos": "n. 资源",
+  "story": "re+source(源)",
+  "tip": "natural resources",
+  "en": "We waste resources.",
+  "cn": "我们浪费资源。"
+ },
+ {
+  "word": "respond",
+  "ipa": "/rɪˈspɒnd/",
+  "pos": "v. 回应",
+  "story": "re+spond(应)",
+  "tip": "respond to",
+  "en": "She responded quickly.",
+  "cn": "她很快回应了。"
+ },
+ {
+  "word": "restore",
+  "ipa": "/rɪˈstɔː/",
+  "pos": "v. 恢复；修复",
+  "story": "re+store(立)",
+  "tip": "restore order",
+  "en": "They restored the painting.",
+  "cn": "他们修复了画作。"
+ },
+ {
+  "word": "restrain",
+  "ipa": "/rɪˈstreɪn/",
+  "pos": "v. 抑制；约束",
+  "story": "re+strain(拉紧)",
+  "tip": "restrain from",
+  "en": "He restrained his anger.",
+  "cn": "他克制了怒气。"
+ },
+ {
+  "word": "restrict",
+  "ipa": "/rɪˈstrɪkt/",
+  "pos": "v. 限制",
+  "story": "re+strict(束)",
+  "tip": "restrict access",
+  "en": "Access is restricted.",
+  "cn": "访问受限。"
+ },
+ {
+  "word": "retain",
+  "ipa": "/rɪˈteɪn/",
+  "pos": "v. 保留",
+  "story": "re+tain(握)",
+  "tip": "retain a memory",
+  "en": "We retained the staff.",
+  "cn": "我们留住了员工。"
+ },
+ {
+  "word": "retreat",
+  "ipa": "/rɪˈtriːt/",
+  "pos": "v./n. 撤退；静修",
+  "story": "re+treat(退)",
+  "tip": "retreat from",
+  "en": "The army retreated.",
+  "cn": "军队撤退了。"
+ },
+ {
+  "word": "retrive",
+  "ipa": "/rɪˈtriːv/",
+  "pos": "v. 取回；检索",
+  "story": "re+trive(找)",
+  "tip": "retrive data",
+  "en": "He retrieved the file.",
+  "cn": "他取回了文件。"
+ },
+ {
+  "word": "reverse",
+  "ipa": "/rɪˈvɜːs/",
+  "pos": "v./adj. 反转(的)",
+  "story": "re+verse(转)",
+  "tip": "in reverse",
+  "en": "The trend reversed.",
+  "cn": "趋势反转了。"
+ },
+ {
+  "word": "revise",
+  "ipa": "/rɪˈvaɪz/",
+  "pos": "v. 修订；复习",
+  "story": "re+vise(看)",
+  "tip": "revise the draft",
+  "en": "Revise before the exam.",
+  "cn": "考前复习。"
+ },
+ {
+  "word": "revive",
+  "ipa": "/rɪˈvaɪv/",
+  "pos": "v.  revive；复苏",
+  "story": "re+vive(活)",
+  "tip": "revive the economy",
+  "en": "The market revived.",
+  "cn": "市场复苏了。"
+ },
+ {
+  "word": "revolve",
+  "ipa": "/rɪˈvɒlv/",
+  "pos": "v. 旋转；围绕",
+  "story": "re+volv(滚)",
+  "tip": "revolve around",
+  "en": "The debate revolves around it.",
+  "cn": "辩论围绕它展开。"
+ },
+ {
+  "word": "reward",
+  "ipa": "/rɪˈwɔːd/",
+  "pos": "n./v. 奖励",
+  "story": "re+ward(守)：回报看护",
+  "tip": "a financial reward",
+  "en": "Hard work brings reward.",
+  "cn": "努力带来回报。"
+ },
+ {
+  "word": "rigid",
+  "ipa": "/ˈrɪdʒɪd/",
+  "pos": "adj. 僵硬的；严格的",
+  "story": "rig(硬)+id",
+  "tip": "a rigid rule",
+  "en": "The schedule is rigid.",
+  "cn": "日程很死板。"
+ },
+ {
+  "word": "rigorous",
+  "ipa": "/ˈrɪɡərəs/",
+  "pos": "adj. 严格的；严密的",
+  "story": "rig(硬)+orous",
+  "tip": "rigorous testing",
+  "en": "We need rigorous proof.",
+  "cn": "我们需要严密证明。"
+ },
+ {
+  "word": "ritual",
+  "ipa": "/ˈrɪtʃuəl/",
+  "pos": "n. 仪式；adj. 例行的",
+  "story": "rit(礼)+ual",
+  "tip": "a daily ritual",
+  "en": "Coffee is my ritual.",
+  "cn": "咖啡是我的日常仪式。"
+ },
+ {
+  "word": "robust",
+  "ipa": "/rəʊˈbʌst/",
+  "pos": "adj. 强健的；稳健的",
+  "story": "rob(强)+ust",
+  "tip": "a robust system",
+  "en": "The economy is robust.",
+  "cn": "经济稳健。"
+ },
+ {
+  "word": "role",
+  "ipa": "/rəʊl/",
+  "pos": "n. 角色；作用",
+  "story": "role 音似‘柔尔’",
+  "tip": "play a role",
+  "en": "He plays a key role.",
+  "cn": "他起关键作用。"
+ },
+ {
+  "word": "route",
+  "ipa": "/ruːt/",
+  "pos": "n. 路线",
+  "story": "route 音似‘路特’",
+  "tip": "the fastest route",
+  "en": "Take the scenic route.",
+  "cn": "走风景线。"
+ },
+ {
+  "word": "routine",
+  "ipa": "/ruːˈtiːn/",
+  "pos": "n. 日常；adj. 常规的",
+  "story": "route+ine",
+  "tip": "a daily routine",
+  "en": "Keep a healthy routine.",
+  "cn": "保持规律作息。"
+ },
+ {
+  "word": "rural",
+  "ipa": "/ˈrʊərəl/",
+  "pos": "adj. 农村的",
+  "story": "rur(乡)+al",
+  "tip": "rural areas",
+  "en": "Rural life is quiet.",
+  "cn": "乡村生活安静。"
+ },
+ {
+  "word": "sacrifice",
+  "ipa": "/ˈsækrɪfaɪs/",
+  "pos": "n./v. 牺牲",
+  "story": "sacr(圣)+fic(做)+e",
+  "tip": "sacrifice for",
+  "en": "He sacrificed his time.",
+  "cn": "他牺牲了时间。"
+ },
+ {
+  "word": "safeguard",
+  "ipa": "/ˈseɪfɡɑːd/",
+  "pos": "v./n. 保护",
+  "story": "safe+guard(卫)",
+  "tip": "safeguard against",
+  "en": "We safeguard privacy.",
+  "cn": "我们保护隐私。"
+ },
+ {
+  "word": "salary",
+  "ipa": "/ˈsæləri/",
+  "pos": "n. 薪水",
+  "story": "sal(盐)+ary：古以盐代薪",
+  "tip": "a monthly salary",
+  "en": "His salary rose.",
+  "cn": "他薪水涨了。"
+ },
+ {
+  "word": "sample",
+  "ipa": "/ˈsɑːmpl/",
+  "pos": "n. 样本；v. 取样",
+  "story": "sample 音似‘桑普’",
+  "tip": "a random sample",
+  "en": "We sampled 100 users.",
+  "cn": "我们抽样了100名用户。"
+ },
+ {
+  "word": "satisfy",
+  "ipa": "/ˈsætɪsfaɪ/",
+  "pos": "v. 使满意",
+  "story": "satis(足)+fy",
+  "tip": "satisfy the need",
+  "en": "The result satisfied us.",
+  "cn": "结果令我们满意。"
+ },
+ {
+  "word": "scale",
+  "ipa": "/skeɪl/",
+  "pos": "n. 规模；v. 缩放",
+  "story": "scale 音似‘斯盖尔’",
+  "tip": "on a large scale",
+  "en": "We scaled the business.",
+  "cn": "我们扩大了业务。"
+ },
+ {
+  "word": "scatter",
+  "ipa": "/ˈskætə/",
+  "pos": "v. 散播；分散",
+  "story": "scatter 音似‘斯卡特’",
+  "tip": "scatter the seeds",
+  "en": "The wind scattered the papers.",
+  "cn": "风把文件吹散了。"
+ },
+ {
+  "word": "scenario",
+  "ipa": "/səˈnɑːriəʊ/",
+  "pos": "n. 情景；剧本",
+  "story": "scen(景)+ario",
+  "tip": "a worst-case scenario",
+  "en": "Plan for each scenario.",
+  "cn": "为每个情景做预案。"
+ },
+ {
+  "word": "schedule",
+  "ipa": "/ˈʃedjuːl/",
+  "pos": "n. 日程；v. 安排",
+  "story": "schedule 音似‘谢纠’",
+  "tip": "on schedule",
+  "en": "The train is on schedule.",
+  "cn": "火车准点。"
+ },
+ {
+  "word": "scheme",
+  "ipa": "/skiːm/",
+  "pos": "n. 计划；v. 策划",
+  "story": "scheme 音似‘斯基姆’",
+  "tip": "a clever scheme",
+  "en": "They schemed a fraud.",
+  "cn": "他们策划了骗局。"
+ },
+ {
+  "word": "scope",
+  "ipa": "/skəʊp/",
+  "pos": "n. 范围；v. 审视",
+  "story": "scope 音似‘斯扣普’",
+  "tip": "beyond the scope",
+  "en": "This is out of scope.",
+  "cn": "这超出范围。"
+ },
+ {
+  "word": "secure",
+  "ipa": "/sɪˈkjʊə/",
+  "pos": "adj. 安全的；v. 获得",
+  "story": "se+cure(关)：关牢",
+  "tip": "a secure job",
+  "en": "He secured the deal.",
+  "cn": "他拿下了交易。"
+ },
+ {
+  "word": "segment",
+  "ipa": "/ˈseɡmənt/",
+  "pos": "n. 部分；v. 分割",
+  "story": "seg(切)+ment",
+  "tip": "a market segment",
+  "en": "We segment the users.",
+  "cn": "我们给用户分群。"
+ },
+ {
+  "word": "select",
+  "ipa": "/sɪˈlekt/",
+  "pos": "v. 选择；adj. 精选的",
+  "story": "se+lect(选)",
+  "tip": "select carefully",
+  "en": "Select the best one.",
+  "cn": "选最好的。"
+ },
+ {
+  "word": "sequence",
+  "ipa": "/ˈsiːkwəns/",
+  "pos": "n. 顺序；v. 按序排",
+  "story": "sequ(跟)+ence",
+  "tip": "in sequence",
+  "en": "Follow the sequence.",
+  "cn": "按顺序来。"
+ },
+ {
+  "word": "series",
+  "ipa": "/ˈsɪəriːz/",
+  "pos": "n. 系列",
+  "story": "ser(连)+ies",
+  "tip": "a series of",
+  "en": "A series of events.",
+  "cn": "一系列事件。"
+ },
+ {
+  "word": "settle",
+  "ipa": "/ˈsetl/",
+  "pos": "v. 解决；定居",
+  "story": "set(定)+tle",
+  "tip": "settle a dispute",
+  "en": "They settled the bill.",
+  "cn": "他们结清了账单。"
+ },
+ {
+  "word": "severe",
+  "ipa": "/sɪˈvɪə/",
+  "pos": "adj. 严重的；严厉的",
+  "story": "sever(严)+e",
+  "tip": "a severe storm",
+  "en": "The penalty is severe.",
+  "cn": "处罚严厉。"
+ },
+ {
+  "word": "shift",
+  "ipa": "/ʃɪft/",
+  "pos": "v./n. 转移；轮班",
+  "story": "shift 音似‘_shift’",
+  "tip": "a paradigm shift",
+  "en": "The shift was sudden.",
+  "cn": "转变很突然。"
+ },
+ {
+  "word": "shortage",
+  "ipa": "/ˈʃɔːtɪdʒ/",
+  "pos": "n. 短缺",
+  "story": "short(短)+age",
+  "tip": "a labor shortage",
+  "en": "There is a water shortage.",
+  "cn": "水资源短缺。"
+ },
+ {
+  "word": "significant",
+  "ipa": "/sɪɡˈnɪfɪkənt/",
+  "pos": "adj. 重要的；显著的",
+  "story": "sign(记号)+i+fic(做)+ant",
+  "tip": "a significant change",
+  "en": "There was significant growth.",
+  "cn": "增长显著。"
+ },
+ {
+  "word": "similar",
+  "ipa": "/ˈsɪmələ/",
+  "pos": "adj. 相似的",
+  "story": "simil(同)+ar",
+  "tip": "be similar to",
+  "en": "The cases are similar.",
+  "cn": "案例相似。"
+ },
+ {
+  "word": "skeptical",
+  "ipa": "/ˈskeptɪkl/",
+  "pos": "adj. 怀疑的",
+  "story": "skept(疑)+ical",
+  "tip": "be skeptical of",
+  "en": "I am skeptical about it.",
+  "cn": "我对此怀疑。"
+ },
+ {
+  "word": "skilled",
+  "ipa": "/skɪld/",
+  "pos": "adj. 熟练的",
+  "story": "skill+ed",
+  "tip": "a skilled worker",
+  "en": "We need skilled staff.",
+  "cn": "我们需要熟练工。"
+ },
+ {
+  "word": "slump",
+  "ipa": "/slʌmp/",
+  "pos": "n./v. 暴跌；萧条",
+  "story": "slump 音似‘斯兰普’",
+  "tip": "a sales slump",
+  "en": "The market slumped.",
+  "cn": "市场暴跌。"
+ },
+ {
+  "word": "soar",
+  "ipa": "/sɔː/",
+  "pos": "v. 飙升",
+  "story": "soar 音似‘索尔’",
+  "tip": "prices soar",
+  "en": "Costs soared overnight.",
+  "cn": "成本一夜飙升。"
+ },
+ {
+  "word": "social",
+  "ipa": "/ˈsəʊʃl/",
+  "pos": "adj. 社会的；社交的",
+  "story": "soci(同伴)+al",
+  "tip": "social media",
+  "en": "He is social and outgoing.",
+  "cn": "他外向爱社交。"
+ },
+ {
+  "word": "society",
+  "ipa": "/səˈsaɪəti/",
+  "pos": "n. 社会",
+  "story": "soci(同伴)+ety",
+  "tip": "a civil society",
+  "en": "Society is changing.",
+  "cn": "社会在变。"
+ },
+ {
+  "word": "solar",
+  "ipa": "/ˈsəʊlə/",
+  "pos": "adj. 太阳的",
+  "story": "sol(太阳)+ar",
+  "tip": "solar energy",
+  "en": "Solar power is clean.",
+  "cn": "太阳能很清洁。"
+ },
+ {
+  "word": "sole",
+  "ipa": "/səʊl/",
+  "pos": "adj. 唯一的",
+  "story": "sole 音似‘搜尔’",
+  "tip": "the sole owner",
+  "en": "He is the sole heir.",
+  "cn": "他是唯一继承人。"
+ },
+ {
+  "word": "solid",
+  "ipa": "/ˈsɒlɪd/",
+  "pos": "adj. 固体的；可靠的",
+  "story": "solid 音似‘搜lid’",
+  "tip": "a solid argument",
+  "en": "We have solid evidence.",
+  "cn": "我们有可靠证据。"
+ },
+ {
+  "word": "solve",
+  "ipa": "/sɒlv/",
+  "pos": "v. 解决",
+  "story": "solv(松)",
+  "tip": "solve a problem",
+  "en": "We solved the puzzle.",
+  "cn": "我们解开了谜题。"
+ },
+ {
+  "word": "source",
+  "ipa": "/sɔːs/",
+  "pos": "n. 来源；v. 发起",
+  "story": "source 音似‘搜斯’",
+  "tip": "from a reliable source",
+  "en": "Renewable sources matter.",
+  "cn": "可再生能源很重要。"
+ },
+ {
+  "word": "spacious",
+  "ipa": "/ˈspeɪʃəs/",
+  "pos": "adj. 宽敞的",
+  "story": "spaci(空间)+ous",
+  "tip": "a spacious room",
+  "en": "The hall is spacious.",
+  "cn": "大厅很宽敞。"
+ },
+ {
+  "word": "span",
+  "ipa": "/spæn/",
+  "pos": "n. 跨度；v. 跨越",
+  "story": "span 音似‘斯潘’",
+  "tip": "a time span",
+  "en": "The bridge spans the river.",
+  "cn": "桥跨过河。"
+ },
+ {
+  "word": "spare",
+  "ipa": "/speə/",
+  "pos": "adj. 备用的；v. 抽出",
+  "story": "spare 音似‘斯佩尔’",
+  "tip": "spare no effort",
+  "en": "Spare some time.",
+  "cn": "抽点时间。"
+ },
+ {
+  "word": "spatial",
+  "ipa": "/ˈspeɪʃl/",
+  "pos": "adj. 空间的",
+  "story": "spati(空间)+al",
+  "tip": "spatial awareness",
+  "en": "Children develop spatial sense.",
+  "cn": "孩子发展空间感。"
+ },
+ {
+  "word": "specialize",
+  "ipa": "/ˈspeʃəlaɪz/",
+  "pos": "v. 专攻",
+  "story": "special+ize",
+  "tip": "specialize in",
+  "en": "He specializes in law.",
+  "cn": "他专攻法律。"
+ },
+ {
+  "word": "species",
+  "ipa": "/ˈspiːʃiːz/",
+  "pos": "n. 物种",
+  "story": "speci(种)+es",
+  "tip": "an endangered species",
+  "en": "The species is dying out.",
+  "cn": "该物种濒临灭绝。"
+ },
+ {
+  "word": "specific",
+  "ipa": "/spəˈsɪfɪk/",
+  "pos": "adj. 具体的",
+  "story": "speci(种)+fic",
+  "tip": "a specific example",
+  "en": "Give a specific case.",
+  "cn": "给个具体案例。"
+ },
+ {
+  "word": "specify",
+  "ipa": "/ˈspesɪfaɪ/",
+  "pos": "v. 明确说明",
+  "story": "speci(种)+fy",
+  "tip": "specify the date",
+  "en": "Please specify the time.",
+  "cn": "请明确时间。"
+ },
+ {
+  "word": "spectrum",
+  "ipa": "/ˈspektrəm/",
+  "pos": "n. 光谱；范围",
+  "story": "spect(看)+rum",
+  "tip": "a wide spectrum",
+  "en": "The spectrum of opinion.",
+  "cn": "意见光谱很广。"
+ },
+ {
+  "word": "speculate",
+  "ipa": "/ˈspekjuleɪt/",
+  "pos": "v. 推测；投机",
+  "story": "spec(看)+ulate",
+  "tip": "speculate on",
+  "en": "They speculated about it.",
+  "cn": "他们对此猜测。"
+ },
+ {
+  "word": "sphere",
+  "ipa": "/sfɪə/",
+  "pos": "n. 球体；领域",
+  "story": "sphere 音似‘斯菲尔’",
+  "tip": "in the public sphere",
+  "en": "It is in my sphere.",
+  "cn": "这在我领域。"
+ },
+ {
+  "word": "spiritual",
+  "ipa": "/ˈspɪrɪtʃuəl/",
+  "pos": "adj. 精神的",
+  "story": "spirit+ual",
+  "tip": "spiritual needs",
+  "en": "Art meets spiritual needs.",
+  "cn": "艺术满足精神需求。"
+ },
+ {
+  "word": "sponsor",
+  "ipa": "/ˈspɒnsə/",
+  "pos": "n. 赞助者；v. 赞助",
+  "story": "spons(承诺)+or",
+  "tip": "a corporate sponsor",
+  "en": "They sponsored the event.",
+  "cn": "他们赞助了活动。"
+ },
+ {
+  "word": "stable",
+  "ipa": "/ˈsteɪbl/",
+  "pos": "adj. 稳定的",
+  "story": "st(站)+able",
+  "tip": "a stable economy",
+  "en": "The patient is stable.",
+  "cn": "病人情况稳定。"
+ },
+ {
+  "word": "static",
+  "ipa": "/ˈstætɪk/",
+  "pos": "adj. 静态的",
+  "story": "stat(站)+ic",
+  "tip": "static prices",
+  "en": "The page is static.",
+  "cn": "页面是静态的。"
+ },
+ {
+  "word": "statistic",
+  "ipa": "/stəˈtɪstɪk/",
+  "pos": "n. 统计数字",
+  "story": "stat(站)+istic",
+  "tip": "vital statistics",
+  "en": "The statistics are clear.",
+  "cn": "数据很清楚。"
+ },
+ {
+  "word": "status",
+  "ipa": "/ˈsteɪtəs/",
+  "pos": "n. 地位；状态",
+  "story": "stat(站)+us",
+  "tip": "social status",
+  "en": "Check your order status.",
+  "cn": "查订单状态。"
+ },
+ {
+  "word": "steady",
+  "ipa": "/ˈstedi/",
+  "pos": "adj. 稳定的；v. 使稳固",
+  "story": "stead(立)+y",
+  "tip": "a steady hand",
+  "en": "Progress is steady.",
+  "cn": "进展平稳。"
+ },
+ {
+  "word": "stimulate",
+  "ipa": "/ˈstɪmjuleɪt/",
+  "pos": "v. 刺激；激励",
+  "story": "stimul(刺)+ate",
+  "tip": "stimulate growth",
+  "en": "The drug stimulates demand.",
+  "cn": "药物刺激了需求。"
+ },
+ {
+  "word": "strategy",
+  "ipa": "/ˈstrætədʒi/",
+  "pos": "n. 战略",
+  "story": "strat(军)+egy",
+  "tip": "a clear strategy",
+  "en": "We need a strategy.",
+  "cn": "我们需要战略。"
+ },
+ {
+  "word": "strength",
+  "ipa": "/streŋθ/",
+  "pos": "n. 力量；长处",
+  "story": "streng(强)+th",
+  "tip": "a strength of",
+  "en": "Honesty is his strength.",
+  "cn": "诚实是他的长处。"
+ },
+ {
+  "word": "stretch",
+  "ipa": "/stretʃ/",
+  "pos": "v. 伸展；n. 一段",
+  "story": "stretch 音似‘斯坠驰’",
+  "tip": "stretch a budget",
+  "en": "The road stretches on.",
+  "cn": "路向前延伸。"
+ },
+ {
+  "word": "strict",
+  "ipa": "/strɪkt/",
+  "pos": "adj. 严格的",
+  "story": "strict 音似‘斯坠kt’",
+  "tip": "strict rules",
+  "en": "He is strict but fair.",
+  "cn": "他严厉但公正。"
+ },
+ {
+  "word": "structural",
+  "ipa": "/ˈstrʌktʃərəl/",
+  "pos": "adj. 结构的",
+  "story": "struct(建)+ural",
+  "tip": "a structural problem",
+  "en": "There is a structural flaw.",
+  "cn": "存在结构性缺陷。"
+ },
+ {
+  "word": "struggle",
+  "ipa": "/ˈstrʌɡl/",
+  "pos": "v./n. 挣扎；奋斗",
+  "story": "struggle 音似‘斯抓够’",
+  "tip": "struggle with",
+  "en": "He struggled to cope.",
+  "cn": "他艰难应付。"
+ },
+ {
+  "word": "subject",
+  "ipa": "/ˈsʌbdʒɪkt/",
+  "pos": "n. 主题；adj. 受制的",
+  "story": "sub+ject(投)",
+  "tip": "a sensitive subject",
+  "en": "He is subject to rules.",
+  "cn": "他受规则约束。"
+ },
+ {
+  "word": "submerge",
+  "ipa": "/səbˈmɜːdʒ/",
+  "pos": "v. 淹没；潜入",
+  "story": "sub+merge(沉)",
+  "tip": "submerge under",
+  "en": "The town was submerged.",
+  "cn": "小镇被淹没。"
+ },
+ {
+  "word": "submit",
+  "ipa": "/səbˈmɪt/",
+  "pos": "v. 提交；屈服",
+  "story": "sub+mit(送)",
+  "tip": "submit a report",
+  "en": "Submit your form.",
+  "cn": "提交你的表格。"
+ },
+ {
+  "word": "subsequent",
+  "ipa": "/ˈsʌbsɪkwənt/",
+  "pos": "adj. 随后的",
+  "story": "sub+sequ(跟)+ent",
+  "tip": "in subsequent years",
+  "en": "Subsequent events proved it.",
+  "cn": "后续事件证实了。"
+ },
+ {
+  "word": "substance",
+  "ipa": "/ˈsʌbstəns/",
+  "pos": "n. 物质；实质",
+  "story": "sub+stance(站)：底层根基",
+  "tip": "a chemical substance",
+  "en": "There is no substance to it.",
+  "cn": "这毫无实质。"
+ },
+ {
+  "word": "substitute",
+  "ipa": "/ˈsʌbstɪtjuːt/",
+  "pos": "v. 替代；n. 替补",
+  "story": "sub+stitute(站)",
+  "tip": "substitute for",
+  "en": "Use oil as a substitute.",
+  "cn": "用油代替。"
+ },
+ {
+  "word": "sufficient",
+  "ipa": "/səˈfɪʃnt/",
+  "pos": "adj. 足够的",
+  "story": "suf+fici(做)+ent：做到够",
+  "tip": "sufficient evidence",
+  "en": "We have sufficient proof.",
+  "cn": "我们有充足证据。"
+ },
+ {
+  "word": "suggest",
+  "ipa": "/səˈdʒest/",
+  "pos": "v. 建议；暗示",
+  "story": "sug+gest(带)",
+  "tip": "suggest doing",
+  "en": "I suggest we wait.",
+  "cn": "我建议等等。"
+ },
+ {
+  "word": "summary",
+  "ipa": "/ˈsʌməri/",
+  "pos": "n. 摘要；adj. 概括的",
+  "story": "sum(总)+ary",
+  "tip": "in summary",
+  "en": "Give a brief summary.",
+  "cn": "做个简要总结。"
+ },
+ {
+  "word": "superficial",
+  "ipa": "/ˌsuːpəˈfɪʃl/",
+  "pos": "adj. 表面的",
+  "story": "super(上)+fici(面)+al",
+  "tip": "a superficial wound",
+  "en": "His knowledge is superficial.",
+  "cn": "他知识肤浅。"
+ },
+ {
+  "word": "supplement",
+  "ipa": "/ˈsʌplɪment/",
+  "pos": "n./v. 补充",
+  "story": "sup+ple(满)+ment",
+  "tip": "a dietary supplement",
+  "en": "We supplemented the diet.",
+  "cn": "我们补充了饮食。"
+ },
+ {
+  "word": "supply",
+  "ipa": "/səˈplaɪ/",
+  "pos": "v./n. 供应",
+  "story": "sup+ply(满)",
+  "tip": "supply chain",
+  "en": "Supply met demand.",
+  "cn": "供给满足了需求。"
+ },
+ {
+  "word": "suppose",
+  "ipa": "/səˈpəʊz/",
+  "pos": "v. 假设；认为",
+  "story": "sup+pose(放)",
+  "tip": "suppose that...",
+  "en": "Suppose it is true.",
+  "cn": "假设这是真的。"
+ },
+ {
+  "word": "supress",
+  "ipa": "/səˈpres/",
+  "pos": "v. 压制；隐瞒",
+  "story": "sup+press(压)",
+  "tip": "supress a revolt",
+  "en": "They suppressed the news.",
+  "cn": "他们压下了消息。"
+ },
+ {
+  "word": "supreme",
+  "ipa": "/suːˈpriːm/",
+  "pos": "adj. 最高的",
+  "story": "supr(上)+eme",
+  "tip": "the supreme court",
+  "en": "The supreme court ruled.",
+  "cn": "最高法院裁决了。"
+ },
+ {
+  "word": "surface",
+  "ipa": "/ˈsɜːfɪs/",
+  "pos": "n. 表面；v. 浮出",
+  "story": "sur(上)+face(面)",
+  "tip": "on the surface",
+  "en": "The issue surfaced later.",
+  "cn": "问题后来浮出了。"
+ },
+ {
+  "word": "surge",
+  "ipa": "/sɜːdʒ/",
+  "pos": "n./v. 激增；汹涌",
+  "story": "surge 音似‘斯者’",
+  "tip": "a surge in demand",
+  "en": "The crowd surged forward.",
+  "cn": "人群向前涌。"
+ },
+ {
+  "word": "surplus",
+  "ipa": "/ˈsɜːpləs/",
+  "pos": "n. 过剩；adj. 多余的",
+  "story": "sur(上)+plus(满)",
+  "tip": "a trade surplus",
+  "en": "There is a budget surplus.",
+  "cn": "预算有盈余。"
+ },
+ {
+  "word": "surround",
+  "ipa": "/səˈraʊnd/",
+  "pos": "v. 包围",
+  "story": "sur+round(圈)",
+  "tip": "surround by",
+  "en": "The park is surrounded by trees.",
+  "cn": "公园被树包围。"
+ },
+ {
+  "word": "survey",
+  "ipa": "/ˈsɜːveɪ/",
+  "pos": "n./v. 调查；勘测",
+  "story": "sur+vey(看)",
+  "tip": "conduct a survey",
+  "en": "They surveyed the land.",
+  "cn": "他们勘测了土地。"
+ },
+ {
+  "word": "survive",
+  "ipa": "/səˈvaɪv/",
+  "pos": "v. 幸存；存活",
+  "story": "sur+vive(活)",
+  "tip": "survive the crisis",
+  "en": "Only a few survived.",
+  "cn": "只有少数存活。"
+ },
+ {
+  "word": "suspect",
+  "ipa": "/səˈspekt/",
+  "pos": "v. 怀疑；n. 嫌疑犯",
+  "story": "sus+pect(看)：斜眼看",
+  "tip": "suspect foul play",
+  "en": "He is a suspect.",
+  "cn": "他是嫌疑人。"
+ },
+ {
+  "word": "suspend",
+  "ipa": "/səˈspend/",
+  "pos": "v. 暂停；悬挂",
+  "story": "sus+pend(挂)",
+  "tip": "suspend a service",
+  "en": "The licence was suspended.",
+  "cn": "执照被吊销。"
+ },
+ {
+  "word": "swamp",
+  "ipa": "/swɒmp/",
+  "pos": "n. 沼泽；v. 淹没",
+  "story": "swamp 音似‘斯沃姆普’",
+  "tip": "be swamped with",
+  "en": "We were swamped with work.",
+  "cn": "我们被工作淹没。"
+ },
+ {
+  "word": "symbol",
+  "ipa": "/ˈsɪmbl/",
+  "pos": "n. 象征；符号",
+  "story": "sym(同)+bol(投)",
+  "tip": "a symbol of",
+  "en": "The dove is a symbol of peace.",
+  "cn": "鸽子是和平象征。"
+ },
+ {
+  "word": "symmetry",
+  "ipa": "/ˈsɪmətri/",
+  "pos": "n. 对称",
+  "story": "sym+metry(量)",
+  "tip": "perfect symmetry",
+  "en": "The design has symmetry.",
+  "cn": "设计很对称。"
+ },
+ {
+  "word": "sympathetic",
+  "ipa": "/ˌsɪmpəˈθetɪk/",
+  "pos": "adj. 同情的；赞同的",
+  "story": "sym+path(感)+etic",
+  "tip": "be sympathetic to",
+  "en": "She was sympathetic.",
+  "cn": "她表示同情。"
+ },
+ {
+  "word": "syndrome",
+  "ipa": "/ˈsɪndrəʊm/",
+  "pos": "n. 综合征",
+  "story": "syn+drome(跑)：一起表现",
+  "tip": "a medical syndrome",
+  "en": "He has a rare syndrome.",
+  "cn": "他患有罕见综合征。"
+ },
+ {
+  "word": "system",
+  "ipa": "/ˈsɪstəm/",
+  "pos": "n. 系统；制度",
+  "story": "sy+stem(站)：立在一起",
+  "tip": "a legal system",
+  "en": "The system works.",
+  "cn": "系统运转正常。"
+ },
+ {
+  "word": "tackle",
+  "ipa": "/ˈtækl/",
+  "pos": "v. 处理；n. 装备",
+  "story": "tackle 音似‘泰叩’",
+  "tip": "tackle a problem",
+  "en": "We tackled the issue.",
+  "cn": "我们处理了问题。"
+ },
+ {
+  "word": "tactic",
+  "ipa": "/ˈtæktɪk/",
+  "pos": "n. 战术；策略",
+  "story": "tact(触)+ic",
+  "tip": "a negotiation tactic",
+  "en": "Use a soft tactic.",
+  "cn": "用软策略。"
+ },
+ {
+  "word": "target",
+  "ipa": "/ˈtɑːɡɪt/",
+  "pos": "n. 目标；v. 瞄准",
+  "story": "target 音似‘他给特’",
+  "tip": "meet the target",
+  "en": "We hit the target.",
+  "cn": "我们达成了目标。"
+ },
+ {
+  "word": "tempt",
+  "ipa": "/tempt/",
+  "pos": "v. 引诱",
+  "story": "tempt 音似‘探普特’",
+  "tip": "tempt to do",
+  "en": "Don't be tempted by it.",
+  "cn": "别被它诱惑。"
+ },
+ {
+  "word": "tendency",
+  "ipa": "/ˈtendənsi/",
+  "pos": "n. 倾向",
+  "story": "tend(趋向)+ency",
+  "tip": "a growing tendency",
+  "en": "There is a tendency to delay.",
+  "cn": "有拖延的倾向。"
+ },
+ {
+  "word": "tense",
+  "ipa": "/tens/",
+  "pos": "adj. 紧张的；n. 时态",
+  "story": "tens(拉)+e",
+  "tip": "a tense moment",
+  "en": "The room went tense.",
+  "cn": "房间气氛紧张。"
+ },
+ {
+  "word": "terminal",
+  "ipa": "/ˈtɜːmɪnl/",
+  "pos": "n. 终点；adj. 末期的",
+  "story": "termin(终)+al",
+  "tip": "a bus terminal",
+  "en": "He is terminally ill.",
+  "cn": "他病入膏肓。"
+ },
+ {
+  "word": "territory",
+  "ipa": "/ˈterətri/",
+  "pos": "n. 领土；领域",
+  "story": "terr(地)+itory",
+  "tip": "defend the territory",
+  "en": "Animals mark territory.",
+  "cn": "动物标记领地。"
+ },
+ {
+  "word": "theory",
+  "ipa": "/ˈθɪəri/",
+  "pos": "n. 理论",
+  "story": "theo(神/看)+ry：看透的说法",
+  "tip": "in theory",
+  "en": "In theory it works.",
+  "cn": "理论上可行。"
+ },
+ {
+  "word": "thorough",
+  "ipa": "/ˈθʌrə/",
+  "pos": "adj. 彻底的",
+  "story": "thorough 音似‘萨拉’",
+  "tip": "a thorough check",
+  "en": "We did a thorough review.",
+  "cn": "我们做了彻底审查。"
+ },
+ {
+  "word": "threat",
+  "ipa": "/θret/",
+  "pos": "n. 威胁",
+  "story": "threat 音似‘斯瑞特’",
+  "tip": "a real threat",
+  "en": "Climate is a threat.",
+  "cn": "气候是威胁。"
+ },
+ {
+  "word": "threshold",
+  "ipa": "/ˈθreʃhəʊld/",
+  "pos": "n. 门槛；临界",
+  "story": "thresh(踩)+old",
+  "tip": "cross the threshold",
+  "en": "We crossed the threshold.",
+  "cn": "我们跨过了门槛。"
+ },
+ {
+  "word": "thrive",
+  "ipa": "/θraɪv/",
+  "pos": "v. 繁荣",
+  "story": "thrive 音似‘斯瑞夫’",
+  "tip": "thrive on",
+  "en": "The business thrived.",
+  "cn": "生意红火。"
+ },
+ {
+  "word": "throughout",
+  "ipa": "/θruːˈaʊt/",
+  "pos": "prep./adv. 遍及",
+  "story": "through+out",
+  "tip": "throughout the year",
+  "en": "It rained throughout.",
+  "cn": "整年都在下雨。"
+ },
+ {
+  "word": "tolerate",
+  "ipa": "/ˈtɒləreɪt/",
+  "pos": "v. 容忍",
+  "story": "toler(忍)+ate",
+  "tip": "tolerate pain",
+  "en": "We tolerate no cheating.",
+  "cn": "我们零容忍作弊。"
+ },
+ {
+  "word": "topic",
+  "ipa": "/ˈtɒpɪk/",
+  "pos": "n. 话题",
+  "story": "top(地)+ic：放台面",
+  "tip": "a hot topic",
+  "en": "This is a hot topic.",
+  "cn": "这是热点话题。"
+ },
+ {
+  "word": "topple",
+  "ipa": "/ˈtɒpl/",
+  "pos": "v. 推翻；倒塌",
+  "story": "top(顶)+ple",
+  "tip": "topple a regime",
+  "en": "The statue toppled.",
+  "cn": "雕像倒了。"
+ },
+ {
+  "word": "toxic",
+  "ipa": "/ˈtɒksɪk/",
+  "pos": "adj. 有毒的",
+  "story": "tox(毒)+ic",
+  "tip": "a toxic substance",
+  "en": "The air was toxic.",
+  "cn": "空气有毒。"
+ },
+ {
+  "word": "trace",
+  "ipa": "/treɪs/",
+  "pos": "n./v. 痕迹；追踪",
+  "story": "trace 音似‘吹斯’",
+  "tip": "trace the source",
+  "en": "We traced the leak.",
+  "cn": "我们追到了泄漏源。"
+ },
+ {
+  "word": "tradition",
+  "ipa": "/trəˈdɪʃn/",
+  "pos": "n. 传统",
+  "story": "tra(转)+dit(给)+ion：传下",
+  "tip": "a long tradition",
+  "en": "We keep the tradition.",
+  "cn": "我们保留传统。"
+ },
+ {
+  "word": "traffic",
+  "ipa": "/ˈtræfɪk/",
+  "pos": "n. 交通；v. 交易",
+  "story": "traffic 音似‘拽菲克’",
+  "tip": "heavy traffic",
+  "en": "Traffic was heavy.",
+  "cn": "交通拥堵。"
+ },
+ {
+  "word": "tragic",
+  "ipa": "/ˈtrædʒɪk/",
+  "pos": "adj. 悲剧的",
+  "story": "trag(悲)+ic",
+  "tip": "a tragic loss",
+  "en": "It was a tragic accident.",
+  "cn": "那是惨痛的事故。"
+ },
+ {
+  "word": "trail",
+  "ipa": "/treɪl/",
+  "pos": "n. 小径；v. 追踪",
+  "story": "trail 音似‘吹尔’",
+  "tip": "a mountain trail",
+  "en": "The dog trailed him.",
+  "cn": "狗跟着他。"
+ },
+ {
+  "word": "trajectory",
+  "ipa": "/trəˈdʒektəri/",
+  "pos": "n. 轨迹",
+  "story": "tra+ject(投)+ory",
+  "tip": "a career trajectory",
+  "en": "The trajectory is clear.",
+  "cn": "轨迹清晰。"
+ },
+ {
+  "word": "transfer",
+  "ipa": "/trænsˈfɜː/",
+  "pos": "v./n. 转移；调任",
+  "story": "trans+fer(带)",
+  "tip": "transfer money",
+  "en": "He transferred to Beijing.",
+  "cn": "他调到了北京。"
+ },
+ {
+  "word": "transform",
+  "ipa": "/trænsˈfɔːm/",
+  "pos": "v. 使改观",
+  "story": "trans+form(形)",
+  "tip": "transform the city",
+  "en": "Education transforms lives.",
+  "cn": "教育改变命运。"
+ },
+ {
+  "word": "transit",
+  "ipa": "/ˈtrænzɪt/",
+  "pos": "n. 运输；v. 经过",
+  "story": "trans+it(走)",
+  "tip": "in transit",
+  "en": "The goods are in transit.",
+  "cn": "货物在途。"
+ },
+ {
+  "word": "translate",
+  "ipa": "/trænsˈleɪt/",
+  "pos": "v. 翻译",
+  "story": "trans+late(带)",
+  "tip": "translate into",
+  "en": "Translate it to Chinese.",
+  "cn": "把它译成中文。"
+ },
+ {
+  "word": "transmission",
+  "ipa": "/trænsˈmɪʃn/",
+  "pos": "n. 传播；传输",
+  "story": "trans+miss(送)+ion",
+  "tip": "data transmission",
+  "en": "The transmission failed.",
+  "cn": "传输失败了。"
+ },
+ {
+  "word": "transparent",
+  "ipa": "/trænsˈpærənt/",
+  "pos": "adj. 透明的",
+  "story": "trans+parent(显)",
+  "tip": "a transparent process",
+  "en": "We want transparent rules.",
+  "cn": "我们要透明的规则。"
+ },
+ {
+  "word": "transport",
+  "ipa": "/trænˈspɔːt/",
+  "pos": "v./n. 运输",
+  "story": "trans+port(运)",
+  "tip": "public transport",
+  "en": "Transport was disrupted.",
+  "cn": "交通中断了。"
+ },
+ {
+  "word": "treasure",
+  "ipa": "/ˈtreʒə/",
+  "pos": "n. 宝藏；v. 珍视",
+  "story": "treasure 音似‘揣热’",
+  "tip": "a national treasure",
+  "en": "We treasure the memory.",
+  "cn": "我们珍视这记忆。"
+ },
+ {
+  "word": "tremendous",
+  "ipa": "/trəˈmendəs/",
+  "pos": "adj. 巨大的",
+  "story": "trem(抖)+endous：让人发抖",
+  "tip": "a tremendous effort",
+  "en": "There was tremendous support.",
+  "cn": "支持巨大。"
+ },
+ {
+  "word": "trend",
+  "ipa": "/trend/",
+  "pos": "n. 趋势；v. 倾向",
+  "story": "trend 音似‘穿的’",
+  "tip": "a clear trend",
+  "en": "The trend is upward.",
+  "cn": "趋势向上。"
+ },
+ {
+  "word": "trial",
+  "ipa": "/ˈtraɪəl/",
+  "pos": "n. 试验；审判",
+  "story": "tri(试)+al",
+  "tip": "a clinical trial",
+  "en": "The trial was fair.",
+  "cn": "审判很公正。"
+ },
+ {
+  "word": "trigger",
+  "ipa": "/ˈtrɪɡə/",
+  "pos": "v. 引发；n. 扳机",
+  "story": "trigger 音似‘垂格’",
+  "tip": "trigger a crisis",
+  "en": "The news triggered panic.",
+  "cn": "消息引发了恐慌。"
+ },
+ {
+  "word": "triumph",
+  "ipa": "/ˈtraɪʌmf/",
+  "pos": "n./v. 胜利",
+  "story": "triumph 音似‘揣阿姆夫’",
+  "tip": "a great triumph",
+  "en": "They triumphed at last.",
+  "cn": "他们终于胜利了。"
+ },
+ {
+  "word": "trivial",
+  "ipa": "/ˈtrɪviəl/",
+  "pos": "adj. 琐碎的",
+  "story": "tri(三)+vi(路)+al：三岔口小事",
+  "tip": "a trivial matter",
+  "en": "Don't sweat the trivial.",
+  "cn": "别为琐事烦心。"
+ },
+ {
+  "word": "turbulent",
+  "ipa": "/ˈtɜːbjələnt/",
+  "pos": "adj. 动荡的",
+  "story": "turb(乱)+ulent",
+  "tip": "a turbulent period",
+  "en": "The sea was turbulent.",
+  "cn": "海面波涛汹涌。"
+ },
+ {
+  "word": "ultimate",
+  "ipa": "/ˈʌltɪmət/",
+  "pos": "adj. 最终的",
+  "story": "ultim(末)+ate",
+  "tip": "the ultimate goal",
+  "en": "This is the ultimate aim.",
+  "cn": "这是最终目标。"
+ },
+ {
+  "word": "unanimous",
+  "ipa": "/juˈnænɪməs/",
+  "pos": "adj. 一致的",
+  "story": "un(单)+anim(心)+ous",
+  "tip": "a unanimous vote",
+  "en": "The decision was unanimous.",
+  "cn": "决定一致通过。"
+ },
+ {
+  "word": "underlie",
+  "ipa": "/ˌʌndəˈlaɪ/",
+  "pos": "v. 构成…的基础",
+  "story": "under+lie(躺)",
+  "tip": "underlie the theory",
+  "en": "Trust underlies it all.",
+  "cn": "信任是一切的基础。"
+ },
+ {
+  "word": "underline",
+  "ipa": "/ˌʌndəˈlaɪn/",
+  "pos": "v. 强调；在…下划线",
+  "story": "under+line",
+  "tip": "underline the risk",
+  "en": "This underlines the need.",
+  "cn": "这突显了必要性。"
+ },
+ {
+  "word": "undermine",
+  "ipa": "/ˌʌndəˈmaɪn/",
+  "pos": "v. 削弱",
+  "story": "under+mine(挖)",
+  "tip": "undermine confidence",
+  "en": "The scandal undermined trust.",
+  "cn": "丑闻削弱了信任。"
+ },
+ {
+  "word": "undertake",
+  "ipa": "/ˌʌndəˈteɪk/",
+  "pos": "v. 承担；着手",
+  "story": "under+take(拿)",
+  "tip": "undertake a task",
+  "en": "He undertook the project.",
+  "cn": "他承担了项目。"
+ },
+ {
+  "word": "unemployment",
+  "ipa": "/ˌʌnɪmˈplɔɪmənt/",
+  "pos": "n. 失业",
+  "story": "un+employ+ment",
+  "tip": "rising unemployment",
+  "en": "Unemployment is a worry.",
+  "cn": "失业令人担忧。"
+ },
+ {
+  "word": "unexpected",
+  "ipa": "/ˌʌnɪkˈspektɪd/",
+  "pos": "adj. 意外的",
+  "story": "un+expected",
+  "tip": "an unexpected result",
+  "en": "The outcome was unexpected.",
+  "cn": "结果出人意料。"
+ },
+ {
+  "word": "uniform",
+  "ipa": "/ˈjuːnɪfɔːm/",
+  "pos": "adj. 统一的；n. 制服",
+  "story": "uni(一)+form(形)",
+  "tip": "a uniform standard",
+  "en": "Wear your uniform.",
+  "cn": "穿上制服。"
+ },
+ {
+  "word": "unique",
+  "ipa": "/juˈniːk/",
+  "pos": "adj. 独特的",
+  "story": "uni(一)+que",
+  "tip": "a unique chance",
+  "en": "Every person is unique.",
+  "cn": "每个人都是独特的。"
+ },
+ {
+  "word": "universal",
+  "ipa": "/ˌjuːnɪˈvɜːsl/",
+  "pos": "adj. 普遍的",
+  "story": "uni(一)+vers(转)+al",
+  "tip": "a universal truth",
+  "en": "It is a universal value.",
+  "cn": "这是普世价值。"
+ },
+ {
+  "word": "universe",
+  "ipa": "/ˈjuːnɪvɜːs/",
+  "pos": "n. 宇宙",
+  "story": "uni(一)+vers(转)+e",
+  "tip": "the whole universe",
+  "en": "We studied the universe.",
+  "cn": "我们研究宇宙。"
+ },
+ {
+  "word": "unjust",
+  "ipa": "/ˌʌnˈdʒʌst/",
+  "pos": "adj. 不公平的",
+  "story": "un+just",
+  "tip": "an unjust law",
+  "en": "The verdict was unjust.",
+  "cn": "判决不公。"
+ },
+ {
+  "word": "update",
+  "ipa": "/ˌʌpˈdeɪt/",
+  "pos": "v./n. 更新",
+  "story": "up+date",
+  "tip": "update the app",
+  "en": "We updated the data.",
+  "cn": "我们更新了数据。"
+ },
+ {
+  "word": "upgrade",
+  "ipa": "/ˌʌpˈɡreɪd/",
+  "pos": "v./n. 升级",
+  "story": "up+grade",
+  "tip": "upgrade the system",
+  "en": "We upgraded the server.",
+  "cn": "我们升级了服务器。"
+ },
+ {
+  "word": "uphold",
+  "ipa": "/ʌpˈhəʊld/",
+  "pos": "v. 维护；支持",
+  "story": "up+hold(持)",
+  "tip": "uphold the law",
+  "en": "The court upheld it.",
+  "cn": "法院维持了原判。"
+ },
+ {
+  "word": "upright",
+  "ipa": "/ˈʌpraɪt/",
+  "pos": "adj./adv. 直立的",
+  "story": "up+right",
+  "tip": "an upright posture",
+  "en": "He is an upright man.",
+  "cn": "他是个正直的人。"
+ },
+ {
+  "word": "upset",
+  "ipa": "/ʌpˈset/",
+  "pos": "v. 使心烦；adj. 沮丧的",
+  "story": "up+set(放)",
+  "tip": "an upset stomach",
+  "en": "The news upset her.",
+  "cn": "消息让她难过。"
+ },
+ {
+  "word": "upstream",
+  "ipa": "/ˌʌpˈstriːm/",
+  "pos": "adv./adj. 上游的",
+  "story": "up+stream",
+  "tip": "an upstream town",
+  "en": "They moved upstream.",
+  "cn": "他们搬到了上游。"
+ },
+ {
+  "word": "urban",
+  "ipa": "/ˈɜːbən/",
+  "pos": "adj. 城市的",
+  "story": "urb(城)+an",
+  "tip": "urban planning",
+  "en": "Urban life is busy.",
+  "cn": "城市生活忙碌。"
+ },
+ {
+  "word": "urge",
+  "ipa": "/ɜːdʒ/",
+  "pos": "v. 催促；n. 冲动",
+  "story": "urge 音似‘尔居’",
+  "tip": "urge sb to",
+  "en": "He urged caution.",
+  "cn": "他力主谨慎。"
+ },
+ {
+  "word": "utility",
+  "ipa": "/juːˈtɪləti/",
+  "pos": "n. 效用；公用事业",
+  "story": "util(用)+ity",
+  "tip": "public utility",
+  "en": "A utility provides water.",
+  "cn": "公用事业供水。"
+ },
+ {
+  "word": "utilize",
+  "ipa": "/ˈjuːtəlaɪz/",
+  "pos": "v. 利用",
+  "story": "util(用)+ize",
+  "tip": "utilize resources",
+  "en": "We utilized the data.",
+  "cn": "我们利用了数据。"
+ },
+ {
+  "word": "utmost",
+  "ipa": "/ˈʌtməʊst/",
+  "pos": "adj. 极度的；n. 极限",
+  "story": "ut(外)+most",
+  "tip": "of the utmost importance",
+  "en": "Safety is of utmost importance.",
+  "cn": "安全至关重要。"
+ },
+ {
+  "word": "vacant",
+  "ipa": "/ˈveɪkənt/",
+  "pos": "adj. 空缺的；空的",
+  "story": "vac(空)+ant",
+  "tip": "a vacant post",
+  "en": "The seat was vacant.",
+  "cn": "座位空着。"
+ },
+ {
+  "word": "vague",
+  "ipa": "/veɪɡ/",
+  "pos": "adj. 模糊的",
+  "story": "vague 音似‘危格’",
+  "tip": "a vague memory",
+  "en": "His answer was vague.",
+  "cn": "他的回答含糊。"
+ },
+ {
+  "word": "valid",
+  "ipa": "/ˈvælɪd/",
+  "pos": "adj. 有效的；合理的",
+  "story": "val(强)+id",
+  "tip": "a valid argument",
+  "en": "The ticket is valid.",
+  "cn": "票有效。"
+ },
+ {
+  "word": "valuable",
+  "ipa": "/ˈvæljuəbl/",
+  "pos": "adj. 有价值的",
+  "story": "value+able",
+  "tip": "a valuable lesson",
+  "en": "Time is valuable.",
+  "cn": "时间宝贵。"
+ },
+ {
+  "word": "vanish",
+  "ipa": "/ˈvænɪʃ/",
+  "pos": "v. 消失",
+  "story": "van(空)+ish",
+  "tip": "vanish into thin air",
+  "en": "The money vanished.",
+  "cn": "钱凭空消失了。"
+ },
+ {
+  "word": "variation",
+  "ipa": "/ˌveəriˈeɪʃn/",
+  "pos": "n. 变化；变体",
+  "story": "vari(变)+ation",
+  "tip": "seasonal variation",
+  "en": "There is natural variation.",
+  "cn": "存在自然变异。"
+ },
+ {
+  "word": "variety",
+  "ipa": "/vəˈraɪəti/",
+  "pos": "n. 多样；种类",
+  "story": "vari(变)+ety",
+  "tip": "a wide variety",
+  "en": "We offer variety.",
+  "cn": "我们提供多样选择。"
+ },
+ {
+  "word": "various",
+  "ipa": "/ˈveəriəs/",
+  "pos": "adj. 各种各样的",
+  "story": "vari(变)+ous",
+  "tip": "for various reasons",
+  "en": "They left for various reasons.",
+  "cn": "他们因各种原因离开。"
+ },
+ {
+  "word": "vast",
+  "ipa": "/vɑːst/",
+  "pos": "adj. 广阔的",
+  "story": "vast 音似‘瓦斯特’",
+  "tip": "a vast area",
+  "en": "The desert is vast.",
+  "cn": "沙漠广阔。"
+ },
+ {
+  "word": "vehicle",
+  "ipa": "/ˈviːəkl/",
+  "pos": "n. 交通工具；媒介",
+  "story": "veh(运)+icle",
+  "tip": "a green vehicle",
+  "en": "Language is a vehicle.",
+  "cn": "语言是载体。"
+ },
+ {
+  "word": "velocity",
+  "ipa": "/vəˈlɒsəti/",
+  "pos": "n. 速度",
+  "story": "veloc(快)+ity",
+  "tip": "high velocity",
+  "en": "The velocity increased.",
+  "cn": "速度加快了。"
+ },
+ {
+  "word": "verify",
+  "ipa": "/ˈverɪfaɪ/",
+  "pos": "v. 核实",
+  "story": "ver(真)+ify",
+  "tip": "verify the facts",
+  "en": "Please verify the data.",
+  "cn": "请核实数据。"
+ },
+ {
+  "word": "version",
+  "ipa": "/ˈvɜːʃn/",
+  "pos": "n. 版本",
+  "story": "vers(转)+ion",
+  "tip": "the latest version",
+  "en": "Update to the new version.",
+  "cn": "升级到新版本。"
+ },
+ {
+  "word": "via",
+  "ipa": "/ˈvaɪə/",
+  "pos": "prep. 经由",
+  "story": "via 音似‘via’",
+  "tip": "travel via Beijing",
+  "en": "Send it via email.",
+  "cn": "用邮件发。"
+ },
+ {
+  "word": "viable",
+  "ipa": "/ˈvaɪəbl/",
+  "pos": "adj. 可行的",
+  "story": "vi(活)+able：能活",
+  "tip": "a viable option",
+  "en": "It is a viable plan.",
+  "cn": "这是可行的计划。"
+ },
+ {
+  "word": "victim",
+  "ipa": "/ˈvɪktɪm/",
+  "pos": "n. 受害者",
+  "story": "vict(胜)+im：被征服者",
+  "tip": "a flood victim",
+  "en": "They aided the victims.",
+  "cn": "他们援助了受害者。"
+ },
+ {
+  "word": "viewpoint",
+  "ipa": "/ˈvjuːpɔɪnt/",
+  "pos": "n. 观点",
+  "story": "view+point",
+  "tip": "from my viewpoint",
+  "en": "It offers a fresh viewpoint.",
+  "cn": "它提供新视角。"
+ },
+ {
+  "word": "violate",
+  "ipa": "/ˈvaɪəleɪt/",
+  "pos": "v. 违反",
+  "story": "viol(暴)+ate",
+  "tip": "violate the rules",
+  "en": "They violated the treaty.",
+  "cn": "他们违反了条约。"
+ },
+ {
+  "word": "violent",
+  "ipa": "/ˈvaɪələnt/",
+  "pos": "adj. 暴力的",
+  "story": "viol(暴)+ent",
+  "tip": "a violent storm",
+  "en": "The protest turned violent.",
+  "cn": "抗议演变成暴力。"
+ },
+ {
+  "word": "virtue",
+  "ipa": "/ˈvɜːtʃuː/",
+  "pos": "n. 美德；优点",
+  "story": "virtu(真)+e",
+  "tip": "by virtue of",
+  "en": "Honesty is a virtue.",
+  "cn": "诚实是美德。"
+ },
+ {
+  "word": "visible",
+  "ipa": "/ˈvɪzəbl/",
+  "pos": "adj. 可见的",
+  "story": "vis(看)+ible",
+  "tip": "be visible to",
+  "en": "The star is visible.",
+  "cn": "星星清晰可见。"
+ },
+ {
+  "word": "vision",
+  "ipa": "/ˈvɪʒn/",
+  "pos": "n. 视力；愿景",
+  "story": "vis(看)+ion",
+  "tip": "a clear vision",
+  "en": "She has a bold vision.",
+  "cn": "她有宏大的愿景。"
+ },
+ {
+  "word": "visual",
+  "ipa": "/ˈvɪʒuəl/",
+  "pos": "adj. 视觉的",
+  "story": "vis(看)+ual",
+  "tip": "visual aids",
+  "en": "Use visual examples.",
+  "cn": "用视觉化例子。"
+ },
+ {
+  "word": "vital",
+  "ipa": "/ˈvaɪtl/",
+  "pos": "adj. 至关重要的",
+  "story": "vit(生命)+al",
+  "tip": "vital information",
+  "en": "Sleep is vital.",
+  "cn": "睡眠至关重要。"
+ },
+ {
+  "word": "vocabulary",
+  "ipa": "/vəˈkæbjələri/",
+  "pos": "n. 词汇",
+  "story": "voc(说)+abulary",
+  "tip": "a wide vocabulary",
+  "en": "Build your vocabulary.",
+  "cn": "扩充词汇量。"
+ },
+ {
+  "word": "voluntary",
+  "ipa": "/ˈvɒləntri/",
+  "pos": "adj. 自愿的",
+  "story": "vol(意)+untary",
+  "tip": "voluntary work",
+  "en": "He does voluntary work.",
+  "cn": "他做志愿工作。"
+ },
+ {
+  "word": "volunteer",
+  "ipa": "/ˌvɒlənˈtɪə/",
+  "pos": "n. 志愿者；v. 自愿做",
+  "story": "vol(意)+unteer",
+  "tip": "a volunteer group",
+  "en": "She volunteered to help.",
+  "cn": "她自愿帮忙。"
+ },
+ {
+  "word": "voter",
+  "ipa": "/ˈvəʊtə/",
+  "pos": "n. 选民",
+  "story": "vot(誓)+er",
+  "tip": "young voters",
+  "en": "Mobilize the voters.",
+  "cn": "动员选民。"
+ },
+ {
+  "word": "wage",
+  "ipa": "/weɪdʒ/",
+  "pos": "n. 工资；v. 发动",
+  "story": "wage 音似‘威治’",
+  "tip": "a living wage",
+  "en": "They waged a war.",
+  "cn": "他们发动了战争。"
+ },
+ {
+  "word": "wander",
+  "ipa": "/ˈwɒndə/",
+  "pos": "v. 漫游；走神",
+  "story": "wander 音似‘弯得’",
+  "tip": "wander off",
+  "en": "His mind wandered.",
+  "cn": "他走神了。"
+ },
+ {
+  "word": "wealth",
+  "ipa": "/welθ/",
+  "pos": "n. 财富",
+  "story": "weal(好)+th",
+  "tip": "personal wealth",
+  "en": "Health is true wealth.",
+  "cn": "健康是真财富。"
+ },
+ {
+  "word": "whereby",
+  "ipa": "/ˌweəˈbaɪ/",
+  "pos": "adv. 借此",
+  "story": "where+by",
+  "tip": "a system whereby...",
+  "en": "A plan whereby we win.",
+  "cn": "一个让我们获胜的计划。"
+ },
+ {
+  "word": "widespread",
+  "ipa": "/ˈwaɪdspred/",
+  "pos": "adj. 广泛的",
+  "story": "wide+spread",
+  "tip": "widespread support",
+  "en": "The view is widespread.",
+  "cn": "这观点很普遍。"
+ },
+ {
+  "word": "wisdom",
+  "ipa": "/ˈwɪzdəm/",
+  "pos": "n. 智慧",
+  "story": "wis(智)+dom",
+  "tip": "the wisdom of age",
+  "en": "Experience brings wisdom.",
+  "cn": "经验带来智慧。"
+ },
+ {
+  "word": "withdraw",
+  "ipa": "/wɪðˈdrɔː/",
+  "pos": "v. 撤回；取(款)",
+  "story": "with+draw(拉)",
+  "tip": "withdraw a claim",
+  "en": "He withdrew the money.",
+  "cn": "他取了款。"
+ },
+ {
+  "word": "withhold",
+  "ipa": "/wɪðˈhəʊld/",
+  "pos": "v. 拒绝给；隐瞒",
+  "story": "with+hold(持)",
+  "tip": "withhold information",
+  "en": "They withheld the truth.",
+  "cn": "他们隐瞒了真相。"
+ },
+ {
+  "word": "withstand",
+  "ipa": "/wɪðˈstænd/",
+  "pos": "v. 经受住",
+  "story": "with+stand(站)",
+  "tip": "withstand pressure",
+  "en": "The bridge withstood the storm.",
+  "cn": "桥经受住了风暴。"
+ },
+ {
+  "word": "witness",
+  "ipa": "/ˈwɪtnəs/",
+  "pos": "n. 目击者；v. 目击",
+  "story": "wit(知)+ness",
+  "tip": "a key witness",
+  "en": "He witnessed the event.",
+  "cn": "他目击了事件。"
+ },
+ {
+  "word": "workforce",
+  "ipa": "/ˈwɜːkfɔːs/",
+  "pos": "n. 劳动力",
+  "story": "work+force",
+  "tip": "a skilled workforce",
+  "en": "The workforce shrank.",
+  "cn": "劳动力缩减了。"
+ },
+ {
+  "word": "workshop",
+  "ipa": "/ˈwɜːkʃɒp/",
+  "pos": "n. 研讨会；工坊",
+  "story": "work+shop",
+  "tip": "a writing workshop",
+  "en": "They held a workshop.",
+  "cn": "他们办了研讨会。"
+ },
+ {
+  "word": "worthy",
+  "ipa": "/ˈwɜːði/",
+  "pos": "adj. 值得的",
+  "story": "worth+y",
+  "tip": "a worthy cause",
+  "en": "It is worthy of note.",
+  "cn": "这值得注意。"
+ },
+ {
+  "word": "youngster",
+  "ipa": "/ˈjʌŋstə/",
+  "pos": "n. 年轻人",
+  "story": "young+ster",
+  "tip": "a lively youngster",
+  "en": "The youngsters played.",
+  "cn": "年轻人玩耍。"
+ },
+ {
+  "word": "zone",
+  "ipa": "/zəʊn/",
+  "pos": "n. 区域；v. 划区",
+  "story": "zone 音似‘邹’",
+  "tip": "a war zone",
+  "en": "They zoned the area.",
+  "cn": "他们给区域划了线。"
+ },
+ {
+  "word": "furthermore",
+  "ipa": "/ˌfɜːðəˈmɔː/",
+  "pos": "adv. 此外",
+  "story": "further+more",
+  "tip": "",
+  "en": "Furthermore, it is cheap.",
+  "cn": "此外，它很便宜。"
+ },
+ {
+  "word": "largely",
+  "ipa": "/ˈlɑːdʒli/",
+  "pos": "adv. 主要地",
+  "story": "large+ly",
+  "tip": "",
+  "en": "It is largely true.",
+  "cn": "这大体上是真的。"
+ },
+ {
+  "word": "likewise",
+  "ipa": "/ˈlaɪkwaɪz/",
+  "pos": "adv. 同样地",
+  "story": "like+wise",
+  "tip": "",
+  "en": "Likewise, he agreed.",
+  "cn": "同样地，他同意了。"
+ },
+ {
+  "word": "nevertheless",
+  "ipa": "/ˌnevəðəˈles/",
+  "pos": "adv. 然而",
+  "story": "never+the+less",
+  "tip": "",
+  "en": "Nevertheless, he tried.",
+  "cn": "然而，他试了。"
+ },
+ {
+  "word": "notwithstanding",
+  "ipa": "/ˌnɒtwɪθˈstændɪŋ/",
+  "pos": "prep./adv. 尽管",
+  "story": "not+with+standing",
+  "tip": "",
+  "en": "Notwithstanding the rain, we went.",
+  "cn": "尽管下雨我们还是去了。"
+ },
+ {
+  "word": "readily",
+  "ipa": "/ˈredɪli/",
+  "pos": "adv. 容易地；乐意地",
+  "story": "ready+ly",
+  "tip": "",
+  "en": "It is readily available.",
+  "cn": "它很容易获得。"
+ },
+ {
+  "word": "somewhat",
+  "ipa": "/ˈsʌmwɒt/",
+  "pos": "adv. 有点",
+  "story": "some+what",
+  "tip": "",
+  "en": "It is somewhat difficult.",
+  "cn": "这有点难。"
+ },
+ {
+  "word": "thereby",
+  "ipa": "/ˌðeəˈbaɪ/",
+  "pos": "adv. 从而",
+  "story": "there+by",
+  "tip": "",
+  "en": "Thereby solving it.",
+  "cn": "从而解决了它。"
+ },
+ {
+  "word": "therefore",
+  "ipa": "/ˈðeəfɔː/",
+  "pos": "adv. 因此",
+  "story": "there+fore",
+  "tip": "",
+  "en": "Therefore we declined.",
+  "cn": "因此我们拒绝了。"
+ },
+ {
+  "word": "undoubtedly",
+  "ipa": "/ʌnˈdaʊtɪdli/",
+  "pos": "adv. 无疑",
+  "story": "un+doubt+ed+ly",
+  "tip": "",
+  "en": "It is undoubtedly true.",
+  "cn": "这毫无疑问是真的。"
+ },
+ {
+  "word": "unlike",
+  "ipa": "/ʌnˈlaɪk/",
+  "pos": "prep. 不像",
+  "story": "un+like",
+  "tip": "",
+  "en": "Unlike his brother, he is calm.",
+  "cn": "与他兄弟不同，他很沉静。"
+ },
+ {
+  "word": "whereas",
+  "ipa": "/ˌweərˈæz/",
+  "pos": "conj. 然而；鉴于",
+  "story": "where+as",
+  "tip": "",
+  "en": "Whereas A did, B didn't.",
+  "cn": "A做了而B没做。"
+ },
+ {
+  "word": "whilst",
+  "ipa": "/waɪlst/",
+  "pos": "conj. 当…时；虽然",
+  "story": "while+st",
+  "tip": "",
+  "en": "Whilst reading, he slept.",
+  "cn": "他看着看着睡着了。"
  }
 ]
