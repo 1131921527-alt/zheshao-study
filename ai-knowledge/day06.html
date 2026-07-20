@@ -246,5 +246,27 @@ body{padding-top:44px!important}
     else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
   };
 })();
-</script></body>
+</script><style>/*zsframe*/
+@media (min-width: 600px) {
+  html, body { background: #06090F !important; }
+  .wrap, .lesson {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    overflow: hidden !important;
+  }
+  body:not(:has(.app)):not(:has(.wrap)):not(:has(.lesson)) {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    min-height: calc(100vh - 32px) !important;
+  }
+  .grid { grid-template-columns: 1fr !important; }
+  .qr-row { flex-direction: column; align-items: center; }
+}
+</style></body>
 </html>

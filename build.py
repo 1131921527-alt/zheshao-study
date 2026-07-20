@@ -9,7 +9,7 @@ import os, shutil, re, glob, datetime
 SRC = r"E:\workbuddyFIle\腾讯龙虾的成品"
 # OUT 指向线上仓库目录本身。build.py 只更新各板块内容(ai-news/ai-knowledge/ai-prompt/ielts)
 # 与其 index.html、assets/style.css、archive.html；**绝不会覆盖手动维护的根 index.html**(App版)。
-OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\zheshao-study"
+OUT = r"E:\workbuddyFIle\腾讯龙虾的成品\03-学习网站\zheshao-study"
 SITE_TITLE = "泽少学习任务"
 
 WEEK = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
@@ -75,11 +75,51 @@ CLOCK_JS = """
 CLOCK_JS = CLOCK_JS.replace("__WECHAT_ID__", '"%s"' % WECHAT_ID)
 
 
+# ---------- 统一手机壳（桌面端把独立内容页也收成手机宽度） ----------
+FRAME_CSS = """
+/*zsframe*/
+@media (min-width: 600px) {
+  html, body { background: #06090F !important; }
+  .wrap, .lesson {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    overflow: hidden !important;
+  }
+  /* 内容页（body 本身就是列，无 .app/.wrap/.lesson 外层）直接把 body 收成手机壳 */
+  body:not(:has(.app)):not(:has(.wrap)):not(:has(.lesson)) {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    min-height: calc(100vh - 32px) !important;
+  }
+  .grid { grid-template-columns: 1fr !important; }
+  .qr-row { flex-direction: column; align-items: center; }
+}
+"""
+
+
 def inject_clock(html):
     """在每个页面注入实时时钟（自包含，不依赖外部资源）。"""
     if "liveClockBar" in html:
         return html
     block = "<style>" + CLOCK_CSS + "</style>" + CLOCK_HTML + "<script>" + CLOCK_JS + "</script>"
+    if "</body>" in html:
+        return html.replace("</body>", block + "</body>", 1)
+    if "</html>" in html:
+        return html.replace("</html>", block + "</html>", 1)
+    return html + block
+
+
+def inject_frame(html):
+    """在每个独立内容页注入统一手机壳样式（仅桌面端生效，依赖 :has()）。"""
+    if "zsframe" in html:
+        return html
+    block = "<style>" + FRAME_CSS + "</style>"
     if "</body>" in html:
         return html.replace("</body>", block + "</body>", 1)
     if "</html>" in html:
@@ -217,14 +257,19 @@ CSS = """* { margin: 0; padding: 0; box-sizing: border-box }
 html { -webkit-text-size-adjust: 100%; }
 body { background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; min-height: 100vh; }
 a { color: inherit; text-decoration: none; }
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 60px; }
+.wrap { max-width: 540px; margin: 0 auto; padding: 0 16px 60px; }
 .hero { text-align: center; padding: 44px 20px 32px; background: linear-gradient(135deg,#16203a,#0b0f17); border-bottom: 1px solid var(--line); }
 .hero .logo { font-size: 48px; line-height: 1; margin-bottom: 10px; }
 .hero h1 { font-size: 28px; font-weight: 800; letter-spacing: 1px; color: var(--primary); }
 .hero .tag { font-size: 14px; color: var(--primary-700); margin-top: 10px; }
 .hero .sub { font-size: 12px; color: var(--muted); margin-top: 6px; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; }
-@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+.grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 28px 0; }
+
+/* 桌面端统一手机壳：列表/归档页收成手机宽度并居中，与首页 .app 一致 */
+@media (min-width: 600px) {
+  html, body { background: #06090F !important; }
+  .wrap { max-width: 540px !important; margin: 16px auto !important; background: #0B0F17 !important; border-radius: 16px !important; box-shadow: 0 8px 60px rgba(0,0,0,.5) !important; border-left: 1px solid rgba(201,168,106,.10) !important; border-right: 1px solid rgba(201,168,106,.10) !important; overflow: hidden !important; }
+}
 .card { border-radius: 16px; padding: 22px 20px; position: relative; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(135deg,#1b2742,#121a2e); box-shadow: 0 1px 2px rgba(0,0,0,.3); transition: transform .2s, box-shadow .2s; display: block; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.45); }
 .card:active { transform: scale(.98); }
@@ -399,7 +444,7 @@ def main():
                     with open(dst, "r", encoding="utf-8") as fh:
                         html = fh.read()
                     with open(dst, "w", encoding="utf-8") as fh:
-                        fh.write(inject_clock(html))
+                        fh.write(inject_frame(inject_clock(html)))
                 except Exception as e:
                     print("  [warn] 注入时钟失败 %s: %s" % (out_name, e))
         # ielts 板块：复制本地音频目录（单词发音+例句发音）
@@ -416,12 +461,12 @@ def main():
                 print("  [%s] 复制音频 %d 个" % (sec["title"], cnt))
         # 写板块列表页
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
-            f.write(inject_clock(section_index_html(sec, items)))
+            f.write(inject_frame(inject_clock(section_index_html(sec, items))))
         sections_data.append((sec, items))
         print("  [%s] %d 期" % (sec["title"], len(items)))
     # 写首页：旧版设计保留为 archive.html，新的金融蓝 App 首页由独立的 index.html 提供（不被覆盖）
     with open(os.path.join(OUT, "archive.html"), "w", encoding="utf-8") as f:
-        f.write(inject_clock(main_index_html(sections_data)))
+        f.write(inject_frame(inject_clock(main_index_html(sections_data))))
     print("旧版首页已存为 archive.html（线上首页为新的金融蓝 App 版 index.html，不会被覆盖）")
     print("首页目录：%s" % OUT)
 
