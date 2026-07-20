@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0B0F17">
-<meta name="description" content="泽少学习助手：AI动态播报 + 知识类（历史 / 文化·文学 / 地理 / 心理学17篇 / 运动健康10篇 / 雅思单词489词），适合碎片化学习。深色黑金质感，可安装到手机主屏当 App。">
+<meta name="description" content="泽少学习助手：AI动态播报 + 知识类（历史 / 文学 / 地理 / 心理学17篇 / 运动健康10篇 / 雅思单词489词），适合碎片化学习。深色黑金质感，可安装到手机主屏当 App。">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="knowledge/article.css">
 <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -206,7 +206,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       <div class="section-title pad">📚 知识类</div>
       <div class="quick-grid">
         <div class="qcard" onclick="goKnow('hist')"><div class="qi">🏛️</div><div class="qt">历史</div><div class="qd">中国史 · 世界史</div></div>
-        <div class="qcard" onclick="goKnow('poem')"><div class="qi">📜</div><div class="qt">文化·文学</div><div class="qd">诗词 · 楚辞 · 元曲</div></div>
+        <div class="qcard" onclick="goKnow('poem')"><div class="qi">📜</div><div class="qt">文学</div><div class="qd">诗词 · 楚辞 · 元曲</div></div>
         <div class="qcard" onclick="goKnow('geo')"><div class="qi">🌍</div><div class="qt">地理</div><div class="qd">板块 · 气候 · 城市</div></div>
         <div class="qcard" onclick="goKnowPsyEq()"><div class="qi">🧠</div><div class="qt">心理学</div><div class="qd">认知 · 情绪 · 情商</div><div class="qbadge">新增5篇</div></div>
         <div class="qcard" onclick="goKnow('ielts')"><div class="qi">📖</div><div class="qt">雅思单词</div><div class="qd">每天15词 · 带音频</div></div>
@@ -214,11 +214,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       </div>
 
       <div class="section-title pad">💡 今日金句</div>
-      <div class="quote-card" id="dailyQuote">加载中...</div>
-
-      <div class="section-title pad">⚡ 快捷入口</div>
-      <div class="quick-grid">
-        <div class="qcard" onclick="goTab('s-news')"><div class="qi">🤖</div><div class="qt">AI动态</div><div class="qd">每日 AI 圈大事</div></div>
+      <div class="quote-card" id="dailyQuote">加载中...</div><div class="qt">AI动态</div><div class="qd">每日 AI 圈大事</div></div>
         <div class="qcard" onclick="goTab('s-me')"><div class="qi">⚙️</div><div class="qt">我的</div><div class="qd">安装 / 打赏</div></div>
       </div>
 
@@ -235,30 +231,22 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       <div class="footer">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
     </section>
 
-    <!-- 动态 -->
+    <!-- 动态：直接展示文章列表 -->
     <section class="screen" id="s-news">
       <div class="topbar" style="position:static"><div class="brand"><div class="logo">📰</div><div><div class="sub">每天一更</div><h1>AI动态播报</h1></div></div></div>
       <div class="pad" style="margin-top:16px">
-        <a class="linkcard" href="ai-news/index.html"><div class="li">📰</div><div class="lc"><div class="t">进入 AI动态播报</div><div class="d">最新一期 · 历史可看</div></div><div class="arr">→</div></a>
-        <div class="section-title">板块说明</div>
-        <div class="support" style="margin:0;text-align:left">
-          <p style="margin:0;color:var(--text-2)">把每天 AI 圈的重要进展、新品、行业动态浓缩成一页。碎片时间快速了解大势，不用深度学习也能跟上节奏。</p>
-        </div>
+        <a class="linkcard" href="ai-news/index.html"><div class="li">📰</div><div class="lc"><div class="t">查看全部历史</div><div class="d">共 35 期 · 每日更新</div></div><div class="arr">→</div></a>
+        <div class="list" id="aiNewsList" style="margin-top:14px"></div>
       </div>
     </section>
-
     <!-- 知识中心 -->
     <section class="screen" id="s-know">
-      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文化·文学 · 地理 · 心理 · 运动 · 雅思</div><h1>知识中心</h1></div></div></div>
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">历史 · 文学 · 地理 · 心理 · 运动 · 雅思</div><h1>知识中心</h1></div></div></div>
       <div class="pad" style="margin-top:16px">
-
-        <div class="know-intro">
-          <p>六大类通识知识，<b>历史</b>看文明的来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>运动健康</b>看身体怎么练怎么修、<b>雅思单词</b>背词攒分。点分类展开，长文点开就读。</p>
-        </div>
 
         <div class="section-title k-toggle" onclick="toggleK('hist')">🏛️ 历史 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-hist"></div>
-        <div class="section-title k-toggle" onclick="toggleK('poem')">📜 文化·文学（诗词） <span class="more">展开/收起</span></div>
+        <div class="section-title k-toggle" onclick="toggleK('poem')">📜 文学（诗词） <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-poem"></div>
         <div class="section-title k-toggle" onclick="toggleK('geo')">🌍 地理 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-geo"></div>
@@ -287,7 +275,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       <div class="pad" style="margin-top:16px">
         <div class="mini-tip">
           <h3>🗺️ 学习地图</h3>
-          <p>本站共 <b>6 大类</b>通识知识：<b>历史</b>看文明来路、<b>文化·文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>运动健康</b>看身体怎么练怎么修、<b>雅思单词</b>背词攒分。点首页「📚 知识类」即可进入。</p>
+          <p>本站共 <b>6 大类</b>通识知识：<b>历史</b>看文明来路、<b>文学</b>看中国人怎么想怎么写、<b>地理</b>看世界长什么样、<b>心理学</b>看人为什么这么做、<b>运动健康</b>看身体怎么练怎么修、<b>雅思单词</b>背词攒分。点首页「📚 知识类」即可进入。</p>
         </div>
         <div class="mini-tip">
           <h3>⏱️ 建议节奏</h3>
@@ -299,7 +287,15 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         <div class="mi" onclick="goTab('s-home')"><div class="mi-i">🏠</div><div class="mi-t">返回首页</div><div class="mi-a">›</div></div>
         <div class="mi" onclick="document.getElementById('installBar').scrollIntoView()"><div class="mi-i">📲</div><div class="mi-t">安装到手机桌面</div><div class="mi-a">›</div></div>
         <div class="mi" onclick="copyWx()"><div class="mi-i">💬</div><div class="mi-t">加微信交流</div><div class="mi-a">Harryalwayslucky ›</div></div>
-        <div class="mi" onclick="toast('当前为深色黑金主题 · v2.1')"><div class="mi-i">🎨</div><div class="mi-t">主题外观</div><div class="mi-a">深色黑金 ›</div></div>
+        <div class="mi" onclick="toggleThemePicker()"><div class="mi-i">🎨</div><div class="mi-t">主题外观</div><div class="mi-a" id="themeLabel">深色黑金 ›</div></div>
+<div id="themePicker" style="display:none;margin:8px -16px;padding:14px 16px;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div style="font-size:13px;font-weight:600;color:var(--fg);margin-bottom:10px">选择主题风格</div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <button class="theme-opt active" data-theme="dark" onclick="setTheme('dark')">🌙 深色黑金</button>
+    <button class="theme-opt" data-theme="light" onclick="setTheme('light')">☀️ 白天版</button>
+    <button class="theme-opt" data-theme="monopoly" onclick="setTheme('monopoly')">🎰 大富翁</button>
+  </div>
+</div>
       </div>
       <div class="support">
         <h2>☕ 支持一下</h2>
@@ -3332,14 +3328,14 @@ const EQ=[ {e:"💡",t:"高情商的本质：让别人舒服，也不委屈自�
 
 const IELTS=[
  {t:"完整版 · 带音频",d:"所有单词 + 真人发音，一站式背词",href:"ielts/full.html",badge:"推荐"},
- {t:"Day 1",d:"第1期 · 15个高频词 + 例句",href:"ielts/day01.html"},
- {t:"Day 2",d:"第2期 · 15个高频词 + 例句",href:"ielts/day02.html"},
- {t:"Day 3",d:"第3期 · 15个高频词 + 例句",href:"ielts/day03.html"},
- {t:"Day 4",d:"第4期 · 15个高频词 + 例句",href:"ielts/day04.html"},
- {t:"Day 5",d:"第5期 · 15个高频词 + 例句",href:"ielts/day05.html"},
- {t:"Day 6",d:"第6期 · 15个高频词 + 例句",href:"ielts/day06.html"},
- {t:"Day 7",d:"第7期 · 15个高频词 + 例句",href:"ielts/day07.html"},
- {t:"Day 8",d:"第8期 · 15个高频词 + 例句",href:"ielts/day08.html"}
+ {t:"07-11",d:"Day 1 ·  · 15个高频词 + 例句",href:"ielts/day01.html"},
+ {t:"07-12",d:"Day 2 ·  · 15个高频词 + 例句",href:"ielts/day02.html"},
+ {t:"07-13",d:"Day 3 ·  · 15个高频词 + 例句",href:"ielts/day03.html"},
+ {t:"07-14",d:"Day 4 ·  · 15个高频词 + 例句",href:"ielts/day04.html"},
+ {t:"07-15",d:"Day 5 ·  · 15个高频词 + 例句",href:"ielts/day05.html"},
+ {t:"07-16",d:"Day 6 ·  · 15个高频词 + 例句",href:"ielts/day06.html"},
+ {t:"07-17",d:"Day 7 ·  · 15个高频词 + 例句",href:"ielts/day07.html"},
+ {t:"07-18",d:"Day 8 ·  · 15个高频词 + 例句",href:"ielts/day08.html"}
 ];
 
 const SLUG={hist:["history-preqin","history-qinhan","history-tangsong","hist-weijin","hist-silkroad","hist-rome","hist-renaissance","hist-culture","hist-discovery","hist-revolution"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"],sport:["sport-hyrox-what","sport-hyrox-stations","sport-hyrox-train","sport-flatfoot-cause","sport-flatfoot-rehab","sport-arch-collapse","sport-bowlegs","sport-pelvis","sport-gait","sport-rehab-overview","sport-split-ppl","sport-split-push","sport-split-pull-leg","sport-abs","sport-hypertrophy"]};
