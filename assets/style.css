@@ -1,9 +1,82 @@
+/* ====== 泽少学习助手 · 全局样式 ====== */
+
 * { margin: 0; padding: 0; box-sizing: border-box }
+
+/* 默认主题（深色黑金）——写在 :root 里作为默认值 */
 :root {
-/* ====== 主题系统 ====== */
-[data-theme="dark"] { --bg:#0B0F17; --fg:#E6EAF2; --muted:#9AA6BD; --line:rgba(201,168,106,.16); --primary:#C9A86A; --primary-700:#E4C98C; --primary-050:rgba(201,168,106,.08); --card:#151B2B; --card-hover:#1b2742; --hero-from:#16203a; --hero-to:#0b0f17; }
-[data-theme="light"] { --bg:#F5F0E8; --fg:#2D2A26; --muted:#8A8478; --line:rgba(45,42,38,.12); --primary:#B8860B; --primary-700:#DAA520; --primary-050:rgba(184,134,11,.08); --card:#FFFFFF; --card-hover:#FAF7F2; --hero-from:#E8DFD0; --hero-to:#F5F0E8; }
-[data-theme="monopoly"] { --bg:#1A3C34; --fg:#E8F5E9; --muted:#A5D6A7; --line:rgba(129,199,132,.18); --primary:#FFD54F; --primary-700:#FFE082; --primary-050:rgba(255,213,79,.10); --card:#24543D; --card-hover:#2D6B4F; --hero-from:#1B4D3E; --hero-to:#1A3C34; }
+  --bg: #0B0F17;
+  --fg: #E6EAF2;
+  --muted: #9AA6BD;
+  --line: rgba(201,168,106,.16);
+  --border: rgba(201,168,106,.18);
+  --border-strong: rgba(201,168,106,.35);
+  --primary: #C9A86A;
+  --primary-700: #E4C98C;
+  --primary-050: rgba(201,168,106,.08);
+  --gold: #C9A86A;
+  --gold-soft: rgba(201,168,106,.12);
+  --card: #151B2B;
+  --card-hover: #1b2742;
+  --text-1: #E6EAF2;
+  --text-2: #B8C1D0;
+  --text-3: #6B7A94;
+  --hero-from: #16203a;
+  --hero-to: #0b0f17;
+  --r-lg: 14px;
+  --t-fast: .15s;
+  --fs-15: 15px;
+  --fs-12: 12px;
+  --surface: #151B2B;
+  --sh-1: 0 1px 3px rgba(0,0,0,.3);
+}
+
+/* 白天版 */
+[data-theme="light"] {
+  --bg: #F5F0E8;
+  --fg: #2D2A26;
+  --muted: #8A8478;
+  --line: rgba(45,42,38,.12);
+  --border: rgba(45,42,38,.15);
+  --border-strong: rgba(45,42,38,.30);
+  --primary: #B8860B;
+  --primary-700: #DAA520;
+  --primary-050: rgba(184,134,11,.08);
+  --gold: #B8860B;
+  --gold-soft: rgba(184,134,11,.10);
+  --card: #FFFFFF;
+  --card-hover: #FAF7F2;
+  --text-1: #2D2A26;
+  --text-2: #5A554D;
+  --text-3: #8A8478;
+  --hero-from: #E8DFD0;
+  --hero-to: #F5F0E8;
+  --surface: #FFFFFF;
+  --sh-1: 0 1px 3px rgba(0,0,0,.08);
+}
+
+/* 大富翁版 */
+[data-theme="monopoly"] {
+  --bg: #1A3C34;
+  --fg: #E8F5E9;
+  --muted: #A5D6A7;
+  --line: rgba(129,199,132,.18);
+  --border: rgba(129,199,132,.20);
+  --border-strong: rgba(129,199,132,.40);
+  --primary: #FFD54F;
+  --primary-700: #FFE082;
+  --primary-050: rgba(255,213,79,.10);
+  --gold: #FFD54F;
+  --gold-soft: rgba(255,213,79,.12);
+  --card: #24543D;
+  --card-hover: #2D6B4F;
+  --text-1: #E8F5E9;
+  --text-2: #C8E6C9;
+  --text-3: #81C784;
+  --hero-from: #1B4D3E;
+  --hero-to: #1A3C34;
+  --surface: #24543D;
+  --sh-1: 0 1px 3px rgba(0,0,0,.25);
+}
 
 /* 主题选择按钮 */
 .theme-opt{padding:10px 16px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--fg);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;flex:1;min-width:90px;text-align:center}
@@ -13,7 +86,24 @@
 html { -webkit-text-size-adjust: 100%; }
 body { background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; min-height: 100vh; }
 a { color: inherit; text-decoration: none; }
+
+/* 列表页通用样式（ai-news/index.html 等）*/
 .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 60px; }
+.back { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 14px; font-weight: 600; margin: 22px 0 6px; }
+.sec-head { text-align: center; padding: 36px 0 8px; }
+.sec-head .icon { font-size: 40px; }
+.sec-head h1 { font-size: 24px; margin: 8px 0 4px; color: var(--primary); }
+.sec-head .desc { font-size: 13px; color: var(--muted); }
+.list { display: flex; flex-direction: column; gap: 2px; margin-top: 18px; }
+.list a { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; transition: border-color .15s, background .15s, transform .15s; }
+.list a:hover { border-color: var(--primary); background: var(--primary-050); transform: translateX(4px); }
+.list a:active { background: var(--primary-050); }
+.list a .label { font-weight: 600; color: var(--fg); }
+.list a .arrow { color: var(--muted); font-size: 16px; }
+.list a:active .arrow { color: var(--primary); }
+.footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); line-height: 1.8; }
+
+/* 首页卡片等（保留给其他子页面复用）*/
 .hero { text-align: center; padding: 44px 20px 32px; background: linear-gradient(135deg,var(--hero-from),var(--hero-to)); border-bottom: 1px solid var(--line); }
 .hero .logo { font-size: 48px; line-height: 1; margin-bottom: 10px; }
 .hero h1 { font-size: 28px; font-weight: 800; letter-spacing: 1px; color: var(--primary); }
@@ -43,16 +133,3 @@ a { color: inherit; text-decoration: none; }
 .wx-copy:hover { transform: translateY(-2px); }
 .wx-copy:active { transform: translateY(0); }
 .support .hint { font-size: 11px; color: var(--muted); margin-top: 16px; }
-.footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); line-height: 1.8; }
-.back { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 14px; font-weight: 600; margin: 22px 0 6px; }
-.sec-head { text-align: center; padding: 36px 0 8px; }
-.sec-head .icon { font-size: 40px; }
-.sec-head h1 { font-size: 24px; margin: 8px 0 4px; color: var(--primary); }
-.sec-head .desc { font-size: 13px; color: var(--muted); }
-.list { display: flex; flex-direction: column; gap: 2px; margin-top: 18px; }
-.list a { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; transition: border-color .15s, background .15s, transform .15s; }
-.list a:hover { border-color: var(--primary); background: var(--primary-050); transform: translateX(4px); }
-.list a:active { background: var(--primary-050); }
-.list a .label { font-weight: 600; color: var(--fg); }
-.list a .arrow { color: var(--muted); font-size: 16px; }
-.list a:active .arrow { color: var(--primary); }
