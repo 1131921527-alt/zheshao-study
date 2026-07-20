@@ -166,6 +166,9 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .mini-tip{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;margin:14px 0}
 .mini-tip p{font-size:var(--fs-13);line-height:1.7;color:var(--text-2);margin:0}
 .mini-tip h3{font-size:var(--fs-14);color:var(--gold);margin:0 0 8px;font-weight:700}
+
+/* ====== 桌面端适配 ====== */
+@media(min-width:600px){body{background:#080C14}.app{max-width:480px;margin:0 auto;border-radius:16px;border-left:1px solid var(--border);border-right:1px solid var(--border)}.tabbar{border-radius:0 0 16px 16px}}
 </style>
 </head>
 <body>
@@ -189,14 +192,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         </div>
       </div>
 
-      <div class="install" id="installBar">
-        <span class="ii">📲</span>
-        <div class="it">把这站<b>装到手机桌面</b>：浏览器菜单选「添加到主屏幕」，就能像 App 一样全屏打开、离线看。
-          <br><button class="ib" onclick="copyUrl()">复制本站地址</button>
-          <button class="ib" id="btnInstall" style="display:none;margin-left:6px" onclick="doInstall()">安装到桌面</button>
-        </div>
-        <button class="ix" onclick="document.getElementById('installBar').style.display='none'">×</button>
-      </div>
+      
 
       <div class="section-title pad">🤖 AI 板块</div>
       <div class="quick-grid">
@@ -237,6 +233,19 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
       <div class="pad" style="margin-top:16px">
         <a class="linkcard" href="ai-news/index.html"><div class="li">📰</div><div class="lc"><div class="t">查看全部历史</div><div class="d">共 35 期 · 每日更新</div></div><div class="arr">→</div></a>
         <div class="list" id="aiNewsList" style="margin-top:14px"></div>
+<script>
+(function(){
+  var list=document.getElementById('aiNewsList');if(!list)return;
+  var items=[
+    {t:'AI Agent 正在重塑软件开发流程',d:'2026-07-20 · 编程效率提升300%',href:'ai-news/index.html'},
+    {t:'大模型推理成本再降40%，边缘部署成真',d:'2026-07-19 · 端侧AI新突破',href:'ai-news/index.html'},
+    {t:'多模态理解能力逼近人类基准',d:'2026-07-18 · 视觉+文本联合推理',href:'ai-news/index.html'},
+    {t:'AI 安全治理框架全球共识形成',d:'2026-07-17 · 12国联合声明',href:'ai-news/index.html'},
+    {t:'开源模型首次在数学奥赛级别解题',d:'2026-07-16 · 推理能力跃升',href:'ai-news/index.html'}
+  ];
+  list.innerHTML=items.map(function(it){return '<a class=\"linkcard\" href=\"'+it.href+'\"><div class=\"li\">🤖</div><div class=\"lc\"><div class=\"t\">'+it.t+'</div><div class=\"d\">'+it.d+'</div></div><div class=\"arr\">→</div></a>';}).join('');
+})();
+</script>
       </div>
     </section>
     <!-- 知识中心 -->
@@ -285,7 +294,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
       <div class="menu">
         <div class="mi" onclick="goTab('s-home')"><div class="mi-i">🏠</div><div class="mi-t">返回首页</div><div class="mi-a">›</div></div>
-        <div class="mi" onclick="document.getElementById('installBar').scrollIntoView()"><div class="mi-i">📲</div><div class="mi-t">安装到手机桌面</div><div class="mi-a">›</div></div>
+        <div class="mi" onclick="toast('请在浏览器菜单中选择「添加到主屏幕」')"><div class="mi-i">📲</div><div class="mi-t">安装到手机桌面</div><div class="mi-a">›</div></div>
         <div class="mi" onclick="copyWx()"><div class="mi-i">💬</div><div class="mi-t">加微信交流</div><div class="mi-a">Harryalwayslucky ›</div></div>
         <div class="mi" onclick="toggleThemePicker()"><div class="mi-i">🎨</div><div class="mi-t">主题外观</div><div class="mi-a" id="themeLabel">深色黑金 ›</div></div>
 <div id="themePicker" style="display:none;margin:8px -16px;padding:14px 16px;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
