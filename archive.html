@@ -12,14 +12,14 @@
 <div class="logo">🦞</div>
 <h1>泽少学习任务</h1>
 <div class="tag">每天自动更新 · AI / 雅思 / 提示词 一站式学习</div>
-<div class="sub">已积累 51 期内容 · 手机点开就能看</div>
+<div class="sub">已积累 4 期内容 · 手机点开就能看</div>
 </header>
 <main class="wrap">
 <section class="grid">
-<a class="card" style="background:linear-gradient(135deg,#1f3a5f,#0f3460)" href="ai-news/index.html"><span class="icon">📰</span><span class="latest">最新 07-14 周二</span><div class="title">AI动态播报</div><div class="desc">每天AI圈发生了什么，一页看完</div><div class="count">已积累 29 期 →</div></a>
-<a class="card" style="background:linear-gradient(135deg,#3a1a5c,#533483)" href="ai-knowledge/index.html"><span class="icon">🧠</span><span class="latest">最新 Day 1</span><div class="title">AI系统性学习</div><div class="desc">每天一个AI知识点，30天从小白到上手</div><div class="count">已积累 7 期 →</div></a>
-<a class="card" style="background:linear-gradient(135deg,#5c3a1a,#7a4a1a)" href="ai-prompt/index.html"><span class="icon">🎯</span><span class="latest">最新 Day 1</span><div class="title">提示词技巧</div><div class="desc">每天1个提示词技巧，直接复制用</div><div class="count">已积累 6 期 →</div></a>
-<a class="card" style="background:linear-gradient(135deg,#5c1a3a,#7a1a3a)" href="ielts/index.html"><span class="icon">📖</span><span class="latest">最新 完整版 · 带音频</span><div class="title">雅思单词</div><div class="desc">每天15个高频词，例句+记忆法</div><div class="count">已积累 9 期 →</div></a>
+<a class="card" style="background:linear-gradient(135deg,#1f3a5f,#0f3460)" href="ai-news/index.html"><span class="icon">📰</span><span class="latest">最新 07-21 周二</span><div class="title">AI动态播报</div><div class="desc">每天AI圈发生了什么，一页看完</div><div class="count">已积累 1 期 →</div></a>
+<a class="card" style="background:linear-gradient(135deg,#3a1a5c,#533483)" href="ai-knowledge/index.html"><span class="icon">🧠</span><span class="latest">最新 Day 1</span><div class="title">AI系统性学习</div><div class="desc">每天一个AI知识点，30天从小白到上手</div><div class="count">已积累 1 期 →</div></a>
+<a class="card" style="background:linear-gradient(135deg,#5c3a1a,#7a4a1a)" href="ai-prompt/index.html"><span class="icon">🎯</span><span class="latest">最新 Day 1</span><div class="title">提示词技巧</div><div class="desc">每天1个提示词技巧，直接复制用</div><div class="count">已积累 1 期 →</div></a>
+<a class="card" style="background:linear-gradient(135deg,#5c1a3a,#7a1a3a)" href="ielts/index.html"><span class="icon">📖</span><span class="latest">最新 Day 1</span><div class="title">雅思单词</div><div class="desc">每天15个高频词，例句+记忆法</div><div class="count">已积累 1 期 →</div></a>
 </section>
 
 <section class="support">
@@ -82,5 +82,30 @@ body{padding-top:44px!important}
     else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
   };
 })();
-</script></body>
+</script><style>
+/*zsframe*/
+@media (min-width: 600px) {
+  html, body { background: #06090F !important; }
+  .wrap, .lesson {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    overflow: hidden !important; padding-top: 12px !important;
+  }
+  /* 内容页（body 本身就是列，无 .app/.wrap/.lesson 外层）直接把 body 收成手机壳 */
+  body:not(:has(.app)):not(:has(.wrap)):not(:has(.lesson)) {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    min-height: calc(100vh - 32px) !important; padding-top: 12px !important;
+  }
+  .back { margin-top: 10px !important; }
+  .grid { grid-template-columns: 1fr !important; }
+  .qr-row { flex-direction: column; align-items: center; }
+}
+</style></body>
 </html>

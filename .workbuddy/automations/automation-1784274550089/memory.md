@@ -24,3 +24,11 @@
 - 生成：`ai-news/ai-news-2026-07-19.html`（8 条，9754 字节），同步至 `03-学习网站/AI动态播报/` 与 `zheshao-study/ai-news/` 两处均成功（各 9754 字节）
 - 推送：`git add -A && commit -m "AI动态播报 2026-07-19" && push` 成功（commit 待回写）
 - 备注：刻意避开与 7/18 期重复项（Kimi K3 / ChatGPT Work / Grok 4.5 / 千问眼镜 / DeepSeek融资 / 欧盟限谷歌 / 拟人化办法 / 申通SClaw），全部为 7/18–7/19 新动态
+
+## 2026-07-20（第 4 次执行）
+- 时间：20:55 触发
+- 搜索窗口：近 24 小时（7/19–7/20）全球 AI 动态，4 轮 WebSearch（综合/国际模型/融资监管/国内智能体+国际）
+- 当日条数：**8 条**（大模型: 阿里 Qwen3.8 2.4万亿；产品平台: 蚂蚁 Agentar 2.0 / 腾讯 Marvis+WorkBuddy移动端；资本: DeepSeek 估值3510亿·梁文锋AI首富；终端模型: 阶跃 STEPX Neo 镇馆之宝；算力: 华为昇腾950 9月商用 / 中科曙光十万卡超集群；治理: 中国发布国际AI伦理治理行动计划+智能体国际合作倡议）
+- 生成：`ai-news/ai-news-2026-07-20.html`（8 条，9962 字节），同步至 `03-学习网站/AI动态播报/` 与 `zheshao-study/ai-news/` 两处均成功（各 9962 字节）
+- 推送：`git add -A && commit -m "AI动态播报 2026-07-20" && push` 成功，commit `06775c3`，main `bc814cb..06775c3`（4 files changed）
+- 备注：无报错；刻意避开 7/19 期重复项（商汤U1 Pro / Grok 4.6 / GPT-Live / 金鹰计划 / 阿里Agent Native Cloud / HappyOyster / Rokid / 英特尔），全部为 7/19–7/20 新动态；git 仍有 LF→CRLF 无害警告

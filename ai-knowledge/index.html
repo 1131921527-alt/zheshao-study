@@ -12,16 +12,10 @@
 <div class="sec-head">
 <div class="icon">🧠</div>
 <h1>AI系统性学习</h1>
-<div class="desc">每天一个AI知识点，30天从小白到上手 · 共 7 期</div>
+<div class="desc">每天一个AI知识点，30天从小白到上手 · 共 1 期</div>
 </div>
 <div class="list">
-<a href="day07.html"><span class="label">Day 1</span><span class="arrow">→</span></a>
-<a href="day06.html"><span class="label">Day 2</span><span class="arrow">→</span></a>
-<a href="day05.html"><span class="label">Day 3</span><span class="arrow">→</span></a>
-<a href="day04.html"><span class="label">Day 4</span><span class="arrow">→</span></a>
-<a href="day03.html"><span class="label">Day 5</span><span class="arrow">→</span></a>
-<a href="day02.html"><span class="label">Day 6</span><span class="arrow">→</span></a>
-<a href="day01.html"><span class="label">Day 7</span><span class="arrow">→</span></a>
+<a href="day01.html"><span class="label">Day 1</span><span class="arrow">→</span></a>
 </div>
 <div class="footer">腾讯龙虾的成品 · AI系统性学习<br>内容每日自动更新</div>
 </div>
@@ -69,5 +63,30 @@ body{padding-top:44px!important}
     else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
   };
 })();
-</script></body>
+</script><style>
+/*zsframe*/
+@media (min-width: 600px) {
+  html, body { background: #06090F !important; }
+  .wrap, .lesson {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    overflow: hidden !important; padding-top: 12px !important;
+  }
+  /* 内容页（body 本身就是列，无 .app/.wrap/.lesson 外层）直接把 body 收成手机壳 */
+  body:not(:has(.app)):not(:has(.wrap)):not(:has(.lesson)) {
+    max-width: 540px !important; margin: 16px auto !important;
+    background: #0B0F17 !important; border-radius: 16px !important;
+    box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
+    border-left: 1px solid rgba(201,168,106,.10) !important;
+    border-right: 1px solid rgba(201,168,106,.10) !important;
+    min-height: calc(100vh - 32px) !important; padding-top: 12px !important;
+  }
+  .back { margin-top: 10px !important; }
+  .grid { grid-template-columns: 1fr !important; }
+  .qr-row { flex-direction: column; align-items: center; }
+}
+</style></body>
 </html>

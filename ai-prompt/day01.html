@@ -3,192 +3,390 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>AI提示词技巧 · Day 1</title>
+<title>提示词技巧 Day 01 | 角色设定法</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0f0f1e;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:16px 16px 40px}
-.card{background:#1a1a2e;border-radius:16px;padding:24px 20px;margin-bottom:16px;border:1px solid #2a2a4a}
-.day-tag{display:inline-block;background:linear-gradient(135deg,#e94560,#f5a623);color:#fff;font-size:13px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px}
-h1{font-size:22px;color:#fff;margin-bottom:4px}
-.sub{color:#a0a0c0;font-size:14px;margin-bottom:16px}
-h2{font-size:18px;color:#53d8fb;margin:18px 0 8px;border-left:3px solid #53d8fb;padding-left:10px}
-h3{font-size:15px;color:#ffc107;margin:14px 0 6px}
-p{font-size:15px;color:#c8c8d8;margin-bottom:8px}
-.highlight{background:#0f3460;border-radius:10px;padding:14px 16px;margin:12px 0;border-left:3px solid #53d8fb}
-.highlight p{color:#53d8fb;font-size:14px;margin:0}
-.tag-list{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
-.tag{background:#533483;color:#fff;font-size:12px;padding:3px 10px;border-radius:12px}
-.prompt-box{background:#0a0a1a;border:1px solid #e94560;border-radius:12px;padding:14px 16px;margin:12px 0;position:relative}
-.prompt-box .label{color:#e94560;font-size:12px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
-.prompt-box .label .badge{background:#e94560;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;font-weight:700}
-.prompt-box pre{color:#ffc107;font-size:13.5px;white-space:pre-wrap;word-break:break-all;font-family:"SF Mono",Menlo,Consolas,monospace;line-height:1.6}
-.copy-btn{position:absolute;top:10px;right:10px;background:#e94560;color:#fff;border:none;font-size:11px;padding:4px 10px;border-radius:8px;cursor:pointer;font-weight:600}
-.copy-btn:active{background:#c93550}
-.compare-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
-.compare-table th{background:#0f3460;color:#53d8fb;padding:8px 6px;text-align:left;font-size:13px}
-.compare-table td{padding:8px 6px;border-bottom:1px solid #2a2a4a;color:#c8c8d8}
-.compare-table tr:last-child td{border-bottom:none}
-.tip{background:linear-gradient(135deg,#533483,#0f3460);border-radius:10px;padding:12px 16px;margin:12px 0}
-.tip p{color:#fff;font-size:14px;margin:0}
-.tips-list{list-style:none;padding:0;margin:8px 0}
-.tips-list li{padding:6px 0;font-size:14px;color:#c8c8d8;display:flex;align-items:flex-start;gap:6px}
-.tips-list li .icon{font-size:16px;flex-shrink:0}
-.before-after{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
-.ba-block{background:#0a0a1a;border-radius:10px;padding:12px 14px;border-left:3px solid #f5a623}
-.ba-block.bad{border-left-color:#ff4757}
-.ba-block.good{border-left-color:#26de81}
-.ba-label{font-size:11px;font-weight:700;margin-bottom:6px;letter-spacing:1px}
-.ba-label.bad{color:#ff4757}
-.ba-label.good{color:#26de81}
-.ba-text{color:#c8c8d8;font-size:13.5px;line-height:1.6}
-.footer{text-align:center;color:#666;font-size:12px;margin-top:24px;padding-top:16px;border-top:1px solid #2a2a4a}
-.emoji-big{font-size:32px;display:block;text-align:center;margin:8px 0}
-.copy-hint{text-align:center;color:#666;font-size:12px;margin-top:6px}
-@media (max-width:380px){.card{padding:20px 16px}.prompt-box pre{font-size:13px}}
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --card-hover: #1c2330;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-dim: #8b949e;
+  --accent: #58a6ff;
+  --accent-glow: rgba(88, 166, 255, 0.15);
+  --green: #3fb950;
+  --orange: #d29922;
+  --red: #f85149;
+  --code-bg: #1e242e;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 680px; margin: 0 auto; padding: 20px 16px 60px; }
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 30px 0 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+.day-badge {
+  display: inline-block;
+  background: var(--accent-glow);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.header .subtitle { color: var(--text-dim); font-size: 14px; }
+
+/* Section */
+.section { margin-bottom: 28px; }
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 16px;
+  margin-bottom: 16px;
+}
+.card:hover { background: var(--card-hover); }
+
+/* Problem description */
+.problem {
+  background: rgba(248, 81, 73, 0.08);
+  border-color: rgba(248, 81, 73, 0.3);
+}
+.problem .label { color: var(--red); font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+.solution {
+  background: rgba(63, 185, 80, 0.08);
+  border-color: rgba(63, 185, 80, 0.3);
+}
+.solution .label { color: var(--green); font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+
+/* Code block */
+.code-block {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 14px;
+  margin: 10px 0;
+  overflow-x: auto;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.code-block .prompt-label {
+  color: var(--orange);
+  font-size: 12px;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 600;
+}
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--border);
+  color: var(--text-dim);
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.copy-btn:hover { background: var(--accent); color: #fff; }
+.copy-btn.copied { background: var(--green); color: #fff; }
+
+/* Before/After comparison */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+.compare-item {
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+}
+.compare-bad {
+  background: rgba(248, 81, 73, 0.06);
+  border: 1px solid rgba(248, 81, 73, 0.25);
+}
+.compare-good {
+  background: rgba(63, 185, 80, 0.06);
+  border: 1px solid rgba(63, 185, 80, 0.25);
+}
+.compare-tag {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.compare-bad .compare-tag { color: var(--red); }
+.compare-good .compare-tag { color: var(--green); }
+
+/* Tips list */
+.tips-list { list-style: none; padding: 0; }
+.tips-list li {
+  padding: 8px 0 8px 24px;
+  position: relative;
+  font-size: 15px;
+}
+.tips-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Highlight box */
+.highlight {
+  background: var(--accent-glow);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+.highlight strong { color: var(--accent); }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.footer .nav { display: flex; justify-content: space-between; align-items: center; }
+
+/* Tag */
+.tag {
+  display: inline-block;
+  background: var(--border);
+  color: var(--text-dim);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+.tag.topic { background: var(--accent-glow); color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container { padding: 16px 12px 40px; }
+  .header h1 { font-size: 21px; }
+  .section-title { font-size: 16px; }
+  .card { padding: 14px 12px; }
+  .code-block { font-size: 13px; padding: 12px; }
+}
 </style>
 </head>
 <body>
+<div class="container">
 
-<div class="card">
-<div class="day-tag">Day 1 · 提示词技巧</div>
-<h1>给AI举例子，它就听话10倍</h1>
-<div class="sub">选题：AI对话技巧 · Few-Shot 提示法 🎯</div>
+  <!-- Header -->
+  <div class="header">
+    <div class="day-badge">Day 01 · 提示词技巧</div>
+    <h1>角色设定法：一句话让AI变成专家</h1>
+    <p class="subtitle">2026.07.21 · 选题：AI对话技巧</p>
+    <div style="margin-top:10px;">
+      <span class="tag topic">AI对话技巧</span>
+      <span class="tag">入门</span>
+      <span class="tag">通用</span>
+    </div>
+  </div>
 
-<div class="emoji-big">🗣️➡️🤖</div>
+  <!-- What is it -->
+  <div class="section">
+    <h2 class="section-title">这是什么</h2>
+    <div class="card">
+      <p>你跟AI说话，AI给你的回答不够专业？大概率是你没告诉它"你是谁"。</p>
+      <p style="margin-top:10px;">角色设定法就是在提问之前，先给AI戴一顶帽子——告诉它现在扮演什么角色。同样一个问题，你让它当"营养师"和当"健身教练"，给的建议完全不一样。</p>
+    </div>
+  </div>
 
-<p>你是不是经常问AI问题，得到一堆废话？</p>
-<p>同一个问题，换种问法，结果天差地别。今天教你一个万能技巧：<b>给AI举例子</b>，叫 Few-Shot（少样本）提示法。</p>
+  <!-- The Problem -->
+  <div class="section">
+    <h2 class="section-title">先看一个常见翻车</h2>
+    <div class="card problem">
+      <div class="label">没有角色设定时</div>
+      <p>你问：「怎么减肥？」</p>
+      <p style="margin-top:8px;color:var(--text-dim);">AI给你一堆正确的废话：少吃多动、控制饮食、坚持运动……你看了跟没看一样。</p>
+    </div>
+    <div class="card solution">
+      <div class="label">加上角色设定后</div>
+      <p>你问：「你现在是一位有10年经验的减脂教练，专门帮久坐上班族设计饮食方案。我身高175cm体重85kg，每天坐办公室，给我一个一周饮食计划。」</p>
+      <p style="margin-top:8px;color:var(--green);">AI直接给你具体到每天吃什么、吃多少、为什么这么搭配的完整方案。</p>
+    </div>
+  </div>
 
-<div class="highlight">
-<p>💡 核心逻辑：你给AI 1-3 个示范，它会"照葫芦画瓢"给你答案。比你说一百句"你要这样那样"管用多了。</p>
-</div>
+  <!-- How to do it -->
+  <div class="section">
+    <h2 class="section-title">怎么用（3步搞定）</h2>
+    <div class="card">
+      <ul class="tips-list">
+        <li><strong>第1步：想清楚你需要什么领域的专家。</strong>写方案？找"策划总监"。改文章？找"资深编辑"。学知识？找"大学教授"。</li>
+        <li><strong>第2步：加上经验年限和专长方向。</strong>不是"你是老师"，而是"你是有15年教学经验的高中物理老师，擅长把复杂概念讲给零基础的人听"。</li>
+        <li><strong>第3步：说清楚你的具体情况。</strong>角色设定完再接你的需求，让"专家"有的放矢。</li>
+      </ul>
+    </div>
+  </div>
 
-<h2>为什么举例子这么管用？</h2>
-<p>AI 本质上是个"超级模仿机器"。你说"帮我写个产品介绍"，它不知道你想要什么风格、什么长度、什么语气。</p>
-<p>但你给它看一段你满意的例子，它立刻明白"哦，原来要这种感觉"。</p>
+  <!-- Prompt Examples -->
+  <div class="section">
+    <h2 class="section-title">3个可直接复制的范例</h2>
 
-<div class="tag-list">
-<span class="tag">风格统一</span>
-<span class="tag">格式稳定</span>
-<span class="tag">语气可复制</span>
-<span class="tag">省去反复改</span>
-</div>
+    <div class="card">
+      <p style="font-weight:600;margin-bottom:4px;">范例1：写工作汇报</p>
+      <p style="color:var(--text-dim);font-size:13px;margin-bottom:8px;">场景：不知道怎么把琐碎工作写成像样的周报</p>
+      <div class="code-block">
+        <span class="prompt-label">复制这段发给AI ↓</span>你现在是一位500强企业的部门秘书，擅长把零散的工作内容整理成结构清晰、重点突出的周报。
 
-<h2>看个真实对比</h2>
+我的本周工作内容：
+1. 跟客户A开了2次会，确认了需求
+2. 修复了系统登录bug
+3. 整理了上季度数据报表
 
-<div class="before-after">
-<div class="ba-block bad">
-<div class="ba-label bad">❌ 烂提示词</div>
-<div class="ba-text">帮我写3条朋友圈文案，卖我们家的保险产品。要吸引人一点。</div>
-</div>
-<div class="ba-block good">
-<div class="ba-label good">✅ 好提示词（举例子）</div>
-<div class="ba-text">帮我写3条朋友圈文案，卖我们的增额终身寿险。<b>先看我的风格范例：</b><br><br>
-范例1：「不是有钱才买保险，是买了保险才有底气去赚更多钱。今天又一位客户把50万闲钱锁进了3.5%复利账户，20年后就是辆保时捷。」<br>
-范例2：「昨天给一个35岁的姐姐做了方案，她自己都不敢信：每年存10万，存5年，60岁后每月多领8000。这哪是保险，是给自己发工资。」<br><br>
-<b>要求：</b>语气像我一样有故事感、生活化、有数字冲击。每条80字以内，可以直接发朋友圈。</div>
-</div>
-</div>
+帮我写一份周报，要求：
+- 分"本周完成""下周计划""需要协调"三部分
+- 每条不超过2行
+- 语气正式但不啰嗦
+        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+      </div>
+    </div>
 
-<p>看出区别了吗？第二个提示词，AI 立刻知道你要"故事化+数字+口语"。不用你解释半天风格。</p>
+    <div class="card">
+      <p style="font-weight:600;margin-bottom:4px;">范例2：学新知识</p>
+      <p style="color:var(--text-dim);font-size:13px;margin-bottom:8px;">场景：想快速搞懂一个陌生概念</p>
+      <div class="code-block">
+        <span class="prompt-label">复制这段发给AI ↓</span>你是一位大学计算机系教授，教学风格是"先打比方再讲原理"，擅长用生活中的例子让零基础学生秒懂。
 
-<h2>3个实战提示词模板（直接复制用）</h2>
+请给我讲解"什么是API"，要求：
+1. 先用一个日常生活的比喻让我理解核心概念
+2. 再用一段话解释技术原理
+3. 最后给一个我身边能接触到的真实例子
+4. 全程不要用专业术语，除非你已经解释过它
+        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+      </div>
+    </div>
 
-<div class="prompt-box">
-<div class="label">🟢 模板1：改写文案统一风格 <span class="badge">万能</span></div>
-<button class="copy-btn" onclick="copyPrompt(this)">复制</button>
-<pre>我要把下面这段话改写成小红书风格，保留核心信息但更口语化。
+    <div class="card">
+      <p style="font-weight:600;margin-bottom:4px;">范例3：改文章/改文案</p>
+      <p style="color:var(--text-dim);font-size:13px;margin-bottom:8px;">场景：自己写的总觉得不够好，想让AI帮忙润色</p>
+      <div class="code-block">
+        <span class="prompt-label">复制这段发给AI ↓</span>你是一位有8年经验的新媒体编辑，风格是"短句为主、信息密度高、不灌鸡汤"。
 
-【原文】
-本次产品升级，新增三项核心权益，包括住院垫付、就医绿通和CAR-T特药保障，年度限额提升至600万。
+下面是我写的一段文字，帮我优化：
+---
+（把你的文字粘贴到这里）
+---
 
-【风格范例】
-范例1：「姐妹们听我说！这次升级我真的会谢——住院不用自己先掏钱了，就医还能走VIP通道，600万额度随便用！」
-范例2：「理赔难？不存在了。这次直接住院垫付+绿通+抗癌神药全包，600万兜底，相当于给自己穿了件软猬甲。」
+要求：
+1. 保持我的原意，不要加戏
+2. 删掉所有废话和口头禅
+3. 把长句拆成短句
+4. 给我修改前后的对比，标注你改了哪些地方
+        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+      </div>
+    </div>
+  </div>
 
-【改写要求】
-保留所有关键信息（住院垫付/绿通/CAR-T/600万），字数控制在60字以内，语气活泼有梗。</pre>
-</div>
+  <!-- Before/After -->
+  <div class="section">
+    <h2 class="section-title">一句话对比</h2>
+    <div class="compare-grid">
+      <div class="compare-item compare-bad">
+        <div class="compare-tag">❌ 不用角色设定</div>
+        <p>「帮我写个PPT大纲」</p>
+        <p style="color:var(--text-dim);font-size:13px;margin-top:4px;">AI不知道给谁看、什么场景，只能给你一个万能模板。</p>
+      </div>
+      <div class="compare-item compare-good">
+        <div class="compare-tag">✅ 用角色设定</div>
+        <p>「你是一位咨询公司合伙人，擅长做商业提案。我要给老板汇报一个新项目，时长15分钟，帮我列PPT大纲。」</p>
+        <p style="color:var(--text-dim);font-size:13px;margin-top:4px;">AI知道你的场景和受众，直接给你能用的结构。</p>
+      </div>
+    </div>
+  </div>
 
-<div class="prompt-box">
-<div class="label">🟢 模板2：批量生成同类型内容 <span class="badge">高效</span></div>
-<button class="copy-btn" onclick="copyPrompt(this)">复制</button>
-<pre>我要写5条公众号标题，主题是「30岁如何配置第一份保险」。
+  <!-- Key takeaway -->
+  <div class="section">
+    <div class="highlight">
+      <p><strong>一句话记住：</strong>提问前先想"我要找个什么专家"，把他的身份、经验、专长写出来，再接你的问题。这一步花5秒钟，省你5分钟来回追问。</p>
+    </div>
+  </div>
 
-【标题范例】
-范例1：「30岁第一份保险怎么买？我整理了4个真相」
-范例2：「30岁存不下钱？这款'懒人保险'帮你强制攒下第一个10万」
+  <!-- Footer -->
+  <div class="footer">
+    <div class="nav">
+      <span>每日提示词技巧 · Day 01</span>
+      <span>明天见 →</span>
+    </div>
+  </div>
 
-【分析范例的套路】
-- 数字开头吸引点击（30岁、4个、10万）
-- 反常识或痛点切入
-- 口语化，不要"您"用"你"
-- 长度控制在15-25字
-
-【生成要求】
-按这个套路写5条，主题相关但角度不同。</pre>
-</div>
-
-<div class="prompt-box">
-<div class="label">🟢 模板3：让AI学会你的说话方式 <span class="badge">进阶</span></div>
-<button class="copy-btn" onclick="copyPrompt(this)">复制</button>
-<pre>接下来所有回答，都请模仿下面这段我的说话风格：
-
-【我的风格样本】
-「说实话，理财这事没有标准答案。但有个原则我反复跟客户说：先保命再赚钱，先大人再小孩。听起来简单，做到的人不到10%。」
-
-「昨天一个客户拿着5份保单来找我，让我帮看。看完我沉默了——买了5份重疾，但全家没人买医疗险。这就是典型的'钱花了，没花在刀刃上'。」
-
-【我的语言特征】
-- 短句为主，经常一句话一段
-- 喜欢用数字、对比、转折
-- 偶尔自嘲、敢说大实话
-- 不绕弯子，一句话能说完绝不用两句
-
-【任务】
-用这种风格，回应客户问的这个问题：「我有50万闲钱，是买房还是买理财险？」</pre>
-</div>
-
-<h2>3个新手坑，别再踩</h2>
-<ul class="tips-list">
-<li><span class="icon">❌</span><b>例子只给1个</b> — AI 容易过度模仿这一个，1-3个最稳。给5个以上AI反而懵。</li>
-<li><span class="icon">❌</span><b>例子和任务不匹配</b> — 写小红书文案举了个严肃新闻的例子，AI会精神分裂。例子必须同领域同场景。</li>
-<li><span class="icon">❌</span><b>不指出例子的"规律"</b> — 光给例子不够，告诉AI"看这3个例子的共同点是什么"，它学得更快。</li>
-</ul>
-
-<div class="tip">
-<p>🎯 一句话记住：<b>想要什么结果，先给它看一个"你想要的样子"。</b>说再多规则不如一个示范。</p>
-</div>
-
-<div class="copy-hint">👆 点击提示词右上角"复制"按钮直接拿走用</div>
-
-<div class="footer">AI提示词技巧 · Day 1 · 每天1个技巧，30天让你用AI用出花来</div>
 </div>
 
 <script>
-function copyPrompt(btn){
-  const pre = btn.parentElement.querySelector('pre');
-  const text = pre.innerText;
-  navigator.clipboard.writeText(text).then(()=>{
-    const old = btn.innerText;
-    btn.innerText = '已复制';
-    btn.style.background = '#26de81';
-    setTimeout(()=>{btn.innerText=old;btn.style.background='#e94560'},1500);
-  }).catch(()=>{
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    const old = btn.innerText;
-    btn.innerText = '已复制';
-    btn.style.background = '#26de81';
-    setTimeout(()=>{btn.innerText=old;btn.style.background='#e94560'},1500);
+function copyCode(btn) {
+  var block = btn.parentElement;
+  var text = block.querySelector('.prompt-label').nextSibling.textContent;
+  // Get all text nodes after the label
+  var fullText = '';
+  var foundLabel = false;
+  block.childNodes.forEach(function(node) {
+    if (node.nodeType === 3) {
+      fullText += node.textContent;
+    } else if (node.nodeType === 1 && node.classList.contains('prompt-label')) {
+      foundLabel = true;
+    } else if (node.nodeType === 1 && !node.classList.contains('copy-btn')) {
+      fullText += node.textContent;
+    }
+  });
+  // Fallback: just grab innerText minus label and button
+  if (!fullText.trim()) {
+    var clone = block.cloneNode(true);
+    var lbl = clone.querySelector('.prompt-label');
+    var btn2 = clone.querySelector('.copy-btn');
+    if (lbl) lbl.remove();
+    if (btn2) btn2.remove();
+    fullText = clone.textContent;
+  }
+  navigator.clipboard.writeText(fullText.trim()).then(function() {
+    btn.textContent = '已复制 ✓';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = '复制';
+      btn.classList.remove('copied');
+    }, 2000);
   });
 }
 </script>
-
 <style>
 #liveClockBar{position:fixed;top:0;left:0;right:0;z-index:99999;height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;background:linear-gradient(90deg,#0b0f17 0%,#11182a 50%,#0b0f17 100%);border-bottom:1px solid rgba(120,170,255,.4);box-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 0 rgba(88,166,255,.3) inset;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#c9d1d9;font-size:13px;overflow:hidden}
 #liveClockBar .lc-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950;animation:lcPulse 1.4s infinite;flex:0 0 auto}
@@ -233,7 +431,8 @@ body{padding-top:44px!important}
     else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
   };
 })();
-</script><style>/*zsframe*/
+</script><style>
+/*zsframe*/
 @media (min-width: 600px) {
   html, body { background: #06090F !important; }
   .wrap, .lesson {
@@ -242,15 +441,18 @@ body{padding-top:44px!important}
     box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
     border-left: 1px solid rgba(201,168,106,.10) !important;
     border-right: 1px solid rgba(201,168,106,.10) !important;
-    overflow: hidden !important; padding-top: 12px !important; }
-  .back { margin-top: 10px !important; }
+    overflow: hidden !important; padding-top: 12px !important;
+  }
+  /* 内容页（body 本身就是列，无 .app/.wrap/.lesson 外层）直接把 body 收成手机壳 */
   body:not(:has(.app)):not(:has(.wrap)):not(:has(.lesson)) {
     max-width: 540px !important; margin: 16px auto !important;
     background: #0B0F17 !important; border-radius: 16px !important;
     box-shadow: 0 8px 60px rgba(0,0,0,.5) !important;
     border-left: 1px solid rgba(201,168,106,.10) !important;
     border-right: 1px solid rgba(201,168,106,.10) !important;
-    min-height: calc(100vh - 32px) !important; padding-top: 12px !important; }
+    min-height: calc(100vh - 32px) !important; padding-top: 12px !important;
+  }
+  .back { margin-top: 10px !important; }
   .grid { grid-template-columns: 1fr !important; }
   .qr-row { flex-direction: column; align-items: center; }
 }
