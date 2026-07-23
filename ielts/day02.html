@@ -405,10 +405,21 @@ function playWord(word, type) {
   });
 }
 
+var legacyAudioQueue=[];
+var legacyAudioBusy=false;
+function runLegacyAudio(){
+  if(legacyAudioBusy||!legacyAudioQueue.length)return;
+  legacyAudioBusy=true;
+  var job=legacyAudioQueue.shift();
+  var a=new Audio(job.url);
+  var done=function(){legacyAudioBusy=false;runLegacyAudio();};
+  a.onended=done;a.onerror=done;a.play().catch(done);
+}
+function queueLegacyAudio(url){legacyAudioQueue.push({url:url});runLegacyAudio();}
 function playSentence(text){
   var key = text.replace(/<[^>]+>/g,'').trim().toLowerCase().substring(0,50);
   var file = _sentMap[key];
-  if(file){ var a=new Audio(file); a.play().catch(function(){}); return; }
+  if(file){ queueLegacyAudio(file); return; }
   var url='https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(text);
   var a=new Audio(url); a.play().catch(function(){ tts(text,'en-US'); });
 }

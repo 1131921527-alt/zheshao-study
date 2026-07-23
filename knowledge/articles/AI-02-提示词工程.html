@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>提示词工程：和AI说话是一门手艺</title><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;min-height:100vh;padding-bottom:24px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 12px}
+.header{background:linear-gradient(135deg,#1a2332,#0d1117);padding:28px 16px 20px;text-align:center;border-bottom:1px solid #21262d;position:sticky;top:0;z-index:100}
+.header h1{font-size:22px;font-weight:700;color:#58a6ff}
+.header .sub{font-size:13px;color:#8b949e;margin-top:4px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin:16px 0}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
+.card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
+.card p{color:#8b949e;font-size:13px}
+a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
+a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
+.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
+.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
+footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
+</style></head>
+<body><div class="wrap">
+<div class="header"><h1>提示词工程：和AI说话是一门手艺</h1></div>
+<a class="back" href="../index.html">← 返回知识文章目录</a><div class="note">分类：AI与科技科普 ｜ 来源：知识文章候选库（已验收）。保留原作者免责声明与参考来源，待核实内容不实装为确定事实。</div><h2>提示词工程：和AI说话是一门手艺</h2>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">分类：AI与科技科普</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">预计阅读：6分钟</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">标签：AI使用技巧、提示词、人机交互</blockquote>
+<p>---</p>
+<p>同样一个AI工具，有人用它写出了出色的方案，有人用它得到一堆正确的废话。</p>
+<p>差别不在AI，在问问题的方式。</p>
+<p>提示词工程——就是研究怎么跟AI说话才能得到好结果。它不是"咒语学"，而是一套有逻辑的沟通方法。</p>
+<h3>AI理解你话的方式跟人不一样</h3>
+<p>人跟人说话，有很多隐含信息。你跟同事说"帮我做个方案"，他知道你要什么格式、什么深度、什么时候要——因为你们有共同的上下文。</p>
+<p>AI没有这个上下文。它只有一个输入框和一段文字。你说"做个方案"，它不知道：</p>
+<ul>
+<li>什么类型的方案？</li>
+<li>给谁看的？</li>
+<li>多长？</li>
+<li>什么风格？</li>
+<li>需要包含哪些内容？</li>
+</ul>
+<p>所以它只能猜——然后猜出来的通常是最通用的版本。通用等于没用。</p>
+<h3>四个要素写好提示词</h3>
+<p>**要素一：角色。**</p>
+<p>告诉AI它是谁。</p>
+<p>"你是一个有10年经验的产品经理"——AI会从产品经理的视角回答。 "你是一个健身教练"——AI会从教练的视角回答。 不指定角色，AI默认用"百科全书"视角——什么都说一点，什么都没深度。</p>
+<p>角色决定了回答的专业程度、用词风格和思考角度。</p>
+<p>**要素二：任务。**</p>
+<p>说清楚你要它干什么。不是"关于健身的建议"（太模糊），而是"给一个每周能运动3次、每次30分钟的上班族设计一个增肌训练计划"。</p>
+<p>任务描述越具体，AI的输出越精准。判断标准：你把这段话给一个陌生人看，他能不能不追问就开始做。</p>
+<p>**要素三：约束。**</p>
+<p>告诉它什么能做、什么不能做。</p>
+<p>"不要超过500字""用口语化的大白话""不要用专业术语""分三个部分""每个部分举一个例子"。</p>
+<p>没有约束的AI倾向于写长篇大论——因为它的训练数据里，长的回答通常评分更高。但你要的是精炼，不是冗长。</p>
+<p>**要素四：格式。**</p>
+<p>说清楚你要什么形式的输出。</p>
+<p>"用表格""用编号列表""用对话形式""先给结论再给理由""只给关键词不要展开"。</p>
+<p>格式要求能让输出直接可用，不需要你再二次整理。</p>
+<h3>几个实用的提示词技巧</h3>
+<p>**技巧一：给例子。**</p>
+<p>如果你想让它按特定风格写，最好的办法是给一个例子。</p>
+<p>"按这个风格写：[贴一段你喜欢的文章]。主题是：XXX。"</p>
+<p>AI从例子中学习风格的能力很强——比你用语言描述"幽默但不油腻、专业但不学术"有效得多。</p>
+<p>**技巧二：让它思考过程。**</p>
+<p>不要直接要答案。让它先分析再给答案。</p>
+<p>"第一步：分析这个问题的三个关键因素。第二步：针对每个因素给出解决方案。第三步：综合三个方案给出最终建议。"</p>
+<p>这种"链式思考"能显著提升AI输出的质量——因为它不是直接从输入跳到输出，而是经过了中间推理步骤。这跟人解决问题的过程一样：先分析再行动。</p>
+<p>**技巧三：让它自我检查。**</p>
+<p>"写完之后，检查你的回答是否有以下问题：1. 有没有事实错误 2. 有没有遗漏重要信息 3. 有没有逻辑不一致的地方。如果有，修正后再给最终版本。"</p>
+<p>让AI当自己的审稿人，输出质量会提升一截。</p>
+<p>**技巧四：迭代而不是一次到位。**</p>
+<p>不要指望第一个提示词就得到完美结果。先给一个基础版，看完输出后说"太长了，精简到一半""第二部分展开说""加一个案例"——像跟人讨论一样迭代。</p>
+<p>大部分人的问题是：第一个提示词太模糊，得到不好的结果后就放弃了。其实多迭代两轮，质量就上来了。</p>
+<h3>常见的提示词错误</h3>
+<p>**错误一：太短。** "写个方案"——三个字，AI只能瞎猜。加一句话变成"给银行渠道的保险产品对比方案，面向客户经理，包括产品特点、适合客群和销售话术"，立刻好十倍。</p>
+<p>**错误二：太长太杂。** 把所有要求堆在一段话里，AI抓不住重点。用编号分条写，每条一个要求。</p>
+<p>**错误三：只说不要什么，不说要什么。** "不要太正式""不要太长""不要用术语"——好，那要什么？你没说。AI只能按"不要"来排除，但不知道该往什么方向走。每说一个"不要"，配一个"要"。</p>
+<p>**错误四：不提供上下文。** "帮我改一下这段话"——改成什么？给谁看？什么目的？不说上下文，AI改出来的版本可能跟你要的完全不同。</p>
+<h3>总结</h3>
+<p>提示词工程的核心：告诉AI它是谁（角色）、干什么（任务）、什么限制（约束）、什么格式（输出）。给例子、让思考、自我检查、迭代优化。不是"咒语"，是沟通——你跟人沟通需要清楚表达，跟AI也一样。</p>
+<p>---</p>
+<p>*本文为独立撰写的科普内容，不代替专业建议。*</p>
+<p>---</p>
+<h3>参考来源</h3>
+<p>1. [OpenAI - Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) 2. [Anthropic - Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) 3. [Google - Prompt Engineering (Gemini)](https://ai.google.dev/gemini-api/docs/prompting-strategies)</p>
+<footer>泽少学习助手 · 每天进步一点点</footer>
+</div></body></html>

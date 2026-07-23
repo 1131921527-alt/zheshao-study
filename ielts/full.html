@@ -9469,13 +9469,23 @@ function playWord(word, type){
   var a = new Audio(f);
   a.play().catch(function(){ tts(word, type===1?'en-GB':'en-US'); });
 }
+var fullSentenceQueue=[];
+var fullSentenceBusy=false;
 function playSentence(text){
-  var key = text.replace(/<[^>]+>/g,'').trim().toLowerCase().substring(0,50);
-  var f = _sentMap[key];
-  if(f){ var a=new Audio(f); a.play().catch(function(){}); return; }
-  tts(text, 'en-US');
+  fullSentenceQueue.push(text);
+  playNextFullSentence();
 }
-// 例句按钮播放视觉反馈
+function playNextFullSentence(){
+  if(fullSentenceBusy || !fullSentenceQueue.length) return;
+  var text=fullSentenceQueue.shift();
+  fullSentenceBusy=true;
+  var done=function(){ fullSentenceBusy=false; playNextFullSentence(); };
+  var key=text.replace(/<[^>]+>/g,'').trim().toLowerCase().substring(0,50);
+  var f=_sentMap[key];
+  if(f){ var a=new Audio(f); a.onended=done; a.onerror=done; a.play().catch(done); return; }
+  if(window.speechSynthesis){ var u=new SpeechSynthesisUtterance(text); u.lang='en-US'; u.rate=.95; u.onend=done; u.onerror=done; window.speechSynthesis.speak(u); return; }
+  done();
+}// 例句按钮播放视觉反馈
 document.querySelectorAll('.ex-tts').forEach(function(btn){
   btn.addEventListener('click', function(){
     document.querySelectorAll('.ex-tts.playing').forEach(function(b){b.classList.remove('playing');});

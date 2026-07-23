@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI幻觉：为什么AI会一本正经地胡说八道</title><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;min-height:100vh;padding-bottom:24px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 12px}
+.header{background:linear-gradient(135deg,#1a2332,#0d1117);padding:28px 16px 20px;text-align:center;border-bottom:1px solid #21262d;position:sticky;top:0;z-index:100}
+.header h1{font-size:22px;font-weight:700;color:#58a6ff}
+.header .sub{font-size:13px;color:#8b949e;margin-top:4px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin:16px 0}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
+.card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
+.card p{color:#8b949e;font-size:13px}
+a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
+a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
+.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
+.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
+footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
+</style></head>
+<body><div class="wrap">
+<div class="header"><h1>AI幻觉：为什么AI会一本正经地胡说八道</h1></div>
+<a class="back" href="../index.html">← 返回知识文章目录</a><div class="note">分类：AI与科技科普 ｜ 来源：知识文章候选库（已验收）。保留原作者免责声明与参考来源，待核实内容不实装为确定事实。</div><h2>AI幻觉：为什么AI会一本正经地胡说八道</h2>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">分类：AI与科技科普</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">预计阅读：6分钟</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">标签：大模型、可靠性、AI安全</blockquote>
+<p>---</p>
+<p>你问ChatGPT："林黛玉倒拔垂杨柳是哪一回？"</p>
+<p>它可能回答："林黛玉倒拔垂杨柳出自《红楼梦》第七回，当时林黛玉在大观园中展现了她不为人知的力量……"</p>
+<p>听起来有模有样。但任何一个读过《红楼梦》的人都知道：倒拔垂杨柳的是鲁智深，出自《水浒传》，跟林黛玉八竿子打不着。</p>
+<p>这就是AI幻觉——AI非常自信地说了一个完全错误的东西。</p>
+<h3>为什么会产生幻觉</h3>
+<p>大模型的本质是"预测下一个字"。它不是在"思考"答案，而是在"根据概率猜"。</p>
+<p>当你问"林黛玉倒拔垂杨柳是哪一回"时，模型看到了"林黛玉"和"倒拔垂杨柳"这两个词放在一句话里。它的训练数据里有"倒拔垂杨柳"出现的内容（水浒传相关），也有"林黛玉"出现的内容（红楼梦相关）。它根据概率预测：接下来应该输出一段看起来合理的文学分析。</p>
+<p>它不一定能意识到"林黛玉没有倒拔过垂杨柳"这种事实层面的矛盾——因为它没有独立的事实核查机制。它主要在做概率预测，而非验证真伪。</p>
+<p>这就产生了一个特征：**AI在不确定答案的时候，往往倾向于生成一个看起来合理的回答，而不是承认"我不确定"。** 虽然一些新型号已经加入了置信度判断和拒绝回答的机制，但默认行为仍然是"尽量给出输出"。</p>
+<p>因为它被训练成"给输出"，不是被训练成"判断该不该输出"。它的目标函数是"生成的文本跟训练数据像不像"，不是"生成的内容对不对"。</p>
+<h3>幻觉的几种类型</h3>
+<p>**类型一：事实性错误。** 像上面的林黛玉例子——把不存在的事情说得头头是道。这是最常见的类型。</p>
+<p>**类型二：编造引用。** AI可能把听起来像名言的话归给名人——"鲁迅说过"后面跟的可能是真话，也可能是AI拼凑的。</p>
+<p>**类型三：编造来源。** "根据2023年《Nature》期刊发表的研究……"——这个研究可能根本不存在。</p>
+<p>**类型四：逻辑错误。** 推理链中间出错，但前后看起来逻辑通顺。</p>
+<h3>为什么幻觉很难完全消除</h3>
+<p>**原因一：训练数据本身就包含错误信息。** 互联网上有大量错误信息——维基百科的错误条目、论坛上的错误回答、新闻中的错误报道。AI把这些都当训练数据，它学到的"知识"本身就有一部分是错的。</p>
+<p>**原因二：模型不知道自己"不知道什么"。** 人有一个能力叫"元认知"——你知道自己知道什么、不知道什么。当你被问到不知道的问题时，你会说"我不确定"或者"让我查一下"。</p>
+<p>大模型在这方面能力有限。它不像人类那样能清晰区分"我学过这个"和"我没学过这个"——它对所有输入都按类似的概率预测方式输出。所以它在不确定的时候，表现可能跟确定的时候差不多——都能自信地输出。</p>
+<p>**原因三："自信"和"正确"是两回事。** 模型输出的"自信程度"（概率值）跟内容是否正确没有必然关系。一个完全错误的答案可能跟一个完全正确的答案一样"自信"。</p>
+<p>**原因四：消除幻觉会降低有用性。** 如果你把模型调得非常保守——不确定就不回答——那它大部分问题都不回答，变得没什么用。如果你调得太激进——什么都敢回答——幻觉就多。这是一个两难。</p>
+<h3>怎么应对AI幻觉</h3>
+<p>**方法一：交叉验证。**</p>
+<p>不要只问一次就信。把AI给的答案拿去搜索引擎核实——尤其是涉及具体数字、人名、引用、日期的答案。</p>
+<p>如果你问"某公司2023年营收是多少"，AI可能编一个数字。去公司官网或财报核实。</p>
+<p>**方法二：让AI给来源。**</p>
+<p>"请给出你回答的来源链接或出处。"如果AI能给出可验证的来源，可信度高一些。如果它给不出，或者说"基于训练数据"——那就要小心了。</p>
+<p>注意：AI给出来的"来源"也可能是编的。它可能编一个看起来真实的论文标题和作者。所以来源也要核实。</p>
+<p>**方法三：问它"你确定吗"。**</p>
+<p>AI有一个特性：你追问"你确定吗"或者"请仔细检查一下"，它有时候会修正之前的错误答案。这不是因为它"反思"了，是因为你的追问改变了上下文，模型重新预测了一个可能不同的答案。</p>
+<p>但这个方法不可靠——它也可能坚持错误答案。所以只能当辅助手段。</p>
+<p>**方法四：拆分问题。**</p>
+<p>不要问一个又大又模糊的问题。把问题拆成小而具体的部分，分别验证。大问题里可能大部分对、小部分错——拆开后更容易发现哪里不对。</p>
+<p>**方法五：用RAG（检索增强生成）。**</p>
+<p>如果你在用AI做正式工作，可以考虑RAG方式：先让AI去搜索/检索数据库，基于检索到的真实文档生成答案，而不是完全凭训练数据猜。这能大幅降低幻觉。</p>
+<h3>总结</h3>
+<p>AI幻觉是大模型的本质特征——它不是在"知道"答案，而是在"预测"答案。不知道的时候它不会说不知道，而是编一个看起来合理的答案。应对方法：交叉验证、要求来源并核实、追问、拆分问题、使用RAG。把AI当一个"很会说话但偶尔编东西的助手"——它说的每句话都值得核实，尤其是关键信息。</p>
+<p>---</p>
+<p>*本文为独立撰写的科普内容，不代替专业建议。*</p>
+<p>---</p>
+<h3>参考来源</h3>
+<p>1. [arXiv - A Survey on Hallucination in LLMs (Huang et al., 2023)](https://arxiv.org/abs/2311.05232) 2. [arXiv - A Comprehensive Survey of Hallucination Mitigation (Tonmoy et al., 2024)](https://arxiv.org/abs/2401.01313) 3. [OpenAI - Research on hallucinations](https://openai.com/research/) 4. [Google AI Blog - Reducing hallucinations](https://blog.google/technology/ai/)</p>
+<footer>泽少学习助手 · 每天进步一点点</footer>
+</div></body></html>

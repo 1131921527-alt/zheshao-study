@@ -96,8 +96,12 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .support{margin:18px 20px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px 18px;text-align:center;box-shadow:var(--sh-1)}
 .support h2{font-size:var(--fs-16);margin:0 0 6px;color:var(--text-1)}
 .support p{font-size:var(--fs-13);color:var(--text-2);line-height:1.6;margin:0 0 14px}
-.support .qr{width:140px;height:140px;border-radius:12px;background:#fff;border:1px solid var(--border)}
+.support .qr{width:140px;height:140px;border-radius:12px;background:#fff;border:1px solid var(--border);object-fit:contain;cursor:pointer;transition:transform var(--t-fast)}
 .support .qr-fallback{width:140px;height:140px;margin:0 auto;border-radius:12px;border:1px dashed var(--text-3);display:none;align-items:center;justify-content:center;color:var(--text-3);font-size:var(--fs-12);padding:10px;text-align:center}
+.qr-zoom{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px;cursor:zoom-out}
+.qr-zoom.show{display:flex}
+.qr-zoom img{max-width:78vw;max-height:68vh;border-radius:16px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.6);object-fit:contain}
+.qr-zoom .tip{color:#fff;font-size:var(--fs-12);margin-top:14px;opacity:.8}
 .support .label{display:block;margin-top:8px;font-size:var(--fs-13);font-weight:600;color:var(--text-1)}
 .support .wx{display:inline-block;margin-top:14px;background:var(--gold);color:#0B0F17;border:none;border-radius:var(--r-pill);padding:9px 18px;font-size:var(--fs-13);font-weight:700;font-family:var(--font);cursor:pointer}
 .support .hint{font-size:var(--fs-11);color:var(--text-3);margin-top:12px;line-height:1.6}
@@ -172,6 +176,16 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
 /* ====== 桌面端适配 ====== */
 @media(min-width:600px){body{background:linear-gradient(180deg,#080C14 0%,#0a1020 100%);min-height:100vh}.app{max-width:540px;margin:16px auto;border-radius:16px;border-left:1px solid var(--border);border-right:1px solid var(--border);box-shadow:0 8px 60px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,106,.06);min-height:calc(100vh - 32px);overflow:hidden}.tabbar{border-radius:0 0 16px 16px}}
+/* 首页学习 App 化 */
+.home-intro{margin:16px 20px 0;padding:20px;border:1px solid var(--border-strong);border-radius:22px;background:linear-gradient(145deg,#1d2945 0%,#111827 58%,#0b0f17 100%);position:relative;overflow:hidden}
+.home-intro::after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-62px;top:-70px;background:radial-gradient(circle,rgba(79,141,255,.28),transparent 68%)}
+.home-intro .eyebrow{font-size:12px;color:var(--gold);font-weight:700;letter-spacing:.8px}.home-intro h2{font-size:24px;line-height:1.3;margin:8px 0;color:#fff}.home-intro p{font-size:13px;line-height:1.7;color:var(--text-2);margin:0;max-width:310px}
+.study-progress{margin-top:18px;display:flex;align-items:center;gap:12px}.study-progress .track{height:7px;flex:1;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}.study-progress .bar{height:100%;width:68%;border-radius:inherit;background:linear-gradient(90deg,var(--gold),#e9cd8d)}.study-progress .value{font-size:12px;color:var(--gold);font-weight:700}
+.today-plan{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 20px 0}.plan-item{min-height:82px;padding:12px 8px;border:1px solid var(--border);border-radius:14px;background:var(--surface);text-align:center;cursor:pointer}.plan-item:active{transform:scale(.98)}.plan-item .pi{font-size:22px}.plan-item .pt{font-size:12px;font-weight:700;margin-top:6px;color:var(--text-1)}.plan-item .pm{font-size:10px;color:var(--text-3);margin-top:3px}
+.continue-card{margin:0 20px;padding:16px;border:1px solid rgba(79,141,255,.28);border-radius:16px;background:linear-gradient(135deg,rgba(79,141,255,.13),rgba(21,27,43,.96));display:flex;align-items:center;gap:13px;cursor:pointer}.continue-card .cc-icon{width:44px;height:44px;flex:0 0 44px;border-radius:13px;display:grid;place-items:center;background:var(--blue-soft);font-size:22px}.continue-card .cc-copy{flex:1;min-width:0}.continue-card .cc-kicker{font-size:11px;color:var(--blue);font-weight:700}.continue-card .cc-title{font-size:14px;font-weight:700;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.continue-card .cc-meta{font-size:11px;color:var(--text-3);margin-top:4px}.continue-card .cc-go{color:var(--blue);font-size:20px}
+.recent-list{margin:0 20px;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}.recent-row{display:flex;align-items:center;gap:12px;padding:14px;border-bottom:1px solid var(--border);text-decoration:none;color:inherit}.recent-row:last-child{border-bottom:0}.recent-row .ri{width:36px;height:36px;border-radius:11px;background:var(--gold-soft);display:grid;place-items:center}.recent-row .rc{flex:1}.recent-row .rt{font-size:13px;font-weight:700}.recent-row .rm{font-size:11px;color:var(--text-3);margin-top:3px}.recent-row .ra{color:var(--text-3)}
+.home-support{margin-top:34px!important;opacity:.94}.home-support::before{content:"学习内容到这里就结束了";display:block;font-size:11px;color:var(--text-3);margin:-38px 0 22px}
+@media(max-width:360px){.today-plan{grid-template-columns:1fr}.plan-item{min-height:auto;display:flex;align-items:center;gap:10px;text-align:left;padding:12px 14px}.plan-item .pt{margin-top:0}.plan-item .pm{margin-left:auto}}
 </style>
 </head>
 <body>
@@ -184,19 +198,21 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
   <div class="screen-wrap">
     <!-- 首页 -->
     <section class="screen active" id="s-home">
-      <div class="hero">
-        <div class="hi">每天进步一点点</div>
-        <div class="name">泽少的学习中心</div>
-        <div class="hero-stats">
-          <div class="st"><div class="n">8</div><div class="l">知识类目</div></div>
-          <div class="st"><div class="n">66+</div><div class="l">长文知识</div></div>
-          <div class="st"><div class="n">1151</div><div class="l">雅思词汇</div></div>
-          <div class="st"><div class="n">每日</div><div class="l">自动更新</div></div>
-        </div>
+      <div class="home-intro">
+        <div class="eyebrow">MY LEARNING SPACE</div>
+        <h2>晚上好，泽少 👋</h2>
+        <p>每天十五分钟：读一篇、记二十词、了解一条 AI 新动态。</p>
+        <div class="study-progress"><div class="track"><div class="bar"></div></div><div class="value">今日 2/3</div></div>
       </div>
-
-      
-      <div class="section-title pad">📚 知识类</div>
+      <div class="section-title pad">今日学习 <span class="more">约 15 分钟</span></div>
+      <div class="today-plan">
+        <div class="plan-item" onclick="location.href='ielts/day78.html'"><div class="pi">🔤</div><div class="pt">20 个单词</div><div class="pm">5 分钟</div></div>
+        <div class="plan-item" onclick="goKnowPsyEq()"><div class="pi">🧠</div><div class="pt">1 篇知识</div><div class="pm">8 分钟</div></div>
+        <div class="plan-item" onclick="location.href='ai-news/index.html'"><div class="pi">⚡</div><div class="pt">AI 动态</div><div class="pm">2 分钟</div></div>
+      </div>
+      <div class="section-title pad">继续学习 <span class="more" onclick="goTab('s-know')">全部课程</span></div>
+      <div class="continue-card" onclick="goKnowSport()"><div class="cc-icon">🏃</div><div class="cc-copy"><div class="cc-kicker">上次学到</div><div class="cc-title">运动康复：把身体当系统来修</div><div class="cc-meta">运动健康 · 预计 8 分钟</div></div><div class="cc-go">›</div></div>
+      <div class="section-title pad">课程分类 <span class="more" onclick="goTab('s-know')">进入知识中心</span></div>
       <div class="quick-grid">
         <div class="qcard" onclick="location.href='ai-news/index.html'"><div class="qi">🤖</div><div class="qt">AI动态播报</div><div class="qd">每天 AI 圈发生了什么</div><div class="qbadge">每日更新</div></div>
         <div class="qcard" onclick="goKnow('poem')"><div class="qi">📜</div><div class="qt">文学</div><div class="qd">诗词 · 楚辞 · 元曲</div></div>
@@ -208,20 +224,24 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
       <div class="section-title pad">💡 今日金句</div>
       <div class="quote-card" id="dailyQuote">加载中...</div>
-        <div class="qcard" onclick="goTab('s-me')"><div class="qi">⚙️</div><div class="qt">我的</div><div class="qd">安装 / 打赏</div></div>
+      <div class="section-title pad">最近更新 <span class="more" onclick="goTab('s-news')">查看全部</span></div>
+      <div class="recent-list">
+        <a class="recent-row" href="ai-news/ai-news-2026-07-24.html"><div class="ri">🤖</div><div class="rc"><div class="rt">AI 动态 · 精选10条（已核实）</div><div class="rm">全部附官方来源 · 新上线</div></div><div class="ra">›</div></a>
+        <div class="recent-row" onclick="goKnowPsyEq()"><div class="ri">🧠</div><div class="rc"><div class="rt">心理学与情商专题</div><div class="rm">新增 5 篇 · 系统学习</div></div><div class="ra">›</div></div>
+        <div class="recent-row" onclick="goKnowSport()"><div class="ri">🏃</div><div class="rc"><div class="rt">运动健康专题</div><div class="rm">新增 10 篇 · 训练与康复</div></div><div class="ra">›</div></div>
       </div>
 
-      <div class="support">
-        <h2>☕ 觉得有用，欢迎打赏</h2>
-        <p>内容会一直免费更新。觉得做得还行，欢迎扫码打赏，随意就好～</p>
-        <img class="qr" src="assets/wechat.png" alt="微信赞赏码" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="support home-support" id="supportHome">
+        <h2>☕ 支持学习助手</h2>
+        <p>如果这里对你有帮助，欢迎支持泽少继续把学习资料整理下去。</p>
+        <img class="qr" src="assets/wechat.png" alt="微信赞赏码" loading="lazy" onclick="zoomQr(this)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>
         <span class="label">微信赞赏码</span>
         <button class="wx" onclick="copyWx()">复制微信号 Harryalwayslucky</button>
         <div class="hint">在微信里打开本页，长按上方二维码即可打赏。</div>
       </div>
 
-      <div class="footer">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+      <div class="footer">泽少学习助手<br>每天进步一点点</div>
     </section>
 
     <!-- 动态：直接展示文章列表 -->
@@ -234,6 +254,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 (function(){
   var list=document.getElementById('aiNewsList');if(!list)return;
   var items=[
+    {t:'AI动态精选10条（已核实A级）',d:'2026-07-24 · GPT-5.6 / Claude Sonnet 5 / 混元Hy3 等',href:'ai-news/ai-news-2026-07-24.html'},
     {t:'AI Agent 正在重塑软件开发流程',d:'2026-07-20 · 编程效率提升300%',href:'ai-news/ai-news-2026-07-20.html'},
     {t:'大模型推理成本再降40%，边缘部署成真',d:'2026-07-19 · 端侧AI新突破',href:'ai-news/ai-news-2026-07-19.html'},
     {t:'多模态理解能力逼近人类基准',d:'2026-07-18 · 视觉+文本联合推理',href:'ai-news/ai-news-2026-07-18.html'},
@@ -249,6 +270,13 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     <section class="screen" id="s-know">
       <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">科技前沿 · 文学 · 地理 · 心理 · 运动 · 雅思</div><h1>知识中心</h1></div></div></div>
       <div class="pad" style="margin-top:16px">
+
+        <div class="section-title">📚 深度文章库 <span class="more">新上线</span></div>
+        <div class="recent-list" style="margin:0 0 18px">
+          <a class="recent-row" href="knowledge/index.html"><div class="ri">📚</div><div class="rc"><div class="rt">知识文章库（35篇）</div><div class="rm">AI科普 · 历史 · 地理 · 心理 · 文学 · 运动</div></div><div class="ra">›</div></a>
+          <a class="recent-row" href="knowledge/index.html"><div class="ri">⚛️</div><div class="rc"><div class="rt">原子习惯 · 独立系列（5篇）</div><div class="rm">微习惯 · 行为系统 · 身份认同</div></div><div class="ra">›</div></a>
+          <a class="recent-row" href="knowledge/index.html"><div class="ri">🗣️</div><div class="rc"><div class="rt">卡耐基 · 独立系列（5篇）</div><div class="rm">人际沟通 · 倾听 · 批评的艺术</div></div><div class="ra">›</div></a>
+        </div>
 
         <div class="section-title k-toggle" onclick="toggleK('tech')">🤖 科技前沿 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-tech"></div>
@@ -298,7 +326,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>会幻觉、不完美；会用的人（会提问、会核实）比模型本身更关键。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -325,7 +353,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>算力是 AI 时代的战略资源，谁有算力谁有话语权。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -352,7 +380,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>数据质量决定上限；大模型是机器学习走到极致的产物。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -370,7 +398,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
         </div>
         <div class="mini-tip">
           <h3>⏱️ 建议节奏</h3>
-          <p>每天 1 篇长文 + 15 个雅思词 + 1 条 AI 动态，约 15 分钟。<b>不求快，求连。</b>知识是复利，今天看的一篇，某天会突然和另一篇串起来。</p>
+          <p>每天 1 篇长文 + 20 个雅思词 + 1 条 AI 动态，约 15 分钟。<b>不求快，求连。</b>知识是复利，今天看的一篇，某天会突然和另一篇串起来。</p>
         </div>
       </div>
 
@@ -388,14 +416,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
   </div>
 </div>
       </div>
-      <div class="support">
-        <h2>☕ 支持一下</h2>
-        <p>内容免费持续更新，你的打赏是我坚持的动力。</p>
-        <img class="qr" src="assets/wechat.png" alt="微信赞赏码" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>
-        <span class="label">微信赞赏码</span>
-        <button class="wx" onclick="copyWx()">复制微信号 Harryalwayslucky</button>
-      </div>
+
       <div class="footer">腾讯龙虾的成品 · 泽少学习助手 v2.1<br>由 GitHub Pages 托管</div>
     </section>
 
@@ -432,7 +453,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，看一个跟他完全相反的皇帝——草根出身、靠会用人赢天下的刘邦。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -460,7 +481,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，跳到唐朝，看一个把浪漫活成职业的人——李白。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -488,7 +509,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，三国。看一个被小说写歪了的狠角色——曹操。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -591,7 +612,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -693,7 +714,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -801,7 +822,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -897,7 +918,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -987,7 +1008,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1090,7 +1111,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1118,7 +1139,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，中国历史上唯一的女皇帝——武则天。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1144,7 +1165,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，北宋顶流——被贬官耽误的吃货苏轼。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1170,7 +1191,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，马鞭抽出一个世界版图的男人——成吉思汗。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1196,7 +1217,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，明朝最能想的男人——王阳明。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1231,7 +1252,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1266,7 +1287,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1301,7 +1322,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1339,7 +1360,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1374,7 +1395,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1409,7 +1430,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1444,7 +1465,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1479,7 +1500,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1514,7 +1535,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1549,7 +1570,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1584,7 +1605,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1619,7 +1640,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1654,7 +1675,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1692,7 +1713,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </ul></div>
 
     </div>
-    <div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+    <div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
     <section class="screen" id="art-eq-nvc">
@@ -1730,7 +1751,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </ul></div>
 
     </div>
-    <div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+    <div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
     <section class="screen" id="art-eq-upmanage">
@@ -1766,7 +1787,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </ul></div>
 
     </div>
-    <div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+    <div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
     <section class="screen" id="art-eq-boundary">
@@ -1802,7 +1823,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </ul></div>
 
     </div>
-    <div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+    <div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
     <section class="screen" id="art-eq-icebreak">
@@ -1838,7 +1859,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </ul></div>
 
     </div>
-    <div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+    <div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 <!-- GEN-MORE3 -->
@@ -1865,7 +1886,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，换个舞台到欧洲——矮个子野心家拿破仑。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1892,7 +1913,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>下一篇，用脑子改写宇宙的人——爱因斯坦。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1919,7 +1940,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <li>历史人物系列到此10期，下一套我们换个新玩法。</li>
 </ul></div>
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1950,7 +1971,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -1981,7 +2002,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2011,7 +2032,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2045,7 +2066,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2076,7 +2097,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2107,7 +2128,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2139,7 +2160,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2170,7 +2191,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2201,10 +2222,33 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
+    <!-- 长文：psy-carnegie-communication -->
+    <section class="screen" id="art-psy-carnegie-communication">
+      <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
+<header class="art-head">
+  <div class="ah-meta">卡耐基 · 口才 · 人际沟通</div>
+  <h1>卡耐基：真正的口才，是让别人愿意听你说话</h1>
+</header>
+<div class="body">
+<p class="lead">很多人把口才理解成“说得漂亮、反应够快”。卡耐基的人际沟通思想恰好提醒我们：<strong>好口才不是压过别人，而是先让对方感到被理解，再把事情说清楚。</strong></p>
+<h2>一、先对人感兴趣，再要求别人听你</h2>
+<p>交流不是单向表演。记住对方的名字、认真听完一句话、追问他真正关心的事，比准备一段华丽开场更有效。当人感到自己被看见，才愿意把注意力交给你。</p>
+<h2>二、少一点指责，多一点具体事实</h2>
+<p>“你总是不负责”会让人立刻防御；“这份表格比约定时间晚了一天，我担心影响后面的审核”则把问题说清楚。批评人格只会制造对抗，描述事实才能推动解决。</p>
+<h2>三、从对方的需要出发</h2>
+<p>说服别人时，不要只讲“我想要什么”，要讲“这件事对你有什么价值”。客户关心风险和收益，孩子关心兴趣和成就感，同事关心工作量和责任边界。换位不是讨好，而是找到共同利益。</p>
+<h2>四、给别人保留体面</h2>
+<p>公开揭短、抢着证明自己正确，往往赢了道理却输了关系。真正成熟的表达会给对方台阶：先肯定有效部分，再谈具体改法；把“你错了”换成“我们再核对一次”。</p>
+<div class="callout"><span class="ct">💡 今天就能用</span>下一次重要谈话前，先写三句话：对方最在意什么？我能先认可什么？我希望对方采取哪个具体行动？</div>
+<div class="summary"><span class="st">📌 一句话收尾</span><ul><li>口才不是滔滔不绝，而是让信息被听见、让关系能继续。</li><li>先倾听、讲事实、找共同利益、保留体面。</li><li>能让别人舒服地理解你，比让别人佩服你更有用。</li></ul></div>
+</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
+      </article>
+    </section>
     <!-- 长文：psy-survivor -->
     <section class="screen" id="art-psy-survivor">
       <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
@@ -2232,7 +2276,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2263,7 +2307,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2294,7 +2338,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2325,7 +2369,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2356,7 +2400,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2387,7 +2431,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2418,7 +2462,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2449,7 +2493,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 <!-- /GEN-MORE3 -->
@@ -2541,7 +2585,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2626,7 +2670,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2685,7 +2729,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2720,7 +2764,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2757,7 +2801,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2794,7 +2838,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2828,7 +2872,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2865,7 +2909,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2896,7 +2940,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2930,7 +2974,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2961,7 +3005,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -2992,7 +3036,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -3023,7 +3067,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -3054,7 +3098,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -3085,7 +3129,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 </ul></div>
 
 </div>
-<div class="afoot">腾讯龙虾的成品 · 泽少学习助手<br>内容每日自动更新 · GitHub Pages 托管</div>
+<div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
 
@@ -3138,6 +3182,7 @@ const PSY=[
  {e:"🎯",t:"蔡加尼克效应：没做完的事总在脑子里转",m:"心理学 · 记忆 · 蔡加尼克效应",b:"大脑对「未完成」有执念，像开了后台进程耗电。写下来=关掉进程；to-do list 能解压、写日记能安眠，都是这个道理。"},
  {e:"📊",t:"幸存者偏差：你看到的成功，都是没失败的",m:"心理学 · 认知 · 幸存者偏差",b:"死人不会说话。看比尔盖茨辍学成首富，没看辍学失败的一万个。看成功学时多问一句「失败的人长什么样」，才不会被带偏。"},
  {e:"💡",t:"聚光灯效应：你以为全世界都在看你，其实没有",m:"心理学 · 社会 · 聚光灯效应",b:"衣服穿反了觉得全楼都在笑你、说错一句话觉得全公司都记着。其实每个人都是自己世界的主角，没人有空当你的观众。放轻松，你没那么重要——这是好事。"},
+ {e:"🗣️",t:"卡耐基：真正的口才，是让别人愿意听你说话",m:"卡耐基 · 口才 · 人际沟通",b:"真正的口才不是压过别人，而是先倾听、讲事实、找共同利益，并给对方保留体面。"},
       /*MORE3:psy*/
 ];
 
@@ -3180,6 +3225,7 @@ const EQ=[ {e:"💡",t:"高情商的本质：让别人舒服，也不委屈自�
 
 const IELTS=[
  {t:"完整版 · 带音频",d:"所有单词 + 真人发音，一站式背词",href:"ielts/full.html",badge:"推荐"},
+ {t:"🚀 Future Day 计划",d:"30天 × 20词 · 共600词 新上线",href:"ielts/future-index.html"},
  {t:"Day 1",d:"15个高频词 + 例句",href:"ielts/day01.html"},
  {t:"Day 2",d:"15个高频词 + 例句",href:"ielts/day02.html"},
  {t:"Day 3",d:"15个高频词 + 例句",href:"ielts/day03.html"},
@@ -3259,7 +3305,7 @@ const IELTS=[
  {t:"Day 77",d:"15个高频词 + 例句",href:"ielts/day77.html"},
 ];
 
-const SLUG={hist:["hist-qinshihuang","hist-liubang","hist-libai","hist-caocao","hist-wuzetian","hist-sushi","hist-genghis","hist-wangyangming","hist-napoleon","hist-einstein"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"],sport:["sport-hyrox-what","sport-hyrox-stations","sport-hyrox-train","sport-flatfoot-cause","sport-flatfoot-rehab","sport-arch-collapse","sport-bowlegs","sport-pelvis","sport-gait","sport-rehab-overview","sport-split-ppl","sport-split-push","sport-split-pull-leg","sport-abs","sport-hypertrophy"],tech:["tech-llm","tech-compute","tech-ml"]};
+const SLUG={hist:["hist-qinshihuang","hist-liubang","hist-libai","hist-caocao","hist-wuzetian","hist-sushi","hist-genghis","hist-wangyangming","hist-napoleon","hist-einstein"],geo:["geo-plate","geo-river","geo-rainforest","geo-current","geo-volcano","geo-desert","geo-climate","geo-population","geo-urban"],psy:["psy-procrastination","psy-bystander","psy-dopamine","psy-confirm","psy-anchoring","psy-conformity","psy-sunkcost","psy-mandela","psy-dunning","psy-fear","psy-habit","psy-relationship","psy-reactance","psy-prophecy","psy-zeigarnik","psy-survivor","psy-spotlight","psy-carnegie-communication"],poem:["poem-shijing","poem-tang","poem-songci","poem-sushi","poem-chuci","poem-liqingzhao","poem-yuanqu"],eq:["eq-basics","eq-nvc","eq-upmanage","eq-boundary","eq-icebreak","eq-relationship","eq-feedback","eq-conflict"],sport:["sport-hyrox-what","sport-hyrox-stations","sport-hyrox-train","sport-flatfoot-cause","sport-flatfoot-rehab","sport-arch-collapse","sport-bowlegs","sport-pelvis","sport-gait","sport-rehab-overview","sport-split-ppl","sport-split-push","sport-split-pull-leg","sport-abs","sport-hypertrophy"],tech:["tech-llm","tech-compute","tech-ml"]};
 const TECH=[
  {e:"🧠",t:"大模型（LLM）到底是个啥",m:"科技前沿 · AI · 大模型",b:"大模型本质是个超强的「接话茬」机器：吞下海量文本，学会预测下一个字。它不真理解，是在概率上逼近人类表达。强，但不完美。"},
  {e:"⚡",t:"算力到底是什么，为什么比黄金还贵",m:"科技前沿 · AI · 算力",b:"算力是AI的「马力」，靠GPU/TPU堆出来。贵在稀缺、耗电、全球抢。训练一次大模型的电够一个家庭用几十年。谁有算力谁有话语权。"},
@@ -3325,5 +3371,11 @@ if('serviceWorker' in navigator){
   navigator.serviceWorker.addEventListener('message',function(e){ if(e.data&&e.data.type==='SW_UPDATED') location.reload(); });
 }
 </script>
+<div class="qr-zoom" id="qrZoom" onclick="closeQr()"><img id="qrZoomImg" src="" alt="微信赞赏码大图"><div class="tip">点击空白处关闭</div></div>
+<script>
+function zoomQr(img){var z=document.getElementById('qrZoom');var zi=document.getElementById('qrZoomImg');zi.src=img.getAttribute('src')||'assets/wechat.png';z.classList.add('show');var scr=document.querySelector('.screen.active');if(scr){scr.style.overflow='hidden';}}
+function closeQr(){var z=document.getElementById('qrZoom');z.classList.remove('show');var scr=document.querySelector('.screen.active');if(scr){scr.style.overflow='';}}
+</script>
 </body>
 </html>
+

@@ -3,7 +3,7 @@
 # 逻辑：
 #   1) 首次运行从 ielts/full.html（489 词库）抽取全部词条，清洗后缓存到 ielts/ielts_bank.json
 #      —— 有「记忆故事+用法提示」的词排前面，无内容的原始词排后面并给兜底文案
-#   2) 每次运行：找下一个 dayNN.html 序号 -> 取 15 个「未在任何 day 页面出现过」的词
+#   2) 每次运行：找下一个 dayNN.html 序号 -> 取 20 个「未在任何 day 页面出现过」的词
 #   3) 用 tpl_day.html（含 TTS 兜底）生成 dayNN.html，并更新 ielts/index.html 列表与期数
 #   4) 幂等：若目标 dayNN.html 已存在则跳过；已用过的词不再重复
 # 模型零参与，纯脚本驱动，换号运行结果一致。
@@ -14,7 +14,7 @@ IELTS_DIR = os.path.abspath(os.path.join(HERE, "..", "ielts"))
 BANK_JSON = os.path.join(IELTS_DIR, "ielts_bank.json")
 FULL_HTML = os.path.join(IELTS_DIR, "full.html")
 TEMPLATE  = os.path.join(IELTS_DIR, "tpl_day.html")
-PER_DAY = 15
+PER_DAY = 20
 
 EMOJIS = ["📚","🧠","💡","🔤","✍️","🌟","📝","🎯","🧩","⚡","🌈","🔑","📌","🚀","💎"]
 

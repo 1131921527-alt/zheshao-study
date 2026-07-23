@@ -246,10 +246,21 @@ var _sentMap={"the region has abundant natural resources.":"audio/abundant_sent1
 function tts(text, lang){
   try{ if(!window.speechSynthesis) return; var u=new SpeechSynthesisUtterance(text); u.lang=lang||'en-US'; u.rate=0.95; window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); }catch(e){}
 }
+var legacyAudioQueue=[];
+var legacyAudioBusy=false;
+function runLegacyAudio(){
+  if(legacyAudioBusy||!legacyAudioQueue.length)return;
+  legacyAudioBusy=true;
+  var job=legacyAudioQueue.shift();
+  var a=new Audio(job.url);
+  var done=function(){legacyAudioBusy=false;runLegacyAudio();};
+  a.onended=done;a.onerror=done;a.play().catch(done);
+}
+function queueLegacyAudio(url){legacyAudioQueue.push({url:url});runLegacyAudio();}
 function playBaidu(sentence){
   var key=sentence.replace(/<[^>]+>/g,'').trim().toLowerCase().substring(0,50);
   var f=_sentMap[key]||'';
-  if(!f){ var url='https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(sentence); var a=new Audio(url); a.play().catch(function(){ tts(sentence,'en-US'); }); return; }
+  if(!f){ var url='https://fanyi.baidu.com/gettts?lan=uk&spd=4&text='+encodeURIComponent(sentence); queueLegacyAudio(url); return; }
   var p=document.getElementById('player');
   p.src=f; p.load();
   p.play().catch(function(e){ var url='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(word)+'&type='+type; var a=new Audio(url); a.play().catch(function(){ tts(word, type===1?'en-GB':'en-US'); }); });

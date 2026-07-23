@@ -264,6 +264,17 @@ const words = [
   }
 ];
 
+var legacyAudioQueue=[];
+var legacyAudioBusy=false;
+function runLegacyAudio(){
+  if(legacyAudioBusy||!legacyAudioQueue.length)return;
+  legacyAudioBusy=true;
+  var job=legacyAudioQueue.shift();
+  var a=new Audio(job.url);
+  var done=function(){legacyAudioBusy=false;runLegacyAudio();};
+  a.onended=done;a.onerror=done;a.play().catch(done);
+}
+function queueLegacyAudio(url){legacyAudioQueue.push({url:url});runLegacyAudio();}
 function playAudio(url) {
   const a = new Audio(url);
   a.play().catch(() => {});

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>深度学习vs传统编程：从"教机器"到"机器自己学"</title><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;min-height:100vh;padding-bottom:24px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 12px}
+.header{background:linear-gradient(135deg,#1a2332,#0d1117);padding:28px 16px 20px;text-align:center;border-bottom:1px solid #21262d;position:sticky;top:0;z-index:100}
+.header h1{font-size:22px;font-weight:700;color:#58a6ff}
+.header .sub{font-size:13px;color:#8b949e;margin-top:4px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin:16px 0}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
+.card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
+.card p{color:#8b949e;font-size:13px}
+a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
+a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
+.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
+.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
+footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
+</style></head>
+<body><div class="wrap">
+<div class="header"><h1>深度学习vs传统编程：从"教机器"到"机器自己学"</h1></div>
+<a class="back" href="../index.html">← 返回知识文章目录</a><div class="note">分类：AI与科技科普 ｜ 来源：知识文章候选库（已验收）。保留原作者免责声明与参考来源，待核实内容不实装为确定事实。</div><h2>深度学习vs传统编程：从"教机器"到"机器自己学"</h2>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">分类：AI与科技科普</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">预计阅读：6分钟</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding:4px 12px;color:#8b949e;margin:8px 0">标签：编程范式、机器学习、技术变革</blockquote>
+<p>---</p>
+<p>传统编程和深度学习是两种完全不同的思维方式。理解这个区别，你就理解了AI为什么"突然"变得这么强。</p>
+<h3>传统编程：人写规则</h3>
+<p>传统编程的逻辑是：人把规则写出来，机器执行。</p>
+<p>你想让程序判断一封邮件是不是垃圾邮件。传统做法：</p>
+<p>1. 人分析垃圾邮件的特征——包含"免费""中奖""点击链接"等关键词 2. 人写规则：if 邮件包含"免费" and 包含"中奖" then 标记为垃圾邮件 3. 机器按规则执行</p>
+<p>这个方法有效——但有一个致命问题：规则是人写的。人能想到的特征有限，而且垃圾邮件发送者会不断改变策略来绕过你的规则。</p>
+<p>你加了一条规则，对方换一批词，你的规则就失效了。你得不断更新规则。到最后你的规则可能有几千条，互相冲突，维护噩梦。</p>
+<p>这就是传统编程的天花板：**人能描述的规则，机器才能执行。人描述不了的，机器做不到。**</p>
+<h3>深度学习：机器找规则</h3>
+<p>深度学习的逻辑完全反过来：人给数据和答案，机器自己找规则。</p>
+<p>还是垃圾邮件的例子。深度学习的做法：</p>
+<p>1. 准备10万封邮件，标注好哪些是垃圾邮件哪些不是 2. 把这些数据喂给神经网络 3. 神经网络自己分析——它可能会发现你没想到的特征（比如发送时间、邮件长度、标点符号使用频率、发件人域名模式等） 4. 训练完成后，给一封新邮件，神经网络判断是不是垃圾邮件</p>
+<p>你不需要写任何规则。你给的是数据和标签，机器自己找规律。</p>
+<p>这个区别是根本性的：</p>
+<p>传统编程：输入 + 规则 → 输出 深度学习：输入 + 输出 → 规则</p>
+<p>你从"写规则的人"变成了"提供数据的人"。规则是机器自己学出来的——而且它学出来的规则可能比你能想到的更全面、更准确。</p>
+<h3>为什么深度学习"突然"火了</h3>
+<p>神经网络的理论在1960年代就有了，为什么等到2012年才爆发？</p>
+<p>三个条件同时到位：</p>
+<p>**算力**：训练神经网络需要大量矩阵运算。CPU不擅长这个，但GPU（显卡）天生就是做矩阵运算的。2010年代GPU足够便宜和强大，训练大型神经网络成为可能。</p>
+<p>**数据**：互联网积累了二十多年的数据——图片、文本、视频、用户行为。深度学习需要海量数据来训练，以前没有这么多数据。</p>
+<p>**算法**：2006年Hinton提出了深度神经网络训练的新方法（逐层预训练），解决了深层网络训练困难的问题。之后算法不断改进——ReLU激活函数、Dropout正则化、Batch Normalization、Transformer架构——每一步都让网络能做得更深、学得更好。</p>
+<p>三件事缺一不可。1960年代有算法雏形但没算力没数据。2000年代有数据但算力不够算法不够好。2010年代三者终于同时到位——然后爆发了。</p>
+<h3>深度学习的局限</h3>
+<p>深度学习不是万能的。它有几个传统编程没有的问题：</p>
+<p>**需要大量数据。** 你给10万封邮件它能学好。你给10封，它学不了。传统编程10封邮件也能写规则——因为规则是人写的，不需要数据来"学"。</p>
+<p>**不可解释。** 传统编程的规则是你写的，你能解释为什么这封邮件被判为垃圾邮件——因为包含"免费"和"中奖"。深度学习的规则是机器自己学的，可能是几千个权重的组合，人无法理解它为什么做这个判断。这在医疗、法律等需要解释的领域是个大问题。</p>
+<p>**不会泛化到训练数据之外。** 如果你的训练数据里没有某种类型的垃圾邮件，模型就识别不了它。传统编程的规则虽然不如深度学习全面，但至少可以覆盖一些"没见过"的情况——因为规则是人写的，人能推理。</p>
+<p>**数据依赖=偏见继承。** 如果你给模型训练的数据本身有偏见——比如标注者对某些类型的邮件有偏见——模型会继承这个偏见。传统编程的规则虽然也有人的偏见，但至少看得见、可以改。深度学习的偏见藏在几千个权重里，很难发现和修正。</p>
+<h3>对普通人的意义</h3>
+<p>你不需要会写代码，但你需要理解这个范式的转变：</p>
+<p>**未来越来越多的决策将由"学出来的规则"而不是"写出来的规则"驱动。** 银行审批贷款、医院辅助诊断、公司筛选简历——这些以前靠人写规则的场景，越来越多地用深度学习模型来做。</p>
+<p>**这意味着：你能影响决策的方式变了。** 传统编程时代，你可以要求看规则——"为什么我的贷款被拒了？""因为你的收入低于阈值X。"深度学习时代，规则是黑的——"因为模型评估你的风险分数偏高。"你甚至不知道这个分数怎么算的。</p>
+<p>**这也意味着：数据比代码更值钱。** 以前写一个好程序需要好程序员。现在训练一个好模型需要好数据。谁有更多更好的数据，谁的AI就更强——这也是为什么大公司在AI领域有压倒性优势。</p>
+<h3>总结</h3>
+<p>传统编程是人写规则机器执行，深度学习是人给数据机器自己找规则。这个转变让AI能处理以前处理不了的复杂问题，但也带来了不可解释、数据依赖和偏见继承等新问题。理解这个范式转变，是理解AI时代的基础。</p>
+<p>---</p>
+<p>*本文为独立撰写的科普内容，不代替专业建议。*</p>
+<p>---</p>
+<h3>参考来源</h3>
+<p>1. [Wikipedia - Deep learning](https://en.wikipedia.org/wiki/Deep_learning) 2. [Wikipedia - Machine learning](https://en.wikipedia.org/wiki/Machine_learning) 3. [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course)</p>
+<footer>泽少学习助手 · 每天进步一点点</footer>
+</div></body></html>
