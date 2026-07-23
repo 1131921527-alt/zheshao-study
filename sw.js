@@ -1,5 +1,5 @@
 /* 泽少学习助手 · Service Worker（离线缓存 + 可安装） */
-const CACHE = 'zheshao-v21';
+const CACHE = 'zheshao-v22';
 const ASSETS = [
   './',
   './index.html',
@@ -24,6 +24,11 @@ self.addEventListener('activate', function (e) {
         return caches.delete(k);
       }));
     }).then(function () { return self.clients.claim(); })
+    .then(function () {
+      return self.clients.matchAll().then(function (cs) {
+        cs.forEach(function (c) { try { c.postMessage({ type: 'SW_UPDATED' }); } catch (e) {} });
+      });
+    })
   );
 });
 
