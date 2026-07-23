@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 1</h1></div>
+<div class="header"><h1>雅思 Future Day 1</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 1 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">accreditation</div>
-<div style="font-size:13px;color:#8b949e">/əˌkredɪˈteɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n 认证；鉴定；资质认定</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ac(向) + credit(信任) + ation = 给予信任 = 认证</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：educational accreditation, accreditation body, gain accreditation, maintain accreditation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The university's accreditation was renewed for another five years.</div><div class="sent-zh">该大学的认证资格又续期了五年。</div><button class="sent-play" data-text="The university's accreditation was renewed for another five years.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Employers increasingly value candidates from institutions with proper accreditation.</div><div class="sent-zh">雇主越来越看重来自获得正规认证的机构的求职者。</div><button class="sent-play" data-text="Employers increasingly value candidates from institutions with proper accreditation.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">competence</div>
-<div style="font-size:13px;color:#8b949e">/ˈkɒmpɪtəns/</div>
-<div style="font-size:14px;color:#7ee787">n. 能力，胜任</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育及职场话题高频词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：compete(竞争)+ence→有竞争力→胜任</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：professional competence | communicative competence | competence in</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The course aims to develop students' communicative competence.</div><div class="sent-zh">该课程旨在培养学生的交际能力。</div><button class="sent-play" data-text="The course aims to develop students' communicative competence.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Her competence in handling complex cases is widely recognised.</div><div class="sent-zh">她处理复杂案件的能力得到广泛认可。</div><button class="sent-play" data-text="Her competence in handling complex cases is widely recognised.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">differentiate</div>
-<div style="font-size:13px;color:#8b949e">/ˌdɪfəˈrenʃieɪt/</div>
-<div style="font-size:14px;color:#7ee787">v. 区分，区别</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 写作高频动词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：different(不同)+iate(动词)→使不同→区分</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：differentiate between | differentiate A from B | differentiate instruction</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Teachers should differentiate instruction to meet diverse needs.</div><div class="sent-zh">教师应进行差异化教学以满足多样化需求。</div><button class="sent-play" data-text="Teachers should differentiate instruction to meet diverse needs.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Consumers often struggle to differentiate between similar products.</div><div class="sent-zh">消费者常常难以区分相似的产品。</div><button class="sent-play" data-text="Consumers often struggle to differentiate between similar products.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">prerequisite</div>
-<div style="font-size:13px;color:#8b949e">/ˌpriːˈrekwəzɪt/</div>
-<div style="font-size:14px;color:#7ee787">n. 先决条件</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育场景及各类话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pre(前)+requisite(要求)→提前要求→先决条件</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：a prerequisite for | prerequisite course | meet prerequisites</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Basic maths is a prerequisite for this course.</div><div class="sent-zh">基础数学是这门课程的先决条件。</div><button class="sent-play" data-text="Basic maths is a prerequisite for this course.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Trust is a prerequisite for any successful partnership.</div><div class="sent-zh">信任是任何成功合作的先决条件。</div><button class="sent-play" data-text="Trust is a prerequisite for any successful partnership.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">retention</div>
-<div style="font-size:13px;color:#8b949e">/rɪˈtenʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 保留，保持</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育及管理话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(回)+tent(拿)+ion→拿回来→保留</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：knowledge retention | retention rate | student retention</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Interactive teaching methods improve knowledge retention.</div><div class="sent-zh">互动式教学方法能提高知识保持率。</div><button class="sent-play" data-text="Interactive teaching methods improve knowledge retention.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company has a high employee retention rate.</div><div class="sent-zh">该公司的员工留任率很高。</div><button class="sent-play" data-text="The company has a high employee retention rate.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">elicit</div>
-<div style="font-size:13px;color:#8b949e">/ɪˈlɪsɪt/</div>
-<div style="font-size:14px;color:#7ee787">v. 引出，探出</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 学术写作和教学场景高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：e(出)+licit(引)→引出</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：elicit a response | elicit information | elicit feedback</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The teacher used open-ended questions to elicit discussion.</div><div class="sent-zh">老师用开放式问题引导讨论。</div><button class="sent-play" data-text="The teacher used open-ended questions to elicit discussion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The survey elicited a wide range of opinions.</div><div class="sent-zh">调查收集到了各种各样的意见。</div><button class="sent-play" data-text="The survey elicited a wide range of opinions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">discrepancy</div>
-<div style="font-size:13px;color:#8b949e">/dɪsˈkrepənsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 差异，不一致</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 学术写作高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dis(分开)+crep(响)+ancy→响声不同→不一致</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：a discrepancy between | significant discrepancy | resolve a discrepancy</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. There is a discrepancy between the reported and actual figures.</div><div class="sent-zh">报告数字与实际数字之间存在差异。</div><button class="sent-play" data-text="There is a discrepancy between the reported and actual figures.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers noted a discrepancy in the test results.</div><div class="sent-zh">研究人员注意到测试结果中的不一致之处。</div><button class="sent-play" data-text="Researchers noted a discrepancy in the test results.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">substantive</div>
-<div style="font-size:13px;color:#8b949e">/səbˈstæntɪv/</div>
-<div style="font-size:14px;color:#7ee787">adj. 实质性的，有内容的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 学术写作高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：subst(站)→站得住脚的→实质性的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：substantive issue | substantive change | substantive discussion</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The research makes a substantive contribution to the field.</div><div class="sent-zh">该研究对该领域做出了实质性贡献。</div><button class="sent-play" data-text="The research makes a substantive contribution to the field.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. We need a substantive discussion, not just small talk.</div><div class="sent-zh">我们需要实质性讨论，不只是闲聊。</div><button class="sent-play" data-text="We need a substantive discussion, not just small talk.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">heuristic</div>
-<div style="font-size:13px;color:#8b949e">/hjuˈrɪstɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 启发式的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 教育学专业词汇 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：heur(发现)+istic→启发发现的→启发式的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：heuristic approach | heuristic method | heuristic learning</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Heuristic teaching methods encourage students to discover answers themselves.</div><div class="sent-zh">启发式教学方法鼓励学生自己发现答案。</div><button class="sent-play" data-text="Heuristic teaching methods encourage students to discover answers themselves.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The heuristic approach contrasts with rote learning.</div><div class="sent-zh">启发式方法与死记硬背形成对比。</div><button class="sent-play" data-text="The heuristic approach contrasts with rote learning.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">aptitude</div>
-<div style="font-size:13px;color:#8b949e">/ˈæptɪtjuːd/</div>
-<div style="font-size:14px;color:#7ee787">n. 资质</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：apt(适合)+itude→适合的素质→资质</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：aptitude test | natural aptitude | show aptitude for</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She shows an aptitude for mathematics.</div><div class="sent-zh">她表现出数学天赋。</div><button class="sent-play" data-text="She shows an aptitude for mathematics.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An aptitude test assesses potential.</div><div class="sent-zh">能力测试评估潜力。</div><button class="sent-play" data-text="An aptitude test assesses potential.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">defer</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈfɜː(r)/</div>
-<div style="font-size:14px;color:#7ee787">v. 推迟</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：de(离开)+fer(带)→带走→推迟</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：defer admission | defer payment | defer decision</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. He deferred his admission for a year.</div><div class="sent-zh">他推迟了一年入学。</div><button class="sent-play" data-text="He deferred his admission for a year.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The decision was deferred until next month.</div><div class="sent-zh">决定推迟到下月。</div><button class="sent-play" data-text="The decision was deferred until next month.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">diligent</div>
-<div style="font-size:13px;color:#8b949e">/ˈdɪlɪdʒənt/</div>
-<div style="font-size:14px;color:#7ee787">adj. 勤奋的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dilig(喜爱)+ent→喜爱做事的→勤奋的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：diligent student | diligent research | diligent effort</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She is a diligent student who always completes assignments.</div><div class="sent-zh">她是个勤奋的学生，总是完成作业。</div><button class="sent-play" data-text="She is a diligent student who always completes assignments.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Diligent research produced important findings.</div><div class="sent-zh">勤奋的研究产生了重要发现。</div><button class="sent-play" data-text="Diligent research produced important findings.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">erudition</div>
-<div style="font-size:13px;color:#8b949e">/ˌeruˈdɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 博学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：erudite(博学的)+ion→博学的状态→博学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：display erudition | remarkable erudition | scholarly erudition</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. His erudition impressed all his colleagues.</div><div class="sent-zh">他的博学令所有同事折服。</div><button class="sent-play" data-text="His erudition impressed all his colleagues.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The lecture displayed remarkable erudition.</div><div class="sent-zh">讲座展现了非凡的学识。</div><button class="sent-play" data-text="The lecture displayed remarkable erudition.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">exegesis</div>
-<div style="font-size:13px;color:#8b949e">/ˌeksɪˈdʒiːsɪs/</div>
-<div style="font-size:14px;color:#7ee787">n. 诠释</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：exe(解释)+gesis→解释→诠释</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：textual exegesis | biblical exegesis | scholarly exegesis</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The professor's exegesis of the text was illuminating.</div><div class="sent-zh">教授对文本的诠释很有启发性。</div><button class="sent-play" data-text="The professor's exegesis of the text was illuminating.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Textual exegesis requires careful reading.</div><div class="sent-zh">文本诠释需要仔细阅读。</div><button class="sent-play" data-text="Textual exegesis requires careful reading.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">fastidious</div>
-<div style="font-size:13px;color:#8b949e">/fæˈstɪdiəs/</div>
-<div style="font-size:14px;color:#7ee787">adj. 一丝不苟的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：fastid(厌恶)+ious→挑剔的→一丝不苟的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：fastidious researcher | fastidious attention | fastidious about</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The fastidious researcher checked every data point.</div><div class="sent-zh">一丝不苟的研究者核对了每个数据。</div><button class="sent-play" data-text="The fastidious researcher checked every data point.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She is fastidious about grammar.</div><div class="sent-zh">她对语法非常讲究。</div><button class="sent-play" data-text="She is fastidious about grammar.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">introspection</div>
-<div style="font-size:13px;color:#8b949e">/ˌɪntrəˈspekʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 内省</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：intro(向内)+spect(看)+ion→向内看→内省</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：engage in introspection | deep introspection | through introspection</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Therapy encourages deep introspection.</div><div class="sent-zh">治疗鼓励深度内省。</div><button class="sent-play" data-text="Therapy encourages deep introspection.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Through introspection, she understood her motivations.</div><div class="sent-zh">通过内省，她理解了自己的动机。</div><button class="sent-play" data-text="Through introspection, she understood her motivations.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">mnemonic</div>
-<div style="font-size:13px;color:#8b949e">/nɪˈmɒnɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 记忆的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mnemo(记忆)+nic→帮助记忆的→记忆的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：mnemonic device | mnemonic strategy | create a mnemonic</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Mnemonic devices aid language learning.</div><div class="sent-zh">记忆法辅助语言学习。</div><button class="sent-play" data-text="Mnemonic devices aid language learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She created a mnemonic to remember the formula.</div><div class="sent-zh">她编了一个口诀来记公式。</div><button class="sent-play" data-text="She created a mnemonic to remember the formula.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">novice</div>
-<div style="font-size:13px;color:#8b949e">/ˈnɒvɪs/</div>
-<div style="font-size:14px;color:#7ee787">n. 新手</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：novi(新)+ce→新人→新手</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：complete novice | novice teacher | novice driver</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She is a complete novice at programming.</div><div class="sent-zh">她在编程方面完全是新手。</div><button class="sent-play" data-text="She is a complete novice at programming.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Novice teachers need mentorship.</div><div class="sent-zh">新手教师需要指导。</div><button class="sent-play" data-text="Novice teachers need mentorship.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">proficient</div>
-<div style="font-size:13px;color:#8b949e">/prəˈfɪʃnt/</div>
-<div style="font-size:14px;color:#7ee787">adj. 熟练的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pro(向前)+fici(做)+ent→向前做的→熟练的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：proficient in | highly proficient | become proficient</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She is proficient in three languages.</div><div class="sent-zh">她精通三种语言。</div><button class="sent-play" data-text="She is proficient in three languages.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He became proficient through practice.</div><div class="sent-zh">他通过练习变得熟练。</div><button class="sent-play" data-text="He became proficient through practice.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">savant</div>
-<div style="font-size:13px;color:#8b949e">/ˈsævɒ̃/</div>
-<div style="font-size:14px;color:#7ee787">n. 学者</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：sav(知道)+ant→知道很多的人→学者</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：idiot savant | musical savant | mathematical savant</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The musical savant could play any piece after hearing it once.</div><div class="sent-zh">这位音乐天才听一遍就能弹奏任何曲子。</div><button class="sent-play" data-text="The musical savant could play any piece after hearing it once.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A mathematical savant performs complex calculations mentally.</div><div class="sent-zh">数学天才能心算复杂计算。</div><button class="sent-play" data-text="A mathematical savant performs complex calculations mentally.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 1 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">accreditation</div><div class="ipa">/əˌkredɪˈteɪʃn/</div><div class="pos">n 认证；鉴定；资质认定</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="accreditation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="accreditation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：教育</div><div class="memory">记忆：ac(向) + credit(信任) + ation = 给予信任 = 认证</div><div class="coll">搭配：educational accreditation, accreditation body, gain accreditation, maintain accreditation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The university's <span class="highlight">accreditation</span> was renewed for another five years.</div><div class="sent-zh">该大学的认证资格又续期了五年。</div><button class="sent-play" data-text="The university&#x27;s accreditation was renewed for another five years.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Employers increasingly value candidates from institutions with proper <span class="highlight">accreditation</span>.</div><div class="sent-zh">雇主越来越看重来自获得正规认证的机构的求职者。</div><button class="sent-play" data-text="Employers increasingly value candidates from institutions with proper accreditation.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">competence</div><div class="ipa">/ˈkɒmpɪtəns/</div><div class="pos">n. 能力，胜任</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="competence" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="competence" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育及职场话题高频词 · 话题：教育</div><div class="memory">记忆：compete(竞争)+ence→有竞争力→胜任</div><div class="coll">搭配：professional competence | communicative competence | competence in</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The course aims to develop students' communicative <span class="highlight">competence</span>.</div><div class="sent-zh">该课程旨在培养学生的交际能力。</div><button class="sent-play" data-text="The course aims to develop students&#x27; communicative competence.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Her <span class="highlight">competence</span> in handling complex cases is widely recognised.</div><div class="sent-zh">她处理复杂案件的能力得到广泛认可。</div><button class="sent-play" data-text="Her competence in handling complex cases is widely recognised.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">differentiate</div><div class="ipa">/ˌdɪfəˈrenʃieɪt/</div><div class="pos">v. 区分，区别</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="differentiate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="differentiate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 写作高频动词 · 话题：教育</div><div class="memory">记忆：different(不同)+iate(动词)→使不同→区分</div><div class="coll">搭配：differentiate between | differentiate A from B | differentiate instruction</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Teachers should <span class="highlight">differentiate</span> instruction to meet diverse needs.</div><div class="sent-zh">教师应进行差异化教学以满足多样化需求。</div><button class="sent-play" data-text="Teachers should differentiate instruction to meet diverse needs.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Consumers often struggle to <span class="highlight">differentiate</span> between similar products.</div><div class="sent-zh">消费者常常难以区分相似的产品。</div><button class="sent-play" data-text="Consumers often struggle to differentiate between similar products.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">prerequisite</div><div class="ipa">/ˌpriːˈrekwəzɪt/</div><div class="pos">n. 先决条件</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prerequisite" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prerequisite" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育场景及各类话题常见词 · 话题：教育</div><div class="memory">记忆：pre(前)+requisite(要求)→提前要求→先决条件</div><div class="coll">搭配：a prerequisite for | prerequisite course | meet prerequisites</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Basic maths is a <span class="highlight">prerequisite</span> for this course.</div><div class="sent-zh">基础数学是这门课程的先决条件。</div><button class="sent-play" data-text="Basic maths is a prerequisite for this course.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Trust is a <span class="highlight">prerequisite</span> for any successful partnership.</div><div class="sent-zh">信任是任何成功合作的先决条件。</div><button class="sent-play" data-text="Trust is a prerequisite for any successful partnership.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">retention</div><div class="ipa">/rɪˈtenʃn/</div><div class="pos">n. 保留，保持</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="retention" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="retention" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育及管理话题常见词 · 话题：教育</div><div class="memory">记忆：re(回)+tent(拿)+ion→拿回来→保留</div><div class="coll">搭配：knowledge retention | retention rate | student retention</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Interactive teaching methods improve knowledge <span class="highlight">retention</span>.</div><div class="sent-zh">互动式教学方法能提高知识保持率。</div><button class="sent-play" data-text="Interactive teaching methods improve knowledge retention.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company has a high employee <span class="highlight">retention</span> rate.</div><div class="sent-zh">该公司的员工留任率很高。</div><button class="sent-play" data-text="The company has a high employee retention rate.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">elicit</div><div class="ipa">/ɪˈlɪsɪt/</div><div class="pos">v. 引出，探出</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="elicit" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="elicit" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 学术写作和教学场景高级词 · 话题：教育</div><div class="memory">记忆：e(出)+licit(引)→引出</div><div class="coll">搭配：elicit a response | elicit information | elicit feedback</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The teacher used open-ended questions to <span class="highlight">elicit</span> discussion.</div><div class="sent-zh">老师用开放式问题引导讨论。</div><button class="sent-play" data-text="The teacher used open-ended questions to elicit discussion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The survey elicited a wide range of opinions.</div><div class="sent-zh">调查收集到了各种各样的意见。</div><button class="sent-play" data-text="The survey elicited a wide range of opinions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">discrepancy</div><div class="ipa">/dɪsˈkrepənsi/</div><div class="pos">n. 差异，不一致</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="discrepancy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="discrepancy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 学术写作高级词 · 话题：教育</div><div class="memory">记忆：dis(分开)+crep(响)+ancy→响声不同→不一致</div><div class="coll">搭配：a discrepancy between | significant discrepancy | resolve a discrepancy</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. There is a <span class="highlight">discrepancy</span> between the reported and actual figures.</div><div class="sent-zh">报告数字与实际数字之间存在差异。</div><button class="sent-play" data-text="There is a discrepancy between the reported and actual figures.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers noted a <span class="highlight">discrepancy</span> in the test results.</div><div class="sent-zh">研究人员注意到测试结果中的不一致之处。</div><button class="sent-play" data-text="Researchers noted a discrepancy in the test results.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">substantive</div><div class="ipa">/səbˈstæntɪv/</div><div class="pos">adj. 实质性的，有内容的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="substantive" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="substantive" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 学术写作高级词 · 话题：教育</div><div class="memory">记忆：subst(站)→站得住脚的→实质性的</div><div class="coll">搭配：substantive issue | substantive change | substantive discussion</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The research makes a <span class="highlight">substantive</span> contribution to the field.</div><div class="sent-zh">该研究对该领域做出了实质性贡献。</div><button class="sent-play" data-text="The research makes a substantive contribution to the field.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. We need a <span class="highlight">substantive</span> discussion, not just small talk.</div><div class="sent-zh">我们需要实质性讨论，不只是闲聊。</div><button class="sent-play" data-text="We need a substantive discussion, not just small talk.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">heuristic</div><div class="ipa">/hjuˈrɪstɪk/</div><div class="pos">adj. 启发式的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="heuristic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="heuristic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 教育学专业词汇 · 话题：教育</div><div class="memory">记忆：heur(发现)+istic→启发发现的→启发式的</div><div class="coll">搭配：heuristic approach | heuristic method | heuristic learning</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Heuristic</span> teaching methods encourage students to discover answers themselves.</div><div class="sent-zh">启发式教学方法鼓励学生自己发现答案。</div><button class="sent-play" data-text="Heuristic teaching methods encourage students to discover answers themselves.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">heuristic</span> approach contrasts with rote learning.</div><div class="sent-zh">启发式方法与死记硬背形成对比。</div><button class="sent-play" data-text="The heuristic approach contrasts with rote learning.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">aptitude</div><div class="ipa">/ˈæptɪtjuːd/</div><div class="pos">n. 资质</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="aptitude" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="aptitude" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：apt(适合)+itude→适合的素质→资质</div><div class="coll">搭配：aptitude test | natural aptitude | show aptitude for</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She shows an <span class="highlight">aptitude</span> for mathematics.</div><div class="sent-zh">她表现出数学天赋。</div><button class="sent-play" data-text="She shows an aptitude for mathematics.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An <span class="highlight">aptitude</span> test assesses potential.</div><div class="sent-zh">能力测试评估潜力。</div><button class="sent-play" data-text="An aptitude test assesses potential.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">defer</div><div class="ipa">/dɪˈfɜː(r)/</div><div class="pos">v. 推迟</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="defer" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="defer" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：de(离开)+fer(带)→带走→推迟</div><div class="coll">搭配：defer admission | defer payment | defer decision</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. He deferred his admission for a year.</div><div class="sent-zh">他推迟了一年入学。</div><button class="sent-play" data-text="He deferred his admission for a year.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The decision was deferred until next month.</div><div class="sent-zh">决定推迟到下月。</div><button class="sent-play" data-text="The decision was deferred until next month.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">diligent</div><div class="ipa">/ˈdɪlɪdʒənt/</div><div class="pos">adj. 勤奋的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diligent" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diligent" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：dilig(喜爱)+ent→喜爱做事的→勤奋的</div><div class="coll">搭配：diligent student | diligent research | diligent effort</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She is a <span class="highlight">diligent</span> student who always completes assignments.</div><div class="sent-zh">她是个勤奋的学生，总是完成作业。</div><button class="sent-play" data-text="She is a diligent student who always completes assignments.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Diligent</span> research produced important findings.</div><div class="sent-zh">勤奋的研究产生了重要发现。</div><button class="sent-play" data-text="Diligent research produced important findings.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">erudition</div><div class="ipa">/ˌeruˈdɪʃn/</div><div class="pos">n. 博学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="erudition" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="erudition" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：erudite(博学的)+ion→博学的状态→博学</div><div class="coll">搭配：display erudition | remarkable erudition | scholarly erudition</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. His <span class="highlight">erudition</span> impressed all his colleagues.</div><div class="sent-zh">他的博学令所有同事折服。</div><button class="sent-play" data-text="His erudition impressed all his colleagues.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The lecture displayed remarkable <span class="highlight">erudition</span>.</div><div class="sent-zh">讲座展现了非凡的学识。</div><button class="sent-play" data-text="The lecture displayed remarkable erudition.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">exegesis</div><div class="ipa">/ˌeksɪˈdʒiːsɪs/</div><div class="pos">n. 诠释</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exegesis" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exegesis" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：exe(解释)+gesis→解释→诠释</div><div class="coll">搭配：textual exegesis | biblical exegesis | scholarly exegesis</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The professor's <span class="highlight">exegesis</span> of the text was illuminating.</div><div class="sent-zh">教授对文本的诠释很有启发性。</div><button class="sent-play" data-text="The professor&#x27;s exegesis of the text was illuminating.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Textual <span class="highlight">exegesis</span> requires careful reading.</div><div class="sent-zh">文本诠释需要仔细阅读。</div><button class="sent-play" data-text="Textual exegesis requires careful reading.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">fastidious</div><div class="ipa">/fæˈstɪdiəs/</div><div class="pos">adj. 一丝不苟的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fastidious" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fastidious" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：fastid(厌恶)+ious→挑剔的→一丝不苟的</div><div class="coll">搭配：fastidious researcher | fastidious attention | fastidious about</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">fastidious</span> researcher checked every data point.</div><div class="sent-zh">一丝不苟的研究者核对了每个数据。</div><button class="sent-play" data-text="The fastidious researcher checked every data point.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She is <span class="highlight">fastidious</span> about grammar.</div><div class="sent-zh">她对语法非常讲究。</div><button class="sent-play" data-text="She is fastidious about grammar.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">introspection</div><div class="ipa">/ˌɪntrəˈspekʃn/</div><div class="pos">n. 内省</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="introspection" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="introspection" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：intro(向内)+spect(看)+ion→向内看→内省</div><div class="coll">搭配：engage in introspection | deep introspection | through introspection</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Therapy encourages deep <span class="highlight">introspection</span>.</div><div class="sent-zh">治疗鼓励深度内省。</div><button class="sent-play" data-text="Therapy encourages deep introspection.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Through <span class="highlight">introspection</span>, she understood her motivations.</div><div class="sent-zh">通过内省，她理解了自己的动机。</div><button class="sent-play" data-text="Through introspection, she understood her motivations.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">mnemonic</div><div class="ipa">/nɪˈmɒnɪk/</div><div class="pos">adj. 记忆的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mnemonic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mnemonic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：mnemo(记忆)+nic→帮助记忆的→记忆的</div><div class="coll">搭配：mnemonic device | mnemonic strategy | create a mnemonic</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Mnemonic</span> devices aid language learning.</div><div class="sent-zh">记忆法辅助语言学习。</div><button class="sent-play" data-text="Mnemonic devices aid language learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She created a <span class="highlight">mnemonic</span> to remember the formula.</div><div class="sent-zh">她编了一个口诀来记公式。</div><button class="sent-play" data-text="She created a mnemonic to remember the formula.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">novice</div><div class="ipa">/ˈnɒvɪs/</div><div class="pos">n. 新手</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="novice" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="novice" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：novi(新)+ce→新人→新手</div><div class="coll">搭配：complete novice | novice teacher | novice driver</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She is a complete <span class="highlight">novice</span> at programming.</div><div class="sent-zh">她在编程方面完全是新手。</div><button class="sent-play" data-text="She is a complete novice at programming.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Novice</span> teachers need mentorship.</div><div class="sent-zh">新手教师需要指导。</div><button class="sent-play" data-text="Novice teachers need mentorship.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">proficient</div><div class="ipa">/prəˈfɪʃnt/</div><div class="pos">adj. 熟练的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="proficient" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="proficient" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：pro(向前)+fici(做)+ent→向前做的→熟练的</div><div class="coll">搭配：proficient in | highly proficient | become proficient</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She is <span class="highlight">proficient</span> in three languages.</div><div class="sent-zh">她精通三种语言。</div><button class="sent-play" data-text="She is proficient in three languages.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He became <span class="highlight">proficient</span> through practice.</div><div class="sent-zh">他通过练习变得熟练。</div><button class="sent-play" data-text="He became proficient through practice.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">savant</div><div class="ipa">/ˈsævɒ̃/</div><div class="pos">n. 学者</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="savant" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="savant" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：sav(知道)+ant→知道很多的人→学者</div><div class="coll">搭配：idiot savant | musical savant | mathematical savant</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The musical <span class="highlight">savant</span> could play any piece after hearing it once.</div><div class="sent-zh">这位音乐天才听一遍就能弹奏任何曲子。</div><button class="sent-play" data-text="The musical savant could play any piece after hearing it once.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A mathematical <span class="highlight">savant</span> performs complex calculations mentally.</div><div class="sent-zh">数学天才能心算复杂计算。</div><button class="sent-play" data-text="A mathematical savant performs complex calculations mentally.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

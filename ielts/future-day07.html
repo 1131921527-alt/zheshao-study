@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 7</h1></div>
+<div class="header"><h1>雅思 Future Day 7</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 7 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">legislation</div>
-<div style="font-size:13px;color:#8b949e">/ˌledʒɪsˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 立法</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 政府法律话题核心词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：legis(法)+lation→立法</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：pass legislation | introduce legislation | environmental legislation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The government passed new legislation on data protection.</div><div class="sent-zh">政府通过了新的数据保护立法。</div><button class="sent-play" data-text="The government passed new legislation on data protection.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Environmental legislation has become stricter.</div><div class="sent-zh">环境立法变得更加严格。</div><button class="sent-play" data-text="Environmental legislation has become stricter.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">constituency</div>
-<div style="font-size:13px;color:#8b949e">/kənˈstɪtjuənsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 选区</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：con(一起)+stitu(站)+ency→站在一起的人→选区选民</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：rural constituency | represent a constituency | constituency boundary</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The MP represents a rural constituency in the north.</div><div class="sent-zh">这位议员代表北部的一个农村选区。</div><button class="sent-play" data-text="The MP represents a rural constituency in the north.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The policy is popular with his constituency.</div><div class="sent-zh">该政策在他的选区很受欢迎。</div><button class="sent-play" data-text="The policy is popular with his constituency.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">referendum</div>
-<div style="font-size:13px;color:#8b949e">/ˌrefəˈrendəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 公投</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：refer(提交)+endum→提交给人民→公投</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：hold a referendum | national referendum | referendum on</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A referendum was held on whether to leave the union.</div><div class="sent-zh">就是否脱离联盟举行了公投。</div><button class="sent-play" data-text="A referendum was held on whether to leave the union.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government decided to hold a national referendum.</div><div class="sent-zh">政府决定举行全国公投。</div><button class="sent-play" data-text="The government decided to hold a national referendum.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">mandate</div>
-<div style="font-size:13px;color:#8b949e">/ˈmændeɪt/</div>
-<div style="font-size:14px;color:#7ee787">n. 授权，委托</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mand(命令)+ate→命令→授权</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：electoral mandate | mandate for change | carry out a mandate</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The government claims a mandate for its reforms.</div><div class="sent-zh">政府声称其改革有授权依据。</div><button class="sent-play" data-text="The government claims a mandate for its reforms.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The committee has a mandate to investigate the issue.</div><div class="sent-zh">委员会被授权调查此事。</div><button class="sent-play" data-text="The committee has a mandate to investigate the issue.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">compliance</div>
-<div style="font-size:13px;color:#8b949e">/kəmˈplaɪəns/</div>
-<div style="font-size:14px;color:#7ee787">n. 遵从</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 法律合规话题高频词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：com(完全)+pli(折叠)+ance→完全折叠→遵从</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：in compliance with | ensure compliance | regulatory compliance</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Companies must ensure compliance with safety regulations.</div><div class="sent-zh">公司必须确保遵守安全法规。</div><button class="sent-play" data-text="Companies must ensure compliance with safety regulations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The factory was shut down for non-compliance.</div><div class="sent-zh">该工厂因不合规被关闭。</div><button class="sent-play" data-text="The factory was shut down for non-compliance.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">arbitration</div>
-<div style="font-size:13px;color:#8b949e">/ˌɑːbɪˈtreɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 仲裁</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 法律话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：arbitr(判断)+ation→判断的过程→仲裁</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：go to arbitration | binding arbitration | arbitration proceedings</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The dispute was resolved through arbitration.</div><div class="sent-zh">争端通过仲裁得到解决。</div><button class="sent-play" data-text="The dispute was resolved through arbitration.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Both parties agreed to binding arbitration.</div><div class="sent-zh">双方同意接受有约束力的仲裁。</div><button class="sent-play" data-text="Both parties agreed to binding arbitration.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">subordinate</div>
-<div style="font-size:13px;color:#8b949e">/səˈbɔːdɪnət/</div>
-<div style="font-size:14px;color:#7ee787">adj. 下级的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 管理法律话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：sub(下面)+ordin(顺序)+ate→顺序在下的→下级的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：subordinate to | subordinate role | subordinate position</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Local councils are subordinate to the national government.</div><div class="sent-zh">地方议会隶属于国家政府。</div><button class="sent-play" data-text="Local councils are subordinate to the national government.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She felt her role was subordinate to her colleagues'.</div><div class="sent-zh">她觉得自己的角色比同事低一级。</div><button class="sent-play" data-text="She felt her role was subordinate to her colleagues'.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">devolve</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈvɒlv/</div>
-<div style="font-size:14px;color:#7ee787">v. 下放</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：de(向下)+volve(转)→向下转→下放</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：devolve power | devolve responsibility | devolve to</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The central government devolved more powers to local authorities.</div><div class="sent-zh">中央政府向地方当局下放了更多权力。</div><button class="sent-play" data-text="The central government devolved more powers to local authorities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Responsibility for education has devolved to the regions.</div><div class="sent-zh">教育责任已下放到各地区。</div><button class="sent-play" data-text="Responsibility for education has devolved to the regions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">exonerate</div>
-<div style="font-size:13px;color:#8b949e">/ɪɡˈzɒnəreɪt/</div>
-<div style="font-size:14px;color:#7ee787">v. 免除责任</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 法律话题高级词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ex(出)+oner(负担)+ate→去掉负担→免除责任</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：exonerate from | fully exonerate | exonerate sb of charges</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. DNA evidence exonerated the accused man.</div><div class="sent-zh">DNA证据为被告免除了罪责。</div><button class="sent-play" data-text="DNA evidence exonerated the accused man.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The investigation exonerated the company of wrongdoing.</div><div class="sent-zh">调查免除了公司的不当行为指控。</div><button class="sent-play" data-text="The investigation exonerated the company of wrongdoing.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">jurisprudence</div>
-<div style="font-size:13px;color:#8b949e">/ˌdʒʊərɪsˈpruːdns/</div>
-<div style="font-size:14px;color:#7ee787">n. 法理学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 法律高级词汇 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：juris(法律)+prud(智慧)+ence→法律智慧→法理学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：study jurisprudence | principles of jurisprudence | comparative jurisprudence</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. He studied jurisprudence at Oxford University.</div><div class="sent-zh">他在牛津大学学习法理学。</div><button class="sent-play" data-text="He studied jurisprudence at Oxford University.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The ruling set an important precedent in jurisprudence.</div><div class="sent-zh">该裁决在法理学上确立了重要先例。</div><button class="sent-play" data-text="The ruling set an important precedent in jurisprudence.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">redress</div>
-<div style="font-size:13px;color:#8b949e">/rɪˈdres/</div>
-<div style="font-size:14px;color:#7ee787">n. 补偿</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 法律话题高级词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(回)+dress(整理)→重新整理→补偿</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：seek redress | legal redress | redress for grievances</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Victims sought legal redress for the damage caused.</div><div class="sent-zh">受害者就所受损害寻求法律补偿。</div><button class="sent-play" data-text="Victims sought legal redress for the damage caused.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. There is no adequate redress for this injustice.</div><div class="sent-zh">对这种不公正没有足够的补偿。</div><button class="sent-play" data-text="There is no adequate redress for this injustice.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">disenfranchise</div>
-<div style="font-size:13px;color:#8b949e">/ˌdɪsɪnˈfræntʃaɪz/</div>
-<div style="font-size:14px;color:#7ee787">v. 剥夺权利</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 政治话题高级词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dis(取消)+enfranchise(给权利)→取消权利→剥夺</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：disenfranchise voters | feel disenfranchised | disenfranchised groups</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Strict voter ID laws may disenfranchise minority voters.</div><div class="sent-zh">严格的选民身份法可能剥夺少数族裔选民的投票权。</div><button class="sent-play" data-text="Strict voter ID laws may disenfranchise minority voters.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many young people feel disenfranchised by the political system.</div><div class="sent-zh">许多年轻人感到被政治体制排斥。</div><button class="sent-play" data-text="Many young people feel disenfranchised by the political system.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">fiduciary</div>
-<div style="font-size:13px;color:#8b949e">/fɪˈdjuːʃiəri/</div>
-<div style="font-size:14px;color:#7ee787">adj. 信托的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 法律财务高级词汇 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：fiduc(信任)+iary→基于信任的→信托的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：fiduciary duty | fiduciary responsibility | fiduciary relationship</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Board members have a fiduciary duty to shareholders.</div><div class="sent-zh">董事会成员对股东负有信托义务。</div><button class="sent-play" data-text="Board members have a fiduciary duty to shareholders.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The advisor breached his fiduciary responsibility.</div><div class="sent-zh">顾问违反了他的信托责任。</div><button class="sent-play" data-text="The advisor breached his fiduciary responsibility.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">repeal</div>
-<div style="font-size:13px;color:#8b949e">/rɪˈpiːl/</div>
-<div style="font-size:14px;color:#7ee787">v. 废除</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 政府法律话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(回)+peal(呼叫)→收回→废除</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：repeal a law | repeal regulations | repeal the act</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The new government repealed the controversial law.</div><div class="sent-zh">新政府废除了有争议的法律。</div><button class="sent-play" data-text="The new government repealed the controversial law.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Campaigners demand the repeal of the act.</div><div class="sent-zh">活动人士要求废除该法案。</div><button class="sent-play" data-text="Campaigners demand the repeal of the act.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">subpoena</div>
-<div style="font-size:13px;color:#8b949e">/səˈpiːnə/</div>
-<div style="font-size:14px;color:#7ee787">n. 传票</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 政府法律话题高级词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：sub(在下面)+poena(惩罚)→以惩罚威胁→传票</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：issue a subpoena | ignore a subpoena | comply with a subpoena</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The committee issued a subpoena for the documents.</div><div class="sent-zh">委员会发出传票要求提供文件。</div><button class="sent-play" data-text="The committee issued a subpoena for the documents.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He was ordered to comply with the subpoena.</div><div class="sent-zh">他被命令遵从传票。</div><button class="sent-play" data-text="He was ordered to comply with the subpoena.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">waive</div>
-<div style="font-size:13px;color:#8b949e">/weɪv/</div>
-<div style="font-size:14px;color:#7ee787">v. 放弃</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 政府法律话题高级词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：waiv(放弃)→放弃</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：waive rights | waive fees | waive the requirement</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. He waived his right to a jury trial.</div><div class="sent-zh">他放弃了陪审团审判的权利。</div><button class="sent-play" data-text="He waived his right to a jury trial.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The university waived the application fee.</div><div class="sent-zh">大学免除了申请费。</div><button class="sent-play" data-text="The university waived the application fee.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">writ</div>
-<div style="font-size:13px;color:#8b949e">/rɪt/</div>
-<div style="font-size:14px;color:#7ee787">n. 令状</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 政府法律话题高级词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：writ(写)→写下的命令→令状</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：issue a writ | writ of habeas corpus | serve a writ</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The lawyer filed a writ of habeas corpus.</div><div class="sent-zh">律师申请人身保护令。</div><button class="sent-play" data-text="The lawyer filed a writ of habeas corpus.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A writ was served on the company.</div><div class="sent-zh">令状已送达该公司。</div><button class="sent-play" data-text="A writ was served on the company.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">abolitionist</div>
-<div style="font-size:13px;color:#8b949e">/ˌæbəˈlɪʃənɪst/</div>
-<div style="font-size:14px;color:#7ee787">n 废奴主义者；废除论者</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术词汇 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：abolish(废除) + tion + ist = 废除论者</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：abolitionist movement, abolitionist campaign</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The abolitionist movement fought to end slavery in the 19th century.</div><div class="sent-zh">废奴运动在19世纪为结束奴隶制而斗争。</div><button class="sent-play" data-text="The abolitionist movement fought to end slavery in the 19th century.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She was a prominent abolitionist who wrote extensively against the slave trade.</div><div class="sent-zh">她是一位杰出的废奴主义者，撰写了大量反对奴隶贸易的文章。</div><button class="sent-play" data-text="She was a prominent abolitionist who wrote extensively against the slave trade.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">asylum</div>
-<div style="font-size:13px;color:#8b949e">/əˈsaɪləm/</div>
-<div style="font-size:14px;color:#7ee787">n 庇护；政治避难</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：a(无) + syl(抢夺权) + um = 不可侵犯的庇护所</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：seek asylum, political asylum, asylum seeker, grant asylum</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Thousands of refugees have sought political asylum in Europe.</div><div class="sent-zh">数千名难民在欧洲寻求政治庇护。</div><button class="sent-play" data-text="Thousands of refugees have sought political asylum in Europe.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government granted asylum to the dissident journalist.</div><div class="sent-zh">政府向持不同政见的记者提供了庇护。</div><button class="sent-play" data-text="The government granted asylum to the dissident journalist.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">bill of rights</div>
-<div style="font-size:13px;color:#8b949e">/bɪl əv raɪts/</div>
-<div style="font-size:14px;color:#7ee787">n 权利法案</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 学术高频 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bill(法案) + rights(权利) = 权利法案</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：constitutional bill of rights, enshrine in the bill of rights</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The bill of rights guarantees freedom of speech and assembly.</div><div class="sent-zh">权利法案保障言论和集会自由。</div><button class="sent-play" data-text="The bill of rights guarantees freedom of speech and assembly.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many countries have incorporated a bill of rights into their constitutions.</div><div class="sent-zh">许多国家将权利法案纳入了宪法。</div><button class="sent-play" data-text="Many countries have incorporated a bill of rights into their constitutions.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 7 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">legislation</div><div class="ipa">/ˌledʒɪsˈleɪʃn/</div><div class="pos">n. 立法</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="legislation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="legislation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 政府法律话题核心词 · 话题：政府法律</div><div class="memory">记忆：legis(法)+lation→立法</div><div class="coll">搭配：pass legislation | introduce legislation | environmental legislation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The government passed new <span class="highlight">legislation</span> on data protection.</div><div class="sent-zh">政府通过了新的数据保护立法。</div><button class="sent-play" data-text="The government passed new legislation on data protection.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Environmental <span class="highlight">legislation</span> has become stricter.</div><div class="sent-zh">环境立法变得更加严格。</div><button class="sent-play" data-text="Environmental legislation has become stricter.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">constituency</div><div class="ipa">/kənˈstɪtjuənsi/</div><div class="pos">n. 选区</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="constituency" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="constituency" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div><div class="memory">记忆：con(一起)+stitu(站)+ency→站在一起的人→选区选民</div><div class="coll">搭配：rural constituency | represent a constituency | constituency boundary</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The MP represents a rural <span class="highlight">constituency</span> in the north.</div><div class="sent-zh">这位议员代表北部的一个农村选区。</div><button class="sent-play" data-text="The MP represents a rural constituency in the north.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The policy is popular with his <span class="highlight">constituency</span>.</div><div class="sent-zh">该政策在他的选区很受欢迎。</div><button class="sent-play" data-text="The policy is popular with his constituency.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">referendum</div><div class="ipa">/ˌrefəˈrendəm/</div><div class="pos">n. 公投</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="referendum" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="referendum" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div><div class="memory">记忆：refer(提交)+endum→提交给人民→公投</div><div class="coll">搭配：hold a referendum | national referendum | referendum on</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">referendum</span> was held on whether to leave the union.</div><div class="sent-zh">就是否脱离联盟举行了公投。</div><button class="sent-play" data-text="A referendum was held on whether to leave the union.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government decided to hold a national <span class="highlight">referendum</span>.</div><div class="sent-zh">政府决定举行全国公投。</div><button class="sent-play" data-text="The government decided to hold a national referendum.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">mandate</div><div class="ipa">/ˈmændeɪt/</div><div class="pos">n. 授权，委托</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mandate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mandate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div><div class="memory">记忆：mand(命令)+ate→命令→授权</div><div class="coll">搭配：electoral mandate | mandate for change | carry out a mandate</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The government claims a <span class="highlight">mandate</span> for its reforms.</div><div class="sent-zh">政府声称其改革有授权依据。</div><button class="sent-play" data-text="The government claims a mandate for its reforms.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The committee has a <span class="highlight">mandate</span> to investigate the issue.</div><div class="sent-zh">委员会被授权调查此事。</div><button class="sent-play" data-text="The committee has a mandate to investigate the issue.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">compliance</div><div class="ipa">/kəmˈplaɪəns/</div><div class="pos">n. 遵从</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="compliance" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="compliance" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 法律合规话题高频词 · 话题：政府法律</div><div class="memory">记忆：com(完全)+pli(折叠)+ance→完全折叠→遵从</div><div class="coll">搭配：in compliance with | ensure compliance | regulatory compliance</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Companies must ensure <span class="highlight">compliance</span> with safety regulations.</div><div class="sent-zh">公司必须确保遵守安全法规。</div><button class="sent-play" data-text="Companies must ensure compliance with safety regulations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The factory was shut down for non-<span class="highlight">compliance</span>.</div><div class="sent-zh">该工厂因不合规被关闭。</div><button class="sent-play" data-text="The factory was shut down for non-compliance.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">arbitration</div><div class="ipa">/ˌɑːbɪˈtreɪʃn/</div><div class="pos">n. 仲裁</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="arbitration" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="arbitration" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 法律话题常见词 · 话题：政府法律</div><div class="memory">记忆：arbitr(判断)+ation→判断的过程→仲裁</div><div class="coll">搭配：go to arbitration | binding arbitration | arbitration proceedings</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The dispute was resolved through <span class="highlight">arbitration</span>.</div><div class="sent-zh">争端通过仲裁得到解决。</div><button class="sent-play" data-text="The dispute was resolved through arbitration.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Both parties agreed to binding <span class="highlight">arbitration</span>.</div><div class="sent-zh">双方同意接受有约束力的仲裁。</div><button class="sent-play" data-text="Both parties agreed to binding arbitration.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">subordinate</div><div class="ipa">/səˈbɔːdɪnət/</div><div class="pos">adj. 下级的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="subordinate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="subordinate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 管理法律话题常见词 · 话题：政府法律</div><div class="memory">记忆：sub(下面)+ordin(顺序)+ate→顺序在下的→下级的</div><div class="coll">搭配：subordinate to | subordinate role | subordinate position</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Local councils are <span class="highlight">subordinate</span> to the national government.</div><div class="sent-zh">地方议会隶属于国家政府。</div><button class="sent-play" data-text="Local councils are subordinate to the national government.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She felt her role was <span class="highlight">subordinate</span> to her colleagues'.</div><div class="sent-zh">她觉得自己的角色比同事低一级。</div><button class="sent-play" data-text="She felt her role was subordinate to her colleagues&#x27;.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">devolve</div><div class="ipa">/dɪˈvɒlv/</div><div class="pos">v. 下放</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="devolve" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="devolve" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 政治话题常见词 · 话题：政府法律</div><div class="memory">记忆：de(向下)+volve(转)→向下转→下放</div><div class="coll">搭配：devolve power | devolve responsibility | devolve to</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The central government devolved more powers to local authorities.</div><div class="sent-zh">中央政府向地方当局下放了更多权力。</div><button class="sent-play" data-text="The central government devolved more powers to local authorities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Responsibility for education has devolved to the regions.</div><div class="sent-zh">教育责任已下放到各地区。</div><button class="sent-play" data-text="Responsibility for education has devolved to the regions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">exonerate</div><div class="ipa">/ɪɡˈzɒnəreɪt/</div><div class="pos">v. 免除责任</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exonerate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exonerate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 法律话题高级词 · 话题：政府法律</div><div class="memory">记忆：ex(出)+oner(负担)+ate→去掉负担→免除责任</div><div class="coll">搭配：exonerate from | fully exonerate | exonerate sb of charges</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. DNA evidence exonerated the accused man.</div><div class="sent-zh">DNA证据为被告免除了罪责。</div><button class="sent-play" data-text="DNA evidence exonerated the accused man.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The investigation exonerated the company of wrongdoing.</div><div class="sent-zh">调查免除了公司的不当行为指控。</div><button class="sent-play" data-text="The investigation exonerated the company of wrongdoing.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">jurisprudence</div><div class="ipa">/ˌdʒʊərɪsˈpruːdns/</div><div class="pos">n. 法理学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="jurisprudence" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="jurisprudence" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 法律高级词汇 · 话题：政府法律</div><div class="memory">记忆：juris(法律)+prud(智慧)+ence→法律智慧→法理学</div><div class="coll">搭配：study jurisprudence | principles of jurisprudence | comparative jurisprudence</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. He studied <span class="highlight">jurisprudence</span> at Oxford University.</div><div class="sent-zh">他在牛津大学学习法理学。</div><button class="sent-play" data-text="He studied jurisprudence at Oxford University.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The ruling set an important precedent in <span class="highlight">jurisprudence</span>.</div><div class="sent-zh">该裁决在法理学上确立了重要先例。</div><button class="sent-play" data-text="The ruling set an important precedent in jurisprudence.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">redress</div><div class="ipa">/rɪˈdres/</div><div class="pos">n. 补偿</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="redress" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="redress" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 法律话题高级词 · 话题：政府法律</div><div class="memory">记忆：re(回)+dress(整理)→重新整理→补偿</div><div class="coll">搭配：seek redress | legal redress | redress for grievances</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Victims sought legal <span class="highlight">redress</span> for the damage caused.</div><div class="sent-zh">受害者就所受损害寻求法律补偿。</div><button class="sent-play" data-text="Victims sought legal redress for the damage caused.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. There is no adequate <span class="highlight">redress</span> for this injustice.</div><div class="sent-zh">对这种不公正没有足够的补偿。</div><button class="sent-play" data-text="There is no adequate redress for this injustice.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">disenfranchise</div><div class="ipa">/ˌdɪsɪnˈfræntʃaɪz/</div><div class="pos">v. 剥夺权利</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disenfranchise" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disenfranchise" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 政治话题高级词 · 话题：政府法律</div><div class="memory">记忆：dis(取消)+enfranchise(给权利)→取消权利→剥夺</div><div class="coll">搭配：disenfranchise voters | feel disenfranchised | disenfranchised groups</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Strict voter ID laws may <span class="highlight">disenfranchise</span> minority voters.</div><div class="sent-zh">严格的选民身份法可能剥夺少数族裔选民的投票权。</div><button class="sent-play" data-text="Strict voter ID laws may disenfranchise minority voters.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many young people feel disenfranchised by the political system.</div><div class="sent-zh">许多年轻人感到被政治体制排斥。</div><button class="sent-play" data-text="Many young people feel disenfranchised by the political system.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">fiduciary</div><div class="ipa">/fɪˈdjuːʃiəri/</div><div class="pos">adj. 信托的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fiduciary" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fiduciary" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 法律财务高级词汇 · 话题：政府法律</div><div class="memory">记忆：fiduc(信任)+iary→基于信任的→信托的</div><div class="coll">搭配：fiduciary duty | fiduciary responsibility | fiduciary relationship</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Board members have a <span class="highlight">fiduciary</span> duty to shareholders.</div><div class="sent-zh">董事会成员对股东负有信托义务。</div><button class="sent-play" data-text="Board members have a fiduciary duty to shareholders.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The advisor breached his <span class="highlight">fiduciary</span> responsibility.</div><div class="sent-zh">顾问违反了他的信托责任。</div><button class="sent-play" data-text="The advisor breached his fiduciary responsibility.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">repeal</div><div class="ipa">/rɪˈpiːl/</div><div class="pos">v. 废除</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="repeal" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="repeal" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 政府法律话题常见词 · 话题：政府法律</div><div class="memory">记忆：re(回)+peal(呼叫)→收回→废除</div><div class="coll">搭配：repeal a law | repeal regulations | repeal the act</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The new government repealed the controversial law.</div><div class="sent-zh">新政府废除了有争议的法律。</div><button class="sent-play" data-text="The new government repealed the controversial law.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Campaigners demand the <span class="highlight">repeal</span> of the act.</div><div class="sent-zh">活动人士要求废除该法案。</div><button class="sent-play" data-text="Campaigners demand the repeal of the act.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">subpoena</div><div class="ipa">/səˈpiːnə/</div><div class="pos">n. 传票</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="subpoena" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="subpoena" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 政府法律话题高级词 · 话题：政府法律</div><div class="memory">记忆：sub(在下面)+poena(惩罚)→以惩罚威胁→传票</div><div class="coll">搭配：issue a subpoena | ignore a subpoena | comply with a subpoena</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The committee issued a <span class="highlight">subpoena</span> for the documents.</div><div class="sent-zh">委员会发出传票要求提供文件。</div><button class="sent-play" data-text="The committee issued a subpoena for the documents.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He was ordered to comply with the <span class="highlight">subpoena</span>.</div><div class="sent-zh">他被命令遵从传票。</div><button class="sent-play" data-text="He was ordered to comply with the subpoena.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">waive</div><div class="ipa">/weɪv/</div><div class="pos">v. 放弃</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="waive" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="waive" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 政府法律话题高级词 · 话题：政府法律</div><div class="memory">记忆：waiv(放弃)→放弃</div><div class="coll">搭配：waive rights | waive fees | waive the requirement</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. He waived his right to a jury trial.</div><div class="sent-zh">他放弃了陪审团审判的权利。</div><button class="sent-play" data-text="He waived his right to a jury trial.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The university waived the application fee.</div><div class="sent-zh">大学免除了申请费。</div><button class="sent-play" data-text="The university waived the application fee.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">writ</div><div class="ipa">/rɪt/</div><div class="pos">n. 令状</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="writ" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="writ" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 政府法律话题高级词 · 话题：政府法律</div><div class="memory">记忆：writ(写)→写下的命令→令状</div><div class="coll">搭配：issue a writ | writ of habeas corpus | serve a writ</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The lawyer filed a <span class="highlight">writ</span> of habeas corpus.</div><div class="sent-zh">律师申请人身保护令。</div><button class="sent-play" data-text="The lawyer filed a writ of habeas corpus.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">writ</span> was served on the company.</div><div class="sent-zh">令状已送达该公司。</div><button class="sent-play" data-text="A writ was served on the company.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">abolitionist</div><div class="ipa">/ˌæbəˈlɪʃənɪst/</div><div class="pos">n 废奴主义者；废除论者</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="abolitionist" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="abolitionist" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术词汇 · 话题：政府法律</div><div class="memory">记忆：abolish(废除) + tion + ist = 废除论者</div><div class="coll">搭配：abolitionist movement, abolitionist campaign</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">abolitionist</span> movement fought to end slavery in the 19th century.</div><div class="sent-zh">废奴运动在19世纪为结束奴隶制而斗争。</div><button class="sent-play" data-text="The abolitionist movement fought to end slavery in the 19th century.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She was a prominent <span class="highlight">abolitionist</span> who wrote extensively against the slave trade.</div><div class="sent-zh">她是一位杰出的废奴主义者，撰写了大量反对奴隶贸易的文章。</div><button class="sent-play" data-text="She was a prominent abolitionist who wrote extensively against the slave trade.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">asylum</div><div class="ipa">/əˈsaɪləm/</div><div class="pos">n 庇护；政治避难</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="asylum" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="asylum" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：政府法律</div><div class="memory">记忆：a(无) + syl(抢夺权) + um = 不可侵犯的庇护所</div><div class="coll">搭配：seek asylum, political asylum, asylum seeker, grant asylum</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Thousands of refugees have sought political <span class="highlight">asylum</span> in Europe.</div><div class="sent-zh">数千名难民在欧洲寻求政治庇护。</div><button class="sent-play" data-text="Thousands of refugees have sought political asylum in Europe.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government granted <span class="highlight">asylum</span> to the dissident journalist.</div><div class="sent-zh">政府向持不同政见的记者提供了庇护。</div><button class="sent-play" data-text="The government granted asylum to the dissident journalist.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">bill of rights</div><div class="ipa">/bɪl əv raɪts/</div><div class="pos">n 权利法案</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bill of rights" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bill of rights" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 学术高频 · 话题：政府法律</div><div class="memory">记忆：bill(法案) + rights(权利) = 权利法案</div><div class="coll">搭配：constitutional bill of rights, enshrine in the bill of rights</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">bill of rights</span> guarantees freedom of speech and assembly.</div><div class="sent-zh">权利法案保障言论和集会自由。</div><button class="sent-play" data-text="The bill of rights guarantees freedom of speech and assembly.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many countries have incorporated a <span class="highlight">bill of rights</span> into their constitutions.</div><div class="sent-zh">许多国家将权利法案纳入了宪法。</div><button class="sent-play" data-text="Many countries have incorporated a bill of rights into their constitutions.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

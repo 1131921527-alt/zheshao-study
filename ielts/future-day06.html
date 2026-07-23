@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 6</h1></div>
+<div class="header"><h1>雅思 Future Day 6</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 6 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">heritage</div>
-<div style="font-size:13px;color:#8b949e">/ˈherɪtɪdʒ/</div>
-<div style="font-size:14px;color:#7ee787">n. 遗产</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 文化话题核心词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：herit(继承)+age→继承的东西→遗产</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural heritage | world heritage | preserve heritage</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The city is known for its rich cultural heritage.</div><div class="sent-zh">该城市以其丰富的文化遗产而闻名。</div><button class="sent-play" data-text="The city is known for its rich cultural heritage.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. UNESCO has designated the site as a World Heritage location.</div><div class="sent-zh">联合国教科文组织已将该遗址列为世界遗产。</div><button class="sent-play" data-text="UNESCO has designated the site as a World Heritage location.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">mainstream</div>
-<div style="font-size:13px;color:#8b949e">/ˈmeɪnstriːm/</div>
-<div style="font-size:14px;color:#7ee787">n. 主流</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 文化媒体话题高频词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：main(主要)+stream(流)→主要水流→主流</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：mainstream media | enter the mainstream | mainstream culture</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The idea has entered the mainstream of public opinion.</div><div class="sent-zh">这一观点已进入主流民意。</div><button class="sent-play" data-text="The idea has entered the mainstream of public opinion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Mainstream media often ignores minority voices.</div><div class="sent-zh">主流媒体常常忽视少数群体的声音。</div><button class="sent-play" data-text="Mainstream media often ignores minority voices.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">censorship</div>
-<div style="font-size:13px;color:#8b949e">/ˈsensəʃɪp/</div>
-<div style="font-size:14px;color:#7ee787">n. 审查</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 媒体话题高频词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：censor(审查)+ship→审查制度</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：media censorship | impose censorship | internet censorship</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Internet censorship restricts access to information.</div><div class="sent-zh">互联网审查限制了信息获取。</div><button class="sent-play" data-text="Internet censorship restricts access to information.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government imposed strict censorship on the press.</div><div class="sent-zh">政府对新闻界实施了严格审查。</div><button class="sent-play" data-text="The government imposed strict censorship on the press.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">broadcast</div>
-<div style="font-size:13px;color:#8b949e">/ˈbrɔːdkɑːst/</div>
-<div style="font-size:14px;color:#7ee787">v. 广播</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 媒体话题核心词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：broad(广)+cast(投)→广泛投送→广播</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：broadcast live | news broadcast | radio broadcast</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The event was broadcast live on television.</div><div class="sent-zh">该事件在电视上直播。</div><button class="sent-play" data-text="The event was broadcast live on television.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The radio station broadcasts 24 hours a day.</div><div class="sent-zh">该电台每天24小时广播。</div><button class="sent-play" data-text="The radio station broadcasts 24 hours a day.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">assimilation</div>
-<div style="font-size:13px;color:#8b949e">/əˌsɪməˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 同化</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化社会话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：as(向)+simil(相似)+ation→使相似→同化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural assimilation | forced assimilation | assimilation into</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Immigrants often face pressure towards cultural assimilation.</div><div class="sent-zh">移民常常面临文化同化的压力。</div><button class="sent-play" data-text="Immigrants often face pressure towards cultural assimilation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The assimilation of different cultures enriches society.</div><div class="sent-zh">不同文化的融合丰富了社会。</div><button class="sent-play" data-text="The assimilation of different cultures enriches society.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">disseminate</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈsemɪneɪt/</div>
-<div style="font-size:14px;color:#7ee787">v. 传播</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 媒体话题常用动词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dis(分开)+semin(种子)+ate→播撒种子→传播</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：disseminate information | disseminate knowledge | widely disseminated</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The internet has made it easier to disseminate information.</div><div class="sent-zh">互联网使信息传播变得更加容易。</div><button class="sent-play" data-text="The internet has made it easier to disseminate information.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers disseminate their findings through journals.</div><div class="sent-zh">研究人员通过期刊传播他们的发现。</div><button class="sent-play" data-text="Researchers disseminate their findings through journals.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">homogenisation</div>
-<div style="font-size:13px;color:#8b949e">/həˌmɒdʒənaɪˈzeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 同质化</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：homo(相同)+gen(产生)+isation→使产生相同→同质化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural homogenisation | homogenisation of | resist homogenisation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Globalisation has led to the homogenisation of culture.</div><div class="sent-zh">全球化导致了文化的同质化。</div><button class="sent-play" data-text="Globalisation has led to the homogenisation of culture.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Local traditions resist cultural homogenisation.</div><div class="sent-zh">地方传统抵抗着文化同质化。</div><button class="sent-play" data-text="Local traditions resist cultural homogenisation.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">pluralism</div>
-<div style="font-size:13px;color:#8b949e">/ˈplʊərəlɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 多元主义</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化政治话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：plural(多个)+ism→多种并存→多元主义</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural pluralism | religious pluralism | embrace pluralism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cultural pluralism enriches modern societies.</div><div class="sent-zh">文化多元主义丰富了现代社会。</div><button class="sent-play" data-text="Cultural pluralism enriches modern societies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The country embraces religious pluralism.</div><div class="sent-zh">该国奉行宗教多元主义。</div><button class="sent-play" data-text="The country embraces religious pluralism.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">semiotics</div>
-<div style="font-size:13px;color:#8b949e">/ˌsemiˈɒtɪks/</div>
-<div style="font-size:14px;color:#7ee787">n. 符号学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化学术话题中阶词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：semio(符号)+tics(学科)→研究符号的学科→符号学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：visual semiotics | cultural semiotics | study of semiotics</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Semiotics helps us understand how meaning is created.</div><div class="sent-zh">符号学帮助我们理解意义是如何产生的。</div><button class="sent-play" data-text="Semiotics helps us understand how meaning is created.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The study of semiotics is relevant to advertising.</div><div class="sent-zh">符号学研究与广告有关。</div><button class="sent-play" data-text="The study of semiotics is relevant to advertising.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">vernacular</div>
-<div style="font-size:13px;color:#8b949e">/vəˈnækjələ(r)/</div>
-<div style="font-size:14px;color:#7ee787">n. 本土语言</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化语言话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：vernac(本土)+ular→本土的→本土语言</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：vernacular language | local vernacular | vernacular architecture</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The author writes in the vernacular of the region.</div><div class="sent-zh">作者用该地区的本土语言写作。</div><button class="sent-play" data-text="The author writes in the vernacular of the region.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Vernacular architecture reflects local traditions.</div><div class="sent-zh">本土建筑反映了地方传统。</div><button class="sent-play" data-text="Vernacular architecture reflects local traditions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">commodify</div>
-<div style="font-size:13px;color:#8b949e">/kəˈmɒdɪfaɪ/</div>
-<div style="font-size:14px;color:#7ee787">v. 商品化</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化批评话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：commod(商品)+ify→变成商品→商品化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：commodify culture | commodify art | become commodified</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Tourism can commodify local culture.</div><div class="sent-zh">旅游业可能将当地文化商品化。</div><button class="sent-play" data-text="Tourism can commodify local culture.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Art becomes commodified in the market.</div><div class="sent-zh">艺术在市场中变得商品化。</div><button class="sent-play" data-text="Art becomes commodified in the market.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">hegemony</div>
-<div style="font-size:13px;color:#8b949e">/hɪˈɡeməni/</div>
-<div style="font-size:14px;color:#7ee787">n. 霸权</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 政治文化话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：hege(引导)+mony→引导他人的力量→霸权</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural hegemony | western hegemony | maintain hegemony</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Western cultural hegemony influences global media.</div><div class="sent-zh">西方文化霸权影响着全球媒体。</div><button class="sent-play" data-text="Western cultural hegemony influences global media.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The country seeks to maintain its economic hegemony.</div><div class="sent-zh">该国试图维持其经济霸权。</div><button class="sent-play" data-text="The country seeks to maintain its economic hegemony.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">epistemology</div>
-<div style="font-size:13px;color:#8b949e">/ɪˌpɪstɪˈmɒlədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 认识论</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 哲学学术话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：epi(在...上)+stem(站)+ology→站在上面知道的→认识论</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：epistemology of | feminist epistemology | study epistemology</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Epistemology examines how we acquire knowledge.</div><div class="sent-zh">认识论研究我们如何获得知识。</div><button class="sent-play" data-text="Epistemology examines how we acquire knowledge.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Different cultures have different epistemologies.</div><div class="sent-zh">不同文化有不同的认识论。</div><button class="sent-play" data-text="Different cultures have different epistemologies.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">polemic</div>
-<div style="font-size:13px;color:#8b949e">/pəˈlemɪk/</div>
-<div style="font-size:14px;color:#7ee787">n. 论战</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 文化评论话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pole(战争)+mic→战争的文字→论战</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：political polemic | launch a polemic | polemic against</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The article is a polemic against modern consumerism.</div><div class="sent-zh">这篇文章是对现代消费主义的论战。</div><button class="sent-play" data-text="The article is a polemic against modern consumerism.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The book is a powerful polemic on social inequality.</div><div class="sent-zh">这本书是关于社会不平等的有力论战。</div><button class="sent-play" data-text="The book is a powerful polemic on social inequality.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">zeitgeist</div>
-<div style="font-size:13px;color:#8b949e">/ˈzaɪtɡaɪst/</div>
-<div style="font-size:14px;color:#7ee787">n. 时代精神</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 文化话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：德语zeit(时代)+geist(精神)→时代精神</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：the zeitgeist of | capture the zeitgeist | reflect the zeitgeist</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The film captures the zeitgeist of the 1960s.</div><div class="sent-zh">这部电影捕捉了20世纪60年代的时代精神。</div><button class="sent-play" data-text="The film captures the zeitgeist of the 1960s.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Social media reflects the zeitgeist of our times.</div><div class="sent-zh">社交媒体反映了我们这个时代的精神。</div><button class="sent-play" data-text="Social media reflects the zeitgeist of our times.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">determinism</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈtɜːmɪnɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 决定论</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 哲学文化话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：determine(决定)+ism→决定论</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：technological determinism | cultural determinism | reject determinism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Technological determinism suggests technology drives social change.</div><div class="sent-zh">技术决定论认为技术推动社会变革。</div><button class="sent-play" data-text="Technological determinism suggests technology drives social change.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The theory of cultural determinism has been widely debated.</div><div class="sent-zh">文化决定论理论一直备受争议。</div><button class="sent-play" data-text="The theory of cultural determinism has been widely debated.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">articulation</div>
-<div style="font-size:13px;color:#8b949e">/ɑːˌtɪkjuˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 表达，清晰度</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 学术写作高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：artic(关节)+ulation→关节连接→表达</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：clear articulation | articulation of ideas | articulation of interests</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Clear articulation of ideas is essential in academic writing.</div><div class="sent-zh">清晰的表达在学术写作中至关重要。</div><button class="sent-play" data-text="Clear articulation of ideas is essential in academic writing.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The movement provided articulation for marginalised voices.</div><div class="sent-zh">该运动为边缘群体发声。</div><button class="sent-play" data-text="The movement provided articulation for marginalised voices.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">dubbing</div>
-<div style="font-size:13px;color:#8b949e">/ˈdʌbɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n 配音</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思词汇 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dub(复制) + ing = 配音过程</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：film dubbing, dubbing studio, Japanese dubbing</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Many viewers prefer subtitles to dubbing.</div><div class="sent-zh">许多观众更喜欢字幕而不是配音。</div><button class="sent-play" data-text="Many viewers prefer subtitles to dubbing.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The dubbing was so well done that it felt like the original.</div><div class="sent-zh">配音做得非常好，感觉就像原版一样。</div><button class="sent-play" data-text="The dubbing was so well done that it felt like the original.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">folklore</div>
-<div style="font-size:13px;color:#8b949e">/ˈfəʊklɔː/</div>
-<div style="font-size:14px;color:#7ee787">n 民间传说</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：folk(民间) + lore(传说) = 民间传说</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：local folklore, Celtic folklore, study folklore, according to folklore</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Irish folklore is rich with tales of fairies and giants.</div><div class="sent-zh">爱尔兰民间传说中充满了仙女和巨人的故事。</div><button class="sent-play" data-text="Irish folklore is rich with tales of fairies and giants.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The scholar has spent decades studying Native American folklore.</div><div class="sent-zh">这位学者花了数十年研究美洲原住民民间传说。</div><button class="sent-play" data-text="The scholar has spent decades studying Native American folklore.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">mural</div>
-<div style="font-size:13px;color:#8b949e">/ˈmjʊərəl/</div>
-<div style="font-size:14px;color:#7ee787">n 壁画</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 雅思常用 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mur(墙) + al = 墙上的画</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：paint a mural, wall mural, outdoor mural, historical mural</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The artist painted a mural depicting the history of the neighborhood.</div><div class="sent-zh">艺术家画了一幅描绘该社区历史的壁画。</div><button class="sent-play" data-text="The artist painted a mural depicting the history of the neighborhood.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Murals have become a popular form of urban art.</div><div class="sent-zh">壁画已成为一种流行的城市艺术形式。</div><button class="sent-play" data-text="Murals have become a popular form of urban art.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 6 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">heritage</div><div class="ipa">/ˈherɪtɪdʒ/</div><div class="pos">n. 遗产</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="heritage" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="heritage" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 文化话题核心词 · 话题：文化媒体</div><div class="memory">记忆：herit(继承)+age→继承的东西→遗产</div><div class="coll">搭配：cultural heritage | world heritage | preserve heritage</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The city is known for its rich cultural <span class="highlight">heritage</span>.</div><div class="sent-zh">该城市以其丰富的文化遗产而闻名。</div><button class="sent-play" data-text="The city is known for its rich cultural heritage.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. UNESCO has designated the site as a World <span class="highlight">Heritage</span> location.</div><div class="sent-zh">联合国教科文组织已将该遗址列为世界遗产。</div><button class="sent-play" data-text="UNESCO has designated the site as a World Heritage location.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">mainstream</div><div class="ipa">/ˈmeɪnstriːm/</div><div class="pos">n. 主流</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mainstream" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mainstream" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 文化媒体话题高频词 · 话题：文化媒体</div><div class="memory">记忆：main(主要)+stream(流)→主要水流→主流</div><div class="coll">搭配：mainstream media | enter the mainstream | mainstream culture</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The idea has entered the <span class="highlight">mainstream</span> of public opinion.</div><div class="sent-zh">这一观点已进入主流民意。</div><button class="sent-play" data-text="The idea has entered the mainstream of public opinion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Mainstream</span> media often ignores minority voices.</div><div class="sent-zh">主流媒体常常忽视少数群体的声音。</div><button class="sent-play" data-text="Mainstream media often ignores minority voices.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">censorship</div><div class="ipa">/ˈsensəʃɪp/</div><div class="pos">n. 审查</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="censorship" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="censorship" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 媒体话题高频词 · 话题：文化媒体</div><div class="memory">记忆：censor(审查)+ship→审查制度</div><div class="coll">搭配：media censorship | impose censorship | internet censorship</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Internet <span class="highlight">censorship</span> restricts access to information.</div><div class="sent-zh">互联网审查限制了信息获取。</div><button class="sent-play" data-text="Internet censorship restricts access to information.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government imposed strict <span class="highlight">censorship</span> on the press.</div><div class="sent-zh">政府对新闻界实施了严格审查。</div><button class="sent-play" data-text="The government imposed strict censorship on the press.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">broadcast</div><div class="ipa">/ˈbrɔːdkɑːst/</div><div class="pos">v. 广播</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="broadcast" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="broadcast" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 媒体话题核心词 · 话题：文化媒体</div><div class="memory">记忆：broad(广)+cast(投)→广泛投送→广播</div><div class="coll">搭配：broadcast live | news broadcast | radio broadcast</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The event was <span class="highlight">broadcast</span> live on television.</div><div class="sent-zh">该事件在电视上直播。</div><button class="sent-play" data-text="The event was broadcast live on television.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The radio station broadcasts 24 hours a day.</div><div class="sent-zh">该电台每天24小时广播。</div><button class="sent-play" data-text="The radio station broadcasts 24 hours a day.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">assimilation</div><div class="ipa">/əˌsɪməˈleɪʃn/</div><div class="pos">n. 同化</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="assimilation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="assimilation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化社会话题常见词 · 话题：文化媒体</div><div class="memory">记忆：as(向)+simil(相似)+ation→使相似→同化</div><div class="coll">搭配：cultural assimilation | forced assimilation | assimilation into</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Immigrants often face pressure towards cultural <span class="highlight">assimilation</span>.</div><div class="sent-zh">移民常常面临文化同化的压力。</div><button class="sent-play" data-text="Immigrants often face pressure towards cultural assimilation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">assimilation</span> of different cultures enriches society.</div><div class="sent-zh">不同文化的融合丰富了社会。</div><button class="sent-play" data-text="The assimilation of different cultures enriches society.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">disseminate</div><div class="ipa">/dɪˈsemɪneɪt/</div><div class="pos">v. 传播</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disseminate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disseminate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 媒体话题常用动词 · 话题：文化媒体</div><div class="memory">记忆：dis(分开)+semin(种子)+ate→播撒种子→传播</div><div class="coll">搭配：disseminate information | disseminate knowledge | widely disseminated</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The internet has made it easier to <span class="highlight">disseminate</span> information.</div><div class="sent-zh">互联网使信息传播变得更加容易。</div><button class="sent-play" data-text="The internet has made it easier to disseminate information.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers <span class="highlight">disseminate</span> their findings through journals.</div><div class="sent-zh">研究人员通过期刊传播他们的发现。</div><button class="sent-play" data-text="Researchers disseminate their findings through journals.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">homogenisation</div><div class="ipa">/həˌmɒdʒənaɪˈzeɪʃn/</div><div class="pos">n. 同质化</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="homogenisation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="homogenisation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化话题常见词 · 话题：文化媒体</div><div class="memory">记忆：homo(相同)+gen(产生)+isation→使产生相同→同质化</div><div class="coll">搭配：cultural homogenisation | homogenisation of | resist homogenisation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Globalisation has led to the <span class="highlight">homogenisation</span> of culture.</div><div class="sent-zh">全球化导致了文化的同质化。</div><button class="sent-play" data-text="Globalisation has led to the homogenisation of culture.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Local traditions resist cultural <span class="highlight">homogenisation</span>.</div><div class="sent-zh">地方传统抵抗着文化同质化。</div><button class="sent-play" data-text="Local traditions resist cultural homogenisation.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">pluralism</div><div class="ipa">/ˈplʊərəlɪzəm/</div><div class="pos">n. 多元主义</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pluralism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pluralism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化政治话题常见词 · 话题：文化媒体</div><div class="memory">记忆：plural(多个)+ism→多种并存→多元主义</div><div class="coll">搭配：cultural pluralism | religious pluralism | embrace pluralism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Cultural <span class="highlight">pluralism</span> enriches modern societies.</div><div class="sent-zh">文化多元主义丰富了现代社会。</div><button class="sent-play" data-text="Cultural pluralism enriches modern societies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The country embraces religious <span class="highlight">pluralism</span>.</div><div class="sent-zh">该国奉行宗教多元主义。</div><button class="sent-play" data-text="The country embraces religious pluralism.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">semiotics</div><div class="ipa">/ˌsemiˈɒtɪks/</div><div class="pos">n. 符号学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="semiotics" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="semiotics" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化学术话题中阶词 · 话题：文化媒体</div><div class="memory">记忆：semio(符号)+tics(学科)→研究符号的学科→符号学</div><div class="coll">搭配：visual semiotics | cultural semiotics | study of semiotics</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Semiotics</span> helps us understand how meaning is created.</div><div class="sent-zh">符号学帮助我们理解意义是如何产生的。</div><button class="sent-play" data-text="Semiotics helps us understand how meaning is created.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The study of <span class="highlight">semiotics</span> is relevant to advertising.</div><div class="sent-zh">符号学研究与广告有关。</div><button class="sent-play" data-text="The study of semiotics is relevant to advertising.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">vernacular</div><div class="ipa">/vəˈnækjələ(r)/</div><div class="pos">n. 本土语言</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="vernacular" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="vernacular" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化语言话题常见词 · 话题：文化媒体</div><div class="memory">记忆：vernac(本土)+ular→本土的→本土语言</div><div class="coll">搭配：vernacular language | local vernacular | vernacular architecture</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The author writes in the <span class="highlight">vernacular</span> of the region.</div><div class="sent-zh">作者用该地区的本土语言写作。</div><button class="sent-play" data-text="The author writes in the vernacular of the region.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Vernacular</span> architecture reflects local traditions.</div><div class="sent-zh">本土建筑反映了地方传统。</div><button class="sent-play" data-text="Vernacular architecture reflects local traditions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">commodify</div><div class="ipa">/kəˈmɒdɪfaɪ/</div><div class="pos">v. 商品化</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="commodify" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="commodify" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化批评话题常见词 · 话题：文化媒体</div><div class="memory">记忆：commod(商品)+ify→变成商品→商品化</div><div class="coll">搭配：commodify culture | commodify art | become commodified</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Tourism can <span class="highlight">commodify</span> local culture.</div><div class="sent-zh">旅游业可能将当地文化商品化。</div><button class="sent-play" data-text="Tourism can commodify local culture.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Art becomes commodified in the market.</div><div class="sent-zh">艺术在市场中变得商品化。</div><button class="sent-play" data-text="Art becomes commodified in the market.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">hegemony</div><div class="ipa">/hɪˈɡeməni/</div><div class="pos">n. 霸权</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="hegemony" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="hegemony" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 政治文化话题常见词 · 话题：文化媒体</div><div class="memory">记忆：hege(引导)+mony→引导他人的力量→霸权</div><div class="coll">搭配：cultural hegemony | western hegemony | maintain hegemony</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Western cultural <span class="highlight">hegemony</span> influences global media.</div><div class="sent-zh">西方文化霸权影响着全球媒体。</div><button class="sent-play" data-text="Western cultural hegemony influences global media.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The country seeks to maintain its economic <span class="highlight">hegemony</span>.</div><div class="sent-zh">该国试图维持其经济霸权。</div><button class="sent-play" data-text="The country seeks to maintain its economic hegemony.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">epistemology</div><div class="ipa">/ɪˌpɪstɪˈmɒlədʒi/</div><div class="pos">n. 认识论</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="epistemology" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="epistemology" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 哲学学术话题高级词 · 话题：文化媒体</div><div class="memory">记忆：epi(在...上)+stem(站)+ology→站在上面知道的→认识论</div><div class="coll">搭配：epistemology of | feminist epistemology | study epistemology</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Epistemology</span> examines how we acquire knowledge.</div><div class="sent-zh">认识论研究我们如何获得知识。</div><button class="sent-play" data-text="Epistemology examines how we acquire knowledge.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Different cultures have different epistemologies.</div><div class="sent-zh">不同文化有不同的认识论。</div><button class="sent-play" data-text="Different cultures have different epistemologies.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">polemic</div><div class="ipa">/pəˈlemɪk/</div><div class="pos">n. 论战</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="polemic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="polemic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 文化评论话题高级词 · 话题：文化媒体</div><div class="memory">记忆：pole(战争)+mic→战争的文字→论战</div><div class="coll">搭配：political polemic | launch a polemic | polemic against</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The article is a <span class="highlight">polemic</span> against modern consumerism.</div><div class="sent-zh">这篇文章是对现代消费主义的论战。</div><button class="sent-play" data-text="The article is a polemic against modern consumerism.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The book is a powerful <span class="highlight">polemic</span> on social inequality.</div><div class="sent-zh">这本书是关于社会不平等的有力论战。</div><button class="sent-play" data-text="The book is a powerful polemic on social inequality.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">zeitgeist</div><div class="ipa">/ˈzaɪtɡaɪst/</div><div class="pos">n. 时代精神</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="zeitgeist" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="zeitgeist" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 文化话题高级词 · 话题：文化媒体</div><div class="memory">记忆：德语zeit(时代)+geist(精神)→时代精神</div><div class="coll">搭配：the zeitgeist of | capture the zeitgeist | reflect the zeitgeist</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The film captures the <span class="highlight">zeitgeist</span> of the 1960s.</div><div class="sent-zh">这部电影捕捉了20世纪60年代的时代精神。</div><button class="sent-play" data-text="The film captures the zeitgeist of the 1960s.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Social media reflects the <span class="highlight">zeitgeist</span> of our times.</div><div class="sent-zh">社交媒体反映了我们这个时代的精神。</div><button class="sent-play" data-text="Social media reflects the zeitgeist of our times.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">determinism</div><div class="ipa">/dɪˈtɜːmɪnɪzəm/</div><div class="pos">n. 决定论</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="determinism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="determinism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 哲学文化话题高级词 · 话题：文化媒体</div><div class="memory">记忆：determine(决定)+ism→决定论</div><div class="coll">搭配：technological determinism | cultural determinism | reject determinism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Technological <span class="highlight">determinism</span> suggests technology drives social change.</div><div class="sent-zh">技术决定论认为技术推动社会变革。</div><button class="sent-play" data-text="Technological determinism suggests technology drives social change.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The theory of cultural <span class="highlight">determinism</span> has been widely debated.</div><div class="sent-zh">文化决定论理论一直备受争议。</div><button class="sent-play" data-text="The theory of cultural determinism has been widely debated.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">articulation</div><div class="ipa">/ɑːˌtɪkjuˈleɪʃn/</div><div class="pos">n. 表达，清晰度</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="articulation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="articulation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 学术写作高级词 · 话题：文化媒体</div><div class="memory">记忆：artic(关节)+ulation→关节连接→表达</div><div class="coll">搭配：clear articulation | articulation of ideas | articulation of interests</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Clear <span class="highlight">articulation</span> of ideas is essential in academic writing.</div><div class="sent-zh">清晰的表达在学术写作中至关重要。</div><button class="sent-play" data-text="Clear articulation of ideas is essential in academic writing.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The movement provided <span class="highlight">articulation</span> for marginalised voices.</div><div class="sent-zh">该运动为边缘群体发声。</div><button class="sent-play" data-text="The movement provided articulation for marginalised voices.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">dubbing</div><div class="ipa">/ˈdʌbɪŋ/</div><div class="pos">n 配音</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="dubbing" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="dubbing" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思词汇 · 话题：文化媒体</div><div class="memory">记忆：dub(复制) + ing = 配音过程</div><div class="coll">搭配：film dubbing, dubbing studio, Japanese dubbing</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Many viewers prefer subtitles to <span class="highlight">dubbing</span>.</div><div class="sent-zh">许多观众更喜欢字幕而不是配音。</div><button class="sent-play" data-text="Many viewers prefer subtitles to dubbing.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">dubbing</span> was so well done that it felt like the original.</div><div class="sent-zh">配音做得非常好，感觉就像原版一样。</div><button class="sent-play" data-text="The dubbing was so well done that it felt like the original.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">folklore</div><div class="ipa">/ˈfəʊklɔː/</div><div class="pos">n 民间传说</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="folklore" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="folklore" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：文化媒体</div><div class="memory">记忆：folk(民间) + lore(传说) = 民间传说</div><div class="coll">搭配：local folklore, Celtic folklore, study folklore, according to folklore</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Irish <span class="highlight">folklore</span> is rich with tales of fairies and giants.</div><div class="sent-zh">爱尔兰民间传说中充满了仙女和巨人的故事。</div><button class="sent-play" data-text="Irish folklore is rich with tales of fairies and giants.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The scholar has spent decades studying Native American <span class="highlight">folklore</span>.</div><div class="sent-zh">这位学者花了数十年研究美洲原住民民间传说。</div><button class="sent-play" data-text="The scholar has spent decades studying Native American folklore.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">mural</div><div class="ipa">/ˈmjʊərəl/</div><div class="pos">n 壁画</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mural" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mural" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 雅思常用 · 话题：文化媒体</div><div class="memory">记忆：mur(墙) + al = 墙上的画</div><div class="coll">搭配：paint a mural, wall mural, outdoor mural, historical mural</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The artist painted a <span class="highlight">mural</span> depicting the history of the neighborhood.</div><div class="sent-zh">艺术家画了一幅描绘该社区历史的壁画。</div><button class="sent-play" data-text="The artist painted a mural depicting the history of the neighborhood.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Murals have become a popular form of urban art.</div><div class="sent-zh">壁画已成为一种流行的城市艺术形式。</div><button class="sent-play" data-text="Murals have become a popular form of urban art.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 18</h1></div>
+<div class="header"><h1>雅思 Future Day 18</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 18 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">pension</div>
-<div style="font-size:13px;color:#8b949e">/ˈpenʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 养老金</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pens(支付)+ion→支付的金钱→养老金</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：pension scheme | pension fund | draw a pension</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The pension scheme covers all employees.</div><div class="sent-zh">养老金计划覆盖所有员工。</div><button class="sent-play" data-text="The pension scheme covers all employees.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many people rely on state pensions.</div><div class="sent-zh">许多人依赖国家养老金。</div><button class="sent-play" data-text="Many people rely on state pensions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">antitrust</div>
-<div style="font-size:13px;color:#8b949e">/ˌæntiˈtrʌst/</div>
-<div style="font-size:14px;color:#7ee787">adj. 反垄断的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：anti(反)+trust(垄断)→反垄断的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：antitrust law | antitrust investigation | antitrust regulation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company faces an antitrust investigation.</div><div class="sent-zh">公司面临反垄断调查。</div><button class="sent-play" data-text="The company faces an antitrust investigation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Antitrust laws promote market competition.</div><div class="sent-zh">反垄断法促进市场竞争。</div><button class="sent-play" data-text="Antitrust laws promote market competition.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">stagflation</div>
-<div style="font-size:13px;color:#8b949e">/stæɡˈfleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 滞胀</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：stag(停滞)+flation(通胀)→停滞加通胀→滞胀</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：experience stagflation | stagflation risk | stagflation era</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The economy is showing signs of stagflation.</div><div class="sent-zh">经济出现滞胀迹象。</div><button class="sent-play" data-text="The economy is showing signs of stagflation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Stagflation combines high inflation with low growth.</div><div class="sent-zh">滞胀结合了高通胀和低增长。</div><button class="sent-play" data-text="Stagflation combines high inflation with low growth.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">immigration</div>
-<div style="font-size:13px;color:#8b949e">/ˌɪmɪˈɡreɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 移民</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：im(进入)+migr(迁移)+ation→迁入→移民</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：immigration policy | immigration control | illegal immigration</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Immigration policies are hotly debated.</div><div class="sent-zh">移民政策备受争议。</div><button class="sent-play" data-text="Immigration policies are hotly debated.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Illegal immigration remains a challenge.</div><div class="sent-zh">非法移民仍是挑战。</div><button class="sent-play" data-text="Illegal immigration remains a challenge.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">tariff barrier</div>
-<div style="font-size:13px;color:#8b949e">/ˈtærɪf ˈbæriə(r)/</div>
-<div style="font-size:14px;color:#7ee787">n. 关税壁垒</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：tariff(关税)+barrier(壁垒)→关税壁垒</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：reduce tariff barriers | tariff barrier removal | non-tariff barrier</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Reducing tariff barriers promotes free trade.</div><div class="sent-zh">降低关税壁垒促进自由贸易。</div><button class="sent-play" data-text="Reducing tariff barriers promotes free trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Non-tariff barriers also restrict trade.</div><div class="sent-zh">非关税壁垒也限制贸易。</div><button class="sent-play" data-text="Non-tariff barriers also restrict trade.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">trade</div>
-<div style="font-size:13px;color:#8b949e">/treɪd/</div>
-<div style="font-size:14px;color:#7ee787">n. 贸易</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：trade(交易)→贸易</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：international trade | free trade | trade agreement</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. International trade benefits all participating nations.</div><div class="sent-zh">国际贸易惠及所有参与国。</div><button class="sent-play" data-text="International trade benefits all participating nations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Free trade agreements boost economic growth.</div><div class="sent-zh">自由贸易协定促进经济增长。</div><button class="sent-play" data-text="Free trade agreements boost economic growth.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">comparative</div>
-<div style="font-size:13px;color:#8b949e">/kəmˈpærətɪv/</div>
-<div style="font-size:14px;color:#7ee787">adj. 比较的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 全球化话题常见词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：compar(比较)+ative→比较的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：comparative advantage | comparative analysis | comparative study</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Comparative advantage drives international trade.</div><div class="sent-zh">比较优势驱动国际贸易。</div><button class="sent-play" data-text="Comparative advantage drives international trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A comparative analysis reveals significant differences.</div><div class="sent-zh">比较分析揭示了显著差异。</div><button class="sent-play" data-text="A comparative analysis reveals significant differences.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">accumulation</div>
-<div style="font-size:13px;color:#8b949e">/əˌkjuːmjəˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 积累</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ac(向)+cumul(堆)+ation→堆积→积累</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：capital accumulation | wealth accumulation | gradual accumulation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Wealth accumulation has accelerated.</div><div class="sent-zh">财富积累加速了。</div><button class="sent-play" data-text="Wealth accumulation has accelerated.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Capital accumulation drives economic growth.</div><div class="sent-zh">资本积累推动经济增长。</div><button class="sent-play" data-text="Capital accumulation drives economic growth.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">affluent</div>
-<div style="font-size:13px;color:#8b949e">/ˈæfluənt/</div>
-<div style="font-size:14px;color:#7ee787">adj. 富裕的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：af(向)+flu(流)+ent→财源滚滚→富裕的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：affluent society | affluent neighbourhood | affluent consumers</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Affluent consumers drive luxury markets.</div><div class="sent-zh">富裕消费者推动奢侈品市场。</div><button class="sent-play" data-text="Affluent consumers drive luxury markets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Affluent societies face different challenges.</div><div class="sent-zh">富裕社会面临不同挑战。</div><button class="sent-play" data-text="Affluent societies face different challenges.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">allocative</div>
-<div style="font-size:13px;color:#8b949e">/ˈæləkətɪv/</div>
-<div style="font-size:14px;color:#7ee787">adj. 配置的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：allocate(分配)+ive→分配的→配置的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：allocative efficiency | allocative decisions | resource allocative</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Allocative efficiency maximises social welfare.</div><div class="sent-zh">配置效率最大化社会福利。</div><button class="sent-play" data-text="Allocative efficiency maximises social welfare.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Allocative decisions affect market outcomes.</div><div class="sent-zh">配置决策影响市场结果。</div><button class="sent-play" data-text="Allocative decisions affect market outcomes.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">arbitrage</div>
-<div style="font-size:13px;color:#8b949e">/ˈɑːbɪtrɑːʒ/</div>
-<div style="font-size:14px;color:#7ee787">n. 套利</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：arbitr(判断)+age→判断差异→套利</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：currency arbitrage | arbitrage opportunity | risk-free arbitrage</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Arbitrage opportunities are quickly exploited.</div><div class="sent-zh">套利机会很快被利用。</div><button class="sent-play" data-text="Arbitrage opportunities are quickly exploited.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Currency arbitrage profits from exchange rate differences.</div><div class="sent-zh">货币套利从汇率差异中获利。</div><button class="sent-play" data-text="Currency arbitrage profits from exchange rate differences.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">austerity</div>
-<div style="font-size:13px;color:#8b949e">/ɒˈsterəti/</div>
-<div style="font-size:14px;color:#7ee787">n. 紧缩</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：auster(严厉)+ity→严厉→紧缩</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：austerity measures | austerity programme | era of austerity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Austerity measures reduced public spending.</div><div class="sent-zh">紧缩措施减少了公共支出。</div><button class="sent-play" data-text="Austerity measures reduced public spending.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The era of austerity affected millions.</div><div class="sent-zh">紧缩时代影响了数百万人。</div><button class="sent-play" data-text="The era of austerity affected millions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">bailout</div>
-<div style="font-size:13px;color:#8b949e">/ˈbeɪlaʊt/</div>
-<div style="font-size:14px;color:#7ee787">n. 救助</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bail(保释)+out→保出来→救助</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：government bailout | bank bailout | financial bailout</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The government bailout saved the bank.</div><div class="sent-zh">政府救助挽救了银行。</div><button class="sent-play" data-text="The government bailout saved the bank.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The airline received a financial bailout.</div><div class="sent-zh">航空公司获得了财务救助。</div><button class="sent-play" data-text="The airline received a financial bailout.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">boom</div>
-<div style="font-size:13px;color:#8b949e">/buːm/</div>
-<div style="font-size:14px;color:#7ee787">n. 繁荣</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：boom(隆隆声)→迅速增长→繁荣</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：economic boom | housing boom | boom and bust</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The economic boom created millions of jobs.</div><div class="sent-zh">经济繁荣创造了数百万就业。</div><button class="sent-play" data-text="The economic boom created millions of jobs.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The housing boom was followed by a crash.</div><div class="sent-zh">房地产繁荣之后是崩盘。</div><button class="sent-play" data-text="The housing boom was followed by a crash.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cartel</div>
-<div style="font-size:13px;color:#8b949e">/kɑːˈtel/</div>
-<div style="font-size:14px;color:#7ee787">n. 卡特尔</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：carta(卡片)→协议→卡特尔</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：drug cartel | oil cartel | price-fixing cartel</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The oil cartel controls production levels.</div><div class="sent-zh">石油卡特尔控制产量。</div><button class="sent-play" data-text="The oil cartel controls production levels.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Price-fixing cartels are illegal.</div><div class="sent-zh">价格固定卡特尔是违法的。</div><button class="sent-play" data-text="Price-fixing cartels are illegal.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">disposable</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈspəʊzəbl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 可支配的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dispos(处置)+able→可处置的→可支配的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：disposable income | disposable gloves | disposable products</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Disposable income has stagnated for years.</div><div class="sent-zh">可支配收入停滞多年。</div><button class="sent-play" data-text="Disposable income has stagnated for years.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Disposable products contribute to waste.</div><div class="sent-zh">一次性产品造成浪费。</div><button class="sent-play" data-text="Disposable products contribute to waste.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">inflationary</div>
-<div style="font-size:13px;color:#8b949e">/ɪnˈfleɪʃənri/</div>
-<div style="font-size:14px;color:#7ee787">adj. 通胀的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：inflation(通胀)+ary→通胀的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：inflationary pressure | inflationary spiral | anti-inflationary</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Inflationary pressures are mounting.</div><div class="sent-zh">通胀压力正在增大。</div><button class="sent-play" data-text="Inflationary pressures are mounting.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An inflationary spiral can devastate an economy.</div><div class="sent-zh">通胀螺旋可以摧毁经济。</div><button class="sent-play" data-text="An inflationary spiral can devastate an economy.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">macroeconomic</div>
-<div style="font-size:13px;color:#8b949e">/ˌmækrəʊˌiːkəˈnɒmɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 宏观经济的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：macro(大)+economic(经济)→宏观经济的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：macroeconomic policy | macroeconomic indicators | macroeconomic stability</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Macroeconomic policy guides national economies.</div><div class="sent-zh">宏观经济政策指导国民经济。</div><button class="sent-play" data-text="Macroeconomic policy guides national economies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Macroeconomic indicators suggest recovery.</div><div class="sent-zh">宏观经济指标显示复苏。</div><button class="sent-play" data-text="Macroeconomic indicators suggest recovery.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">oligopoly</div>
-<div style="font-size:13px;color:#8b949e">/ˌɒlɪˈɡɒpəli/</div>
-<div style="font-size:14px;color:#7ee787">n. 寡头垄断</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：oligo(少数)+poly(卖)→少数人卖→寡头垄断</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：market oligopoly | telecommunications oligopoly</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The market is dominated by an oligopoly.</div><div class="sent-zh">市场被寡头垄断主导。</div><button class="sent-play" data-text="The market is dominated by an oligopoly.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Telecommunications oligopolies limit consumer choice.</div><div class="sent-zh">电信寡头垄断限制消费者选择。</div><button class="sent-play" data-text="Telecommunications oligopolies limit consumer choice.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">protectionist</div>
-<div style="font-size:13px;color:#8b949e">/prəˈtekʃənɪst/</div>
-<div style="font-size:14px;color:#7ee787">adj. 保护主义的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：protect(保护)+ionist→保护主义的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：protectionist policy | protectionist measures | protectionist sentiment</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Protectionist policies restrict free trade.</div><div class="sent-zh">保护主义政策限制自由贸易。</div><button class="sent-play" data-text="Protectionist policies restrict free trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Protectionist sentiment is rising globally.</div><div class="sent-zh">保护主义情绪在全球上升。</div><button class="sent-play" data-text="Protectionist sentiment is rising globally.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 18 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">pension</div><div class="ipa">/ˈpenʃn/</div><div class="pos">n. 养老金</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pension" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pension" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：pens(支付)+ion→支付的金钱→养老金</div><div class="coll">搭配：pension scheme | pension fund | draw a pension</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">pension</span> scheme covers all employees.</div><div class="sent-zh">养老金计划覆盖所有员工。</div><button class="sent-play" data-text="The pension scheme covers all employees.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many people rely on state pensions.</div><div class="sent-zh">许多人依赖国家养老金。</div><button class="sent-play" data-text="Many people rely on state pensions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">antitrust</div><div class="ipa">/ˌæntiˈtrʌst/</div><div class="pos">adj. 反垄断的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="antitrust" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="antitrust" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：anti(反)+trust(垄断)→反垄断的</div><div class="coll">搭配：antitrust law | antitrust investigation | antitrust regulation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company faces an <span class="highlight">antitrust</span> investigation.</div><div class="sent-zh">公司面临反垄断调查。</div><button class="sent-play" data-text="The company faces an antitrust investigation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Antitrust</span> laws promote market competition.</div><div class="sent-zh">反垄断法促进市场竞争。</div><button class="sent-play" data-text="Antitrust laws promote market competition.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">stagflation</div><div class="ipa">/stæɡˈfleɪʃn/</div><div class="pos">n. 滞胀</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="stagflation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="stagflation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：stag(停滞)+flation(通胀)→停滞加通胀→滞胀</div><div class="coll">搭配：experience stagflation | stagflation risk | stagflation era</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The economy is showing signs of <span class="highlight">stagflation</span>.</div><div class="sent-zh">经济出现滞胀迹象。</div><button class="sent-play" data-text="The economy is showing signs of stagflation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Stagflation</span> combines high inflation with low growth.</div><div class="sent-zh">滞胀结合了高通胀和低增长。</div><button class="sent-play" data-text="Stagflation combines high inflation with low growth.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">immigration</div><div class="ipa">/ˌɪmɪˈɡreɪʃn/</div><div class="pos">n. 移民</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="immigration" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="immigration" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div><div class="memory">记忆：im(进入)+migr(迁移)+ation→迁入→移民</div><div class="coll">搭配：immigration policy | immigration control | illegal immigration</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Immigration</span> policies are hotly debated.</div><div class="sent-zh">移民政策备受争议。</div><button class="sent-play" data-text="Immigration policies are hotly debated.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Illegal <span class="highlight">immigration</span> remains a challenge.</div><div class="sent-zh">非法移民仍是挑战。</div><button class="sent-play" data-text="Illegal immigration remains a challenge.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">tariff barrier</div><div class="ipa">/ˈtærɪf ˈbæriə(r)/</div><div class="pos">n. 关税壁垒</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tariff barrier" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tariff barrier" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div><div class="memory">记忆：tariff(关税)+barrier(壁垒)→关税壁垒</div><div class="coll">搭配：reduce tariff barriers | tariff barrier removal | non-tariff barrier</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Reducing tariff barriers promotes free trade.</div><div class="sent-zh">降低关税壁垒促进自由贸易。</div><button class="sent-play" data-text="Reducing tariff barriers promotes free trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Non-tariff barriers also restrict trade.</div><div class="sent-zh">非关税壁垒也限制贸易。</div><button class="sent-play" data-text="Non-tariff barriers also restrict trade.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">trade</div><div class="ipa">/treɪd/</div><div class="pos">n. 贸易</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="trade" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="trade" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div><div class="memory">记忆：trade(交易)→贸易</div><div class="coll">搭配：international trade | free trade | trade agreement</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. International <span class="highlight">trade</span> benefits all participating nations.</div><div class="sent-zh">国际贸易惠及所有参与国。</div><button class="sent-play" data-text="International trade benefits all participating nations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Free <span class="highlight">trade</span> agreements boost economic growth.</div><div class="sent-zh">自由贸易协定促进经济增长。</div><button class="sent-play" data-text="Free trade agreements boost economic growth.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">comparative</div><div class="ipa">/kəmˈpærətɪv/</div><div class="pos">adj. 比较的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="comparative" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="comparative" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 全球化话题常见词 · 话题：全球化</div><div class="memory">记忆：compar(比较)+ative→比较的</div><div class="coll">搭配：comparative advantage | comparative analysis | comparative study</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Comparative</span> advantage drives international trade.</div><div class="sent-zh">比较优势驱动国际贸易。</div><button class="sent-play" data-text="Comparative advantage drives international trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">comparative</span> analysis reveals significant differences.</div><div class="sent-zh">比较分析揭示了显著差异。</div><button class="sent-play" data-text="A comparative analysis reveals significant differences.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">accumulation</div><div class="ipa">/əˌkjuːmjəˈleɪʃn/</div><div class="pos">n. 积累</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="accumulation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="accumulation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：ac(向)+cumul(堆)+ation→堆积→积累</div><div class="coll">搭配：capital accumulation | wealth accumulation | gradual accumulation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Wealth <span class="highlight">accumulation</span> has accelerated.</div><div class="sent-zh">财富积累加速了。</div><button class="sent-play" data-text="Wealth accumulation has accelerated.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Capital <span class="highlight">accumulation</span> drives economic growth.</div><div class="sent-zh">资本积累推动经济增长。</div><button class="sent-play" data-text="Capital accumulation drives economic growth.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">affluent</div><div class="ipa">/ˈæfluənt/</div><div class="pos">adj. 富裕的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="affluent" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="affluent" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：af(向)+flu(流)+ent→财源滚滚→富裕的</div><div class="coll">搭配：affluent society | affluent neighbourhood | affluent consumers</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Affluent</span> consumers drive luxury markets.</div><div class="sent-zh">富裕消费者推动奢侈品市场。</div><button class="sent-play" data-text="Affluent consumers drive luxury markets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Affluent</span> societies face different challenges.</div><div class="sent-zh">富裕社会面临不同挑战。</div><button class="sent-play" data-text="Affluent societies face different challenges.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">allocative</div><div class="ipa">/ˈæləkətɪv/</div><div class="pos">adj. 配置的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="allocative" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="allocative" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：allocate(分配)+ive→分配的→配置的</div><div class="coll">搭配：allocative efficiency | allocative decisions | resource allocative</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Allocative</span> efficiency maximises social welfare.</div><div class="sent-zh">配置效率最大化社会福利。</div><button class="sent-play" data-text="Allocative efficiency maximises social welfare.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Allocative</span> decisions affect market outcomes.</div><div class="sent-zh">配置决策影响市场结果。</div><button class="sent-play" data-text="Allocative decisions affect market outcomes.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">arbitrage</div><div class="ipa">/ˈɑːbɪtrɑːʒ/</div><div class="pos">n. 套利</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="arbitrage" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="arbitrage" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：arbitr(判断)+age→判断差异→套利</div><div class="coll">搭配：currency arbitrage | arbitrage opportunity | risk-free arbitrage</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Arbitrage</span> opportunities are quickly exploited.</div><div class="sent-zh">套利机会很快被利用。</div><button class="sent-play" data-text="Arbitrage opportunities are quickly exploited.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Currency <span class="highlight">arbitrage</span> profits from exchange rate differences.</div><div class="sent-zh">货币套利从汇率差异中获利。</div><button class="sent-play" data-text="Currency arbitrage profits from exchange rate differences.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">austerity</div><div class="ipa">/ɒˈsterəti/</div><div class="pos">n. 紧缩</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="austerity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="austerity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：auster(严厉)+ity→严厉→紧缩</div><div class="coll">搭配：austerity measures | austerity programme | era of austerity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Austerity</span> measures reduced public spending.</div><div class="sent-zh">紧缩措施减少了公共支出。</div><button class="sent-play" data-text="Austerity measures reduced public spending.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The era of <span class="highlight">austerity</span> affected millions.</div><div class="sent-zh">紧缩时代影响了数百万人。</div><button class="sent-play" data-text="The era of austerity affected millions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">bailout</div><div class="ipa">/ˈbeɪlaʊt/</div><div class="pos">n. 救助</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bailout" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bailout" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：bail(保释)+out→保出来→救助</div><div class="coll">搭配：government bailout | bank bailout | financial bailout</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The government <span class="highlight">bailout</span> saved the bank.</div><div class="sent-zh">政府救助挽救了银行。</div><button class="sent-play" data-text="The government bailout saved the bank.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The airline received a financial <span class="highlight">bailout</span>.</div><div class="sent-zh">航空公司获得了财务救助。</div><button class="sent-play" data-text="The airline received a financial bailout.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">boom</div><div class="ipa">/buːm/</div><div class="pos">n. 繁荣</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="boom" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="boom" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：boom(隆隆声)→迅速增长→繁荣</div><div class="coll">搭配：economic boom | housing boom | boom and bust</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The economic <span class="highlight">boom</span> created millions of jobs.</div><div class="sent-zh">经济繁荣创造了数百万就业。</div><button class="sent-play" data-text="The economic boom created millions of jobs.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The housing <span class="highlight">boom</span> was followed by a crash.</div><div class="sent-zh">房地产繁荣之后是崩盘。</div><button class="sent-play" data-text="The housing boom was followed by a crash.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cartel</div><div class="ipa">/kɑːˈtel/</div><div class="pos">n. 卡特尔</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cartel" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cartel" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：carta(卡片)→协议→卡特尔</div><div class="coll">搭配：drug cartel | oil cartel | price-fixing cartel</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The oil <span class="highlight">cartel</span> controls production levels.</div><div class="sent-zh">石油卡特尔控制产量。</div><button class="sent-play" data-text="The oil cartel controls production levels.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Price-fixing cartels are illegal.</div><div class="sent-zh">价格固定卡特尔是违法的。</div><button class="sent-play" data-text="Price-fixing cartels are illegal.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">disposable</div><div class="ipa">/dɪˈspəʊzəbl/</div><div class="pos">adj. 可支配的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disposable" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disposable" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：dispos(处置)+able→可处置的→可支配的</div><div class="coll">搭配：disposable income | disposable gloves | disposable products</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Disposable</span> income has stagnated for years.</div><div class="sent-zh">可支配收入停滞多年。</div><button class="sent-play" data-text="Disposable income has stagnated for years.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Disposable</span> products contribute to waste.</div><div class="sent-zh">一次性产品造成浪费。</div><button class="sent-play" data-text="Disposable products contribute to waste.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">inflationary</div><div class="ipa">/ɪnˈfleɪʃənri/</div><div class="pos">adj. 通胀的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="inflationary" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="inflationary" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：inflation(通胀)+ary→通胀的</div><div class="coll">搭配：inflationary pressure | inflationary spiral | anti-inflationary</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Inflationary</span> pressures are mounting.</div><div class="sent-zh">通胀压力正在增大。</div><button class="sent-play" data-text="Inflationary pressures are mounting.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An <span class="highlight">inflationary</span> spiral can devastate an economy.</div><div class="sent-zh">通胀螺旋可以摧毁经济。</div><button class="sent-play" data-text="An inflationary spiral can devastate an economy.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">macroeconomic</div><div class="ipa">/ˌmækrəʊˌiːkəˈnɒmɪk/</div><div class="pos">adj. 宏观经济的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="macroeconomic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="macroeconomic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：macro(大)+economic(经济)→宏观经济的</div><div class="coll">搭配：macroeconomic policy | macroeconomic indicators | macroeconomic stability</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Macroeconomic</span> policy guides national economies.</div><div class="sent-zh">宏观经济政策指导国民经济。</div><button class="sent-play" data-text="Macroeconomic policy guides national economies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Macroeconomic</span> indicators suggest recovery.</div><div class="sent-zh">宏观经济指标显示复苏。</div><button class="sent-play" data-text="Macroeconomic indicators suggest recovery.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">oligopoly</div><div class="ipa">/ˌɒlɪˈɡɒpəli/</div><div class="pos">n. 寡头垄断</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="oligopoly" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="oligopoly" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：oligo(少数)+poly(卖)→少数人卖→寡头垄断</div><div class="coll">搭配：market oligopoly | telecommunications oligopoly</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The market is dominated by an <span class="highlight">oligopoly</span>.</div><div class="sent-zh">市场被寡头垄断主导。</div><button class="sent-play" data-text="The market is dominated by an oligopoly.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Telecommunications oligopolies limit consumer choice.</div><div class="sent-zh">电信寡头垄断限制消费者选择。</div><button class="sent-play" data-text="Telecommunications oligopolies limit consumer choice.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">protectionist</div><div class="ipa">/prəˈtekʃənɪst/</div><div class="pos">adj. 保护主义的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="protectionist" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="protectionist" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：protect(保护)+ionist→保护主义的</div><div class="coll">搭配：protectionist policy | protectionist measures | protectionist sentiment</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Protectionist</span> policies restrict free trade.</div><div class="sent-zh">保护主义政策限制自由贸易。</div><button class="sent-play" data-text="Protectionist policies restrict free trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Protectionist</span> sentiment is rising globally.</div><div class="sent-zh">保护主义情绪在全球上升。</div><button class="sent-play" data-text="Protectionist sentiment is rising globally.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

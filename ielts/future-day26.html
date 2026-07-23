@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 26</h1></div>
+<div class="header"><h1>雅思 Future Day 26</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 26 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">monument</div>
-<div style="font-size:13px;color:#8b949e">/ˈmɒnjumənt/</div>
-<div style="font-size:14px;color:#7ee787">n. 纪念碑</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：monu(提醒)+ment→提醒人们的东西→纪念碑</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：historic monument | national monument | erect a monument</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The historic monument attracts many visitors.</div><div class="sent-zh">这座历史纪念碑吸引众多游客。</div><button class="sent-play" data-text="The historic monument attracts many visitors.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A monument was erected in honour of the hero.</div><div class="sent-zh">为纪念英雄建了一座纪念碑。</div><button class="sent-play" data-text="A monument was erected in honour of the hero.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">patronage</div>
-<div style="font-size:13px;color:#8b949e">/ˈpætrənɪdʒ/</div>
-<div style="font-size:14px;color:#7ee787">n. 赞助</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：patron(保护人)+age→保护→赞助</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：artistic patronage | under patronage | royal patronage</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The arts depend on public patronage.</div><div class="sent-zh">艺术依赖公共赞助。</div><button class="sent-play" data-text="The arts depend on public patronage.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Royal patronage elevated the artist's status.</div><div class="sent-zh">皇家赞助提升了艺术家的地位。</div><button class="sent-play" data-text="Royal patronage elevated the artist's status.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">performing arts</div>
-<div style="font-size:13px;color:#8b949e">/pəˈfɔːmɪŋ ɑːts/</div>
-<div style="font-size:14px;color:#7ee787">n. 表演艺术</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：perform(表演)+arts(艺术)→表演艺术</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：performing arts centre | study performing arts</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The performing arts centre hosts theatrical productions.</div><div class="sent-zh">表演艺术中心举办戏剧演出。</div><button class="sent-play" data-text="The performing arts centre hosts theatrical productions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She studies performing arts at university.</div><div class="sent-zh">她在大学学习表演艺术。</div><button class="sent-play" data-text="She studies performing arts at university.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">preservation</div>
-<div style="font-size:13px;color:#8b949e">/ˌprezəˈveɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 保护</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pre(提前)+serv(保存)+ation→保存→保护</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：historic preservation | preservation of | cultural preservation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Historic preservation maintains cultural identity.</div><div class="sent-zh">历史保护维护文化认同。</div><button class="sent-play" data-text="Historic preservation maintains cultural identity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The preservation of traditions is important.</div><div class="sent-zh">保护传统很重要。</div><button class="sent-play" data-text="The preservation of traditions is important.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">renaissance</div>
-<div style="font-size:13px;color:#8b949e">/rɪˈneɪsns/</div>
-<div style="font-size:14px;color:#7ee787">n. 文艺复兴</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(再)+nais(出生)+sance→再生→文艺复兴</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：the Renaissance | cultural renaissance | experience a renaissance</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The Renaissance was a period of great cultural achievement.</div><div class="sent-zh">文艺复兴是伟大文化成就的时期。</div><button class="sent-play" data-text="The Renaissance was a period of great cultural achievement.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The city is experiencing a cultural renaissance.</div><div class="sent-zh">该城市正经历文化复兴。</div><button class="sent-play" data-text="The city is experiencing a cultural renaissance.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">authenticity</div>
-<div style="font-size:13px;color:#8b949e">/ˌɔːθenˈtɪsəti/</div>
-<div style="font-size:14px;color:#7ee787">n. 真实性</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：authentic(真实)+ity→真实的状态→真实性</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural authenticity | question authenticity | verify authenticity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The authenticity of the painting was confirmed.</div><div class="sent-zh">画作的真实性得到确认。</div><button class="sent-play" data-text="The authenticity of the painting was confirmed.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cultural authenticity is debated in a globalised world.</div><div class="sent-zh">在全球化世界中文化真实性备受争议。</div><button class="sent-play" data-text="Cultural authenticity is debated in a globalised world.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">commodification</div>
-<div style="font-size:13px;color:#8b949e">/kəˌmɒdɪfɪˈkeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 商品化</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：commod(商品)+ification→变成商品→商品化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural commodification | commodification of | resist commodification</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The commodification of culture erodes traditions.</div><div class="sent-zh">文化商品化侵蚀传统。</div><button class="sent-play" data-text="The commodification of culture erodes traditions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Tourism accelerates the commodification of heritage.</div><div class="sent-zh">旅游加速遗产的商品化。</div><button class="sent-play" data-text="Tourism accelerates the commodification of heritage.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">intangible</div>
-<div style="font-size:13px;color:#8b949e">/ɪnˈtændʒəbl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 无形的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：in(不)+tangible(可触摸的)→不可触摸的→无形的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：intangible heritage | intangible assets | intangible cultural</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Intangible heritage includes music and oral traditions.</div><div class="sent-zh">无形遗产包括音乐和口头传统。</div><button class="sent-play" data-text="Intangible heritage includes music and oral traditions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. UNESCO protects intangible cultural heritage.</div><div class="sent-zh">联合国教科文组织保护非物质文化遗产。</div><button class="sent-play" data-text="UNESCO protects intangible cultural heritage.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">multiculturalism</div>
-<div style="font-size:13px;color:#8b949e">/ˌmʌltiˈkʌltʃərəlɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 多元文化主义</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：multi(多)+cultural(文化)+ism→多元文化主义</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：promote multiculturalism | critique multiculturalism | era of multiculturalism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Multiculturalism enriches national identity.</div><div class="sent-zh">多元文化主义丰富国家认同。</div><button class="sent-play" data-text="Multiculturalism enriches national identity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The debate over multiculturalism continues.</div><div class="sent-zh">关于多元文化主义的争论仍在继续。</div><button class="sent-play" data-text="The debate over multiculturalism continues.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">embassy</div>
-<div style="font-size:13px;color:#8b949e">/ˈembəsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 大使馆</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 政府法律话题高频词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：embassy(使团)→大使馆</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：foreign embassy | embassy staff | embassy in</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The embassy issued a travel advisory.</div><div class="sent-zh">大使馆发布了旅行警告。</div><button class="sent-play" data-text="The embassy issued a travel advisory.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Embassy staff were evacuated safely.</div><div class="sent-zh">大使馆人员安全撤离。</div><button class="sent-play" data-text="Embassy staff were evacuated safely.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">diplomacy</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈpləʊməsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 外交</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 政府法律话题高频词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：diploma(折叠文件)+cy→携带文件→外交</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：international diplomacy | shuttle diplomacy | practice diplomacy</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Diplomacy is preferable to military action.</div><div class="sent-zh">外交优于军事行动。</div><button class="sent-play" data-text="Diplomacy is preferable to military action.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Shuttle diplomacy helped broker the ceasefire.</div><div class="sent-zh">穿梭外交帮助促成了停火。</div><button class="sent-play" data-text="Shuttle diplomacy helped broker the ceasefire.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">diplomatic</div>
-<div style="font-size:13px;color:#8b949e">/ˌdɪpləˈmætɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 外交的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 政府法律话题常见词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：diploma(文件)+tic→处理文件的→外交的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：diplomatic relations | diplomatic tensions | diplomatic solution</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Diplomatic relations were restored last year.</div><div class="sent-zh">去年恢复了外交关系。</div><button class="sent-play" data-text="Diplomatic relations were restored last year.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A diplomatic solution is still possible.</div><div class="sent-zh">外交解决方案仍有可能。</div><button class="sent-play" data-text="A diplomatic solution is still possible.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">prominent</div>
-<div style="font-size:13px;color:#8b949e">/ˈprɒmɪnənt/</div>
-<div style="font-size:14px;color:#7ee787">adj. 杰出的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pro(向前)+min(突出)+ent→向前突出的→杰出的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：prominent figure | prominent role | prominent position</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She is a prominent figure in the art world.</div><div class="sent-zh">她是艺术界的杰出人物。</div><button class="sent-play" data-text="She is a prominent figure in the art world.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The issue occupies a prominent position in public debate.</div><div class="sent-zh">该问题在公共辩论中占据突出位置。</div><button class="sent-play" data-text="The issue occupies a prominent position in public debate.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">spectacle</div>
-<div style="font-size:13px;color:#8b949e">/ˈspektəkl/</div>
-<div style="font-size:14px;color:#7ee787">n. 奇观</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：spect(看)+acle→可看的东西→奇观</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：grand spectacle | spectacular spectacle | make a spectacle</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The opening ceremony was a grand spectacle.</div><div class="sent-zh">开幕式是一场盛大奇观。</div><button class="sent-play" data-text="The opening ceremony was a grand spectacle.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The fireworks created a magnificent spectacle.</div><div class="sent-zh">烟花创造了壮观的奇观。</div><button class="sent-play" data-text="The fireworks created a magnificent spectacle.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">tastemaker</div>
-<div style="font-size:13px;color:#8b949e">/ˈteɪstmeɪkə(r)/</div>
-<div style="font-size:14px;color:#7ee787">n. 潮流引领者</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：taste(品味)+maker(制造者)→制造品味的人→潮流引领者</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural tastemaker | digital tastemaker | influential tastemaker</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Social media influencers are modern tastemakers.</div><div class="sent-zh">社交媒体影响者是现代潮流引领者。</div><button class="sent-play" data-text="Social media influencers are modern tastemakers.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Tastemakers shape consumer preferences.</div><div class="sent-zh">潮流引领者塑造消费者偏好。</div><button class="sent-play" data-text="Tastemakers shape consumer preferences.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">vintage</div>
-<div style="font-size:13px;color:#8b949e">/ˈvɪntɪdʒ/</div>
-<div style="font-size:14px;color:#7ee787">adj. 复古的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：vintage(收获季)→好年份→复古的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：vintage clothing | vintage car | vintage wine</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Vintage clothing has become fashionable.</div><div class="sent-zh">复古服装变得流行。</div><button class="sent-play" data-text="Vintage clothing has become fashionable.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He collects vintage cars.</div><div class="sent-zh">他收集老式汽车。</div><button class="sent-play" data-text="He collects vintage cars.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">avant-garde</div>
-<div style="font-size:13px;color:#8b949e">/ˌævɒ̃ˈɡɑːd/</div>
-<div style="font-size:14px;color:#7ee787">adj 前卫的；先锋的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：法语词，意为'先锋'</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：avant-garde art, avant-garde film, avant-garde movement</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The gallery specializes in avant-garde art from the 20th century.</div><div class="sent-zh">这家画廊专门展出20世纪的前卫艺术。</div><button class="sent-play" data-text="The gallery specializes in avant-garde art from the 20th century.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. His avant-garde approach to music was initially misunderstood.</div><div class="sent-zh">他前卫的音乐风格最初被误解。</div><button class="sent-play" data-text="His avant-garde approach to music was initially misunderstood.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">calligraphy</div>
-<div style="font-size:13px;color:#8b949e">/kəˈlɪɡrəfi/</div>
-<div style="font-size:14px;color:#7ee787">n 书法</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：calli(美) + graphy(书写) = 美化书写</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：Chinese calligraphy, practice calligraphy, calligraphy exhibition</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Chinese calligraphy is considered both an art form and a meditative practice.</div><div class="sent-zh">中国书法既被视为一种艺术形式，也被视为一种冥想修行。</div><button class="sent-play" data-text="Chinese calligraphy is considered both an art form and a meditative practice.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The museum hosted an exhibition of Islamic calligraphy.</div><div class="sent-zh">博物馆举办了一场伊斯兰书法展览。</div><button class="sent-play" data-text="The museum hosted an exhibition of Islamic calligraphy.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cinematography</div>
-<div style="font-size:13px;color:#8b949e">/ˌsɪnəməˈtɒɡrəfi/</div>
-<div style="font-size:14px;color:#7ee787">n 电影摄影；摄影艺术</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cine(电影) + matography(记录) = 电影摄影</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：award-winning cinematography, digital cinematography, cinematography technique</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The film won an Oscar for its stunning cinematography.</div><div class="sent-zh">该片因其出色的摄影艺术获得了奥斯卡奖。</div><button class="sent-play" data-text="The film won an Oscar for its stunning cinematography.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Advances in digital cinematography have transformed the industry.</div><div class="sent-zh">数字电影摄影的进步改变了整个行业。</div><button class="sent-play" data-text="Advances in digital cinematography have transformed the industry.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cultural assimilation</div>
-<div style="font-size:13px;color:#8b949e">/ˈkʌltʃərəl əˌsɪməˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n 文化同化</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cultural(文化) + assimilation(同化) = 文化同化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：forced cultural assimilation, resist cultural assimilation, process of cultural assimilation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Immigrants often face pressure toward cultural assimilation.</div><div class="sent-zh">移民经常面临文化同化的压力。</div><button class="sent-play" data-text="Immigrants often face pressure toward cultural assimilation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The policy of cultural assimilation had devastating effects on indigenous communities.</div><div class="sent-zh">文化同化政策对原住民社区造成了毁灭性影响。</div><button class="sent-play" data-text="The policy of cultural assimilation had devastating effects on indigenous communities.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 26 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">monument</div><div class="ipa">/ˈmɒnjumənt/</div><div class="pos">n. 纪念碑</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="monument" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="monument" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：monu(提醒)+ment→提醒人们的东西→纪念碑</div><div class="coll">搭配：historic monument | national monument | erect a monument</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The historic <span class="highlight">monument</span> attracts many visitors.</div><div class="sent-zh">这座历史纪念碑吸引众多游客。</div><button class="sent-play" data-text="The historic monument attracts many visitors.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">monument</span> was erected in honour of the hero.</div><div class="sent-zh">为纪念英雄建了一座纪念碑。</div><button class="sent-play" data-text="A monument was erected in honour of the hero.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">patronage</div><div class="ipa">/ˈpætrənɪdʒ/</div><div class="pos">n. 赞助</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="patronage" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="patronage" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：patron(保护人)+age→保护→赞助</div><div class="coll">搭配：artistic patronage | under patronage | royal patronage</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The arts depend on public <span class="highlight">patronage</span>.</div><div class="sent-zh">艺术依赖公共赞助。</div><button class="sent-play" data-text="The arts depend on public patronage.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Royal <span class="highlight">patronage</span> elevated the artist's status.</div><div class="sent-zh">皇家赞助提升了艺术家的地位。</div><button class="sent-play" data-text="Royal patronage elevated the artist&#x27;s status.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">performing arts</div><div class="ipa">/pəˈfɔːmɪŋ ɑːts/</div><div class="pos">n. 表演艺术</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="performing arts" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="performing arts" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：perform(表演)+arts(艺术)→表演艺术</div><div class="coll">搭配：performing arts centre | study performing arts</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">performing arts</span> centre hosts theatrical productions.</div><div class="sent-zh">表演艺术中心举办戏剧演出。</div><button class="sent-play" data-text="The performing arts centre hosts theatrical productions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She studies <span class="highlight">performing arts</span> at university.</div><div class="sent-zh">她在大学学习表演艺术。</div><button class="sent-play" data-text="She studies performing arts at university.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">preservation</div><div class="ipa">/ˌprezəˈveɪʃn/</div><div class="pos">n. 保护</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="preservation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="preservation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：pre(提前)+serv(保存)+ation→保存→保护</div><div class="coll">搭配：historic preservation | preservation of | cultural preservation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Historic <span class="highlight">preservation</span> maintains cultural identity.</div><div class="sent-zh">历史保护维护文化认同。</div><button class="sent-play" data-text="Historic preservation maintains cultural identity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">preservation</span> of traditions is important.</div><div class="sent-zh">保护传统很重要。</div><button class="sent-play" data-text="The preservation of traditions is important.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">renaissance</div><div class="ipa">/rɪˈneɪsns/</div><div class="pos">n. 文艺复兴</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="renaissance" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="renaissance" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：re(再)+nais(出生)+sance→再生→文艺复兴</div><div class="coll">搭配：the Renaissance | cultural renaissance | experience a renaissance</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">Renaissance</span> was a period of great cultural achievement.</div><div class="sent-zh">文艺复兴是伟大文化成就的时期。</div><button class="sent-play" data-text="The Renaissance was a period of great cultural achievement.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The city is experiencing a cultural <span class="highlight">renaissance</span>.</div><div class="sent-zh">该城市正经历文化复兴。</div><button class="sent-play" data-text="The city is experiencing a cultural renaissance.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">authenticity</div><div class="ipa">/ˌɔːθenˈtɪsəti/</div><div class="pos">n. 真实性</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="authenticity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="authenticity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：authentic(真实)+ity→真实的状态→真实性</div><div class="coll">搭配：cultural authenticity | question authenticity | verify authenticity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">authenticity</span> of the painting was confirmed.</div><div class="sent-zh">画作的真实性得到确认。</div><button class="sent-play" data-text="The authenticity of the painting was confirmed.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cultural <span class="highlight">authenticity</span> is debated in a globalised world.</div><div class="sent-zh">在全球化世界中文化真实性备受争议。</div><button class="sent-play" data-text="Cultural authenticity is debated in a globalised world.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">commodification</div><div class="ipa">/kəˌmɒdɪfɪˈkeɪʃn/</div><div class="pos">n. 商品化</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="commodification" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="commodification" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：commod(商品)+ification→变成商品→商品化</div><div class="coll">搭配：cultural commodification | commodification of | resist commodification</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">commodification</span> of culture erodes traditions.</div><div class="sent-zh">文化商品化侵蚀传统。</div><button class="sent-play" data-text="The commodification of culture erodes traditions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Tourism accelerates the <span class="highlight">commodification</span> of heritage.</div><div class="sent-zh">旅游加速遗产的商品化。</div><button class="sent-play" data-text="Tourism accelerates the commodification of heritage.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">intangible</div><div class="ipa">/ɪnˈtændʒəbl/</div><div class="pos">adj. 无形的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="intangible" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="intangible" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：in(不)+tangible(可触摸的)→不可触摸的→无形的</div><div class="coll">搭配：intangible heritage | intangible assets | intangible cultural</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Intangible</span> heritage includes music and oral traditions.</div><div class="sent-zh">无形遗产包括音乐和口头传统。</div><button class="sent-play" data-text="Intangible heritage includes music and oral traditions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. UNESCO protects <span class="highlight">intangible</span> cultural heritage.</div><div class="sent-zh">联合国教科文组织保护非物质文化遗产。</div><button class="sent-play" data-text="UNESCO protects intangible cultural heritage.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">multiculturalism</div><div class="ipa">/ˌmʌltiˈkʌltʃərəlɪzəm/</div><div class="pos">n. 多元文化主义</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="multiculturalism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="multiculturalism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：multi(多)+cultural(文化)+ism→多元文化主义</div><div class="coll">搭配：promote multiculturalism | critique multiculturalism | era of multiculturalism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Multiculturalism</span> enriches national identity.</div><div class="sent-zh">多元文化主义丰富国家认同。</div><button class="sent-play" data-text="Multiculturalism enriches national identity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The debate over <span class="highlight">multiculturalism</span> continues.</div><div class="sent-zh">关于多元文化主义的争论仍在继续。</div><button class="sent-play" data-text="The debate over multiculturalism continues.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">embassy</div><div class="ipa">/ˈembəsi/</div><div class="pos">n. 大使馆</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="embassy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="embassy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 政府法律话题高频词 · 话题：政府法律</div><div class="memory">记忆：embassy(使团)→大使馆</div><div class="coll">搭配：foreign embassy | embassy staff | embassy in</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">embassy</span> issued a travel advisory.</div><div class="sent-zh">大使馆发布了旅行警告。</div><button class="sent-play" data-text="The embassy issued a travel advisory.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Embassy</span> staff were evacuated safely.</div><div class="sent-zh">大使馆人员安全撤离。</div><button class="sent-play" data-text="Embassy staff were evacuated safely.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">diplomacy</div><div class="ipa">/dɪˈpləʊməsi/</div><div class="pos">n. 外交</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diplomacy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diplomacy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 政府法律话题高频词 · 话题：政府法律</div><div class="memory">记忆：diploma(折叠文件)+cy→携带文件→外交</div><div class="coll">搭配：international diplomacy | shuttle diplomacy | practice diplomacy</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Diplomacy</span> is preferable to military action.</div><div class="sent-zh">外交优于军事行动。</div><button class="sent-play" data-text="Diplomacy is preferable to military action.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Shuttle <span class="highlight">diplomacy</span> helped broker the ceasefire.</div><div class="sent-zh">穿梭外交帮助促成了停火。</div><button class="sent-play" data-text="Shuttle diplomacy helped broker the ceasefire.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">diplomatic</div><div class="ipa">/ˌdɪpləˈmætɪk/</div><div class="pos">adj. 外交的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diplomatic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diplomatic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 政府法律话题常见词 · 话题：政府法律</div><div class="memory">记忆：diploma(文件)+tic→处理文件的→外交的</div><div class="coll">搭配：diplomatic relations | diplomatic tensions | diplomatic solution</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Diplomatic</span> relations were restored last year.</div><div class="sent-zh">去年恢复了外交关系。</div><button class="sent-play" data-text="Diplomatic relations were restored last year.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">diplomatic</span> solution is still possible.</div><div class="sent-zh">外交解决方案仍有可能。</div><button class="sent-play" data-text="A diplomatic solution is still possible.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">prominent</div><div class="ipa">/ˈprɒmɪnənt/</div><div class="pos">adj. 杰出的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prominent" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prominent" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：pro(向前)+min(突出)+ent→向前突出的→杰出的</div><div class="coll">搭配：prominent figure | prominent role | prominent position</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She is a <span class="highlight">prominent</span> figure in the art world.</div><div class="sent-zh">她是艺术界的杰出人物。</div><button class="sent-play" data-text="She is a prominent figure in the art world.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The issue occupies a <span class="highlight">prominent</span> position in public debate.</div><div class="sent-zh">该问题在公共辩论中占据突出位置。</div><button class="sent-play" data-text="The issue occupies a prominent position in public debate.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">spectacle</div><div class="ipa">/ˈspektəkl/</div><div class="pos">n. 奇观</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="spectacle" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="spectacle" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：spect(看)+acle→可看的东西→奇观</div><div class="coll">搭配：grand spectacle | spectacular spectacle | make a spectacle</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The opening ceremony was a grand <span class="highlight">spectacle</span>.</div><div class="sent-zh">开幕式是一场盛大奇观。</div><button class="sent-play" data-text="The opening ceremony was a grand spectacle.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The fireworks created a magnificent <span class="highlight">spectacle</span>.</div><div class="sent-zh">烟花创造了壮观的奇观。</div><button class="sent-play" data-text="The fireworks created a magnificent spectacle.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">tastemaker</div><div class="ipa">/ˈteɪstmeɪkə(r)/</div><div class="pos">n. 潮流引领者</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tastemaker" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tastemaker" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：taste(品味)+maker(制造者)→制造品味的人→潮流引领者</div><div class="coll">搭配：cultural tastemaker | digital tastemaker | influential tastemaker</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Social media influencers are modern tastemakers.</div><div class="sent-zh">社交媒体影响者是现代潮流引领者。</div><button class="sent-play" data-text="Social media influencers are modern tastemakers.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Tastemakers shape consumer preferences.</div><div class="sent-zh">潮流引领者塑造消费者偏好。</div><button class="sent-play" data-text="Tastemakers shape consumer preferences.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">vintage</div><div class="ipa">/ˈvɪntɪdʒ/</div><div class="pos">adj. 复古的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="vintage" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="vintage" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：vintage(收获季)→好年份→复古的</div><div class="coll">搭配：vintage clothing | vintage car | vintage wine</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Vintage</span> clothing has become fashionable.</div><div class="sent-zh">复古服装变得流行。</div><button class="sent-play" data-text="Vintage clothing has become fashionable.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He collects <span class="highlight">vintage</span> cars.</div><div class="sent-zh">他收集老式汽车。</div><button class="sent-play" data-text="He collects vintage cars.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">avant-garde</div><div class="ipa">/ˌævɒ̃ˈɡɑːd/</div><div class="pos">adj 前卫的；先锋的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="avant-garde" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="avant-garde" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：文化媒体</div><div class="memory">记忆：法语词，意为&#x27;先锋&#x27;</div><div class="coll">搭配：avant-garde art, avant-garde film, avant-garde movement</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The gallery specializes in <span class="highlight">avant-garde</span> art from the 20th century.</div><div class="sent-zh">这家画廊专门展出20世纪的前卫艺术。</div><button class="sent-play" data-text="The gallery specializes in avant-garde art from the 20th century.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. His <span class="highlight">avant-garde</span> approach to music was initially misunderstood.</div><div class="sent-zh">他前卫的音乐风格最初被误解。</div><button class="sent-play" data-text="His avant-garde approach to music was initially misunderstood.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">calligraphy</div><div class="ipa">/kəˈlɪɡrəfi/</div><div class="pos">n 书法</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="calligraphy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="calligraphy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：文化媒体</div><div class="memory">记忆：calli(美) + graphy(书写) = 美化书写</div><div class="coll">搭配：Chinese calligraphy, practice calligraphy, calligraphy exhibition</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Chinese <span class="highlight">calligraphy</span> is considered both an art form and a meditative practice.</div><div class="sent-zh">中国书法既被视为一种艺术形式，也被视为一种冥想修行。</div><button class="sent-play" data-text="Chinese calligraphy is considered both an art form and a meditative practice.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The museum hosted an exhibition of Islamic <span class="highlight">calligraphy</span>.</div><div class="sent-zh">博物馆举办了一场伊斯兰书法展览。</div><button class="sent-play" data-text="The museum hosted an exhibition of Islamic calligraphy.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cinematography</div><div class="ipa">/ˌsɪnəməˈtɒɡrəfi/</div><div class="pos">n 电影摄影；摄影艺术</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cinematography" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cinematography" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：文化媒体</div><div class="memory">记忆：cine(电影) + matography(记录) = 电影摄影</div><div class="coll">搭配：award-winning cinematography, digital cinematography, cinematography technique</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The film won an Oscar for its stunning <span class="highlight">cinematography</span>.</div><div class="sent-zh">该片因其出色的摄影艺术获得了奥斯卡奖。</div><button class="sent-play" data-text="The film won an Oscar for its stunning cinematography.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Advances in digital <span class="highlight">cinematography</span> have transformed the industry.</div><div class="sent-zh">数字电影摄影的进步改变了整个行业。</div><button class="sent-play" data-text="Advances in digital cinematography have transformed the industry.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cultural assimilation</div><div class="ipa">/ˈkʌltʃərəl əˌsɪməˈleɪʃn/</div><div class="pos">n 文化同化</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cultural assimilation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cultural assimilation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：文化媒体</div><div class="memory">记忆：cultural(文化) + assimilation(同化) = 文化同化</div><div class="coll">搭配：forced cultural assimilation, resist cultural assimilation, process of cultural assimilation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Immigrants often face pressure toward <span class="highlight">cultural assimilation</span>.</div><div class="sent-zh">移民经常面临文化同化的压力。</div><button class="sent-play" data-text="Immigrants often face pressure toward cultural assimilation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The policy of <span class="highlight">cultural assimilation</span> had devastating effects on indigenous communities.</div><div class="sent-zh">文化同化政策对原住民社区造成了毁灭性影响。</div><button class="sent-play" data-text="The policy of cultural assimilation had devastating effects on indigenous communities.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 11</h1></div>
+<div class="header"><h1>雅思 Future Day 11</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 11 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">semester</div>
-<div style="font-size:13px;color:#8b949e">/sɪˈmestə(r)/</div>
-<div style="font-size:14px;color:#7ee787">n. 学期</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 教育话题高频词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：seme(种子)+ster→播种的季节→学期</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：fall semester | spring semester | during the semester</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. He took six courses this semester.</div><div class="sent-zh">他这学期修了六门课。</div><button class="sent-play" data-text="He took six courses this semester.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The semester begins in September.</div><div class="sent-zh">学期九月开始。</div><button class="sent-play" data-text="The semester begins in September.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">alumni</div>
-<div style="font-size:13px;color:#8b949e">/əˈlmnaɪ/</div>
-<div style="font-size:14px;color:#7ee787">n. 校友</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 教育话题高频词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：alumn(养子)+i→被学校培养的人→校友</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：alumni association | alumni network | notable alumni</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The alumni association organises annual events.</div><div class="sent-zh">校友会组织年度活动。</div><button class="sent-play" data-text="The alumni association organises annual events.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Notable alumni include several Nobel laureates.</div><div class="sent-zh">知名校友包括几位诺贝尔奖得主。</div><button class="sent-play" data-text="Notable alumni include several Nobel laureates.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">bibliography</div>
-<div style="font-size:13px;color:#8b949e">/ˌbɪbliˈɒɡrəfi/</div>
-<div style="font-size:14px;color:#7ee787">n. 参考书目</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：biblio(书)+graph(写)+y→写书目的→参考书目</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：compile a bibliography | annotated bibliography | extensive bibliography</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The bibliography contains over two hundred references.</div><div class="sent-zh">参考书目包含两百多条引用。</div><button class="sent-play" data-text="The bibliography contains over two hundred references.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Make sure your bibliography is properly formatted.</div><div class="sent-zh">确保参考书目格式正确。</div><button class="sent-play" data-text="Make sure your bibliography is properly formatted.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">colloquium</div>
-<div style="font-size:13px;color:#8b949e">/kəˈləʊkwiəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 学术研讨会</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：loqu(说话)+ium→一起说话的地方→研讨会</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：attend a colloquium | international colloquium | colloquium on</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She presented her findings at an international colloquium.</div><div class="sent-zh">她在国际研讨会上展示了研究成果。</div><button class="sent-play" data-text="She presented her findings at an international colloquium.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The colloquium brought together leading researchers.</div><div class="sent-zh">研讨会汇聚了顶尖研究者。</div><button class="sent-play" data-text="The colloquium brought together leading researchers.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">matriculation</div>
-<div style="font-size:13px;color:#8b949e">/məˌtrɪkjuˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 入学注册</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：matric(名册)+ulation→登记入册→入学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：matriculation exam | matriculation requirements | after matriculation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Matriculation requirements vary by programme.</div><div class="sent-zh">入学要求因项目而异。</div><button class="sent-play" data-text="Matriculation requirements vary by programme.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He completed his matriculation in August.</div><div class="sent-zh">他在八月完成了入学注册。</div><button class="sent-play" data-text="He completed his matriculation in August.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">extracurricular</div>
-<div style="font-size:13px;color:#8b949e">/ˌekstrəkəˈrɪkjələ(r)/</div>
-<div style="font-size:14px;color:#7ee787">adj. 课外的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：extra(额外)+curricular(课程的)→课程之外的→课外的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：extracurricular activities | extracurricular programmes | extracurricular involvement</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Extracurricular activities enhance university applications.</div><div class="sent-zh">课外活动提升大学申请竞争力。</div><button class="sent-play" data-text="Extracurricular activities enhance university applications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Employers value extracurricular involvement.</div><div class="sent-zh">雇主重视课外参与。</div><button class="sent-play" data-text="Employers value extracurricular involvement.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">pedagogical</div>
-<div style="font-size:13px;color:#8b949e">/ˌpedəˈɡɒdʒɪkl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 教学法的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：peda(儿童)+gog(引导)+ical→引导儿童的→教学的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：pedagogical approach | pedagogical methods | pedagogical innovation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The pedagogical approach emphasises student participation.</div><div class="sent-zh">该教学法强调学生参与。</div><button class="sent-play" data-text="The pedagogical approach emphasises student participation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Pedagogical methods continue to evolve.</div><div class="sent-zh">教学方法持续演进。</div><button class="sent-play" data-text="Pedagogical methods continue to evolve.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">remedial</div>
-<div style="font-size:13px;color:#8b949e">/rɪˈmiːdiəl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 补习的；补救的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：remedi(补救)+al→补救的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：remedial classes | remedial action | remedial measures</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The school offers remedial classes for struggling students.</div><div class="sent-zh">学校为困难学生提供补习班。</div><button class="sent-play" data-text="The school offers remedial classes for struggling students.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Remedial measures must be taken immediately.</div><div class="sent-zh">必须立即采取补救措施。</div><button class="sent-play" data-text="Remedial measures must be taken immediately.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">plenary</div>
-<div style="font-size:13px;color:#8b949e">/ˈpliːnəri/</div>
-<div style="font-size:14px;color:#7ee787">adj. 全体的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：plen(满)+ary→全员到满的→全体会议</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：plenary session | plenary speaker | plenary meeting</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The plenary session was attended by all delegates.</div><div class="sent-zh">全体会议所有代表都出席了。</div><button class="sent-play" data-text="The plenary session was attended by all delegates.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She was the plenary speaker at the conference.</div><div class="sent-zh">她是大会的主讲嘉宾。</div><button class="sent-play" data-text="She was the plenary speaker at the conference.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">hermeneutics</div>
-<div style="font-size:13px;color:#8b949e">/ˌhɜːməˈnjuːtɪks/</div>
-<div style="font-size:14px;color:#7ee787">n. 诠释学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 哲学教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：hermes(解释)+neutics→解释的学问→诠释学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：hermeneutic circle | hermeneutic approach | biblical hermeneutics</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Hermeneutics is central to textual interpretation.</div><div class="sent-zh">诠释学是文本解释的核心。</div><button class="sent-play" data-text="Hermeneutics is central to textual interpretation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The hermeneutic circle is a key concept in philosophy.</div><div class="sent-zh">诠释学循环是哲学中的核心概念。</div><button class="sent-play" data-text="The hermeneutic circle is a key concept in philosophy.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">dialectic</div>
-<div style="font-size:13px;color:#8b949e">/ˌdaɪəˈlektɪk/</div>
-<div style="font-size:14px;color:#7ee787">n. 辩证法</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 哲学教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dia(之间)+lect(说)+ic→对话的艺术→辩证</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：dialectic method | dialectic reasoning | Hegelian dialectic</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The dialectic method encourages critical thinking.</div><div class="sent-zh">辩证法鼓励批判性思维。</div><button class="sent-play" data-text="The dialectic method encourages critical thinking.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Hegelian dialectic shaped modern philosophy.</div><div class="sent-zh">黑格尔辩证法塑造了现代哲学。</div><button class="sent-play" data-text="Hegelian dialectic shaped modern philosophy.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">didactic</div>
-<div style="font-size:13px;color:#8b949e">/daɪˈdæktɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 说教的；教导的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：didact(教导)+ic→教导的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：didactic approach | didactic literature | didactic tone</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The novel has a didactic tone.</div><div class="sent-zh">小说带有说教意味。</div><button class="sent-play" data-text="The novel has a didactic tone.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Didactic methods are sometimes criticised as overly rigid.</div><div class="sent-zh">说教式方法有时被批评为过于死板。</div><button class="sent-play" data-text="Didactic methods are sometimes criticised as overly rigid.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">erudite</div>
-<div style="font-size:13px;color:#8b949e">/ˈerudaɪt/</div>
-<div style="font-size:14px;color:#7ee787">adj. 博学的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：e(出)+rudite(粗野)→脱离粗野→博学的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：erudite scholar | erudite discussion | remarkably erudite</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The professor is known as an erudite scholar.</div><div class="sent-zh">这位教授以博学著称。</div><button class="sent-play" data-text="The professor is known as an erudite scholar.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. His erudite lectures attract large audiences.</div><div class="sent-zh">他博学的讲座吸引大量听众。</div><button class="sent-play" data-text="His erudite lectures attract large audiences.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">bilingualism</div>
-<div style="font-size:13px;color:#8b949e">/baɪˈlɪŋɡwəlɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n 双语制；双语能力</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bi(双) + lingua(语言) + lism = 双语制</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：promote bilingualism, childhood bilingualism, policy of bilingualism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Bilingualism is believed to enhance cognitive flexibility.</div><div class="sent-zh">双语能力被认为能增强认知灵活性。</div><button class="sent-play" data-text="Bilingualism is believed to enhance cognitive flexibility.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government promotes bilingualism in schools nationwide.</div><div class="sent-zh">政府在全国学校推广双语制。</div><button class="sent-play" data-text="The government promotes bilingualism in schools nationwide.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">boarding school</div>
-<div style="font-size:13px;color:#8b949e">/ˈbɔːdɪŋ skuːl/</div>
-<div style="font-size:14px;color:#7ee787">n 寄宿学校</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 雅思高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：board(寄宿) + school = 寄宿学校</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：attend boarding school, private boarding school, boarding school education</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. He was sent to a boarding school at the age of eight.</div><div class="sent-zh">他八岁时被送到寄宿学校。</div><button class="sent-play" data-text="He was sent to a boarding school at the age of eight.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Boarding school education can foster independence in children.</div><div class="sent-zh">寄宿学校教育可以培养孩子的独立性。</div><button class="sent-play" data-text="Boarding school education can foster independence in children.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">catechism</div>
-<div style="font-size:13px;color:#8b949e">/ˈkætəkɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n 教义问答；教理</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 低频学术 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cate(向下) + ech(声音) + ism = 教导</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：religious catechism, teach catechism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Students at the religious school were required to learn catechism.</div><div class="sent-zh">宗教学校的学生被要求学习教义问答。</div><button class="sent-play" data-text="Students at the religious school were required to learn catechism.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The catechism emphasizes moral behavior and community service.</div><div class="sent-zh">教理强调道德行为和社区服务。</div><button class="sent-play" data-text="The catechism emphasizes moral behavior and community service.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cram school</div>
-<div style="font-size:13px;color:#8b949e">/kræm skuːl/</div>
-<div style="font-size:14px;color:#7ee787">n 补习班；应试学校</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cram(填鸭) + school = 填鸭式学校</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：attend cram school, cram school culture, after-school cram school</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Many students attend cram school after regular classes.</div><div class="sent-zh">许多学生在正课后去补习班。</div><button class="sent-play" data-text="Many students attend cram school after regular classes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The cram school culture has raised concerns about student stress levels.</div><div class="sent-zh">补习班文化引发了对学生压力水平的担忧。</div><button class="sent-play" data-text="The cram school culture has raised concerns about student stress levels.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">distance learning</div>
-<div style="font-size:13px;color:#8b949e">/ˈdɪstəns ˈlɜːnɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n 远程教育</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：distance(距离) + learning(学习) = 远程学习</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：distance learning program, distance learning course, online distance learning</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Distance learning has made education accessible to rural communities.</div><div class="sent-zh">远程教育使农村社区也能接受教育。</div><button class="sent-play" data-text="Distance learning has made education accessible to rural communities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The university offers a distance learning program in business management.</div><div class="sent-zh">该大学提供商业管理远程教育项目。</div><button class="sent-play" data-text="The university offers a distance learning program in business management.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">edu-tourism</div>
-<div style="font-size:13px;color:#8b949e">/ˌedjuːˈtʊərɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n 教育旅游</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 低频学术 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：edu(教育) + tourism(旅游) = 教育旅游</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：promote edu-tourism, edu-tourism destination</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Edu-tourism allows students to learn while experiencing different cultures.</div><div class="sent-zh">教育旅游让学生在学习的同时体验不同文化。</div><button class="sent-play" data-text="Edu-tourism allows students to learn while experiencing different cultures.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Australia has become a popular edu-tourism destination for Asian students.</div><div class="sent-zh">澳大利亚已成为亚洲学生热门的教育旅游目的地。</div><button class="sent-play" data-text="Australia has become a popular edu-tourism destination for Asian students.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">grade inflation</div>
-<div style="font-size:13px;color:#8b949e">/ɡreɪd ɪnˈfleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n 分数膨胀</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术词汇 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：grade(分数) + inflation(膨胀) = 分数膨胀</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：combat grade inflation, suffer from grade inflation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Grade inflation makes it difficult to distinguish top students.</div><div class="sent-zh">分数膨胀使得区分优秀学生变得困难。</div><button class="sent-play" data-text="Grade inflation makes it difficult to distinguish top students.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Professors have debated the causes of grade inflation for decades.</div><div class="sent-zh">教授们几十年来一直在讨论分数膨胀的原因。</div><button class="sent-play" data-text="Professors have debated the causes of grade inflation for decades.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 11 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">semester</div><div class="ipa">/sɪˈmestə(r)/</div><div class="pos">n. 学期</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="semester" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="semester" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 教育话题高频词 · 话题：教育</div><div class="memory">记忆：seme(种子)+ster→播种的季节→学期</div><div class="coll">搭配：fall semester | spring semester | during the semester</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. He took six courses this <span class="highlight">semester</span>.</div><div class="sent-zh">他这学期修了六门课。</div><button class="sent-play" data-text="He took six courses this semester.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">semester</span> begins in September.</div><div class="sent-zh">学期九月开始。</div><button class="sent-play" data-text="The semester begins in September.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">alumni</div><div class="ipa">/əˈlmnaɪ/</div><div class="pos">n. 校友</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="alumni" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="alumni" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 教育话题高频词 · 话题：教育</div><div class="memory">记忆：alumn(养子)+i→被学校培养的人→校友</div><div class="coll">搭配：alumni association | alumni network | notable alumni</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">alumni</span> association organises annual events.</div><div class="sent-zh">校友会组织年度活动。</div><button class="sent-play" data-text="The alumni association organises annual events.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Notable <span class="highlight">alumni</span> include several Nobel laureates.</div><div class="sent-zh">知名校友包括几位诺贝尔奖得主。</div><button class="sent-play" data-text="Notable alumni include several Nobel laureates.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">bibliography</div><div class="ipa">/ˌbɪbliˈɒɡrəfi/</div><div class="pos">n. 参考书目</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bibliography" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bibliography" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：biblio(书)+graph(写)+y→写书目的→参考书目</div><div class="coll">搭配：compile a bibliography | annotated bibliography | extensive bibliography</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">bibliography</span> contains over two hundred references.</div><div class="sent-zh">参考书目包含两百多条引用。</div><button class="sent-play" data-text="The bibliography contains over two hundred references.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Make sure your <span class="highlight">bibliography</span> is properly formatted.</div><div class="sent-zh">确保参考书目格式正确。</div><button class="sent-play" data-text="Make sure your bibliography is properly formatted.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">colloquium</div><div class="ipa">/kəˈləʊkwiəm/</div><div class="pos">n. 学术研讨会</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="colloquium" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="colloquium" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：loqu(说话)+ium→一起说话的地方→研讨会</div><div class="coll">搭配：attend a colloquium | international colloquium | colloquium on</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She presented her findings at an international <span class="highlight">colloquium</span>.</div><div class="sent-zh">她在国际研讨会上展示了研究成果。</div><button class="sent-play" data-text="She presented her findings at an international colloquium.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">colloquium</span> brought together leading researchers.</div><div class="sent-zh">研讨会汇聚了顶尖研究者。</div><button class="sent-play" data-text="The colloquium brought together leading researchers.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">matriculation</div><div class="ipa">/məˌtrɪkjuˈleɪʃn/</div><div class="pos">n. 入学注册</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="matriculation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="matriculation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：matric(名册)+ulation→登记入册→入学</div><div class="coll">搭配：matriculation exam | matriculation requirements | after matriculation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Matriculation</span> requirements vary by programme.</div><div class="sent-zh">入学要求因项目而异。</div><button class="sent-play" data-text="Matriculation requirements vary by programme.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. He completed his <span class="highlight">matriculation</span> in August.</div><div class="sent-zh">他在八月完成了入学注册。</div><button class="sent-play" data-text="He completed his matriculation in August.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">extracurricular</div><div class="ipa">/ˌekstrəkəˈrɪkjələ(r)/</div><div class="pos">adj. 课外的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="extracurricular" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="extracurricular" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：extra(额外)+curricular(课程的)→课程之外的→课外的</div><div class="coll">搭配：extracurricular activities | extracurricular programmes | extracurricular involvement</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Extracurricular</span> activities enhance university applications.</div><div class="sent-zh">课外活动提升大学申请竞争力。</div><button class="sent-play" data-text="Extracurricular activities enhance university applications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Employers value <span class="highlight">extracurricular</span> involvement.</div><div class="sent-zh">雇主重视课外参与。</div><button class="sent-play" data-text="Employers value extracurricular involvement.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">pedagogical</div><div class="ipa">/ˌpedəˈɡɒdʒɪkl/</div><div class="pos">adj. 教学法的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pedagogical" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pedagogical" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：peda(儿童)+gog(引导)+ical→引导儿童的→教学的</div><div class="coll">搭配：pedagogical approach | pedagogical methods | pedagogical innovation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">pedagogical</span> approach emphasises student participation.</div><div class="sent-zh">该教学法强调学生参与。</div><button class="sent-play" data-text="The pedagogical approach emphasises student participation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Pedagogical</span> methods continue to evolve.</div><div class="sent-zh">教学方法持续演进。</div><button class="sent-play" data-text="Pedagogical methods continue to evolve.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">remedial</div><div class="ipa">/rɪˈmiːdiəl/</div><div class="pos">adj. 补习的；补救的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="remedial" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="remedial" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：remedi(补救)+al→补救的</div><div class="coll">搭配：remedial classes | remedial action | remedial measures</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The school offers <span class="highlight">remedial</span> classes for struggling students.</div><div class="sent-zh">学校为困难学生提供补习班。</div><button class="sent-play" data-text="The school offers remedial classes for struggling students.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Remedial</span> measures must be taken immediately.</div><div class="sent-zh">必须立即采取补救措施。</div><button class="sent-play" data-text="Remedial measures must be taken immediately.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">plenary</div><div class="ipa">/ˈpliːnəri/</div><div class="pos">adj. 全体的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="plenary" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="plenary" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：plen(满)+ary→全员到满的→全体会议</div><div class="coll">搭配：plenary session | plenary speaker | plenary meeting</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">plenary</span> session was attended by all delegates.</div><div class="sent-zh">全体会议所有代表都出席了。</div><button class="sent-play" data-text="The plenary session was attended by all delegates.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She was the <span class="highlight">plenary</span> speaker at the conference.</div><div class="sent-zh">她是大会的主讲嘉宾。</div><button class="sent-play" data-text="She was the plenary speaker at the conference.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">hermeneutics</div><div class="ipa">/ˌhɜːməˈnjuːtɪks/</div><div class="pos">n. 诠释学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="hermeneutics" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="hermeneutics" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 哲学教育话题高级词 · 话题：教育</div><div class="memory">记忆：hermes(解释)+neutics→解释的学问→诠释学</div><div class="coll">搭配：hermeneutic circle | hermeneutic approach | biblical hermeneutics</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Hermeneutics</span> is central to textual interpretation.</div><div class="sent-zh">诠释学是文本解释的核心。</div><button class="sent-play" data-text="Hermeneutics is central to textual interpretation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The hermeneutic circle is a key concept in philosophy.</div><div class="sent-zh">诠释学循环是哲学中的核心概念。</div><button class="sent-play" data-text="The hermeneutic circle is a key concept in philosophy.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">dialectic</div><div class="ipa">/ˌdaɪəˈlektɪk/</div><div class="pos">n. 辩证法</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="dialectic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="dialectic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 哲学教育话题高级词 · 话题：教育</div><div class="memory">记忆：dia(之间)+lect(说)+ic→对话的艺术→辩证</div><div class="coll">搭配：dialectic method | dialectic reasoning | Hegelian dialectic</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">dialectic</span> method encourages critical thinking.</div><div class="sent-zh">辩证法鼓励批判性思维。</div><button class="sent-play" data-text="The dialectic method encourages critical thinking.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Hegelian <span class="highlight">dialectic</span> shaped modern philosophy.</div><div class="sent-zh">黑格尔辩证法塑造了现代哲学。</div><button class="sent-play" data-text="Hegelian dialectic shaped modern philosophy.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">didactic</div><div class="ipa">/daɪˈdæktɪk/</div><div class="pos">adj. 说教的；教导的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="didactic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="didactic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：didact(教导)+ic→教导的</div><div class="coll">搭配：didactic approach | didactic literature | didactic tone</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The novel has a <span class="highlight">didactic</span> tone.</div><div class="sent-zh">小说带有说教意味。</div><button class="sent-play" data-text="The novel has a didactic tone.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Didactic</span> methods are sometimes criticised as overly rigid.</div><div class="sent-zh">说教式方法有时被批评为过于死板。</div><button class="sent-play" data-text="Didactic methods are sometimes criticised as overly rigid.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">erudite</div><div class="ipa">/ˈerudaɪt/</div><div class="pos">adj. 博学的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="erudite" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="erudite" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：e(出)+rudite(粗野)→脱离粗野→博学的</div><div class="coll">搭配：erudite scholar | erudite discussion | remarkably erudite</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The professor is known as an <span class="highlight">erudite</span> scholar.</div><div class="sent-zh">这位教授以博学著称。</div><button class="sent-play" data-text="The professor is known as an erudite scholar.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. His <span class="highlight">erudite</span> lectures attract large audiences.</div><div class="sent-zh">他博学的讲座吸引大量听众。</div><button class="sent-play" data-text="His erudite lectures attract large audiences.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">bilingualism</div><div class="ipa">/baɪˈlɪŋɡwəlɪzəm/</div><div class="pos">n 双语制；双语能力</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bilingualism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bilingualism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：教育</div><div class="memory">记忆：bi(双) + lingua(语言) + lism = 双语制</div><div class="coll">搭配：promote bilingualism, childhood bilingualism, policy of bilingualism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Bilingualism</span> is believed to enhance cognitive flexibility.</div><div class="sent-zh">双语能力被认为能增强认知灵活性。</div><button class="sent-play" data-text="Bilingualism is believed to enhance cognitive flexibility.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government promotes <span class="highlight">bilingualism</span> in schools nationwide.</div><div class="sent-zh">政府在全国学校推广双语制。</div><button class="sent-play" data-text="The government promotes bilingualism in schools nationwide.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">boarding school</div><div class="ipa">/ˈbɔːdɪŋ skuːl/</div><div class="pos">n 寄宿学校</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="boarding school" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="boarding school" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 雅思高频 · 话题：教育</div><div class="memory">记忆：board(寄宿) + school = 寄宿学校</div><div class="coll">搭配：attend boarding school, private boarding school, boarding school education</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. He was sent to a <span class="highlight">boarding school</span> at the age of eight.</div><div class="sent-zh">他八岁时被送到寄宿学校。</div><button class="sent-play" data-text="He was sent to a boarding school at the age of eight.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Boarding school</span> education can foster independence in children.</div><div class="sent-zh">寄宿学校教育可以培养孩子的独立性。</div><button class="sent-play" data-text="Boarding school education can foster independence in children.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">catechism</div><div class="ipa">/ˈkætəkɪzəm/</div><div class="pos">n 教义问答；教理</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="catechism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="catechism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 低频学术 · 话题：教育</div><div class="memory">记忆：cate(向下) + ech(声音) + ism = 教导</div><div class="coll">搭配：religious catechism, teach catechism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Students at the religious school were required to learn <span class="highlight">catechism</span>.</div><div class="sent-zh">宗教学校的学生被要求学习教义问答。</div><button class="sent-play" data-text="Students at the religious school were required to learn catechism.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">catechism</span> emphasizes moral behavior and community service.</div><div class="sent-zh">教理强调道德行为和社区服务。</div><button class="sent-play" data-text="The catechism emphasizes moral behavior and community service.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">cram school</div><div class="ipa">/kræm skuːl/</div><div class="pos">n 补习班；应试学校</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cram school" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cram school" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：教育</div><div class="memory">记忆：cram(填鸭) + school = 填鸭式学校</div><div class="coll">搭配：attend cram school, cram school culture, after-school cram school</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Many students attend <span class="highlight">cram school</span> after regular classes.</div><div class="sent-zh">许多学生在正课后去补习班。</div><button class="sent-play" data-text="Many students attend cram school after regular classes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">cram school</span> culture has raised concerns about student stress levels.</div><div class="sent-zh">补习班文化引发了对学生压力水平的担忧。</div><button class="sent-play" data-text="The cram school culture has raised concerns about student stress levels.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">distance learning</div><div class="ipa">/ˈdɪstəns ˈlɜːnɪŋ/</div><div class="pos">n 远程教育</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="distance learning" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="distance learning" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：教育</div><div class="memory">记忆：distance(距离) + learning(学习) = 远程学习</div><div class="coll">搭配：distance learning program, distance learning course, online distance learning</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Distance learning</span> has made education accessible to rural communities.</div><div class="sent-zh">远程教育使农村社区也能接受教育。</div><button class="sent-play" data-text="Distance learning has made education accessible to rural communities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The university offers a <span class="highlight">distance learning</span> program in business management.</div><div class="sent-zh">该大学提供商业管理远程教育项目。</div><button class="sent-play" data-text="The university offers a distance learning program in business management.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">edu-tourism</div><div class="ipa">/ˌedjuːˈtʊərɪzəm/</div><div class="pos">n 教育旅游</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="edu-tourism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="edu-tourism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 低频学术 · 话题：教育</div><div class="memory">记忆：edu(教育) + tourism(旅游) = 教育旅游</div><div class="coll">搭配：promote edu-tourism, edu-tourism destination</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Edu-tourism</span> allows students to learn while experiencing different cultures.</div><div class="sent-zh">教育旅游让学生在学习的同时体验不同文化。</div><button class="sent-play" data-text="Edu-tourism allows students to learn while experiencing different cultures.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Australia has become a popular <span class="highlight">edu-tourism</span> destination for Asian students.</div><div class="sent-zh">澳大利亚已成为亚洲学生热门的教育旅游目的地。</div><button class="sent-play" data-text="Australia has become a popular edu-tourism destination for Asian students.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">grade inflation</div><div class="ipa">/ɡreɪd ɪnˈfleɪʃn/</div><div class="pos">n 分数膨胀</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="grade inflation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="grade inflation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术词汇 · 话题：教育</div><div class="memory">记忆：grade(分数) + inflation(膨胀) = 分数膨胀</div><div class="coll">搭配：combat grade inflation, suffer from grade inflation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Grade inflation</span> makes it difficult to distinguish top students.</div><div class="sent-zh">分数膨胀使得区分优秀学生变得困难。</div><button class="sent-play" data-text="Grade inflation makes it difficult to distinguish top students.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Professors have debated the causes of <span class="highlight">grade inflation</span> for decades.</div><div class="sent-zh">教授们几十年来一直在讨论分数膨胀的原因。</div><button class="sent-play" data-text="Professors have debated the causes of grade inflation for decades.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

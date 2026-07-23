@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 21</h1></div>
+<div class="header"><h1>雅思 Future Day 21</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 21 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">comprehension</div>
-<div style="font-size:13px;color:#8b949e">/ˌkɒmprɪˈhenʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 理解力</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 教育话题高频词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：com(一起)+prehens(抓住)+ion→抓住要义→理解</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：reading comprehension | listening comprehension | beyond comprehension</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Reading comprehension requires active engagement.</div><div class="sent-zh">阅读理解需要积极参与。</div><button class="sent-play" data-text="Reading comprehension requires active engagement.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The concept is beyond a child's comprehension.</div><div class="sent-zh">这个概念超出了孩子的理解力。</div><button class="sent-play" data-text="The concept is beyond a child's comprehension.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">fluency</div>
-<div style="font-size:13px;color:#8b949e">/ˈfluːənsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 流利度</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 教育话题高频词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：flu(流)+ency→流利→流利度</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：oral fluency | achieve fluency | language fluency</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Oral fluency is a key goal in language learning.</div><div class="sent-zh">口语流利度是语言学习的关键目标。</div><button class="sent-play" data-text="Oral fluency is a key goal in language learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Achieving fluency takes years of practice.</div><div class="sent-zh">达到流利需要多年练习。</div><button class="sent-play" data-text="Achieving fluency takes years of practice.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">linguistics</div>
-<div style="font-size:13px;color:#8b949e">/lɪŋˈɡwɪstɪks/</div>
-<div style="font-size:14px;color:#7ee787">n. 语言学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 教育话题高频词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：lingu(语言)+istics→研究语言的学问→语言学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：applied linguistics | cognitive linguistics | study linguistics</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She studies applied linguistics at university.</div><div class="sent-zh">她在大学学习应用语言学。</div><button class="sent-play" data-text="She studies applied linguistics at university.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cognitive linguistics explores the mind-language connection.</div><div class="sent-zh">认知语言学探索思维与语言的关系。</div><button class="sent-play" data-text="Cognitive linguistics explores the mind-language connection.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">comprehensible</div>
-<div style="font-size:13px;color:#8b949e">/ˌkɒmprɪˈhensəbl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 可理解的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：com(完全)+prehens(抓住)+ible→能完全抓住的→可理解的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：comprehensible input | comprehensible to | make comprehensible</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Comprehensible input aids language learning.</div><div class="sent-zh">可理解输入有助于语言学习。</div><button class="sent-play" data-text="Comprehensible input aids language learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The instructions must be comprehensible to all users.</div><div class="sent-zh">说明必须让所有用户都能理解。</div><button class="sent-play" data-text="The instructions must be comprehensible to all users.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">decipher</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈsaɪfə(r)/</div>
-<div style="font-size:14px;color:#7ee787">v. 破译</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：de(去除)+cipher(密码)→去除密码→破译</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：decipher text | decipher meaning | difficult to decipher</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Students must decipher complex academic texts.</div><div class="sent-zh">学生必须破译复杂的学术文本。</div><button class="sent-play" data-text="Students must decipher complex academic texts.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Ancient scripts are difficult to decipher.</div><div class="sent-zh">古代文字难以破译。</div><button class="sent-play" data-text="Ancient scripts are difficult to decipher.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">discern</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈsɜːn/</div>
-<div style="font-size:14px;color:#7ee787">v. 辨别</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dis(分开)+cern(筛)→筛分开→辨别</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：discern patterns | discern differences | discern meaning</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Students must discern fact from opinion.</div><div class="sent-zh">学生必须辨别事实与观点。</div><button class="sent-play" data-text="Students must discern fact from opinion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. It is difficult to discern patterns in the data.</div><div class="sent-zh">数据中难以辨别出模式。</div><button class="sent-play" data-text="It is difficult to discern patterns in the data.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">eloquent</div>
-<div style="font-size:13px;color:#8b949e">/ˈeləkwənt/</div>
-<div style="font-size:14px;color:#7ee787">adj. 雄辩的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：e(出)+loqu(说话)+ent→说出好话→雄辩的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：eloquent speech | eloquent speaker | remarkably eloquent</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She delivered an eloquent speech at graduation.</div><div class="sent-zh">她在毕业典礼上发表了雄辩的演讲。</div><button class="sent-play" data-text="She delivered an eloquent speech at graduation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An eloquent speaker can move audiences.</div><div class="sent-zh">雄辩的演讲者能打动听众。</div><button class="sent-play" data-text="An eloquent speaker can move audiences.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">illiterate</div>
-<div style="font-size:13px;color:#8b949e">/ɪˈlɪtərət/</div>
-<div style="font-size:14px;color:#7ee787">adj. 不识字的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：il(不)+literate(识字的)→不识字的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：functionally illiterate | illiterate population | computer illiterate</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Millions of adults remain illiterate worldwide.</div><div class="sent-zh">全球数百万成年人仍不识字。</div><button class="sent-play" data-text="Millions of adults remain illiterate worldwide.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Functionally illiterate adults struggle with daily tasks.</div><div class="sent-zh">功能性文盲成年人在日常任务中挣扎。</div><button class="sent-play" data-text="Functionally illiterate adults struggle with daily tasks.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">intelligible</div>
-<div style="font-size:13px;color:#8b949e">/ɪnˈtelɪdʒəbl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 可理解的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：intel(理解)+ligible→能被理解的→可理解的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：barely intelligible | make intelligible | intelligible speech</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. His handwriting was barely intelligible.</div><div class="sent-zh">他的笔迹几乎无法辨认。</div><button class="sent-play" data-text="His handwriting was barely intelligible.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The recording was not intelligible due to noise.</div><div class="sent-zh">由于噪音，录音无法听清。</div><button class="sent-play" data-text="The recording was not intelligible due to noise.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">lucid</div>
-<div style="font-size:13px;color:#8b949e">/ˈluːsɪd/</div>
-<div style="font-size:14px;color:#7ee787">adj. 清晰的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：luc(光)+id→有光的→清晰的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：lucid explanation | lucid writing | lucid moment</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The professor gave a lucid explanation of the theory.</div><div class="sent-zh">教授对理论作了清晰的解释。</div><button class="sent-play" data-text="The professor gave a lucid explanation of the theory.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Lucid writing is essential for academic papers.</div><div class="sent-zh">清晰的写作对学术论文至关重要。</div><button class="sent-play" data-text="Lucid writing is essential for academic papers.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">morphology</div>
-<div style="font-size:13px;color:#8b949e">/mɔːˈfɒlədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 形态学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：morph(形态)+ology(学问)→研究形态→形态学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：linguistic morphology | word morphology | morphology of</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Morphology studies word formation.</div><div class="sent-zh">形态学研究词的构成。</div><button class="sent-play" data-text="Morphology studies word formation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Linguistic morphology analyses inflection and derivation.</div><div class="sent-zh">语言形态学分析屈折和派生。</div><button class="sent-play" data-text="Linguistic morphology analyses inflection and derivation.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">phonology</div>
-<div style="font-size:13px;color:#8b949e">/fəˈnɒlədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 音系学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：phon(声音)+ology(学问)→研究声音→音系学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：phonology of | generative phonology | phonological rules</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Phonology studies sound systems in languages.</div><div class="sent-zh">音系学研究语言的声音系统。</div><button class="sent-play" data-text="Phonology studies sound systems in languages.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Generative phonology emerged in the 1960s.</div><div class="sent-zh">生成音系学出现于1960年代。</div><button class="sent-play" data-text="Generative phonology emerged in the 1960s.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">polysemy</div>
-<div style="font-size:13px;color:#8b949e">/pəˈlɪsɪmi/</div>
-<div style="font-size:14px;color:#7ee787">n. 多义性</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：poly(多)+semy(意义)→多义→多义性</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：lexical polysemy | polysemy of | degree of polysemy</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Polysemy is common in English vocabulary.</div><div class="sent-zh">多义性在英语词汇中很常见。</div><button class="sent-play" data-text="Polysemy is common in English vocabulary.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The polysemy of 'bank' illustrates lexical ambiguity.</div><div class="sent-zh">bank的多义性说明了词汇歧义。</div><button class="sent-play" data-text="The polysemy of 'bank' illustrates lexical ambiguity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">syntax</div>
-<div style="font-size:13px;color:#8b949e">/ˈsɪntæks/</div>
-<div style="font-size:14px;color:#7ee787">n. 句法</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：syn(一起)+tax(排列)→排列在一起→句法</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：syntax rules | syntax of | generative syntax</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Syntax governs sentence structure.</div><div class="sent-zh">句法支配句子结构。</div><button class="sent-play" data-text="Syntax governs sentence structure.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Generative syntax revolutionised linguistics.</div><div class="sent-zh">生成句法革新了语言学。</div><button class="sent-play" data-text="Generative syntax revolutionised linguistics.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">homeschooling</div>
-<div style="font-size:13px;color:#8b949e">/ˈhəʊmˌskuːlɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n 在家教育</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：home(家) + school(学校) + ing = 在家教</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：choose homeschooling, homeschooling movement, homeschooling curriculum</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Homeschooling has grown in popularity over the past decade.</div><div class="sent-zh">在过去十年中，在家教育越来越受欢迎。</div><button class="sent-play" data-text="Homeschooling has grown in popularity over the past decade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Parents who choose homeschooling cite flexibility as a major advantage.</div><div class="sent-zh">选择在家教育的家长认为灵活性是主要优势。</div><button class="sent-play" data-text="Parents who choose homeschooling cite flexibility as a major advantage.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">montessori</div>
-<div style="font-size:13px;color:#8b949e">/mɒntɪˈsɔːri/</div>
-<div style="font-size:14px;color:#7ee787">n 蒙台梭利教育法</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术词汇 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：以意大利教育家Maria Montessori命名</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：montessori method, montessori school, montessori approach</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The Montessori method emphasizes child-led learning.</div><div class="sent-zh">蒙台梭利教育法强调以儿童为主导的学习。</div><button class="sent-play" data-text="The Montessori method emphasizes child-led learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many parents prefer Montessori schools for their hands-on approach.</div><div class="sent-zh">许多家长偏爱蒙台梭利学校的实践式教学方法。</div><button class="sent-play" data-text="Many parents prefer Montessori schools for their hands-on approach.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">open-book</div>
-<div style="font-size:13px;color:#8b949e">/ˈəʊpən bʊk/</div>
-<div style="font-size:14px;color:#7ee787">adj 开卷的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思词汇 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：open(打开) + book(书) = 开卷</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：open-book exam, open-book test, open-book assessment</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The professor allowed an open-book exam to test comprehension rather than memorization.</div><div class="sent-zh">教授允许开卷考试，以考查理解而非记忆。</div><button class="sent-play" data-text="The professor allowed an open-book exam to test comprehension rather than memorization.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Students preferred the open-book format as it reduced anxiety.</div><div class="sent-zh">学生更喜欢开卷形式，因为它减少了焦虑。</div><button class="sent-play" data-text="Students preferred the open-book format as it reduced anxiety.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">rote learning</div>
-<div style="font-size:13px;color:#8b949e">/rəʊt ˈlɜːnɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n 死记硬背</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：rote(机械重复) + learning = 机械学习</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：rely on rote learning, replace rote learning, rote learning method</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Rote learning is criticized for failing to develop critical thinking.</div><div class="sent-zh">死记硬背被批评未能培养批判性思维。</div><button class="sent-play" data-text="Rote learning is criticized for failing to develop critical thinking.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many education systems are moving away from rote learning.</div><div class="sent-zh">许多教育体系正在摒弃死记硬背。</div><button class="sent-play" data-text="Many education systems are moving away from rote learning.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">voucher</div>
-<div style="font-size:13px;color:#8b949e">/ˈvaʊtʃə/</div>
-<div style="font-size:14px;color:#7ee787">n 代金券；凭证</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：vouch(担保) + er = 担保凭证</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：school voucher, voucher system, voucher program, gift voucher</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The government introduced a voucher system to help parents pay for private schooling.</div><div class="sent-zh">政府引入了代金券制度，帮助家长支付私立学校费用。</div><button class="sent-play" data-text="The government introduced a voucher system to help parents pay for private schooling.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Parents received vouchers that could be used at any participating school.</div><div class="sent-zh">家长收到可在任何参与学校使用的代金券。</div><button class="sent-play" data-text="Parents received vouchers that could be used at any participating school.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">xenocentrism</div>
-<div style="font-size:13px;color:#8b949e">/ˌzenəˈsentrɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 崇外主义</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 全球化话题高级词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：xeno(外族)+centrism(中心)→以外族为中心→崇外主义</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural xenocentrism | exhibit xenocentrism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Xenocentrism undervalues one's own culture.</div><div class="sent-zh">崇外主义低估自身文化。</div><button class="sent-play" data-text="Xenocentrism undervalues one's own culture.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Xenocentrism is the opposite of ethnocentrism.</div><div class="sent-zh">崇外主义是种族中心主义的反面。</div><button class="sent-play" data-text="Xenocentrism is the opposite of ethnocentrism.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 21 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">comprehension</div><div class="ipa">/ˌkɒmprɪˈhenʃn/</div><div class="pos">n. 理解力</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="comprehension" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="comprehension" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 教育话题高频词 · 话题：教育</div><div class="memory">记忆：com(一起)+prehens(抓住)+ion→抓住要义→理解</div><div class="coll">搭配：reading comprehension | listening comprehension | beyond comprehension</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Reading <span class="highlight">comprehension</span> requires active engagement.</div><div class="sent-zh">阅读理解需要积极参与。</div><button class="sent-play" data-text="Reading comprehension requires active engagement.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The concept is beyond a child's <span class="highlight">comprehension</span>.</div><div class="sent-zh">这个概念超出了孩子的理解力。</div><button class="sent-play" data-text="The concept is beyond a child&#x27;s comprehension.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">fluency</div><div class="ipa">/ˈfluːənsi/</div><div class="pos">n. 流利度</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fluency" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fluency" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 教育话题高频词 · 话题：教育</div><div class="memory">记忆：flu(流)+ency→流利→流利度</div><div class="coll">搭配：oral fluency | achieve fluency | language fluency</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Oral <span class="highlight">fluency</span> is a key goal in language learning.</div><div class="sent-zh">口语流利度是语言学习的关键目标。</div><button class="sent-play" data-text="Oral fluency is a key goal in language learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Achieving <span class="highlight">fluency</span> takes years of practice.</div><div class="sent-zh">达到流利需要多年练习。</div><button class="sent-play" data-text="Achieving fluency takes years of practice.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">linguistics</div><div class="ipa">/lɪŋˈɡwɪstɪks/</div><div class="pos">n. 语言学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="linguistics" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="linguistics" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 教育话题高频词 · 话题：教育</div><div class="memory">记忆：lingu(语言)+istics→研究语言的学问→语言学</div><div class="coll">搭配：applied linguistics | cognitive linguistics | study linguistics</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She studies applied <span class="highlight">linguistics</span> at university.</div><div class="sent-zh">她在大学学习应用语言学。</div><button class="sent-play" data-text="She studies applied linguistics at university.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cognitive <span class="highlight">linguistics</span> explores the mind-language connection.</div><div class="sent-zh">认知语言学探索思维与语言的关系。</div><button class="sent-play" data-text="Cognitive linguistics explores the mind-language connection.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">comprehensible</div><div class="ipa">/ˌkɒmprɪˈhensəbl/</div><div class="pos">adj. 可理解的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="comprehensible" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="comprehensible" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：com(完全)+prehens(抓住)+ible→能完全抓住的→可理解的</div><div class="coll">搭配：comprehensible input | comprehensible to | make comprehensible</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Comprehensible</span> input aids language learning.</div><div class="sent-zh">可理解输入有助于语言学习。</div><button class="sent-play" data-text="Comprehensible input aids language learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The instructions must be <span class="highlight">comprehensible</span> to all users.</div><div class="sent-zh">说明必须让所有用户都能理解。</div><button class="sent-play" data-text="The instructions must be comprehensible to all users.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">decipher</div><div class="ipa">/dɪˈsaɪfə(r)/</div><div class="pos">v. 破译</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="decipher" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="decipher" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：de(去除)+cipher(密码)→去除密码→破译</div><div class="coll">搭配：decipher text | decipher meaning | difficult to decipher</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Students must <span class="highlight">decipher</span> complex academic texts.</div><div class="sent-zh">学生必须破译复杂的学术文本。</div><button class="sent-play" data-text="Students must decipher complex academic texts.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Ancient scripts are difficult to <span class="highlight">decipher</span>.</div><div class="sent-zh">古代文字难以破译。</div><button class="sent-play" data-text="Ancient scripts are difficult to decipher.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">discern</div><div class="ipa">/dɪˈsɜːn/</div><div class="pos">v. 辨别</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="discern" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="discern" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：dis(分开)+cern(筛)→筛分开→辨别</div><div class="coll">搭配：discern patterns | discern differences | discern meaning</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Students must <span class="highlight">discern</span> fact from opinion.</div><div class="sent-zh">学生必须辨别事实与观点。</div><button class="sent-play" data-text="Students must discern fact from opinion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. It is difficult to <span class="highlight">discern</span> patterns in the data.</div><div class="sent-zh">数据中难以辨别出模式。</div><button class="sent-play" data-text="It is difficult to discern patterns in the data.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">eloquent</div><div class="ipa">/ˈeləkwənt/</div><div class="pos">adj. 雄辩的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="eloquent" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="eloquent" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：e(出)+loqu(说话)+ent→说出好话→雄辩的</div><div class="coll">搭配：eloquent speech | eloquent speaker | remarkably eloquent</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She delivered an <span class="highlight">eloquent</span> speech at graduation.</div><div class="sent-zh">她在毕业典礼上发表了雄辩的演讲。</div><button class="sent-play" data-text="She delivered an eloquent speech at graduation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An <span class="highlight">eloquent</span> speaker can move audiences.</div><div class="sent-zh">雄辩的演讲者能打动听众。</div><button class="sent-play" data-text="An eloquent speaker can move audiences.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">illiterate</div><div class="ipa">/ɪˈlɪtərət/</div><div class="pos">adj. 不识字的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="illiterate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="illiterate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：il(不)+literate(识字的)→不识字的</div><div class="coll">搭配：functionally illiterate | illiterate population | computer illiterate</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Millions of adults remain <span class="highlight">illiterate</span> worldwide.</div><div class="sent-zh">全球数百万成年人仍不识字。</div><button class="sent-play" data-text="Millions of adults remain illiterate worldwide.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Functionally <span class="highlight">illiterate</span> adults struggle with daily tasks.</div><div class="sent-zh">功能性文盲成年人在日常任务中挣扎。</div><button class="sent-play" data-text="Functionally illiterate adults struggle with daily tasks.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">intelligible</div><div class="ipa">/ɪnˈtelɪdʒəbl/</div><div class="pos">adj. 可理解的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="intelligible" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="intelligible" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：intel(理解)+ligible→能被理解的→可理解的</div><div class="coll">搭配：barely intelligible | make intelligible | intelligible speech</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. His handwriting was barely <span class="highlight">intelligible</span>.</div><div class="sent-zh">他的笔迹几乎无法辨认。</div><button class="sent-play" data-text="His handwriting was barely intelligible.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The recording was not <span class="highlight">intelligible</span> due to noise.</div><div class="sent-zh">由于噪音，录音无法听清。</div><button class="sent-play" data-text="The recording was not intelligible due to noise.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">lucid</div><div class="ipa">/ˈluːsɪd/</div><div class="pos">adj. 清晰的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="lucid" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="lucid" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：luc(光)+id→有光的→清晰的</div><div class="coll">搭配：lucid explanation | lucid writing | lucid moment</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The professor gave a <span class="highlight">lucid</span> explanation of the theory.</div><div class="sent-zh">教授对理论作了清晰的解释。</div><button class="sent-play" data-text="The professor gave a lucid explanation of the theory.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Lucid</span> writing is essential for academic papers.</div><div class="sent-zh">清晰的写作对学术论文至关重要。</div><button class="sent-play" data-text="Lucid writing is essential for academic papers.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">morphology</div><div class="ipa">/mɔːˈfɒlədʒi/</div><div class="pos">n. 形态学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="morphology" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="morphology" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：morph(形态)+ology(学问)→研究形态→形态学</div><div class="coll">搭配：linguistic morphology | word morphology | morphology of</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Morphology</span> studies word formation.</div><div class="sent-zh">形态学研究词的构成。</div><button class="sent-play" data-text="Morphology studies word formation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Linguistic <span class="highlight">morphology</span> analyses inflection and derivation.</div><div class="sent-zh">语言形态学分析屈折和派生。</div><button class="sent-play" data-text="Linguistic morphology analyses inflection and derivation.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">phonology</div><div class="ipa">/fəˈnɒlədʒi/</div><div class="pos">n. 音系学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="phonology" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="phonology" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：phon(声音)+ology(学问)→研究声音→音系学</div><div class="coll">搭配：phonology of | generative phonology | phonological rules</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Phonology</span> studies sound systems in languages.</div><div class="sent-zh">音系学研究语言的声音系统。</div><button class="sent-play" data-text="Phonology studies sound systems in languages.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Generative <span class="highlight">phonology</span> emerged in the 1960s.</div><div class="sent-zh">生成音系学出现于1960年代。</div><button class="sent-play" data-text="Generative phonology emerged in the 1960s.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">polysemy</div><div class="ipa">/pəˈlɪsɪmi/</div><div class="pos">n. 多义性</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="polysemy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="polysemy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：poly(多)+semy(意义)→多义→多义性</div><div class="coll">搭配：lexical polysemy | polysemy of | degree of polysemy</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Polysemy</span> is common in English vocabulary.</div><div class="sent-zh">多义性在英语词汇中很常见。</div><button class="sent-play" data-text="Polysemy is common in English vocabulary.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">polysemy</span> of 'bank' illustrates lexical ambiguity.</div><div class="sent-zh">bank的多义性说明了词汇歧义。</div><button class="sent-play" data-text="The polysemy of &#x27;bank&#x27; illustrates lexical ambiguity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">syntax</div><div class="ipa">/ˈsɪntæks/</div><div class="pos">n. 句法</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="syntax" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="syntax" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：syn(一起)+tax(排列)→排列在一起→句法</div><div class="coll">搭配：syntax rules | syntax of | generative syntax</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Syntax</span> governs sentence structure.</div><div class="sent-zh">句法支配句子结构。</div><button class="sent-play" data-text="Syntax governs sentence structure.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Generative <span class="highlight">syntax</span> revolutionised linguistics.</div><div class="sent-zh">生成句法革新了语言学。</div><button class="sent-play" data-text="Generative syntax revolutionised linguistics.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">homeschooling</div><div class="ipa">/ˈhəʊmˌskuːlɪŋ/</div><div class="pos">n 在家教育</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="homeschooling" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="homeschooling" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：教育</div><div class="memory">记忆：home(家) + school(学校) + ing = 在家教</div><div class="coll">搭配：choose homeschooling, homeschooling movement, homeschooling curriculum</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Homeschooling</span> has grown in popularity over the past decade.</div><div class="sent-zh">在过去十年中，在家教育越来越受欢迎。</div><button class="sent-play" data-text="Homeschooling has grown in popularity over the past decade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Parents who choose <span class="highlight">homeschooling</span> cite flexibility as a major advantage.</div><div class="sent-zh">选择在家教育的家长认为灵活性是主要优势。</div><button class="sent-play" data-text="Parents who choose homeschooling cite flexibility as a major advantage.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">montessori</div><div class="ipa">/mɒntɪˈsɔːri/</div><div class="pos">n 蒙台梭利教育法</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="montessori" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="montessori" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术词汇 · 话题：教育</div><div class="memory">记忆：以意大利教育家Maria Montessori命名</div><div class="coll">搭配：montessori method, montessori school, montessori approach</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">Montessori</span> method emphasizes child-led learning.</div><div class="sent-zh">蒙台梭利教育法强调以儿童为主导的学习。</div><button class="sent-play" data-text="The Montessori method emphasizes child-led learning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many parents prefer <span class="highlight">Montessori</span> schools for their hands-on approach.</div><div class="sent-zh">许多家长偏爱蒙台梭利学校的实践式教学方法。</div><button class="sent-play" data-text="Many parents prefer Montessori schools for their hands-on approach.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">open-book</div><div class="ipa">/ˈəʊpən bʊk/</div><div class="pos">adj 开卷的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="open-book" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="open-book" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思词汇 · 话题：教育</div><div class="memory">记忆：open(打开) + book(书) = 开卷</div><div class="coll">搭配：open-book exam, open-book test, open-book assessment</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The professor allowed an <span class="highlight">open-book</span> exam to test comprehension rather than memorization.</div><div class="sent-zh">教授允许开卷考试，以考查理解而非记忆。</div><button class="sent-play" data-text="The professor allowed an open-book exam to test comprehension rather than memorization.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Students preferred the <span class="highlight">open-book</span> format as it reduced anxiety.</div><div class="sent-zh">学生更喜欢开卷形式，因为它减少了焦虑。</div><button class="sent-play" data-text="Students preferred the open-book format as it reduced anxiety.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">rote learning</div><div class="ipa">/rəʊt ˈlɜːnɪŋ/</div><div class="pos">n 死记硬背</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="rote learning" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="rote learning" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：教育</div><div class="memory">记忆：rote(机械重复) + learning = 机械学习</div><div class="coll">搭配：rely on rote learning, replace rote learning, rote learning method</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Rote learning</span> is criticized for failing to develop critical thinking.</div><div class="sent-zh">死记硬背被批评未能培养批判性思维。</div><button class="sent-play" data-text="Rote learning is criticized for failing to develop critical thinking.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many education systems are moving away from <span class="highlight">rote learning</span>.</div><div class="sent-zh">许多教育体系正在摒弃死记硬背。</div><button class="sent-play" data-text="Many education systems are moving away from rote learning.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">voucher</div><div class="ipa">/ˈvaʊtʃə/</div><div class="pos">n 代金券；凭证</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="voucher" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="voucher" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：教育</div><div class="memory">记忆：vouch(担保) + er = 担保凭证</div><div class="coll">搭配：school voucher, voucher system, voucher program, gift voucher</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The government introduced a <span class="highlight">voucher</span> system to help parents pay for private schooling.</div><div class="sent-zh">政府引入了代金券制度，帮助家长支付私立学校费用。</div><button class="sent-play" data-text="The government introduced a voucher system to help parents pay for private schooling.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Parents received vouchers that could be used at any participating school.</div><div class="sent-zh">家长收到可在任何参与学校使用的代金券。</div><button class="sent-play" data-text="Parents received vouchers that could be used at any participating school.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">xenocentrism</div><div class="ipa">/ˌzenəˈsentrɪzəm/</div><div class="pos">n. 崇外主义</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="xenocentrism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="xenocentrism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 全球化话题高级词 · 话题：全球化</div><div class="memory">记忆：xeno(外族)+centrism(中心)→以外族为中心→崇外主义</div><div class="coll">搭配：cultural xenocentrism | exhibit xenocentrism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Xenocentrism</span> undervalues one's own culture.</div><div class="sent-zh">崇外主义低估自身文化。</div><button class="sent-play" data-text="Xenocentrism undervalues one&#x27;s own culture.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Xenocentrism</span> is the opposite of ethnocentrism.</div><div class="sent-zh">崇外主义是种族中心主义的反面。</div><button class="sent-play" data-text="Xenocentrism is the opposite of ethnocentrism.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

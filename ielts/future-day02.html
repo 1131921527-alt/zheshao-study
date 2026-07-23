@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 2</h1></div>
+<div class="header"><h1>雅思 Future Day 2</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 2 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">emission</div>
-<div style="font-size:13px;color:#8b949e">/iˈmɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 排放，排放物</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 环境话题高频词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：e(出)+miss(送)+ion→送出去→排放</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：carbon emissions | reduce emissions | emission standards</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The country aims to achieve zero carbon emissions by 2050.</div><div class="sent-zh">该国计划到2050年实现零碳排放。</div><button class="sent-play" data-text="The country aims to achieve zero carbon emissions by 2050.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Vehicle emission standards have become stricter.</div><div class="sent-zh">车辆排放标准变得更加严格。</div><button class="sent-play" data-text="Vehicle emission standards have become stricter.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">resilience</div>
-<div style="font-size:13px;color:#8b949e">/rɪˈzɪliəns/</div>
-<div style="font-size:14px;color:#7ee787">n. 恢复力，韧性</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境及心理话题高频词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(回)+sili(跳)+ence→跳回来→恢复力</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：ecological resilience | build resilience | climate resilience</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Coral reefs show remarkable resilience to environmental changes.</div><div class="sent-zh">珊瑚礁对环境变化表现出显著的恢复力。</div><button class="sent-play" data-text="Coral reefs show remarkable resilience to environmental changes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Building resilience to climate change is a priority for coastal cities.</div><div class="sent-zh">增强对气候变化的韧性是沿海城市的优先事项。</div><button class="sent-play" data-text="Building resilience to climate change is a priority for coastal cities.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">mitigation</div>
-<div style="font-size:13px;color:#8b949e">/ˌmɪtɪˈɡeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 缓解，减轻</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境政策话题高频词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mit(温和)+igation→使温和→缓解</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：climate mitigation | mitigation measures | risk mitigation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Climate mitigation strategies require international cooperation.</div><div class="sent-zh">气候缓解策略需要国际合作。</div><button class="sent-play" data-text="Climate mitigation strategies require international cooperation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government invested in flood mitigation projects.</div><div class="sent-zh">政府投资了防洪减灾项目。</div><button class="sent-play" data-text="The government invested in flood mitigation projects.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">afforestation</div>
-<div style="font-size:13px;color:#8b949e">/əˌfɒrɪˈsteɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 造林，植树</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境话题常见词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：af(向)+forest(森林)+ation→向森林方向发展→造林</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：afforestation project | large-scale afforestation | promote afforestation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The afforestation project has transformed the barren landscape.</div><div class="sent-zh">造林项目改变了荒芜的地貌。</div><button class="sent-play" data-text="The afforestation project has transformed the barren landscape.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. China has implemented large-scale afforestation programmes.</div><div class="sent-zh">中国实施了大规模植树造林计划。</div><button class="sent-play" data-text="China has implemented large-scale afforestation programmes.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">specification</div>
-<div style="font-size:13px;color:#8b949e">/ˌspesɪfɪˈkeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 规格，规范</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境标准类话题常见词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：spec(看)+ification→看清楚的要求→规格</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：technical specifications | meet specifications | environmental specifications</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The factory must meet strict environmental specifications.</div><div class="sent-zh">工厂必须符合严格的环境规范。</div><button class="sent-play" data-text="The factory must meet strict environmental specifications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Product specifications should clearly list all ingredients.</div><div class="sent-zh">产品规格应清楚列出所有成分。</div><button class="sent-play" data-text="Product specifications should clearly list all ingredients.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">synthetic</div>
-<div style="font-size:13px;color:#8b949e">/sɪnˈθetɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 合成的，人造的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境及科技话题常见词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：syn(共同)+thet(放)+ic→放在一起→合成的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：synthetic materials | synthetic fibres | synthetic chemicals</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Synthetic materials take much longer to decompose than natural ones.</div><div class="sent-zh">合成材料比天然材料分解时间长得多。</div><button class="sent-play" data-text="Synthetic materials take much longer to decompose than natural ones.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The factory produces synthetic fibres for clothing.</div><div class="sent-zh">该工厂生产用于服装的合成纤维。</div><button class="sent-play" data-text="The factory produces synthetic fibres for clothing.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">remediation</div>
-<div style="font-size:13px;color:#8b949e">/rɪˌmiːdiˈeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 修复，补救</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境工程话题常见词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(再)+medi(医治)+ation→再医治→修复</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：environmental remediation | soil remediation | water remediation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The government funded environmental remediation of the site.</div><div class="sent-zh">政府资助了该场地的环境修复。</div><button class="sent-play" data-text="The government funded environmental remediation of the site.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Soil remediation techniques have improved significantly.</div><div class="sent-zh">土壤修复技术有了显著改进。</div><button class="sent-play" data-text="Soil remediation techniques have improved significantly.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">endemic</div>
-<div style="font-size:13px;color:#8b949e">/enˈdemɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 特有的，地方性的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 环境生物话题高级词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：en(在)+dem(人民)+ic→在特定人群中的→地方性的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：endemic species | endemic to | endemic disease</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Many endemic species are found only on this island.</div><div class="sent-zh">许多特有物种仅在这个岛屿上被发现。</div><button class="sent-play" data-text="Many endemic species are found only on this island.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The plant is endemic to tropical rainforests.</div><div class="sent-zh">该植物是热带雨林特有的。</div><button class="sent-play" data-text="The plant is endemic to tropical rainforests.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">proliferation</div>
-<div style="font-size:13px;color:#8b949e">/prəˌlɪfəˈreɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 激增，扩散</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 环境及科技话题高级词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pro(向前)+lifer(后代)+ation→不断产生后代→激增</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：nuclear proliferation | proliferation of | rapid proliferation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The proliferation of invasive species threatens native ecosystems.</div><div class="sent-zh">入侵物种的扩散威胁着本地生态系统。</div><button class="sent-play" data-text="The proliferation of invasive species threatens native ecosystems.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The proliferation of plastic waste is a global challenge.</div><div class="sent-zh">塑料废物的激增是一个全球性挑战。</div><button class="sent-play" data-text="The proliferation of plastic waste is a global challenge.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">anthropogenic</div>
-<div style="font-size:13px;color:#8b949e">/ˌænθrəpəˈdʒenɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 人为的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 环境科学高级词汇 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：anthropo(人)+genic(产生)→人产生的→人为的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：anthropogenic emissions | anthropogenic climate change | anthropogenic impact</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Anthropogenic climate change is accelerating at an alarming rate.</div><div class="sent-zh">人为气候变化正在以惊人的速度加剧。</div><button class="sent-play" data-text="Anthropogenic climate change is accelerating at an alarming rate.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The study focuses on anthropogenic impacts on marine life.</div><div class="sent-zh">该研究关注人类活动对海洋生物的影响。</div><button class="sent-play" data-text="The study focuses on anthropogenic impacts on marine life.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">symbiotic</div>
-<div style="font-size:13px;color:#8b949e">/ˌsɪmbaɪˈɒtɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 共生的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 生物环境话题高级词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：sym(共同)+bio(生命)+tic→共同生活→共生的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：symbiotic relationship | symbiotic bacteria | mutually symbiotic</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Bees and flowers have a symbiotic relationship.</div><div class="sent-zh">蜜蜂和花之间存在共生关系。</div><button class="sent-play" data-text="Bees and flowers have a symbiotic relationship.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Symbiotic bacteria in the gut help with digestion.</div><div class="sent-zh">肠道中的共生细菌有助于消化。</div><button class="sent-play" data-text="Symbiotic bacteria in the gut help with digestion.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">bioaccumulation</div>
-<div style="font-size:13px;color:#8b949e">/ˌbaɪəʊəˌkjuːmjəˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 生物积累</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 环境科学高级词汇 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bio(生物)+accumulation(积累)→生物体内积累</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：bioaccumulation of toxins | mercury bioaccumulation | prevent bioaccumulation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Mercury bioaccumulation in fish poses health risks to humans.</div><div class="sent-zh">鱼类体内的汞生物积累对人类健康构成风险。</div><button class="sent-play" data-text="Mercury bioaccumulation in fish poses health risks to humans.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The bioaccumulation of pesticides affects top predators most.</div><div class="sent-zh">农药的生物积累对顶级掠食者影响最大。</div><button class="sent-play" data-text="The bioaccumulation of pesticides affects top predators most.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">smog</div>
-<div style="font-size:13px;color:#8b949e">/smɒɡ/</div>
-<div style="font-size:14px;color:#7ee787">n. 雾霾</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境话题常见词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：smoke+fog→smog→烟雾→雾霾</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：thick smog | photochemical smog | reduce smog</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Thick smog covered the city for days.</div><div class="sent-zh">浓雾笼罩城市数日。</div><button class="sent-play" data-text="Thick smog covered the city for days.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Photochemical smog is caused by vehicle emissions.</div><div class="sent-zh">光化学烟雾由车辆排放引起。</div><button class="sent-play" data-text="Photochemical smog is caused by vehicle emissions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">tundra</div>
-<div style="font-size:13px;color:#8b949e">/ˈtʌndrə/</div>
-<div style="font-size:14px;color:#7ee787">n. 冻原</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 环境话题高级词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：tunturi(无树平原)→冻原</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：arctic tundra | tundra ecosystem | tundra vegetation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Arctic tundra is extremely fragile.</div><div class="sent-zh">北极冻原极为脆弱。</div><button class="sent-play" data-text="Arctic tundra is extremely fragile.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Tundra vegetation is adapted to harsh conditions.</div><div class="sent-zh">冻原植被适应恶劣条件。</div><button class="sent-play" data-text="Tundra vegetation is adapted to harsh conditions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">upwelling</div>
-<div style="font-size:13px;color:#8b949e">/ˈʌpwelɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n. 上升流</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 环境话题高级词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：up(向上)+well(涌)+ing→向上涌→上升流</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：coastal upwelling | upwelling zone | nutrient upwelling</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Coastal upwelling brings nutrients to the surface.</div><div class="sent-zh">海岸上升流将营养物质带到水面。</div><button class="sent-play" data-text="Coastal upwelling brings nutrients to the surface.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Upwelling zones support rich marine ecosystems.</div><div class="sent-zh">上升流区域支持丰富的海洋生态系统。</div><button class="sent-play" data-text="Upwelling zones support rich marine ecosystems.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">wetland</div>
-<div style="font-size:13px;color:#8b949e">/ˈwetlənd/</div>
-<div style="font-size:14px;color:#7ee787">n. 湿地</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 环境话题常见词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：wet(湿)+land(地)→湿地</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：wetland conservation | wetland ecosystem | restore wetlands</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Wetlands filter pollutants from water.</div><div class="sent-zh">湿地过滤水中的污染物。</div><button class="sent-play" data-text="Wetlands filter pollutants from water.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Wetland conservation protects biodiversity.</div><div class="sent-zh">湿地保护保护生物多样性。</div><button class="sent-play" data-text="Wetland conservation protects biodiversity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">xerophyte</div>
-<div style="font-size:13px;color:#8b949e">/ˈzɪərəfaɪt/</div>
-<div style="font-size:14px;color:#7ee787">n. 旱生植物</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 环境话题高级词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：xero(干燥)+phyte(植物)→干燥环境的植物→旱生植物</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：desert xerophyte | xerophyte adaptation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Xerophytes are adapted to arid conditions.</div><div class="sent-zh">旱生植物适应干旱环境。</div><button class="sent-play" data-text="Xerophytes are adapted to arid conditions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cacti are well-known xerophytes.</div><div class="sent-zh">仙人掌是著名的旱生植物。</div><button class="sent-play" data-text="Cacti are well-known xerophytes.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">biomass</div>
-<div style="font-size:13px;color:#8b949e">/ˈbaɪəʊmæs/</div>
-<div style="font-size:14px;color:#7ee787">n 生物量；生物质能源</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bio(生物) + mass(量) = 生物量</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：biomass energy, convert biomass, biomass fuel</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Biomass fuel produces fewer emissions than fossil fuels.</div><div class="sent-zh">生物质燃料产生的排放比化石燃料少。</div><button class="sent-play" data-text="Biomass fuel produces fewer emissions than fossil fuels.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The plant converts agricultural biomass into electricity.</div><div class="sent-zh">该工厂将农业生物质转化为电力。</div><button class="sent-play" data-text="The plant converts agricultural biomass into electricity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">carbon offset</div>
-<div style="font-size:13px;color:#8b949e">/ˈkɑːbən ˈɒfset/</div>
-<div style="font-size:14px;color:#7ee787">n 碳补偿</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：carbon(碳) + offset(抵消) = 碳补偿</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：carbon offset scheme, purchase carbon offsets, carbon offset program</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Many airlines offer passengers the option to purchase carbon offsets.</div><div class="sent-zh">许多航空公司为乘客提供购买碳补偿的选项。</div><button class="sent-play" data-text="Many airlines offer passengers the option to purchase carbon offsets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company invested in reforestation as a carbon offset.</div><div class="sent-zh">该公司投资造林作为碳补偿。</div><button class="sent-play" data-text="The company invested in reforestation as a carbon offset.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">catchment</div>
-<div style="font-size:13px;color:#8b949e">/ˈkætʃmənt/</div>
-<div style="font-size:14px;color:#7ee787">n 集水区；汇水区</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术词汇 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：catch(接住) + ment = 接住水的区域</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：catchment area, river catchment, water catchment</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The river catchment supplies water to three cities.</div><div class="sent-zh">该河流集水区为三座城市供水。</div><button class="sent-play" data-text="The river catchment supplies water to three cities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Schools in this catchment area accept children from nearby neighborhoods.</div><div class="sent-zh">该学区的学校接收附近社区的儿童。</div><button class="sent-play" data-text="Schools in this catchment area accept children from nearby neighborhoods.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 2 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">emission</div><div class="ipa">/iˈmɪʃn/</div><div class="pos">n. 排放，排放物</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="emission" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="emission" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 环境话题高频词 · 话题：环境</div><div class="memory">记忆：e(出)+miss(送)+ion→送出去→排放</div><div class="coll">搭配：carbon emissions | reduce emissions | emission standards</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The country aims to achieve zero carbon emissions by 2050.</div><div class="sent-zh">该国计划到2050年实现零碳排放。</div><button class="sent-play" data-text="The country aims to achieve zero carbon emissions by 2050.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Vehicle <span class="highlight">emission</span> standards have become stricter.</div><div class="sent-zh">车辆排放标准变得更加严格。</div><button class="sent-play" data-text="Vehicle emission standards have become stricter.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">resilience</div><div class="ipa">/rɪˈzɪliəns/</div><div class="pos">n. 恢复力，韧性</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="resilience" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="resilience" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境及心理话题高频词 · 话题：环境</div><div class="memory">记忆：re(回)+sili(跳)+ence→跳回来→恢复力</div><div class="coll">搭配：ecological resilience | build resilience | climate resilience</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Coral reefs show remarkable <span class="highlight">resilience</span> to environmental changes.</div><div class="sent-zh">珊瑚礁对环境变化表现出显著的恢复力。</div><button class="sent-play" data-text="Coral reefs show remarkable resilience to environmental changes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Building <span class="highlight">resilience</span> to climate change is a priority for coastal cities.</div><div class="sent-zh">增强对气候变化的韧性是沿海城市的优先事项。</div><button class="sent-play" data-text="Building resilience to climate change is a priority for coastal cities.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">mitigation</div><div class="ipa">/ˌmɪtɪˈɡeɪʃn/</div><div class="pos">n. 缓解，减轻</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mitigation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mitigation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境政策话题高频词 · 话题：环境</div><div class="memory">记忆：mit(温和)+igation→使温和→缓解</div><div class="coll">搭配：climate mitigation | mitigation measures | risk mitigation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Climate <span class="highlight">mitigation</span> strategies require international cooperation.</div><div class="sent-zh">气候缓解策略需要国际合作。</div><button class="sent-play" data-text="Climate mitigation strategies require international cooperation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government invested in flood <span class="highlight">mitigation</span> projects.</div><div class="sent-zh">政府投资了防洪减灾项目。</div><button class="sent-play" data-text="The government invested in flood mitigation projects.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">afforestation</div><div class="ipa">/əˌfɒrɪˈsteɪʃn/</div><div class="pos">n. 造林，植树</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="afforestation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="afforestation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境话题常见词 · 话题：环境</div><div class="memory">记忆：af(向)+forest(森林)+ation→向森林方向发展→造林</div><div class="coll">搭配：afforestation project | large-scale afforestation | promote afforestation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">afforestation</span> project has transformed the barren landscape.</div><div class="sent-zh">造林项目改变了荒芜的地貌。</div><button class="sent-play" data-text="The afforestation project has transformed the barren landscape.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. China has implemented large-scale <span class="highlight">afforestation</span> programmes.</div><div class="sent-zh">中国实施了大规模植树造林计划。</div><button class="sent-play" data-text="China has implemented large-scale afforestation programmes.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">specification</div><div class="ipa">/ˌspesɪfɪˈkeɪʃn/</div><div class="pos">n. 规格，规范</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="specification" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="specification" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境标准类话题常见词 · 话题：环境</div><div class="memory">记忆：spec(看)+ification→看清楚的要求→规格</div><div class="coll">搭配：technical specifications | meet specifications | environmental specifications</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The factory must meet strict environmental specifications.</div><div class="sent-zh">工厂必须符合严格的环境规范。</div><button class="sent-play" data-text="The factory must meet strict environmental specifications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Product specifications should clearly list all ingredients.</div><div class="sent-zh">产品规格应清楚列出所有成分。</div><button class="sent-play" data-text="Product specifications should clearly list all ingredients.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">synthetic</div><div class="ipa">/sɪnˈθetɪk/</div><div class="pos">adj. 合成的，人造的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="synthetic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="synthetic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境及科技话题常见词 · 话题：环境</div><div class="memory">记忆：syn(共同)+thet(放)+ic→放在一起→合成的</div><div class="coll">搭配：synthetic materials | synthetic fibres | synthetic chemicals</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Synthetic</span> materials take much longer to decompose than natural ones.</div><div class="sent-zh">合成材料比天然材料分解时间长得多。</div><button class="sent-play" data-text="Synthetic materials take much longer to decompose than natural ones.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The factory produces <span class="highlight">synthetic</span> fibres for clothing.</div><div class="sent-zh">该工厂生产用于服装的合成纤维。</div><button class="sent-play" data-text="The factory produces synthetic fibres for clothing.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">remediation</div><div class="ipa">/rɪˌmiːdiˈeɪʃn/</div><div class="pos">n. 修复，补救</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="remediation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="remediation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境工程话题常见词 · 话题：环境</div><div class="memory">记忆：re(再)+medi(医治)+ation→再医治→修复</div><div class="coll">搭配：environmental remediation | soil remediation | water remediation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The government funded environmental <span class="highlight">remediation</span> of the site.</div><div class="sent-zh">政府资助了该场地的环境修复。</div><button class="sent-play" data-text="The government funded environmental remediation of the site.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Soil <span class="highlight">remediation</span> techniques have improved significantly.</div><div class="sent-zh">土壤修复技术有了显著改进。</div><button class="sent-play" data-text="Soil remediation techniques have improved significantly.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">endemic</div><div class="ipa">/enˈdemɪk/</div><div class="pos">adj. 特有的，地方性的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="endemic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="endemic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 环境生物话题高级词 · 话题：环境</div><div class="memory">记忆：en(在)+dem(人民)+ic→在特定人群中的→地方性的</div><div class="coll">搭配：endemic species | endemic to | endemic disease</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Many <span class="highlight">endemic</span> species are found only on this island.</div><div class="sent-zh">许多特有物种仅在这个岛屿上被发现。</div><button class="sent-play" data-text="Many endemic species are found only on this island.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The plant is <span class="highlight">endemic</span> to tropical rainforests.</div><div class="sent-zh">该植物是热带雨林特有的。</div><button class="sent-play" data-text="The plant is endemic to tropical rainforests.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">proliferation</div><div class="ipa">/prəˌlɪfəˈreɪʃn/</div><div class="pos">n. 激增，扩散</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="proliferation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="proliferation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 环境及科技话题高级词 · 话题：环境</div><div class="memory">记忆：pro(向前)+lifer(后代)+ation→不断产生后代→激增</div><div class="coll">搭配：nuclear proliferation | proliferation of | rapid proliferation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">proliferation</span> of invasive species threatens native ecosystems.</div><div class="sent-zh">入侵物种的扩散威胁着本地生态系统。</div><button class="sent-play" data-text="The proliferation of invasive species threatens native ecosystems.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">proliferation</span> of plastic waste is a global challenge.</div><div class="sent-zh">塑料废物的激增是一个全球性挑战。</div><button class="sent-play" data-text="The proliferation of plastic waste is a global challenge.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">anthropogenic</div><div class="ipa">/ˌænθrəpəˈdʒenɪk/</div><div class="pos">adj. 人为的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="anthropogenic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="anthropogenic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 环境科学高级词汇 · 话题：环境</div><div class="memory">记忆：anthropo(人)+genic(产生)→人产生的→人为的</div><div class="coll">搭配：anthropogenic emissions | anthropogenic climate change | anthropogenic impact</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Anthropogenic</span> climate change is accelerating at an alarming rate.</div><div class="sent-zh">人为气候变化正在以惊人的速度加剧。</div><button class="sent-play" data-text="Anthropogenic climate change is accelerating at an alarming rate.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The study focuses on <span class="highlight">anthropogenic</span> impacts on marine life.</div><div class="sent-zh">该研究关注人类活动对海洋生物的影响。</div><button class="sent-play" data-text="The study focuses on anthropogenic impacts on marine life.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">symbiotic</div><div class="ipa">/ˌsɪmbaɪˈɒtɪk/</div><div class="pos">adj. 共生的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="symbiotic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="symbiotic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 生物环境话题高级词 · 话题：环境</div><div class="memory">记忆：sym(共同)+bio(生命)+tic→共同生活→共生的</div><div class="coll">搭配：symbiotic relationship | symbiotic bacteria | mutually symbiotic</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Bees and flowers have a <span class="highlight">symbiotic</span> relationship.</div><div class="sent-zh">蜜蜂和花之间存在共生关系。</div><button class="sent-play" data-text="Bees and flowers have a symbiotic relationship.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Symbiotic</span> bacteria in the gut help with digestion.</div><div class="sent-zh">肠道中的共生细菌有助于消化。</div><button class="sent-play" data-text="Symbiotic bacteria in the gut help with digestion.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">bioaccumulation</div><div class="ipa">/ˌbaɪəʊəˌkjuːmjəˈleɪʃn/</div><div class="pos">n. 生物积累</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bioaccumulation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bioaccumulation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 环境科学高级词汇 · 话题：环境</div><div class="memory">记忆：bio(生物)+accumulation(积累)→生物体内积累</div><div class="coll">搭配：bioaccumulation of toxins | mercury bioaccumulation | prevent bioaccumulation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Mercury <span class="highlight">bioaccumulation</span> in fish poses health risks to humans.</div><div class="sent-zh">鱼类体内的汞生物积累对人类健康构成风险。</div><button class="sent-play" data-text="Mercury bioaccumulation in fish poses health risks to humans.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">bioaccumulation</span> of pesticides affects top predators most.</div><div class="sent-zh">农药的生物积累对顶级掠食者影响最大。</div><button class="sent-play" data-text="The bioaccumulation of pesticides affects top predators most.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">smog</div><div class="ipa">/smɒɡ/</div><div class="pos">n. 雾霾</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="smog" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="smog" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境话题常见词 · 话题：环境</div><div class="memory">记忆：smoke+fog→smog→烟雾→雾霾</div><div class="coll">搭配：thick smog | photochemical smog | reduce smog</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Thick <span class="highlight">smog</span> covered the city for days.</div><div class="sent-zh">浓雾笼罩城市数日。</div><button class="sent-play" data-text="Thick smog covered the city for days.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Photochemical <span class="highlight">smog</span> is caused by vehicle emissions.</div><div class="sent-zh">光化学烟雾由车辆排放引起。</div><button class="sent-play" data-text="Photochemical smog is caused by vehicle emissions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">tundra</div><div class="ipa">/ˈtʌndrə/</div><div class="pos">n. 冻原</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tundra" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tundra" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 环境话题高级词 · 话题：环境</div><div class="memory">记忆：tunturi(无树平原)→冻原</div><div class="coll">搭配：arctic tundra | tundra ecosystem | tundra vegetation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Arctic <span class="highlight">tundra</span> is extremely fragile.</div><div class="sent-zh">北极冻原极为脆弱。</div><button class="sent-play" data-text="Arctic tundra is extremely fragile.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Tundra</span> vegetation is adapted to harsh conditions.</div><div class="sent-zh">冻原植被适应恶劣条件。</div><button class="sent-play" data-text="Tundra vegetation is adapted to harsh conditions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">upwelling</div><div class="ipa">/ˈʌpwelɪŋ/</div><div class="pos">n. 上升流</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="upwelling" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="upwelling" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 环境话题高级词 · 话题：环境</div><div class="memory">记忆：up(向上)+well(涌)+ing→向上涌→上升流</div><div class="coll">搭配：coastal upwelling | upwelling zone | nutrient upwelling</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Coastal <span class="highlight">upwelling</span> brings nutrients to the surface.</div><div class="sent-zh">海岸上升流将营养物质带到水面。</div><button class="sent-play" data-text="Coastal upwelling brings nutrients to the surface.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Upwelling</span> zones support rich marine ecosystems.</div><div class="sent-zh">上升流区域支持丰富的海洋生态系统。</div><button class="sent-play" data-text="Upwelling zones support rich marine ecosystems.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">wetland</div><div class="ipa">/ˈwetlənd/</div><div class="pos">n. 湿地</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="wetland" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="wetland" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 环境话题常见词 · 话题：环境</div><div class="memory">记忆：wet(湿)+land(地)→湿地</div><div class="coll">搭配：wetland conservation | wetland ecosystem | restore wetlands</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Wetlands filter pollutants from water.</div><div class="sent-zh">湿地过滤水中的污染物。</div><button class="sent-play" data-text="Wetlands filter pollutants from water.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Wetland</span> conservation protects biodiversity.</div><div class="sent-zh">湿地保护保护生物多样性。</div><button class="sent-play" data-text="Wetland conservation protects biodiversity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">xerophyte</div><div class="ipa">/ˈzɪərəfaɪt/</div><div class="pos">n. 旱生植物</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="xerophyte" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="xerophyte" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 环境话题高级词 · 话题：环境</div><div class="memory">记忆：xero(干燥)+phyte(植物)→干燥环境的植物→旱生植物</div><div class="coll">搭配：desert xerophyte | xerophyte adaptation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Xerophytes are adapted to arid conditions.</div><div class="sent-zh">旱生植物适应干旱环境。</div><button class="sent-play" data-text="Xerophytes are adapted to arid conditions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cacti are well-known xerophytes.</div><div class="sent-zh">仙人掌是著名的旱生植物。</div><button class="sent-play" data-text="Cacti are well-known xerophytes.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">biomass</div><div class="ipa">/ˈbaɪəʊmæs/</div><div class="pos">n 生物量；生物质能源</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="biomass" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="biomass" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：环境</div><div class="memory">记忆：bio(生物) + mass(量) = 生物量</div><div class="coll">搭配：biomass energy, convert biomass, biomass fuel</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Biomass</span> fuel produces fewer emissions than fossil fuels.</div><div class="sent-zh">生物质燃料产生的排放比化石燃料少。</div><button class="sent-play" data-text="Biomass fuel produces fewer emissions than fossil fuels.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The plant converts agricultural <span class="highlight">biomass</span> into electricity.</div><div class="sent-zh">该工厂将农业生物质转化为电力。</div><button class="sent-play" data-text="The plant converts agricultural biomass into electricity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">carbon offset</div><div class="ipa">/ˈkɑːbən ˈɒfset/</div><div class="pos">n 碳补偿</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="carbon offset" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="carbon offset" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：环境</div><div class="memory">记忆：carbon(碳) + offset(抵消) = 碳补偿</div><div class="coll">搭配：carbon offset scheme, purchase carbon offsets, carbon offset program</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Many airlines offer passengers the option to purchase carbon offsets.</div><div class="sent-zh">许多航空公司为乘客提供购买碳补偿的选项。</div><button class="sent-play" data-text="Many airlines offer passengers the option to purchase carbon offsets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company invested in reforestation as a <span class="highlight">carbon offset</span>.</div><div class="sent-zh">该公司投资造林作为碳补偿。</div><button class="sent-play" data-text="The company invested in reforestation as a carbon offset.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">catchment</div><div class="ipa">/ˈkætʃmənt/</div><div class="pos">n 集水区；汇水区</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="catchment" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="catchment" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术词汇 · 话题：环境</div><div class="memory">记忆：catch(接住) + ment = 接住水的区域</div><div class="coll">搭配：catchment area, river catchment, water catchment</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The river <span class="highlight">catchment</span> supplies water to three cities.</div><div class="sent-zh">该河流集水区为三座城市供水。</div><button class="sent-play" data-text="The river catchment supplies water to three cities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Schools in this <span class="highlight">catchment</span> area accept children from nearby neighborhoods.</div><div class="sent-zh">该学区的学校接收附近社区的儿童。</div><button class="sent-play" data-text="Schools in this catchment area accept children from nearby neighborhoods.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

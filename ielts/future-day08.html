@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 8</h1></div>
+<div class="header"><h1>雅思 Future Day 8</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 8 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">fluctuation</div>
-<div style="font-size:13px;color:#8b949e">/ˌflʌktʃuˈeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 波动</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：fluct(流动)+uation→来回流动→波动</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：price fluctuation | market fluctuation | seasonal fluctuation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Currency fluctuation affects international trade.</div><div class="sent-zh">货币波动影响国际贸易。</div><button class="sent-play" data-text="Currency fluctuation affects international trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Price fluctuations are common in agricultural markets.</div><div class="sent-zh">农产品市场常出现价格波动。</div><button class="sent-play" data-text="Price fluctuations are common in agricultural markets.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">benchmark</div>
-<div style="font-size:13px;color:#8b949e">/ˈbentʃmɑːk/</div>
-<div style="font-size:14px;color:#7ee787">n. 基准</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济管理话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bench(长椅)+mark(标记)→长椅上的标记→基准</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：set a benchmark | industry benchmark | benchmark study</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company's performance sets a benchmark for the industry.</div><div class="sent-zh">该公司的表现为行业设定了基准。</div><button class="sent-play" data-text="The company's performance sets a benchmark for the industry.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The study provides a benchmark for future research.</div><div class="sent-zh">该研究为未来研究提供了基准。</div><button class="sent-play" data-text="The study provides a benchmark for future research.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">remuneration</div>
-<div style="font-size:13px;color:#8b949e">/rɪˌmjuːnəˈreɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 报酬</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 职场话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(回)+muner(礼物)+ation→回报→报酬</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：remuneration package | fair remuneration | remuneration committee</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The remuneration package includes a bonus scheme.</div><div class="sent-zh">报酬方案包括奖金计划。</div><button class="sent-play" data-text="The remuneration package includes a bonus scheme.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Employees demanded fair remuneration for overtime work.</div><div class="sent-zh">员工要求对加班给予公平报酬。</div><button class="sent-play" data-text="Employees demanded fair remuneration for overtime work.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">subsistence</div>
-<div style="font-size:13px;color:#8b949e">/səbˈsɪstəns/</div>
-<div style="font-size:14px;color:#7ee787">n. 生存，维持</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：sub(下面)+sist(站)+ence→站着不倒→维持生存</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：subsistence farming | subsistence level | below subsistence</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Many farmers in the region practice subsistence farming.</div><div class="sent-zh">该地区许多农民从事自给农业。</div><button class="sent-play" data-text="Many farmers in the region practice subsistence farming.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The wages are barely above subsistence level.</div><div class="sent-zh">工资勉强高于生存水平。</div><button class="sent-play" data-text="The wages are barely above subsistence level.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">deregulation</div>
-<div style="font-size:13px;color:#8b949e">/ˌdiːˌreɡjuˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 放松管制</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济政策话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：de(取消)+regulation(管制)→取消管制→放松管制</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：financial deregulation | market deregulation | airline deregulation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Financial deregulation led to increased competition.</div><div class="sent-zh">金融放松管制导致了竞争加剧。</div><button class="sent-play" data-text="Financial deregulation led to increased competition.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Airline deregulation lowered ticket prices.</div><div class="sent-zh">航空业放松管制降低了票价。</div><button class="sent-play" data-text="Airline deregulation lowered ticket prices.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">amortisation</div>
-<div style="font-size:13px;color:#8b949e">/əˌmɔːtaɪˈzeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 摊销</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 财务会计高级词汇 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：a(向)+mort(死)+isation→逐渐消灭→摊销</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：amortisation schedule | loan amortisation | amortisation period</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company follows a strict amortisation schedule.</div><div class="sent-zh">公司遵循严格的摊销计划。</div><button class="sent-play" data-text="The company follows a strict amortisation schedule.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Loan amortisation spreads the cost over several years.</div><div class="sent-zh">贷款摊销将成本分摊到几年内。</div><button class="sent-play" data-text="Loan amortisation spreads the cost over several years.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">leverage</div>
-<div style="font-size:13px;color:#8b949e">/ˈliːvərɪdʒ/</div>
-<div style="font-size:14px;color:#7ee787">v. 利用</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 商业话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：lever(杠杆)+age→用杠杆→利用</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：leverage resources | leverage technology | leverage expertise</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company leveraged its brand to enter new markets.</div><div class="sent-zh">公司利用其品牌进入新市场。</div><button class="sent-play" data-text="The company leveraged its brand to enter new markets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. We need to leverage our existing resources more effectively.</div><div class="sent-zh">我们需要更有效地利用现有资源。</div><button class="sent-play" data-text="We need to leverage our existing resources more effectively.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">quantitative</div>
-<div style="font-size:13px;color:#8b949e">/ˈkwɒntɪtətɪv/</div>
-<div style="font-size:14px;color:#7ee787">adj. 定量的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 经济研究话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：quant(量)+itative→关于量的→定量的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：quantitative analysis | quantitative research | quantitative easing</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Quantitative analysis revealed significant trends.</div><div class="sent-zh">定量分析揭示了显著趋势。</div><button class="sent-play" data-text="Quantitative analysis revealed significant trends.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The central bank implemented quantitative easing.</div><div class="sent-zh">央行实施了量化宽松。</div><button class="sent-play" data-text="The central bank implemented quantitative easing.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">synergy</div>
-<div style="font-size:13px;color:#8b949e">/ˈsɪnədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 协同效应</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 商业管理话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：syn(共同)+ergy(能量)→共同能量→协同</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：create synergy | strategic synergy | synergy between</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The merger created synergy between the two companies.</div><div class="sent-zh">合并在两家公司之间产生了协同效应。</div><button class="sent-play" data-text="The merger created synergy between the two companies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. There is clear synergy between the marketing and sales teams.</div><div class="sent-zh">营销和销售团队之间有明显的协同效应。</div><button class="sent-play" data-text="There is clear synergy between the marketing and sales teams.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">recessionary</div>
-<div style="font-size:13px;color:#8b949e">/rɪˈseʃənri/</div>
-<div style="font-size:14px;color:#7ee787">adj. 衰退的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：recession(衰退)+ary→衰退的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：recessionary pressures | recessionary environment | recessionary period</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Recessionary pressures affect consumer spending.</div><div class="sent-zh">衰退压力影响消费者支出。</div><button class="sent-play" data-text="Recessionary pressures affect consumer spending.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. In a recessionary environment, businesses cut costs.</div><div class="sent-zh">在衰退环境中，企业削减成本。</div><button class="sent-play" data-text="In a recessionary environment, businesses cut costs.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">redistribution</div>
-<div style="font-size:13px;color:#8b949e">/ˌriːdɪstrɪˈbjuːʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 再分配</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(再)+distribution(分配)→重新分配→再分配</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：wealth redistribution | income redistribution | redistribution of</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Wealth redistribution is a political priority.</div><div class="sent-zh">财富再分配是政治优先事项。</div><button class="sent-play" data-text="Wealth redistribution is a political priority.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Income redistribution reduces inequality.</div><div class="sent-zh">收入再分配减少不平等。</div><button class="sent-play" data-text="Income redistribution reduces inequality.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">solvency</div>
-<div style="font-size:13px;color:#8b949e">/ˈsɒlvənsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 偿付能力</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：solve(解决)+ency→能解决债务→偿付能力</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：test solvency | corporate solvency | maintain solvency</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The bank must maintain adequate solvency.</div><div class="sent-zh">银行必须保持充足的偿付能力。</div><button class="sent-play" data-text="The bank must maintain adequate solvency.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Corporate solvency is monitored by regulators.</div><div class="sent-zh">企业偿付能力受监管机构监控。</div><button class="sent-play" data-text="Corporate solvency is monitored by regulators.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">blue-chip</div>
-<div style="font-size:13px;color:#8b949e">/ˌbluːˈtʃɪp/</div>
-<div style="font-size:14px;color:#7ee787">adj 蓝筹的；优质的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思词汇 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：扑克中蓝色筹码价值最高</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：blue-chip stock, blue-chip company, blue-chip investment</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Blue-chip stocks are considered safe long-term investments.</div><div class="sent-zh">蓝筹股被认为是安全的长期投资。</div><button class="sent-play" data-text="Blue-chip stocks are considered safe long-term investments.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company is a blue-chip performer in the technology sector.</div><div class="sent-zh">该公司是科技行业的蓝筹企业。</div><button class="sent-play" data-text="The company is a blue-chip performer in the technology sector.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">collateral</div>
-<div style="font-size:13px;color:#8b949e">/kəˈlætərəl/</div>
-<div style="font-size:14px;color:#7ee787">n 抵押品；担保品</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：col(共同) + lateral(侧面) = 侧面支撑</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：post collateral, require collateral, collateral damage, loan collateral</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The bank requires collateral before approving the loan.</div><div class="sent-zh">银行在批准贷款前要求提供抵押品。</div><button class="sent-play" data-text="The bank requires collateral before approving the loan.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She used her house as collateral for the business loan.</div><div class="sent-zh">她用房子作为商业贷款的抵押品。</div><button class="sent-play" data-text="She used her house as collateral for the business loan.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">gross domestic product</div>
-<div style="font-size:13px;color:#8b949e">/ɡrəʊs dəˈmestɪk ˈprɒdʌkt/</div>
-<div style="font-size:14px;color:#7ee787">n 国内生产总值(GDP)</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 雅思高频 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：gross(总) + domestic(国内) + product(产品) = 国内生产总值</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：GDP growth, GDP per capita, real GDP, nominal GDP</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The country's gross domestic product grew by 3 percent last year.</div><div class="sent-zh">该国去年国内生产总值增长了3%。</div><button class="sent-play" data-text="The country's gross domestic product grew by 3 percent last year.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Economists use GDP to measure a nation's economic health.</div><div class="sent-zh">经济学家用GDP衡量一个国家的经济健康状况。</div><button class="sent-play" data-text="Economists use GDP to measure a nation's economic health.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">flat-rate</div>
-<div style="font-size:13px;color:#8b949e">/flæt reɪt/</div>
-<div style="font-size:14px;color:#7ee787">adj 统一费率的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思词汇 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：flat(平) + rate(费率) = 统一费率</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：flat-rate tax, flat-rate fee, flat-rate pricing</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company charges a flat-rate fee for all services.</div><div class="sent-zh">该公司对所有服务收取统一费率。</div><button class="sent-play" data-text="The company charges a flat-rate fee for all services.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Some countries have adopted a flat-rate income tax system.</div><div class="sent-zh">一些国家采用了统一税率所得税制度。</div><button class="sent-play" data-text="Some countries have adopted a flat-rate income tax system.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">freelance</div>
-<div style="font-size:13px;color:#8b949e">/ˈfriːlɑːns/</div>
-<div style="font-size:14px;color:#7ee787">adj 自由职业的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 雅思高频 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：free(自由) + lance(长矛) = 自由骑士→自由职业</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：freelance writer, freelance work, freelance basis, go freelance</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She works as a freelance designer for several companies.</div><div class="sent-zh">她作为自由设计师为多家公司工作。</div><button class="sent-play" data-text="She works as a freelance designer for several companies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Freelance work offers flexibility but lacks job security.</div><div class="sent-zh">自由职业灵活但缺乏工作保障。</div><button class="sent-play" data-text="Freelance work offers flexibility but lacks job security.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">offshore</div>
-<div style="font-size:13px;color:#8b949e">/ˌɒfˈʃɔː/</div>
-<div style="font-size:14px;color:#7ee787">adj 近海的；离岸的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：off(离开) + shore(岸) = 离岸的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：offshore drilling, offshore account, offshore wind farm, offshore banking</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company moved its profits to an offshore account to avoid taxes.</div><div class="sent-zh">该公司将利润转入离岸账户以避税。</div><button class="sent-play" data-text="The company moved its profits to an offshore account to avoid taxes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Offshore wind farms generate clean energy for coastal cities.</div><div class="sent-zh">近海风力发电场为沿海城市提供清洁能源。</div><button class="sent-play" data-text="Offshore wind farms generate clean energy for coastal cities.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">renovation</div>
-<div style="font-size:13px;color:#8b949e">/ˌrenəˈveɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n 翻新；改造</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：re(重新) + nov(新) + ation = 翻新</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：building renovation, home renovation, urban renovation, undergo renovation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The museum will reopen after extensive renovations.</div><div class="sent-zh">博物馆经过大规模翻新后将重新开放。</div><button class="sent-play" data-text="The museum will reopen after extensive renovations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The renovation of old buildings can revitalize neighborhoods.</div><div class="sent-zh">旧建筑翻新可以振兴社区。</div><button class="sent-play" data-text="The renovation of old buildings can revitalize neighborhoods.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">scarcity</div>
-<div style="font-size:13px;color:#8b949e">/ˈskeəsəti/</div>
-<div style="font-size:14px;color:#7ee787">n 稀缺；不足</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：scarce(稀少) + ity = 稀缺性</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：resource scarcity, water scarcity, food scarcity, scarcity of labor</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Water scarcity is becoming a global crisis.</div><div class="sent-zh">水资源短缺正在成为全球性危机。</div><button class="sent-play" data-text="Water scarcity is becoming a global crisis.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Economics is fundamentally the study of scarcity.</div><div class="sent-zh">经济学从根本上说是研究稀缺性的学科。</div><button class="sent-play" data-text="Economics is fundamentally the study of scarcity.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 8 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">fluctuation</div><div class="ipa">/ˌflʌktʃuˈeɪʃn/</div><div class="pos">n. 波动</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fluctuation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fluctuation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：fluct(流动)+uation→来回流动→波动</div><div class="coll">搭配：price fluctuation | market fluctuation | seasonal fluctuation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Currency <span class="highlight">fluctuation</span> affects international trade.</div><div class="sent-zh">货币波动影响国际贸易。</div><button class="sent-play" data-text="Currency fluctuation affects international trade.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Price fluctuations are common in agricultural markets.</div><div class="sent-zh">农产品市场常出现价格波动。</div><button class="sent-play" data-text="Price fluctuations are common in agricultural markets.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">benchmark</div><div class="ipa">/ˈbentʃmɑːk/</div><div class="pos">n. 基准</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="benchmark" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="benchmark" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济管理话题常见词 · 话题：经济就业</div><div class="memory">记忆：bench(长椅)+mark(标记)→长椅上的标记→基准</div><div class="coll">搭配：set a benchmark | industry benchmark | benchmark study</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company's performance sets a <span class="highlight">benchmark</span> for the industry.</div><div class="sent-zh">该公司的表现为行业设定了基准。</div><button class="sent-play" data-text="The company&#x27;s performance sets a benchmark for the industry.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The study provides a <span class="highlight">benchmark</span> for future research.</div><div class="sent-zh">该研究为未来研究提供了基准。</div><button class="sent-play" data-text="The study provides a benchmark for future research.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">remuneration</div><div class="ipa">/rɪˌmjuːnəˈreɪʃn/</div><div class="pos">n. 报酬</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="remuneration" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="remuneration" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 职场话题常见词 · 话题：经济就业</div><div class="memory">记忆：re(回)+muner(礼物)+ation→回报→报酬</div><div class="coll">搭配：remuneration package | fair remuneration | remuneration committee</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">remuneration</span> package includes a bonus scheme.</div><div class="sent-zh">报酬方案包括奖金计划。</div><button class="sent-play" data-text="The remuneration package includes a bonus scheme.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Employees demanded fair <span class="highlight">remuneration</span> for overtime work.</div><div class="sent-zh">员工要求对加班给予公平报酬。</div><button class="sent-play" data-text="Employees demanded fair remuneration for overtime work.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">subsistence</div><div class="ipa">/səbˈsɪstəns/</div><div class="pos">n. 生存，维持</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="subsistence" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="subsistence" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：sub(下面)+sist(站)+ence→站着不倒→维持生存</div><div class="coll">搭配：subsistence farming | subsistence level | below subsistence</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Many farmers in the region practice <span class="highlight">subsistence</span> farming.</div><div class="sent-zh">该地区许多农民从事自给农业。</div><button class="sent-play" data-text="Many farmers in the region practice subsistence farming.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The wages are barely above <span class="highlight">subsistence</span> level.</div><div class="sent-zh">工资勉强高于生存水平。</div><button class="sent-play" data-text="The wages are barely above subsistence level.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">deregulation</div><div class="ipa">/ˌdiːˌreɡjuˈleɪʃn/</div><div class="pos">n. 放松管制</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deregulation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deregulation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济政策话题常见词 · 话题：经济就业</div><div class="memory">记忆：de(取消)+regulation(管制)→取消管制→放松管制</div><div class="coll">搭配：financial deregulation | market deregulation | airline deregulation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Financial <span class="highlight">deregulation</span> led to increased competition.</div><div class="sent-zh">金融放松管制导致了竞争加剧。</div><button class="sent-play" data-text="Financial deregulation led to increased competition.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Airline <span class="highlight">deregulation</span> lowered ticket prices.</div><div class="sent-zh">航空业放松管制降低了票价。</div><button class="sent-play" data-text="Airline deregulation lowered ticket prices.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">amortisation</div><div class="ipa">/əˌmɔːtaɪˈzeɪʃn/</div><div class="pos">n. 摊销</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="amortisation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="amortisation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 财务会计高级词汇 · 话题：经济就业</div><div class="memory">记忆：a(向)+mort(死)+isation→逐渐消灭→摊销</div><div class="coll">搭配：amortisation schedule | loan amortisation | amortisation period</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company follows a strict <span class="highlight">amortisation</span> schedule.</div><div class="sent-zh">公司遵循严格的摊销计划。</div><button class="sent-play" data-text="The company follows a strict amortisation schedule.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Loan <span class="highlight">amortisation</span> spreads the cost over several years.</div><div class="sent-zh">贷款摊销将成本分摊到几年内。</div><button class="sent-play" data-text="Loan amortisation spreads the cost over several years.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">leverage</div><div class="ipa">/ˈliːvərɪdʒ/</div><div class="pos">v. 利用</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="leverage" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="leverage" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 商业话题高级词 · 话题：经济就业</div><div class="memory">记忆：lever(杠杆)+age→用杠杆→利用</div><div class="coll">搭配：leverage resources | leverage technology | leverage expertise</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company leveraged its brand to enter new markets.</div><div class="sent-zh">公司利用其品牌进入新市场。</div><button class="sent-play" data-text="The company leveraged its brand to enter new markets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. We need to <span class="highlight">leverage</span> our existing resources more effectively.</div><div class="sent-zh">我们需要更有效地利用现有资源。</div><button class="sent-play" data-text="We need to leverage our existing resources more effectively.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">quantitative</div><div class="ipa">/ˈkwɒntɪtətɪv/</div><div class="pos">adj. 定量的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="quantitative" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="quantitative" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 经济研究话题高级词 · 话题：经济就业</div><div class="memory">记忆：quant(量)+itative→关于量的→定量的</div><div class="coll">搭配：quantitative analysis | quantitative research | quantitative easing</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Quantitative</span> analysis revealed significant trends.</div><div class="sent-zh">定量分析揭示了显著趋势。</div><button class="sent-play" data-text="Quantitative analysis revealed significant trends.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The central bank implemented <span class="highlight">quantitative</span> easing.</div><div class="sent-zh">央行实施了量化宽松。</div><button class="sent-play" data-text="The central bank implemented quantitative easing.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">synergy</div><div class="ipa">/ˈsɪnədʒi/</div><div class="pos">n. 协同效应</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="synergy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="synergy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 商业管理话题高级词 · 话题：经济就业</div><div class="memory">记忆：syn(共同)+ergy(能量)→共同能量→协同</div><div class="coll">搭配：create synergy | strategic synergy | synergy between</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The merger created <span class="highlight">synergy</span> between the two companies.</div><div class="sent-zh">合并在两家公司之间产生了协同效应。</div><button class="sent-play" data-text="The merger created synergy between the two companies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. There is clear <span class="highlight">synergy</span> between the marketing and sales teams.</div><div class="sent-zh">营销和销售团队之间有明显的协同效应。</div><button class="sent-play" data-text="There is clear synergy between the marketing and sales teams.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">recessionary</div><div class="ipa">/rɪˈseʃənri/</div><div class="pos">adj. 衰退的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="recessionary" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="recessionary" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：recession(衰退)+ary→衰退的</div><div class="coll">搭配：recessionary pressures | recessionary environment | recessionary period</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Recessionary</span> pressures affect consumer spending.</div><div class="sent-zh">衰退压力影响消费者支出。</div><button class="sent-play" data-text="Recessionary pressures affect consumer spending.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. In a <span class="highlight">recessionary</span> environment, businesses cut costs.</div><div class="sent-zh">在衰退环境中，企业削减成本。</div><button class="sent-play" data-text="In a recessionary environment, businesses cut costs.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">redistribution</div><div class="ipa">/ˌriːdɪstrɪˈbjuːʃn/</div><div class="pos">n. 再分配</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="redistribution" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="redistribution" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：re(再)+distribution(分配)→重新分配→再分配</div><div class="coll">搭配：wealth redistribution | income redistribution | redistribution of</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Wealth <span class="highlight">redistribution</span> is a political priority.</div><div class="sent-zh">财富再分配是政治优先事项。</div><button class="sent-play" data-text="Wealth redistribution is a political priority.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Income <span class="highlight">redistribution</span> reduces inequality.</div><div class="sent-zh">收入再分配减少不平等。</div><button class="sent-play" data-text="Income redistribution reduces inequality.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">solvency</div><div class="ipa">/ˈsɒlvənsi/</div><div class="pos">n. 偿付能力</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="solvency" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="solvency" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：solve(解决)+ency→能解决债务→偿付能力</div><div class="coll">搭配：test solvency | corporate solvency | maintain solvency</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The bank must maintain adequate <span class="highlight">solvency</span>.</div><div class="sent-zh">银行必须保持充足的偿付能力。</div><button class="sent-play" data-text="The bank must maintain adequate solvency.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Corporate <span class="highlight">solvency</span> is monitored by regulators.</div><div class="sent-zh">企业偿付能力受监管机构监控。</div><button class="sent-play" data-text="Corporate solvency is monitored by regulators.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">blue-chip</div><div class="ipa">/ˌbluːˈtʃɪp/</div><div class="pos">adj 蓝筹的；优质的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="blue-chip" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="blue-chip" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思词汇 · 话题：经济就业</div><div class="memory">记忆：扑克中蓝色筹码价值最高</div><div class="coll">搭配：blue-chip stock, blue-chip company, blue-chip investment</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Blue-chip</span> stocks are considered safe long-term investments.</div><div class="sent-zh">蓝筹股被认为是安全的长期投资。</div><button class="sent-play" data-text="Blue-chip stocks are considered safe long-term investments.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company is a <span class="highlight">blue-chip</span> performer in the technology sector.</div><div class="sent-zh">该公司是科技行业的蓝筹企业。</div><button class="sent-play" data-text="The company is a blue-chip performer in the technology sector.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">collateral</div><div class="ipa">/kəˈlætərəl/</div><div class="pos">n 抵押品；担保品</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="collateral" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="collateral" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：经济就业</div><div class="memory">记忆：col(共同) + lateral(侧面) = 侧面支撑</div><div class="coll">搭配：post collateral, require collateral, collateral damage, loan collateral</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The bank requires <span class="highlight">collateral</span> before approving the loan.</div><div class="sent-zh">银行在批准贷款前要求提供抵押品。</div><button class="sent-play" data-text="The bank requires collateral before approving the loan.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She used her house as <span class="highlight">collateral</span> for the business loan.</div><div class="sent-zh">她用房子作为商业贷款的抵押品。</div><button class="sent-play" data-text="She used her house as collateral for the business loan.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">gross domestic product</div><div class="ipa">/ɡrəʊs dəˈmestɪk ˈprɒdʌkt/</div><div class="pos">n 国内生产总值(GDP)</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="gross domestic product" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="gross domestic product" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 雅思高频 · 话题：经济就业</div><div class="memory">记忆：gross(总) + domestic(国内) + product(产品) = 国内生产总值</div><div class="coll">搭配：GDP growth, GDP per capita, real GDP, nominal GDP</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The country's <span class="highlight">gross domestic product</span> grew by 3 percent last year.</div><div class="sent-zh">该国去年国内生产总值增长了3%。</div><button class="sent-play" data-text="The country&#x27;s gross domestic product grew by 3 percent last year.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Economists use GDP to measure a nation's economic health.</div><div class="sent-zh">经济学家用GDP衡量一个国家的经济健康状况。</div><button class="sent-play" data-text="Economists use GDP to measure a nation&#x27;s economic health.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">flat-rate</div><div class="ipa">/flæt reɪt/</div><div class="pos">adj 统一费率的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="flat-rate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="flat-rate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思词汇 · 话题：经济就业</div><div class="memory">记忆：flat(平) + rate(费率) = 统一费率</div><div class="coll">搭配：flat-rate tax, flat-rate fee, flat-rate pricing</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company charges a <span class="highlight">flat-rate</span> fee for all services.</div><div class="sent-zh">该公司对所有服务收取统一费率。</div><button class="sent-play" data-text="The company charges a flat-rate fee for all services.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Some countries have adopted a <span class="highlight">flat-rate</span> income tax system.</div><div class="sent-zh">一些国家采用了统一税率所得税制度。</div><button class="sent-play" data-text="Some countries have adopted a flat-rate income tax system.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">freelance</div><div class="ipa">/ˈfriːlɑːns/</div><div class="pos">adj 自由职业的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="freelance" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="freelance" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 雅思高频 · 话题：经济就业</div><div class="memory">记忆：free(自由) + lance(长矛) = 自由骑士→自由职业</div><div class="coll">搭配：freelance writer, freelance work, freelance basis, go freelance</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She works as a <span class="highlight">freelance</span> designer for several companies.</div><div class="sent-zh">她作为自由设计师为多家公司工作。</div><button class="sent-play" data-text="She works as a freelance designer for several companies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Freelance</span> work offers flexibility but lacks job security.</div><div class="sent-zh">自由职业灵活但缺乏工作保障。</div><button class="sent-play" data-text="Freelance work offers flexibility but lacks job security.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">offshore</div><div class="ipa">/ˌɒfˈʃɔː/</div><div class="pos">adj 近海的；离岸的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="offshore" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="offshore" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：经济就业</div><div class="memory">记忆：off(离开) + shore(岸) = 离岸的</div><div class="coll">搭配：offshore drilling, offshore account, offshore wind farm, offshore banking</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company moved its profits to an <span class="highlight">offshore</span> account to avoid taxes.</div><div class="sent-zh">该公司将利润转入离岸账户以避税。</div><button class="sent-play" data-text="The company moved its profits to an offshore account to avoid taxes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Offshore</span> wind farms generate clean energy for coastal cities.</div><div class="sent-zh">近海风力发电场为沿海城市提供清洁能源。</div><button class="sent-play" data-text="Offshore wind farms generate clean energy for coastal cities.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">renovation</div><div class="ipa">/ˌrenəˈveɪʃn/</div><div class="pos">n 翻新；改造</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="renovation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="renovation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：经济就业</div><div class="memory">记忆：re(重新) + nov(新) + ation = 翻新</div><div class="coll">搭配：building renovation, home renovation, urban renovation, undergo renovation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The museum will reopen after extensive renovations.</div><div class="sent-zh">博物馆经过大规模翻新后将重新开放。</div><button class="sent-play" data-text="The museum will reopen after extensive renovations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">renovation</span> of old buildings can revitalize neighborhoods.</div><div class="sent-zh">旧建筑翻新可以振兴社区。</div><button class="sent-play" data-text="The renovation of old buildings can revitalize neighborhoods.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">scarcity</div><div class="ipa">/ˈskeəsəti/</div><div class="pos">n 稀缺；不足</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="scarcity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="scarcity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：经济就业</div><div class="memory">记忆：scarce(稀少) + ity = 稀缺性</div><div class="coll">搭配：resource scarcity, water scarcity, food scarcity, scarcity of labor</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Water <span class="highlight">scarcity</span> is becoming a global crisis.</div><div class="sent-zh">水资源短缺正在成为全球性危机。</div><button class="sent-play" data-text="Water scarcity is becoming a global crisis.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Economics is fundamentally the study of <span class="highlight">scarcity</span>.</div><div class="sent-zh">经济学从根本上说是研究稀缺性的学科。</div><button class="sent-play" data-text="Economics is fundamentally the study of scarcity.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

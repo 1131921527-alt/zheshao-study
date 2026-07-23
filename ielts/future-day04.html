@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 4</h1></div>
+<div class="header"><h1>雅思 Future Day 4</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 4 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">nutrient</div>
-<div style="font-size:13px;color:#8b949e">/ˈnjuːtriənt/</div>
-<div style="font-size:14px;color:#7ee787">n. 营养物</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 健康话题高频词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：nutri(营养)+ent→营养物</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：essential nutrients | absorb nutrients | nutrient deficiency</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Vegetables are rich in essential nutrients.</div><div class="sent-zh">蔬菜富含必需的营养物质。</div><button class="sent-play" data-text="Vegetables are rich in essential nutrients.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Soil nutrient levels affect crop quality.</div><div class="sent-zh">土壤营养水平影响农作物质量。</div><button class="sent-play" data-text="Soil nutrient levels affect crop quality.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">prescription</div>
-<div style="font-size:13px;color:#8b949e">/prɪˈskrɪpʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 处方</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 健康场景常见词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pre(前)+script(写)+ion→提前写好→处方</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：write a prescription | on prescription | prescription drugs</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The doctor wrote a prescription for antibiotics.</div><div class="sent-zh">医生开了抗生素处方。</div><button class="sent-play" data-text="The doctor wrote a prescription for antibiotics.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. These drugs are only available on prescription.</div><div class="sent-zh">这些药物只能凭处方购买。</div><button class="sent-play" data-text="These drugs are only available on prescription.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">therapeutic</div>
-<div style="font-size:13px;color:#8b949e">/ˌθerəˈpjuːtɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 治疗的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 健康话题常见词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：therap(治疗)+eutic→治疗的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：therapeutic effect | therapeutic use | therapeutic approach</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Music can have a therapeutic effect on mental health.</div><div class="sent-zh">音乐对心理健康有治疗效果。</div><button class="sent-play" data-text="Music can have a therapeutic effect on mental health.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The therapeutic approach combines medication and counselling.</div><div class="sent-zh">该治疗方法结合了药物和心理咨询。</div><button class="sent-play" data-text="The therapeutic approach combines medication and counselling.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">immunity</div>
-<div style="font-size:13px;color:#8b949e">/ɪˈmjuːnəti/</div>
-<div style="font-size:14px;color:#7ee787">n. 免疫力</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 健康话题高频词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：im(不)+mun(责任)+ity→不负役→免疫</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：build immunity | immune system | herd immunity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Vaccination helps build immunity against infectious diseases.</div><div class="sent-zh">疫苗接种有助于建立对传染病的免疫力。</div><button class="sent-play" data-text="Vaccination helps build immunity against infectious diseases.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The concept of herd immunity is crucial in public health.</div><div class="sent-zh">群体免疫的概念在公共卫生中至关重要。</div><button class="sent-play" data-text="The concept of herd immunity is crucial in public health.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">metabolic</div>
-<div style="font-size:13px;color:#8b949e">/ˌmetəˈbɒlɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 新陈代谢的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 健康科学话题常见词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：meta(改变)+bol(抛)+ic→改变抛出→新陈代谢的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：metabolic rate | metabolic disorder | metabolic process</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Exercise can increase your metabolic rate.</div><div class="sent-zh">运动可以提高你的代谢率。</div><button class="sent-play" data-text="Exercise can increase your metabolic rate.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Metabolic disorders can lead to serious health issues.</div><div class="sent-zh">代谢紊乱可能导致严重的健康问题。</div><button class="sent-play" data-text="Metabolic disorders can lead to serious health issues.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">prophylactic</div>
-<div style="font-size:13px;color:#8b949e">/ˌprɒfɪˈlæktɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 预防性的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 医学话题中阶词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pro(前)+phyl(守卫)+actic→提前守卫→预防的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：prophylactic treatment | prophylactic measure | prophylactic use</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Prophylactic measures can reduce the risk of infection.</div><div class="sent-zh">预防性措施可以降低感染风险。</div><button class="sent-play" data-text="Prophylactic measures can reduce the risk of infection.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The drug is sometimes used for prophylactic purposes.</div><div class="sent-zh">该药物有时用于预防目的。</div><button class="sent-play" data-text="The drug is sometimes used for prophylactic purposes.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">pathogen</div>
-<div style="font-size:13px;color:#8b949e">/ˈpæθədʒən/</div>
-<div style="font-size:14px;color:#7ee787">n. 病原体</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 医学话题常见词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：path(病)+gen(产生)→产生病的东西→病原体</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：harmful pathogen | pathogen transmission | kill pathogens</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The immune system fights off harmful pathogens.</div><div class="sent-zh">免疫系统对抗有害病原体。</div><button class="sent-play" data-text="The immune system fights off harmful pathogens.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Hand washing is effective in preventing pathogen transmission.</div><div class="sent-zh">洗手能有效预防病原体传播。</div><button class="sent-play" data-text="Hand washing is effective in preventing pathogen transmission.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">deficiency</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈfɪʃnsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 缺乏，不足</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 健康话题高频词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：de(向下)+fici(做)+ency→做得不够→不足</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：vitamin deficiency | iron deficiency | deficiency disease</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Vitamin D deficiency is common in winter.</div><div class="sent-zh">维生素D缺乏在冬季很常见。</div><button class="sent-play" data-text="Vitamin D deficiency is common in winter.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The report highlighted a deficiency in the healthcare system.</div><div class="sent-zh">报告强调了医疗体系的不足之处。</div><button class="sent-play" data-text="The report highlighted a deficiency in the healthcare system.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">prognosis</div>
-<div style="font-size:13px;color:#8b949e">/prɒɡˈnəʊsɪs/</div>
-<div style="font-size:14px;color:#7ee787">n. 预后</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 医学话题中阶词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pro(前)+gnosis(知道)→提前知道→预后</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：good prognosis | poor prognosis | prognosis for recovery</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The prognosis for recovery is good with early treatment.</div><div class="sent-zh">早期治疗的预后良好。</div><button class="sent-play" data-text="The prognosis for recovery is good with early treatment.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Doctors gave a poor prognosis for the advanced stage.</div><div class="sent-zh">医生对晚期给出了不良预后。</div><button class="sent-play" data-text="Doctors gave a poor prognosis for the advanced stage.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">etiology</div>
-<div style="font-size:13px;color:#8b949e">/ˌiːtiˈɒlədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 病因学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 医学高级词汇 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：etio(原因)+logy(学科)→研究原因的学科→病因学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：disease etiology | unknown etiology | study the etiology</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The etiology of the disease remains unknown.</div><div class="sent-zh">该疾病的病因尚不清楚。</div><button class="sent-play" data-text="The etiology of the disease remains unknown.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers are studying the etiology of autism.</div><div class="sent-zh">研究人员正在研究自闭症的病因。</div><button class="sent-play" data-text="Researchers are studying the etiology of autism.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">palliative</div>
-<div style="font-size:13px;color:#8b949e">/ˈpæliətɪv/</div>
-<div style="font-size:14px;color:#7ee787">adj. 姑息的，缓解的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 医学高级词汇 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pall(披风)+iative→披上缓解→姑息的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：palliative care | palliative treatment | palliative measure</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Palliative care focuses on improving quality of life.</div><div class="sent-zh">姑息治疗侧重于提高生活质量。</div><button class="sent-play" data-text="Palliative care focuses on improving quality of life.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The treatment is palliative rather than curative.</div><div class="sent-zh">该治疗是缓解性的而非治愈性的。</div><button class="sent-play" data-text="The treatment is palliative rather than curative.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">idiopathic</div>
-<div style="font-size:13px;color:#8b949e">/ˌɪdiəˈpæθɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 特发性的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 医学高级词汇 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：idio(自身)+path(病)+ic→自身产生的病→特发性的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：idiopathic condition | idiopathic cause | idiopathic hypertension</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The condition is classified as idiopathic.</div><div class="sent-zh">该病被归类为特发性。</div><button class="sent-play" data-text="The condition is classified as idiopathic.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Idiopathic hypertension has no identifiable cause.</div><div class="sent-zh">特发性高血压没有可识别的病因。</div><button class="sent-play" data-text="Idiopathic hypertension has no identifiable cause.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">nosocomial</div>
-<div style="font-size:13px;color:#8b949e">/ˌnɒsəˈkəʊmiəl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 医院内的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 医学高级词汇 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：noso(病)+comial(来自医院)→医院的病→院内的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：nosocomial infection | nosocomial pathogen | reduce nosocomial infections</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Nosocomial infections are a major concern in hospitals.</div><div class="sent-zh">院内感染是医院的一个主要问题。</div><button class="sent-play" data-text="Nosocomial infections are a major concern in hospitals.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Strict hygiene protocols reduce nosocomial infection rates.</div><div class="sent-zh">严格的卫生规程可降低院内感染率。</div><button class="sent-play" data-text="Strict hygiene protocols reduce nosocomial infection rates.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">contraindication</div>
-<div style="font-size:13px;color:#8b949e">/ˌkɒntrəˌɪndɪˈkeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 禁忌症</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 医学高级词汇 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：contra(反)+indication(适应症)→反适应症→禁忌症</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：absolute contraindication | relative contraindication | check for contraindications</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Allergy to the drug is an absolute contraindication.</div><div class="sent-zh">对该药物过敏是绝对禁忌症。</div><button class="sent-play" data-text="Allergy to the drug is an absolute contraindication.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Doctors must check for contraindications before prescribing.</div><div class="sent-zh">医生在开处方前必须检查禁忌症。</div><button class="sent-play" data-text="Doctors must check for contraindications before prescribing.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cholesterol</div>
-<div style="font-size:13px;color:#8b949e">/kəˈlestərɒl/</div>
-<div style="font-size:14px;color:#7ee787">n 胆固醇</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：chole(胆汁) + ster(固) + ol(醇) = 胆固醇</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：high cholesterol, lower cholesterol, cholesterol level, LDL cholesterol</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. High cholesterol increases the risk of heart disease.</div><div class="sent-zh">高胆固醇会增加患心脏病的风险。</div><button class="sent-play" data-text="High cholesterol increases the risk of heart disease.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The doctor advised him to lower his cholesterol through diet and exercise.</div><div class="sent-zh">医生建议他通过饮食和运动降低胆固醇。</div><button class="sent-play" data-text="The doctor advised him to lower his cholesterol through diet and exercise.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">immunization</div>
-<div style="font-size:13px;color:#8b949e">/ˌɪmjənaɪˈzeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n 免疫接种</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：immune(免疫) + ization = 免疫化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：childhood immunization, immunization program, mass immunization</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The immunization program has dramatically reduced childhood diseases.</div><div class="sent-zh">免疫接种计划大幅减少了儿童疾病。</div><button class="sent-play" data-text="The immunization program has dramatically reduced childhood diseases.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Parents are encouraged to keep their children's immunizations up to date.</div><div class="sent-zh">家长被鼓励保持孩子的免疫接种最新。</div><button class="sent-play" data-text="Parents are encouraged to keep their children's immunizations up to date.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">malnutrition</div>
-<div style="font-size:13px;color:#8b949e">/ˌmælnjuːˈtrɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n 营养不良</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mal(不良) + nutrition(营养) = 营养不良</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：severe malnutrition, suffer from malnutrition, prevent malnutrition, childhood malnutrition</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Malnutrition affects millions of children in developing countries.</div><div class="sent-zh">营养不良影响着发展中国家数百万儿童。</div><button class="sent-play" data-text="Malnutrition affects millions of children in developing countries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The relief agency distributed food to combat malnutrition.</div><div class="sent-zh">救济机构分发食物以对抗营养不良。</div><button class="sent-play" data-text="The relief agency distributed food to combat malnutrition.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cholera</div>
-<div style="font-size:13px;color:#8b949e">/ˈkɒlərə/</div>
-<div style="font-size:14px;color:#7ee787">n 霍乱</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术词汇 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：来自希腊语choler(胆汁)</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cholera outbreak, cholera epidemic, contract cholera</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A cholera outbreak was reported in the flood-affected region.</div><div class="sent-zh">洪灾区报告了霍乱疫情。</div><button class="sent-play" data-text="A cholera outbreak was reported in the flood-affected region.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cholera spreads through contaminated water supplies.</div><div class="sent-zh">霍乱通过受污染的水源传播。</div><button class="sent-play" data-text="Cholera spreads through contaminated water supplies.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">obesity</div>
-<div style="font-size:13px;color:#8b949e">/əʊˈbiːsəti/</div>
-<div style="font-size:14px;color:#7ee787">n 肥胖</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：obes(肥胖) + ity = 肥胖症</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：childhood obesity, obesity epidemic, combat obesity, obesity rate</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Obesity has reached epidemic proportions in many developed countries.</div><div class="sent-zh">肥胖在许多发达国家已达到流行病比例。</div><button class="sent-play" data-text="Obesity has reached epidemic proportions in many developed countries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government launched a campaign to combat childhood obesity.</div><div class="sent-zh">政府发起了一项对抗儿童肥胖的运动。</div><button class="sent-play" data-text="The government launched a campaign to combat childhood obesity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">sterilization</div>
-<div style="font-size:13px;color:#8b949e">/ˌsterəlaɪˈzeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n 灭菌；消毒</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术词汇 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ster(无菌) + ilization = 灭菌过程</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：surgical sterilization, forced sterilization, sterilization equipment</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. All surgical instruments undergo strict sterilization.</div><div class="sent-zh">所有手术器械都经过严格灭菌。</div><button class="sent-play" data-text="All surgical instruments undergo strict sterilization.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The policy of forced sterilization has been condemned internationally.</div><div class="sent-zh">强制绝育政策受到国际谴责。</div><button class="sent-play" data-text="The policy of forced sterilization has been condemned internationally.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 4 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">nutrient</div><div class="ipa">/ˈnjuːtriənt/</div><div class="pos">n. 营养物</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nutrient" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nutrient" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 健康话题高频词 · 话题：健康</div><div class="memory">记忆：nutri(营养)+ent→营养物</div><div class="coll">搭配：essential nutrients | absorb nutrients | nutrient deficiency</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Vegetables are rich in essential nutrients.</div><div class="sent-zh">蔬菜富含必需的营养物质。</div><button class="sent-play" data-text="Vegetables are rich in essential nutrients.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Soil <span class="highlight">nutrient</span> levels affect crop quality.</div><div class="sent-zh">土壤营养水平影响农作物质量。</div><button class="sent-play" data-text="Soil nutrient levels affect crop quality.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">prescription</div><div class="ipa">/prɪˈskrɪpʃn/</div><div class="pos">n. 处方</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prescription" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prescription" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 健康场景常见词 · 话题：健康</div><div class="memory">记忆：pre(前)+script(写)+ion→提前写好→处方</div><div class="coll">搭配：write a prescription | on prescription | prescription drugs</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The doctor wrote a <span class="highlight">prescription</span> for antibiotics.</div><div class="sent-zh">医生开了抗生素处方。</div><button class="sent-play" data-text="The doctor wrote a prescription for antibiotics.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. These drugs are only available on <span class="highlight">prescription</span>.</div><div class="sent-zh">这些药物只能凭处方购买。</div><button class="sent-play" data-text="These drugs are only available on prescription.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">therapeutic</div><div class="ipa">/ˌθerəˈpjuːtɪk/</div><div class="pos">adj. 治疗的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="therapeutic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="therapeutic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 健康话题常见词 · 话题：健康</div><div class="memory">记忆：therap(治疗)+eutic→治疗的</div><div class="coll">搭配：therapeutic effect | therapeutic use | therapeutic approach</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Music can have a <span class="highlight">therapeutic</span> effect on mental health.</div><div class="sent-zh">音乐对心理健康有治疗效果。</div><button class="sent-play" data-text="Music can have a therapeutic effect on mental health.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">therapeutic</span> approach combines medication and counselling.</div><div class="sent-zh">该治疗方法结合了药物和心理咨询。</div><button class="sent-play" data-text="The therapeutic approach combines medication and counselling.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">immunity</div><div class="ipa">/ɪˈmjuːnəti/</div><div class="pos">n. 免疫力</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="immunity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="immunity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 健康话题高频词 · 话题：健康</div><div class="memory">记忆：im(不)+mun(责任)+ity→不负役→免疫</div><div class="coll">搭配：build immunity | immune system | herd immunity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Vaccination helps build <span class="highlight">immunity</span> against infectious diseases.</div><div class="sent-zh">疫苗接种有助于建立对传染病的免疫力。</div><button class="sent-play" data-text="Vaccination helps build immunity against infectious diseases.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The concept of herd <span class="highlight">immunity</span> is crucial in public health.</div><div class="sent-zh">群体免疫的概念在公共卫生中至关重要。</div><button class="sent-play" data-text="The concept of herd immunity is crucial in public health.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">metabolic</div><div class="ipa">/ˌmetəˈbɒlɪk/</div><div class="pos">adj. 新陈代谢的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="metabolic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="metabolic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 健康科学话题常见词 · 话题：健康</div><div class="memory">记忆：meta(改变)+bol(抛)+ic→改变抛出→新陈代谢的</div><div class="coll">搭配：metabolic rate | metabolic disorder | metabolic process</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Exercise can increase your <span class="highlight">metabolic</span> rate.</div><div class="sent-zh">运动可以提高你的代谢率。</div><button class="sent-play" data-text="Exercise can increase your metabolic rate.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Metabolic</span> disorders can lead to serious health issues.</div><div class="sent-zh">代谢紊乱可能导致严重的健康问题。</div><button class="sent-play" data-text="Metabolic disorders can lead to serious health issues.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">prophylactic</div><div class="ipa">/ˌprɒfɪˈlæktɪk/</div><div class="pos">adj. 预防性的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prophylactic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prophylactic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 医学话题中阶词 · 话题：健康</div><div class="memory">记忆：pro(前)+phyl(守卫)+actic→提前守卫→预防的</div><div class="coll">搭配：prophylactic treatment | prophylactic measure | prophylactic use</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Prophylactic</span> measures can reduce the risk of infection.</div><div class="sent-zh">预防性措施可以降低感染风险。</div><button class="sent-play" data-text="Prophylactic measures can reduce the risk of infection.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The drug is sometimes used for <span class="highlight">prophylactic</span> purposes.</div><div class="sent-zh">该药物有时用于预防目的。</div><button class="sent-play" data-text="The drug is sometimes used for prophylactic purposes.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">pathogen</div><div class="ipa">/ˈpæθədʒən/</div><div class="pos">n. 病原体</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pathogen" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pathogen" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 医学话题常见词 · 话题：健康</div><div class="memory">记忆：path(病)+gen(产生)→产生病的东西→病原体</div><div class="coll">搭配：harmful pathogen | pathogen transmission | kill pathogens</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The immune system fights off harmful pathogens.</div><div class="sent-zh">免疫系统对抗有害病原体。</div><button class="sent-play" data-text="The immune system fights off harmful pathogens.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Hand washing is effective in preventing <span class="highlight">pathogen</span> transmission.</div><div class="sent-zh">洗手能有效预防病原体传播。</div><button class="sent-play" data-text="Hand washing is effective in preventing pathogen transmission.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">deficiency</div><div class="ipa">/dɪˈfɪʃnsi/</div><div class="pos">n. 缺乏，不足</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deficiency" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deficiency" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 健康话题高频词 · 话题：健康</div><div class="memory">记忆：de(向下)+fici(做)+ency→做得不够→不足</div><div class="coll">搭配：vitamin deficiency | iron deficiency | deficiency disease</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Vitamin D <span class="highlight">deficiency</span> is common in winter.</div><div class="sent-zh">维生素D缺乏在冬季很常见。</div><button class="sent-play" data-text="Vitamin D deficiency is common in winter.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The report highlighted a <span class="highlight">deficiency</span> in the healthcare system.</div><div class="sent-zh">报告强调了医疗体系的不足之处。</div><button class="sent-play" data-text="The report highlighted a deficiency in the healthcare system.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">prognosis</div><div class="ipa">/prɒɡˈnəʊsɪs/</div><div class="pos">n. 预后</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prognosis" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="prognosis" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 医学话题中阶词 · 话题：健康</div><div class="memory">记忆：pro(前)+gnosis(知道)→提前知道→预后</div><div class="coll">搭配：good prognosis | poor prognosis | prognosis for recovery</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">prognosis</span> for recovery is good with early treatment.</div><div class="sent-zh">早期治疗的预后良好。</div><button class="sent-play" data-text="The prognosis for recovery is good with early treatment.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Doctors gave a poor <span class="highlight">prognosis</span> for the advanced stage.</div><div class="sent-zh">医生对晚期给出了不良预后。</div><button class="sent-play" data-text="Doctors gave a poor prognosis for the advanced stage.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">etiology</div><div class="ipa">/ˌiːtiˈɒlədʒi/</div><div class="pos">n. 病因学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="etiology" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="etiology" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 医学高级词汇 · 话题：健康</div><div class="memory">记忆：etio(原因)+logy(学科)→研究原因的学科→病因学</div><div class="coll">搭配：disease etiology | unknown etiology | study the etiology</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">etiology</span> of the disease remains unknown.</div><div class="sent-zh">该疾病的病因尚不清楚。</div><button class="sent-play" data-text="The etiology of the disease remains unknown.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers are studying the <span class="highlight">etiology</span> of autism.</div><div class="sent-zh">研究人员正在研究自闭症的病因。</div><button class="sent-play" data-text="Researchers are studying the etiology of autism.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">palliative</div><div class="ipa">/ˈpæliətɪv/</div><div class="pos">adj. 姑息的，缓解的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="palliative" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="palliative" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 医学高级词汇 · 话题：健康</div><div class="memory">记忆：pall(披风)+iative→披上缓解→姑息的</div><div class="coll">搭配：palliative care | palliative treatment | palliative measure</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Palliative</span> care focuses on improving quality of life.</div><div class="sent-zh">姑息治疗侧重于提高生活质量。</div><button class="sent-play" data-text="Palliative care focuses on improving quality of life.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The treatment is <span class="highlight">palliative</span> rather than curative.</div><div class="sent-zh">该治疗是缓解性的而非治愈性的。</div><button class="sent-play" data-text="The treatment is palliative rather than curative.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">idiopathic</div><div class="ipa">/ˌɪdiəˈpæθɪk/</div><div class="pos">adj. 特发性的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="idiopathic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="idiopathic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 医学高级词汇 · 话题：健康</div><div class="memory">记忆：idio(自身)+path(病)+ic→自身产生的病→特发性的</div><div class="coll">搭配：idiopathic condition | idiopathic cause | idiopathic hypertension</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The condition is classified as <span class="highlight">idiopathic</span>.</div><div class="sent-zh">该病被归类为特发性。</div><button class="sent-play" data-text="The condition is classified as idiopathic.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Idiopathic</span> hypertension has no identifiable cause.</div><div class="sent-zh">特发性高血压没有可识别的病因。</div><button class="sent-play" data-text="Idiopathic hypertension has no identifiable cause.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">nosocomial</div><div class="ipa">/ˌnɒsəˈkəʊmiəl/</div><div class="pos">adj. 医院内的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nosocomial" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nosocomial" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 医学高级词汇 · 话题：健康</div><div class="memory">记忆：noso(病)+comial(来自医院)→医院的病→院内的</div><div class="coll">搭配：nosocomial infection | nosocomial pathogen | reduce nosocomial infections</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Nosocomial</span> infections are a major concern in hospitals.</div><div class="sent-zh">院内感染是医院的一个主要问题。</div><button class="sent-play" data-text="Nosocomial infections are a major concern in hospitals.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Strict hygiene protocols reduce <span class="highlight">nosocomial</span> infection rates.</div><div class="sent-zh">严格的卫生规程可降低院内感染率。</div><button class="sent-play" data-text="Strict hygiene protocols reduce nosocomial infection rates.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">contraindication</div><div class="ipa">/ˌkɒntrəˌɪndɪˈkeɪʃn/</div><div class="pos">n. 禁忌症</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="contraindication" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="contraindication" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 医学高级词汇 · 话题：健康</div><div class="memory">记忆：contra(反)+indication(适应症)→反适应症→禁忌症</div><div class="coll">搭配：absolute contraindication | relative contraindication | check for contraindications</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Allergy to the drug is an absolute <span class="highlight">contraindication</span>.</div><div class="sent-zh">对该药物过敏是绝对禁忌症。</div><button class="sent-play" data-text="Allergy to the drug is an absolute contraindication.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Doctors must check for contraindications before prescribing.</div><div class="sent-zh">医生在开处方前必须检查禁忌症。</div><button class="sent-play" data-text="Doctors must check for contraindications before prescribing.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">cholesterol</div><div class="ipa">/kəˈlestərɒl/</div><div class="pos">n 胆固醇</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cholesterol" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cholesterol" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：健康</div><div class="memory">记忆：chole(胆汁) + ster(固) + ol(醇) = 胆固醇</div><div class="coll">搭配：high cholesterol, lower cholesterol, cholesterol level, LDL cholesterol</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. High <span class="highlight">cholesterol</span> increases the risk of heart disease.</div><div class="sent-zh">高胆固醇会增加患心脏病的风险。</div><button class="sent-play" data-text="High cholesterol increases the risk of heart disease.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The doctor advised him to lower his <span class="highlight">cholesterol</span> through diet and exercise.</div><div class="sent-zh">医生建议他通过饮食和运动降低胆固醇。</div><button class="sent-play" data-text="The doctor advised him to lower his cholesterol through diet and exercise.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">immunization</div><div class="ipa">/ˌɪmjənaɪˈzeɪʃn/</div><div class="pos">n 免疫接种</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="immunization" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="immunization" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：健康</div><div class="memory">记忆：immune(免疫) + ization = 免疫化</div><div class="coll">搭配：childhood immunization, immunization program, mass immunization</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">immunization</span> program has dramatically reduced childhood diseases.</div><div class="sent-zh">免疫接种计划大幅减少了儿童疾病。</div><button class="sent-play" data-text="The immunization program has dramatically reduced childhood diseases.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Parents are encouraged to keep their children's immunizations up to date.</div><div class="sent-zh">家长被鼓励保持孩子的免疫接种最新。</div><button class="sent-play" data-text="Parents are encouraged to keep their children&#x27;s immunizations up to date.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">malnutrition</div><div class="ipa">/ˌmælnjuːˈtrɪʃn/</div><div class="pos">n 营养不良</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="malnutrition" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="malnutrition" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：健康</div><div class="memory">记忆：mal(不良) + nutrition(营养) = 营养不良</div><div class="coll">搭配：severe malnutrition, suffer from malnutrition, prevent malnutrition, childhood malnutrition</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Malnutrition</span> affects millions of children in developing countries.</div><div class="sent-zh">营养不良影响着发展中国家数百万儿童。</div><button class="sent-play" data-text="Malnutrition affects millions of children in developing countries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The relief agency distributed food to combat <span class="highlight">malnutrition</span>.</div><div class="sent-zh">救济机构分发食物以对抗营养不良。</div><button class="sent-play" data-text="The relief agency distributed food to combat malnutrition.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">cholera</div><div class="ipa">/ˈkɒlərə/</div><div class="pos">n 霍乱</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cholera" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cholera" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术词汇 · 话题：健康</div><div class="memory">记忆：来自希腊语choler(胆汁)</div><div class="coll">搭配：cholera outbreak, cholera epidemic, contract cholera</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">cholera</span> outbreak was reported in the flood-affected region.</div><div class="sent-zh">洪灾区报告了霍乱疫情。</div><button class="sent-play" data-text="A cholera outbreak was reported in the flood-affected region.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Cholera</span> spreads through contaminated water supplies.</div><div class="sent-zh">霍乱通过受污染的水源传播。</div><button class="sent-play" data-text="Cholera spreads through contaminated water supplies.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">obesity</div><div class="ipa">/əʊˈbiːsəti/</div><div class="pos">n 肥胖</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="obesity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="obesity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：健康</div><div class="memory">记忆：obes(肥胖) + ity = 肥胖症</div><div class="coll">搭配：childhood obesity, obesity epidemic, combat obesity, obesity rate</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Obesity</span> has reached epidemic proportions in many developed countries.</div><div class="sent-zh">肥胖在许多发达国家已达到流行病比例。</div><button class="sent-play" data-text="Obesity has reached epidemic proportions in many developed countries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The government launched a campaign to combat childhood <span class="highlight">obesity</span>.</div><div class="sent-zh">政府发起了一项对抗儿童肥胖的运动。</div><button class="sent-play" data-text="The government launched a campaign to combat childhood obesity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">sterilization</div><div class="ipa">/ˌsterəlaɪˈzeɪʃn/</div><div class="pos">n 灭菌；消毒</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="sterilization" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="sterilization" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术词汇 · 话题：健康</div><div class="memory">记忆：ster(无菌) + ilization = 灭菌过程</div><div class="coll">搭配：surgical sterilization, forced sterilization, sterilization equipment</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. All surgical instruments undergo strict <span class="highlight">sterilization</span>.</div><div class="sent-zh">所有手术器械都经过严格灭菌。</div><button class="sent-play" data-text="All surgical instruments undergo strict sterilization.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The policy of forced <span class="highlight">sterilization</span> has been condemned internationally.</div><div class="sent-zh">强制绝育政策受到国际谴责。</div><button class="sent-play" data-text="The policy of forced sterilization has been condemned internationally.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

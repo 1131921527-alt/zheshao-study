@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 28</h1></div>
+<div class="header"><h1>雅思 Future Day 28</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 28 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">derivative</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈrɪvətɪv/</div>
-<div style="font-size:14px;color:#7ee787">n. 衍生品</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：derive(派生)+tive→派生物→衍生品</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：financial derivative | trade derivatives | derivative market</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Financial derivatives are complex instruments.</div><div class="sent-zh">金融衍生品是复杂的工具。</div><button class="sent-play" data-text="Financial derivatives are complex instruments.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The derivative market is worth trillions.</div><div class="sent-zh">衍生品市场价值数万亿。</div><button class="sent-play" data-text="The derivative market is worth trillions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">diversification</div>
-<div style="font-size:13px;color:#8b949e">/daɪˌvɜːsɪfɪˈkeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 多元化</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：divers(多样)+ification→使之多样→多元化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：product diversification | portfolio diversification | risk diversification</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Portfolio diversification reduces investment risk.</div><div class="sent-zh">投资组合多元化降低投资风险。</div><button class="sent-play" data-text="Portfolio diversification reduces investment risk.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Product diversification opened new markets.</div><div class="sent-zh">产品多元化开拓了新市场。</div><button class="sent-play" data-text="Product diversification opened new markets.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">insolvency</div>
-<div style="font-size:13px;color:#8b949e">/ɪnˈsɒlvənsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 资不抵债</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：in(不)+solvent(有偿付能力)+cy→无力偿还→资不抵债</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：declare insolvency | corporate insolvency | face insolvency</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company declared insolvency last month.</div><div class="sent-zh">公司上月宣布资不抵债。</div><button class="sent-play" data-text="The company declared insolvency last month.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Corporate insolvency rates rose during the recession.</div><div class="sent-zh">衰退期间企业资不抵债率上升。</div><button class="sent-play" data-text="Corporate insolvency rates rose during the recession.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">liquidate</div>
-<div style="font-size:13px;color:#8b949e">/ˈlɪkwɪdeɪt/</div>
-<div style="font-size:14px;color:#7ee787">v. 清算</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：liquid(液体)+ate→变成现金(流动性)→清算</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：liquidate assets | liquidate the company | forced to liquidate</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company was forced to liquidate its assets.</div><div class="sent-zh">公司被迫清算资产。</div><button class="sent-play" data-text="The company was forced to liquidate its assets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The bank liquidated the failing business.</div><div class="sent-zh">银行清算了一家失败的企业。</div><button class="sent-play" data-text="The bank liquidated the failing business.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">speculation</div>
-<div style="font-size:13px;color:#8b949e">/ˌspekjuˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 投机</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：specul(看)+ation→观察猜测→投机</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：property speculation | currency speculation | fuel speculation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Property speculation drove up house prices.</div><div class="sent-zh">房地产投机推高了房价。</div><button class="sent-play" data-text="Property speculation drove up house prices.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Currency speculation can destabilise economies.</div><div class="sent-zh">货币投机可能动摇经济。</div><button class="sent-play" data-text="Currency speculation can destabilise economies.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">leveraged</div>
-<div style="font-size:13px;color:#8b949e">/ˈliːvərɪdʒd/</div>
-<div style="font-size:14px;color:#7ee787">adj. 杠杆的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：leverage(杠杆)+d→使用杠杆的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：leveraged buyout | highly leveraged | leveraged position</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The leveraged buyout was the largest in history.</div><div class="sent-zh">此次杠杆收购是历史上最大的。</div><button class="sent-play" data-text="The leveraged buyout was the largest in history.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Highly leveraged companies face greater risk.</div><div class="sent-zh">高杠杆公司面临更大风险。</div><button class="sent-play" data-text="Highly leveraged companies face greater risk.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">macroeconomics</div>
-<div style="font-size:13px;color:#8b949e">/ˌmækrəʊˌiːkəˈnɒmɪks/</div>
-<div style="font-size:14px;color:#7ee787">n. 宏观经济学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：macro(大)+economics(经济学)→宏观经济学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：study macroeconomics | macroeconomics policy | applied macroeconomics</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Macroeconomics studies the economy as a whole.</div><div class="sent-zh">宏观经济学研究整体经济。</div><button class="sent-play" data-text="Macroeconomics studies the economy as a whole.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Macroeconomic policy guides government spending.</div><div class="sent-zh">宏观经济政策指导政府支出。</div><button class="sent-play" data-text="Macroeconomic policy guides government spending.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">microeconomics</div>
-<div style="font-size:13px;color:#8b949e">/ˌmaɪkrəʊˌiːkəˈnɒmɪks/</div>
-<div style="font-size:14px;color:#7ee787">n. 微观经济学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：micro(小)+economics(经济学)→微观经济学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：study microeconomics | microeconomics theory | applied microeconomics</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Microeconomics examines individual market behaviour.</div><div class="sent-zh">微观经济学研究个体市场行为。</div><button class="sent-play" data-text="Microeconomics examines individual market behaviour.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Microeconomics and macroeconomics are complementary.</div><div class="sent-zh">微观经济学和宏观经济学是互补的。</div><button class="sent-play" data-text="Microeconomics and macroeconomics are complementary.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">intercultural</div>
-<div style="font-size:13px;color:#8b949e">/ˌɪntəˈkʌltʃərəl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 跨文化的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：inter(之间)+cultural(文化)→文化之间的→跨文化的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：intercultural communication | intercultural competence | intercultural dialogue</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Intercultural communication skills are essential.</div><div class="sent-zh">跨文化沟通技能至关重要。</div><button class="sent-play" data-text="Intercultural communication skills are essential.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Intercultural competence reduces misunderstandings.</div><div class="sent-zh">跨文化能力减少误解。</div><button class="sent-play" data-text="Intercultural competence reduces misunderstandings.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cosmopolitan</div>
-<div style="font-size:13px;color:#8b949e">/ˌkɒzməˈpɒlɪtən/</div>
-<div style="font-size:14px;color:#7ee787">adj. 国际化的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cosmo(世界)+politan(城市)→世界城市的→国际化的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cosmopolitan city | cosmopolitan culture | cosmopolitan outlook</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. London is a truly cosmopolitan city.</div><div class="sent-zh">伦敦是真正的国际化城市。</div><button class="sent-play" data-text="London is a truly cosmopolitan city.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A cosmopolitan outlook embraces diversity.</div><div class="sent-zh">国际化视野拥抱多样性。</div><button class="sent-play" data-text="A cosmopolitan outlook embraces diversity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">exchange</div>
-<div style="font-size:13px;color:#8b949e">/ɪksˈtʃeɪndʒ/</div>
-<div style="font-size:14px;color:#7ee787">n. 交流</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：exchange(交换)→交流</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural exchange | student exchange | exchange programme</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cultural exchange promotes mutual understanding.</div><div class="sent-zh">文化交流促进相互理解。</div><button class="sent-play" data-text="Cultural exchange promotes mutual understanding.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Student exchange programmes broaden horizons.</div><div class="sent-zh">学生交流项目拓宽视野。</div><button class="sent-play" data-text="Student exchange programmes broaden horizons.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">diversity</div>
-<div style="font-size:13px;color:#8b949e">/daɪˈvɜːsəti/</div>
-<div style="font-size:14px;color:#7ee787">n. 多样性</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：divers(多样)+ity→多样性</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural diversity | promote diversity | biological diversity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cultural diversity enriches society.</div><div class="sent-zh">文化多样性丰富社会。</div><button class="sent-play" data-text="Cultural diversity enriches society.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Workplace diversity improves innovation.</div><div class="sent-zh">职场多样性提高创新。</div><button class="sent-play" data-text="Workplace diversity improves innovation.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cosmopolitanism</div>
-<div style="font-size:13px;color:#8b949e">/ˌkɒzməˈpɒlɪtənɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 世界主义</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 全球化话题常见词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cosmopolitan(世界)+ism→世界主义</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：embrace cosmopolitanism | political cosmopolitanism | moral cosmopolitanism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cosmopolitanism promotes global citizenship.</div><div class="sent-zh">世界主义促进全球公民意识。</div><button class="sent-play" data-text="Cosmopolitanism promotes global citizenship.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Critics argue cosmopolitanism ignores local loyalties.</div><div class="sent-zh">批评者认为世界主义忽视本土认同。</div><button class="sent-play" data-text="Critics argue cosmopolitanism ignores local loyalties.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cross-cultural</div>
-<div style="font-size:13px;color:#8b949e">/ˌkrɒsˈkʌltʃərəl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 跨文化的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 全球化话题常见词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cross(跨)+cultural(文化)→跨文化的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cross-cultural research | cross-cultural differences | cross-cultural study</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cross-cultural research reveals interesting differences.</div><div class="sent-zh">跨文化研究揭示有趣差异。</div><button class="sent-play" data-text="Cross-cultural research reveals interesting differences.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cross-cultural differences affect business negotiations.</div><div class="sent-zh">跨文化差异影响商业谈判。</div><button class="sent-play" data-text="Cross-cultural differences affect business negotiations.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">synchronisation</div>
-<div style="font-size:13px;color:#8b949e">/ˌsɪŋkrənaɪˈzeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 同步化</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 全球化话题高级词 · 话题：全球化</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：syn(同)+chron(时间)+isation→同时→同步化</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：economic synchronisation | global synchronisation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Economic synchronisation means recessions spread globally.</div><div class="sent-zh">经济同步化意味着衰退全球蔓延。</div><button class="sent-play" data-text="Economic synchronisation means recessions spread globally.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Global synchronisation affects financial markets.</div><div class="sent-zh">全球同步化影响金融市场。</div><button class="sent-play" data-text="Global synchronisation affects financial markets.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">fauna</div>
-<div style="font-size:13px;color:#8b949e">/ˈfɔːnə/</div>
-<div style="font-size:14px;color:#7ee787">n 动物群</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 学术高频 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：罗马神话中Fauna为动物女神</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：native fauna, marine fauna, flora and fauna</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The island is home to unique fauna found nowhere else.</div><div class="sent-zh">该岛屿是独特动物群的家园，其他地方找不到。</div><button class="sent-play" data-text="The island is home to unique fauna found nowhere else.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers documented the fauna of the rainforest.</div><div class="sent-zh">研究人员记录了这片雨林的动物群。</div><button class="sent-play" data-text="Researchers documented the fauna of the rainforest.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">floodplain</div>
-<div style="font-size:13px;color:#8b949e">/ˈflʌdpleɪn/</div>
-<div style="font-size:14px;color:#7ee787">n 洪泛平原</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思词汇 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：flood(洪水) + plain(平原) = 洪泛区</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：river floodplain, floodplain management, floodplain development</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Building on floodplains increases the risk of flood damage.</div><div class="sent-zh">在洪泛平原上建筑会增加洪水损坏的风险。</div><button class="sent-play" data-text="Building on floodplains increases the risk of flood damage.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The floodplain provides fertile soil for farming.</div><div class="sent-zh">洪泛平原为农业提供了肥沃的土壤。</div><button class="sent-play" data-text="The floodplain provides fertile soil for farming.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">food chain</div>
-<div style="font-size:13px;color:#8b949e">/fuːd tʃeɪn/</div>
-<div style="font-size:14px;color:#7ee787">n 食物链</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 雅思常用 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：food(食物) + chain(链条) = 食物链</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：top of the food chain, disrupt the food chain, marine food chain</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Plastic pollution disrupts the marine food chain.</div><div class="sent-zh">塑料污染破坏了海洋食物链。</div><button class="sent-play" data-text="Plastic pollution disrupts the marine food chain.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Humans sit at the top of the food chain.</div><div class="sent-zh">人类位于食物链的顶端。</div><button class="sent-play" data-text="Humans sit at the top of the food chain.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">fossil fuel</div>
-<div style="font-size:13px;color:#8b949e">/ˈfɒsl fjuːəl/</div>
-<div style="font-size:14px;color:#7ee787">n 化石燃料</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 雅思高频 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：fossil(化石) + fuel(燃料) = 化石燃料</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：burn fossil fuels, fossil fuel emissions, reduce fossil fuel use</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Burning fossil fuels is the primary cause of global warming.</div><div class="sent-zh">燃烧化石燃料是全球变暖的主要原因。</div><button class="sent-play" data-text="Burning fossil fuels is the primary cause of global warming.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many countries are phasing out fossil fuels in favor of renewable energy.</div><div class="sent-zh">许多国家正在逐步淘汰化石燃料，转向可再生能源。</div><button class="sent-play" data-text="Many countries are phasing out fossil fuels in favor of renewable energy.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">groundwater</div>
-<div style="font-size:13px;color:#8b949e">/ˈɡraʊndwɔːtər/</div>
-<div style="font-size:14px;color:#7ee787">n 地下水</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ground(地面) + water = 地下水</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：groundwater level, groundwater contamination, groundwater resources</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Groundwater levels have dropped significantly due to overuse.</div><div class="sent-zh">由于过度使用，地下水位已大幅下降。</div><button class="sent-play" data-text="Groundwater levels have dropped significantly due to overuse.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The region relies entirely on groundwater for drinking water.</div><div class="sent-zh">该地区完全依赖地下水作为饮用水。</div><button class="sent-play" data-text="The region relies entirely on groundwater for drinking water.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 28 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">derivative</div><div class="ipa">/dɪˈrɪvətɪv/</div><div class="pos">n. 衍生品</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="derivative" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="derivative" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：derive(派生)+tive→派生物→衍生品</div><div class="coll">搭配：financial derivative | trade derivatives | derivative market</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Financial derivatives are complex instruments.</div><div class="sent-zh">金融衍生品是复杂的工具。</div><button class="sent-play" data-text="Financial derivatives are complex instruments.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">derivative</span> market is worth trillions.</div><div class="sent-zh">衍生品市场价值数万亿。</div><button class="sent-play" data-text="The derivative market is worth trillions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">diversification</div><div class="ipa">/daɪˌvɜːsɪfɪˈkeɪʃn/</div><div class="pos">n. 多元化</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diversification" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diversification" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：divers(多样)+ification→使之多样→多元化</div><div class="coll">搭配：product diversification | portfolio diversification | risk diversification</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Portfolio <span class="highlight">diversification</span> reduces investment risk.</div><div class="sent-zh">投资组合多元化降低投资风险。</div><button class="sent-play" data-text="Portfolio diversification reduces investment risk.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Product <span class="highlight">diversification</span> opened new markets.</div><div class="sent-zh">产品多元化开拓了新市场。</div><button class="sent-play" data-text="Product diversification opened new markets.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">insolvency</div><div class="ipa">/ɪnˈsɒlvənsi/</div><div class="pos">n. 资不抵债</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="insolvency" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="insolvency" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：in(不)+solvent(有偿付能力)+cy→无力偿还→资不抵债</div><div class="coll">搭配：declare insolvency | corporate insolvency | face insolvency</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company declared <span class="highlight">insolvency</span> last month.</div><div class="sent-zh">公司上月宣布资不抵债。</div><button class="sent-play" data-text="The company declared insolvency last month.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Corporate <span class="highlight">insolvency</span> rates rose during the recession.</div><div class="sent-zh">衰退期间企业资不抵债率上升。</div><button class="sent-play" data-text="Corporate insolvency rates rose during the recession.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">liquidate</div><div class="ipa">/ˈlɪkwɪdeɪt/</div><div class="pos">v. 清算</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="liquidate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="liquidate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：liquid(液体)+ate→变成现金(流动性)→清算</div><div class="coll">搭配：liquidate assets | liquidate the company | forced to liquidate</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company was forced to <span class="highlight">liquidate</span> its assets.</div><div class="sent-zh">公司被迫清算资产。</div><button class="sent-play" data-text="The company was forced to liquidate its assets.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The bank liquidated the failing business.</div><div class="sent-zh">银行清算了一家失败的企业。</div><button class="sent-play" data-text="The bank liquidated the failing business.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">speculation</div><div class="ipa">/ˌspekjuˈleɪʃn/</div><div class="pos">n. 投机</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="speculation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="speculation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 经济话题常见词 · 话题：经济就业</div><div class="memory">记忆：specul(看)+ation→观察猜测→投机</div><div class="coll">搭配：property speculation | currency speculation | fuel speculation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Property <span class="highlight">speculation</span> drove up house prices.</div><div class="sent-zh">房地产投机推高了房价。</div><button class="sent-play" data-text="Property speculation drove up house prices.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Currency <span class="highlight">speculation</span> can destabilise economies.</div><div class="sent-zh">货币投机可能动摇经济。</div><button class="sent-play" data-text="Currency speculation can destabilise economies.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">leveraged</div><div class="ipa">/ˈliːvərɪdʒd/</div><div class="pos">adj. 杠杆的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="leveraged" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="leveraged" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：leverage(杠杆)+d→使用杠杆的</div><div class="coll">搭配：leveraged buyout | highly leveraged | leveraged position</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">leveraged</span> buyout was the largest in history.</div><div class="sent-zh">此次杠杆收购是历史上最大的。</div><button class="sent-play" data-text="The leveraged buyout was the largest in history.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Highly <span class="highlight">leveraged</span> companies face greater risk.</div><div class="sent-zh">高杠杆公司面临更大风险。</div><button class="sent-play" data-text="Highly leveraged companies face greater risk.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">macroeconomics</div><div class="ipa">/ˌmækrəʊˌiːkəˈnɒmɪks/</div><div class="pos">n. 宏观经济学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="macroeconomics" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="macroeconomics" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：macro(大)+economics(经济学)→宏观经济学</div><div class="coll">搭配：study macroeconomics | macroeconomics policy | applied macroeconomics</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Macroeconomics</span> studies the economy as a whole.</div><div class="sent-zh">宏观经济学研究整体经济。</div><button class="sent-play" data-text="Macroeconomics studies the economy as a whole.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Macroeconomic policy guides government spending.</div><div class="sent-zh">宏观经济政策指导政府支出。</div><button class="sent-play" data-text="Macroeconomic policy guides government spending.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">microeconomics</div><div class="ipa">/ˌmaɪkrəʊˌiːkəˈnɒmɪks/</div><div class="pos">n. 微观经济学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="microeconomics" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="microeconomics" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 经济话题高级词 · 话题：经济就业</div><div class="memory">记忆：micro(小)+economics(经济学)→微观经济学</div><div class="coll">搭配：study microeconomics | microeconomics theory | applied microeconomics</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Microeconomics</span> examines individual market behaviour.</div><div class="sent-zh">微观经济学研究个体市场行为。</div><button class="sent-play" data-text="Microeconomics examines individual market behaviour.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Microeconomics</span> and macroeconomics are complementary.</div><div class="sent-zh">微观经济学和宏观经济学是互补的。</div><button class="sent-play" data-text="Microeconomics and macroeconomics are complementary.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">intercultural</div><div class="ipa">/ˌɪntəˈkʌltʃərəl/</div><div class="pos">adj. 跨文化的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="intercultural" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="intercultural" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div><div class="memory">记忆：inter(之间)+cultural(文化)→文化之间的→跨文化的</div><div class="coll">搭配：intercultural communication | intercultural competence | intercultural dialogue</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Intercultural</span> communication skills are essential.</div><div class="sent-zh">跨文化沟通技能至关重要。</div><button class="sent-play" data-text="Intercultural communication skills are essential.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Intercultural</span> competence reduces misunderstandings.</div><div class="sent-zh">跨文化能力减少误解。</div><button class="sent-play" data-text="Intercultural competence reduces misunderstandings.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cosmopolitan</div><div class="ipa">/ˌkɒzməˈpɒlɪtən/</div><div class="pos">adj. 国际化的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cosmopolitan" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cosmopolitan" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div><div class="memory">记忆：cosmo(世界)+politan(城市)→世界城市的→国际化的</div><div class="coll">搭配：cosmopolitan city | cosmopolitan culture | cosmopolitan outlook</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. London is a truly <span class="highlight">cosmopolitan</span> city.</div><div class="sent-zh">伦敦是真正的国际化城市。</div><button class="sent-play" data-text="London is a truly cosmopolitan city.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">cosmopolitan</span> outlook embraces diversity.</div><div class="sent-zh">国际化视野拥抱多样性。</div><button class="sent-play" data-text="A cosmopolitan outlook embraces diversity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">exchange</div><div class="ipa">/ɪksˈtʃeɪndʒ/</div><div class="pos">n. 交流</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exchange" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exchange" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div><div class="memory">记忆：exchange(交换)→交流</div><div class="coll">搭配：cultural exchange | student exchange | exchange programme</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Cultural <span class="highlight">exchange</span> promotes mutual understanding.</div><div class="sent-zh">文化交流促进相互理解。</div><button class="sent-play" data-text="Cultural exchange promotes mutual understanding.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Student <span class="highlight">exchange</span> programmes broaden horizons.</div><div class="sent-zh">学生交流项目拓宽视野。</div><button class="sent-play" data-text="Student exchange programmes broaden horizons.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">diversity</div><div class="ipa">/daɪˈvɜːsəti/</div><div class="pos">n. 多样性</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diversity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diversity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 全球化话题高频词 · 话题：全球化</div><div class="memory">记忆：divers(多样)+ity→多样性</div><div class="coll">搭配：cultural diversity | promote diversity | biological diversity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Cultural <span class="highlight">diversity</span> enriches society.</div><div class="sent-zh">文化多样性丰富社会。</div><button class="sent-play" data-text="Cultural diversity enriches society.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Workplace <span class="highlight">diversity</span> improves innovation.</div><div class="sent-zh">职场多样性提高创新。</div><button class="sent-play" data-text="Workplace diversity improves innovation.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cosmopolitanism</div><div class="ipa">/ˌkɒzməˈpɒlɪtənɪzəm/</div><div class="pos">n. 世界主义</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cosmopolitanism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cosmopolitanism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 全球化话题常见词 · 话题：全球化</div><div class="memory">记忆：cosmopolitan(世界)+ism→世界主义</div><div class="coll">搭配：embrace cosmopolitanism | political cosmopolitanism | moral cosmopolitanism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Cosmopolitanism</span> promotes global citizenship.</div><div class="sent-zh">世界主义促进全球公民意识。</div><button class="sent-play" data-text="Cosmopolitanism promotes global citizenship.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Critics argue <span class="highlight">cosmopolitanism</span> ignores local loyalties.</div><div class="sent-zh">批评者认为世界主义忽视本土认同。</div><button class="sent-play" data-text="Critics argue cosmopolitanism ignores local loyalties.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cross-cultural</div><div class="ipa">/ˌkrɒsˈkʌltʃərəl/</div><div class="pos">adj. 跨文化的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cross-cultural" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cross-cultural" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 全球化话题常见词 · 话题：全球化</div><div class="memory">记忆：cross(跨)+cultural(文化)→跨文化的</div><div class="coll">搭配：cross-cultural research | cross-cultural differences | cross-cultural study</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Cross-cultural</span> research reveals interesting differences.</div><div class="sent-zh">跨文化研究揭示有趣差异。</div><button class="sent-play" data-text="Cross-cultural research reveals interesting differences.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Cross-cultural</span> differences affect business negotiations.</div><div class="sent-zh">跨文化差异影响商业谈判。</div><button class="sent-play" data-text="Cross-cultural differences affect business negotiations.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">synchronisation</div><div class="ipa">/ˌsɪŋkrənaɪˈzeɪʃn/</div><div class="pos">n. 同步化</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="synchronisation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="synchronisation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 全球化话题高级词 · 话题：全球化</div><div class="memory">记忆：syn(同)+chron(时间)+isation→同时→同步化</div><div class="coll">搭配：economic synchronisation | global synchronisation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Economic <span class="highlight">synchronisation</span> means recessions spread globally.</div><div class="sent-zh">经济同步化意味着衰退全球蔓延。</div><button class="sent-play" data-text="Economic synchronisation means recessions spread globally.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Global <span class="highlight">synchronisation</span> affects financial markets.</div><div class="sent-zh">全球同步化影响金融市场。</div><button class="sent-play" data-text="Global synchronisation affects financial markets.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">fauna</div><div class="ipa">/ˈfɔːnə/</div><div class="pos">n 动物群</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fauna" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fauna" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 学术高频 · 话题：环境</div><div class="memory">记忆：罗马神话中Fauna为动物女神</div><div class="coll">搭配：native fauna, marine fauna, flora and fauna</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The island is home to unique <span class="highlight">fauna</span> found nowhere else.</div><div class="sent-zh">该岛屿是独特动物群的家园，其他地方找不到。</div><button class="sent-play" data-text="The island is home to unique fauna found nowhere else.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Researchers documented the <span class="highlight">fauna</span> of the rainforest.</div><div class="sent-zh">研究人员记录了这片雨林的动物群。</div><button class="sent-play" data-text="Researchers documented the fauna of the rainforest.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">floodplain</div><div class="ipa">/ˈflʌdpleɪn/</div><div class="pos">n 洪泛平原</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="floodplain" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="floodplain" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思词汇 · 话题：环境</div><div class="memory">记忆：flood(洪水) + plain(平原) = 洪泛区</div><div class="coll">搭配：river floodplain, floodplain management, floodplain development</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Building on floodplains increases the risk of flood damage.</div><div class="sent-zh">在洪泛平原上建筑会增加洪水损坏的风险。</div><button class="sent-play" data-text="Building on floodplains increases the risk of flood damage.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">floodplain</span> provides fertile soil for farming.</div><div class="sent-zh">洪泛平原为农业提供了肥沃的土壤。</div><button class="sent-play" data-text="The floodplain provides fertile soil for farming.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">food chain</div><div class="ipa">/fuːd tʃeɪn/</div><div class="pos">n 食物链</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="food chain" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="food chain" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 雅思常用 · 话题：环境</div><div class="memory">记忆：food(食物) + chain(链条) = 食物链</div><div class="coll">搭配：top of the food chain, disrupt the food chain, marine food chain</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Plastic pollution disrupts the marine <span class="highlight">food chain</span>.</div><div class="sent-zh">塑料污染破坏了海洋食物链。</div><button class="sent-play" data-text="Plastic pollution disrupts the marine food chain.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Humans sit at the top of the <span class="highlight">food chain</span>.</div><div class="sent-zh">人类位于食物链的顶端。</div><button class="sent-play" data-text="Humans sit at the top of the food chain.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">fossil fuel</div><div class="ipa">/ˈfɒsl fjuːəl/</div><div class="pos">n 化石燃料</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fossil fuel" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="fossil fuel" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 雅思高频 · 话题：环境</div><div class="memory">记忆：fossil(化石) + fuel(燃料) = 化石燃料</div><div class="coll">搭配：burn fossil fuels, fossil fuel emissions, reduce fossil fuel use</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Burning fossil fuels is the primary cause of global warming.</div><div class="sent-zh">燃烧化石燃料是全球变暖的主要原因。</div><button class="sent-play" data-text="Burning fossil fuels is the primary cause of global warming.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many countries are phasing out fossil fuels in favor of renewable energy.</div><div class="sent-zh">许多国家正在逐步淘汰化石燃料，转向可再生能源。</div><button class="sent-play" data-text="Many countries are phasing out fossil fuels in favor of renewable energy.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">groundwater</div><div class="ipa">/ˈɡraʊndwɔːtər/</div><div class="pos">n 地下水</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="groundwater" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="groundwater" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：环境</div><div class="memory">记忆：ground(地面) + water = 地下水</div><div class="coll">搭配：groundwater level, groundwater contamination, groundwater resources</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Groundwater</span> levels have dropped significantly due to overuse.</div><div class="sent-zh">由于过度使用，地下水位已大幅下降。</div><button class="sent-play" data-text="Groundwater levels have dropped significantly due to overuse.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The region relies entirely on <span class="highlight">groundwater</span> for drinking water.</div><div class="sent-zh">该地区完全依赖地下水作为饮用水。</div><button class="sent-play" data-text="The region relies entirely on groundwater for drinking water.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

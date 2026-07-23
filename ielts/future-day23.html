@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 23</h1></div>
+<div class="header"><h1>雅思 Future Day 23</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 23 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">firewall</div>
-<div style="font-size:13px;color:#8b949e">/ˈfaɪəwɔːl/</div>
-<div style="font-size:14px;color:#7ee787">n. 防火墙</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 科技话题高频词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：fire(火)+wall(墙)→防火墙</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：install a firewall | firewall protection | behind a firewall</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A firewall blocks unauthorised access.</div><div class="sent-zh">防火墙阻止未授权访问。</div><button class="sent-play" data-text="A firewall blocks unauthorised access.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Every computer should have firewall protection.</div><div class="sent-zh">每台电脑都应有防火墙保护。</div><button class="sent-play" data-text="Every computer should have firewall protection.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">malware</div>
-<div style="font-size:13px;color:#8b949e">/ˈmælweə(r)/</div>
-<div style="font-size:14px;color:#7ee787">n. 恶意软件</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 科技话题高频词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mal(恶)+ware(软件)→恶意软件</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：malware attack | detect malware | remove malware</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Malware attacks have increased sharply.</div><div class="sent-zh">恶意软件攻击急剧增加。</div><button class="sent-play" data-text="Malware attacks have increased sharply.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Antivirus software detects and removes malware.</div><div class="sent-zh">杀毒软件检测和清除恶意软件。</div><button class="sent-play" data-text="Antivirus software detects and removes malware.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">password</div>
-<div style="font-size:13px;color:#8b949e">/ˈpɑːswɜːd/</div>
-<div style="font-size:14px;color:#7ee787">n. 密码</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 科技话题高频词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pass(通过)+word(词)→通过用的词→密码</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：strong password | change password | reset password</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Use a strong password for each account.</div><div class="sent-zh">每个账户使用强密码。</div><button class="sent-play" data-text="Use a strong password for each account.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Change your password regularly.</div><div class="sent-zh">定期更改密码。</div><button class="sent-play" data-text="Change your password regularly.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">anonymity</div>
-<div style="font-size:13px;color:#8b949e">/ˌænəˈnɪməti/</div>
-<div style="font-size:14px;color:#7ee787">n. 匿名</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：anonym(无名)+ity→无名的状态→匿名</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：guarantee anonymity | protect anonymity | online anonymity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Online anonymity protects whistleblowers.</div><div class="sent-zh">网络匿名保护举报人。</div><button class="sent-play" data-text="Online anonymity protects whistleblowers.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The survey guaranteed respondent anonymity.</div><div class="sent-zh">调查保证受访者匿名。</div><button class="sent-play" data-text="The survey guaranteed respondent anonymity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">authentication</div>
-<div style="font-size:13px;color:#8b949e">/ɔːˌθentɪˈkeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 认证</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：authentic(真实)+ation→验证真实性→认证</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：two-factor authentication | biometric authentication | user authentication</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Two-factor authentication adds an extra security layer.</div><div class="sent-zh">双因素认证增加额外安全层。</div><button class="sent-play" data-text="Two-factor authentication adds an extra security layer.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Biometric authentication uses fingerprints or faces.</div><div class="sent-zh">生物认证使用指纹或面部。</div><button class="sent-play" data-text="Biometric authentication uses fingerprints or faces.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">encryption</div>
-<div style="font-size:13px;color:#8b949e">/ɪnˈkrɪpʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 加密</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：en(使)+crypt(秘密)+ion→使之秘密→加密</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：end-to-end encryption | data encryption | strong encryption</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. End-to-end encryption protects message privacy.</div><div class="sent-zh">端到端加密保护消息隐私。</div><button class="sent-play" data-text="End-to-end encryption protects message privacy.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Strong encryption is essential for online banking.</div><div class="sent-zh">强加密对网上银行至关重要。</div><button class="sent-play" data-text="Strong encryption is essential for online banking.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">phishing</div>
-<div style="font-size:13px;color:#8b949e">/ˈfɪʃɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n. 网络钓鱼</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：phish(钓鱼)+ing→网络钓鱼</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：phishing email | phishing scam | phishing attack</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Phishing emails trick users into revealing passwords.</div><div class="sent-zh">钓鱼邮件诱骗用户泄露密码。</div><button class="sent-play" data-text="Phishing emails trick users into revealing passwords.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A phishing attack targeted bank customers.</div><div class="sent-zh">一次钓鱼攻击针对银行客户。</div><button class="sent-play" data-text="A phishing attack targeted bank customers.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">surveillance</div>
-<div style="font-size:13px;color:#8b949e">/səˈveɪləns/</div>
-<div style="font-size:14px;color:#7ee787">n. 监控</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：sur(在上)+veil(看)+lance→从上看→监控</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：mass surveillance | video surveillance | government surveillance</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Mass surveillance raises civil liberties concerns.</div><div class="sent-zh">大规模监控引发公民自由担忧。</div><button class="sent-play" data-text="Mass surveillance raises civil liberties concerns.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Video surveillance is widespread in cities.</div><div class="sent-zh">视频监控在城市中很普遍。</div><button class="sent-play" data-text="Video surveillance is widespread in cities.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">tracking</div>
-<div style="font-size:13px;color:#8b949e">/ˈtrækɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n. 追踪</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：track(追踪)+ing→追踪</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：online tracking | device tracking | tracking technology</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Online tracking enables targeted advertising.</div><div class="sent-zh">在线追踪实现定向广告。</div><button class="sent-play" data-text="Online tracking enables targeted advertising.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Device tracking raises privacy concerns.</div><div class="sent-zh">设备追踪引发隐私担忧。</div><button class="sent-play" data-text="Device tracking raises privacy concerns.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">vulnerability</div>
-<div style="font-size:13px;color:#8b949e">/ˌvʌlnərəˈbɪləti/</div>
-<div style="font-size:14px;color:#7ee787">n. 漏洞</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：vulner(受伤)+ability→易受伤→漏洞</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：security vulnerability | exploit a vulnerability | fix vulnerabilities</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A security vulnerability was discovered in the software.</div><div class="sent-zh">软件中发现安全漏洞。</div><button class="sent-play" data-text="A security vulnerability was discovered in the software.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Hackers exploit vulnerabilities in outdated systems.</div><div class="sent-zh">黑客利用过时系统的漏洞。</div><button class="sent-play" data-text="Hackers exploit vulnerabilities in outdated systems.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cookie</div>
-<div style="font-size:13px;color:#8b949e">/ˈkʊki/</div>
-<div style="font-size:14px;color:#7ee787">n. Cookie</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cookie(小甜饼)→比喻小型数据文件</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：accept cookies | third-party cookie | cookie policy</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Users can disable third-party cookies.</div><div class="sent-zh">用户可以禁用第三方Cookie。</div><button class="sent-play" data-text="Users can disable third-party cookies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The new cookie policy is more transparent.</div><div class="sent-zh">新的Cookie政策更加透明。</div><button class="sent-play" data-text="The new cookie policy is more transparent.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cryptography</div>
-<div style="font-size:13px;color:#8b949e">/krɪpˈtɒɡrəfi/</div>
-<div style="font-size:14px;color:#7ee787">n. 密码学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：crypto(秘密)+graphy(书写)→秘密书写→密码学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：modern cryptography | study cryptography | applied cryptography</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cryptography secures digital communications.</div><div class="sent-zh">密码学保护数字通信安全。</div><button class="sent-play" data-text="Cryptography secures digital communications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Modern cryptography relies on complex mathematics.</div><div class="sent-zh">现代密码学依赖复杂数学。</div><button class="sent-play" data-text="Modern cryptography relies on complex mathematics.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">dataveillance</div>
-<div style="font-size:13px;color:#8b949e">/ˈdeɪtəveɪləns/</div>
-<div style="font-size:14px;color:#7ee787">n. 数据监控</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：data(数据)+veil(看)+lance→看数据→数据监控</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：dataveillance practices | digital dataveillance | dataveillance and privacy</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Dataveillance tracks everyday digital activities.</div><div class="sent-zh">数据监控追踪日常数字活动。</div><button class="sent-play" data-text="Dataveillance tracks everyday digital activities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Dataveillance raises profound privacy concerns.</div><div class="sent-zh">数据监控引发深刻的隐私担忧。</div><button class="sent-play" data-text="Dataveillance raises profound privacy concerns.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">obfuscation</div>
-<div style="font-size:13px;color:#8b949e">/ˌɒbfʌsˈkeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 混淆</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ob(反对)+fus(倾注)+cation→使混乱→混淆</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：code obfuscation | deliberate obfuscation | data obfuscation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Code obfuscation protects intellectual property.</div><div class="sent-zh">代码混淆保护知识产权。</div><button class="sent-play" data-text="Code obfuscation protects intellectual property.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company was criticised for its obfuscation of data.</div><div class="sent-zh">公司因混淆数据而受到批评。</div><button class="sent-play" data-text="The company was criticised for its obfuscation of data.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">zero-day</div>
-<div style="font-size:13px;color:#8b949e">/ˈzɪərəʊdeɪ/</div>
-<div style="font-size:14px;color:#7ee787">adj. 零日的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：zero(零)+day(天)→发现当天→零日的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：zero-day vulnerability | zero-day exploit | zero-day attack</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A zero-day vulnerability was exploited by hackers.</div><div class="sent-zh">零日漏洞被黑客利用。</div><button class="sent-play" data-text="A zero-day vulnerability was exploited by hackers.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Zero-day attacks are particularly dangerous.</div><div class="sent-zh">零日攻击特别危险。</div><button class="sent-play" data-text="Zero-day attacks are particularly dangerous.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">pandemic</div>
-<div style="font-size:13px;color:#8b949e">/pænˈdemɪk/</div>
-<div style="font-size:14px;color:#7ee787">n. 大流行</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 健康话题高频词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：pan(全)+dem(人民)+ic→全人民的→大流行</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：flu pandemic | global pandemic | declare a pandemic</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The WHO declared a global pandemic in March 2020.</div><div class="sent-zh">世卫组织于2020年3月宣布全球大流行。</div><button class="sent-play" data-text="The WHO declared a global pandemic in March 2020.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The pandemic strained healthcare systems worldwide.</div><div class="sent-zh">大流行给全球医疗系统带来压力。</div><button class="sent-play" data-text="The pandemic strained healthcare systems worldwide.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🩺</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">quarantine</div>
-<div style="font-size:13px;color:#8b949e">/ˈkwɒrəntiːn/</div>
-<div style="font-size:14px;color:#7ee787">n. 隔离</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 健康话题高频词 · 话题：健康</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：quarant(四十)+ine→最初指四十天隔离→隔离</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：in quarantine | quarantine period | put under quarantine</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Travellers were placed in quarantine for two weeks.</div><div class="sent-zh">旅客被隔离两周。</div><button class="sent-play" data-text="Travellers were placed in quarantine for two weeks.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The quarantine period has been reduced to seven days.</div><div class="sent-zh">隔离期已缩短至七天。</div><button class="sent-play" data-text="The quarantine period has been reduced to seven days.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">mandatory</div>
-<div style="font-size:13px;color:#8b949e">/ˈmændətəri/</div>
-<div style="font-size:14px;color:#7ee787">adj 强制的；义务的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思高频 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mandate(命令) + ory = 命令性的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：mandatory sentence, mandatory requirement, mandatory training, mandatory reporting</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Wearing seat belts is mandatory in most countries.</div><div class="sent-zh">在大多数国家系安全带是强制性的。</div><button class="sent-play" data-text="Wearing seat belts is mandatory in most countries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The judge imposed a mandatory life sentence for murder.</div><div class="sent-zh">法官对谋杀罪判处强制性终身监禁。</div><button class="sent-play" data-text="The judge imposed a mandatory life sentence for murder.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">medicaid</div>
-<div style="font-size:13px;color:#8b949e">/ˈmedɪkeɪd/</div>
-<div style="font-size:14px;color:#7ee787">n 医疗补助计划</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 雅思词汇 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：medic(医疗) + aid(援助) = 医疗补助</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：qualify for medicaid, medicaid coverage, medicaid expansion</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Medicaid provides health coverage for low-income Americans.</div><div class="sent-zh">医疗补助计划为美国低收入人群提供健康保障。</div><button class="sent-play" data-text="Medicaid provides health coverage for low-income Americans.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The state expanded Medicaid to cover more residents.</div><div class="sent-zh">该州扩大了医疗补助计划的覆盖范围。</div><button class="sent-play" data-text="The state expanded Medicaid to cover more residents.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">monarchy</div>
-<div style="font-size:13px;color:#8b949e">/ˈmɒnəki/</div>
-<div style="font-size:14px;color:#7ee787">n 君主制</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 雅思高频 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mon(单一) + arch(统治) + y = 一人统治</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：constitutional monarchy, abolish the monarchy, hereditary monarchy</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The country transitioned from a monarchy to a republic.</div><div class="sent-zh">该国从君主制过渡为共和制。</div><button class="sent-play" data-text="The country transitioned from a monarchy to a republic.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The British monarchy dates back over a thousand years.</div><div class="sent-zh">英国君主制可追溯至一千多年前。</div><button class="sent-play" data-text="The British monarchy dates back over a thousand years.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 23 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">firewall</div><div class="ipa">/ˈfaɪəwɔːl/</div><div class="pos">n. 防火墙</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="firewall" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="firewall" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 科技话题高频词 · 话题：科技</div><div class="memory">记忆：fire(火)+wall(墙)→防火墙</div><div class="coll">搭配：install a firewall | firewall protection | behind a firewall</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">firewall</span> blocks unauthorised access.</div><div class="sent-zh">防火墙阻止未授权访问。</div><button class="sent-play" data-text="A firewall blocks unauthorised access.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Every computer should have <span class="highlight">firewall</span> protection.</div><div class="sent-zh">每台电脑都应有防火墙保护。</div><button class="sent-play" data-text="Every computer should have firewall protection.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">malware</div><div class="ipa">/ˈmælweə(r)/</div><div class="pos">n. 恶意软件</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="malware" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="malware" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 科技话题高频词 · 话题：科技</div><div class="memory">记忆：mal(恶)+ware(软件)→恶意软件</div><div class="coll">搭配：malware attack | detect malware | remove malware</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Malware</span> attacks have increased sharply.</div><div class="sent-zh">恶意软件攻击急剧增加。</div><button class="sent-play" data-text="Malware attacks have increased sharply.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Antivirus software detects and removes <span class="highlight">malware</span>.</div><div class="sent-zh">杀毒软件检测和清除恶意软件。</div><button class="sent-play" data-text="Antivirus software detects and removes malware.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">password</div><div class="ipa">/ˈpɑːswɜːd/</div><div class="pos">n. 密码</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="password" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="password" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 科技话题高频词 · 话题：科技</div><div class="memory">记忆：pass(通过)+word(词)→通过用的词→密码</div><div class="coll">搭配：strong password | change password | reset password</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Use a strong <span class="highlight">password</span> for each account.</div><div class="sent-zh">每个账户使用强密码。</div><button class="sent-play" data-text="Use a strong password for each account.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Change your <span class="highlight">password</span> regularly.</div><div class="sent-zh">定期更改密码。</div><button class="sent-play" data-text="Change your password regularly.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">anonymity</div><div class="ipa">/ˌænəˈnɪməti/</div><div class="pos">n. 匿名</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="anonymity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="anonymity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：anonym(无名)+ity→无名的状态→匿名</div><div class="coll">搭配：guarantee anonymity | protect anonymity | online anonymity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Online <span class="highlight">anonymity</span> protects whistleblowers.</div><div class="sent-zh">网络匿名保护举报人。</div><button class="sent-play" data-text="Online anonymity protects whistleblowers.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The survey guaranteed respondent <span class="highlight">anonymity</span>.</div><div class="sent-zh">调查保证受访者匿名。</div><button class="sent-play" data-text="The survey guaranteed respondent anonymity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">authentication</div><div class="ipa">/ɔːˌθentɪˈkeɪʃn/</div><div class="pos">n. 认证</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="authentication" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="authentication" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：authentic(真实)+ation→验证真实性→认证</div><div class="coll">搭配：two-factor authentication | biometric authentication | user authentication</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Two-factor <span class="highlight">authentication</span> adds an extra security layer.</div><div class="sent-zh">双因素认证增加额外安全层。</div><button class="sent-play" data-text="Two-factor authentication adds an extra security layer.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Biometric <span class="highlight">authentication</span> uses fingerprints or faces.</div><div class="sent-zh">生物认证使用指纹或面部。</div><button class="sent-play" data-text="Biometric authentication uses fingerprints or faces.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">encryption</div><div class="ipa">/ɪnˈkrɪpʃn/</div><div class="pos">n. 加密</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="encryption" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="encryption" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：en(使)+crypt(秘密)+ion→使之秘密→加密</div><div class="coll">搭配：end-to-end encryption | data encryption | strong encryption</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. End-to-end <span class="highlight">encryption</span> protects message privacy.</div><div class="sent-zh">端到端加密保护消息隐私。</div><button class="sent-play" data-text="End-to-end encryption protects message privacy.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Strong <span class="highlight">encryption</span> is essential for online banking.</div><div class="sent-zh">强加密对网上银行至关重要。</div><button class="sent-play" data-text="Strong encryption is essential for online banking.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">phishing</div><div class="ipa">/ˈfɪʃɪŋ/</div><div class="pos">n. 网络钓鱼</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="phishing" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="phishing" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：phish(钓鱼)+ing→网络钓鱼</div><div class="coll">搭配：phishing email | phishing scam | phishing attack</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Phishing</span> emails trick users into revealing passwords.</div><div class="sent-zh">钓鱼邮件诱骗用户泄露密码。</div><button class="sent-play" data-text="Phishing emails trick users into revealing passwords.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">phishing</span> attack targeted bank customers.</div><div class="sent-zh">一次钓鱼攻击针对银行客户。</div><button class="sent-play" data-text="A phishing attack targeted bank customers.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">surveillance</div><div class="ipa">/səˈveɪləns/</div><div class="pos">n. 监控</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="surveillance" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="surveillance" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：sur(在上)+veil(看)+lance→从上看→监控</div><div class="coll">搭配：mass surveillance | video surveillance | government surveillance</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Mass <span class="highlight">surveillance</span> raises civil liberties concerns.</div><div class="sent-zh">大规模监控引发公民自由担忧。</div><button class="sent-play" data-text="Mass surveillance raises civil liberties concerns.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Video <span class="highlight">surveillance</span> is widespread in cities.</div><div class="sent-zh">视频监控在城市中很普遍。</div><button class="sent-play" data-text="Video surveillance is widespread in cities.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">tracking</div><div class="ipa">/ˈtrækɪŋ/</div><div class="pos">n. 追踪</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tracking" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tracking" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：track(追踪)+ing→追踪</div><div class="coll">搭配：online tracking | device tracking | tracking technology</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Online <span class="highlight">tracking</span> enables targeted advertising.</div><div class="sent-zh">在线追踪实现定向广告。</div><button class="sent-play" data-text="Online tracking enables targeted advertising.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Device <span class="highlight">tracking</span> raises privacy concerns.</div><div class="sent-zh">设备追踪引发隐私担忧。</div><button class="sent-play" data-text="Device tracking raises privacy concerns.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">vulnerability</div><div class="ipa">/ˌvʌlnərəˈbɪləti/</div><div class="pos">n. 漏洞</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="vulnerability" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="vulnerability" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：vulner(受伤)+ability→易受伤→漏洞</div><div class="coll">搭配：security vulnerability | exploit a vulnerability | fix vulnerabilities</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A security <span class="highlight">vulnerability</span> was discovered in the software.</div><div class="sent-zh">软件中发现安全漏洞。</div><button class="sent-play" data-text="A security vulnerability was discovered in the software.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Hackers exploit vulnerabilities in outdated systems.</div><div class="sent-zh">黑客利用过时系统的漏洞。</div><button class="sent-play" data-text="Hackers exploit vulnerabilities in outdated systems.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">cookie</div><div class="ipa">/ˈkʊki/</div><div class="pos">n. Cookie</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cookie" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cookie" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：cookie(小甜饼)→比喻小型数据文件</div><div class="coll">搭配：accept cookies | third-party cookie | cookie policy</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Users can disable third-party cookies.</div><div class="sent-zh">用户可以禁用第三方Cookie。</div><button class="sent-play" data-text="Users can disable third-party cookies.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The new <span class="highlight">cookie</span> policy is more transparent.</div><div class="sent-zh">新的Cookie政策更加透明。</div><button class="sent-play" data-text="The new cookie policy is more transparent.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">cryptography</div><div class="ipa">/krɪpˈtɒɡrəfi/</div><div class="pos">n. 密码学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cryptography" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cryptography" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：crypto(秘密)+graphy(书写)→秘密书写→密码学</div><div class="coll">搭配：modern cryptography | study cryptography | applied cryptography</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Cryptography</span> secures digital communications.</div><div class="sent-zh">密码学保护数字通信安全。</div><button class="sent-play" data-text="Cryptography secures digital communications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Modern <span class="highlight">cryptography</span> relies on complex mathematics.</div><div class="sent-zh">现代密码学依赖复杂数学。</div><button class="sent-play" data-text="Modern cryptography relies on complex mathematics.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">dataveillance</div><div class="ipa">/ˈdeɪtəveɪləns/</div><div class="pos">n. 数据监控</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="dataveillance" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="dataveillance" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：data(数据)+veil(看)+lance→看数据→数据监控</div><div class="coll">搭配：dataveillance practices | digital dataveillance | dataveillance and privacy</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Dataveillance</span> tracks everyday digital activities.</div><div class="sent-zh">数据监控追踪日常数字活动。</div><button class="sent-play" data-text="Dataveillance tracks everyday digital activities.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Dataveillance</span> raises profound privacy concerns.</div><div class="sent-zh">数据监控引发深刻的隐私担忧。</div><button class="sent-play" data-text="Dataveillance raises profound privacy concerns.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">obfuscation</div><div class="ipa">/ˌɒbfʌsˈkeɪʃn/</div><div class="pos">n. 混淆</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="obfuscation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="obfuscation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：ob(反对)+fus(倾注)+cation→使混乱→混淆</div><div class="coll">搭配：code obfuscation | deliberate obfuscation | data obfuscation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Code <span class="highlight">obfuscation</span> protects intellectual property.</div><div class="sent-zh">代码混淆保护知识产权。</div><button class="sent-play" data-text="Code obfuscation protects intellectual property.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company was criticised for its <span class="highlight">obfuscation</span> of data.</div><div class="sent-zh">公司因混淆数据而受到批评。</div><button class="sent-play" data-text="The company was criticised for its obfuscation of data.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">zero-day</div><div class="ipa">/ˈzɪərəʊdeɪ/</div><div class="pos">adj. 零日的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="zero-day" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="zero-day" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：zero(零)+day(天)→发现当天→零日的</div><div class="coll">搭配：zero-day vulnerability | zero-day exploit | zero-day attack</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">zero-day</span> vulnerability was exploited by hackers.</div><div class="sent-zh">零日漏洞被黑客利用。</div><button class="sent-play" data-text="A zero-day vulnerability was exploited by hackers.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Zero-day</span> attacks are particularly dangerous.</div><div class="sent-zh">零日攻击特别危险。</div><button class="sent-play" data-text="Zero-day attacks are particularly dangerous.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">pandemic</div><div class="ipa">/pænˈdemɪk/</div><div class="pos">n. 大流行</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pandemic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="pandemic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 健康话题高频词 · 话题：健康</div><div class="memory">记忆：pan(全)+dem(人民)+ic→全人民的→大流行</div><div class="coll">搭配：flu pandemic | global pandemic | declare a pandemic</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The WHO declared a global <span class="highlight">pandemic</span> in March 2020.</div><div class="sent-zh">世卫组织于2020年3月宣布全球大流行。</div><button class="sent-play" data-text="The WHO declared a global pandemic in March 2020.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">pandemic</span> strained healthcare systems worldwide.</div><div class="sent-zh">大流行给全球医疗系统带来压力。</div><button class="sent-play" data-text="The pandemic strained healthcare systems worldwide.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🩺</div><div class="winfo"><div class="word">quarantine</div><div class="ipa">/ˈkwɒrəntiːn/</div><div class="pos">n. 隔离</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="quarantine" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="quarantine" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 健康话题高频词 · 话题：健康</div><div class="memory">记忆：quarant(四十)+ine→最初指四十天隔离→隔离</div><div class="coll">搭配：in quarantine | quarantine period | put under quarantine</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Travellers were placed in <span class="highlight">quarantine</span> for two weeks.</div><div class="sent-zh">旅客被隔离两周。</div><button class="sent-play" data-text="Travellers were placed in quarantine for two weeks.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">quarantine</span> period has been reduced to seven days.</div><div class="sent-zh">隔离期已缩短至七天。</div><button class="sent-play" data-text="The quarantine period has been reduced to seven days.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">mandatory</div><div class="ipa">/ˈmændətəri/</div><div class="pos">adj 强制的；义务的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mandatory" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mandatory" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思高频 · 话题：政府法律</div><div class="memory">记忆：mandate(命令) + ory = 命令性的</div><div class="coll">搭配：mandatory sentence, mandatory requirement, mandatory training, mandatory reporting</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Wearing seat belts is <span class="highlight">mandatory</span> in most countries.</div><div class="sent-zh">在大多数国家系安全带是强制性的。</div><button class="sent-play" data-text="Wearing seat belts is mandatory in most countries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The judge imposed a <span class="highlight">mandatory</span> life sentence for murder.</div><div class="sent-zh">法官对谋杀罪判处强制性终身监禁。</div><button class="sent-play" data-text="The judge imposed a mandatory life sentence for murder.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">medicaid</div><div class="ipa">/ˈmedɪkeɪd/</div><div class="pos">n 医疗补助计划</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="medicaid" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="medicaid" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 雅思词汇 · 话题：政府法律</div><div class="memory">记忆：medic(医疗) + aid(援助) = 医疗补助</div><div class="coll">搭配：qualify for medicaid, medicaid coverage, medicaid expansion</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Medicaid</span> provides health coverage for low-income Americans.</div><div class="sent-zh">医疗补助计划为美国低收入人群提供健康保障。</div><button class="sent-play" data-text="Medicaid provides health coverage for low-income Americans.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The state expanded <span class="highlight">Medicaid</span> to cover more residents.</div><div class="sent-zh">该州扩大了医疗补助计划的覆盖范围。</div><button class="sent-play" data-text="The state expanded Medicaid to cover more residents.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">monarchy</div><div class="ipa">/ˈmɒnəki/</div><div class="pos">n 君主制</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="monarchy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="monarchy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 雅思高频 · 话题：政府法律</div><div class="memory">记忆：mon(单一) + arch(统治) + y = 一人统治</div><div class="coll">搭配：constitutional monarchy, abolish the monarchy, hereditary monarchy</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The country transitioned from a <span class="highlight">monarchy</span> to a republic.</div><div class="sent-zh">该国从君主制过渡为共和制。</div><button class="sent-play" data-text="The country transitioned from a monarchy to a republic.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The British <span class="highlight">monarchy</span> dates back over a thousand years.</div><div class="sent-zh">英国君主制可追溯至一千多年前。</div><button class="sent-play" data-text="The British monarchy dates back over a thousand years.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

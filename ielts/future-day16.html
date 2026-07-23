@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 16</h1></div>
+<div class="header"><h1>雅思 Future Day 16</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 16 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cultural</div>
-<div style="font-size:13px;color:#8b949e">/ˈkʌltʃərəl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 文化的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：culture(文化)+al→文化的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cultural heritage | cultural identity | cultural diversity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cultural heritage must be preserved for future generations.</div><div class="sent-zh">文化遗产必须为后代保护。</div><button class="sent-play" data-text="Cultural heritage must be preserved for future generations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Cultural diversity enriches society.</div><div class="sent-zh">文化多样性丰富社会。</div><button class="sent-play" data-text="Cultural diversity enriches society.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">editorial</div>
-<div style="font-size:13px;color:#8b949e">/ˌedɪˈtɔːriəl/</div>
-<div style="font-size:14px;color:#7ee787">n. 社论</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：editor(编辑)+ial→编辑的文章→社论</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：editorial board | editorial policy | write an editorial</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The newspaper published a scathing editorial.</div><div class="sent-zh">该报发表了一篇尖锐的社论。</div><button class="sent-play" data-text="The newspaper published a scathing editorial.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The editorial board endorsed the new policy.</div><div class="sent-zh">编辑委员会支持新政策。</div><button class="sent-play" data-text="The editorial board endorsed the new policy.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">sensationalism</div>
-<div style="font-size:13px;color:#8b949e">/senˈseɪʃənəlɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 煽情主义</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：sensation(轰动)+alism→追求轰动→煽情主义</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：media sensationalism | avoid sensationalism | driven by sensationalism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Tabloid journalism relies on sensationalism.</div><div class="sent-zh">小报新闻依赖煽情主义。</div><button class="sent-play" data-text="Tabloid journalism relies on sensationalism.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Critics condemn media sensationalism.</div><div class="sent-zh">批评者谴责媒体煽情主义。</div><button class="sent-play" data-text="Critics condemn media sensationalism.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">virality</div>
-<div style="font-size:13px;color:#8b949e">/vaɪˈræləti/</div>
-<div style="font-size:14px;color:#7ee787">n. 病毒式传播</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：viral(病毒)+ity→像病毒一样传播→病毒式传播</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：achieve virality | virality of content | measure virality</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The video achieved virality overnight.</div><div class="sent-zh">该视频一夜之间病毒式传播。</div><button class="sent-play" data-text="The video achieved virality overnight.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Content virality is hard to predict.</div><div class="sent-zh">内容病毒式传播难以预测。</div><button class="sent-play" data-text="Content virality is hard to predict.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">discourse</div>
-<div style="font-size:13px;color:#8b949e">/ˈdɪskɔːs/</div>
-<div style="font-size:14px;color:#7ee787">n. 话语</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dis(分开)+course(跑)→跑来跑去→交谈→话语</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：public discourse | political discourse | shape discourse</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Social media has transformed public discourse.</div><div class="sent-zh">社交媒体改变了公共话语。</div><button class="sent-play" data-text="Social media has transformed public discourse.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Political discourse has become increasingly polarised.</div><div class="sent-zh">政治话语日益两极分化。</div><button class="sent-play" data-text="Political discourse has become increasingly polarised.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">symbology</div>
-<div style="font-size:13px;color:#8b949e">/sɪmˈbɒlədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 象征学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：symbol(符号)+ology→研究符号→象征学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：religious symbology | cultural symbology | study symbology</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Religious symbology is rich in meaning.</div><div class="sent-zh">宗教象征学含义丰富。</div><button class="sent-play" data-text="Religious symbology is rich in meaning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The symbology of colours varies across cultures.</div><div class="sent-zh">色彩的象征意义因文化而异。</div><button class="sent-play" data-text="The symbology of colours varies across cultures.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">tribunal</div>
-<div style="font-size:13px;color:#8b949e">/traɪˈbjuːnl/</div>
-<div style="font-size:14px;color:#7ee787">n. 法庭</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 政府法律话题高频词 · 话题：政府法律</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：tribun(审判台)+al→审判的地方→法庭</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：international tribunal | military tribunal | appear before a tribunal</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The case was heard by an international tribunal.</div><div class="sent-zh">该案由国际法庭审理。</div><button class="sent-play" data-text="The case was heard by an international tribunal.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A war crimes tribunal was established.</div><div class="sent-zh">成立了战争罪法庭。</div><button class="sent-play" data-text="A war crimes tribunal was established.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">antiquity</div>
-<div style="font-size:13px;color:#8b949e">/ænˈtɪkwəti/</div>
-<div style="font-size:14px;color:#7ee787">n. 古代</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：antiq(古老)+uity→古老→古代</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：classical antiquity | since antiquity | from antiquity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The museum houses artefacts from classical antiquity.</div><div class="sent-zh">博物馆藏有古典古代的文物。</div><button class="sent-play" data-text="The museum houses artefacts from classical antiquity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. These traditions date back to antiquity.</div><div class="sent-zh">这些传统可追溯到古代。</div><button class="sent-play" data-text="These traditions date back to antiquity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">artisan</div>
-<div style="font-size:13px;color:#8b949e">/ˌɑːtɪˈzæn/</div>
-<div style="font-size:14px;color:#7ee787">n. 工匠</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：art(技艺)+isan→有技艺的人→工匠</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：skilled artisan | local artisan | artisan workshop</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Local artisans produce handmade ceramics.</div><div class="sent-zh">当地工匠制作手工陶瓷。</div><button class="sent-play" data-text="Local artisans produce handmade ceramics.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The artisan workshop has been operating for generations.</div><div class="sent-zh">这家工匠作坊已经营了数代。</div><button class="sent-play" data-text="The artisan workshop has been operating for generations.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">canon</div>
-<div style="font-size:13px;color:#8b949e">/ˈkænən/</div>
-<div style="font-size:14px;color:#7ee787">n. 经典</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：canon(规则)→公认的标准→经典</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：literary canon | western canon | canonical works</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The literary canon has been expanded to include diverse voices.</div><div class="sent-zh">文学经典已扩展至包含多元声音。</div><button class="sent-play" data-text="The literary canon has been expanded to include diverse voices.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Debates over the western canon continue.</div><div class="sent-zh">关于西方经典的争论仍在继续。</div><button class="sent-play" data-text="Debates over the western canon continue.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">censor</div>
-<div style="font-size:13px;color:#8b949e">/ˈsensə(r)/</div>
-<div style="font-size:14px;color:#7ee787">v. 审查</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cens(评估)+or→评估→审查</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：censor content | censor speech | heavily censored</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The government censored the film.</div><div class="sent-zh">政府审查了这部电影。</div><button class="sent-play" data-text="The government censored the film.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Online content is heavily censored in some countries.</div><div class="sent-zh">一些国家的网络内容受到严格审查。</div><button class="sent-play" data-text="Online content is heavily censored in some countries.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cliche</div>
-<div style="font-size:13px;color:#8b949e">/ˈkliːʃeɪ/</div>
-<div style="font-size:14px;color:#7ee787">n. 陈词滥调</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：cliche(铅版)→固定模式→陈词滥调</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：tired cliche | avoid cliche | become a cliche</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The film is full of tired cliches.</div><div class="sent-zh">这部电影充满陈词滥调。</div><button class="sent-play" data-text="The film is full of tired cliches.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Avoid cliches in academic writing.</div><div class="sent-zh">学术写作中应避免陈词滥调。</div><button class="sent-play" data-text="Avoid cliches in academic writing.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">connoisseur</div>
-<div style="font-size:13px;color:#8b949e">/ˌkɒnəˈsɜː(r)/</div>
-<div style="font-size:14px;color:#7ee787">n. 鉴赏家</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：con(一起)+noisse(知道)+ur→知道很多→鉴赏家</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：art connoisseur | wine connoisseur | discerning connoisseur</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She is a respected art connoisseur.</div><div class="sent-zh">她是受人尊敬的艺术鉴赏家。</div><button class="sent-play" data-text="She is a respected art connoisseur.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A connoisseur can distinguish subtle differences.</div><div class="sent-zh">鉴赏家能辨别细微差异。</div><button class="sent-play" data-text="A connoisseur can distinguish subtle differences.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">epitome</div>
-<div style="font-size:13px;color:#8b949e">/ɪˈpɪtəmi/</div>
-<div style="font-size:14px;color:#7ee787">n. 典型</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：epi(在...上)+tome(切)→切到要点→典型</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：epitome of | the epitome | perfect epitome</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. He is the epitome of a gentleman.</div><div class="sent-zh">他是绅士的典型。</div><button class="sent-play" data-text="He is the epitome of a gentleman.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The building is the epitome of modern architecture.</div><div class="sent-zh">这座建筑是现代建筑的典范。</div><button class="sent-play" data-text="The building is the epitome of modern architecture.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">exhibition</div>
-<div style="font-size:13px;color:#8b949e">/ˌeksɪˈbɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 展览</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：exhibit(展示)+ion→展示→展览</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：art exhibition | hold an exhibition | international exhibition</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The art exhibition opens next week.</div><div class="sent-zh">艺术展下周开幕。</div><button class="sent-play" data-text="The art exhibition opens next week.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An international exhibition attracted thousands of visitors.</div><div class="sent-zh">一个国际展览吸引了数千访客。</div><button class="sent-play" data-text="An international exhibition attracted thousands of visitors.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">iconic</div>
-<div style="font-size:13px;color:#8b949e">/aɪˈkɒnɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 标志性的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：icon(偶像)+ic→偶像的→标志性的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：iconic image | iconic building | iconic status</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The building is an iconic landmark.</div><div class="sent-zh">这座建筑是标志性建筑。</div><button class="sent-play" data-text="The building is an iconic landmark.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The photograph achieved iconic status.</div><div class="sent-zh">这张照片获得了标志性地位。</div><button class="sent-play" data-text="The photograph achieved iconic status.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">inferior</div>
-<div style="font-size:13px;color:#8b949e">/ɪnˈfɪəriə(r)/</div>
-<div style="font-size:14px;color:#7ee787">adj. 次的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：infer(在下面)+ior→在下面的→次的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：inferior quality | inferior goods | feel inferior</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The replica is of inferior quality.</div><div class="sent-zh">复制品质量较差。</div><button class="sent-play" data-text="The replica is of inferior quality.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Nobody should feel inferior because of their background.</div><div class="sent-zh">没有人应因背景而感到自卑。</div><button class="sent-play" data-text="Nobody should feel inferior because of their background.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">nostalgia</div>
-<div style="font-size:13px;color:#8b949e">/nɒˈstældʒə/</div>
-<div style="font-size:14px;color:#7ee787">n. 怀旧</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：nost(回家)+algia(痛)→想家的痛→怀旧</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：feel nostalgia | nostalgia for | wave of nostalgia</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The film evokes nostalgia for the 1980s.</div><div class="sent-zh">这部电影唤起了对80年代的怀旧。</div><button class="sent-play" data-text="The film evokes nostalgia for the 1980s.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Nostalgia can be a powerful marketing tool.</div><div class="sent-zh">怀旧可以是强大的营销工具。</div><button class="sent-play" data-text="Nostalgia can be a powerful marketing tool.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">patron</div>
-<div style="font-size:13px;color:#8b949e">/ˈpeɪtrən/</div>
-<div style="font-size:14px;color:#7ee787">n. 赞助人</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：patr(父亲)+on→保护者→赞助人</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：art patron | patron of the arts | wealthy patron</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The museum was built by a wealthy patron.</div><div class="sent-zh">博物馆由一位富有的赞助人建造。</div><button class="sent-play" data-text="The museum was built by a wealthy patron.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Patrons of the arts support emerging artists.</div><div class="sent-zh">艺术赞助人支持新兴艺术家。</div><button class="sent-play" data-text="Patrons of the arts support emerging artists.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">📘</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">premiere</div>
-<div style="font-size:13px;color:#8b949e">/ˈpremieə(r)/</div>
-<div style="font-size:14px;color:#7ee787">n. 首映</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：premier(第一)+e→第一次→首映</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：world premiere | film premiere | attend the premiere</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The world premiere attracted huge media attention.</div><div class="sent-zh">全球首映吸引了大量媒体关注。</div><button class="sent-play" data-text="The world premiere attracted huge media attention.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She attended the film premiere in London.</div><div class="sent-zh">她出席了在伦敦举行的电影首映。</div><button class="sent-play" data-text="She attended the film premiere in London.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 16 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cultural</div><div class="ipa">/ˈkʌltʃərəl/</div><div class="pos">adj. 文化的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cultural" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cultural" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：culture(文化)+al→文化的</div><div class="coll">搭配：cultural heritage | cultural identity | cultural diversity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Cultural</span> heritage must be preserved for future generations.</div><div class="sent-zh">文化遗产必须为后代保护。</div><button class="sent-play" data-text="Cultural heritage must be preserved for future generations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Cultural</span> diversity enriches society.</div><div class="sent-zh">文化多样性丰富社会。</div><button class="sent-play" data-text="Cultural diversity enriches society.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">editorial</div><div class="ipa">/ˌedɪˈtɔːriəl/</div><div class="pos">n. 社论</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="editorial" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="editorial" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：editor(编辑)+ial→编辑的文章→社论</div><div class="coll">搭配：editorial board | editorial policy | write an editorial</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The newspaper published a scathing <span class="highlight">editorial</span>.</div><div class="sent-zh">该报发表了一篇尖锐的社论。</div><button class="sent-play" data-text="The newspaper published a scathing editorial.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">editorial</span> board endorsed the new policy.</div><div class="sent-zh">编辑委员会支持新政策。</div><button class="sent-play" data-text="The editorial board endorsed the new policy.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">sensationalism</div><div class="ipa">/senˈseɪʃənəlɪzəm/</div><div class="pos">n. 煽情主义</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="sensationalism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="sensationalism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：sensation(轰动)+alism→追求轰动→煽情主义</div><div class="coll">搭配：media sensationalism | avoid sensationalism | driven by sensationalism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Tabloid journalism relies on <span class="highlight">sensationalism</span>.</div><div class="sent-zh">小报新闻依赖煽情主义。</div><button class="sent-play" data-text="Tabloid journalism relies on sensationalism.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Critics condemn media <span class="highlight">sensationalism</span>.</div><div class="sent-zh">批评者谴责媒体煽情主义。</div><button class="sent-play" data-text="Critics condemn media sensationalism.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">virality</div><div class="ipa">/vaɪˈræləti/</div><div class="pos">n. 病毒式传播</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="virality" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="virality" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：viral(病毒)+ity→像病毒一样传播→病毒式传播</div><div class="coll">搭配：achieve virality | virality of content | measure virality</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The video achieved <span class="highlight">virality</span> overnight.</div><div class="sent-zh">该视频一夜之间病毒式传播。</div><button class="sent-play" data-text="The video achieved virality overnight.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Content <span class="highlight">virality</span> is hard to predict.</div><div class="sent-zh">内容病毒式传播难以预测。</div><button class="sent-play" data-text="Content virality is hard to predict.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">discourse</div><div class="ipa">/ˈdɪskɔːs/</div><div class="pos">n. 话语</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="discourse" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="discourse" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：dis(分开)+course(跑)→跑来跑去→交谈→话语</div><div class="coll">搭配：public discourse | political discourse | shape discourse</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Social media has transformed public <span class="highlight">discourse</span>.</div><div class="sent-zh">社交媒体改变了公共话语。</div><button class="sent-play" data-text="Social media has transformed public discourse.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Political <span class="highlight">discourse</span> has become increasingly polarised.</div><div class="sent-zh">政治话语日益两极分化。</div><button class="sent-play" data-text="Political discourse has become increasingly polarised.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">symbology</div><div class="ipa">/sɪmˈbɒlədʒi/</div><div class="pos">n. 象征学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="symbology" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="symbology" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：symbol(符号)+ology→研究符号→象征学</div><div class="coll">搭配：religious symbology | cultural symbology | study symbology</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Religious <span class="highlight">symbology</span> is rich in meaning.</div><div class="sent-zh">宗教象征学含义丰富。</div><button class="sent-play" data-text="Religious symbology is rich in meaning.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">symbology</span> of colours varies across cultures.</div><div class="sent-zh">色彩的象征意义因文化而异。</div><button class="sent-play" data-text="The symbology of colours varies across cultures.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">tribunal</div><div class="ipa">/traɪˈbjuːnl/</div><div class="pos">n. 法庭</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tribunal" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="tribunal" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 政府法律话题高频词 · 话题：政府法律</div><div class="memory">记忆：tribun(审判台)+al→审判的地方→法庭</div><div class="coll">搭配：international tribunal | military tribunal | appear before a tribunal</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The case was heard by an international <span class="highlight">tribunal</span>.</div><div class="sent-zh">该案由国际法庭审理。</div><button class="sent-play" data-text="The case was heard by an international tribunal.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A war crimes <span class="highlight">tribunal</span> was established.</div><div class="sent-zh">成立了战争罪法庭。</div><button class="sent-play" data-text="A war crimes tribunal was established.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">antiquity</div><div class="ipa">/ænˈtɪkwəti/</div><div class="pos">n. 古代</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="antiquity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="antiquity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：antiq(古老)+uity→古老→古代</div><div class="coll">搭配：classical antiquity | since antiquity | from antiquity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The museum houses artefacts from classical <span class="highlight">antiquity</span>.</div><div class="sent-zh">博物馆藏有古典古代的文物。</div><button class="sent-play" data-text="The museum houses artefacts from classical antiquity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. These traditions date back to <span class="highlight">antiquity</span>.</div><div class="sent-zh">这些传统可追溯到古代。</div><button class="sent-play" data-text="These traditions date back to antiquity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">artisan</div><div class="ipa">/ˌɑːtɪˈzæn/</div><div class="pos">n. 工匠</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="artisan" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="artisan" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：art(技艺)+isan→有技艺的人→工匠</div><div class="coll">搭配：skilled artisan | local artisan | artisan workshop</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Local artisans produce handmade ceramics.</div><div class="sent-zh">当地工匠制作手工陶瓷。</div><button class="sent-play" data-text="Local artisans produce handmade ceramics.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">artisan</span> workshop has been operating for generations.</div><div class="sent-zh">这家工匠作坊已经营了数代。</div><button class="sent-play" data-text="The artisan workshop has been operating for generations.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">canon</div><div class="ipa">/ˈkænən/</div><div class="pos">n. 经典</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="canon" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="canon" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：canon(规则)→公认的标准→经典</div><div class="coll">搭配：literary canon | western canon | canonical works</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The literary <span class="highlight">canon</span> has been expanded to include diverse voices.</div><div class="sent-zh">文学经典已扩展至包含多元声音。</div><button class="sent-play" data-text="The literary canon has been expanded to include diverse voices.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Debates over the western <span class="highlight">canon</span> continue.</div><div class="sent-zh">关于西方经典的争论仍在继续。</div><button class="sent-play" data-text="Debates over the western canon continue.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">censor</div><div class="ipa">/ˈsensə(r)/</div><div class="pos">v. 审查</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="censor" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="censor" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：cens(评估)+or→评估→审查</div><div class="coll">搭配：censor content | censor speech | heavily censored</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The government censored the film.</div><div class="sent-zh">政府审查了这部电影。</div><button class="sent-play" data-text="The government censored the film.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Online content is heavily censored in some countries.</div><div class="sent-zh">一些国家的网络内容受到严格审查。</div><button class="sent-play" data-text="Online content is heavily censored in some countries.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">cliche</div><div class="ipa">/ˈkliːʃeɪ/</div><div class="pos">n. 陈词滥调</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cliche" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cliche" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：cliche(铅版)→固定模式→陈词滥调</div><div class="coll">搭配：tired cliche | avoid cliche | become a cliche</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The film is full of tired cliches.</div><div class="sent-zh">这部电影充满陈词滥调。</div><button class="sent-play" data-text="The film is full of tired cliches.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Avoid cliches in academic writing.</div><div class="sent-zh">学术写作中应避免陈词滥调。</div><button class="sent-play" data-text="Avoid cliches in academic writing.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">connoisseur</div><div class="ipa">/ˌkɒnəˈsɜː(r)/</div><div class="pos">n. 鉴赏家</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="connoisseur" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="connoisseur" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：con(一起)+noisse(知道)+ur→知道很多→鉴赏家</div><div class="coll">搭配：art connoisseur | wine connoisseur | discerning connoisseur</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She is a respected art <span class="highlight">connoisseur</span>.</div><div class="sent-zh">她是受人尊敬的艺术鉴赏家。</div><button class="sent-play" data-text="She is a respected art connoisseur.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">connoisseur</span> can distinguish subtle differences.</div><div class="sent-zh">鉴赏家能辨别细微差异。</div><button class="sent-play" data-text="A connoisseur can distinguish subtle differences.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">epitome</div><div class="ipa">/ɪˈpɪtəmi/</div><div class="pos">n. 典型</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="epitome" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="epitome" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 文化媒体话题高级词 · 话题：文化媒体</div><div class="memory">记忆：epi(在...上)+tome(切)→切到要点→典型</div><div class="coll">搭配：epitome of | the epitome | perfect epitome</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. He is the <span class="highlight">epitome</span> of a gentleman.</div><div class="sent-zh">他是绅士的典型。</div><button class="sent-play" data-text="He is the epitome of a gentleman.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The building is the <span class="highlight">epitome</span> of modern architecture.</div><div class="sent-zh">这座建筑是现代建筑的典范。</div><button class="sent-play" data-text="The building is the epitome of modern architecture.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">exhibition</div><div class="ipa">/ˌeksɪˈbɪʃn/</div><div class="pos">n. 展览</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exhibition" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="exhibition" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：exhibit(展示)+ion→展示→展览</div><div class="coll">搭配：art exhibition | hold an exhibition | international exhibition</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The art <span class="highlight">exhibition</span> opens next week.</div><div class="sent-zh">艺术展下周开幕。</div><button class="sent-play" data-text="The art exhibition opens next week.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An international <span class="highlight">exhibition</span> attracted thousands of visitors.</div><div class="sent-zh">一个国际展览吸引了数千访客。</div><button class="sent-play" data-text="An international exhibition attracted thousands of visitors.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">iconic</div><div class="ipa">/aɪˈkɒnɪk/</div><div class="pos">adj. 标志性的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="iconic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="iconic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：icon(偶像)+ic→偶像的→标志性的</div><div class="coll">搭配：iconic image | iconic building | iconic status</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The building is an <span class="highlight">iconic</span> landmark.</div><div class="sent-zh">这座建筑是标志性建筑。</div><button class="sent-play" data-text="The building is an iconic landmark.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The photograph achieved <span class="highlight">iconic</span> status.</div><div class="sent-zh">这张照片获得了标志性地位。</div><button class="sent-play" data-text="The photograph achieved iconic status.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">inferior</div><div class="ipa">/ɪnˈfɪəriə(r)/</div><div class="pos">adj. 次的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="inferior" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="inferior" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：infer(在下面)+ior→在下面的→次的</div><div class="coll">搭配：inferior quality | inferior goods | feel inferior</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The replica is of <span class="highlight">inferior</span> quality.</div><div class="sent-zh">复制品质量较差。</div><button class="sent-play" data-text="The replica is of inferior quality.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Nobody should feel <span class="highlight">inferior</span> because of their background.</div><div class="sent-zh">没有人应因背景而感到自卑。</div><button class="sent-play" data-text="Nobody should feel inferior because of their background.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">nostalgia</div><div class="ipa">/nɒˈstældʒə/</div><div class="pos">n. 怀旧</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nostalgia" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nostalgia" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：nost(回家)+algia(痛)→想家的痛→怀旧</div><div class="coll">搭配：feel nostalgia | nostalgia for | wave of nostalgia</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The film evokes <span class="highlight">nostalgia</span> for the 1980s.</div><div class="sent-zh">这部电影唤起了对80年代的怀旧。</div><button class="sent-play" data-text="The film evokes nostalgia for the 1980s.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Nostalgia</span> can be a powerful marketing tool.</div><div class="sent-zh">怀旧可以是强大的营销工具。</div><button class="sent-play" data-text="Nostalgia can be a powerful marketing tool.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">patron</div><div class="ipa">/ˈpeɪtrən/</div><div class="pos">n. 赞助人</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="patron" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="patron" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：patr(父亲)+on→保护者→赞助人</div><div class="coll">搭配：art patron | patron of the arts | wealthy patron</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The museum was built by a wealthy <span class="highlight">patron</span>.</div><div class="sent-zh">博物馆由一位富有的赞助人建造。</div><button class="sent-play" data-text="The museum was built by a wealthy patron.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Patrons of the arts support emerging artists.</div><div class="sent-zh">艺术赞助人支持新兴艺术家。</div><button class="sent-play" data-text="Patrons of the arts support emerging artists.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">📘</div><div class="winfo"><div class="word">premiere</div><div class="ipa">/ˈpremieə(r)/</div><div class="pos">n. 首映</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="premiere" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="premiere" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 文化媒体话题常见词 · 话题：文化媒体</div><div class="memory">记忆：premier(第一)+e→第一次→首映</div><div class="coll">搭配：world premiere | film premiere | attend the premiere</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The world <span class="highlight">premiere</span> attracted huge media attention.</div><div class="sent-zh">全球首映吸引了大量媒体关注。</div><button class="sent-play" data-text="The world premiere attracted huge media attention.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. She attended the film <span class="highlight">premiere</span> in London.</div><div class="sent-zh">她出席了在伦敦举行的电影首映。</div><button class="sent-play" data-text="She attended the film premiere in London.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

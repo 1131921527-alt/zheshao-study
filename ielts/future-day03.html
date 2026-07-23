@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 3</h1></div>
+<div class="header"><h1>雅思 Future Day 3</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 3 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">innovation</div>
-<div style="font-size:13px;color:#8b949e">/ˌɪnəˈveɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 创新</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：基础高频 · 科技话题高频词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：in(进入)+nov(新)+ation→引入新事物→创新</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：technological innovation | drive innovation | foster innovation</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Technological innovation has transformed the way we communicate.</div><div class="sent-zh">技术创新改变了我们沟通的方式。</div><button class="sent-play" data-text="Technological innovation has transformed the way we communicate.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company invests heavily in research and innovation.</div><div class="sent-zh">公司在研发和创新方面投入巨资。</div><button class="sent-play" data-text="The company invests heavily in research and innovation.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">deploy</div>
-<div style="font-size:13px;color:#8b949e">/dɪˈplɔɪ/</div>
-<div style="font-size:14px;color:#7ee787">v. 部署，使用</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常用动词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：de(分开)+ploy(折叠)→展开→部署</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：deploy technology | deploy resources | deploy a system</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company plans to deploy AI across its operations.</div><div class="sent-zh">公司计划在其运营中部署人工智能。</div><button class="sent-play" data-text="The company plans to deploy AI across its operations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Emergency resources were deployed within hours of the disaster.</div><div class="sent-zh">灾后几小时内就部署了应急资源。</div><button class="sent-play" data-text="Emergency resources were deployed within hours of the disaster.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">interoperability</div>
-<div style="font-size:13px;color:#8b949e">/ˌɪntərˌɒpərəˈbɪləti/</div>
-<div style="font-size:14px;color:#7ee787">n. 互操作性</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技系统话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：inter(之间)+oper(操作)+ability→之间能操作→互操作性</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：system interoperability | improve interoperability | lack interoperability</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Interoperability between different systems is essential.</div><div class="sent-zh">不同系统之间的互操作性至关重要。</div><button class="sent-play" data-text="Interoperability between different systems is essential.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The new standard improves interoperability across platforms.</div><div class="sent-zh">新标准提高了跨平台的互操作性。</div><button class="sent-play" data-text="The new standard improves interoperability across platforms.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">open-source</div>
-<div style="font-size:13px;color:#8b949e">/ˌəʊpənˈsɔːs/</div>
-<div style="font-size:14px;color:#7ee787">adj. 开源的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：open(开放)+source(源码)→源码开放的→开源的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：open-source software | open-source community | open-source project</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Many developers contribute to open-source projects.</div><div class="sent-zh">许多开发者参与开源项目。</div><button class="sent-play" data-text="Many developers contribute to open-source projects.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Open-source software is often free to use.</div><div class="sent-zh">开源软件通常免费使用。</div><button class="sent-play" data-text="Open-source software is often free to use.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">scalable</div>
-<div style="font-size:13px;color:#8b949e">/ˈskeɪləbl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 可扩展的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：scale(规模)+able→能变规模的→可扩展的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：scalable solution | highly scalable | scalable infrastructure</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cloud computing offers scalable solutions for businesses.</div><div class="sent-zh">云计算为企业提供可扩展的解决方案。</div><button class="sent-play" data-text="Cloud computing offers scalable solutions for businesses.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The system is designed to be highly scalable.</div><div class="sent-zh">该系统设计为高度可扩展。</div><button class="sent-play" data-text="The system is designed to be highly scalable.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">telemetry</div>
-<div style="font-size:13px;color:#8b949e">/təˈlemətri/</div>
-<div style="font-size:14px;color:#7ee787">n. 遥测技术</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题中阶词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：tele(远)+metry(测量)→远距离测量→遥测</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：telemetry data | telemetry system | satellite telemetry</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Telemetry data helps engineers monitor spacecraft health.</div><div class="sent-zh">遥测数据帮助工程师监控航天器状态。</div><button class="sent-play" data-text="Telemetry data helps engineers monitor spacecraft health.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The car's telemetry system provides real-time performance data.</div><div class="sent-zh">汽车的遥测系统提供实时性能数据。</div><button class="sent-play" data-text="The car's telemetry system provides real-time performance data.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cryptographic</div>
-<div style="font-size:13px;color:#8b949e">/ˌkrɪptəˈɡræfɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 加密的，密码学的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 科技安全话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：crypto(秘密)+graph(写)+ic→秘密书写的→密码学的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：cryptographic technique | cryptographic key | cryptographic protocol</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Modern cryptographic techniques ensure secure online transactions.</div><div class="sent-zh">现代密码学技术确保在线交易安全。</div><button class="sent-play" data-text="Modern cryptographic techniques ensure secure online transactions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The cryptographic protocol has been updated to prevent attacks.</div><div class="sent-zh">密码协议已更新以防止攻击。</div><button class="sent-play" data-text="The cryptographic protocol has been updated to prevent attacks.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">quantum</div>
-<div style="font-size:13px;color:#8b949e">/ˈkwɒntəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 量子</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 前沿科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：quant(量)+um→量子的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：quantum computing | quantum physics | quantum leap</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Quantum computing could revolutionise data processing.</div><div class="sent-zh">量子计算可能彻底改变数据处理方式。</div><button class="sent-play" data-text="Quantum computing could revolutionise data processing.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The discovery represents a quantum leap in physics.</div><div class="sent-zh">这一发现代表了物理学的一次巨大飞跃。</div><button class="sent-play" data-text="The discovery represents a quantum leap in physics.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">proprietary</div>
-<div style="font-size:13px;color:#8b949e">/prəˈpraɪətri/</div>
-<div style="font-size:14px;color:#7ee787">adj. 专有的，专利的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：较高难度 · 科技商业话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：propri(自己的)+etary→自己的→专有的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：proprietary technology | proprietary software | proprietary rights</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The company uses proprietary technology to gain a competitive edge.</div><div class="sent-zh">公司使用专有技术获得竞争优势。</div><button class="sent-play" data-text="The company uses proprietary technology to gain a competitive edge.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Proprietary software cannot be freely modified.</div><div class="sent-zh">专有软件不能被自由修改。</div><button class="sent-play" data-text="Proprietary software cannot be freely modified.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">terabyte</div>
-<div style="font-size:13px;color:#8b949e">/ˈterəbaɪt/</div>
-<div style="font-size:14px;color:#7ee787">n. 太字节</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：tera(万亿)+byte(字节)→万亿字节→太字节</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：store terabytes | terabyte capacity | terabyte drive</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Modern hard drives can store several terabytes.</div><div class="sent-zh">现代硬盘可存储数太字节。</div><button class="sent-play" data-text="Modern hard drives can store several terabytes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A terabyte equals 1,024 gigabytes.</div><div class="sent-zh">一太字节等于1024吉字节。</div><button class="sent-play" data-text="A terabyte equals 1,024 gigabytes.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">throughput</div>
-<div style="font-size:13px;color:#8b949e">/ˈθruːpʊt/</div>
-<div style="font-size:14px;color:#7ee787">n. 吞吐量</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：through(通过)+put(放)→放过去→吞吐量</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：high throughput | network throughput | increase throughput</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. High throughput is essential for data centres.</div><div class="sent-zh">高吞吐量对数据中心至关重要。</div><button class="sent-play" data-text="High throughput is essential for data centres.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Network throughput determines transfer speed.</div><div class="sent-zh">网络吞吐量决定传输速度。</div><button class="sent-play" data-text="Network throughput determines transfer speed.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">ubiquity</div>
-<div style="font-size:13px;color:#8b949e">/juːˈbɪkwəti/</div>
-<div style="font-size:14px;color:#7ee787">n. 普遍存在</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ubique(到处)+ity→到处存在→普遍存在</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：the ubiquity of | digital ubiquity | achieve ubiquity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The ubiquity of smartphones has transformed communication.</div><div class="sent-zh">智能手机的普遍存在改变了沟通方式。</div><button class="sent-play" data-text="The ubiquity of smartphones has transformed communication.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Digital ubiquity enables constant connectivity.</div><div class="sent-zh">数字普遍存在实现持续连接。</div><button class="sent-play" data-text="Digital ubiquity enables constant connectivity.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">verbose</div>
-<div style="font-size:13px;color:#8b949e">/vɜːˈbəʊs/</div>
-<div style="font-size:14px;color:#7ee787">adj. 冗长的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：verb(词语)+ose→多词的→冗长的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：verbose output | verbose code | overly verbose</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Verbose code is harder to maintain.</div><div class="sent-zh">冗长代码更难维护。</div><button class="sent-play" data-text="Verbose code is harder to maintain.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The output was overly verbose.</div><div class="sent-zh">输出过于冗长。</div><button class="sent-play" data-text="The output was overly verbose.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">warranty</div>
-<div style="font-size:13px;color:#8b949e">/ˈwɒrənti/</div>
-<div style="font-size:14px;color:#7ee787">n. 保修</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：warr(保证)+anty→保证→保修</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：under warranty | warranty period | extend warranty</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The device is still under warranty.</div><div class="sent-zh">设备仍在保修期内。</div><button class="sent-play" data-text="The device is still under warranty.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The warranty period is two years.</div><div class="sent-zh">保修期为两年。</div><button class="sent-play" data-text="The warranty period is two years.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">biometric</div>
-<div style="font-size:13px;color:#8b949e">/ˌbaɪəʊˈmetrɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj 生物识别的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bio(生物) + metric(测量) = 生物测量</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：biometric data, biometric authentication, biometric scanner, biometric passport</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Biometric authentication is increasingly used in smartphones.</div><div class="sent-zh">生物识别认证越来越多地用于智能手机。</div><button class="sent-play" data-text="Biometric authentication is increasingly used in smartphones.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The airport installed biometric scanners at passport control.</div><div class="sent-zh">机场在护照检查处安装了生物识别扫描仪。</div><button class="sent-play" data-text="The airport installed biometric scanners at passport control.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">semiconductor</div>
-<div style="font-size:13px;color:#8b949e">/ˌsemikənˈdʌktə/</div>
-<div style="font-size:14px;color:#7ee787">n 半导体</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 学术高频 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：semi(半) + conductor(导体) = 半导体</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：semiconductor industry, semiconductor chip, semiconductor manufacturer</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The semiconductor industry is crucial to modern technology.</div><div class="sent-zh">半导体行业对现代技术至关重要。</div><button class="sent-play" data-text="The semiconductor industry is crucial to modern technology.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A global shortage of semiconductors disrupted car production.</div><div class="sent-zh">全球半导体短缺扰乱了汽车生产。</div><button class="sent-play" data-text="A global shortage of semiconductors disrupted car production.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">syllogism</div>
-<div style="font-size:13px;color:#8b949e">/ˈsɪlədʒɪzəm/</div>
-<div style="font-size:14px;color:#7ee787">n. 三段论</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：syl(一起)+log(推理)+ism→一起推理→三段论</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：logical syllogism | Aristotelian syllogism | construct a syllogism</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A syllogism consists of premise and conclusion.</div><div class="sent-zh">三段论由前提和结论组成。</div><button class="sent-play" data-text="A syllogism consists of premise and conclusion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Aristotelian syllogism shaped Western logic.</div><div class="sent-zh">亚里士多德三段论塑造了西方逻辑学。</div><button class="sent-play" data-text="Aristotelian syllogism shaped Western logic.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">truancy</div>
-<div style="font-size:13px;color:#8b949e">/ˈtruːənsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 逃学</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 教育话题常见词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：tru( absent)+ancy→缺席→逃学</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：high truancy | truancy rate | combat truancy</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Truancy rates have risen in some areas.</div><div class="sent-zh">某些地区逃学率上升。</div><button class="sent-play" data-text="Truancy rates have risen in some areas.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Schools combat truancy through engagement programmes.</div><div class="sent-zh">学校通过参与计划打击逃学。</div><button class="sent-play" data-text="Schools combat truancy through engagement programmes.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🎓</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">valedictorian</div>
-<div style="font-size:13px;color:#8b949e">/ˌvælɪdɪkˈtɔːriən/</div>
-<div style="font-size:14px;color:#7ee787">n. 毕业致辞生</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 教育话题高级词 · 话题：教育</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：vale(告别)+dict(说)+orian→告别演说者→毕业致辞生</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：class valedictorian | deliver valedictorian | top student valedictorian</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. She was the valedictorian of her class.</div><div class="sent-zh">她是毕业班的致辞生。</div><button class="sent-play" data-text="She was the valedictorian of her class.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The valedictorian delivered an inspiring speech.</div><div class="sent-zh">毕业致辞生发表了鼓舞人心的演讲。</div><button class="sent-play" data-text="The valedictorian delivered an inspiring speech.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">🌿</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">abyssal</div>
-<div style="font-size:13px;color:#8b949e">/əˈbɪsl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 深渊的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 环境话题高级词 · 话题：环境</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：abyss(深渊)+al→深渊的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：abyssal zone | abyssal plain | abyssal depth</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Abyssal plains cover much of the ocean floor.</div><div class="sent-zh">深渊平原覆盖了大部分海底。</div><button class="sent-play" data-text="Abyssal plains cover much of the ocean floor.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Abyssal zones host unique life forms.</div><div class="sent-zh">深渊区域孕育独特的生命形式。</div><button class="sent-play" data-text="Abyssal zones host unique life forms.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 3 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">innovation</div><div class="ipa">/ˌɪnəˈveɪʃn/</div><div class="pos">n. 创新</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="innovation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="innovation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：基础高频 · 科技话题高频词 · 话题：科技</div><div class="memory">记忆：in(进入)+nov(新)+ation→引入新事物→创新</div><div class="coll">搭配：technological innovation | drive innovation | foster innovation</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Technological <span class="highlight">innovation</span> has transformed the way we communicate.</div><div class="sent-zh">技术创新改变了我们沟通的方式。</div><button class="sent-play" data-text="Technological innovation has transformed the way we communicate.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The company invests heavily in research and <span class="highlight">innovation</span>.</div><div class="sent-zh">公司在研发和创新方面投入巨资。</div><button class="sent-play" data-text="The company invests heavily in research and innovation.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">deploy</div><div class="ipa">/dɪˈplɔɪ/</div><div class="pos">v. 部署，使用</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deploy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deploy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常用动词 · 话题：科技</div><div class="memory">记忆：de(分开)+ploy(折叠)→展开→部署</div><div class="coll">搭配：deploy technology | deploy resources | deploy a system</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company plans to <span class="highlight">deploy</span> AI across its operations.</div><div class="sent-zh">公司计划在其运营中部署人工智能。</div><button class="sent-play" data-text="The company plans to deploy AI across its operations.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Emergency resources were deployed within hours of the disaster.</div><div class="sent-zh">灾后几小时内就部署了应急资源。</div><button class="sent-play" data-text="Emergency resources were deployed within hours of the disaster.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">interoperability</div><div class="ipa">/ˌɪntərˌɒpərəˈbɪləti/</div><div class="pos">n. 互操作性</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="interoperability" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="interoperability" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技系统话题常见词 · 话题：科技</div><div class="memory">记忆：inter(之间)+oper(操作)+ability→之间能操作→互操作性</div><div class="coll">搭配：system interoperability | improve interoperability | lack interoperability</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Interoperability</span> between different systems is essential.</div><div class="sent-zh">不同系统之间的互操作性至关重要。</div><button class="sent-play" data-text="Interoperability between different systems is essential.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The new standard improves <span class="highlight">interoperability</span> across platforms.</div><div class="sent-zh">新标准提高了跨平台的互操作性。</div><button class="sent-play" data-text="The new standard improves interoperability across platforms.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">open-source</div><div class="ipa">/ˌəʊpənˈsɔːs/</div><div class="pos">adj. 开源的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="open-source" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="open-source" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：open(开放)+source(源码)→源码开放的→开源的</div><div class="coll">搭配：open-source software | open-source community | open-source project</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Many developers contribute to <span class="highlight">open-source</span> projects.</div><div class="sent-zh">许多开发者参与开源项目。</div><button class="sent-play" data-text="Many developers contribute to open-source projects.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Open-source</span> software is often free to use.</div><div class="sent-zh">开源软件通常免费使用。</div><button class="sent-play" data-text="Open-source software is often free to use.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">scalable</div><div class="ipa">/ˈskeɪləbl/</div><div class="pos">adj. 可扩展的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="scalable" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="scalable" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：scale(规模)+able→能变规模的→可扩展的</div><div class="coll">搭配：scalable solution | highly scalable | scalable infrastructure</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Cloud computing offers <span class="highlight">scalable</span> solutions for businesses.</div><div class="sent-zh">云计算为企业提供可扩展的解决方案。</div><button class="sent-play" data-text="Cloud computing offers scalable solutions for businesses.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The system is designed to be highly <span class="highlight">scalable</span>.</div><div class="sent-zh">该系统设计为高度可扩展。</div><button class="sent-play" data-text="The system is designed to be highly scalable.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">telemetry</div><div class="ipa">/təˈlemətri/</div><div class="pos">n. 遥测技术</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="telemetry" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="telemetry" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题中阶词 · 话题：科技</div><div class="memory">记忆：tele(远)+metry(测量)→远距离测量→遥测</div><div class="coll">搭配：telemetry data | telemetry system | satellite telemetry</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Telemetry</span> data helps engineers monitor spacecraft health.</div><div class="sent-zh">遥测数据帮助工程师监控航天器状态。</div><button class="sent-play" data-text="Telemetry data helps engineers monitor spacecraft health.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The car's <span class="highlight">telemetry</span> system provides real-time performance data.</div><div class="sent-zh">汽车的遥测系统提供实时性能数据。</div><button class="sent-play" data-text="The car&#x27;s telemetry system provides real-time performance data.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">cryptographic</div><div class="ipa">/ˌkrɪptəˈɡræfɪk/</div><div class="pos">adj. 加密的，密码学的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cryptographic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cryptographic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 科技安全话题高级词 · 话题：科技</div><div class="memory">记忆：crypto(秘密)+graph(写)+ic→秘密书写的→密码学的</div><div class="coll">搭配：cryptographic technique | cryptographic key | cryptographic protocol</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Modern <span class="highlight">cryptographic</span> techniques ensure secure online transactions.</div><div class="sent-zh">现代密码学技术确保在线交易安全。</div><button class="sent-play" data-text="Modern cryptographic techniques ensure secure online transactions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">cryptographic</span> protocol has been updated to prevent attacks.</div><div class="sent-zh">密码协议已更新以防止攻击。</div><button class="sent-play" data-text="The cryptographic protocol has been updated to prevent attacks.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">quantum</div><div class="ipa">/ˈkwɒntəm/</div><div class="pos">n. 量子</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="quantum" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="quantum" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 前沿科技话题高级词 · 话题：科技</div><div class="memory">记忆：quant(量)+um→量子的</div><div class="coll">搭配：quantum computing | quantum physics | quantum leap</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Quantum</span> computing could revolutionise data processing.</div><div class="sent-zh">量子计算可能彻底改变数据处理方式。</div><button class="sent-play" data-text="Quantum computing could revolutionise data processing.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The discovery represents a <span class="highlight">quantum</span> leap in physics.</div><div class="sent-zh">这一发现代表了物理学的一次巨大飞跃。</div><button class="sent-play" data-text="The discovery represents a quantum leap in physics.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">proprietary</div><div class="ipa">/prəˈpraɪətri/</div><div class="pos">adj. 专有的，专利的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="proprietary" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="proprietary" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：较高难度 · 科技商业话题高级词 · 话题：科技</div><div class="memory">记忆：propri(自己的)+etary→自己的→专有的</div><div class="coll">搭配：proprietary technology | proprietary software | proprietary rights</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The company uses <span class="highlight">proprietary</span> technology to gain a competitive edge.</div><div class="sent-zh">公司使用专有技术获得竞争优势。</div><button class="sent-play" data-text="The company uses proprietary technology to gain a competitive edge.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Proprietary</span> software cannot be freely modified.</div><div class="sent-zh">专有软件不能被自由修改。</div><button class="sent-play" data-text="Proprietary software cannot be freely modified.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">terabyte</div><div class="ipa">/ˈterəbaɪt/</div><div class="pos">n. 太字节</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="terabyte" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="terabyte" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：tera(万亿)+byte(字节)→万亿字节→太字节</div><div class="coll">搭配：store terabytes | terabyte capacity | terabyte drive</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Modern hard drives can store several terabytes.</div><div class="sent-zh">现代硬盘可存储数太字节。</div><button class="sent-play" data-text="Modern hard drives can store several terabytes.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">terabyte</span> equals 1,024 gigabytes.</div><div class="sent-zh">一太字节等于1024吉字节。</div><button class="sent-play" data-text="A terabyte equals 1,024 gigabytes.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">throughput</div><div class="ipa">/ˈθruːpʊt/</div><div class="pos">n. 吞吐量</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="throughput" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="throughput" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：through(通过)+put(放)→放过去→吞吐量</div><div class="coll">搭配：high throughput | network throughput | increase throughput</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. High <span class="highlight">throughput</span> is essential for data centres.</div><div class="sent-zh">高吞吐量对数据中心至关重要。</div><button class="sent-play" data-text="High throughput is essential for data centres.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Network <span class="highlight">throughput</span> determines transfer speed.</div><div class="sent-zh">网络吞吐量决定传输速度。</div><button class="sent-play" data-text="Network throughput determines transfer speed.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">ubiquity</div><div class="ipa">/juːˈbɪkwəti/</div><div class="pos">n. 普遍存在</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="ubiquity" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="ubiquity" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：ubique(到处)+ity→到处存在→普遍存在</div><div class="coll">搭配：the ubiquity of | digital ubiquity | achieve ubiquity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">ubiquity</span> of smartphones has transformed communication.</div><div class="sent-zh">智能手机的普遍存在改变了沟通方式。</div><button class="sent-play" data-text="The ubiquity of smartphones has transformed communication.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Digital <span class="highlight">ubiquity</span> enables constant connectivity.</div><div class="sent-zh">数字普遍存在实现持续连接。</div><button class="sent-play" data-text="Digital ubiquity enables constant connectivity.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">verbose</div><div class="ipa">/vɜːˈbəʊs/</div><div class="pos">adj. 冗长的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="verbose" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="verbose" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：verb(词语)+ose→多词的→冗长的</div><div class="coll">搭配：verbose output | verbose code | overly verbose</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Verbose</span> code is harder to maintain.</div><div class="sent-zh">冗长代码更难维护。</div><button class="sent-play" data-text="Verbose code is harder to maintain.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The output was overly <span class="highlight">verbose</span>.</div><div class="sent-zh">输出过于冗长。</div><button class="sent-play" data-text="The output was overly verbose.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">warranty</div><div class="ipa">/ˈwɒrənti/</div><div class="pos">n. 保修</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="warranty" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="warranty" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：warr(保证)+anty→保证→保修</div><div class="coll">搭配：under warranty | warranty period | extend warranty</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The device is still under <span class="highlight">warranty</span>.</div><div class="sent-zh">设备仍在保修期内。</div><button class="sent-play" data-text="The device is still under warranty.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">warranty</span> period is two years.</div><div class="sent-zh">保修期为两年。</div><button class="sent-play" data-text="The warranty period is two years.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">biometric</div><div class="ipa">/ˌbaɪəʊˈmetrɪk/</div><div class="pos">adj 生物识别的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="biometric" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="biometric" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：科技</div><div class="memory">记忆：bio(生物) + metric(测量) = 生物测量</div><div class="coll">搭配：biometric data, biometric authentication, biometric scanner, biometric passport</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Biometric</span> authentication is increasingly used in smartphones.</div><div class="sent-zh">生物识别认证越来越多地用于智能手机。</div><button class="sent-play" data-text="Biometric authentication is increasingly used in smartphones.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The airport installed <span class="highlight">biometric</span> scanners at passport control.</div><div class="sent-zh">机场在护照检查处安装了生物识别扫描仪。</div><button class="sent-play" data-text="The airport installed biometric scanners at passport control.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">semiconductor</div><div class="ipa">/ˌsemikənˈdʌktə/</div><div class="pos">n 半导体</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="semiconductor" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="semiconductor" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 学术高频 · 话题：科技</div><div class="memory">记忆：semi(半) + conductor(导体) = 半导体</div><div class="coll">搭配：semiconductor industry, semiconductor chip, semiconductor manufacturer</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">semiconductor</span> industry is crucial to modern technology.</div><div class="sent-zh">半导体行业对现代技术至关重要。</div><button class="sent-play" data-text="The semiconductor industry is crucial to modern technology.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A global shortage of semiconductors disrupted car production.</div><div class="sent-zh">全球半导体短缺扰乱了汽车生产。</div><button class="sent-play" data-text="A global shortage of semiconductors disrupted car production.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">syllogism</div><div class="ipa">/ˈsɪlədʒɪzəm/</div><div class="pos">n. 三段论</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="syllogism" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="syllogism" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：syl(一起)+log(推理)+ism→一起推理→三段论</div><div class="coll">搭配：logical syllogism | Aristotelian syllogism | construct a syllogism</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">syllogism</span> consists of premise and conclusion.</div><div class="sent-zh">三段论由前提和结论组成。</div><button class="sent-play" data-text="A syllogism consists of premise and conclusion.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Aristotelian <span class="highlight">syllogism</span> shaped Western logic.</div><div class="sent-zh">亚里士多德三段论塑造了西方逻辑学。</div><button class="sent-play" data-text="Aristotelian syllogism shaped Western logic.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">truancy</div><div class="ipa">/ˈtruːənsi/</div><div class="pos">n. 逃学</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="truancy" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="truancy" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 教育话题常见词 · 话题：教育</div><div class="memory">记忆：tru( absent)+ancy→缺席→逃学</div><div class="coll">搭配：high truancy | truancy rate | combat truancy</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Truancy</span> rates have risen in some areas.</div><div class="sent-zh">某些地区逃学率上升。</div><button class="sent-play" data-text="Truancy rates have risen in some areas.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Schools combat <span class="highlight">truancy</span> through engagement programmes.</div><div class="sent-zh">学校通过参与计划打击逃学。</div><button class="sent-play" data-text="Schools combat truancy through engagement programmes.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🎓</div><div class="winfo"><div class="word">valedictorian</div><div class="ipa">/ˌvælɪdɪkˈtɔːriən/</div><div class="pos">n. 毕业致辞生</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="valedictorian" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="valedictorian" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 教育话题高级词 · 话题：教育</div><div class="memory">记忆：vale(告别)+dict(说)+orian→告别演说者→毕业致辞生</div><div class="coll">搭配：class valedictorian | deliver valedictorian | top student valedictorian</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. She was the <span class="highlight">valedictorian</span> of her class.</div><div class="sent-zh">她是毕业班的致辞生。</div><button class="sent-play" data-text="She was the valedictorian of her class.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">valedictorian</span> delivered an inspiring speech.</div><div class="sent-zh">毕业致辞生发表了鼓舞人心的演讲。</div><button class="sent-play" data-text="The valedictorian delivered an inspiring speech.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">🌿</div><div class="winfo"><div class="word">abyssal</div><div class="ipa">/əˈbɪsl/</div><div class="pos">adj. 深渊的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="abyssal" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="abyssal" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 环境话题高级词 · 话题：环境</div><div class="memory">记忆：abyss(深渊)+al→深渊的</div><div class="coll">搭配：abyssal zone | abyssal plain | abyssal depth</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Abyssal</span> plains cover much of the ocean floor.</div><div class="sent-zh">深渊平原覆盖了大部分海底。</div><button class="sent-play" data-text="Abyssal plains cover much of the ocean floor.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Abyssal</span> zones host unique life forms.</div><div class="sent-zh">深渊区域孕育独特的生命形式。</div><button class="sent-play" data-text="Abyssal zones host unique life forms.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>

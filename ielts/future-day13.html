@@ -13,206 +13,114 @@ body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFo
 .card{background:#161b22;border:1px solid #21262d;border-radius:14px;padding:16px;transition:all .3s}
 .card h3{color:#f0f6fc;font-size:17px;margin-bottom:6px}
 .card p{color:#8b949e;font-size:13px}
-a.btn{display:inline-block;background:#1f6feb;color:#fff;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;margin-top:8px}
-a.toc-link{display:inline-block;background:#21262d;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:13px;text-decoration:none;margin:4px}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-a{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55}
-.b-b{background:#d2991d22;color:#d2991d;border:1px solid #d2991d55}
-.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0}
+.whead{display:flex;gap:12px;align-items:center}
+.emoji{font-size:34px;line-height:1;flex-shrink:0}
+.winfo{flex:1;min-width:0}
+.winfo .word{font-size:20px;font-weight:700;color:#f0f6fc;letter-spacing:.5px}
+.winfo .ipa{font-size:13px;color:#8b949e;margin-top:2px}
+.winfo .pos{font-size:14px;color:#7ee787;margin-top:2px}
+.audio-btns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.audio-btn{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s;font-family:inherit}
+.audio-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.audio-btn:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.audio-btn.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.audio-btn .flag{font-size:13px}
+.audio-btn .lbl{font-weight:600}
+.diff{font-size:12px;color:#8b949e;margin:8px 0}
+.memory{font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px;line-height:1.6}
+.coll{font-size:12px;color:#8b949e;padding:6px 0;line-height:1.6}
+.sentences{margin-top:10px;border-top:1px solid #21262d;padding-top:10px}
+.sent-title{font-size:12px;color:#58a6ff;font-weight:600;margin-bottom:8px}
+.sent-item{background:#0d1117;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.sent-item:last-child{margin-bottom:0}
+.sent-en{font-size:14px;color:#e6edf3;margin-bottom:3px;line-height:1.55}
+.sent-en .highlight{color:#ffa657;font-weight:600}
+.sent-zh{font-size:12px;color:#8b949e;margin-bottom:5px;line-height:1.55}
+.sent-play{background:transparent;border:1px solid #30363d;border-radius:5px;padding:3px 10px;font-size:11px;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .15s;font-family:inherit}
+.sent-play:hover{border-color:#58a6ff;color:#58a6ff}
+.sent-play:active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.sent-play.playing{background:#1f6feb !important;color:#fff !important;border-color:#1f6feb !important}
+.note{background:#1c2128;border:1px solid #30363d;border-radius:10px;padding:12px 14px;font-size:13px;color:#8b949e;margin:16px 0;line-height:1.7}
 .back{display:inline-block;margin:14px 0;color:#58a6ff;text-decoration:none;font-size:14px}
 footer{text-align:center;color:#6e7681;font-size:12px;padding:24px 12px}
 </style></head>
 <body><div class="wrap">
-<div class="header"><h1>雅思 Future Day 13</h1></div>
+<div class="header"><h1>雅思 Future Day 13</h1><div class="sub">🎓 教育话题 · 20 词 · 双口音发音</div></div>
 <a class="back" href="future-index.html">← 返回 Future Day 预览</a>
-<div class="note">📌 Future Day 13 · 共 20 词。例句发音由浏览器语音合成（TTS）生成；音标未经人工核验（未验证），以权威词典为准。</div>
-<div class="grid"><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">blockchain</div>
-<div style="font-size:13px;color:#8b949e">/ˈblɒktʃeɪn/</div>
-<div style="font-size:14px;color:#7ee787">n. 区块链</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：block(区块)+chain(链)→区块链</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：blockchain technology | blockchain-based | blockchain network</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Blockchain technology enables secure transactions.</div><div class="sent-zh">区块链技术使安全交易成为可能。</div><button class="sent-play" data-text="Blockchain technology enables secure transactions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many industries are exploring blockchain applications.</div><div class="sent-zh">许多行业在探索区块链应用。</div><button class="sent-play" data-text="Many industries are exploring blockchain applications.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">cryptocurrency</div>
-<div style="font-size:13px;color:#8b949e">/ˈkrɪptəʊkʌrənsi/</div>
-<div style="font-size:14px;color:#7ee787">n. 加密货币</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：crypto(隐秘)+currency(货币)→加密货币</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：trade cryptocurrency | cryptocurrency market | cryptocurrency exchange</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Cryptocurrency markets are highly volatile.</div><div class="sent-zh">加密货币市场波动很大。</div><button class="sent-play" data-text="Cryptocurrency markets are highly volatile.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Some countries have banned cryptocurrency trading.</div><div class="sent-zh">一些国家禁止加密货币交易。</div><button class="sent-play" data-text="Some countries have banned cryptocurrency trading.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">disruptive</div>
-<div style="font-size:13px;color:#8b949e">/dɪsˈrʌptɪv/</div>
-<div style="font-size:14px;color:#7ee787">adj. 颠覆性的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：dis(分开)+rupt(断)+ive→打断的→颠覆性的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：disruptive technology | disruptive innovation | disruptive effect</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Disruptive technologies transform entire industries.</div><div class="sent-zh">颠覆性技术改变整个行业。</div><button class="sent-play" data-text="Disruptive technologies transform entire industries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The startup introduced a disruptive business model.</div><div class="sent-zh">这家初创公司引入了颠覆性商业模式。</div><button class="sent-play" data-text="The startup introduced a disruptive business model.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">nanotechnology</div>
-<div style="font-size:13px;color:#8b949e">/ˌnænəʊtekˈnɒlədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 纳米技术</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：nano(纳米)+technology(技术)→纳米技术</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：nanotechnology applications | advances in nanotechnology | nanotechnology research</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Nanotechnology has medical applications.</div><div class="sent-zh">纳米技术有医学应用。</div><button class="sent-play" data-text="Nanotechnology has medical applications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Advances in nanotechnology are accelerating.</div><div class="sent-zh">纳米技术的进展正在加速。</div><button class="sent-play" data-text="Advances in nanotechnology are accelerating.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">simulation</div>
-<div style="font-size:13px;color:#8b949e">/ˌsɪmjuˈleɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 模拟</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：simul(相似)+ation→使之相似→模拟</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：computer simulation | run a simulation | simulation model</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The engineers ran a computer simulation.</div><div class="sent-zh">工程师运行了计算机模拟。</div><button class="sent-play" data-text="The engineers ran a computer simulation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Simulation models help predict outcomes.</div><div class="sent-zh">模拟模型有助于预测结果。</div><button class="sent-play" data-text="Simulation models help predict outcomes.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">asynchronous</div>
-<div style="font-size:13px;color:#8b949e">/eɪˈsɪŋkrənəs/</div>
-<div style="font-size:14px;color:#7ee787">adj. 异步的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：a(不)+syn(同)+chron(时间)+ous→不同时的→异步的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：asynchronous communication | asynchronous learning | asynchronous transfer</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Asynchronous learning allows flexible schedules.</div><div class="sent-zh">异步学习允许灵活的时间安排。</div><button class="sent-play" data-text="Asynchronous learning allows flexible schedules.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Asynchronous communication is common in remote work.</div><div class="sent-zh">异步通信在远程工作中很常见。</div><button class="sent-play" data-text="Asynchronous communication is common in remote work.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">ontology</div>
-<div style="font-size:13px;color:#8b949e">/ɒnˈtɒlədʒi/</div>
-<div style="font-size:14px;color:#7ee787">n. 本体论</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：onto(存在)+logy(学问)→研究存在的学问→本体论</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：knowledge ontology | ontology-based | philosophical ontology</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. In computer science, an ontology defines data relationships.</div><div class="sent-zh">在计算机科学中，本体论定义数据关系。</div><button class="sent-play" data-text="In computer science, an ontology defines data relationships.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Ontology is a branch of metaphysics.</div><div class="sent-zh">本体论是形而上学的一个分支。</div><button class="sent-play" data-text="Ontology is a branch of metaphysics.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">probabilistic</div>
-<div style="font-size:13px;color:#8b949e">/ˌprɒbəbəˈlɪstɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 概率的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：probabil(概率)+istic→概率的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：probabilistic model | probabilistic reasoning | probabilistic approach</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Machine learning uses probabilistic models.</div><div class="sent-zh">机器学习使用概率模型。</div><button class="sent-play" data-text="Machine learning uses probabilistic models.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Probabilistic reasoning handles uncertainty.</div><div class="sent-zh">概率推理处理不确定性。</div><button class="sent-play" data-text="Probabilistic reasoning handles uncertainty.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">abstraction</div>
-<div style="font-size:13px;color:#8b949e">/æbˈstrækʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 抽象</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：ab(离开)+tract(拉)+ion→拉开→抽象</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：level of abstraction | data abstraction | conceptual abstraction</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Data abstraction simplifies complex systems.</div><div class="sent-zh">数据抽象简化复杂系统。</div><button class="sent-play" data-text="Data abstraction simplifies complex systems.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. High levels of abstraction challenge learners.</div><div class="sent-zh">高层次的抽象挑战学习者。</div><button class="sent-play" data-text="High levels of abstraction challenge learners.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">algorithmic</div>
-<div style="font-size:13px;color:#8b949e">/ˌælɡəˈrɪðmɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 算法的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：algorithm(算法)+ic→算法的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：algorithmic trading | algorithmic bias | algorithmic complexity</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Algorithmic bias can perpetuate discrimination.</div><div class="sent-zh">算法偏见可能延续歧视。</div><button class="sent-play" data-text="Algorithmic bias can perpetuate discrimination.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Algorithmic trading dominates financial markets.</div><div class="sent-zh">算法交易主导金融市场。</div><button class="sent-play" data-text="Algorithmic trading dominates financial markets.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">bionic</div>
-<div style="font-size:13px;color:#8b949e">/baɪˈɒnɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 仿生的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：bio(生物)+onic→仿生物的→仿生的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：bionic limb | bionic eye | bionic implant</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Bionic limbs restore mobility for amputees.</div><div class="sent-zh">仿生肢体为截肢者恢复行动能力。</div><button class="sent-play" data-text="Bionic limbs restore mobility for amputees.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A bionic eye could restore vision.</div><div class="sent-zh">仿生眼可能恢复视力。</div><button class="sent-play" data-text="A bionic eye could restore vision.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">calibrate</div>
-<div style="font-size:13px;color:#8b949e">/ˈkælɪbreɪt/</div>
-<div style="font-size:14px;color:#7ee787">v. 校准</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：calibr(标准)+ate→使达到标准→校准</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：calibrate instruments | calibrate sensors | carefully calibrated</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Sensors must be calibrated regularly.</div><div class="sent-zh">传感器必须定期校准。</div><button class="sent-play" data-text="Sensors must be calibrated regularly.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The instruments were carefully calibrated.</div><div class="sent-zh">仪器经过仔细校准。</div><button class="sent-play" data-text="The instruments were carefully calibrated.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">deterministic</div>
-<div style="font-size:13px;color:#8b949e">/dɪˌtɜːmɪˈnɪstɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 确定性的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：determine(确定)+istic→确定的→确定性的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：deterministic model | deterministic system | non-deterministic</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A deterministic model produces the same output for the same input.</div><div class="sent-zh">确定性模型对相同输入产生相同输出。</div><button class="sent-play" data-text="A deterministic model produces the same output for the same input.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Deterministic systems are predictable.</div><div class="sent-zh">确定性系统是可预测的。</div><button class="sent-play" data-text="Deterministic systems are predictable.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">diagnostic</div>
-<div style="font-size:13px;color:#8b949e">/ˌdaɪəɡˈnɒstɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 诊断的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：diag(通过)+gnost(知道)+ic→通过检查知道→诊断的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：diagnostic tool | diagnostic test | diagnostic information</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The software includes a diagnostic tool.</div><div class="sent-zh">软件包含诊断工具。</div><button class="sent-play" data-text="The software includes a diagnostic tool.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Diagnostic tests identify the problem.</div><div class="sent-zh">诊断测试识别问题。</div><button class="sent-play" data-text="Diagnostic tests identify the problem.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">iterative</div>
-<div style="font-size:13px;color:#8b949e">/ˈɪtərətɪv/</div>
-<div style="font-size:14px;color:#7ee787">adj. 迭代的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：iter(重复)+ative→重复的→迭代的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：iterative process | iterative approach | iterative development</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Software development is an iterative process.</div><div class="sent-zh">软件开发是一个迭代过程。</div><button class="sent-play" data-text="Software development is an iterative process.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An iterative approach allows continuous improvement.</div><div class="sent-zh">迭代方法允许持续改进。</div><button class="sent-play" data-text="An iterative approach allows continuous improvement.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">mesh</div>
-<div style="font-size:13px;color:#8b949e">/meʃ/</div>
-<div style="font-size:14px;color:#7ee787">n. 网格</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：mesh(网)→网格</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：wireless mesh | mesh network | mesh topology</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A mesh network provides reliable connectivity.</div><div class="sent-zh">网状网络提供可靠连接。</div><button class="sent-play" data-text="A mesh network provides reliable connectivity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The mesh topology ensures redundancy.</div><div class="sent-zh">网状拓扑确保冗余。</div><button class="sent-play" data-text="The mesh topology ensures redundancy.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">optimal</div>
-<div style="font-size:13px;color:#8b949e">/ˈɒptɪməl/</div>
-<div style="font-size:14px;color:#7ee787">adj. 最优的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：optim(最好)+al→最好的→最优的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：optimal solution | optimal performance | optimal conditions</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The algorithm finds the optimal solution.</div><div class="sent-zh">算法找到最优解。</div><button class="sent-play" data-text="The algorithm finds the optimal solution.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Plants grow under optimal conditions.</div><div class="sent-zh">植物在最优条件下生长。</div><button class="sent-play" data-text="Plants grow under optimal conditions.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">rendering</div>
-<div style="font-size:13px;color:#8b949e">/ˈrendərɪŋ/</div>
-<div style="font-size:14px;color:#7ee787">n. 渲染</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：render(呈现)+ing→呈现→渲染</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：3D rendering | image rendering | real-time rendering</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. Real-time rendering enables smooth gameplay.</div><div class="sent-zh">实时渲染实现流畅游戏体验。</div><button class="sent-play" data-text="Real-time rendering enables smooth gameplay.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. 3D rendering requires powerful processors.</div><div class="sent-zh">3D渲染需要强大处理器。</div><button class="sent-play" data-text="3D rendering requires powerful processors.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">schematic</div>
-<div style="font-size:13px;color:#8b949e">/skɪˈmætɪk/</div>
-<div style="font-size:14px;color:#7ee787">adj. 图解的</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：进阶学术 · 科技话题高级词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：schema(图式)+tic→图式的→图解的</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：schematic diagram | schematic representation | schematic design</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. A schematic diagram shows the circuit layout.</div><div class="sent-zh">示意图显示电路布局。</div><button class="sent-play" data-text="A schematic diagram shows the circuit layout.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Schematic representations simplify complex systems.</div><div class="sent-zh">图解表示简化复杂系统。</div><button class="sent-play" data-text="Schematic representations simplify complex systems.">🔊 播放</button></div></div></div><div class="card">
-<div style="display:flex;gap:12px;align-items:center">
-<div style="font-size:34px">💡</div>
-<div><div style="font-size:20px;font-weight:700;color:#f0f6fc">telecommunication</div>
-<div style="font-size:13px;color:#8b949e">/ˌtelikəˌmjuːnɪˈkeɪʃn/</div>
-<div style="font-size:14px;color:#7ee787">n. 电信</div></div></div>
-<div style="font-size:12px;color:#8b949e;margin:8px 0">难度：中等难度 · 科技话题常见词 · 话题：科技</div>
-<div style="font-size:13px;color:#d2a8ff;background:#1c2128;padding:8px 10px;border-radius:8px">记忆：tele(远)+communication(通信)→远程通信→电信</div>
-<div style="font-size:12px;color:#8b949e;padding:6px 0">搭配：telecommunication network | telecommunication industry | telecommunication service</div>
-<div class="sentences"><div class="sent-item"><div class="sent-en">1. The telecommunication industry is rapidly evolving.</div><div class="sent-zh">电信行业快速演进。</div><button class="sent-play" data-text="The telecommunication industry is rapidly evolving.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Telecommunication networks connect the world.</div><div class="sent-zh">电信网络连接世界。</div><button class="sent-play" data-text="Telecommunication networks connect the world.">🔊 播放</button></div></div></div></div>
+<div class="note">📌 Future Day 13 · 共 20 词。单词发音优先调用本地 mp3（英式 _uk.mp3 / 美式 _us.mp3），若文件缺失则自动用浏览器语音合成兜底；音标未经人工核验（未验证），以权威词典为准。</div>
+<div class="grid"><div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">blockchain</div><div class="ipa">/ˈblɒktʃeɪn/</div><div class="pos">n. 区块链</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="blockchain" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="blockchain" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：block(区块)+chain(链)→区块链</div><div class="coll">搭配：blockchain technology | blockchain-based | blockchain network</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Blockchain</span> technology enables secure transactions.</div><div class="sent-zh">区块链技术使安全交易成为可能。</div><button class="sent-play" data-text="Blockchain technology enables secure transactions.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Many industries are exploring <span class="highlight">blockchain</span> applications.</div><div class="sent-zh">许多行业在探索区块链应用。</div><button class="sent-play" data-text="Many industries are exploring blockchain applications.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">cryptocurrency</div><div class="ipa">/ˈkrɪptəʊkʌrənsi/</div><div class="pos">n. 加密货币</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cryptocurrency" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="cryptocurrency" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：crypto(隐秘)+currency(货币)→加密货币</div><div class="coll">搭配：trade cryptocurrency | cryptocurrency market | cryptocurrency exchange</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Cryptocurrency</span> markets are highly volatile.</div><div class="sent-zh">加密货币市场波动很大。</div><button class="sent-play" data-text="Cryptocurrency markets are highly volatile.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Some countries have banned <span class="highlight">cryptocurrency</span> trading.</div><div class="sent-zh">一些国家禁止加密货币交易。</div><button class="sent-play" data-text="Some countries have banned cryptocurrency trading.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">disruptive</div><div class="ipa">/dɪsˈrʌptɪv/</div><div class="pos">adj. 颠覆性的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disruptive" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="disruptive" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：dis(分开)+rupt(断)+ive→打断的→颠覆性的</div><div class="coll">搭配：disruptive technology | disruptive innovation | disruptive effect</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Disruptive</span> technologies transform entire industries.</div><div class="sent-zh">颠覆性技术改变整个行业。</div><button class="sent-play" data-text="Disruptive technologies transform entire industries.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The startup introduced a <span class="highlight">disruptive</span> business model.</div><div class="sent-zh">这家初创公司引入了颠覆性商业模式。</div><button class="sent-play" data-text="The startup introduced a disruptive business model.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">nanotechnology</div><div class="ipa">/ˌnænəʊtekˈnɒlədʒi/</div><div class="pos">n. 纳米技术</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nanotechnology" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="nanotechnology" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：nano(纳米)+technology(技术)→纳米技术</div><div class="coll">搭配：nanotechnology applications | advances in nanotechnology | nanotechnology research</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Nanotechnology</span> has medical applications.</div><div class="sent-zh">纳米技术有医学应用。</div><button class="sent-play" data-text="Nanotechnology has medical applications.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Advances in <span class="highlight">nanotechnology</span> are accelerating.</div><div class="sent-zh">纳米技术的进展正在加速。</div><button class="sent-play" data-text="Advances in nanotechnology are accelerating.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">simulation</div><div class="ipa">/ˌsɪmjuˈleɪʃn/</div><div class="pos">n. 模拟</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="simulation" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="simulation" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：simul(相似)+ation→使之相似→模拟</div><div class="coll">搭配：computer simulation | run a simulation | simulation model</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The engineers ran a computer <span class="highlight">simulation</span>.</div><div class="sent-zh">工程师运行了计算机模拟。</div><button class="sent-play" data-text="The engineers ran a computer simulation.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Simulation</span> models help predict outcomes.</div><div class="sent-zh">模拟模型有助于预测结果。</div><button class="sent-play" data-text="Simulation models help predict outcomes.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">asynchronous</div><div class="ipa">/eɪˈsɪŋkrənəs/</div><div class="pos">adj. 异步的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="asynchronous" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="asynchronous" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：a(不)+syn(同)+chron(时间)+ous→不同时的→异步的</div><div class="coll">搭配：asynchronous communication | asynchronous learning | asynchronous transfer</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Asynchronous</span> learning allows flexible schedules.</div><div class="sent-zh">异步学习允许灵活的时间安排。</div><button class="sent-play" data-text="Asynchronous learning allows flexible schedules.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Asynchronous</span> communication is common in remote work.</div><div class="sent-zh">异步通信在远程工作中很常见。</div><button class="sent-play" data-text="Asynchronous communication is common in remote work.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">ontology</div><div class="ipa">/ɒnˈtɒlədʒi/</div><div class="pos">n. 本体论</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="ontology" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="ontology" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：onto(存在)+logy(学问)→研究存在的学问→本体论</div><div class="coll">搭配：knowledge ontology | ontology-based | philosophical ontology</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. In computer science, an <span class="highlight">ontology</span> defines data relationships.</div><div class="sent-zh">在计算机科学中，本体论定义数据关系。</div><button class="sent-play" data-text="In computer science, an ontology defines data relationships.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Ontology</span> is a branch of metaphysics.</div><div class="sent-zh">本体论是形而上学的一个分支。</div><button class="sent-play" data-text="Ontology is a branch of metaphysics.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">probabilistic</div><div class="ipa">/ˌprɒbəbəˈlɪstɪk/</div><div class="pos">adj. 概率的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="probabilistic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="probabilistic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：probabil(概率)+istic→概率的</div><div class="coll">搭配：probabilistic model | probabilistic reasoning | probabilistic approach</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Machine learning uses <span class="highlight">probabilistic</span> models.</div><div class="sent-zh">机器学习使用概率模型。</div><button class="sent-play" data-text="Machine learning uses probabilistic models.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Probabilistic</span> reasoning handles uncertainty.</div><div class="sent-zh">概率推理处理不确定性。</div><button class="sent-play" data-text="Probabilistic reasoning handles uncertainty.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">abstraction</div><div class="ipa">/æbˈstrækʃn/</div><div class="pos">n. 抽象</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="abstraction" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="abstraction" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：ab(离开)+tract(拉)+ion→拉开→抽象</div><div class="coll">搭配：level of abstraction | data abstraction | conceptual abstraction</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Data <span class="highlight">abstraction</span> simplifies complex systems.</div><div class="sent-zh">数据抽象简化复杂系统。</div><button class="sent-play" data-text="Data abstraction simplifies complex systems.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. High levels of <span class="highlight">abstraction</span> challenge learners.</div><div class="sent-zh">高层次的抽象挑战学习者。</div><button class="sent-play" data-text="High levels of abstraction challenge learners.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">algorithmic</div><div class="ipa">/ˌælɡəˈrɪðmɪk/</div><div class="pos">adj. 算法的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="algorithmic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="algorithmic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：algorithm(算法)+ic→算法的</div><div class="coll">搭配：algorithmic trading | algorithmic bias | algorithmic complexity</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Algorithmic</span> bias can perpetuate discrimination.</div><div class="sent-zh">算法偏见可能延续歧视。</div><button class="sent-play" data-text="Algorithmic bias can perpetuate discrimination.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Algorithmic</span> trading dominates financial markets.</div><div class="sent-zh">算法交易主导金融市场。</div><button class="sent-play" data-text="Algorithmic trading dominates financial markets.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">bionic</div><div class="ipa">/baɪˈɒnɪk/</div><div class="pos">adj. 仿生的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bionic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="bionic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：bio(生物)+onic→仿生物的→仿生的</div><div class="coll">搭配：bionic limb | bionic eye | bionic implant</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. <span class="highlight">Bionic</span> limbs restore mobility for amputees.</div><div class="sent-zh">仿生肢体为截肢者恢复行动能力。</div><button class="sent-play" data-text="Bionic limbs restore mobility for amputees.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. A <span class="highlight">bionic</span> eye could restore vision.</div><div class="sent-zh">仿生眼可能恢复视力。</div><button class="sent-play" data-text="A bionic eye could restore vision.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">calibrate</div><div class="ipa">/ˈkælɪbreɪt/</div><div class="pos">v. 校准</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="calibrate" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="calibrate" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：calibr(标准)+ate→使达到标准→校准</div><div class="coll">搭配：calibrate instruments | calibrate sensors | carefully calibrated</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Sensors must be calibrated regularly.</div><div class="sent-zh">传感器必须定期校准。</div><button class="sent-play" data-text="Sensors must be calibrated regularly.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The instruments were carefully calibrated.</div><div class="sent-zh">仪器经过仔细校准。</div><button class="sent-play" data-text="The instruments were carefully calibrated.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">deterministic</div><div class="ipa">/dɪˌtɜːmɪˈnɪstɪk/</div><div class="pos">adj. 确定性的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deterministic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="deterministic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：determine(确定)+istic→确定的→确定性的</div><div class="coll">搭配：deterministic model | deterministic system | non-deterministic</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">deterministic</span> model produces the same output for the same input.</div><div class="sent-zh">确定性模型对相同输入产生相同输出。</div><button class="sent-play" data-text="A deterministic model produces the same output for the same input.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Deterministic</span> systems are predictable.</div><div class="sent-zh">确定性系统是可预测的。</div><button class="sent-play" data-text="Deterministic systems are predictable.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">diagnostic</div><div class="ipa">/ˌdaɪəɡˈnɒstɪk/</div><div class="pos">adj. 诊断的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diagnostic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="diagnostic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：diag(通过)+gnost(知道)+ic→通过检查知道→诊断的</div><div class="coll">搭配：diagnostic tool | diagnostic test | diagnostic information</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The software includes a <span class="highlight">diagnostic</span> tool.</div><div class="sent-zh">软件包含诊断工具。</div><button class="sent-play" data-text="The software includes a diagnostic tool.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Diagnostic</span> tests identify the problem.</div><div class="sent-zh">诊断测试识别问题。</div><button class="sent-play" data-text="Diagnostic tests identify the problem.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">iterative</div><div class="ipa">/ˈɪtərətɪv/</div><div class="pos">adj. 迭代的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="iterative" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="iterative" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：iter(重复)+ative→重复的→迭代的</div><div class="coll">搭配：iterative process | iterative approach | iterative development</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Software development is an <span class="highlight">iterative</span> process.</div><div class="sent-zh">软件开发是一个迭代过程。</div><button class="sent-play" data-text="Software development is an iterative process.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. An <span class="highlight">iterative</span> approach allows continuous improvement.</div><div class="sent-zh">迭代方法允许持续改进。</div><button class="sent-play" data-text="An iterative approach allows continuous improvement.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">mesh</div><div class="ipa">/meʃ/</div><div class="pos">n. 网格</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mesh" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="mesh" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：mesh(网)→网格</div><div class="coll">搭配：wireless mesh | mesh network | mesh topology</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">mesh</span> network provides reliable connectivity.</div><div class="sent-zh">网状网络提供可靠连接。</div><button class="sent-play" data-text="A mesh network provides reliable connectivity.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. The <span class="highlight">mesh</span> topology ensures redundancy.</div><div class="sent-zh">网状拓扑确保冗余。</div><button class="sent-play" data-text="The mesh topology ensures redundancy.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">optimal</div><div class="ipa">/ˈɒptɪməl/</div><div class="pos">adj. 最优的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="optimal" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="optimal" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：optim(最好)+al→最好的→最优的</div><div class="coll">搭配：optimal solution | optimal performance | optimal conditions</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The algorithm finds the <span class="highlight">optimal</span> solution.</div><div class="sent-zh">算法找到最优解。</div><button class="sent-play" data-text="The algorithm finds the optimal solution.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. Plants grow under <span class="highlight">optimal</span> conditions.</div><div class="sent-zh">植物在最优条件下生长。</div><button class="sent-play" data-text="Plants grow under optimal conditions.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">rendering</div><div class="ipa">/ˈrendərɪŋ/</div><div class="pos">n. 渲染</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="rendering" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="rendering" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：render(呈现)+ing→呈现→渲染</div><div class="coll">搭配：3D rendering | image rendering | real-time rendering</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. Real-time <span class="highlight">rendering</span> enables smooth gameplay.</div><div class="sent-zh">实时渲染实现流畅游戏体验。</div><button class="sent-play" data-text="Real-time rendering enables smooth gameplay.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. 3D <span class="highlight">rendering</span> requires powerful processors.</div><div class="sent-zh">3D渲染需要强大处理器。</div><button class="sent-play" data-text="3D rendering requires powerful processors.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">schematic</div><div class="ipa">/skɪˈmætɪk/</div><div class="pos">adj. 图解的</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="schematic" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="schematic" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：进阶学术 · 科技话题高级词 · 话题：科技</div><div class="memory">记忆：schema(图式)+tic→图式的→图解的</div><div class="coll">搭配：schematic diagram | schematic representation | schematic design</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. A <span class="highlight">schematic</span> diagram shows the circuit layout.</div><div class="sent-zh">示意图显示电路布局。</div><button class="sent-play" data-text="A schematic diagram shows the circuit layout.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Schematic</span> representations simplify complex systems.</div><div class="sent-zh">图解表示简化复杂系统。</div><button class="sent-play" data-text="Schematic representations simplify complex systems.">🔊 播放</button></div></div></div>
+<div class="card"><div class="whead"><div class="emoji">💡</div><div class="winfo"><div class="word">telecommunication</div><div class="ipa">/ˌtelikəˌmjuːnɪˈkeɪʃn/</div><div class="pos">n. 电信</div><div class="audio-btns"><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="telecommunication" data-accent="1"><span class="flag">🇬🇧</span><span class="lbl">GB</span></button><button class="audio-btn" title="暂无音频，将用浏览器朗读兜底" style="opacity:.7" data-word="telecommunication" data-accent="2"><span class="flag">🇺🇸</span><span class="lbl">US</span></button></div></div></div><div class="diff">难度：中等难度 · 科技话题常见词 · 话题：科技</div><div class="memory">记忆：tele(远)+communication(通信)→远程通信→电信</div><div class="coll">搭配：telecommunication network | telecommunication industry | telecommunication service</div><div class="sentences"><div class="sent-title">📝 例句</div><div class="sent-item"><div class="sent-en">1. The <span class="highlight">telecommunication</span> industry is rapidly evolving.</div><div class="sent-zh">电信行业快速演进。</div><button class="sent-play" data-text="The telecommunication industry is rapidly evolving.">🔊 播放</button></div><div class="sent-item"><div class="sent-en">2. <span class="highlight">Telecommunication</span> networks connect the world.</div><div class="sent-zh">电信网络连接世界。</div><button class="sent-play" data-text="Telecommunication networks connect the world.">🔊 播放</button></div></div></div></div>
 <audio id="player"></audio>
-<script>
-const PLAYER=document.getElementById('player');let cur=null;
-function tts(t){try{if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;window.speechSynthesis.cancel();window.speechSynthesis.speak(u);}catch(e){}}
-function playSentence(t,btn){if(cur)cur.classList.remove('playing');if(PLAYER.src){PLAYER.pause();PLAYER.src='';}PLAYER.src='';tts(t);btn.classList.add('playing');cur=btn;setTimeout(function(){btn.classList.remove('playing');cur=null;},1600);}
-document.querySelectorAll('.sent-play').forEach(function(b){b.addEventListener('click',function(){playSentence(this.dataset.text,this);});});
-</script>
+<script>(function(){
+  var PLAYER = document.getElementById('player');
+  var cur = null;
+  function tts(text, lang){
+    try{
+      if(!window.speechSynthesis) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.95;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  function playWord(word, accent, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    var file = 'audio/' + word.toLowerCase() + (accent === 1 ? '_uk.mp3' : '_us.mp3');
+    var audio = new Audio(file);
+    audio.onended = function(){ btn && btn.classList.remove('playing'); cur = null; };
+    audio.onerror = function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    };
+    btn && btn.classList.add('playing');
+    cur = btn;
+    audio.play().catch(function(){
+      btn && btn.classList.remove('playing');
+      tts(word, accent === 1 ? 'en-GB' : 'en-US');
+    });
+  }
+  function playSentence(text, btn){
+    if(cur && cur.classList) cur.classList.remove('playing');
+    tts(text, 'en-US');
+    btn.classList.add('playing');
+    cur = btn;
+    setTimeout(function(){ btn.classList.remove('playing'); cur = null; }, 1800);
+  }
+  window.playWord = playWord;
+  window.playSentence = playSentence;
+  document.querySelectorAll('.audio-btn[data-word]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = b.getAttribute('data-word');
+      var a = parseInt(b.getAttribute('data-accent'), 10);
+      playWord(w, a, b);
+    });
+  });
+  document.querySelectorAll('.sent-play').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      playSentence(b.getAttribute('data-text'), b);
+    });
+  });
+})();</script>
 <footer>泽少学习助手 · 每天进步一点点</footer>
 </div></body></html>
