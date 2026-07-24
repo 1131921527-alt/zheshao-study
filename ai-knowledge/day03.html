@@ -587,7 +587,6 @@
 #liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
 #liveClockBar .lc-sec{color:#ff7b72}
 #liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
-#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
 #liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
 @media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
 body{padding-top:44px!important}
@@ -597,7 +596,6 @@ body{padding-top:44px!important}
 <span class="lc-date" id="lcDate">--</span>
 <span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
 <span class="lc-tag">time goes by</span>
-<i class="lc-bar" id="lcBar"></i>
 </div>
 <script>
 (function(){
@@ -607,12 +605,11 @@ body{padding-top:44px!important}
     var d=new Date();
     var dt=document.getElementById('lcDate');
     if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
-    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
+    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS');
     if(h)h.textContent=p(d.getHours());
     if(m)m.textContent=p(d.getMinutes());
     if(s)s.textContent=p(d.getSeconds());
-    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
-  }
+}
   tick();setInterval(tick,1000);
   window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
   window.lcCopyWx=function(){

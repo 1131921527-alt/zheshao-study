@@ -34,7 +34,7 @@ CLOCK_CSS = """
 #liveClockBar .lc-time #lcH,#liveClockBar .lc-time #lcM{color:#58a6ff}
 #liveClockBar .lc-sec{color:#ff7b72}
 #liveClockBar .lc-tag{margin-left:auto;color:#d2991d;font-size:11px;white-space:nowrap}
-#liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
+
 #liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
 @media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
 body{padding-top:44px!important}
@@ -45,7 +45,7 @@ CLOCK_HTML = """
 <span class="lc-date" id="lcDate">--</span>
 <span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
 <span class="lc-tag">time goes by</span>
-<i class="lc-bar" id="lcBar"></i>
+
 </div>
 """
 CLOCK_JS = """
@@ -56,12 +56,11 @@ CLOCK_JS = """
     var d=new Date();
     var dt=document.getElementById('lcDate');
     if(dt) dt.textContent=d.getFullYear()+'年'+p(d.getMonth()+1)+'月'+p(d.getDate())+'日 '+w[d.getDay()];
-    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS'),b=document.getElementById('lcBar');
+    var h=document.getElementById('lcH'),m=document.getElementById('lcM'),s=document.getElementById('lcS');
     if(h)h.textContent=p(d.getHours());
     if(m)m.textContent=p(d.getMinutes());
     if(s)s.textContent=p(d.getSeconds());
-    if(b)b.style.width=(d.getSeconds()/60*100)+'%';
-  }
+}
   tick();setInterval(tick,1000);
   window.lcZoom=function(img){ if(img&&img.src) window.open(img.src,'_blank'); };
   window.lcCopyWx=function(){
@@ -73,7 +72,6 @@ CLOCK_JS = """
 })();
 """
 CLOCK_JS = CLOCK_JS.replace("__WECHAT_ID__", '"%s"' % WECHAT_ID)
-
 
 # ---------- 统一手机壳（桌面端把独立内容页也收成手机宽度） ----------
 FRAME_CSS = """
@@ -103,7 +101,6 @@ FRAME_CSS = """
 }
 """
 
-
 def inject_clock(html):
     """在每个页面注入实时时钟（自包含，不依赖外部资源）。"""
     if "liveClockBar" in html:
@@ -114,7 +111,6 @@ def inject_clock(html):
     if "</html>" in html:
         return html.replace("</html>", block + "</html>", 1)
     return html + block
-
 
 def inject_frame(html):
     """在每个独立内容页注入统一手机壳样式（仅桌面端生效，依赖 :has()）。"""
@@ -127,10 +123,8 @@ def inject_frame(html):
         return html.replace("</html>", block + "</html>", 1)
     return html + block
 
-
 def weekday_cn(d):
     return WEEK[d.weekday()]
-
 
 # ---------- 各板块定义 ----------
 SECTIONS = [
@@ -181,7 +175,6 @@ SECTIONS = [
         "kind": "ielts",
     },
 ]
-
 
 def collect(sec):
     """返回 [(out_name, label, sort_key)]，已按最新在前排序"""
@@ -252,7 +245,6 @@ def collect(sec):
 
     return items
 
-
 CSS = """* { margin: 0; padding: 0; box-sizing: border-box }
 :root { --bg:#0B0F17; --fg:#E6EAF2; --muted:#9AA6BD; --line:rgba(201,168,106,.16); --primary:#C9A86A; --primary-700:#E4C98C; --primary-050:rgba(201,168,106,.08); --card:#151B2B; }
 html { -webkit-text-size-adjust: 100%; }
@@ -309,13 +301,11 @@ a { color: inherit; text-decoration: none; }
 .list a:active .arrow { color: var(--primary); }
 """
 
-
 def write_css():
     d = os.path.join(OUT, "assets")
     os.makedirs(d, exist_ok=True)
     with open(os.path.join(d, "style.css"), "w", encoding="utf-8") as f:
         f.write(CSS)
-
 
 def section_index_html(sec, items):
     cards = ""
@@ -343,7 +333,6 @@ def section_index_html(sec, items):
 </div>
 </body>
 </html>""" % (SITE_TITLE, sec["title"], sec["icon"], sec["title"], sec["desc"], len(items), cards, sec["title"])
-
 
 def main_index_html(sections_data):
     cards = ""
@@ -405,7 +394,6 @@ def main_index_html(sections_data):
 <footer>腾讯龙虾的成品 · %s<br>内容每日自动更新 · 由 GitHub Pages 托管</footer>
 </body>
 </html>""" % (SITE_TITLE, SITE_TITLE, total, cards, support_html, SITE_TITLE)
-
 
 def main():
     os.makedirs(OUT, exist_ok=True)
@@ -471,7 +459,6 @@ def main():
         f.write(inject_frame(inject_clock(main_index_html(sections_data))))
     print("旧版首页已存为 archive.html（线上首页为新的金融蓝 App 版 index.html，不会被覆盖）")
     print("首页目录：%s" % OUT)
-
 
 if __name__ == "__main__":
     main()
