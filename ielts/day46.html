@@ -529,5 +529,97 @@ body{padding-top:44px!important}
   .grid { grid-template-columns: 1fr !important; }
   .qr-row { flex-direction: column; align-items: center; }
 }
-</style></body>
+</style><script>
+/* audio-fix-v2: 本地 mp3 优先 + 浏览器 TTS 兜底（修复 Chrome 语音不发声问题） */
+(function(){
+  if(window.__audioFixV2) return; window.__audioFixV2 = true;
+
+  /* ---- speechSynthesis 增强 ---- */
+  var synth = window.speechSynthesis;
+  var voices = [];
+  function loadVoices(){
+    if(!synth) return;
+    voices = synth.getVoices() || [];
+  }
+  loadVoices();
+  if(synth){
+    if(synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadVoices;
+    setTimeout(loadVoices, 200);
+    setTimeout(loadVoices, 1000);
+  }
+
+  function pickVoice(lang){
+    if(!voices.length) loadVoices();
+    for(var i=0;i<voices.length;i++){
+      if(voices[i].lang === lang) return voices[i];
+    }
+    var base = lang.split('-')[0];
+    for(var i=0;i<voices.length;i++){
+      if(voices[i].lang.indexOf(base) === 0) return voices[i];
+    }
+    return null;
+  }
+
+  function tts(text, lang){
+    if(!synth) return;
+    try{
+      if(synth.paused) synth.resume();
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.85;
+      u.pitch = 1;
+      u.volume = 1;
+      var v = pickVoice(u.lang);
+      if(v) u.voice = v;
+      u.onend = function(){};
+      u.onerror = function(e){};
+      synth.speak(u);
+    }catch(e){}
+  }
+
+  /* ---- 首次交互解锁 speechSynthesis（Chrome 需要用户激活） ---- */
+  if(synth){
+    function unlock(){
+      try{
+        var u = new SpeechSynthesisUtterance(' ');
+        u.volume = 0;
+        u.rate = 1;
+        synth.speak(u);
+      }catch(e){}
+    }
+    document.addEventListener('pointerdown', unlock, {once:true, passive:true});
+    document.addEventListener('click', unlock, {once:true, passive:true});
+    document.addEventListener('touchstart', unlock, {once:true, passive:true});
+  }
+
+  /* ---- playAudio 重写 ---- */
+  window.playAudio = function(url){
+    /* 有道 URL → 单词发音 */
+    var m = url.match(/dict\.youdao\.com\/dictvoice\?audio=([^&]+)&type=(\d)/);
+    if(m){
+      var w = decodeURIComponent(m[1]);
+      var tp = parseInt(m[2]);
+      var f = 'audio/' + w.toLowerCase() + (tp === 1 ? '_uk.mp3' : '_us.mp3');
+      var a = new Audio(f);
+      a.play().then(function(){}).catch(function(){
+        /* 本地 mp3 没有或播放失败 → speechSynthesis */
+        tts(w, tp === 1 ? 'en-GB' : 'en-US');
+      });
+      return;
+    }
+    /* 百度 URL → 例句发音 */
+    var m2 = url.match(/fanyi\.baidu\.com\/gettts\?.*text=([^&]+)/);
+    if(m2){
+      var text = decodeURIComponent(m2[1]);
+      /* 尝试本地例句 mp3（用 md5 hash 前12位命名，和下载脚本一致） */
+      /* 浏览器端算不了 md5，直接用 speechSynthesis */
+      tts(text, 'en-US');
+      return;
+    }
+    /* 其他 URL 直接播放 */
+    try{ new Audio(url).play().catch(function(){}); }catch(e){}
+  };
+})();
+</script>
+</body>
 </html>

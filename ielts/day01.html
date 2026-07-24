@@ -98,15 +98,74 @@ header p { margin: 0; color: #8b949e; font-size: 0.95rem; }
 .sentence-en { color: #e6edf3; font-size: 0.95rem; margin-bottom: 4px; }
 .sentence-cn { color: #8b949e; font-size: 0.88rem; margin-bottom: 8px; }
 footer { text-align: center; padding: 24px 0 40px; color: #6e7681; font-size: 0.85rem; }
+/* ===== 泽少学习助手 · 玻璃圆形时钟抬头（统一组件） ===== */
+.gh{position:sticky;top:0;z-index:100;padding:13px 16px 12px;overflow:hidden;border:none;margin:0;text-align:left;background:transparent}
+.gh-glass{position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,28,46,.74),rgba(10,14,23,.56));backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid rgba(201,168,106,.22);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.gh-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:720px;margin:0 auto}
+.gh-brand{display:flex;align-items:center;gap:11px;min-width:0}
+.gh-logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:22px;background:linear-gradient(135deg,#C9A86A,#8A6E33);box-shadow:0 4px 12px rgba(201,168,106,.35),inset 0 1px 0 rgba(255,255,255,.25);flex:0 0 auto}
+.gh-titles{min-width:0}
+.gh-title{font-size:17px;font-weight:800;color:#E9EDF6;margin:0;line-height:1.25;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gh-sub{font-size:11.5px;color:#A7B0C2;margin-top:3px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gh-clock-wrap{display:flex;flex-direction:column;align-items:center;flex:0 0 auto}
+.gh-clock{width:50px;height:50px;display:block}
+.gh-clock .gh-face{fill:rgba(255,255,255,.04)}
+.gh-clock .gh-ring{fill:none;stroke:url(#ghGold);stroke-width:2.4}
+.gh-clock .gh-tick{stroke:rgba(201,168,106,.5)}
+.gh-clock .gh-hand-h{stroke:#C9A86A;stroke-width:3;stroke-linecap:round}
+.gh-clock .gh-hand-m{stroke:#E9EDF6;stroke-width:2;stroke-linecap:round}
+.gh-clock .gh-hand-s{stroke:#4F8DFF;stroke-width:1.2;stroke-linecap:round}
+.gh-clock .gh-cap{fill:#0B0F17;stroke:#4F8DFF;stroke-width:.6}
+.gh-digital{font-size:12px;font-weight:700;color:#E9EDF6;margin-top:3px;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.gh-caption{font-size:9.5px;color:#A7B0C2;letter-spacing:1px;margin-top:1px;font-style:italic;opacity:.85}
+.gh-actions{position:relative;display:flex;justify-content:center;padding-top:10px}
 </style>
 </head>
 <body>
 <div class="container">
-  <header>
-    <h1>雅思核心词汇</h1>
-    <p>Day 01 · 15 个精选单词</p>
-    <button class="btn-shuffle" onclick="shuffleCards()">🔀 乱序重排</button>
-  </header>
+  <header class="gh" id="ghHeader">
+  <div class="gh-glass"></div>
+  <div class="gh-inner">
+    <div class="gh-brand">
+      <div class="gh-logo">🎓</div>
+      <div class="gh-titles">
+        <h1 class="gh-title">雅思核心词汇</h1>
+        <p>Day 01 · 15 个精选单词</p>
+      </div>
+    </div>
+    <div class="gh-clock-wrap">
+      <svg class="gh-clock" viewBox="0 0 62 62" aria-hidden="true">
+      <defs>
+        <linearGradient id="ghGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#E7C98A"/>
+          <stop offset="1" stop-color="#9A7B36"/>
+        </linearGradient>
+      </defs>
+      <circle class="gh-face" cx="31" cy="31" r="28"/>
+      <circle class="gh-ring" cx="31" cy="31" r="28"/>
+      <line class="gh-tick" x1="31.0" y1="3.0" x2="31.0" y2="8.0" stroke-width="1.4"/>
+      <line class="gh-tick" x1="45.0" y1="6.8" x2="43.5" y2="9.3" stroke-width="0.8"/>
+      <line class="gh-tick" x1="55.2" y1="17.0" x2="52.7" y2="18.5" stroke-width="0.8"/>
+      <line class="gh-tick" x1="59.0" y1="31.0" x2="54.0" y2="31.0" stroke-width="1.4"/>
+      <line class="gh-tick" x1="55.2" y1="45.0" x2="52.7" y2="43.5" stroke-width="0.8"/>
+      <line class="gh-tick" x1="45.0" y1="55.2" x2="43.5" y2="52.7" stroke-width="0.8"/>
+      <line class="gh-tick" x1="31.0" y1="59.0" x2="31.0" y2="54.0" stroke-width="1.4"/>
+      <line class="gh-tick" x1="17.0" y1="55.2" x2="18.5" y2="52.7" stroke-width="0.8"/>
+      <line class="gh-tick" x1="6.8" y1="45.0" x2="9.3" y2="43.5" stroke-width="0.8"/>
+      <line class="gh-tick" x1="3.0" y1="31.0" x2="8.0" y2="31.0" stroke-width="1.4"/>
+      <line class="gh-tick" x1="6.8" y1="17.0" x2="9.3" y2="18.5" stroke-width="0.8"/>
+      <line class="gh-tick" x1="17.0" y1="6.8" x2="18.5" y2="9.3" stroke-width="0.8"/>
+      <line class="gh-hand-h" id="ghHour" x1="31" y1="31" x2="31" y2="18"/>
+      <line class="gh-hand-m" id="ghMin" x1="31" y1="31" x2="31" y2="13"/>
+      <line class="gh-hand-s" id="ghSec" x1="31" y1="34" x2="31" y2="11"/>
+      <circle class="gh-cap" cx="31" cy="31" r="2.6"/>
+    </svg>
+      <div class="gh-digital"><span id="ghDigital">--:--:--</span></div>
+      <div class="gh-caption">Time goes by</div>
+    </div>
+  </div>
+  <div class="gh-actions"><button class="btn-shuffle" onclick="shuffleCards()">🔀 乱序重排</button></div>
+</header>
   <div id="word-list"></div>
   <footer>坚持学习，每天进步一点点</footer>
 </div>
@@ -330,15 +389,8 @@ shuffleCards();
 #liveClockBar .lc-bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,#58a6ff,#ff7b72);width:0%}
 #liveClockBar .qr-copy{margin-left:auto;color:#58a6ff;font-size:12px;border:1px solid rgba(88,166,255,.4);border-radius:20px;padding:3px 10px;cursor:pointer;white-space:nowrap}
 @media(max-width:430px){#liveClockBar .lc-tag{display:none}#liveClockBar .lc-date{font-size:11px}#liveClockBar .qr-copy{display:none}}
-body{padding-top:44px!important}
+
 </style>
-<div id="liveClockBar">
-<span class="lc-dot"></span>
-<span class="lc-date" id="lcDate">--</span>
-<span class="lc-time"><span id="lcH">--</span>:<span id="lcM">--</span>:<span class="lc-sec" id="lcS">--</span></span>
-<span class="lc-tag">time goes by</span>
-<i class="lc-bar" id="lcBar"></i>
-</div>
 <script>
 (function(){
   var w=['周日','周一','周二','周三','周四','周五','周六'];
@@ -387,5 +439,117 @@ body{padding-top:44px!important}
   .grid { grid-template-columns: 1fr !important; }
   .qr-row { flex-direction: column; align-items: center; }
 }
-</style></body>
+</style><script>
+(function(){
+  if(window.__ghClockInit) return; window.__ghClockInit = true;
+  function p(n){return (n<10?'0':'')+n;}
+  var h=document.getElementById('ghHour'),m=document.getElementById('ghMin'),s=document.getElementById('ghSec'),d=document.getElementById('ghDigital');
+  if(!h||!m||!s||!d) return;
+  function tick(){
+    var t=new Date();
+    var sec=t.getSeconds()+t.getMilliseconds()/1000;
+    var min=t.getMinutes()+sec/60;
+    var hr=(t.getHours()%12)+min/60;
+    s.setAttribute('transform','rotate('+(sec*6)+' 31 31)');
+    m.setAttribute('transform','rotate('+(min*6)+' 31 31)');
+    h.setAttribute('transform','rotate('+(hr*30)+' 31 31)');
+    d.textContent=p(t.getHours())+':'+p(t.getMinutes())+':'+p(t.getSeconds());
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+</script>
+<script>
+/* audio-fix-v2: 本地 mp3 优先 + 浏览器 TTS 兜底（修复 Chrome 语音不发声问题） */
+(function(){
+  if(window.__audioFixV2) return; window.__audioFixV2 = true;
+
+  /* ---- speechSynthesis 增强 ---- */
+  var synth = window.speechSynthesis;
+  var voices = [];
+  function loadVoices(){
+    if(!synth) return;
+    voices = synth.getVoices() || [];
+  }
+  loadVoices();
+  if(synth){
+    if(synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadVoices;
+    setTimeout(loadVoices, 200);
+    setTimeout(loadVoices, 1000);
+  }
+
+  function pickVoice(lang){
+    if(!voices.length) loadVoices();
+    for(var i=0;i<voices.length;i++){
+      if(voices[i].lang === lang) return voices[i];
+    }
+    var base = lang.split('-')[0];
+    for(var i=0;i<voices.length;i++){
+      if(voices[i].lang.indexOf(base) === 0) return voices[i];
+    }
+    return null;
+  }
+
+  function tts(text, lang){
+    if(!synth) return;
+    try{
+      if(synth.paused) synth.resume();
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = lang || 'en-US';
+      u.rate = 0.85;
+      u.pitch = 1;
+      u.volume = 1;
+      var v = pickVoice(u.lang);
+      if(v) u.voice = v;
+      u.onend = function(){};
+      u.onerror = function(e){};
+      synth.speak(u);
+    }catch(e){}
+  }
+
+  /* ---- 首次交互解锁 speechSynthesis（Chrome 需要用户激活） ---- */
+  if(synth){
+    function unlock(){
+      try{
+        var u = new SpeechSynthesisUtterance(' ');
+        u.volume = 0;
+        u.rate = 1;
+        synth.speak(u);
+      }catch(e){}
+    }
+    document.addEventListener('pointerdown', unlock, {once:true, passive:true});
+    document.addEventListener('click', unlock, {once:true, passive:true});
+    document.addEventListener('touchstart', unlock, {once:true, passive:true});
+  }
+
+  /* ---- playAudio 重写 ---- */
+  window.playAudio = function(url){
+    /* 有道 URL → 单词发音 */
+    var m = url.match(/dict\.youdao\.com\/dictvoice\?audio=([^&]+)&type=(\d)/);
+    if(m){
+      var w = decodeURIComponent(m[1]);
+      var tp = parseInt(m[2]);
+      var f = 'audio/' + w.toLowerCase() + (tp === 1 ? '_uk.mp3' : '_us.mp3');
+      var a = new Audio(f);
+      a.play().then(function(){}).catch(function(){
+        /* 本地 mp3 没有或播放失败 → speechSynthesis */
+        tts(w, tp === 1 ? 'en-GB' : 'en-US');
+      });
+      return;
+    }
+    /* 百度 URL → 例句发音 */
+    var m2 = url.match(/fanyi\.baidu\.com\/gettts\?.*text=([^&]+)/);
+    if(m2){
+      var text = decodeURIComponent(m2[1]);
+      /* 尝试本地例句 mp3（用 md5 hash 前12位命名，和下载脚本一致） */
+      /* 浏览器端算不了 md5，直接用 speechSynthesis */
+      tts(text, 'en-US');
+      return;
+    }
+    /* 其他 URL 直接播放 */
+    try{ new Audio(url).play().catch(function(){}); }catch(e){}
+  };
+})();
+</script>
+</body>
 </html>
