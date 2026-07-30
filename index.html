@@ -296,15 +296,15 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
           <div class="ghello">
             <div class="gavatar">喆</div>
             <div class="ghello-txt">
-              <div class="gwave" id="gWave">晚上好，泽少 👋</div>
-              <div class="gsub">泽少的每日成长空间</div>
+              <div class="gwave" id="gWave">泽少的成长空间</div>
+              <div class="gsub">记录你的每一次微小成长</div>
             </div>
             <div class="glvl" id="gLvl">Lv.5</div>
           </div>
           <div class="gstats">
             <div class="gstat"><div class="gnum" id="gStreak">38</div><div class="glbl">🔥 连续学习(天)</div></div>
             <div class="gstat"><div class="gnum" id="gRead">12</div><div class="glbl">📚 已读文章</div></div>
-            <div class="gstat"><div class="gnum" id="gTotal">120</div><div class="glbl">🧩 收录内容</div></div>
+            <div class="gstat"><div class="gnum" id="gTotal">7</div><div class="glbl">🧠 解锁领域</div></div>
           </div>
           <div class="gprogress">
             <div class="gp-row"><span>今日成长</span><span id="gProgTxt">0 / 3</span></div>
@@ -3568,14 +3568,12 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
   var readSet=load('zs_read',['art-tech-llm','art-hist-qinshihuang','art-psy-procrastination','art-sport-hyrox-what','art-poem-shijing','art-geo-plate','art-eq-basics']);
   var streak=load('zs_streak',38);var last=load('zs_last','');var t=tStr();
   if(last!==t){if(last===yStr()){streak=streak+1;}else if(last===''){streak=38;}else{streak=1;}last=t;save('zs_streak',streak);save('zs_last',last);}
-  var total=ATLAS.length+77+38;
   var level=Math.max(1,Math.floor(streak/7)+Math.floor(readSet.length/10));
   function setT(id,x){var e=document.getElementById(id);if(e)e.textContent=x;}
-  setT('gStreak',streak);setT('gRead',readSet.length);setT('gTotal',total);setT('gLvl','Lv.'+level);
-
-  // 问候语
-  var h=new Date().getHours();var w='你好，泽少';if(h<6)w='夜深了，泽少';else if(h<12)w='早上好，泽少';else if(h<14)w='中午好，泽少';else if(h<18)w='下午好，泽少';else w='晚上好，泽少';
-  setT('gWave',w+' 👋');
+  // 解锁领域：已读文章覆盖的知识类目 + 雅思常驻
+  var domMap={};readSet.forEach(function(id){var c=catOf(id);if(c&&c!=='其他')domMap[c]=1;});domMap['雅思']=1;
+  var domains=Object.keys(domMap).length;
+  setT('gStreak',streak);setT('gRead',readSet.length);setT('gTotal',domains);setT('gLvl','Lv.'+level);
 
   // 知识地图卡片计数
   ['tech','hist','geo','psy','poem','sport'].forEach(function(c){var n=ATLAS.filter(function(a){return catOf(a.id)===({tech:'AI科技',hist:'历史文明',geo:'地理世界',psy:'心理认知',poem:'文学审美',sport:'运动健康'}[c]);}).length;var e=document.getElementById('kmc-'+c);if(e)e.textContent=n+' 篇';});
