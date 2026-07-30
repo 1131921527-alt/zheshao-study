@@ -285,6 +285,22 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .ar-chip{display:block;font-size:12.5px;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px;text-decoration:none;cursor:pointer;line-height:1.4}
 .ar-chip:active{transform:scale(.99);border-color:var(--border-strong)}
 
+/* 每天15分钟成长计划 */
+.daily-card{margin:0 16px 4px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 14px 16px}
+.daily-sub{font-size:11.5px;color:var(--text-3);margin-bottom:12px;line-height:1.5}
+.daily-sub b{color:var(--gold);font-weight:800}
+.dtask{display:flex;align-items:center;gap:10px;padding:11px 10px;border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:9px;cursor:pointer;background:var(--surface-2);transition:transform var(--t-fast),border-color var(--t-fast),background var(--t-fast)}
+.dtask:active{transform:scale(.99)}
+.dtask.done{border-color:var(--gold);background:linear-gradient(135deg,rgba(255,200,90,.12),rgba(255,200,90,.02))}
+.dtask .chk{width:22px;height:22px;border-radius:50%;border:2px solid var(--text-3);display:grid;place-items:center;font-size:13px;font-weight:900;color:transparent;flex:0 0 auto}
+.dtask.done .chk{background:var(--gold);border-color:var(--gold);color:#0d1220}
+.dtask .dt-ico{font-size:18px}
+.dtask .dt-label{flex:1;font-size:13.5px;color:var(--text-1);font-weight:600}
+.dtask.done .dt-label{color:var(--text-2)}
+.dtask .dt-go{font-size:12px;font-weight:800;color:var(--gold)}
+.dt-reward{margin-top:4px;padding:12px;text-align:center;font-size:14px;font-weight:900;color:#0d1220;background:linear-gradient(135deg,var(--gold),#ffd98a);border-radius:var(--r-md);box-shadow:0 4px 16px rgba(255,200,90,.25);display:none}
+.dt-reward.show{display:block;animation:pop .4s ease}
+@keyframes pop{0%{transform:scale(.92);opacity:0}100%{transform:scale(1);opacity:1}}
 </style>
 </head>
 <body>
@@ -324,6 +340,24 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
             <div class="gp-track"><div class="gp-bar" id="gProgBar"></div></div>
           </div>
         </header>
+
+        <div class="section-title pad">📅 每天15分钟成长计划 <span class="more" id="gDay">Day 38 🔥</span></div>
+        <div class="daily-card">
+          <div class="daily-sub">完成下面 3 件事，今天就算打卡成功 🔥 ｜ 累计经验 <b id="gXp">0</b> XP</div>
+          <div class="dtask" data-task="word" onclick="doDaily('word')">
+            <span class="chk"></span><span class="dt-ico">🔤</span>
+            <span class="dt-label">学 20 个英语单词</span><span class="dt-go">去做 →</span>
+          </div>
+          <div class="dtask" data-task="art" onclick="doDaily('art')">
+            <span class="chk"></span><span class="dt-ico">📖</span>
+            <span class="dt-label">阅读 1 篇知识文章</span><span class="dt-go">去做 →</span>
+          </div>
+          <div class="dtask" data-task="ai" onclick="doDaily('ai')">
+            <span class="chk"></span><span class="dt-ico">⚡</span>
+            <span class="dt-label">查看 AI 动态</span><span class="dt-go">去做 →</span>
+          </div>
+          <div class="dt-reward" id="dtReward">🎉 今日成长 +50 XP</div>
+        </div>
 
         <div class="section-title pad">🔥 今日推荐 <span class="more">编辑精选</span></div>
         <div class="feat-card" onclick="goArt('art-geo-sun');markToday('art')">
@@ -3639,7 +3673,7 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
   // 解锁领域：已读文章覆盖的知识类目 + 雅思常驻
   var domMap={};readSet.forEach(function(id){var c=catOf(id);if(c&&c!=='其他')domMap[c]=1;});domMap['雅思']=1;
   var domains=Object.keys(domMap).length;
-  setT('gStreak',streak);setT('gRead',readSet.length);setT('gTotal',domains);setT('gLvl','Lv.'+level);
+  setT('gStreak',streak);setT('gRead',readSet.length);setT('gTotal',domains);setT('gLvl','Lv.'+level);setT('gDay','Day '+streak+' 🔥');
 
   // 知识地图卡片计数
   ['tech','hist','geo','psy','poem','sport'].forEach(function(c){var n=ATLAS.filter(function(a){return catOf(a.id)===({tech:'AI科技',hist:'历史文明',geo:'地理世界',psy:'心理认知',poem:'文学审美',sport:'运动健康'}[c]);}).length;var e=document.getElementById('kmc-'+c);if(e)e.textContent=n+' 篇';});
@@ -3647,7 +3681,32 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
   // 今日进度
   var todayData=load('zs_today',{d:'',items:[]});
   if(todayData.d!==t){todayData={d:t,items:[]};save('zs_today',todayData);}
-  function renderToday(){var n=todayData.items.length;setT('gProgTxt',n+' / 3');var b=document.getElementById('gProgBar');if(b)b.style.width=Math.round(n/3*100)+'%';if(n>=3&&!todayData._c){todayData._c=true;save('zs_today',todayData);toast('🎉 今日三连达成，成长 +1！');}}
+  // 每天15分钟成长计划
+  var xp=load('zs_xp',0);
+  var DAILY_GO={word:'ielts/day78.html',ai:'ai-news/index.html'};
+  function renderDaily(){
+    document.querySelectorAll('.dtask').forEach(function(el){
+      var k=el.getAttribute('data-task');
+      var on=todayData.items.indexOf(k)>=0;
+      el.classList.toggle('done',on);
+      var c=el.querySelector('.chk'); if(c)c.textContent=on?'✓':'';
+    });
+    var rw=document.getElementById('dtReward'); if(rw)rw.classList.toggle('show',todayData.items.length>=3);
+    var xpw=document.getElementById('gXp'); if(xpw)xpw.textContent=xp;
+  }
+  function addXp(){
+    if(todayData._c)return;
+    todayData._c=true; save('zs_today',todayData);
+    xp+=50; save('zs_xp',xp);
+    toast('🎉 今日成长 +50 XP！');
+  }
+  window.doDaily=function(k){
+    if(todayData.items.indexOf(k)<0){todayData.items.push(k);save('zs_today',todayData);}
+    if(k==='art'){goArt('art-tech-llm');}
+    else if(DAILY_GO[k]){location.href=DAILY_GO[k];}
+    renderDaily();
+  };
+  function renderToday(){var n=todayData.items.length;setT('gProgTxt',n+' / 3');var b=document.getElementById('gProgBar');if(b)b.style.width=Math.round(n/3*100)+'%';renderDaily();if(n>=3)addXp();}
   renderToday();
   window.markToday=function(type){if(todayData.items.indexOf(type)<0){todayData.items.push(type);save('zs_today',todayData);renderToday();}};
   window.markArtRead=function(id){if(readSet.indexOf(id)<0){readSet.push(id);save('zs_read',readSet);setT('gRead',readSet.length);}};
