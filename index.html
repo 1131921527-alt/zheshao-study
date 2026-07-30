@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0B0F17">
 <meta name="description" content="泽少学习助手：AI动态播报 + 知识类（历史 / 文学 / 地理 / 心理学17篇 / 运动健康10篇 / 雅思单词1151词），适合碎片化学习。深色黑金质感，可安装到手机主屏当 App。">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="泽少学习助手">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="knowledge/article.css">
 <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -22,15 +27,19 @@
   --r-md:12px;--r-lg:16px;--r-xl:20px;--r-pill:999px;
   --sh-1:0 1px 2px rgba(0,0,0,.4);--sh-2:0 8px 24px rgba(0,0,0,.5);
   --t-fast:150ms ease;--t-norm:280ms cubic-bezier(.4,0,.2,1);
+  --body-bg:#06090F;
+  --chrome-bg:rgba(15,20,34,.82);--chrome-bg2:rgba(15,20,34,.92);
+  --chrome-border:var(--border);--bar-bg:rgba(11,15,23,.86);
+  --gold-2:#9A7B36;--gold-hi:#ffd98a;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
-body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--body-bg);color:var(--text-1);-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 .app{max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;box-shadow:0 0 60px rgba(0,0,0,.6);display:flex;flex-direction:column;min-height:100dvh}
 
-.topbar{position:sticky;top:0;z-index:6;background:rgba(15,20,34,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 20px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.topbar{position:sticky;top:0;z-index:6;background:var(--chrome-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 20px 12px;border-bottom:1px solid var(--chrome-border);display:flex;align-items:center;justify-content:space-between}
 .topbar .brand{display:flex;align-items:center;gap:10px}
-.topbar .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#9A7B36);display:grid;place-items:center;font-size:18px}
+.topbar .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:grid;place-items:center;font-size:18px}
 .topbar h1{font-size:var(--fs-18);margin:0;font-weight:700;letter-spacing:.3px;color:var(--text-1)}
 .topbar .sub{font-size:var(--fs-12);color:var(--text-3);font-weight:500}
 .topbar .icon-btn{width:36px;height:36px;border-radius:var(--r-pill);background:var(--surface-2);display:grid;place-items:center;font-size:16px;color:var(--text-2)}
@@ -117,7 +126,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .support .hint{font-size:var(--fs-11);color:var(--text-3);margin-top:12px;line-height:1.6}
 
 .profile{margin:16px 20px 0;background:var(--surface);border-radius:var(--r-lg);padding:18px;display:flex;align-items:center;gap:14px;box-shadow:var(--sh-1);border:1px solid var(--border)}
-.avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#9A7B36);color:#0B0F17;display:grid;place-items:center;font-size:20px;font-weight:700}
+.avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#0B0F17;display:grid;place-items:center;font-size:20px;font-weight:700}
 .profile .pn{font-size:var(--fs-16);font-weight:700;color:var(--text-1)}
 .profile .pr{font-size:var(--fs-12);color:var(--text-3);margin-top:3px}
 .menu{margin:16px 20px 0;background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-1)}
@@ -127,7 +136,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .menu .mi .mi-t{flex:1}
 .menu .mi .mi-a{color:var(--text-3);font-size:var(--fs-12)}
 
-.tabbar{position:absolute;left:0;right:0;bottom:0;height:64px;z-index:15;background:rgba(15,20,34,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--border);display:flex;padding:6px 0 4px;padding-bottom:calc(6px + env(safe-area-inset-bottom))}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:64px;z-index:15;background:var(--chrome-bg2);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--chrome-border);display:flex;padding:6px 0 4px;padding-bottom:calc(6px + env(safe-area-inset-bottom))}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--text-3);font-size:11px;font-weight:600;background:none;border:none;cursor:pointer;transition:color var(--t-fast);font-family:var(--font)}
 .tab .ti{font-size:20px;line-height:1}
 .tab.on{color:var(--gold)}
@@ -185,7 +194,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .mini-tip h3{font-size:var(--fs-14);color:var(--gold);margin:0 0 8px;font-weight:700}
 
 /* ====== 桌面端适配 ====== */
-@media(min-width:600px){body{background:linear-gradient(180deg,#080C14 0%,#0a1020 100%);min-height:100vh}.app{max-width:540px;margin:16px auto;border-radius:16px;border-left:1px solid var(--border);border-right:1px solid var(--border);box-shadow:0 8px 60px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,106,.06);min-height:calc(100vh - 32px);overflow:hidden}.tabbar{border-radius:0 0 16px 16px}}
+@media(min-width:600px){body{background:var(--body-bg);min-height:100vh}.app{max-width:540px;margin:16px auto;border-radius:16px;border-left:1px solid var(--border);border-right:1px solid var(--border);box-shadow:0 8px 60px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,106,.06);min-height:calc(100vh - 32px);overflow:hidden}.tabbar{border-radius:0 0 16px 16px}}
 /* 首页学习 App 化 */
 .home-intro{margin:16px 20px 0;padding:20px;border:1px solid var(--border-strong);border-radius:22px;background:linear-gradient(145deg,#1d2945 0%,#111827 58%,#0b0f17 100%);position:relative;overflow:hidden}
 .home-intro::after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-62px;top:-70px;background:radial-gradient(circle,rgba(79,141,255,.28),transparent 68%)}
@@ -214,7 +223,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .gprogress{margin-top:14px}
 .gp-row{display:flex;justify-content:space-between;font-size:12px;color:var(--text-2);margin-bottom:6px;font-weight:600}
 .gp-track{height:8px;background:var(--surface-2);border-radius:var(--r-pill);overflow:hidden}
-.gp-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold),#ffd98a);border-radius:var(--r-pill);transition:width .5s cubic-bezier(.4,0,.2,1)}
+.gp-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));border-radius:var(--r-pill);transition:width .5s cubic-bezier(.4,0,.2,1)}
 /* 今日探索卡片 */
 .explore{margin:6px 16px 0;display:grid;gap:12px}
 .ecard{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px;position:relative;overflow:hidden;transition:transform var(--t-fast),border-color var(--t-fast);text-decoration:none;color:inherit}
@@ -265,11 +274,11 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .feat-desc{font-size:12.5px;color:var(--text-2);line-height:1.65;margin-bottom:14px}
 .feat-foot{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .feat-meta{font-size:11px;color:var(--text-3)}
-.feat-go{font-size:13px;font-weight:800;color:#0d1220;background:linear-gradient(135deg,var(--gold),#ffd98a);padding:9px 16px;border-radius:var(--r-pill);box-shadow:0 4px 14px rgba(255,200,90,.22);white-space:nowrap}
+.feat-go{font-size:13px;font-weight:800;color:#0d1220;background:linear-gradient(135deg,var(--gold),var(--gold-hi));padding:9px 16px;border-radius:var(--r-pill);box-shadow:0 4px 14px rgba(255,200,90,.22);white-space:nowrap}
 @media(max-width:360px){.kmap-grid{grid-template-columns:1fr}.kmap-mini{grid-template-columns:repeat(3,1fr)}}
 /* 阅读进度条 */
 .read-bar{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:30;display:none;pointer-events:none}
-.read-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),#ffd98a);transition:width .12s linear}
+.read-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));transition:width .12s linear}
 /* 收藏按钮 */
 .art-fav{position:fixed;top:56px;right:14px;z-index:30;width:40px;height:40px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(21,27,43,.9);backdrop-filter:blur(8px);color:var(--text-2);font-size:20px;display:none;place-items:center;cursor:pointer;box-shadow:var(--sh-2)}
 .art-fav.on{color:var(--gold);border-color:var(--gold)}
@@ -298,7 +307,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .dtask .dt-label{flex:1;font-size:13.5px;color:var(--text-1);font-weight:600}
 .dtask.done .dt-label{color:var(--text-2)}
 .dtask .dt-go{font-size:12px;font-weight:800;color:var(--gold)}
-.dt-reward{margin-top:4px;padding:12px;text-align:center;font-size:14px;font-weight:900;color:#0d1220;background:linear-gradient(135deg,var(--gold),#ffd98a);border-radius:var(--r-md);box-shadow:0 4px 16px rgba(255,200,90,.25);display:none}
+.dt-reward{margin-top:4px;padding:12px;text-align:center;font-size:14px;font-weight:900;color:#0d1220;background:linear-gradient(135deg,var(--gold),var(--gold-hi));border-radius:var(--r-md);box-shadow:0 4px 16px rgba(255,200,90,.25);display:none}
 .dt-reward.show{display:block;animation:pop .4s ease}
 @keyframes pop{0%{transform:scale(.92);opacity:0}100%{transform:scale(1);opacity:1}}
 /* REV-UPDATE-CENTER v1 */
@@ -314,6 +323,37 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .upd-row .ua{font-size:12px;font-weight:800;color:var(--gold);flex:0 0 auto}
 .upd-row:active{background:rgba(255,255,255,.03)}
 .upd-note{font-size:11px;color:var(--text-3);margin:8px 20px 0;line-height:1.6}
+/* 主题：白天版 / 大富翁（默认深色黑金在 :root 中定义） */
+:root[data-theme="light"]{
+  --body-bg:#EDE8DC;
+  --bg:#F7F3EA;--surface:#FFFFFF;--surface-2:#F1ECE0;
+  --border:rgba(60,50,20,.14);--border-strong:rgba(60,50,20,.3);
+  --text-1:#1d1a14;--text-2:#56524a;--text-3:#8b857a;
+  --gold:#9A7B36;--gold-soft:rgba(154,123,54,.12);--gold-2:#7e6328;--gold-hi:#b89345;
+  --blue:#2F6BDF;--blue-soft:rgba(47,107,223,.12);
+  --chrome-bg:rgba(255,255,255,.86);--chrome-bg2:rgba(255,255,255,.93);
+  --chrome-border:rgba(60,50,20,.12);--bar-bg:rgba(255,255,255,.92);
+}
+:root[data-theme="monopoly"]{
+  --body-bg:#04130c;
+  --bg:#0a1410;--surface:#10231a;--surface-2:#13291e;
+  --border:rgba(46,184,114,.2);--border-strong:rgba(46,184,114,.42);
+  --text-1:#E6F5EC;--text-2:#A9C7B6;--text-3:#6f9080;
+  --gold:#2EB872;--gold-soft:rgba(46,184,114,.14);--gold-2:#1f8f57;--gold-hi:#5fe0a0;
+  --blue:#2EB872;--blue-soft:rgba(46,184,114,.14);
+  --chrome-bg:rgba(8,18,13,.85);--chrome-bg2:rgba(8,18,13,.92);
+  --chrome-border:rgba(46,184,114,.22);--bar-bg:rgba(8,18,13,.9);
+}
+/* App 般的点按体验：禁用长按菜单 / 文本选中，加按压缩放反馈 */
+.topbar,.tabbar,.tab,.menu,.mi,.krow,.ecard,.dtask,.feat-card,.upd-row,.recent-row,.daily-card,.profile,.mini-tip,.theme-opt,.linkcard,.avatar,button,.btn{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+.theme-opt{flex:1;min-width:0;padding:11px 8px;border-radius:12px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font);transition:all var(--t-fast)}
+.theme-opt.active{border-color:var(--gold);background:var(--gold-soft);color:var(--gold)}
+.theme-opt:active{transform:scale(.97)}
+.krow:active,.ecard:active,.dtask:active,.feat-card:active,.upd-row:active,.recent-row:active,.mi:active,.linkcard:active,.tab:active{transform:scale(.98);transition:transform 120ms ease}
+.dtask:active,.btn:active,button:active{transform:scale(.97);transition:transform 120ms ease}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body>
@@ -663,11 +703,11 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
       <div class="menu">
         <div class="mi" onclick="goTab('s-home')"><div class="mi-i">🏠</div><div class="mi-t">返回首页</div><div class="mi-a">›</div></div>
-        <div class="mi" onclick="toast('请在浏览器菜单中选择「添加到主屏幕」')"><div class="mi-i">📲</div><div class="mi-t">安装到手机桌面</div><div class="mi-a">›</div></div>
+        <div class="mi" onclick="doInstall()"><div class="mi-i">📲</div><div class="mi-t">安装到手机桌面</div><div class="mi-a">›</div></div>
         <div class="mi" onclick="copyWx()"><div class="mi-i">💬</div><div class="mi-t">加微信交流</div><div class="mi-a">Harryalwayslucky ›</div></div>
         <div class="mi" onclick="toggleThemePicker()"><div class="mi-i">🎨</div><div class="mi-t">主题外观</div><div class="mi-a" id="themeLabel">深色黑金 ›</div></div>
-<div id="themePicker" style="display:none;margin:8px -16px;padding:14px 16px;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div style="font-size:13px;font-weight:600;color:var(--fg);margin-bottom:10px">选择主题风格</div>
+<div id="themePicker" style="display:none;margin:8px -16px;padding:14px 16px;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div style="font-size:13px;font-weight:600;color:var(--text-1);margin-bottom:10px">选择主题风格</div>
   <div style="display:flex;gap:10px;flex-wrap:wrap">
     <button class="theme-opt active" data-theme="dark" onclick="setTheme('dark')">🌙 深色黑金</button>
     <button class="theme-opt" data-theme="light" onclick="setTheme('light')">☀️ 白天版</button>
@@ -1086,8 +1126,6 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </section>
 
 
-
-
     <!-- 长文：psy-procrastination -->
         <!-- 长文：psy-procrastination -->
     <section class="screen" id="art-psy-procrastination">
@@ -1375,7 +1413,6 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </section>
 
 
-
     <section class="screen" id="art-hist-caocao">
       <article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab('s-know')">← 返回知识中心</a>
 <header class="art-head">
@@ -1584,8 +1621,6 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
-
-
 
 
     <section class="screen" id="art-psy-confirm">
@@ -2294,8 +2329,6 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 <div class="afoot">泽少学习助手<br>每天进步一点点</div>
       </article>
     </section>
-
-
 
 
     <!-- 长文：psy-fear -->
@@ -3591,9 +3624,21 @@ function closeLight(){document.getElementById('lightbox').classList.remove('show
 function copyWx(){const id='Harryalwayslucky';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(id).then(()=>toast('微信号已复制：'+id));}else{const t=document.createElement('textarea');t.value=id;document.body.appendChild(t);t.select();try{document.execCommand('copy');toast('微信号已复制：'+id);}catch(e){}document.body.removeChild(t);}}
 function copyUrl(){const u=location.href;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(()=>toast('地址已复制，去浏览器粘贴安装'));}else{toast('请手动复制地址栏链接');}}
 
+/* 主题外观：深色黑金 / 白天版 / 大富翁 */
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('zs_theme',t);}catch(e){}}
+function setTheme(t){
+  applyTheme(t);
+  var lab={dark:'深色黑金',light:'白天版',monopoly:'大富翁'}[t]||t;
+  var el=document.getElementById('themeLabel');if(el)el.textContent=lab+' ›';
+  document.querySelectorAll('.theme-opt').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-theme')===t);});
+  var p=document.getElementById('themePicker');if(p)p.style.display='none';
+}
+function toggleThemePicker(){var p=document.getElementById('themePicker');if(!p)return;p.style.display=(p.style.display==='none'||!p.style.display)?'block':'none';}
+(function(){var s;try{s=localStorage.getItem('zs_theme');}catch(e){}if(s)setTheme(s);})();
+
 let deferredPrompt=null;
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('btnInstall').style.display='inline-block';});
-function doInstall(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('btnInstall').style.display='none';});}else{toast('请点浏览器菜单「添加到主屏幕」');}}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;var b=document.getElementById('btnInstall');if(b)b.style.display='inline-block';});
+function doInstall(){if(deferredPrompt){try{deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;var b=document.getElementById('btnInstall');if(b)b.style.display='none';});}catch(e){toast('请点浏览器菜单「添加到主屏幕」');}}else{toast('请点浏览器菜单「添加到主屏幕」');}}
 renderK();
 
 /* 今日金句：随机一条，点 ↻ 换一条 */
