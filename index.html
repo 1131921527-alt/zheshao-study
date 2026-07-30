@@ -354,6 +354,49 @@ body{font-family:var(--font);background:var(--body-bg);color:var(--text-1);-webk
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
 }
+/* ===== V2.0 泽少个人成长系统 ===== */
+/* 等级徽章脉冲（连续学习感） */
+.glvl{animation:lvlPulse 3.2s ease-in-out infinite}
+@keyframes lvlPulse{0%,100%{box-shadow:0 2px 8px rgba(201,168,106,.35)}50%{box-shadow:0 2px 16px rgba(201,168,106,.6)}}
+/* 今日 XP 条 */
+.gxp{margin-top:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:11px 12px}
+.gxp-row{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;color:var(--text-2);font-weight:700}
+.gxp-row b{color:var(--gold);font-size:14px;font-variant-numeric:tabular-nums}
+.gxp-next{font-size:11px;color:var(--text-3);font-weight:600}
+.gxp-track{height:9px;background:var(--surface-2);border-radius:var(--r-pill);overflow:hidden;margin:8px 0 6px}
+.gxp-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));border-radius:var(--r-pill);transition:width .6s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.gxp-bar:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:translateX(-100%);animation:shimmer 2.2s ease-in-out infinite}
+@keyframes shimmer{0%{transform:translateX(-100%)}60%,100%{transform:translateX(220%)}}
+.gxp-foot{font-size:11px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.gxp-foot span{color:var(--text-2);font-weight:700}
+/* 今日打卡条微调（与XP条区分） */
+.gprogress .gp-row span:last-child{color:var(--gold);font-variant-numeric:tabular-nums}
+/* 每日任务：加预计时长副标题 */
+.dt-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.dt-time{font-size:10.5px;color:var(--text-3);font-weight:600}
+.dtask.done .dt-time{color:var(--gold-2)}
+/* 连续学习完成：火焰迸发动画 */
+.dt-reward{position:relative;overflow:hidden}
+.dt-reward.show{display:block;animation:pop .4s ease}
+.dt-reward.show:before{content:"🔥";position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:18px;animation:flame .9s ease-in-out infinite}
+@keyframes flame{0%,100%{transform:translateY(-50%) scale(1) rotate(-3deg)}50%{transform:translateY(-54%) scale(1.18) rotate(3deg)}}
+/* 卡片悬浮（高级App手感） */
+.feat-card,.ecard,.km-mini,.krow,.upd-row,.recent-row,.quote-card,.mini-tip{transition:transform var(--t-norm),border-color var(--t-fast),box-shadow var(--t-norm)}
+.feat-card:hover,.ecard:hover,.km-mini:hover,.krow:hover,.upd-row:hover{transform:translateY(-3px);border-color:var(--border-strong);box-shadow:var(--sh-1)}
+/* 我的成就：徽章 */
+.badge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:6px 16px 0}
+.badge{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 12px 12px;overflow:hidden;transition:transform var(--t-fast),border-color var(--t-fast)}
+.badge:hover{transform:translateY(-2px);border-color:var(--border-strong)}
+.badge .b-ico{font-size:24px;filter:grayscale(1);opacity:.5;transition:all var(--t-norm)}
+.badge .b-name{font-size:13.5px;font-weight:800;color:var(--text-1);margin-top:6px}
+.badge .b-desc{font-size:11px;color:var(--text-3);margin-top:3px}
+.badge .b-prog{height:5px;background:var(--surface-2);border-radius:var(--r-pill);overflow:hidden;margin-top:9px}
+.badge .b-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));border-radius:var(--r-pill);transition:width .6s cubic-bezier(.4,0,.2,1)}
+.badge.on{border-color:var(--gold)}
+.badge.on .b-ico{filter:none;opacity:1}
+.badge.on .b-name{color:var(--gold)}
+.badge.on:before{content:"✅";position:absolute;top:10px;right:10px;font-size:13px}
+.badge.on:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,106,.14),transparent 60%);pointer-events:none}
 </style>
 </head>
 <body>
@@ -374,42 +417,50 @@ body{font-family:var(--font);background:var(--body-bg);color:var(--text-1);-webk
     <section class="screen active" id="s-home">
       <!-- REV-GROWTH-HOME v1 -->
       <div class="gwrap">
-        <header class="ghero">
-          <div class="ghello">
-            <div class="gavatar">喆</div>
-            <div class="ghello-txt">
-              <div class="gwave" id="gWave">泽少的成长空间</div>
-              <div class="gsub">记录你的每一次微小成长</div>
-            </div>
-            <div class="glvl" id="gLvl">Lv.5</div>
+      <header class="ghero">
+        <div class="ghello">
+          <div class="gavatar">喆</div>
+          <div class="ghello-txt">
+            <div class="gwave" id="gWave">泽少成长空间</div>
+            <div class="gsub" id="gLevelName">知识萌芽者</div>
           </div>
-          <div class="gstats">
-            <div class="gstat"><div class="gnum" id="gStreak">38</div><div class="glbl">🔥 连续学习(天)</div></div>
-            <div class="gstat"><div class="gnum" id="gRead">12</div><div class="glbl">📚 已读文章</div></div>
-            <div class="gstat"><div class="gnum" id="gTotal">7</div><div class="glbl">🧠 解锁领域</div></div>
-          </div>
-          <div class="gprogress">
-            <div class="gp-row"><span>今日成长</span><span id="gProgTxt">0 / 3</span></div>
-            <div class="gp-track"><div class="gp-bar" id="gProgBar"></div></div>
-          </div>
-        </header>
+          <div class="glvl" id="gLvl">Lv.1</div>
+        </div>
+        <div class="gstats">
+          <div class="gstat"><div class="gnum" id="gStreak">0</div><div class="glbl">🔥 连续学习(天)</div></div>
+          <div class="gstat"><div class="gnum" id="gRead">0</div><div class="glbl">📚 累计阅读(篇)</div></div>
+          <div class="gstat"><div class="gnum" id="gMins">0</div><div class="glbl">⏱ 学习时间(分)</div></div>
+        </div>
+        <div class="gxp">
+          <div class="gxp-row"><span>今日获得 <b id="gXpToday">+0</b> XP</span><span class="gxp-next">距下一级</span></div>
+          <div class="gxp-track"><div class="gxp-bar" id="gXpBar"></div></div>
+          <div class="gxp-foot"><span id="gXpCur">0</span> / <span id="gXpNeed">200</span> XP · 下一等级 <span id="gNextName">探索学习者</span></div>
+        </div>
+        <div class="gprogress">
+          <div class="gp-row"><span>今日打卡</span><span id="gProgTxt">0 / 3</span></div>
+          <div class="gp-track"><div class="gp-bar" id="gProgBar"></div></div>
+        </div>
+      </header>
 
         <div class="section-title pad">📅 每天15分钟成长计划 <span class="more" id="gDay">Day 38 🔥</span></div>
         <div class="daily-card">
           <div class="daily-sub">完成下面 3 件事，今天就算打卡成功 🔥 ｜ 累计经验 <b id="gXp">0</b> XP</div>
+          <div class="dtask" data-task="ai" onclick="doDaily('ai')">
+            <span class="chk"></span><span class="dt-ico">⚡</span>
+            <span class="dt-main"><span class="dt-label">AI 趋势阅读</span><span class="dt-time">预计 5 分钟</span></span>
+            <span class="dt-go">去做 →</span>
+          </div>
           <div class="dtask" data-task="word" onclick="doDaily('word')">
             <span class="chk"></span><span class="dt-ico">🔤</span>
-            <span class="dt-label">学 20 个英语单词</span><span class="dt-go">去做 →</span>
+            <span class="dt-main"><span class="dt-label">英语单词学习</span><span class="dt-time">预计 5 分钟</span></span>
+            <span class="dt-go">去做 →</span>
           </div>
           <div class="dtask" data-task="art" onclick="doDaily('art')">
             <span class="chk"></span><span class="dt-ico">📖</span>
-            <span class="dt-label">阅读 1 篇知识文章</span><span class="dt-go">去做 →</span>
+            <span class="dt-main"><span class="dt-label">深度知识阅读</span><span class="dt-time">预计 5 分钟</span></span>
+            <span class="dt-go">去做 →</span>
           </div>
-          <div class="dtask" data-task="ai" onclick="doDaily('ai')">
-            <span class="chk"></span><span class="dt-ico">⚡</span>
-            <span class="dt-label">查看 AI 动态</span><span class="dt-go">去做 →</span>
-          </div>
-          <div class="dt-reward" id="dtReward">🎉 今日成长 +50 XP</div>
+          <div class="dt-reward" id="dtReward">🎉 今日成长完成！+50 XP</div>
         </div>
 
         <div class="section-title pad">🔥 今日推荐 <span class="more">编辑精选</span></div>
@@ -699,6 +750,14 @@ body{font-family:var(--font);background:var(--body-bg);color:var(--text-1);-webk
           <h3>⏱️ 建议节奏</h3>
           <p>每天 1 篇长文 + 20 个雅思词 + 1 条 AI 动态，约 15 分钟。<b>不求快，求连。</b>知识是复利，今天看的一篇，某天会突然和另一篇串起来。</p>
         </div>
+      </div>
+
+      <div class="section-title pad">🏅 我的成就</div>
+      <div class="badge-grid" id="badgeGrid">
+        <div class="badge" data-b="streak7"><div class="b-ico">🏅</div><div class="b-name">7日坚持</div><div class="b-desc">连续学习 7 天</div><div class="b-prog"><i></i></div></div>
+        <div class="badge" data-b="streak30"><div class="b-ico">🏆</div><div class="b-name">30日成长</div><div class="b-desc">连续学习 30 天</div><div class="b-prog"><i></i></div></div>
+        <div class="badge" data-b="read100"><div class="b-ico">📚</div><div class="b-name">百篇阅读</div><div class="b-desc">阅读 100 篇文章</div><div class="b-prog"><i></i></div></div>
+        <div class="badge" data-b="explorer"><div class="b-ico">🌎</div><div class="b-name">知识探索者</div><div class="b-desc">解锁全部分类</div><div class="b-prog"><i></i></div></div>
       </div>
 
       <div class="menu">
@@ -3744,16 +3803,44 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
   function load(k,def){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch(e){return def;}}
   function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
 
-  // 成长统计
+  // ===== V2.0 成长系统 =====
   var readSet=load('zs_read',['art-tech-llm','art-hist-qinshihuang','art-psy-procrastination','art-sport-hyrox-what','art-poem-shijing','art-geo-plate','art-eq-basics']);
   var streak=load('zs_streak',38);var last=load('zs_last','');var t=tStr();
   if(last!==t){if(last===yStr()){streak=streak+1;}else if(last===''){streak=38;}else{streak=1;}last=t;save('zs_streak',streak);save('zs_last',last);}
-  var level=Math.max(1,Math.floor(streak/7)+Math.floor(readSet.length/10));
   function setT(id,x){var e=document.getElementById(id);if(e)e.textContent=x;}
-  // 解锁领域：已读文章覆盖的知识类目 + 雅思常驻
+
+  // 等级体系（由累计XP决定，XP 来自阅读文章 + 每日打卡）
+  var LV=[{name:'知识萌芽者',need:0},{name:'探索学习者',need:200},{name:'深度阅读者',need:500},{name:'独立思考者',need:900},{name:'知识创造者',need:1500}];
+  function levelInfo(xp){var lv=1,base=0;for(var i=0;i<LV.length;i++){if(xp>=LV[i].need){lv=i+1;base=LV[i].need;}else break;}var next=lv<LV.length?LV[lv].need:base+1;return{lv:lv,name:LV[lv-1].name,nextName:lv<LV.length?LV[lv].name:LV[lv-1].name,cur:xp-base,span:next-base};}
+
+  // XP：首次访问按历史活跃度播种，避免从 0 开始
+  var xp;
+  if(localStorage.getItem('zs_xp')===null){xp=readSet.length*20+Math.max(0,streak-1)*15;save('zs_xp',xp);}else{xp=load('zs_xp',0);}
+  var TASK_XP={art:20,word:10,ai:10};
+
+  // 解锁领域（6 大知识类目）
   var domMap={};readSet.forEach(function(id){var c=catOf(id);if(c&&c!=='其他')domMap[c]=1;});domMap['雅思']=1;
-  var domains=Object.keys(domMap).length;
-  setT('gStreak',streak);setT('gRead',readSet.length);setT('gTotal',domains);setT('gLvl','Lv.'+level);setT('gDay','Day '+streak+' 🔥');
+  var KCATS=['历史文明','地理世界','心理认知','文学审美','运动健康','AI科技'];
+  var unlockedCats=KCATS.filter(function(c){return domMap[c];}).length;
+
+  // 学习时间（分钟，按历史推导，刷新不重复累加）
+  var mins=readSet.length*8+Math.max(0,streak-1)*15;
+
+  function awardXp(n){xp+=n;save('zs_xp',xp);renderXp();}
+  function renderXp(){
+    var li=levelInfo(xp);
+    setT('gLvl','Lv.'+li.lv);setT('gLevelName',li.name);
+    setT('gXpCur',li.cur);setT('gXpNeed',li.span);setT('gNextName',li.nextName);
+    var bar=document.getElementById('gXpBar');if(bar)bar.style.width=Math.min(100,Math.round(li.cur/li.span*100))+'%';
+    var xpw=document.getElementById('gXp');if(xpw)xpw.textContent=xp;
+  }
+  function renderBadges(){
+    var grid=document.getElementById('badgeGrid');if(!grid)return;
+    var data={streak7:{c:streak,n:7},streak30:{c:streak,n:30},read100:{c:readSet.length,n:100},explorer:{c:unlockedCats,n:6}};
+    Object.keys(data).forEach(function(k){var d=data[k];var el=grid.querySelector('[data-b="'+k+'"]');if(!el)return;var pct=Math.min(100,Math.round(d.c/d.n*100));var pi=el.querySelector('.b-prog i');if(pi)pi.style.width=pct+'%';el.classList.toggle('on',d.c>=d.n);});
+  }
+  function refreshHero(){setT('gStreak',streak);setT('gRead',readSet.length);setT('gMins',mins);setT('gDay','Day '+streak+' 🔥');renderXp();renderBadges();}
+  refreshHero();
 
   // 知识地图卡片计数
   ['tech','hist','geo','psy','poem','sport'].forEach(function(c){var n=ATLAS.filter(function(a){return catOf(a.id)===({tech:'AI科技',hist:'历史文明',geo:'地理世界',psy:'心理认知',poem:'文学审美',sport:'运动健康'}[c]);}).length;var e=document.getElementById('kmc-'+c);if(e)e.textContent=n+' 篇';});
@@ -3762,7 +3849,6 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
   var todayData=load('zs_today',{d:'',items:[]});
   if(todayData.d!==t){todayData={d:t,items:[]};save('zs_today',todayData);}
   // 每天15分钟成长计划
-  var xp=load('zs_xp',0);
   var DAILY_GO={word:'ielts/day78.html',ai:'ai-news/index.html'};
   function renderDaily(){
     document.querySelectorAll('.dtask').forEach(function(el){
@@ -3773,15 +3859,18 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
     });
     var rw=document.getElementById('dtReward'); if(rw)rw.classList.toggle('show',todayData.items.length>=3);
     var xpw=document.getElementById('gXp'); if(xpw)xpw.textContent=xp;
+    var todayXp=todayData.items.reduce(function(s,k){return s+(TASK_XP[k]||0);},0);
+    var xt=document.getElementById('gXpToday'); if(xt)xt.textContent='+'+todayXp;
   }
   function addXp(){
     if(todayData._c)return;
     todayData._c=true; save('zs_today',todayData);
-    xp+=50; save('zs_xp',xp);
+    awardXp(50);
     toast('🎉 今日成长 +50 XP！');
   }
   window.doDaily=function(k){
-    if(todayData.items.indexOf(k)<0){todayData.items.push(k);save('zs_today',todayData);}
+    var first=todayData.items.indexOf(k)<0;
+    if(first){todayData.items.push(k);save('zs_today',todayData);if(k!=='art'){awardXp(TASK_XP[k]||0);}}
     if(k==='art'){goArt('art-tech-llm');}
     else if(DAILY_GO[k]){location.href=DAILY_GO[k];}
     renderDaily();
@@ -3789,7 +3878,7 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
   function renderToday(){var n=todayData.items.length;setT('gProgTxt',n+' / 3');var b=document.getElementById('gProgBar');if(b)b.style.width=Math.round(n/3*100)+'%';renderDaily();if(n>=3)addXp();}
   renderToday();
   window.markToday=function(type){if(todayData.items.indexOf(type)<0){todayData.items.push(type);save('zs_today',todayData);renderToday();}};
-  window.markArtRead=function(id){if(readSet.indexOf(id)<0){readSet.push(id);save('zs_read',readSet);setT('gRead',readSet.length);}};
+  window.markArtRead=function(id){if(readSet.indexOf(id)<0){readSet.push(id);save('zs_read',readSet);setT('gRead',readSet.length);mins=readSet.length*8+Math.max(0,streak-1)*15;setT('gMins',mins);awardXp(20);renderBadges();}};
 
   // 进度条 + 收藏 + 推荐
   var barEl=document.createElement('div');barEl.className='read-bar';barEl.innerHTML='<i id="readBarFill"></i>';document.body.appendChild(barEl);
