@@ -196,6 +196,82 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .recent-list{margin:0 20px;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}.recent-row{display:flex;align-items:center;gap:12px;padding:14px;border-bottom:1px solid var(--border);text-decoration:none;color:inherit}.recent-row:last-child{border-bottom:0}.recent-row .ri{width:36px;height:36px;border-radius:11px;background:var(--gold-soft);display:grid;place-items:center}.recent-row .rc{flex:1}.recent-row .rt{font-size:13px;font-weight:700}.recent-row .rm{font-size:11px;color:var(--text-3);margin-top:3px}.recent-row .ra{color:var(--text-3)}
 .home-support{margin-top:34px!important;opacity:.94}.home-support::before{content:"学习内容到这里就结束了";display:block;font-size:11px;color:var(--text-3);margin:-38px 0 22px}
 @media(max-width:360px){.today-plan{grid-template-columns:1fr}.plan-item{min-height:auto;display:flex;align-items:center;gap:10px;text-align:left;padding:12px 14px}.plan-item .pt{margin-top:0}.plan-item .pm{margin-left:auto}}
+
+/* REV-GROWTH-CSS v1 */
+.gwrap{padding-bottom:24px}
+.ghero{margin:14px 16px 0;background:linear-gradient(135deg,#1c2742 0%,#0d1220 70%);border:1px solid var(--border);border-radius:var(--r-xl);padding:18px 16px 16px;position:relative;overflow:hidden;box-shadow:var(--sh-1)}
+.ghero:before{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(201,168,106,.22),transparent 70%);pointer-events:none}
+.ghello{display:flex;align-items:center;gap:12px}
+.gavatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a5a2b);display:grid;place-items:center;font-weight:800;font-size:20px;color:#0B0F17;flex:none}
+.ghello-txt{flex:1;min-width:0}
+.gwave{font-size:17px;font-weight:800;color:var(--text-1);letter-spacing:.3px}
+.gsub{font-size:12px;color:var(--text-3);margin-top:2px}
+.glvl{font-size:13px;font-weight:800;color:#0B0F17;background:linear-gradient(135deg,var(--gold),#caa15a);padding:5px 11px;border-radius:var(--r-pill);flex:none;box-shadow:0 2px 8px rgba(201,168,106,.35)}
+.gstats{display:flex;gap:8px;margin-top:16px}
+.gstat{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 4px;text-align:center}
+.gnum{font-size:22px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.1}
+.glbl{font-size:10.5px;color:var(--text-3);margin-top:4px;font-weight:600}
+.gprogress{margin-top:14px}
+.gp-row{display:flex;justify-content:space-between;font-size:12px;color:var(--text-2);margin-bottom:6px;font-weight:600}
+.gp-track{height:8px;background:var(--surface-2);border-radius:var(--r-pill);overflow:hidden}
+.gp-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold),#ffd98a);border-radius:var(--r-pill);transition:width .5s cubic-bezier(.4,0,.2,1)}
+/* 今日探索卡片 */
+.explore{margin:6px 16px 0;display:grid;gap:12px}
+.ecard{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px;position:relative;overflow:hidden;transition:transform var(--t-fast),border-color var(--t-fast);text-decoration:none;color:inherit}
+.ecard:active{transform:scale(.98);border-color:var(--border-strong)}
+.ec-cover{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;flex:none;box-shadow:var(--sh-1)}
+.ec-emoji{font-size:26px}
+.eco-ai .ec-cover{background:linear-gradient(135deg,#4F8DFF,#7C5CFF)}
+.eco-word .ec-cover{background:linear-gradient(135deg,#2bb6a8,#1f7a8c)}
+.eco-art .ec-cover{background:linear-gradient(135deg,#ff8a3d,#ff5252)}
+.ec-body{flex:1;min-width:0}
+.ec-kicker{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.5px}
+.ec-title{font-size:15px;font-weight:700;color:var(--text-1);margin-top:3px}
+.ec-meta{font-size:11px;color:var(--text-3);margin-top:4px;display:flex;gap:10px;flex-wrap:wrap}
+.ec-go{font-size:13px;font-weight:800;color:var(--gold);flex:none;white-space:nowrap}
+/* 首页知识地图迷你卡 */
+.kmap-mini{margin:8px 16px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.km-mini{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 8px;text-align:center;cursor:pointer;transition:transform var(--t-fast),border-color var(--t-fast)}
+.km-mini:active{transform:scale(.96);border-color:var(--border-strong)}
+.km-emoji{font-size:26px;display:block}
+.km-name{font-size:12px;font-weight:700;color:var(--text-1);margin-top:6px;display:block}
+/* 知识中心大卡片 */
+.kmap-banner{margin:0 16px 14px;font-size:12.5px;color:var(--text-2);background:var(--gold-soft);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 14px}
+.kmap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 16px}
+.kmap-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;position:relative;transition:transform var(--t-fast),box-shadow var(--t-fast);min-height:150px;display:flex;flex-direction:column}
+.kmap-card:active{transform:scale(.98);box-shadow:var(--sh-2)}
+.km-cover{height:78px;display:grid;place-items:center;font-size:38px}
+.km-ai .km-cover{background:linear-gradient(135deg,#4F8DFF,#7C5CFF)}
+.km-hist .km-cover{background:linear-gradient(135deg,#C9A86A,#8a5a2b)}
+.km-geo .km-cover{background:linear-gradient(135deg,#2bb6a8,#1f7a8c)}
+.km-psy .km-cover{background:linear-gradient(135deg,#ff7eb3,#b06ab3)}
+.km-poem .km-cover{background:linear-gradient(135deg,#d6336c,#7048e8)}
+.km-sport .km-cover{background:linear-gradient(135deg,#ff8a3d,#ff5252)}
+.km-ielts .km-cover{background:linear-gradient(135deg,#3ecf8e,#1f9d6b)}
+.km-title{font-size:16px;font-weight:800;color:var(--text-1);padding:10px 12px 2px}
+.km-desc{font-size:11.5px;color:var(--text-3);padding:0 12px;line-height:1.4}
+.km-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding:10px 12px 12px}
+.km-count{font-size:11px;font-weight:700;color:var(--text-2);background:var(--surface-2);padding:3px 8px;border-radius:var(--r-pill)}
+.km-enter{font-size:12px;font-weight:800;color:var(--gold)}
+@media(max-width:360px){.kmap-grid{grid-template-columns:1fr}.kmap-mini{grid-template-columns:repeat(3,1fr)}}
+/* 阅读进度条 */
+.read-bar{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:30;display:none;pointer-events:none}
+.read-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),#ffd98a);transition:width .12s linear}
+/* 收藏按钮 */
+.art-fav{position:fixed;top:56px;right:14px;z-index:30;width:40px;height:40px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(21,27,43,.9);backdrop-filter:blur(8px);color:var(--text-2);font-size:20px;display:none;place-items:center;cursor:pointer;box-shadow:var(--sh-2)}
+.art-fav.on{color:var(--gold);border-color:var(--gold)}
+/* 文章推荐 */
+.art-rec{margin:26px 0 12px;padding:18px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg)}
+.ar-h{font-size:13px;font-weight:800;color:var(--gold);margin:0 0 10px;letter-spacing:.4px}
+.ar-h:nth-of-type(2){margin-top:18px}
+.ar-next{display:block;background:linear-gradient(135deg,#1c2742,#0d1220);border:1px solid var(--border);border-radius:var(--r-md);padding:13px 14px;margin-bottom:14px;text-decoration:none;color:inherit;cursor:pointer}
+.ar-next:active{transform:scale(.99)}
+.ar-ne{display:block;font-size:14px;font-weight:700;color:var(--text-1);line-height:1.4}
+.ar-ng{display:block;font-size:11px;color:var(--gold);margin-top:5px;font-weight:600}
+.ar-rel{display:flex;flex-direction:column;gap:8px}
+.ar-chip{display:block;font-size:12.5px;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px;text-decoration:none;cursor:pointer;line-height:1.4}
+.ar-chip:active{transform:scale(.99);border-color:var(--border-strong)}
+
 </style>
 </head>
 <body>
@@ -214,50 +290,91 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
   <div class="screen-wrap">
     <!-- 首页 -->
     <section class="screen active" id="s-home">
-      <div class="home-intro">
-        <div class="eyebrow">MY LEARNING SPACE</div>
-        <h2>晚上好，泽少 👋</h2>
-        <p>每天十五分钟：读一篇、记二十词、了解一条 AI 新动态。</p>
-        <div class="study-progress"><div class="track"><div class="bar"></div></div><div class="value">今日 2/3</div></div>
-      </div>
-      <div class="section-title pad">今日学习 <span class="more">约 15 分钟</span></div>
-      <div class="today-plan">
-        <div class="plan-item" onclick="location.href='ielts/day78.html'"><div class="pi">🔤</div><div class="pt">20 个单词</div><div class="pm">5 分钟</div></div>
-        <div class="plan-item" onclick="goKnowPsyEq()"><div class="pi">🧠</div><div class="pt">1 篇知识</div><div class="pm">8 分钟</div></div>
-        <div class="plan-item" onclick="location.href='ai-news/index.html'"><div class="pi">⚡</div><div class="pt">AI 动态</div><div class="pm">2 分钟</div></div>
-      </div>
-      <div class="section-title pad">继续学习 <span class="more" onclick="goTab('s-know')">全部课程</span></div>
-      <div class="continue-card" onclick="goKnowSport()"><div class="cc-icon">🏃</div><div class="cc-copy"><div class="cc-kicker">上次学到</div><div class="cc-title">运动康复：把身体当系统来修</div><div class="cc-meta">运动健康 · 预计 8 分钟</div></div><div class="cc-go">›</div></div>
-      <div class="section-title pad">课程分类 <span class="more" onclick="goTab('s-know')">进入知识中心</span></div>
-      <div class="quick-grid">
-        <div class="qcard" onclick="location.href='ai-news/index.html'"><div class="qi">🤖</div><div class="qt">AI动态播报</div><div class="qd">每天 AI 圈发生了什么</div><div class="qbadge">每日更新</div></div>
-        <div class="qcard" onclick="goKnow('poem')"><div class="qi">📜</div><div class="qt">文学</div><div class="qd">诗词 · 楚辞 · 元曲</div></div>
-        <div class="qcard" onclick="goKnow('geo')"><div class="qi">🌍</div><div class="qt">地理</div><div class="qd">板块 · 气候 · 城市</div></div>
-        <div class="qcard" onclick="goKnowPsyEq()"><div class="qi">🧠</div><div class="qt">心理学</div><div class="qd">认知 · 情绪 · 情商</div><div class="qbadge">新增5篇</div></div>
-        <div class="qcard" onclick="goKnow('ielts')"><div class="qi">📖</div><div class="qt">雅思单词</div><div class="qd">每天15词 · 带音频</div></div>
-        <div class="qcard" onclick="goKnowSport()"><div class="qi">🏃</div><div class="qt">运动健康</div><div class="qd">HYROX · 运动康复</div><div class="qbadge">新增10篇</div></div>
-      </div>
+      <!-- REV-GROWTH-HOME v1 -->
+      <div class="gwrap">
+        <header class="ghero">
+          <div class="ghello">
+            <div class="gavatar">喆</div>
+            <div class="ghello-txt">
+              <div class="gwave" id="gWave">晚上好，泽少 👋</div>
+              <div class="gsub">泽少的每日成长空间</div>
+            </div>
+            <div class="glvl" id="gLvl">Lv.5</div>
+          </div>
+          <div class="gstats">
+            <div class="gstat"><div class="gnum" id="gStreak">38</div><div class="glbl">🔥 连续学习(天)</div></div>
+            <div class="gstat"><div class="gnum" id="gRead">12</div><div class="glbl">📚 已读文章</div></div>
+            <div class="gstat"><div class="gnum" id="gTotal">120</div><div class="glbl">🧩 收录内容</div></div>
+          </div>
+          <div class="gprogress">
+            <div class="gp-row"><span>今日成长</span><span id="gProgTxt">0 / 3</span></div>
+            <div class="gp-track"><div class="gp-bar" id="gProgBar"></div></div>
+          </div>
+        </header>
 
-      <div class="section-title pad">💡 今日金句</div>
-      <div class="quote-card" id="dailyQuote">加载中...</div>
-      <div class="section-title pad">最近更新 <span class="more" onclick="goTab('s-news')">查看全部</span></div>
-      <div class="recent-list">
-        <a class="recent-row" href="ai-news/ai-news-2026-07-24.html"><div class="ri">🤖</div><div class="rc"><div class="rt">AI 动态 · 精选10条（已核实）</div><div class="rm">全部附官方来源 · 新上线</div></div><div class="ra">›</div></a>
-        <div class="recent-row" onclick="goKnowPsyEq()"><div class="ri">🧠</div><div class="rc"><div class="rt">心理学与情商专题</div><div class="rm">新增 5 篇 · 系统学习</div></div><div class="ra">›</div></div>
-        <div class="recent-row" onclick="goKnowSport()"><div class="ri">🏃</div><div class="rc"><div class="rt">运动健康专题</div><div class="rm">新增 10 篇 · 训练与康复</div></div><div class="ra">›</div></div>
-      </div>
+        <div class="section-title pad">今日探索 <span class="more">约 15 分钟</span></div>
+        <div class="explore">
+          <a class="ecard eco-ai" href="ai-news/index.html" onclick="markToday('ai')">
+            <div class="ec-cover"><span class="ec-emoji">⚡</span></div>
+            <div class="ec-body">
+              <div class="ec-kicker">AI 动态</div>
+              <div class="ec-title">今日 AI 圈发生了什么</div>
+              <div class="ec-meta"><span>📰 10 条精选</span><span>⏱ 2 分钟</span></div>
+            </div>
+            <span class="ec-go">开始 →</span>
+          </a>
+          <a class="ecard eco-word" href="ielts/day78.html" onclick="markToday('word')">
+            <div class="ec-cover"><span class="ec-emoji">🔤</span></div>
+            <div class="ec-body">
+              <div class="ec-kicker">英语词海</div>
+              <div class="ec-title">20 个高频单词 + 发音</div>
+              <div class="ec-meta"><span>🗣 带真人音频</span><span>⏱ 5 分钟</span></div>
+            </div>
+            <span class="ec-go">开始 →</span>
+          </a>
+          <a class="ecard eco-art" onclick="goArt('art-tech-llm');markToday('art')">
+            <div class="ec-cover"><span class="ec-emoji">📖</span></div>
+            <div class="ec-body">
+              <div class="ec-kicker">深度阅读</div>
+              <div class="ec-title">一篇让你开窍的长文</div>
+              <div class="ec-meta"><span>🧠 通识知识</span><span>⏱ 8 分钟</span></div>
+            </div>
+            <span class="ec-go">开始 →</span>
+          </a>
+        </div>
 
-      <div class="support home-support" id="supportHome">
-        <h2>☕ 支持学习助手</h2>
-        <p>如果这里对你有帮助，欢迎支持泽少继续把学习资料整理下去。</p>
-        <img class="qr" src="assets/wechat.png" alt="微信赞赏码" loading="lazy" onclick="zoomQr(this)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>
-        <span class="label">微信赞赏码</span>
-        <button class="wx" onclick="copyWx()">复制微信号 Harryalwayslucky</button>
-        <div class="hint">在微信里打开本页，长按上方二维码即可打赏。</div>
-      </div>
+        <div class="section-title pad">🗺️ 知识地图 <span class="more" onclick="goTab('s-know')">进入中心</span></div>
+        <div class="kmap-mini">
+          <div class="km-mini km-ai" onclick="goKnow('tech')"><span class="km-emoji">🤖</span><span class="km-name">AI科技</span></div>
+          <div class="km-mini km-hist" onclick="goKnow('hist')"><span class="km-emoji">🏛️</span><span class="km-name">历史文明</span></div>
+          <div class="km-mini km-geo" onclick="goKnow('geo')"><span class="km-emoji">🌍</span><span class="km-name">地理世界</span></div>
+          <div class="km-mini km-psy" onclick="goKnowPsyEq()"><span class="km-emoji">🧠</span><span class="km-name">心理认知</span></div>
+          <div class="km-mini km-poem" onclick="goKnow('poem')"><span class="km-emoji">📜</span><span class="km-name">文学审美</span></div>
+          <div class="km-mini km-sport" onclick="goKnowSport()"><span class="km-emoji">🏃</span><span class="km-name">运动健康</span></div>
+        </div>
 
-      <div class="footer">泽少学习助手<br>每天进步一点点</div>
+        <div class="section-title pad">💡 今日金句</div>
+        <div class="quote-card" id="dailyQuote">加载中...</div>
+
+        <div class="section-title pad">最近更新 <span class="more" onclick="goTab('s-news')">查看全部</span></div>
+        <div class="recent-list">
+          <a class="recent-row" href="ai-news/ai-news-2026-07-24.html"><div class="ri">🤖</div><div class="rc"><div class="rt">AI 动态 · 精选10条（已核实）</div><div class="rm">全部附官方来源 · 新上线</div></div><div class="ra">›</div></a>
+          <a class="recent-row" onclick="goKnowPsyEq()"><div class="ri">🧠</div><div class="rc"><div class="rt">心理学与情商专题</div><div class="rm">认知 · 情绪 · 沟通</div></div><div class="ra">›</div></a>
+          <a class="recent-row" onclick="goKnowSport()"><div class="ri">🏃</div><div class="rc"><div class="rt">运动健康专题</div><div class="rm">HYROX · 运动康复</div></div><div class="ra">›</div></a>
+        </div>
+
+        <div class="support home-support" id="supportHome">
+          <h2>☕ 支持学习助手</h2>
+          <p>如果这里对你有帮助，欢迎支持泽少继续把学习资料整理下去。</p>
+          <img class="qr" src="assets/wechat.png" alt="微信赞赏码" loading="lazy" onclick="zoomQr(this)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-fallback">微信赞赏码<br>放入 assets/wechat.png</div>
+          <span class="label">微信赞赏码</span>
+          <button class="wx" onclick="copyWx()">复制微信号 Harryalwayslucky</button>
+          <div class="hint">在微信里打开本页，长按上方二维码即可打赏。</div>
+        </div>
+
+        <div class="footer">泽少学习助手<br>每天进步一点点</div>
+      </div>
     </section>
 
     <!-- 动态：直接展示文章列表 -->
@@ -284,38 +401,64 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     </section>
     <!-- 知识中心 -->
     <section class="screen" id="s-know">
-      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">科技前沿 · 文学 · 地理 · 心理 · 运动 · 雅思</div><h1>知识中心</h1></div></div></div>
+      <!-- REV-GROWTH-KNOW v1 -->
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">六大领域 · 自由探索</div><h1>知识地图</h1></div></div></div>
       <div class="pad" style="margin-top:16px">
-
-        <div class="section-title">📚 深度文章库 <span class="more">新上线</span></div>
-        <div class="recent-list" style="margin:0 0 18px">
-          <a class="recent-row" href="knowledge/index.html"><div class="ri">📚</div><div class="rc"><div class="rt">知识文章库（35篇）</div><div class="rm">AI科普 · 历史 · 地理 · 心理 · 文学 · 运动</div></div><div class="ra">›</div></a>
-          <a class="recent-row" href="knowledge/index.html"><div class="ri">⚛️</div><div class="rc"><div class="rt">原子习惯 · 独立系列（5篇）</div><div class="rm">微习惯 · 行为系统 · 身份认同</div></div><div class="ra">›</div></a>
-          <a class="recent-row" href="knowledge/index.html"><div class="ri">🗣️</div><div class="rc"><div class="rt">卡耐基 · 独立系列（5篇）</div><div class="rm">人际沟通 · 倾听 · 批评的艺术</div></div><div class="ra">›</div></a>
+        <div class="kmap-banner">🗺️ 把知识当成一片大陆去探索 —— 点一张卡片，钻进对应领域</div>
+        <div class="kmap-grid">
+          <div class="kmap-card km-ai" onclick="goKnow('tech')">
+            <div class="km-cover"><span>🤖</span></div>
+            <div class="km-title">AI 科技</div>
+            <div class="km-desc">大模型 · 算力 · 机器学习</div>
+            <div class="km-foot"><span class="km-count" id="kmc-tech">3 篇</span><span class="km-enter">探索 →</span></div>
+          </div>
+          <div class="kmap-card km-hist" onclick="goKnow('hist')">
+            <div class="km-cover"><span>🏛️</span></div>
+            <div class="km-title">历史文明</div>
+            <div class="km-desc">帝王将相 · 文明来路</div>
+            <div class="km-foot"><span class="km-count" id="kmc-hist">10 篇</span><span class="km-enter">探索 →</span></div>
+          </div>
+          <div class="kmap-card km-geo" onclick="goKnow('geo')">
+            <div class="km-cover"><span>🌍</span></div>
+            <div class="km-title">地理世界</div>
+            <div class="km-desc">板块 · 气候 · 城市</div>
+            <div class="km-foot"><span class="km-count" id="kmc-geo">9 篇</span><span class="km-enter">探索 →</span></div>
+          </div>
+          <div class="kmap-card km-psy" onclick="goKnowPsyEq()">
+            <div class="km-cover"><span>🧠</span></div>
+            <div class="km-title">心理认知</div>
+            <div class="km-desc">心理学 · 情商沟通</div>
+            <div class="km-foot"><span class="km-count" id="kmc-psy">26 篇</span><span class="km-enter">探索 →</span></div>
+          </div>
+          <div class="kmap-card km-poem" onclick="goKnow('poem')">
+            <div class="km-cover"><span>📜</span></div>
+            <div class="km-title">文学审美</div>
+            <div class="km-desc">诗词 · 楚辞 · 元曲</div>
+            <div class="km-foot"><span class="km-count" id="kmc-poem">7 篇</span><span class="km-enter">探索 →</span></div>
+          </div>
+          <div class="kmap-card km-sport" onclick="goKnowSport()">
+            <div class="km-cover"><span>🏃</span></div>
+            <div class="km-title">运动健康</div>
+            <div class="km-desc">HYROX · 康复 · 撸铁</div>
+            <div class="km-foot"><span class="km-count" id="kmc-sport">15 篇</span><span class="km-enter">探索 →</span></div>
+          </div>
+          <div class="kmap-card km-ielts" onclick="goKnow('ielts')">
+            <div class="km-cover"><span>📖</span></div>
+            <div class="km-title">雅思单词</div>
+            <div class="km-desc">77 天 · 1151 词 · 带音频</div>
+            <div class="km-foot"><span class="km-count">77 天</span><span class="km-enter">背词 →</span></div>
+          </div>
         </div>
 
-        <div class="section-title k-toggle" onclick="toggleK('tech')">🤖 科技前沿 <span class="more">展开/收起</span></div>
+        <!-- 展开容器（renderK 依赖，必须保留） -->
         <div class="klist hidden" id="klist-tech"></div>
-
-        <div class="section-title k-toggle" onclick="toggleK('poem')">📜 文学（诗词） <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-poem"></div>
-        <div class="section-title k-toggle" onclick="toggleK('geo')">🌍 地理 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-geo"></div>
-        <div class="section-title k-toggle" onclick="toggleKPsyEq()">🧠 心理学 <span class="more">展开/收起</span></div>
-        <div class="ksub">心理学</div>
         <div class="klist hidden" id="klist-psy"></div>
-        <div class="ksub">情商沟通</div>
         <div class="klist hidden" id="klist-eq"></div>
-
-        <div class="section-title k-toggle" onclick="toggleK('ielts')">📖 雅思单词 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-ielts"></div>
-
-        <div class="section-title k-toggle" onclick="toggleKSport()">🏃 运动健康 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-sport"></div>
-
-        <div class="section-title k-toggle" onclick="toggleK('hist')">🏛️ 历史 <span class="more">展开/收起</span></div>
         <div class="klist hidden" id="klist-hist"></div>
-
       </div>
     </section>
 
@@ -3408,6 +3551,73 @@ if('serviceWorker' in navigator){
 <script>
 function zoomQr(img){var z=document.getElementById('qrZoom');var zi=document.getElementById('qrZoomImg');zi.src=img.getAttribute('src')||'assets/wechat.png';z.classList.add('show');var scr=document.querySelector('.screen.active');if(scr){scr.style.overflow='hidden';}}
 function closeQr(){var z=document.getElementById('qrZoom');z.classList.remove('show');var scr=document.querySelector('.screen.active');if(scr){scr.style.overflow='';}}
+</script>
+<script>
+/* REV-GROWTH-JS v1 */
+const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个啥", "m": "科技前沿 · AI · 大模型"}, {"id": "art-tech-compute", "t": "⚡ 算力到底是什么，为什么比黄金还贵", "m": "科技前沿 · AI · 算力"}, {"id": "art-tech-ml", "t": "🤖 机器学习：让机器自己「学」的魔法", "m": "科技前沿 · AI · 机器学习"}, {"id": "art-hist-qinshihuang", "t": "👑 秦始皇：把「中国」焊成铁板的人", "m": "历史人物 · 秦朝 · 前259—前210"}, {"id": "art-hist-liubang", "t": "⚔️ 刘邦：草根亭长逆袭成汉高祖", "m": "历史人物 · 汉朝 · 前256—前195"}, {"id": "art-hist-libai", "t": "✍️ 李白：大唐最浪的诗仙顶流", "m": "历史人物 · 唐朝 · 701—762"}, {"id": "art-geo-plate", "t": "大地为什么会\"呼吸\"？板块构造通俗演义", "m": "通识地理 · 地球科学 · 板块构造"}, {"id": "art-geo-river", "t": "大河文明：河流是如何\"养育\"人类的", "m": "通识地理 · 人文地理 · 文明起源"}, {"id": "art-geo-rainforest", "t": "地球之肺：热带雨林为什么值得你关心", "m": "通识地理 · 自然地理 · 生态系统"}, {"id": "art-psy-procrastination", "t": "拖延症：你不是懒，你是被情绪劫持了", "m": "心理学 · 日常行为 · 情绪调节"}, {"id": "art-psy-bystander", "t": "当局者迷：为什么劝别人一套一套", "m": "心理学 · 认知偏差 · 决策心理"}, {"id": "art-psy-dopamine", "t": "多巴胺：快乐的推手，也可能是陷阱", "m": "心理学 · 脑科学 · 神经递质"}, {"id": "art-hist-caocao", "t": "🎭 曹操：被演义写成奸雄的乱世枭雄", "m": "历史人物 · 三国 · 155—220"}, {"id": "art-hist-wuzetian", "t": "📿 武则天：中国唯一的女皇帝", "m": "历史人物 · 唐朝 · 624—705"}, {"id": "art-hist-sushi", "t": "🧠 苏轼：被贬官耽误的顶流吃货", "m": "历史人物 · 宋朝 · 1037—1101"}, {"id": "art-hist-genghis", "t": "⚡ 成吉思汗：马鞭抽出的世界版图", "m": "历史人物 · 蒙古 · 1162—1227"}, {"id": "art-geo-current", "t": "洋流：海洋里的「隐形传送带」", "m": "通识地理 · 海洋 · 洋流"}, {"id": "art-geo-volcano", "t": "火山与地震：地球的脾气", "m": "通识地理 · 地质 · 火山地震"}, {"id": "art-geo-desert", "t": "沙漠：不只有沙子，还有文明", "m": "通识地理 · 自然 · 沙漠"}, {"id": "art-psy-confirm", "t": "确认偏误：你只信你愿意信的", "m": "心理学 · 认知 · 确认偏误"}, {"id": "art-psy-anchoring", "t": "锚定效应：第一个数字绑架了你", "m": "心理学 · 认知 · 锚定效应"}, {"id": "art-psy-conformity", "t": "从众效应：大家都跳你跳不跳", "m": "心理学 · 社会 · 从众效应"}, {"id": "art-psy-sunkcost", "t": "沉没成本：已经亏的，别再赔上未来", "m": "心理学 · 决策 · 沉没成本"}, {"id": "art-psy-mandela", "t": "曼德拉效应：为什么我们都记错了", "m": "心理学 · 记忆 · 曼德拉效应"}, {"id": "art-psy-dunning", "t": "达克效应：越不懂越自信", "m": "心理学 · 认知 · 达克效应"}, {"id": "art-poem-shijing", "t": "《诗经》：三千年前的民歌有多野", "m": "古诗词 · 先秦 · 诗经"}, {"id": "art-poem-tang", "t": "唐诗为什么封神：盛唐的那口气", "m": "古诗词 · 唐 · 唐诗"}, {"id": "art-poem-songci", "t": "宋词：中国人的另一种浪漫", "m": "古诗词 · 宋 · 宋词"}, {"id": "art-poem-sushi", "t": "苏轼：一个被贬官耽误的吃货顶流", "m": "古诗词 · 宋 · 苏轼"}, {"id": "art-eq-basics", "t": "高情商的本质：让别人舒服，也不委屈自己", "m": "情商沟通 · 认知 · 高情商"}, {"id": "art-eq-nvc", "t": "非暴力沟通：把「你总是」换成「我感到」", "m": "情商沟通 · 沟通 · 非暴力沟通"}, {"id": "art-eq-upmanage", "t": "职场向上管理：让老板放心把事交给你", "m": "情商沟通 · 职场 · 向上管理"}, {"id": "art-eq-boundary", "t": "职场边界感：情绪劳动与体面拒绝", "m": "情商沟通 · 职场 · 边界感"}, {"id": "art-eq-icebreak", "t": "闲聊与破冰：把尴尬变成关系的起点", "m": "情商沟通 · 沟通 · 破冰"}, {"id": "art-hist-wangyangming", "t": "🖌️ 王阳明：知行合一的半个圣人", "m": "历史人物 · 明朝 · 1472—1529"}, {"id": "art-hist-napoleon", "t": "🗽 拿破仑：矮个子搅动欧洲的天才", "m": "历史人物 · 法国 · 1769—1821"}, {"id": "art-hist-einstein", "t": "💡 爱因斯坦：用脑子改写宇宙的人", "m": "历史人物 · 科学 · 1879—1955"}, {"id": "art-geo-climate", "t": "气候：地球为什么有时候冷、有时候热", "m": "自然地理 · 气候 · 冷暖周期"}, {"id": "art-geo-population", "t": "人口：70亿人是怎么「长」出来的", "m": "人文地理 · 人口 · 增长曲线"}, {"id": "art-geo-urban", "t": "城市：人类为什么越聚越多", "m": "人文地理 · 城市 · 都市圈"}, {"id": "art-psy-fear", "t": "恐惧：你怕的到底是老虎，还是你脑子里的剧本", "m": "心理学 · 情绪 · 恐惧"}, {"id": "art-psy-habit", "t": "习惯：你立flag必倒，是因为搞错了「起点」", "m": "心理学 · 行为 · 习惯回路"}, {"id": "art-psy-relationship", "t": "亲密关系：为什么越爱的人，越能把你气哭", "m": "心理学 · 关系 · 亲密关系"}, {"id": "art-psy-reactance", "t": "阻抗效应：你越逼我，我越不做", "m": "心理学 · 动机 · 阻抗效应"}, {"id": "art-psy-prophecy", "t": "自我实现预言：你觉得会搞砸，就真的搞砸了", "m": "心理学 · 认知 · 自我实现预言"}, {"id": "art-psy-zeigarnik", "t": "蔡加尼克效应：没做完的事总在脑子里转", "m": "心理学 · 记忆 · 蔡加尼克效应"}, {"id": "art-psy-carnegie-communication", "t": "卡耐基：真正的口才，是让别人愿意听你说话", "m": "卡耐基 · 口才 · 人际沟通"}, {"id": "art-psy-survivor", "t": "幸存者偏差：你看到的成功，都是没失败的", "m": "心理学 · 认知 · 幸存者偏差"}, {"id": "art-psy-spotlight", "t": "聚光灯效应：你以为全世界都在看你，其实没有", "m": "心理学 · 社会 · 聚光灯效应"}, {"id": "art-poem-chuci", "t": "《楚辞》：中国文学的浪漫鼻祖", "m": "古诗词 · 战国 · 楚辞"}, {"id": "art-poem-liqingzhao", "t": "李清照：千古第一才女的爱与愁", "m": "古诗词 · 宋 · 李清照"}, {"id": "art-poem-yuanqu", "t": "元曲：元代的「流行歌」长什么样", "m": "古诗词 · 元 · 元曲"}, {"id": "art-eq-relationship", "t": "职场关系：别把同事处成敌人", "m": "情商沟通 · 职场 · 人际关系"}, {"id": "art-eq-feedback", "t": "向上反馈：怎么提意见不挨骂", "m": "情商沟通 · 职场 · 向上反馈"}, {"id": "art-eq-conflict", "t": "冲突处理：把火药味变成推进力", "m": "情商沟通 · 职场 · 冲突管理"}, {"id": "art-sport-hyrox-what", "t": "什么是 HYROX：把跑步和撸铁打包成一场全球统考", "m": "运动健康 · 健身赛事 · HYROX"}, {"id": "art-sport-hyrox-stations", "t": "HYROX 的 8 个关卡：每一站从哪到哪、多少分钟、怎么操作", "m": "运动健康 · 健身赛事 · HYROX 关卡"}, {"id": "art-sport-hyrox-train", "t": "想跑 HYROX？拿时间数据倒推，训练往这四个方向走", "m": "运动健康 · 训练 · HYROX"}, {"id": "art-sport-split-ppl", "t": "三分化训练（推拉腿）：撸铁老手的高效排班", "m": "运动健康 · 撸铁 · 三分化"}, {"id": "art-sport-split-push", "t": "谭成义三分化·推日：把胸肩三头炸透", "m": "运动健康 · 撸铁 · 推日"}, {"id": "art-sport-split-pull-leg", "t": "谭成义三分化·拉日与腿日：背腿后链全收", "m": "运动健康 · 撸铁 · 拉日/腿日"}, {"id": "art-sport-abs", "t": "高效练腹肌：看得见靠练，更靠薄", "m": "运动健康 · 撸铁 · 腹肌"}, {"id": "art-sport-hypertrophy", "t": "撸铁增肌的底层逻辑：别和重量死磕", "m": "运动健康 · 撸铁 · 增肌原理"}, {"id": "art-sport-flatfoot-cause", "t": "扁平足是怎么长出来的：足弓塌掉的根", "m": "运动健康 · 足踝 · 扁平足成因"}, {"id": "art-sport-flatfoot-rehab", "t": "扁平足康复：不是垫个鞋垫就完事", "m": "运动健康 · 康复 · 扁平足"}, {"id": "art-sport-arch-collapse", "t": "足弓内塌的连锁反应：从脚歪到骨盆一路歪", "m": "运动健康 · 力线 · 连锁反应"}, {"id": "art-sport-bowlegs", "t": "O型腿：不只是不好看，是力线全乱了", "m": "运动健康 · 腿型 · O型腿"}, {"id": "art-sport-pelvis", "t": "骨盆代偿：你的腰疼，源头可能在脚", "m": "运动健康 · 骨盆 · 代偿"}, {"id": "art-sport-gait", "t": "步态异常：你走路的样子，出卖了全身", "m": "运动健康 · 步态 · 自我观察"}, {"id": "art-sport-rehab-overview", "t": "运动康复总览：把身体当系统来修", "m": "运动健康 · 康复理念 · 总览"}];
+(function(){
+  'use strict';
+  var ART_CAT={'art-hist':'历史文明','art-geo':'地理世界','art-psy':'心理认知','art-eq':'心理认知','art-poem':'文学审美','art-sport':'运动健康','art-tech':'AI科技'};
+  function catOf(id){for(var k in ART_CAT){if(id.indexOf(k)===0)return ART_CAT[k];}return '其他';}
+  function tStr(){var d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
+  function yStr(){var d=new Date(Date.now()-864e5);return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
+  function load(k,def){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch(e){return def;}}
+  function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+
+  // 成长统计
+  var readSet=load('zs_read',['art-tech-llm','art-hist-qinshihuang','art-psy-procrastination','art-sport-hyrox-what','art-poem-shijing','art-geo-plate','art-eq-basics']);
+  var streak=load('zs_streak',38);var last=load('zs_last','');var t=tStr();
+  if(last!==t){if(last===yStr()){streak=streak+1;}else if(last===''){streak=38;}else{streak=1;}last=t;save('zs_streak',streak);save('zs_last',last);}
+  var total=ATLAS.length+77+38;
+  var level=Math.max(1,Math.floor(streak/7)+Math.floor(readSet.length/10));
+  function setT(id,x){var e=document.getElementById(id);if(e)e.textContent=x;}
+  setT('gStreak',streak);setT('gRead',readSet.length);setT('gTotal',total);setT('gLvl','Lv.'+level);
+
+  // 问候语
+  var h=new Date().getHours();var w='你好，泽少';if(h<6)w='夜深了，泽少';else if(h<12)w='早上好，泽少';else if(h<14)w='中午好，泽少';else if(h<18)w='下午好，泽少';else w='晚上好，泽少';
+  setT('gWave',w+' 👋');
+
+  // 知识地图卡片计数
+  ['tech','hist','geo','psy','poem','sport'].forEach(function(c){var n=ATLAS.filter(function(a){return catOf(a.id)===({tech:'AI科技',hist:'历史文明',geo:'地理世界',psy:'心理认知',poem:'文学审美',sport:'运动健康'}[c]);}).length;var e=document.getElementById('kmc-'+c);if(e)e.textContent=n+' 篇';});
+
+  // 今日进度
+  var todayData=load('zs_today',{d:'',items:[]});
+  if(todayData.d!==t){todayData={d:t,items:[]};save('zs_today',todayData);}
+  function renderToday(){var n=todayData.items.length;setT('gProgTxt',n+' / 3');var b=document.getElementById('gProgBar');if(b)b.style.width=Math.round(n/3*100)+'%';if(n>=3&&!todayData._c){todayData._c=true;save('zs_today',todayData);toast('🎉 今日三连达成，成长 +1！');}}
+  renderToday();
+  window.markToday=function(type){if(todayData.items.indexOf(type)<0){todayData.items.push(type);save('zs_today',todayData);renderToday();}};
+  window.markArtRead=function(id){if(readSet.indexOf(id)<0){readSet.push(id);save('zs_read',readSet);setT('gRead',readSet.length);}};
+
+  // 进度条 + 收藏 + 推荐
+  var barEl=document.createElement('div');barEl.className='read-bar';barEl.innerHTML='<i id="readBarFill"></i>';document.body.appendChild(barEl);
+  var favEl=document.createElement('button');favEl.className='art-fav';favEl.id='artFav';favEl.type='button';favEl.textContent='☆';document.body.appendChild(favEl);
+  var favSet=load('zs_fav',[]);
+  function updateBar(){var sc=document.querySelector('.screen.active');if(!sc)return;var max=sc.scrollHeight-sc.clientHeight;var p=max>0?sc.scrollTop/max:0;if(p>1)p=1;var f=document.getElementById('readBarFill');if(f)f.style.width=(p*100)+'%';}
+  function bindScroll(sec){if(!sec.dataset.sb){sec.dataset.sb='1';sec.addEventListener('scroll',updateBar,{passive:true});}updateBar();}
+  function updateFav(id){var faved=favSet.indexOf(id)>=0;favEl.style.display='grid';favEl.textContent=faved?'★':'☆';favEl.classList.toggle('on',faved);favEl.onclick=function(){var i=favSet.indexOf(id);if(i>=0){favSet.splice(i,1);favEl.textContent='☆';favEl.classList.remove('on');toast('已取消收藏');}else{favSet.push(id);favEl.textContent='★';favEl.classList.add('on');toast('⭐ 已收藏');}save('zs_fav',favSet);};}
+  function initArticle(sec,id){
+    if(sec.dataset.inited)return;sec.dataset.inited='1';
+    var art=sec.querySelector('article.lesson');if(!art)return;
+    if(art.querySelector('.art-rec'))return;
+    var idx=-1;for(var i=0;i<ATLAS.length;i++){if(ATLAS[i].id===id){idx=i;break;}}
+    if(idx<0)return;
+    var next=ATLAS[(idx+1)%ATLAS.length];
+    var same=ATLAS.filter(function(a){return a.id!==id&&catOf(a.id)===catOf(id);});
+    if(same.length<3){ATLAS.forEach(function(a){if(a.id!==id&&same.indexOf(a)<0&&catOf(a.id)!==catOf(id))same.push(a);});}
+    var rel=same.slice(0,3);
+    var Q=String.fromCharCode(39);
+    var html='<div class="art-rec"><div class="ar-h">下一篇 · 接着读</div>'
+      +'<a class="ar-next" onclick="goArt('+Q+next.id+Q+')"><span class="ar-ne">'+next.t+'</span><span class="ar-ng">'+catOf(next.id)+' · 阅读 →</span></a>'
+      +'<div class="ar-h">相关推荐</div><div class="ar-rel">';
+    rel.forEach(function(a){html+='<a class="ar-chip" onclick="goArt('+Q+a.id+Q+')">'+catOf(a.id)+' · '+a.t+'</a>';});
+    html+='</div></div>';
+    art.insertAdjacentHTML('beforeend',html);
+    markArtRead(id);
+  }
+  var obs=new MutationObserver(function(muts){muts.forEach(function(mu){if(mu.target.classList&&mu.target.classList.contains('active')){var id=mu.target.id||'';if(id.indexOf('art-')===0){updateFav(id);initArticle(mu.target,id);bindScroll(mu.target);}else{favEl.style.display='none';barEl.style.display='none';}}});});
+  document.querySelectorAll('.screen').forEach(function(s){obs.observe(s,{attributes:true,attributeFilter:['class']});});
+  var cur=document.querySelector('.screen.active');if(cur&&cur.id&&cur.id.indexOf('art-')===0){updateFav(cur.id);initArticle(cur,cur.id);bindScroll(cur);}
+})();
 </script>
 </body>
 </html>
