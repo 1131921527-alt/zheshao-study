@@ -397,6 +397,33 @@ body{font-family:var(--font);background:var(--body-bg);color:var(--text-1);-webk
 .badge.on .b-name{color:var(--gold)}
 .badge.on:before{content:"✅";position:absolute;top:10px;right:10px;font-size:13px}
 .badge.on:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,106,.14),transparent 60%);pointer-events:none}
+
+/* ===== V2.1 隐藏内容生产工作台（默认不可见，仅长按头像/三击页脚触发） ===== */
+#adminModal{position:fixed;inset:0;z-index:60;display:none;background:rgba(4,7,12,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+#adminModal.show{display:flex;align-items:flex-end;justify-content:center}
+#adminModal .adm-sheet{width:100%;max-width:540px;background:var(--surface);border-radius:18px 18px 0 0;border-top:1px solid var(--border);max-height:92vh;overflow:auto;-webkit-overflow-scrolling:touch;padding:18px 18px calc(26px + env(safe-area-inset-bottom))}
+@keyframes admUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+#adminModal.show .adm-sheet{animation:admUp .3s cubic-bezier(.2,.8,.2,1)}
+.adm-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.adm-h h3{font-size:16px;font-weight:800;color:var(--text-1);margin:0}
+.adm-h .adm-x{font-size:24px;line-height:1;color:var(--text-3);cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;flex:none}
+.adm-h .adm-x:active{background:var(--surface-2)}
+.adm-sub{font-size:11.5px;color:var(--text-3);margin:0 0 14px}
+.adm-fld{margin-bottom:12px}
+.adm-fld label{display:block;font-size:12px;color:var(--text-2);margin-bottom:5px;font-weight:700}
+.adm-fld input,.adm-fld select,.adm-fld textarea{width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;color:var(--text-1);font-size:14px;padding:11px 12px;font-family:var(--font);box-sizing:border-box;outline:none;-webkit-appearance:none;transition:border-color var(--t-fast)}
+.adm-fld textarea{resize:vertical;line-height:1.6}
+.adm-fld input:focus,.adm-fld textarea:focus,.adm-fld select:focus{border-color:var(--gold)}
+.adm-row{display:flex;gap:10px}
+.adm-row .adm-fld{flex:1;min-width:0}
+.adm-btns{display:flex;gap:10px;margin-top:4px}
+.adm-btn{flex:1;padding:13px 10px;border-radius:13px;border:none;font-size:14px;font-weight:800;font-family:var(--font);cursor:pointer;transition:transform var(--t-fast),opacity var(--t-fast);min-width:0}
+.adm-btn:active{transform:scale(.97)}
+.adm-gen{background:linear-gradient(135deg,var(--gold),var(--gold-hi));color:#1a1303}
+.adm-pub{background:var(--surface-2);color:var(--gold);border:1px solid var(--gold)!important}
+.adm-ghost{background:transparent;color:var(--text-2);border:1px solid var(--border)!important}
+.adm-tip{font-size:11px;color:var(--text-3);margin-top:12px;line-height:1.65}
+.adm-new{display:inline-block;margin-left:6px;font-size:10px;font-weight:800;color:#1a1303;background:var(--gold);border-radius:8px;padding:1px 6px;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -3915,6 +3942,63 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
   var cur=document.querySelector('.screen.active');if(cur&&cur.id&&cur.id.indexOf('art-')===0){updateFav(cur.id);initArticle(cur,cur.id);bindScroll(cur);}
 })();
 </script>
+<div id="adminModal">
+  <div class="adm-sheet">
+    <div class="adm-h"><h3>🛠 内容生产工作台</h3><div class="adm-x" onclick="admClose()">×</div></div>
+    <div class="adm-sub">隐藏入口 · 长按「我的」页头像，或三击页脚进入</div>
+    <div class="adm-fld">
+      <label>今天主题</label>
+      <input id="admTheme" placeholder="例如：AI Agent 最新发展" />
+    </div>
+    <div class="adm-row">
+      <div class="adm-fld">
+        <label>分类（知识文章用）</label>
+        <select id="admCat">
+          <option value="tech">AI科技</option>
+          <option value="hist">历史文明</option>
+          <option value="geo">地理世界</option>
+          <option value="psy">心理认知</option>
+          <option value="poem">文学审美</option>
+          <option value="sport">运动健康</option>
+        </select>
+      </div>
+      <div class="adm-fld">
+        <label>阅读时间(分钟)</label>
+        <input id="admMins" type="number" value="8" min="1" max="60" />
+      </div>
+    </div>
+    <div class="adm-fld">
+      <label>标题（自动生成，可改）</label>
+      <input id="admTitle" />
+    </div>
+    <div class="adm-fld">
+      <label>摘要</label>
+      <textarea id="admSummary" rows="2"></textarea>
+    </div>
+    <div class="adm-fld">
+      <label>正文（可手写，或点「一键生成草稿」填充模板）</label>
+      <textarea id="admBody" rows="8" placeholder="支持分节：用空行分段会自动转成段落"></textarea>
+    </div>
+    <div class="adm-fld">
+      <label>学习问题（每行一条）</label>
+      <textarea id="admQuiz" rows="3" placeholder="AI Agent 的核心定义是什么？"></textarea>
+    </div>
+    <div class="adm-btns">
+      <button class="adm-btn adm-gen" onclick="admGenerate()">✨ 一键生成草稿</button>
+      <button class="adm-btn adm-ghost" onclick="admCopyPrompt()">📋 复制提示词</button>
+    </div>
+    <div class="adm-btns">
+      <button class="adm-btn adm-pub" onclick="admPublish('ai')">发布到 AI动态</button>
+      <button class="adm-btn adm-pub" onclick="admPublish('know')">发布到 知识文章</button>
+    </div>
+    <div class="adm-btns">
+      <button class="adm-btn adm-ghost" onclick="admExport()">⬇ 导出 JSON</button>
+      <button class="adm-btn adm-ghost" onclick="admList()">📂 已生成(<span id="admCount">0</span>)</button>
+    </div>
+    <div class="adm-tip">生成内容保存在本机浏览器（localStorage），刷新不丢；想正式入库请「导出 JSON」后按 update-center.html 流程合并。不会改动站点现有文章，也不影响你的 XP / 等级 / 徽章。</div>
+  </div>
+</div>
+<script src="assets/admin.js"></script>
 </body>
 </html>
 
