@@ -301,6 +301,19 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 .dt-reward{margin-top:4px;padding:12px;text-align:center;font-size:14px;font-weight:900;color:#0d1220;background:linear-gradient(135deg,var(--gold),#ffd98a);border-radius:var(--r-md);box-shadow:0 4px 16px rgba(255,200,90,.25);display:none}
 .dt-reward.show{display:block;animation:pop .4s ease}
 @keyframes pop{0%{transform:scale(.92);opacity:0}100%{transform:scale(1);opacity:1}}
+/* REV-UPDATE-CENTER v1 */
+.upd-banner{margin:10px 20px 0;font-size:11.5px;color:var(--text-3);background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:12px;padding:8px 12px}
+.upd-card{margin:0 20px;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.upd-row{display:flex;align-items:center;gap:12px;padding:14px;text-decoration:none;color:inherit;border-bottom:1px solid var(--border)}
+.upd-row:last-child{border-bottom:0}
+.upd-row .ui{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:19px;flex:0 0 auto}
+.upd-row .uc{flex:1;min-width:0}
+.upd-row .ut{font-size:13px;font-weight:700;color:var(--text-1)}
+.upd-row .um{font-size:11px;color:var(--text-3);margin-top:3px}
+.upd-row .um b{color:var(--gold)}
+.upd-row .ua{font-size:12px;font-weight:800;color:var(--gold);flex:0 0 auto}
+.upd-row:active{background:rgba(255,255,255,.03)}
+.upd-note{font-size:11px;color:var(--text-3);margin:8px 20px 0;line-height:1.6}
 </style>
 </head>
 <body>
@@ -421,6 +434,26 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
           <a class="recent-row" onclick="goKnowSport()"><div class="ri">🏃</div><div class="rc"><div class="rt">运动健康专题</div><div class="rm">HYROX · 运动康复</div></div><div class="ra">›</div></a>
         </div>
 
+        <div class="section-title pad">🛠 每日更新中心 <a class="more" href="update-center.html">管理入口 →</a></div>
+        <div class="upd-card">
+          <a class="upd-row" href="ai-news/index.html">
+            <span class="ui" style="background:linear-gradient(135deg,#4F8DFF,#7C5CFF)">⚡</span>
+            <span class="uc"><span class="ut">AI 动态播报</span><span class="um">共 35 期 · 最后更新 <b>2026-07-24</b></span></span>
+            <span class="ua">去更新 →</span>
+          </a>
+          <a class="upd-row" href="knowledge/index.html">
+            <span class="ui" style="background:linear-gradient(135deg,#22c55e,#16a34a)">📚</span>
+            <span class="uc"><span class="ut">知识文章库</span><span class="um">35 篇深度 + 70 篇长文 · 最后更新 <b>2026-07-24</b></span></span>
+            <span class="ua">去更新 →</span>
+          </a>
+          <a class="upd-row" href="ielts/day78.html">
+            <span class="ui" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">🔤</span>
+            <span class="uc"><span class="ut">英语单词</span><span class="um">112 页（day01–day78 + Future 30 天）· 最后更新 <b>2026-07-24</b></span></span>
+            <span class="ua">去更新 →</span>
+          </a>
+        </div>
+        <div class="upd-note">想每天往这里加新内容？点右上「管理入口」看三步操作指南。</div>
+
         <div class="support home-support" id="supportHome">
           <h2>☕ 支持学习助手</h2>
           <p>如果这里对你有帮助，欢迎支持泽少继续把学习资料整理下去。</p>
@@ -437,9 +470,10 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
 
     <!-- 动态：直接展示文章列表 -->
     <section class="screen" id="s-news">
-      <div class="topbar" style="position:static"><div class="brand"><div class="logo">📰</div><div><div class="sub">每天一更</div><h1>AI动态播报</h1></div></div></div>
+      <div class="topbar" style="position:static"><div class="brand"><div class="logo">📰</div><div><div class="sub">AI 圈每天在发生什么</div><h1>AI动态播报</h1></div></div></div>
+      <div class="upd-banner">📌 最后更新：<b style="color:var(--gold)">2026-07-24</b> · 共 35 期 · 由 AI 助手自动整理，未每日强制更新</div>
       <div class="pad" style="margin-top:16px">
-        <a class="linkcard" href="ai-news/index.html"><div class="li">📰</div><div class="lc"><div class="t">查看全部历史</div><div class="d">共 35 期 · 每日更新</div></div><div class="arr">→</div></a>
+        <a class="linkcard" href="ai-news/index.html"><div class="li">📰</div><div class="lc"><div class="t">查看全部历史</div><div class="d">共 35 期 · 最后更新 2026-07-24</div></div><div class="arr">→</div></a>
         <div class="list" id="aiNewsList" style="margin-top:14px"></div>
 <script>
 (function(){
@@ -461,6 +495,7 @@ body{font-family:var(--font);background:#06090F;color:var(--text-1);-webkit-text
     <section class="screen" id="s-know">
       <!-- REV-GROWTH-KNOW v1 -->
       <div class="topbar" style="position:static"><div class="brand"><div class="logo">🧠</div><div><div class="sub">六大领域 · 自由探索</div><h1>知识地图</h1></div></div></div>
+      <div class="upd-banner">📌 最后更新：<b style="color:var(--gold)">2026-07-24</b> · 已收录 35 篇深度文章 + 70 篇长文，持续扩充中</div>
       <div class="pad" style="margin-top:16px">
         <div class="kmap-banner">🗺️ 把知识当成一片大陆去探索 —— 点一张卡片，钻进对应领域</div>
         <div class="kmap-grid">

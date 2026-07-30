@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日更新中心 · 泽少学习助手</title>
+<style>
+  :root{
+    --bg:#0d1220; --surface:#161d2e; --surface2:#1c2438; --border:#2a3450;
+    --text-1:#eef2fb; --text-2:#c2cbe0; --text-3:#8b97b4; --gold:#ffc85a; --gold-soft:rgba(255,200,90,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:radial-gradient(140% 120% at 50% -10%,#15203a 0%,var(--bg) 55%);
+    color:var(--text-1);line-height:1.65;padding:18px 14px 48px;max-width:560px;margin:0 auto}
+  .top{text-align:center;padding:14px 8px 18px}
+  .top .logo{font-size:34px}
+  .top h1{font-size:22px;font-weight:800;margin-top:6px;letter-spacing:.5px}
+  .top p{font-size:12.5px;color:var(--text-3);margin-top:6px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:14px;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--gold),#ff9d5a)}
+  .card.ai::before{background:linear-gradient(180deg,#4F8DFF,#7C5CFF)}
+  .card.know::before{background:linear-gradient(180deg,#22c55e,#16a34a)}
+  .card.word::before{background:linear-gradient(180deg,#f59e0b,#ef4444)}
+  .chead{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .cemoji{font-size:20px}
+  .ctitle{font-size:15.5px;font-weight:800}
+  .cstat{font-size:11.5px;color:var(--text-3);margin:2px 0 12px}
+  .cstat b{color:var(--gold)}
+  .step{display:flex;gap:10px;margin:9px 0;align-items:flex-start}
+  .num{flex:0 0 auto;width:22px;height:22px;border-radius:7px;background:var(--gold-soft);color:var(--gold);
+    font-size:12px;font-weight:800;display:grid;place-items:center}
+  .stxt{font-size:13px;color:var(--text-2)}
+  .stxt code{background:#0c1120;border:1px solid var(--border);border-radius:6px;padding:1px 6px;
+    font-size:12px;color:#9fd0ff;font-family:ui-monospace,Consolas,monospace}
+  .stxt b{color:var(--text-1)}
+  .go{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:9px 14px;border-radius:11px;
+    background:linear-gradient(135deg,var(--gold),#ffd98a);color:#0d1220;font-weight:800;font-size:13px;
+    text-decoration:none}
+  .go.ghost{background:transparent;border:1px solid var(--border);color:var(--text-1)}
+  .note{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:14px;margin-top:6px}
+  .note h3{font-size:13px;color:var(--gold);margin-bottom:8px}
+  .note ul{margin:0;padding-left:18px}
+  .note li{font-size:12.5px;color:var(--text-2);margin:6px 0}
+  .note li code{background:#0c1120;border:1px solid var(--border);border-radius:5px;padding:0 5px;font-size:11.5px;color:#9fd0ff}
+  .back{display:block;text-align:center;margin-top:18px;color:var(--text-3);font-size:12.5px;text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="logo">🛠️</div>
+    <h1>每日更新中心</h1>
+    <p>三个内容管道，每天往里加新东西 · 最后核对：2026-07-24</p>
+  </div>
+
+  <!-- AI 动态 -->
+  <div class="card ai">
+    <div class="chead"><span class="cemoji">⚡</span><span class="ctitle">AI 动态播报</span></div>
+    <div class="cstat">当前：共 <b>35 期</b> · 最后更新 <b>2026-07-24</b></div>
+    <div class="step"><span class="num">1</span><span class="stxt">编辑 <code>scripts/ai-news-today.json</code>，填好 <b>date</b>（如 2026-07-25）和 <b>items</b> 数组（每条含 badge、title、summary、source、url）。</span></div>
+    <div class="step"><span class="num">2</span><span class="stxt">运行 <code>python scripts/gen_ai_news.py</code>，脚本自动生成 <code>ai-news/ai-news-日期.html</code> 并刷新列表。</span></div>
+    <div class="step"><span class="num">3</span><span class="stxt">幂等：当天文件已存在就跳过，不会重复生成。</span></div>
+    <a class="go" href="ai-news/index.html">打开 AI 动态列表 →</a>
+  </div>
+
+  <!-- 知识文章 -->
+  <div class="card know">
+    <div class="chead"><span class="cemoji">📚</span><span class="ctitle">知识文章库</span></div>
+    <div class="cstat">当前：<b>35 篇</b>深度文章 + <b>70 篇</b>长文 · 最后更新 <b>2026-07-24</b></div>
+    <div class="step"><span class="num">A</span><span class="stxt"><b>批量长文</b>：在 <code>scripts/gen_knowledge.py</code> 的 <code>ARTICLES</code> 列表里加新条目，重跑脚本注入 <code>index.html</code>。</span></div>
+    <div class="step"><span class="num">B</span><span class="stxt"><b>单篇独立</b>：把一篇 <code>.html</code> 放进 <code>knowledge/articles/</code>，再在 <code>knowledge/index.html</code> 加一条目录链接即可。</span></div>
+    <a class="go" href="knowledge/index.html">打开知识文章库 →</a>
+  </div>
+
+  <!-- 英语单词 -->
+  <div class="card word">
+    <div class="chead"><span class="cemoji">🔤</span><span class="ctitle">英语单词</span></div>
+    <div class="cstat">当前：<b>112 页</b>（day01–day78 + Future 30 天）· 最后更新 <b>2026-07-24</b></div>
+    <div class="step"><span class="num">1</span><span class="stxt">运行 <code>python scripts/gen_ielts_day.py</code>。</span></div>
+    <div class="step"><span class="num">2</span><span class="stxt">脚本自动找下一个 <b>dayNN</b> 序号，从词库取 <b>20 个</b>还没出现过的词，生成当天页面并更新 <code>ielts/index.html</code>。</span></div>
+    <div class="step"><span class="num">3</span><span class="stxt">幂等：目标 day 页面已存在就跳过，已用过的词不再重复。</span></div>
+    <a class="go" href="ielts/day78.html">打开最新单词页 →</a>
+  </div>
+
+  <div class="note">
+    <h3>⚠️ 加完内容别忘了这步（否则手机看到旧版）</h3>
+    <ul>
+      <li>凡是改了 <code>index.html</code> 或 <code>assets/</code> 下的前端文件，必须把 <code>sw.js</code> 里的 <code>const CACHE='zheshao-vXX'</code> 版本号 <b>加一档</b>。</li>
+      <li>原因：手机端 service worker 会缓存旧页面，版本号不变浏览器一直喂旧缓存。</li>
+      <li>最后 <code>git push</code> 到 main 分支，GitHub Pages 自动构建上线。</li>
+    </ul>
+  </div>
+
+  <a class="back" href="index.html">← 返回泽少学习助手首页</a>
+</body>
+</html>
