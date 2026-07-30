@@ -1,7 +1,8 @@
-/* ===== V2.1 隐藏内容生产工作台（泽少学习中心） =====
+/* ===== V2.2 内容管理中心（泽少学习中心 · 隐藏入口） =====
  * 入口：长按「我的」页头像，或三击页脚版本号
- * 功能：输入主题 → 一键生成草稿 → 发布到 AI动态 / 知识文章
- * 数据：存 localStorage(zs_custom)，刷新不丢，不影响 XP/等级/徽章
+ * 功能：生成草稿 → 存草稿 / 预览 → 确认发布；草稿箱 + 历史管理 + 今日生产联动
+ * 数据：localStorage(zs_custom) = [{id,type,title,summary,content,category,date,status,cat,mins,quiz}]
+ *       兼容 V2.1 旧格式（body/quiz/cat 无 status）自动迁移；刷新不丢，不影响 XP/等级/徽章
  */
 (function () {
   'use strict';
@@ -16,10 +17,188 @@
   function $(id) { return document.getElementById(id); }
 
   var CAT = { tech: 'AI科技', hist: '历史文明', geo: '地理世界', psy: '心理认知', poem: '文学审美', sport: '运动健康' };
+  var LABEL2KEY = {}; Object.keys(CAT).forEach(function (k) { LABEL2KEY[CAT[k]] = k; });
   function catLabel(c) { return CAT[c] || '知识'; }
   function todayStr() { var d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  function genId(type) { return (type === 'know' ? 'art-custom-' : 'ai-custom-') + Date.now() + '-' + Math.floor(Math.random() * 1e4); }
 
-  // 一键生成草稿（模板法，离线可用；也可复制提示词去真实 AI 生成）
+  // —— 数据结构规范化 + 旧数据迁移 ——
+  function normItem(it) {
+    if (!it || typeof it !== 'object') it = {};
+    var type = it.type || (it.cat ? 'know' : 'ai');
+    var catKey = it.cat || (it.category ? (LABEL2KEY[it.category] || 'tech') : 'tech');
+    var content = (it.content != null) ? it.content : (it.body != null ? it.body : '');
+    var st = (it.status === 'draft' || it.status === 'review' || it.status === 'published') ? it.status : 'published';
+    return {
+      id: it.id || genId(type),
+      type: type,
+      title: it.title || '未命名内容',
+      summary: it.summary || '',
+      content: content,
+      quiz: Array.isArray(it.quiz) ? it.quiz : (it.quiz ? [it.quiz] : []),
+      category: it.category || catLabel(catKey),
+      cat: catKey,
+      date: it.date || todayStr(),
+      status: st,
+      mins: it.mins || 8
+    };
+  }
+  function loadData() { var d = load('zs_custom', []); return (Array.isArray(d) ? d : []).map(normItem); }
+  function saveData(items) { save('zs_custom', items); }
+
+  // —— 正文渲染：含 HTML 则原样，否则按段落包裹 ——
+  function bodyHtml(c) {
+    var s = c.content || '';
+    if (/<[a-z][\s\S]*>/i.test(s)) return s;
+    var lines = s.split(/\n{2,}/).map(function (p) { return p.trim(); }).filter(Boolean);
+    if (!lines.length) return '<p class="lead">' + esc(c.summary || '') + '</p>';
+    return lines.map(function (p) { return '<p>' + esc(p).replace(/\n/g, '<br>') + '</p>'; }).join('');
+  }
+
+  function knowledgeHTML(c) {
+    return '<article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab(\'s-know\')">← 返回知识中心</a>'
+      + '<header class="art-head"><div class="ah-meta">' + esc(c.category) + ' · 自定义</div><h1>' + esc(c.title) + '</h1></header>'
+      + '<div class="body"><p class="lead">' + esc(c.summary) + '</p>' + bodyHtml(c)
+      + '<div class="summary"><span class="st">📌 学习问题</span><ul>' + c.quiz.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ul></div>'
+      + '</div><div class="afoot">泽少学习助手<br>每天进步一点点</div></article>';
+  }
+  function aiHTML(c) {
+    return '<article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab(\'s-news\')">← 返回 AI动态</a>'
+      + '<header class="art-head"><div class="ah-meta">AI动态 · 自定义</div><h1>' + esc(c.title) + '</h1></header>'
+      + '<div class="body"><p class="lead">' + esc(c.summary) + '</p>' + bodyHtml(c)
+      + '<div class="summary"><span class="st">📌 学习问题</span><ul>' + c.quiz.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ul></div>'
+      + '</div><div class="afoot">泽少学习助手<br>每天进步一点点</div></article>';
+  }
+
+  function host() { var a = document.querySelector('.screen'); return a ? a.parentNode : document.body; }
+
+  function injectOne(c) {
+    if (document.getElementById(c.id)) return;
+    if (c.type === 'know') {
+      var sec = document.createElement('section'); sec.className = 'screen'; sec.id = c.id; sec.innerHTML = knowledgeHTML(c);
+      host().appendChild(sec);
+      if (typeof ATLAS !== 'undefined' && !ATLAS.some(function (a) { return a.id === c.id; })) ATLAS.push({ id: c.id, t: c.title, m: c.category });
+      var kl = $('klist-' + c.cat);
+      if (kl) {
+        var row = document.createElement('a'); row.className = 'krow'; row.setAttribute('onclick', 'goArt(\'' + c.id + '\')');
+        row.innerHTML = '<div><div class="kt">' + esc(c.title) + '<span class="adm-new">新</span></div><div class="km">' + esc(c.category) + ' · 自定义</div></div><div class="arr">→</div>';
+        kl.appendChild(row);
+      }
+      var cnt = $('kmc-' + c.cat); if (cnt) { var m = /^(\d+)/.exec(cnt.textContent); if (m) cnt.textContent = (parseInt(m[1], 10) + 1) + ' 篇'; }
+    } else {
+      var s2 = document.createElement('section'); s2.className = 'screen'; s2.id = c.id; s2.innerHTML = aiHTML(c);
+      host().appendChild(s2);
+      var list = $('aiNewsList');
+      if (list) {
+        var a = document.createElement('a'); a.className = 'linkcard'; a.href = 'javascript:void(0)'; a.setAttribute('onclick', 'goArt(\'' + c.id + '\')');
+        a.innerHTML = '<div class="li">⚡</div><div class="lc"><div class="t">' + esc(c.title) + '<span class="adm-new">新</span></div><div class="d">' + esc(c.date) + ' · 自定义生成</div></div><div class="arr">→</div>';
+        list.insertBefore(a, list.firstChild);
+      }
+    }
+  }
+
+  // —— 草稿状态/今日生产 渲染 ——
+  function badge(st) {
+    if (st === 'draft') return '<span class="adm-badge b-draft">📝 草稿</span>';
+    if (st === 'review') return '<span class="adm-badge b-review">👀 待审核</span>';
+    return '<span class="adm-badge b-pub">✅ 已发布</span>';
+  }
+  function dayGroup(dateStr) {
+    var t = todayStr(); if (dateStr === t) return '今天';
+    var y = new Date(); y.setDate(y.getDate() - 1);
+    var ys = y.getFullYear() + '-' + (y.getMonth() + 1) + '-' + y.getDate();
+    if (dateStr === ys) return '昨天';
+    return '更早';
+  }
+  function renderList() {
+    var box = $('admDraftList'); if (!box) return;
+    var data = loadData();
+    if (!data.length) { box.innerHTML = '<div class="adm-empty">还没有内容。填个主题 → 一键生成草稿 → 存草稿 / 预览发布。</div>'; return; }
+    var groups = { '今天': [], '昨天': [], '更早': [] };
+    data.forEach(function (c) { groups[dayGroup(c.date)].push(c); });
+    var order = ['今天', '昨天', '更早'];
+    var html = '';
+    order.forEach(function (g) {
+      if (!groups[g].length) return;
+      html += '<div class="adm-group-h">' + g + '（' + groups[g].length + '）</div>';
+      groups[g].forEach(function (c) {
+        var typ = c.type === 'ai' ? 'AI动态' : '知识文章';
+        var acts = '<button class="adm-dbtn" onclick="admEdit(\'' + c.id + '\')">编辑</button>'
+          + '<button class="adm-dbtn" onclick="admPreviewById(\'' + c.id + '\',\'' + c.type + '\')">预览</button>';
+        if (c.status === 'published') {
+          acts += '<button class="adm-dbtn pri" onclick="admRepublish(\'' + c.id + '\')">重发</button>';
+        } else {
+          acts += '<button class="adm-dbtn pri" onclick="admRepublish(\'' + c.id + '\')">发布</button>';
+        }
+        acts += '<button class="adm-dbtn danger" onclick="admDelete(\'' + c.id + '\')">删除</button>';
+        html += '<div class="adm-ditem" data-status="' + c.status + '">'
+          + '<div class="adm-dtop"><span class="adm-dtitle">' + esc(c.title) + '</span>' + badge(c.status) + '</div>'
+          + '<div class="adm-dmeta">' + typ + ' · ' + esc(c.category) + ' · ' + esc(c.date) + '</div>'
+          + '<div class="adm-dacts">' + acts + '</div></div>';
+      });
+    });
+    box.innerHTML = html;
+  }
+  function renderToday() {
+    var data = loadData();
+    var t = todayStr();
+    var ai = data.filter(function (x) { return x.type === 'ai' && x.status === 'published' && x.date === t; }).length;
+    var know = data.filter(function (x) { return x.type === 'know' && x.status === 'published' && x.date === t; }).length;
+    if ($('admTcAi')) $('admTcAi').textContent = Math.min(ai, 1) + '/1';
+    if ($('admTcKnow')) $('admTcKnow').textContent = Math.min(know, 1) + '/1';
+    if ($('admTcWord')) $('admTcWord').textContent = '0/20';
+    var done = $('admTodayDone');
+    if (done) done.style.display = (ai >= 1 && know >= 1) ? 'block' : 'none';
+  }
+
+  // —— 表单 <-> 数据 ——
+  function formItem() {
+    return {
+      title: $('admTitle').value.trim(),
+      summary: $('admSummary').value.trim(),
+      content: $('admBody').value.trim(),
+      quiz: $('admQuiz').value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean),
+      cat: $('admCat').value,
+      mins: parseInt($('admMins').value, 10) || 8,
+      theme: $('admTheme').value.trim()
+    };
+  }
+  function clearForm() {
+    $('admTheme').value = ''; $('admTitle').value = ''; $('admSummary').value = '';
+    $('admBody').value = ''; $('admQuiz').value = ''; $('admCat').value = 'tech'; $('admMins').value = '8';
+  }
+  function makeItem(f, type, status, id) {
+    return normItem({
+      id: id || genId(type),
+      type: type,
+      title: f.title || (f.theme || '未命名主题'),
+      summary: f.summary,
+      content: f.content,
+      quiz: f.quiz,
+      cat: f.cat,
+      category: catLabel(f.cat),
+      date: todayStr(),
+      status: status,
+      mins: f.mins
+    });
+  }
+  function upsert(it) {
+    var data = loadData();
+    var idx = -1;
+    for (var i = 0; i < data.length; i++) { if (data[i].id === it.id) { idx = i; break; } }
+    if (idx >= 0) {
+      if (data[idx].status === 'published') { it.id = genId(it.type); data.push(it); }
+      else { data[idx] = it; }
+    } else { data.push(it); }
+    saveData(data);
+  }
+
+  // —— 入口/关闭 ——
+  function openAdmin() { $('adminModal').classList.add('show'); renderList(); renderToday(); }
+  function closeAdmin() { $('adminModal').classList.remove('show'); }
+  window.admOpen = openAdmin; window.admClose = closeAdmin;
+
+  // —— 一键生成草稿（模板法，离线可用） ——
   function genDraft(theme) {
     theme = (theme || '').trim() || '今日主题';
     var titles = [
@@ -45,55 +224,6 @@
     ];
     return { title: title, summary: summary, body: body, quiz: quiz };
   }
-
-  function knowledgeHTML(c) {
-    return '<article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab(\'s-know\')">← 返回知识中心</a>'
-      + '<header class="art-head"><div class="ah-meta">' + esc(catLabel(c.cat)) + ' · 自定义</div><h1>' + esc(c.title) + '</h1></header>'
-      + '<div class="body"><p class="lead">' + esc(c.summary) + '</p>' + c.body
-      + '<div class="summary"><span class="st">📌 学习问题</span><ul>' + c.quiz.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ul></div>'
-      + '</div><div class="afoot">泽少学习助手<br>每天进步一点点</div></article>';
-  }
-  function aiHTML(c) {
-    return '<article class="lesson"><a class="back" href="javascript:void(0)" onclick="goTab(\'s-news\')">← 返回 AI动态</a>'
-      + '<header class="art-head"><div class="ah-meta">AI动态 · 自定义</div><h1>' + esc(c.title) + '</h1></header>'
-      + '<div class="body"><p class="lead">' + esc(c.summary) + '</p>' + c.body
-      + '<div class="summary"><span class="st">📌 学习问题</span><ul>' + c.quiz.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ul></div>'
-      + '</div><div class="afoot">泽少学习助手<br>每天进步一点点</div></article>';
-  }
-
-  function host() { var a = document.querySelector('.screen'); return a ? a.parentNode : document.body; }
-
-  function injectOne(c) {
-    if (document.getElementById(c.id)) return;
-    if (c.type === 'know') {
-      var sec = document.createElement('section'); sec.className = 'screen'; sec.id = c.id; sec.innerHTML = knowledgeHTML(c);
-      host().appendChild(sec);
-      if (typeof ATLAS !== 'undefined' && !ATLAS.some(function (a) { return a.id === c.id; })) ATLAS.push({ id: c.id, t: c.title, m: catLabel(c.cat) });
-      var kl = $('klist-' + c.cat);
-      if (kl) {
-        var row = document.createElement('a'); row.className = 'krow'; row.setAttribute('onclick', 'goArt(\'' + c.id + '\')');
-        row.innerHTML = '<div><div class="kt">' + esc(c.title) + '<span class="adm-new">新</span></div><div class="km">' + esc(catLabel(c.cat)) + ' · 自定义</div></div><div class="arr">→</div>';
-        kl.appendChild(row);
-      }
-      var cnt = $('kmc-' + c.cat); if (cnt) { var m = /^(\d+)/.exec(cnt.textContent); if (m) cnt.textContent = (parseInt(m[1], 10) + 1) + ' 篇'; }
-    } else {
-      var s2 = document.createElement('section'); s2.className = 'screen'; s2.id = c.id; s2.innerHTML = aiHTML(c);
-      host().appendChild(s2);
-      var list = $('aiNewsList');
-      if (list) {
-        var a = document.createElement('a'); a.className = 'linkcard'; a.href = 'javascript:void(0)'; a.setAttribute('onclick', 'goArt(\'' + c.id + '\')');
-        a.innerHTML = '<div class="li">⚡</div><div class="lc"><div class="t">' + esc(c.title) + '<span class="adm-new">新</span></div><div class="d">' + esc(c.date) + ' · 自定义生成</div></div><div class="arr">→</div>';
-        list.insertBefore(a, list.firstChild);
-      }
-    }
-  }
-
-  function injectAll() { var data = load('zs_custom', []); data.forEach(injectOne); updateCount(); }
-  function updateCount() { var n = load('zs_custom', []).length; var e = $('admCount'); if (e) e.textContent = n; }
-  function openAdmin() { $('adminModal').classList.add('show'); updateCount(); }
-  function closeAdmin() { $('adminModal').classList.remove('show'); }
-  window.admOpen = openAdmin; window.admClose = closeAdmin;
-
   window.admGenerate = function () {
     var th = $('admTheme').value;
     if (!th.trim()) { toast('先填「今天主题」'); return; }
@@ -102,7 +232,8 @@
     $('admSummary').value = d.summary;
     $('admBody').value = d.body.replace(/<[^>]+>/g, '');
     $('admQuiz').value = d.quiz.join('\n');
-    toast('已生成草稿，可继续润色');
+    editingId = null; editingIdType = null;
+    toast('已生成草稿，可继续润色或预览发布');
   };
   window.admCopyPrompt = function () {
     var th = $('admTheme').value || '今日主题';
@@ -118,27 +249,106 @@
       navigator.clipboard.writeText(prompt).then(function () { toast('提示词已复制，去 AI 工具生成正文'); });
     } else { toast('提示词已生成，请手动复制'); }
   };
-  window.admPublish = function (type) {
-    var th = $('admTheme').value.trim();
-    var title = $('admTitle').value.trim();
-    var summary = $('admSummary').value.trim();
-    var bodyRaw = $('admBody').value.trim();
-    var quiz = $('admQuiz').value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
-    if (!th) { toast('请先填「今天主题」'); return; }
-    if (!title) { toast('标题不能为空'); return; }
-    var bodyHtml = bodyRaw.split(/\n{2,}/).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
-    if (!bodyHtml) { bodyHtml = '<p class="lead">' + esc(summary) + '</p>'; }
-    if (!quiz.length) { quiz = ['回顾一下今天这篇《' + title + '》最打动你的一点？']; }
-    var cat = $('admCat').value;
-    var id = (type === 'know' ? 'art-custom-' : 'ai-custom-') + Date.now();
-    var item = { id: id, type: type, cat: cat, date: todayStr(), title: title, summary: summary, body: bodyHtml, quiz: quiz, mins: parseInt($('admMins').value, 10) || 8 };
-    var data = load('zs_custom', []); data.push(item); save('zs_custom', data);
-    injectOne(item);
-    toast(type === 'know' ? '已发布到知识文章 ✓' : '已发布到 AI动态 ✓');
-    closeAdmin();
+
+  // —— 草稿 / 预览 / 发布 ——
+  var editingId = null, editingIdType = null;
+  var pending = null;
+
+  window.admSaveDraft = function () {
+    var f = formItem();
+    if (!f.title && !f.theme) { toast('请先填主题或标题'); return; }
+    var type = editingIdType || 'know';
+    var it = makeItem(f, type, 'draft', editingId);
+    upsert(it);
+    editingId = it.id; editingIdType = it.type;
+    renderList(); renderToday();
+    toast('已存草稿 📝');
   };
+  window.admPreview = function (type) {
+    var f = formItem();
+    if (!f.title) { toast('标题不能为空，可点「一键生成草稿」'); return; }
+    pending = { type: type, id: editingId, f: f };
+    renderPreview();
+    $('admPreview').classList.add('show');
+  };
+  window.admPreviewById = function (id, type) {
+    var data = loadData(); var it = null;
+    for (var i = 0; i < data.length; i++) { if (data[i].id === id) { it = data[i]; break; } }
+    if (!it) return;
+    editingId = it.id; editingIdType = it.type;
+    $('admTheme').value = ''; $('admTitle').value = it.title; $('admSummary').value = it.summary;
+    $('admBody').value = it.content; $('admQuiz').value = it.quiz.join('\n');
+    $('admCat').value = it.cat || 'tech'; $('admMins').value = it.mins || 8;
+    pending = { type: type || it.type, id: it.id, f: formItem() };
+    renderPreview();
+    $('admPreview').classList.add('show');
+  };
+  function renderPreview() {
+    var f = pending.f;
+    var meta = (pending.type === 'ai' ? 'AI动态' : '知识文章') + ' · ' + catLabel(f.cat) + ' · 约 ' + (f.mins || 8) + ' 分钟';
+    if ($('admPrevMeta')) $('admPrevMeta').textContent = meta;
+    var html = '<h2 style="margin-top:0">' + esc(f.title || '(无标题)') + '</h2>';
+    if (f.summary) html += '<p class="lead">' + esc(f.summary) + '</p>';
+    html += bodyHtml(f);
+    if (f.quiz && f.quiz.length) html += '<div class="summary"><span class="st">📌 学习问题</span><ul>' + f.quiz.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ul></div>';
+    if ($('admPrevBody')) $('admPrevBody').innerHTML = html;
+  }
+  window.admConfirmPublish = function () {
+    if (!pending) return;
+    var it = makeItem(pending.f, pending.type, 'published', pending.id);
+    upsert(it);
+    injectOne(it);
+    renderList(); renderToday();
+    closePreview();
+    toast('已发布 ✓');
+  };
+  window.admSaveAsReview = function () {
+    if (!pending) return;
+    var it = makeItem(pending.f, pending.type, 'review', pending.id);
+    upsert(it);
+    renderList(); renderToday();
+    closePreview();
+    toast('已存为待审核 👀');
+  };
+  window.admClosePreview = function () { closePreview(); };
+  function closePreview() { var p = $('admPreview'); if (p) p.classList.remove('show'); }
+
+  window.admEdit = function (id) {
+    var data = loadData(); var it = null;
+    for (var i = 0; i < data.length; i++) { if (data[i].id === id) { it = data[i]; break; } }
+    if (!it) return;
+    editingId = it.id; editingIdType = it.type;
+    $('admTheme').value = ''; $('admTitle').value = it.title; $('admSummary').value = it.summary;
+    $('admBody').value = it.content; $('admQuiz').value = it.quiz.join('\n');
+    $('admCat').value = it.cat || 'tech'; $('admMins').value = it.mins || 8;
+    var sheet = document.querySelector('#adminModal .adm-sheet');
+    if (sheet) sheet.scrollTop = 0;
+    toast('已载入编辑，改完点「存草稿」或「预览」');
+  };
+  window.admRepublish = function (id) {
+    var data = loadData(); var it = null, idx = -1;
+    for (var i = 0; i < data.length; i++) { if (data[i].id === id) { it = data[i]; idx = i; break; } }
+    if (!it) return;
+    it.status = 'published'; it.date = todayStr();
+    data[idx] = it; saveData(data);
+    injectOne(it);
+    renderList(); renderToday();
+    toast('已发布 ✓');
+  };
+  window.admDelete = function (id) {
+    var data = loadData().filter(function (x) { return x.id !== id; });
+    saveData(data);
+    var el = document.getElementById(id); if (el) el.remove();
+    if (typeof ATLAS !== 'undefined') { for (var i = ATLAS.length - 1; i >= 0; i--) { if (ATLAS[i].id === id) ATLAS.splice(i, 1); } }
+    document.querySelectorAll('[onclick*="' + id + '"]').forEach(function (n) { n.remove(); });
+    if (editingId === id) { editingId = null; editingIdType = null; clearForm(); }
+    renderList(); renderToday();
+    toast('已删除');
+  };
+  window.admRefreshList = function () { renderList(); renderToday(); toast('已刷新'); };
+
   window.admExport = function () {
-    var data = load('zs_custom', []);
+    var data = loadData();
     if (!data.length) { toast('还没有生成内容'); return; }
     var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     var url = URL.createObjectURL(blob);
@@ -147,12 +357,8 @@
     setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     toast('已导出 ' + data.length + ' 条，去 update-center 入库');
   };
-  window.admList = function () {
-    var data = load('zs_custom', []);
-    if (!data.length) { toast('暂无自定义内容'); return; }
-    alert('已生成 ' + data.length + ' 条：\n' + data.map(function (c) { return (c.type === 'know' ? '[知识] ' : '[动态] ') + c.title; }).join('\n'));
-  };
 
+  // —— 隐藏入口绑定 ——
   function bindHidden() {
     var av = document.querySelector('.profile .avatar');
     var t = null;
@@ -171,8 +377,12 @@
     }
   }
 
+  function injectAll() { loadData().forEach(function (c) { if (c.status === 'published') injectOne(c); }); }
+
   if (document.readyState !== 'loading') { bindHidden(); injectAll(); }
   else { document.addEventListener('DOMContentLoaded', function () { bindHidden(); injectAll(); }); }
   var modal = $('adminModal');
   if (modal) modal.addEventListener('click', function (e) { if (e.target === modal) closeAdmin(); });
+  var pv = $('admPreview');
+  if (pv) pv.addEventListener('click', function (e) { if (e.target === pv) closePreview(); });
 })();

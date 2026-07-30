@@ -424,6 +424,44 @@ body{font-family:var(--font);background:var(--body-bg);color:var(--text-1);-webk
 .adm-ghost{background:transparent;color:var(--text-2);border:1px solid var(--border)!important}
 .adm-tip{font-size:11px;color:var(--text-3);margin-top:12px;line-height:1.65}
 .adm-new{display:inline-block;margin-left:6px;font-size:10px;font-weight:800;color:#1a1303;background:var(--gold);border-radius:8px;padding:1px 6px;vertical-align:middle}
+/* V2.2：今日生产面板 / 草稿箱 / 预览 / 状态徽章 */
+.adm-today{background:var(--surface-2);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin-bottom:14px}
+.adm-today-h{font-size:12.5px;font-weight:800;color:var(--text-1);margin-bottom:9px}
+.adm-today-grid{display:flex;gap:8px}
+.adm-tc{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:9px 6px;text-align:center}
+.adm-tc-n{display:block;font-size:17px;font-weight:900;color:var(--gold);line-height:1.1}
+.adm-tc-l{display:block;font-size:10.5px;color:var(--text-3);margin-top:3px}
+.adm-today-done{margin-top:10px;text-align:center;font-size:13px;font-weight:800;color:#1a1303;background:linear-gradient(135deg,var(--gold),var(--gold-hi));border-radius:10px;padding:9px}
+.adm-sep{font-size:12.5px;font-weight:800;color:var(--text-1);margin:16px 0 9px;display:flex;align-items:center;gap:6px}
+.adm-sep:first-child{margin-top:4px}
+.adm-drafts{margin-top:6px}
+.adm-group-h{font-size:11px;color:var(--text-3);font-weight:700;margin:10px 0 6px}
+.adm-ditem{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:10px 11px;margin-bottom:8px}
+.adm-ditem[data-status="review"]{border-color:rgba(201,168,106,.5)}
+.adm-ditem[data-status="published"]{opacity:.92}
+.adm-dtop{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.adm-dtitle{font-size:13.5px;font-weight:700;color:var(--text-1);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.adm-badge{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:8px;flex:none}
+.b-draft{background:rgba(120,130,150,.18);color:#aab3c5}
+.b-review{background:rgba(201,168,106,.16);color:var(--gold)}
+.b-pub{background:linear-gradient(135deg,var(--gold),var(--gold-hi));color:#1a1303}
+.adm-dmeta{font-size:10.5px;color:var(--text-3);margin:5px 0 8px}
+.adm-dacts{display:flex;gap:6px;flex-wrap:wrap}
+.adm-dbtn{flex:1;min-width:54px;padding:8px 4px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--text-2);font-size:11.5px;font-weight:700;cursor:pointer;font-family:var(--font);transition:transform var(--t-fast)}
+.adm-dbtn:active{transform:scale(.96)}
+.adm-dbtn.pri{color:var(--gold);border-color:var(--gold)}
+.adm-dbtn.danger{color:#ff8080;border-color:rgba(255,120,120,.4)}
+.adm-empty{font-size:11.5px;color:var(--text-3);text-align:center;padding:14px 0}
+#admPreview{position:fixed;inset:0;z-index:70;display:none;background:rgba(4,7,12,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:env(safe-area-inset-top) 12px env(safe-area-inset-bottom);overflow:auto}
+#admPreview.show{display:flex;align-items:center;justify-content:center}
+#admPreview .adm-sheet{max-height:86vh;border-radius:18px}
+.adm-prev-meta{font-size:11px;color:var(--gold);font-weight:700;margin-bottom:8px}
+.adm-prev-body{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px 15px;max-height:48vh;overflow:auto;line-height:1.7;font-size:13.5px;color:var(--text-1)}
+.adm-prev-body h2{font-size:15px;margin:14px 0 6px;color:var(--gold)}
+.adm-prev-body p{margin:8px 0}
+.adm-prev-body ul{margin:8px 0;padding-left:18px}
+.adm-prev-body .lead{color:var(--text-2);font-style:italic}
+.adm-prev-body .summary{margin-top:12px;padding:10px 12px;background:rgba(201,168,106,.08);border-radius:10px;border:1px solid rgba(201,168,106,.25)}
 </style>
 </head>
 <body>
@@ -3944,8 +3982,19 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
 </script>
 <div id="adminModal">
   <div class="adm-sheet">
-    <div class="adm-h"><h3>🛠 内容生产工作台</h3><div class="adm-x" onclick="admClose()">×</div></div>
+    <div class="adm-h"><h3>🛠 内容管理中心</h3><div class="adm-x" onclick="admClose()">×</div></div>
     <div class="adm-sub">隐藏入口 · 长按「我的」页头像，或三击页脚进入</div>
+
+    <div class="adm-today">
+      <div class="adm-today-h">📅 今日内容生产</div>
+      <div class="adm-today-grid">
+        <div class="adm-tc"><span class="adm-tc-n" id="admTcAi">0/1</span><span class="adm-tc-l">AI动态</span></div>
+        <div class="adm-tc"><span class="adm-tc-n" id="admTcKnow">0/1</span><span class="adm-tc-l">知识文章</span></div>
+        <div class="adm-tc"><span class="adm-tc-n" id="admTcWord">0/20</span><span class="adm-tc-l">英语学习</span></div>
+      </div>
+      <div class="adm-today-done" id="admTodayDone" style="display:none">🎉 今日内容生产完成</div>
+    </div>
+
     <div class="adm-fld">
       <label>今天主题</label>
       <input id="admTheme" placeholder="例如：AI Agent 最新发展" />
@@ -3988,14 +4037,34 @@ const ATLAS = [{"id": "art-tech-llm", "t": "🧠 大模型（LLM）到底是个�
       <button class="adm-btn adm-ghost" onclick="admCopyPrompt()">📋 复制提示词</button>
     </div>
     <div class="adm-btns">
-      <button class="adm-btn adm-pub" onclick="admPublish('ai')">发布到 AI动态</button>
-      <button class="adm-btn adm-pub" onclick="admPublish('know')">发布到 知识文章</button>
+      <button class="adm-btn adm-ghost" onclick="admSaveDraft()">💾 存草稿</button>
+      <button class="adm-btn adm-ghost" onclick="admPreview('know')">👁 预览(知识)</button>
+      <button class="adm-btn adm-ghost" onclick="admPreview('ai')">👁 预览(AI)</button>
     </div>
     <div class="adm-btns">
       <button class="adm-btn adm-ghost" onclick="admExport()">⬇ 导出 JSON</button>
-      <button class="adm-btn adm-ghost" onclick="admList()">📂 已生成(<span id="admCount">0</span>)</button>
+      <button class="adm-btn adm-ghost" onclick="admRefreshList()">🔄 刷新列表</button>
     </div>
-    <div class="adm-tip">生成内容保存在本机浏览器（localStorage），刷新不丢；想正式入库请「导出 JSON」后按 update-center.html 流程合并。不会改动站点现有文章，也不影响你的 XP / 等级 / 徽章。</div>
+
+    <div class="adm-sep">🗂 内容草稿 / 历史</div>
+    <div class="adm-drafts" id="admDraftList"></div>
+
+    <div class="adm-tip">生成内容保存在本机浏览器（localStorage），刷新不丢；想正式入库请「导出 JSON」后按 update-center.html 流程合并。不会改动站点现有文章，也不影响你的 XP / 等级 / 徽章。推荐流程：一键生成 → 存草稿 / 预览 → 确认发布。</div>
+  </div>
+</div>
+
+<div id="admPreview">
+  <div class="adm-sheet adm-prev">
+    <div class="adm-h"><h3>👁 文章预览</h3><div class="adm-x" onclick="admClosePreview()">×</div></div>
+    <div class="adm-prev-meta" id="admPrevMeta"></div>
+    <div class="adm-prev-body" id="admPrevBody"></div>
+    <div class="adm-btns">
+      <button class="adm-btn adm-pub" onclick="admConfirmPublish()">✅ 确认发布</button>
+      <button class="adm-btn adm-ghost" onclick="admSaveAsReview()">👀 存为待审核</button>
+    </div>
+    <div class="adm-btns">
+      <button class="adm-btn adm-ghost" onclick="admClosePreview()">← 返回编辑</button>
+    </div>
   </div>
 </div>
 <script src="assets/admin.js"></script>
