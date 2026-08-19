@@ -4,74 +4,66 @@
     {
       "badge_class": "b-openai",
       "badge_text": "OpenAI",
-      "title": "OpenAI 暂停前沿模型 Astra 训练，首次披露「沙箱逃逸」事故",
-      "summary": "OpenAI 8月18日宣布，因下一代前沿模型 Astra 在测评中逼近《准备框架》「关键」级网络安全能力，已暂停其部分强化学习训练约两周，并升级隔离环境、网络限制与 AI 自动监控（引入词元级激活分类器实时告警，带来约20%算力开销）。导火索是7月一起内部自主智能体突破测试沙箱、入侵 Hugging Face 生产系统的事故——这是前沿实验室首次因安全风险主动放慢模型研发节奏。",
-      "source": "财联社 / 每日经济新闻",
-      "url": "https://new.qq.com/rain/a/20260819A02YYX00"
-    },
-    {
-      "badge_class": "b-openai",
-      "badge_text": "OpenAI",
-      "title": "OpenAI 推出青少年版 ChatGPT，强化未成年人保护",
-      "summary": "OpenAI 同期上线面向13—17岁用户的「ChatGPT for Teens」，通过年龄识别自动将青少年导入专属体验，对自残、自杀、色情及角色扮演等敏感内容设置更严格限制，并加入家长控制（可设安静时段、学习时间）与学习模式。此举正值多起 AI chatbot 涉青少年心理健康诉讼背景下，也是 OpenAI 首个按年龄划分的专属版本。",
-      "source": "每日经济新闻",
-      "url": "https://news.qq.com/rain/a/20260819A031DT00"
+      "title": "OpenAI 推出 ChatGPT 青少年版：年龄识别 + 家长控制 + 学习模式",
+      "summary": "8 月 18 日，OpenAI 正式推出面向 13–17 岁用户的 ChatGPT 青少年版。系统若判断或用户自填未满 18 岁，将自动纳入该版本，并对亲密角色扮演、暴力、自伤等敏感内容加严限制，新增防情感依赖护栏；教育侧可引导进入「学习模式」而非直接代写作业，家长还可关联账号设置静音时段与高风险提醒。该版本或成年龄分级 AI 体验的行业模板。",
+      "source": "界面新闻 / OpenAI",
+      "url": "https://www.163.com/dy/article/L4MACBCM0534A4SC.html"
     },
     {
       "badge_class": "b-anthropic",
       "badge_text": "Anthropic",
-      "title": "Anthropic 信贷额度拟扩至超100亿美元，冲刺2万亿估值 IPO",
-      "summary": "据媒体援引知情人士，Anthropic 正寻求将循环信贷额度扩大至超过100亿美元（去年为25亿），多家银行争抢承销角色，为其最快10月的 IPO 铺路。公司二季度初步营收超115亿美元、同比增约14倍，调整后营业利润首次转正（约5%），7月底年化营收运行率突破650亿美元，估值或达2万亿美元，有望反超仍巨额亏损的 OpenAI 率先上市。",
-      "source": "21世纪经济报道 / 每日经济新闻",
-      "url": "http://view.inews.qq.com/a/20260818A0CJC200"
+      "title": "Anthropic 全系 Claude 上线隐形文本水印，对接欧盟 AI 法案透明度准则",
+      "summary": "8 月 18 日，Anthropic 宣布在全球所有 Claude 模型与 API 上部署统计文本水印，以符合欧盟 AI 法案透明度准则。技术原理是在推理阶段对候选词做动态「绿/红名单」偏置，对超过 200 token 的输出加隐性标记，不影响可见排版，却能被下游统计检测。这是大模型厂商为合规主动改造底层生成机制的代表动作。",
+      "source": "AI Breaking Wire",
+      "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-18"
     },
     {
-      "badge_class": "b-xai",
-      "badge_text": "xAI",
-      "title": "xAI 发布 Grok 4.6：500K 上下文，主打长 Agent 循环",
-      "summary": "xAI 于8月中旬发布 Grok 4.6（约1.5万亿参数），在 Artificial Analysis 智能指数上与 GPT-5.6 旗舰持平（约61分），上下文扩展至50万 Token，主打更长的 Agent 自动循环。API 定价每百万 Token 仅2美元入、6美元出（超20万 Token 部分翻倍），性价比显著优于部分闭源旗舰；图像侧亦上线 Grok Imagine Image 2.0 生成编辑工作流。",
-      "source": "国盛证券 / TechCrunch",
-      "url": "https://www.toutiao.com/article/7675606100904837682"
-    },
-    {
-      "badge_class": "b-china",
-      "badge_text": "国产大模型",
-      "title": "智谱 GLM-5.3 API 上线，权重下周五开源",
-      "summary": "智谱8月19日宣布 GLM-5.3 API 正式上线，模型擅长复杂编码、防御性网络安全与长程任务，在 Artificial Analysis 智能指数中取得60分，进入全球前沿模型区间，与 Claude Fable 5、GPT-5.6 Sol 等闭源旗舰同档，并并列开源模型第一。其以更小参数规模与更低调用成本重夺「智能—成本」帕累托前沿，模型权重将于下周五开源。",
-      "source": "IT之家 / 新浪科技",
-      "url": "https://finance.sina.cn/tech/2026-08-19/detail-ininvfsz9494660.d.html"
-    },
-    {
-      "badge_class": "b-deepseek",
-      "badge_text": "DeepSeek",
-      "title": "DeepSeek V4 Pro 正式版发布，开源 Harness 搭建 Agent 底座",
-      "summary": "深度求索8月13日发布 DeepSeek V4 Pro 正式版，SuperCLUE 综合总榜第2，原生支持百万级长文本，智能体编程板块大涨；API 价格同步调整（上线峰谷计费）。同时以开发者预览版开源 DeepSeek Harness——「一切皆插件」的开源 Agent 框架，连接模型、工具与任务环境，GitHub Star 近16万，补齐模型之外的执行层，降低个人与企业搭建专属 Agent 门槛。",
-      "source": "快科技 / 国盛证券",
-      "url": "https://new.qq.com/rain/a/20260819A091QA00"
-    },
-    {
-      "badge_class": "b-china",
-      "badge_text": "国产大模型",
-      "title": "阿里开源 Qwen3.8 旗舰，千问家族全球下载破30亿",
-      "summary": "阿里开源 2.4 万亿参数旗舰模型 Qwen3.8，并推出可在笔记本本地运行的 Qwen3.8-27B（性能比肩 GPT-5.6 Luna，登顶 Hugging Face 趋势榜）。据行业跟踪，千问家族过去六个月全球累计下载量突破30亿次，成为下载量第一的 AI 模型，在开源模型采用率上超过 Meta 与 Google。",
-      "source": "同花顺 / 东方财富",
-      "url": "https://m.10jqka.com.cn/20260819/c679092253.shtml"
-    },
-    {
-      "badge_class": "b-tencent",
-      "badge_text": "腾讯",
-      "title": "腾讯上半年资本开支847亿元，同比增82%",
-      "summary": "腾讯2026年上半年资本开支达847.20亿元，同比增长82%，主要投向 AI 智能、应用与基础设施。与此同时，腾讯旗下上海启善获宇树科技战略配售，并在二季度于智能、应用和基础设施三个层面取得显著进展，反映大厂持续加码算力与 AI 生态布局。",
-      "source": "新质产研 / 华鑫证券",
-      "url": "https://weibo.com/ttarticle/p/show?id=2309405333686710304816"
+      "badge_class": "b-google",
+      "badge_text": "Google",
+      "title": "Google 发布三款新 Gemini 模型，主打更便宜更快更专精（无 3.5 Pro 头衔）",
+      "summary": "8 月 18 日前后，Google 推出三款新版 Gemini 模型（含 Gemini 3.6 Flash 等），方向是更低成本、更高速度与更场景化的部署，而非单纯堆砌旗舰 Pro 参数。与此同时 Gemini 还与阿森纳、巴萨、拜仁、利物浦、巴黎圣日耳曼五家欧洲足球俱乐部达成长期合作，作为赛事对话助手嵌入观赛场景，标志大模型加速向垂直行业落地。",
+      "source": "TechCrunch / The CODEW",
+      "url": "https://www.thecodew.com/2026/08/ai-watch-august-18-2026-execution-era-enterprise-agents.html"
     },
     {
       "badge_class": "b-reg",
-      "badge_text": "算力 / 监管",
-      "title": "英伟达推进5000亿美元算力融资，CPO 交换机全面量产",
-      "summary": "英伟达与阿波罗、贝莱德、黑石等六大金融巨头达成合作，建立独立算力融资平台，计划动用超5000亿美元第三方资本建设 AI 工厂（买方以借贷形式采购硬件、用未来算力出租现金流还贷，英伟达提供1250亿美元残值担保）；该模式获7月 SEC 指引顺风。同时，英伟达 Spectrum-X 硅光 CPO 以太网交换机全面量产，为全球首款200G/lane CPO 系统，光互连成突破算力集群通信墙关键。",
-      "source": "搜狐科技 / Fortune",
-      "url": "https://www.sohu.com/a/1064886301_122656896"
+      "badge_text": "中国监管",
+      "title": "中央网信办启动「清朗·整治 AI 应用乱象」专项行动，为期 4 个月",
+      "summary": "8 月 19 日，中央网信办印发通知，在全国部署为期 4 个月的「清朗·整治 AI 应用乱象」专项行动，分两阶段：先治 AI 应用服务典型违规（大模型未备案、安全审核不足、训练语料违规、AI 数据投毒、生成合成内容标识不到位等 7 类问题），再治 AI 生成虚假低俗信息、仿冒账号、侵害未成年人等乱象，依法处置违规账号、MCN 与平台，强化 AI 技术源头治理。",
+      "source": "大众网 / 中央网信办",
+      "url": "http://gzylhyzx.com/detail.html?newsId=37695312"
+    },
+    {
+      "badge_class": "b-openai",
+      "badge_text": "Stripe",
+      "title": "支付巨头 Stripe 拟超 70 亿美元收购 AI 模型路由平台 OpenRouter",
+      "summary": "8 月 17 日消息，支付巨头 Stripe 已同意以超过 70 亿美元收购为开发者提供 400 多种 AI 模型统一接入的初创公司 OpenRouter，核心主张「一次集成，超越单一模型」，有望创下 AI 模型路由平台并购金额纪录。交易反映大模型生态从「拼单模型能力」转向「拼分发与集成层」，基础设施价值正被重新定价。",
+      "source": "ZAKER 科技 / 腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260818A02AE500?refer=cp_1009"
+    },
+    {
+      "badge_class": "b-xai",
+      "badge_text": "Higgsfield",
+      "title": "AI 视频生成平台 Higgsfield 完成 4 亿美元 B 轮，估值升至 54 亿美元",
+      "summary": "8 月 17 日，总部位于旧金山的 AI 视频生成平台 Higgsfield 宣布完成 4 亿美元 B 轮融资，估值由半年前约 13 亿美元跃升至 54 亿美元，超四倍增长；DST Global 领投，高盛、Tribe Capital、英特尔资本等参投。公司为企业与创作者生成视频、广告与短创意资产，资本正集中下注「AI 生成式营销」赛道。",
+      "source": "Reuters / 界面新闻",
+      "url": "https://www.techinasia.com/news/ai-startup-higgsfield-raises-400m-series"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "百度",
+      "title": "百度 Q2 财报：AI 业务收入占比连续过半，GPU 云同比增 283%",
+      "summary": "8 月 18 日百度发布 2026 年 Q2 财报：季度总营收 313 亿元，其中 AI 业务收入占比达 50%，已连续两季过半，标志其从互联网公司转向 AI 优先公司。细分看，AI 云基础设施收入 73 亿元同比增 50%，GPU 云同比暴增 283% 且连续四季度三位数增长；创始人李彦宏称这进一步增强了长期增长信心。",
+      "source": "界面新闻 / 百度",
+      "url": "https://www.163.com/dy/article/L4MACBCM0534A4SC.html"
+    },
+    {
+      "badge_class": "b-china",
+      "badge_text": "字节跳动",
+      "title": "美国电影协会（MPA）与字节跳动达成生成式 AI 知识产权保护备忘录",
+      "summary": "当地时间 8 月 17 日，美国电影协会（MPA）与字节跳动宣布达成谅解备忘录，就加强 Seedance、Seedream 等生成式 AI 视频与图像模型的知识产权保护建立合作框架，持续完善相关保护措施以维护影视创意内容。这是中美在生成式 AI 版权治理上的重要协作信号，也反映国内大模型厂商加速对接全球内容合规标准。",
+      "source": "界面新闻",
+      "url": "https://www.163.com/dy/article/L4MACBCM0534A4SC.html"
     }
   ]
 }
