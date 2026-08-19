@@ -191,6 +191,36 @@ a{color:inherit;text-decoration:none}
 .xpup.show{opacity:1;transform:translateX(-50%) scale(1)}
 
 .bottomnav{display:none}
+
+/* ===== 段位 / 战令 游戏化 ===== */
+.tier-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;color:#fff;letter-spacing:.04em}
+.bp{background:linear-gradient(135deg,#fffdf8,#f2ecdd);border:1px solid var(--line);border-radius:var(--r-xl);padding:20px 22px;box-shadow:var(--shadow)}
+.bp-head{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.bp-head h3{font-family:var(--serif);font-size:17px;font-weight:600;margin:0}
+.bp-head .season{margin-left:auto;font-size:11.5px;color:var(--muted)}
+.bp-sub{font-size:12.5px;color:var(--ink-soft);margin-bottom:16px}
+.bp-track{position:relative;display:flex;justify-content:space-between;align-items:flex-start;margin:8px 6px 0}
+.bp-line{position:absolute;top:13px;left:6px;right:6px;height:4px;background:var(--line-soft);border-radius:3px}
+.bp-line i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-hi),var(--gold));border-radius:3px;transition:.5s}
+.bp-node{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+.bp-node .dot{width:26px;height:26px;border-radius:50%;background:var(--surface);border:2px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:.3s}
+.bp-node .dot svg{width:14px;height:14px;stroke-width:1.8}
+.bp-node.on .dot{background:linear-gradient(135deg,var(--gold-hi),var(--gold));border-color:var(--gold);color:#fff}
+.bp-node .lab{font-size:10.5px;color:var(--muted);text-align:center;line-height:1.3}
+.bp-node.on .lab{color:var(--gold);font-weight:600}
+.rankup{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(43,41,38,.55);backdrop-filter:blur(3px)}
+.rankup.show{display:flex;animation:fade .3s ease}
+.rankup .card{background:linear-gradient(160deg,#fffdf8,#f3ead2);border:1px solid var(--gold-soft);border-radius:20px;padding:30px 38px;text-align:center;box-shadow:0 24px 70px rgba(184,146,63,.4);animation:rankpop .5s cubic-bezier(.2,1.3,.4,1)}
+@keyframes rankpop{from{transform:scale(.8) translateY(10px);opacity:0}to{transform:none;opacity:1}}
+.rankup .em{width:84px;height:84px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.rankup .em svg{width:40px;height:40px;stroke-width:1.6}
+.rankup .ti{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.18em}
+.rankup .nm{font-family:var(--serif);font-size:30px;font-weight:600;margin:4px 0 2px}
+.rankup .ds{font-size:13px;color:var(--ink-soft)}
+.rankup .x{margin-top:16px;font-size:12px;color:var(--muted)}
+.orb{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--gold) 70%);box-shadow:0 0 0 2px rgba(184,146,63,.18);display:inline-block;vertical-align:-2px}
+.streak-flame{color:var(--rose)}
+
 @media(max-width:880px){
   .sidebar{display:none}
   .content{padding:18px 16px 92px}
@@ -214,11 +244,11 @@ a{color:inherit;text-decoration:none}
 <body>
 <div class="app">
   <aside class="sidebar">
-    <div class="brand"><div class="mark">泽</div><div><div class="name">AI 学习中心</div><div class="sub">GROWTH&nbsp;OS</div></div></div>
+    <div class="brand"><div class="mark">泽</div><div><div class="name">AI 学习中心</div><div class="sub">RANK&nbsp;OS</div></div></div>
     <button class="nav-item active" data-nav="home"><span id="ic-home"></span>首页</button>
     <button class="nav-item" data-nav="klib"><span id="ic-book"></span>知识库</button>
     <button class="nav-item" data-nav="me"><span id="ic-me"></span>我的</button>
-    <div class="nav-foot">米白风成长台 · 任务版<br>数据存于本机浏览器<br><a href="zheshao-study/index.html">→ 进入文章学习站（深色）</a></div>
+    <div class="nav-foot">米白风成长台 · 任务版<br>数据存于本机浏览器<br><a href="library.html">→ 进入文章学习站（深色）</a></div>
   </aside>
 
   <div class="main">
@@ -241,13 +271,16 @@ a{color:inherit;text-decoration:none}
 
         <!-- 每日任务 -->
         <div style="margin-top:18px">
-          <div class="section-head"><h2 style="font-size:19px">每天 15 分钟成长计划 <span id="dayTag" style="font-size:13px;color:var(--gold);font-family:var(--serif)"></span></h2></div>
+          <div class="section-head"><h2 style="font-size:19px">每日成长 · 三连胜任务 <span id="dayTag" style="font-size:13px;color:var(--gold);font-family:var(--serif)"></span></h2></div>
           <div class="daily-card">
-            <div class="daily-sub">完成下面 3 件事，今天就算打卡成功 | 累计经验 <b id="gXp">0</b> XP</div>
+            <div class="daily-sub">完成下面 3 件任务领取今日战令奖励 | 累计 <span class="orb"></span> <b id="gXp">0</b> XP</div>
             <div id="taskList"></div>
             <div class="dt-reward" id="dtReward">今日成长完成！+50 XP</div>
           </div>
         </div>
+
+        <!-- 战令 -->
+        <div class="bp" id="bpPanel" style="margin-top:18px"></div>
 
         <!-- 今日推荐 / 快捷入口 -->
         <div class="grid-2" style="margin-top:18px">
@@ -274,7 +307,7 @@ a{color:inherit;text-decoration:none}
         <div class="card" style="margin-bottom:16px">
           <h3><span id="ic-book3"></span>全部文章</h3>
           <div class="hint">点击进入现有的深色学习站，内容完整保留</div>
-          <a href="zheshao-study/index.html" class="btn primary block" style="margin-top:4px"><span id="ic-arrow"></span>进入文章学习站</a>
+          <a href="library.html" class="btn primary block" style="margin-top:4px"><span id="ic-arrow"></span>进入文章学习站</a>
         </div>
         <div class="klib" id="klibGrid"></div>
       </section>
@@ -300,7 +333,7 @@ a{color:inherit;text-decoration:none}
         </div>
         <div class="card">
           <h3><span id="ic-link"></span>快捷入口</h3>
-          <a href="zheshao-study/index.html" class="btn block" style="justify-content:flex-start;margin-bottom:8px"><span id="ic-book4"></span>进入文章学习站（深色版）</a>
+          <a href="library.html" class="btn block" style="justify-content:flex-start;margin-bottom:8px"><span id="ic-book4"></span>进入文章学习站（深色版）</a>
           <div class="danger-box" style="margin-top:6px">
             <b>危险操作</b>
             <div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap">
@@ -334,6 +367,7 @@ a{color:inherit;text-decoration:none}
 
 <div class="toast" id="toast"></div>
 <div class="xpup" id="xpup"></div>
+<div class="rankup" id="rankup"><div class="card"><div class="em"></div><div class="ti">RANK UP</div><div class="nm"></div><div class="ds"></div><div class="x">点击任意处关闭</div></div></div>
 
 <script>
 "use strict";
@@ -409,11 +443,11 @@ function initData(){
 initData();
 
 const TASK_XP={art:20,word:10,ai:10};
-const DAILY_GO={word:'zheshao-study/ielts/day78.html',ai:'zheshao-study/ai-news/index.html'};
+const DAILY_GO={word:'ielts/day78.html',ai:'ai-news/index.html'};
 const TASKS=[
   {key:'ai',label:'AI 趋势阅读',time:'预计 5 分钟',xp:TASK_XP.ai,href:DAILY_GO.ai,icon:'bolt'},
   {key:'word',label:'英语单词学习',time:'预计 5 分钟',xp:TASK_XP.word,href:DAILY_GO.word,icon:'type'},
-  {key:'art',label:'深度知识阅读',time:'预计 5 分钟',xp:TASK_XP.art,href:'zheshao-study/index.html',icon:'book'}
+  {key:'art',label:'深度知识阅读',time:'预计 5 分钟',xp:TASK_XP.art,href:'library.html',icon:'book'}
 ];
 
 const BADGES=[
@@ -421,7 +455,7 @@ const BADGES=[
   {id:'streak30',t:'30日成长',d:'连续学习 30 天',icon:'award',get:()=>streak>=30,cur:()=>streak,n:30},
   {id:'read100',t:'百篇阅读',d:'阅读 100 篇文章',icon:'book',get:()=>readSet.length>=100,cur:()=>readSet.length,n:100},
   {id:'explorer',t:'知识探索者',d:'解锁全部分类',icon:'grid',get:()=>unlockedCats()>=6,cur:()=>unlockedCats(),n:6},
-  {id:'lv5',t:'知识创造者',d:'达到满级 Lv.5',icon:'star',get:()=>levelOf(xp)>=5,cur:()=>levelOf(xp),n:5}
+  {id:'rank',t:'荣耀黄金',d:'达到黄金段位',icon:'star',get:()=>rankOf(xp)>=3,cur:()=>rankOf(xp),n:8}
 ];
 function unlockedCats(){return new Set(readSet.map(function(id){if(id.indexOf('art-')===0)return catOf(id);return'';})).size||0;}
 function catOf(id){
@@ -433,30 +467,62 @@ function catOf(id){
   if(id.indexOf('art-sport')===0)return'运动健康';
   return'其他';
 }
-function levelInfo(xp){
-  // 沿用旧站 5 级体系，保证迁移后等级与历史一致（611 XP ≈ Lv.3 深度阅读者）
-  const LV=[{name:'知识萌芽者',need:0},{name:'探索学习者',need:200},{name:'深度阅读者',need:500},{name:'独立思考者',need:900},{name:'知识创造者',need:1500}];
-  let lv=1,base=0;
-  for(let i=0;i<LV.length;i++){if(xp>=LV[i].need){lv=i+1;base=LV[i].need;}else break;}
-  const nextNeed=lv<LV.length?LV[lv].need:base+1;
-  return{lv:lv,name:LV[lv-1].name,need:nextNeed-xp,cur:xp-base,span:nextNeed-base};
+const RANKS=[
+  {name:'倔强黑铁',en:'Iron',need:0,c1:'#7d7a73',c2:'#57544e'},
+  {name:'英勇黄铜',en:'Bronze',need:200,c1:'#c08a4e',c2:'#8a5d2e'},
+  {name:'不屈白银',en:'Silver',need:500,c1:'#cdd6df',c2:'#9aa7b3'},
+  {name:'荣耀黄金',en:'Gold',need:900,c1:'#e8be4e',c2:'#b8923f'},
+  {name:'华贵铂金',en:'Platinum',need:1500,c1:'#5fd0c0',c2:'#3a9d92'},
+  {name:'璀璨钻石',en:'Diamond',need:2500,c1:'#6fb6e8',c2:'#3f7fb8'},
+  {name:'超凡大师',en:'Master',need:4000,c1:'#a07be8',c2:'#6f4fb8'},
+  {name:'傲世宗师',en:'Grandmaster',need:6000,c1:'#e87b9e',c2:'#b84f74'},
+  {name:'最强王者',en:'Challenger',need:10000,c1:'#e8a84e',c2:'#b86f3f'}
+];
+const BP=[
+  {xp:200,label:'黑铁',icon:'flame'},
+  {xp:500,label:'白银',icon:'award'},
+  {xp:900,label:'黄金',icon:'star'},
+  {xp:1500,label:'铂金',icon:'grid'},
+  {xp:2500,label:'钻石',icon:'bolt'}
+];
+function rankInfo(xp){
+  let idx=0;
+  for(let i=0;i<RANKS.length;i++){if(xp>=RANKS[i].need)idx=i;else break;}
+  const cur=RANKS[idx];
+  const next=idx<RANKS.length-1?RANKS[idx+1]:null;
+  const base=cur.need;
+  const cur2=xp-base;
+  const span=next?next.need-base:1;
+  return{idx:idx,rank:cur,next:next,need:next?next.need-xp:0,cur:cur2,span:span,pct:next?Math.min(100,Math.round(cur2/span*100)):100};
 }
-function levelOf(xp){return levelInfo(xp).lv;}
+function rankOf(xp){return rankInfo(xp).idx;}
 
 const KLIB=[
-  {t:'历史',d:'长文阅读',ic:'book',href:'zheshao-study/index.html'},
-  {t:'文化',d:'长文阅读',ic:'book',href:'zheshao-study/index.html'},
-  {t:'地理',d:'长文阅读',ic:'book',href:'zheshao-study/index.html'},
-  {t:'心理学',d:'17篇',ic:'brain',href:'zheshao-study/index.html'},
-  {t:'运动健康',d:'HYROX/撸铁/康复',ic:'flame',href:'zheshao-study/index.html'},
-  {t:'雅思词库',d:'1151词+音频',ic:'grid',href:'zheshao-study/index.html'}
+  {t:'历史',d:'长文阅读',ic:'book',href:'library.html'},
+  {t:'文化',d:'长文阅读',ic:'book',href:'library.html'},
+  {t:'地理',d:'长文阅读',ic:'book',href:'library.html'},
+  {t:'心理学',d:'17篇',ic:'brain',href:'library.html'},
+  {t:'运动健康',d:'HYROX/撸铁/康复',ic:'flame',href:'library.html'},
+  {t:'雅思词库',d:'1151词+音频',ic:'grid',href:'library.html'}
 ];
 
 /* ===== toast / xpup ===== */
 let toastT=null,xpT=null;
 function toast(m,e){const t=document.getElementById('toast');t.textContent=m;t.className='toast show'+(e?' err':'');clearTimeout(toastT);toastT=setTimeout(()=>t.className='toast',2600);}
 function xpup(m){const t=document.getElementById('xpup');t.textContent=m;t.className='xpup show';clearTimeout(xpT);xpT=setTimeout(()=>t.className='xpup',1600);}
-function awardXp(n){xp+=n;save('xp',xp);renderHero();}
+let lastRankIdx=rankOf(xp);
+function awardXp(n){xp+=n;save('xp',xp);const ni=rankOf(xp);if(ni>lastRankIdx){lastRankIdx=ni;showRankUp(RANKS[ni]);}renderHero();}
+function showRankUp(r){
+  const el=document.getElementById('rankup');
+  if(!el)return;
+  const em=el.querySelector('.em');
+  em.style.background='linear-gradient(135deg,'+r.c1+','+r.c2+')';
+  em.innerHTML=svg('award');
+  el.querySelector('.nm').textContent=r.name;
+  el.querySelector('.ds').textContent=r.en+' · 段位晋升！';
+  el.classList.add('show');
+  setTimeout(function(){el.classList.remove('show');},2600);
+}
 
 /* ===== nav ===== */
 const NAVS=[{id:'home',label:'首页',icon:'home'},{id:'klib',label:'知识库',icon:'book'},{id:'me',label:'我的',icon:'me'}];
@@ -478,13 +544,14 @@ document.getElementById('bottomNav').addEventListener('click',e=>{const b=e.targ
 function openModal(id){document.getElementById(id).classList.add('show');}
 function closeModal(id){document.getElementById(id).classList.remove('show');}
 document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('show');}));
+document.getElementById('rankup').addEventListener('click',function(){this.classList.remove('show');});
 function openImport(){document.getElementById('importText').value='';openModal('importModal');}
 
 /* ===== 每日任务核心 ===== */
 window.doDaily=function(k){
   const first=todayData.items.indexOf(k)<0;
   if(first){todayData.items.push(k);save('today',todayData);if(k!=='art'){awardXp(TASK_XP[k]||0);xpup('+'+(TASK_XP[k]||0)+' XP');}}
-  if(k==='art'){location.href='zheshao-study/index.html';}else if(DAILY_GO[k]){location.href=DAILY_GO[k];}
+  if(k==='art'){location.href='library.html';}else if(DAILY_GO[k]){location.href=DAILY_GO[k];}
   renderTasks();
 };
 function markToday(type){if(todayData.items.indexOf(type)<0){todayData.items.push(type);save('today',todayData);renderTasks();if(type!=='art')awardXp(TASK_XP[type]||0);}}
@@ -512,26 +579,26 @@ function setT(id,x){var e=document.getElementById(id);if(e)e.textContent=x;}
 
 /* ===== 渲染首页 ===== */
 function renderHero(){
-  const li=levelInfo(xp);
+  const ri=rankInfo(xp);
+  const r=ri.rank;
   const R=46,C=52,circ=2*Math.PI*R;
-  const pct=li.span>0?Math.min(100,Math.round(li.cur/li.span*100)):100;
-  const len=circ*pct/100;
+  const len=circ*ri.pct/100;
   const p=load('profile',{name:'泽少',skills:[{name:'AI工具',lv:3},{name:'Python',lv:3},{name:'网站开发',lv:2},{name:'PPT设计',lv:4},{name:'内容创作',lv:2}]});
   const skillsHtml=p.skills.map(function(s){return '<span class="skill">'+esc(s.name)+'<span class="dots">'+[1,2,3,4,5].map(function(i){return '<i class="'+(i<=s.lv?'on':'')+'"></i>';}).join('')+'</span></span>';}).join('');
   const mins=readSet.length*8+Math.max(0,streak-1)*15;
   document.getElementById('heroPanel').innerHTML=
-    '<div class="avatar"><svg class="ring" viewBox="0 0 104 104"><circle cx="'+C+'" cy="'+C+'" r="'+R+'" fill="none" stroke="var(--line-soft)" stroke-width="6"/><circle cx="'+C+'" cy="'+C+'" r="'+R+'" fill="none" stroke="var(--green)" stroke-width="6" stroke-linecap="round" stroke-dasharray="'+len+' '+(circ-len)+'"/></svg><div class="face"><b>'+li.lv+'</b><span>'+li.name+'</span></div></div>'+
-    '<div class="lead"><div class="lvl">泽少 · Lv.'+li.lv+' · '+li.name+'</div><div class="name">'+esc(p.name||'泽少')+'成长空间</div>'+
-    '<div class="xpbar"><i style="width:'+pct+'%"></i><span class="xptxt">'+xp+' XP · Lv.'+li.lv+' '+li.name+' · 下一级还需 '+(li.need>0?li.need+' XP':'—')+'</span></div>'+
+    '<div class="avatar"><svg class="ring" viewBox="0 0 104 104"><circle cx="'+C+'" cy="'+C+'" r="'+R+'" fill="none" stroke="var(--line-soft)" stroke-width="6"/><circle cx="'+C+'" cy="'+C+'" r="'+R+'" fill="none" stroke="'+r.c1+'" stroke-width="6" stroke-linecap="round" stroke-dasharray="'+len+' '+(circ-len)+'"/></svg><div class="face" style="background:linear-gradient(135deg,'+r.c1+','+r.c2+')"><b style="font-size:13px">'+r.name+'</b><span>'+r.en+'</span></div></div>'+
+    '<div class="lead"><div class="lvl">'+esc(p.name||'泽少')+' · 当前段位</div><div class="name">'+esc(p.name||'泽少')+'的成长之路</div>'+
+    '<div class="xpbar"><i style="width:'+ri.pct+'%"></i><span class="xptxt">'+xp+' XP · '+r.name+(ri.next?' · 距 '+ri.next.name+' 还差 '+ri.need+' XP':' · 已达最高段位')+'</span></div>'+
     '<div class="skills">'+skillsHtml+'</div></div>';
   // stats
   document.getElementById('statRow').innerHTML=
-    '<div class="stat"><div class="k">'+svg('flame')+'连续学习</div><div class="v">'+streak+'<small> 天</small></div><div class="sub">'+(streak>0?'保持住':'今天开始吧')+'</div></div>'+
-    '<div class="stat"><div class="k">'+svg('star')+'当前等级</div><div class="v">Lv.'+li.lv+'</div><div class="sub">'+li.name+' · '+xp+' XP</div></div>'+
+    '<div class="stat"><div class="k">'+svg('flame')+'当前连胜</div><div class="v streak-flame">'+streak+'<small> 天</small></div><div class="sub">'+(streak>0?'保持连胜！':'今天开始吧')+'</div></div>'+
+    '<div class="stat"><div class="k">'+svg('star')+'当前段位</div><div class="v" style="font-size:20px">'+r.name+'</div><div class="sub">'+r.en+' · '+xp+' XP</div></div>'+
     '<div class="stat"><div class="k">'+svg('award')+'累计阅读</div><div class="v">'+readSet.length+'<small> 篇</small></div><div class="sub">'+mins+' 分钟</div></div>'+
-    '<div class="stat"><div class="k">'+svg('brain')+'今日获取</div><div class="v" id="gXpStat">'+todayData.items.reduce(function(s,k){return s+(TASK_XP[k]||0);},0)+'<small> XP</small></div><div class="sub" id="gProgTxt">0 / 3</div><div class="progress" id="gProgBar" style="height:6px;background:var(--line-soft);border-radius:4px;margin-top:6px;overflow:hidden"><i style="width:0%;height:100%;background:linear-gradient(90deg,var(--green-soft),var(--green));border-radius:4px;transition:.4s"></i></div></div></div>';
+    '<div class="stat"><div class="k">'+svg('brain')+'今日获取</div><div class="v" id="gXpStat">'+todayData.items.reduce(function(s,k){return s+(TASK_XP[k]||0);},0)+'<small> XP</small></div><div class="sub" id="gProgTxt">0 / 3</div><div class="progress" id="gProgBar" style="height:6px;background:var(--line-soft);border-radius:4px;margin-top:6px;overflow:hidden"><i style="width:0%;height:100%;background:linear-gradient(90deg,var(--gold-soft),var(--gold));border-radius:4px;transition:.4s"></i></div></div></div>';
   // day tag
-  document.getElementById('dayTag').textContent='Day '+streak+' ';
+  document.getElementById('dayTag').textContent='连胜 '+streak+' 天 ';
   // tasks
   document.getElementById('taskList').innerHTML=TASKS.map(function(tk){
     const on=todayData.items.indexOf(tk.key)>=0;
@@ -545,6 +612,8 @@ function renderHero(){
   const rec=[];
   for(var i=0;i<Math.min(streak,7);i++){rec.push(shiftDays(todayStr(),-i));}
   document.getElementById('recentList').innerHTML=rec.length?rec.map(function(d){return '<li><span class="dot"></span>'+d+'</li>';}).join(''):'<li style="color:var(--muted)">还没有记录，完成任务开启成长</li>';
+  // battle pass
+  renderBattlePass();
   // badges
   document.getElementById('badgeGrid').innerHTML=BADGES.map(function(b){
     const ok=b.get();const cur=b.cur?b.cur():0;
@@ -554,6 +623,16 @@ function renderHero(){
   // mini klib
   document.getElementById('klibMini').innerHTML=KLIB.slice(0,4).map(function(k){return '<a href="'+k.href+'" class="kcard" style="padding:12px"><div class="ic" style="width:28px;height:28px">'+svg(k.ic)+'</div><div class="t" style="font-size:13px">'+k.t+'</div></a>';}).join('');
   renderTasks();
+}
+function renderBattlePass(){
+  const maxXp=BP[BP.length-1].xp;
+  const prog=Math.min(100,Math.round(xp/maxXp*100));
+  document.getElementById('bpPanel').innerHTML=
+    '<div class="bp-head"><h3>'+svg('award')+' 赛季战令</h3><span class="season">S1 · 成长之季</span></div>'+
+    '<div class="bp-sub">累计 '+xp+' XP · 逐关解锁战令奖励</div>'+
+    '<div class="bp-track"><div class="bp-line"><i style="width:'+prog+'%"></i></div>'+
+    BP.map(function(t){const on=xp>=t.xp;return '<div class="bp-node'+(on?' on':'')+'"><div class="dot">'+svg(t.icon)+'</div><div class="lab">'+t.label+'<br>'+t.xp+' XP</div></div>';}).join('')+
+    '</div>';
 }
 
 /* ===== klib ===== */
