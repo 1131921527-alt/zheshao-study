@@ -256,8 +256,8 @@ section.on{display:block}
     </div>
 
     <div class="card" style="border-color:var(--line2);background:linear-gradient(160deg,rgba(56,225,255,.12),rgba(160,123,255,.08))">
-      <div class="hd"><span id="ic-study"></span><h2>百词斩式学习台</h2><span class="tag">NEW</span></div>
-      <div class="small muted" style="margin-bottom:12px">像百词斩一样刷着学：雅思单词（带发音）、AI 动态、知识卡片，点击翻面、左右判定，进度本地保存。</div>
+      <div class="hd"><span id="ic-study"></span><h2>融合学习台</h2><span class="tag">融合</span></div>
+      <div class="small muted" style="margin-bottom:12px">三个板块「点开即学」：英语单词用百词斩式（发音+配图+释义+拼写）、AI 动态（点开读资讯）、知识卡片（点开读文章）。进度本地保存。</div>
       <a class="btn primary block" href="study.html">→ 进入学习台（study.html）</a>
     </div>
 
@@ -497,6 +497,7 @@ function taskProgress(key){
 }
 var TASK_NEED={ai:1,word:20,art:1,practice:1};
 function taskAchieved(key){ return taskProgress(key)>=TASK_NEED[key]; }
+function anyTaskAchievedToday(){ return TASKS.some(function(t){return taskAchieved(t.key);}); }
 function taskClaimed(key){ var t=state.tasks[todayStr()]||{}; return !!t[key+'_claimed']; }
 function taskCompleted(key){ var t=state.tasks[todayStr()]||{}; return !!t[key]; }
 function doneToday(){var c=0;TASKS.forEach(function(x){if(taskClaimed(x.key))c++;});return c;}
@@ -527,6 +528,8 @@ function prevDay(s){var d=new Date(s+'T00:00:00');d.setDate(d.getDate()-1);retur
 function doSign(){
   var day=todayStr();
   if(state.lastSign===day){toast('今日已签到');return;}
+  // 先学后打卡：今天至少完成一项学习任务才能签到
+  if(!anyTaskAchievedToday()){ toast('先去学习台完成一项任务，再来签到打卡'); return; }
   if(state.lastSign===prevDay(day)) state.signStreak+=1; else state.signStreak=1;
   state.lastSign=day; s('signStreak',state.signStreak); s('lastSign',state.lastSign);
   // 连续签到里程碑额外奖励
