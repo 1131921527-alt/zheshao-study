@@ -405,11 +405,12 @@ var state={
   xp:g('xp',0),
   streak:g('streak',0),
   lastDay:g('lastDay',''),
-  tasks:g('tasks',{}),          // { 'YYYY-MM-DD': {ai:1,word:1,...} }
+  tasks:g('tasks',{}),          // { 'YYYY-MM-DD': {ai:1,word:1,..., ai_claimed:1,...} }
   signStreak:g('signStreak',0),
   lastSign:g('lastSign',''),
   badges:g('badges',{}),
-  articlesDone:g('articlesDone',{})
+  articlesDone:g('articlesDone',{}),
+  study:g('study',{words:[],news:[],articles:[],spellToday:0,wordToday:0,newsToday:0,artToday:0,lastDate:''})
 };
 
 /* ============ 等级系统 ============ */
@@ -478,13 +479,34 @@ var TASKS=[
   {key:'art',label:'深度阅读一篇',desc:'长文知识吸收',xp:TASK_XP.art,icon:'book'},
   {key:'practice',label:'完成一次练习',desc:'把知识用出来',xp:TASK_XP.practice,icon:'sword'}
 ];
-function doneToday(){var t=state.tasks[todayStr()]||{};var c=0;TASKS.forEach(function(x){if(t[x.key])c++;});return c;}
+function resetStudyDaily(){
+  var day=todayStr();
+  if(state.study.lastDate!==day){
+    state.study.lastDate=day; state.study.wordToday=0; state.study.newsToday=0; state.study.artToday=0; state.study.spellToday=0;
+    s('study',state.study);
+  }
+}
+function taskProgress(key){
+  resetStudyDaily();
+  var st=state.study;
+  if(key==='ai') return st.newsToday||0;
+  if(key==='word') return st.wordToday||0;
+  if(key==='art') return st.artToday||0;
+  if(key==='practice') return st.spellToday||0;
+  return 0;
+}
+var TASK_NEED={ai:1,word:20,art:1,practice:1};
+function taskAchieved(key){ return taskProgress(key)>=TASK_NEED[key]; }
+function taskClaimed(key){ var t=state.tasks[todayStr()]||{}; return !!t[key+'_claimed']; }
+function taskCompleted(key){ var t=state.tasks[todayStr()]||{}; return !!t[key]; }
+function doneToday(){var c=0;TASKS.forEach(function(x){if(taskClaimed(x.key))c++;});return c;}
 function allDone(){return doneToday()===TASKS.length;}
 function claimTask(key){
   var day=todayStr(); if(!state.tasks[day])state.tasks[day]={};
-  if(state.tasks[day][key]){toast('今日已完成');return;}
-  state.tasks[day][key]=1; s('tasks',state.tasks);
-  // 连续学习天数：首次完成任意任务即视为今天学习过
+  if(taskClaimed(key)){toast('今日奖励已领取');return;}
+  if(!taskAchieved(key)){toast('先去学习台完成该任务吧');return;}
+  state.tasks[day][key]=1; state.tasks[day][key+'_claimed']=1; s('tasks',state.tasks);
+  // 连续学习天数：首次领取任意任务奖励即视为今天学习过
   if(state.lastDay!==day){
     if(state.lastDay===''){ /* 首次记录，保留继承来的连续天数，仅锚定今天 */ }
     else if(state.lastDay===prevDay(day)) state.streak+=1;
@@ -554,13 +576,31 @@ function renderSign(){
   document.getElementById('signDesc').textContent='连续签到 '+state.signStreak+' 天'+(state.signStreak>=7?' · 已获里程碑奖励':'');
 }
 function taskCard(t,idx){
-  var done=(state.tasks[todayStr()]||{})[t.key];
+  var claimed=taskClaimed(t.key);
+  var achieved=taskAchieved(t.key);
+  var progress=taskProgress(t.key);
+  var need=TASK_NEED[t.key];
   var typeMap={ai:'AI 知识',word:'英语学习',art:'深度阅读',practice:'实战练习'};
-  var colorMap={ai:'c-en',word:'c-en',art:'c-violet',prac:'c-gold'};
   var cMap={ai:'c-art',word:'c-en',art:'c-violet',practice:'c-gold'};
   var timeMap={ai:'5 分钟',word:'10 分钟',art:'8 分钟',practice:'15 分钟'};
   var c=cMap[t.key]||'';
-  return '<div class="task'+(done?' done':'')+'">'
+  var actionBtn;
+  if(claimed){
+    actionBtn='<span class="chip" style="opacity:.6">已领</span>';
+  }else if(achieved){
+    actionBtn='<button class="btn primary" style="min-width:88px;font-size:13px;padding:11px 14px" onclick="claimTask(\''+t.key+'\')">领取</button>';
+  }else{
+    var deckMap={ai:'ai',word:'en',art:'kn',practice:'en'};
+    var href='study.html?deck='+deckMap[t.key];
+    if(t.key==='practice') href+='&tab=spell';
+    actionBtn='<a class="btn" style="min-width:88px;font-size:13px;padding:11px 14px" href="'+href+'">去完成</a>';
+  }
+  var progText='';
+  if(t.key==='ai') progText='已读 '+progress+' / '+need+' 条';
+  else if(t.key==='word') progText='已学 '+progress+' / '+need+' 词';
+  else if(t.key==='art') progText='已读 '+progress+' / '+need+' 篇';
+  else if(t.key==='practice') progText='已完成 '+progress+' / '+need+' 次';
+  return '<div class="task'+(claimed?' done':'')+'">'
     +'<div class="ic">'+(ICONS[t.icon]||'')+'</div>'
     +'<div class="body">'
     +'<div class="type">'+(typeMap[t.key]||'任务')+'</div>'
@@ -569,12 +609,10 @@ function taskCard(t,idx){
     +'<div class="tags">'
     +'<span class="tag-pill tag-xp">+'+t.xp+' XP</span>'
     +'<span class="tag-pill tag-time">'+(timeMap[t.key]||'—')+'</span>'
-    +(done?'<span class="chip">已完成 ✓</span>':'')
+    +'<span class="tag-pill">'+progText+'</span>'
+    +(claimed?'<span class="chip">已完成 ✓</span>':'')
     +'</div></div>'
-    +'<div class="action">'
-    +(done?'<span class="chip" style="opacity:.6">已领</span>'
-      :'<button class="btn primary" style="min-width:88px;font-size:13px;padding:11px 14px" onclick="claimTask(\''+t.key+'\')">领取</button>')
-    +'</div>'
+    +'<div class="action">'+actionBtn+'</div>'
     +'</div>';
 }
 function renderTasks(){

@@ -1,8 +1,9 @@
 /* 泽少学习助手 · Service Worker（离线缓存 + 可安装） */
-const CACHE = 'zheshao-v36';
+const CACHE = 'zheshao-v37';
 const ASSETS = [
   './',
   './index.html',
+  './study.html',
   './manifest.webmanifest',
   './assets/icon.svg',
   './assets/style.css',
