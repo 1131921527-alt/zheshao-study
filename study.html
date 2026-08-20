@@ -250,9 +250,18 @@ var ICONS={
 
 /* ============ 牌组配置 ============ */
 var DECKS=[
-  {key:'en', name:'英语 · 雅思词汇', desc:'1170 词 · 发音+图片+释义+拼写', type:'word', src:'ielts/ielts_bank.json', color:'linear-gradient(135deg,#1f6feb,#a371f7)', icon:'📖', batch:20},
+  {key:'en', name:'英语 · 雅思词汇', desc:'1170 词 · 发音+配图+释义+拼写', type:'word', src:'ielts/ielts_bank.json', color:'linear-gradient(135deg,#1f6feb,#a371f7)', icon:'📖', batch:20},
   {key:'ai', name:'AI 动态', desc:'38 条行业新闻与产品动态', type:'news', src:'assets/ai_cards.json', color:'linear-gradient(135deg,#ff8a5c,#ff5d8f)', icon:'🤖', batch:5},
-  {key:'kn', name:'知识卡片', desc:'35 篇 AI/历史/习惯/地理', type:'know', src:'assets/knowledge_cards.json', color:'linear-gradient(135deg,#46e6a0,#2fc1c1)', icon:'🧠', batch:5}
+  /* —— 知识书架：按类目拆分，点开即读 —— */
+  {key:'kn_ai', name:'AI 科普', desc:'4 篇 · 三次冬天·提示词·幻觉', type:'know', src:'assets/knowledge_cards.json', cat:'AI与科技科普', color:'linear-gradient(135deg,#38e1ff,#2fa8ff)', icon:'💡', batch:5},
+  {key:'kn_carnegie', name:'卡耐基 · 人际沟通', desc:'5 篇 · 名字·倾听·批评艺术', type:'know', src:'assets/knowledge_cards.json', cat:'卡耐基与人际沟通', color:'linear-gradient(135deg,#ffce5a,#ff9d4d)', icon:'💬', batch:5},
+  {key:'kn_history', name:'历史 · 人物常识', desc:'5 篇 · 诸葛亮·曾国藩·工业革命', type:'know', src:'assets/knowledge_cards.json', cat:'历史人物与历史常识', color:'linear-gradient(135deg,#c98bff,#7b5cff)', icon:'🏛️', batch:5},
+  {key:'kn_habit', name:'原子习惯', desc:'5 篇 · 微小改变·系统·环境', type:'know', src:'assets/knowledge_cards.json', cat:'原子习惯', color:'linear-gradient(135deg,#46e6a0,#2fc1c1)', icon:'🔁', batch:5},
+  {key:'kn_geo', name:'地理 · 世界常识', desc:'4 篇 · 时区·季风·南北极', type:'know', src:'assets/knowledge_cards.json', cat:'地理与世界常识', color:'linear-gradient(135deg,#5fd0ff,#3a8fd0)', icon:'🌍', batch:5},
+  {key:'kn_psy', name:'心理学', desc:'6 篇 · 心流·内耗·间歇性强化', type:'know', src:'assets/knowledge_cards.json', cat:'心理学', color:'linear-gradient(135deg,#ff9ad1,#b96bff)', icon:'🧠', batch:6},
+  {key:'kn_lit', name:'文学 · 文化', desc:'2 篇 · 西游记与修心·鲁迅', type:'know', src:'assets/knowledge_cards.json', cat:'文学与文化', color:'linear-gradient(135deg,#ffb86b,#ff6b6b)', icon:'📜', batch:5},
+  {key:'kn_sport', name:'运动健康', desc:'4 篇 · 睡眠·蛋白质·跑姿', type:'know', src:'assets/knowledge_cards.json', cat:'运动健康与身体常识', color:'linear-gradient(135deg,#7be495,#2fb86b)', icon:'🏃', batch:5},
+  {key:'kn_all', name:'全部知识文章', desc:'35 篇 · 一次性刷完所有类目', type:'know', src:'assets/knowledge_cards.json', color:'linear-gradient(135deg,#9aa7ff,#6b78ff)', icon:'📚', batch:5}
 ];
 
 /* ============ 存储（与 index.html 共享前缀 wb_zs_） ============ */
@@ -272,12 +281,18 @@ function resetDailyIfNeeded(){var t=todayStr(); if(G.study.lastDate!==t){G.study
 
 /* ============ 数据缓存 ============ */
 var cache={};
+var rawCache={}; // 同一数据源（如 knowledge_cards.json）只拉一次
 function loadDeck(deck,cb){
   if(cache[deck.key]){cb(cache[deck.key]);return;}
+  if(rawCache[deck.src]){ finishDeck(deck, rawCache[deck.src], cb); return; }
   fetch(deck.src).then(function(r){return r.json();}).then(function(data){
-    var items=(deck.type==='word')?data:(data.cards||[]);
-    cache[deck.key]=items; cb(items);
-  }).catch(function(){ toast('数据加载失败，请通过 http 访问'); });
+    rawCache[deck.src]=data; finishDeck(deck, data, cb);
+  }).catch(function(){ toast('内容加载失败，请刷新重试'); });
+}
+function finishDeck(deck,data,cb){
+  var all=(deck.type==='word')?data:(data.cards||[]);
+  var items=deck.cat? all.filter(function(it){return it.cat===deck.cat;}) : all;
+  cache[deck.key]=items; cb(items);
 }
 
 /* ============ emoji 配图 ============ */
@@ -343,7 +358,7 @@ function renderHome(){
   var box=document.getElementById('deckList'); var h='';
   DECKS.forEach(function(d){
     loadDeck(d,function(items){
-      var p=deckProgress(d.key, items.length);
+      var p=deckProgress(d, items);
       var prog=document.getElementById('deckProg_'+d.key);
       if(prog){ prog.style.width=p.pct+'%'; }
       var meta=document.getElementById('deckMeta_'+d.key);
@@ -363,12 +378,11 @@ function renderHome(){
     el.addEventListener('click',function(){ startDeck(el.getAttribute('data-key')); });
   });
 }
-function deckProgress(key, total){
-  var d=G.study;
+function deckProgress(d, items){
+  var seen=(d.type==='word')?G.study.words:(d.type==='news')?G.study.news:G.study.articles;
   var known=0;
-  if(key==='en') known=d.words.length;
-  else if(key==='ai') known=d.news.length;
-  else if(key==='kn') known=d.articles.length;
+  items.forEach(function(it){ if(seen.indexOf(idOf(d,it))>=0) known++; });
+  var total=items.length;
   var pct=total?Math.round(known/total*100):0;
   return {known:known,total:total,pct:pct,text:known+' / '+total+' 已学 ('+pct+'%)'};
 }
