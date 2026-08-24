@@ -1,6 +1,48 @@
 {
-  "updated": "2026-08-24",
+  "updated": "2026-08-25",
   "cards": [
+    {
+      "tag": "NVIDIA",
+      "company": "NVIDIA",
+      "source": "NVIDIA",
+      "title": "How XPUs Meet a World-Class AI Factory",
+      "date": "2026-08-24",
+      "published_at": "2026-08-24T23:00:54+08:00",
+      "summary": "【NVIDIA】To generate intelligence at scale, AI factories run continuously, and their econ…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "NVIDIA",
+      "company": "NVIDIA",
+      "source": "NVIDIA",
+      "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+      "date": "2026-08-24",
+      "published_at": "2026-08-24T23:00:41+08:00",
+      "summary": "【NVIDIA】The next era of AI inference won’t be defined by a single breakthrough chip, net…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "NVIDIA",
+      "company": "NVIDIA",
+      "source": "NVIDIA",
+      "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+      "date": "2026-08-24",
+      "published_at": "2026-08-24T23:00:19+08:00",
+      "summary": "【NVIDIA】According to OpenRouter data , agentic AI workloads consume 15x more tokens than…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/",
+      "official": true,
+      "is_new": true
+    },
     {
       "tag": "Hugging Face",
       "company": "Hugging Face",
@@ -13,7 +55,7 @@
       "uses": "",
       "source_url": "https://huggingface.co/blog/asr-benchmark-optimization",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "GitHub",
@@ -27,7 +69,7 @@
       "uses": "",
       "source_url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "Hugging Face",
@@ -41,7 +83,7 @@
       "uses": "",
       "source_url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -55,7 +97,7 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/geforce-now-thursday-firefox/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -69,7 +111,7 @@
       "uses": "",
       "source_url": "https://openai.com/index/introducing-ai-futures",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -83,7 +125,7 @@
       "uses": "",
       "source_url": "https://openai.com/index/stampli",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "Google",
@@ -97,49 +139,7 @@
       "uses": "",
       "source_url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
       "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Offering Zero Data Retention for frontier models",
-      "date": "2026-08-20",
-      "published_at": "2026-08-20T03:00:00+08:00",
-      "summary": "【OpenAI】OpenAI reaffirms Zero Data Retention for eligible API customers and previews Pri…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "GitHub",
-      "company": "GitHub",
-      "source": "GitHub",
-      "title": "GitHub Copilot app for Beginners: Managing your work",
-      "date": "2026-08-20",
-      "published_at": "2026-08-20T01:50:23+08:00",
-      "summary": "【GitHub】This is the third post in our GitHub Copilot app for Beginners series. If you re…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Replit expands access to software creation with GPT-5.6 Luna",
-      "date": "2026-08-19",
-      "published_at": "2026-08-19T15:00:00+08:00",
-      "summary": "【OpenAI】Replit introduces Free Mode, powered by GPT-5.6 Luna, so anyone can turn ideas i…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/replit",
-      "official": true,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
