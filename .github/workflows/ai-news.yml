@@ -1,0 +1,27 @@
+name: AI 动态每日自动更新
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 北京时间 08:00（UTC+8 = 00:00 UTC）
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  update-ai-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/auto_ai_news.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/ai_cards.json
+          if git diff --cached --quiet; then
+            echo "今天没有新的 AI 新闻变化，保持前一天内容。"
+          else
+            git commit -m "auto: AI 动态每日更新 $(date +%F)"
+            git push
+          fi
