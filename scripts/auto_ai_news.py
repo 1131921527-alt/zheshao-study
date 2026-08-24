@@ -236,6 +236,7 @@ def collect():
                     'impact': '',
                     'uses': '',
                     'source_url': link,
+                    'official': bool(feed.get('ai_only')),
                 }
                 # 去重：优先按归一化标题（跨源同事件只留一条），其次按链接
                 key = norm_title(title) or link
@@ -256,11 +257,14 @@ def main():
     prev_titles = {c.get('title') for c in prev_cards}
     prev_map = {c.get('title'): c for c in prev_cards}
     fresh = collect()
-    # 排序：新 -> 旧；每日精选最多 10 条（符合“每日 5~10 条”）
-    fresh.sort(key=lambda c: c.get('published_at', ''), reverse=True)
-    fresh = fresh[:10]
+    # 官方来源优先，各自按时间新 -> 旧；每日精选上限 10 条
+    official = sorted([c for c in fresh if c.get('official')],
+                      key=lambda c: c.get('published_at', ''), reverse=True)
+    other = sorted([c for c in fresh if not c.get('official')],
+                   key=lambda c: c.get('published_at', ''), reverse=True)
+    fresh = (official + other)[:10]
 
-    # 合并：今日新抓在前（is_new = 不在历史里），历史去重补在后，总量上限 30
+    # 合并：今日新抓在前（is_new = 不在历史里），总量控制在 5~10 条，宁缺毋滥
     final = []
     seen_t = set()
     for c in fresh:
@@ -277,15 +281,17 @@ def main():
         c['is_new'] = t not in prev_titles
         seen_t.add(t)
         final.append(c)
-    for c in prev_cards:
-        t = c.get('title')
-        if t in seen_t:
-            continue
-        if len(final) >= 30:
-            break
-        c['is_new'] = False
-        seen_t.add(t)
-        final.append(c)
+    # 当日新不足 5 条时，用前一天重要内容补齐，但总量仍不超过 10
+    if len(final) < 5:
+        for c in prev_cards:
+            t = c.get('title')
+            if t in seen_t:
+                continue
+            if len(final) >= 5:
+                break
+            c['is_new'] = False
+            seen_t.add(t)
+            final.append(c)
 
     today = NOW.strftime('%Y-%m-%d')
     out = {'updated': today, 'cards': final}
