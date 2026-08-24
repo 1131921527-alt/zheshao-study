@@ -1,5 +1,149 @@
 {
+  "updated": "2026-08-24",
   "cards": [
+    {
+      "tag": "TechCrunch",
+      "company": "TechCrunch",
+      "source": "TechCrunch",
+      "title": "Is it legal to train AI models on copyrighted books? It’s complicated",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T23:00:00+08:00",
+      "summary": "【TechCrunch】Most published authors have, without their knowledge or consent, contributed to…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
+      "is_new": false
+    },
+    {
+      "tag": "量子位",
+      "company": "量子位",
+      "source": "量子位",
+      "title": "WRC唯一真「人机共生」展台，是家沉浸式机器人咖啡店",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T21:20:00+08:00",
+      "summary": "玩的就是真实",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478319.html",
+      "is_new": false
+    },
+    {
+      "tag": "量子位",
+      "company": "量子位",
+      "source": "量子位",
+      "title": "他给了王兴兴第一个200万，现在给下一个「宇树」当董事长",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T19:17:22+08:00",
+      "summary": "多多支持像王兴兴这样优秀的具身机器人创业者",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478234.html",
+      "is_new": false
+    },
+    {
+      "tag": "智谱AI",
+      "company": "智谱AI",
+      "source": "量子位",
+      "title": "匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T17:56:12+08:00",
+      "summary": "Tokenizer、视频编码、API报错全扒一遍",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478191.html",
+      "is_new": false
+    },
+    {
+      "tag": "NVIDIA",
+      "company": "NVIDIA",
+      "source": "量子位",
+      "title": "英伟达AI服务器将涨价15%！1GW数据中心成本激增50亿美元",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T17:51:49+08:00",
+      "summary": "内存成本飙升逼涨硬件",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478164.html",
+      "is_new": false
+    },
+    {
+      "tag": "量子位",
+      "company": "量子位",
+      "source": "量子位",
+      "title": "全球首次！机器人迎战网球运动员，极限救球，摔倒光速弹起",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T17:45:27+08:00",
+      "summary": "AstraTennis时刻背后的硬核技术",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478093.html",
+      "is_new": false
+    },
+    {
+      "tag": "量子位",
+      "company": "量子位",
+      "source": "量子位",
+      "title": "不做硅谷follower：几个读博的年轻人，押注双足人形的一体化大脑",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T17:29:59+08:00",
+      "summary": "机器人开卡丁车连续过弯，一镜到底全自主",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478020.html",
+      "is_new": false
+    },
+    {
+      "tag": "少数派",
+      "company": "少数派",
+      "source": "少数派",
+      "title": "AI 时代的 Surface Pro 7 改造指南：看板、轻量工作站与 Linux 笔记本",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T15:25:29+08:00",
+      "summary": "手头这台闲置的SurfacePro7在桌角放了挺长一段时间。当年买它看重的是二合一的便携形态，但放在Windows11下只要长时间亮屏就一定会过热、偶尔跳屏，基…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://sspai.com/prime/story/surface-pro-7-linux-ai-dashboard",
+      "is_new": false
+    },
+    {
+      "tag": "量子位",
+      "company": "量子位",
+      "source": "量子位",
+      "title": "你的第一个个人机器人开启预订！上纬新材拉开家庭机器人消费时代序幕",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T15:17:41+08:00",
+      "summary": "",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478017.html",
+      "is_new": false
+    },
+    {
+      "tag": "量子位",
+      "company": "量子位",
+      "source": "量子位",
+      "title": "从世界模型到现实生产力，无界动力深度参与WRC主论坛及多场同期活动",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T15:12:22+08:00",
+      "summary": "",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://www.qbitai.com/2026/08/478007.html",
+      "is_new": true
+    },
+    {
+      "tag": "少数派",
+      "company": "少数派",
+      "source": "少数派",
+      "title": "让 PC 与 HomePod 互联：音频串流工具 WinAirCast",
+      "date": "2026-08-23",
+      "published_at": "2026-08-23T11:00:00Z",
+      "summary": "打破生态壁垒，让好的设备发挥出它应有的价值，这就是 WinAirCast 的初衷。我们希望为 Windows 用户提供一款稳定、低延迟且现代化的音频串流工具。…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://sspai.com/post/113002",
+      "is_new": false
+    },
     {
       "tag": "OpenAI",
       "title": "OpenAI发布GPT-5.6，三版本分层覆盖旗舰/平衡/低成本",
@@ -7,7 +151,8 @@
       "impact": "ChatGPT付费用户可使用更强模型完成复杂任务，免费用户也会逐步受益于能力下沉。Sol/Terra/Luna分层让用户能按需选择性能与成本平衡点。",
       "uses": "GPT-5.6是当前最强模型之一，了解其能力边界有助于判断哪些工作可以交给AI、哪些还需自己做；分层定价也是行业趋势，影响订阅决策。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -16,7 +161,8 @@
       "impact": "付费用户可让ChatGPT自主完成多步骤工作，如整理周报、做PPT、写调研报告，不必一直盯着对话。",
       "uses": "Work代表了AI从'问答工具'向'干活助手'的转变，对做内容、做资料整理的人是直接利好；需理解'代理'模式下要主动审批关键动作，避免出错。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -25,7 +171,8 @@
       "impact": "GPT-Live是OpenAI产品矩阵的新成员，具体能力需关注官方后续说明；普通用户应留意是否被纳入自己订阅的套餐。",
       "uses": "OpenAI产品线快速扩张，了解每条产品线定位有助于选择最适合自己的工具，避免重复付费。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "Anthropic",
@@ -34,7 +181,8 @@
       "impact": "Claude免费/付费用户可用更强模型处理编程、写作、研究类任务；Sonnet定位平衡，性价比适合日常使用。",
       "uses": "Claude是除ChatGPT外的另一主流选择，Sonnet 5在长文本和安全性上有口碑；做内容创作时可对比GPT-5.6和Claude Sonnet 5选择更适合的工具。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -43,7 +191,8 @@
       "impact": "短期无直接影响，但新一代算力落地意味着未来AI模型训练和推理成本下降，间接利好普通用户的AI工具价格。",
       "uses": "算力是AI的基础设施，了解NVIDIA新硬件节奏有助于判断AI能力提升的节奏；'每瓦性能'是行业新焦点。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "Apple",
@@ -52,7 +201,8 @@
       "impact": "iPhone/iPad/Mac用户升级后可获得更智能的Siri，能跨应用完成任务、理解屏幕内容；隐私方面采用全新架构保护用户数据。",
       "uses": "Siri AI是苹果AI的核心入口，理解其能力边界有助于在苹果生态内规划AI工作流；公测开放意味着秋季正式版即将到来。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "腾讯",
@@ -61,7 +211,8 @@
       "impact": "腾讯元宝/WorkBuddy用户可体验到升级后的混元模型；幻觉率下降意味着回答更可靠。",
       "uses": "腾讯走'免费植入'路线，普通用户感受不到却已用上；WorkBuddy本身就用混元，理解其能力边界有助于用好工具。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "AMD / Anthropic",
@@ -70,7 +221,8 @@
       "impact": "短期无直接影响，但算力供应链多元化长期看有利于AI服务价格稳定，避免NVIDIA单点垄断导致的涨价。",
       "uses": "算力是AI的底层资源，AMD挑战NVIDIA是行业格局变化的重要信号；理解算力竞争有助于判断AI成本走向。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -79,7 +231,8 @@
       "impact": "短期无直接影响，但边缘AI发展意味着未来机器人/智能硬件更智能、更普及。",
       "uses": "物理AI（机器人+AI）是下一波浪潮，Jetson Thor是基础设施；理解硬件演进有助于判断智能硬件的落地节奏。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "NVIDIA / 日本政府",
@@ -88,7 +241,8 @@
       "impact": "短期无直接影响，但国家级AI基础设施建设意味着AI成为国家战略资源，长期影响产业格局。",
       "uses": "AI基础设施国家化是新趋势，日本是首个落地案例；理解这一动向有助于判断全球AI竞争的格局。",
       "source": "",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "is_new": false
     },
     {
       "tag": "Google",
@@ -97,7 +251,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -106,7 +261,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "is_new": false
     },
     {
       "tag": "Anthropic",
@@ -115,7 +271,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "is_new": false
     },
     {
       "tag": "DeepSeek",
@@ -124,7 +281,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -133,7 +291,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "is_new": false
     },
     {
       "tag": "行业",
@@ -142,7 +301,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "is_new": false
     },
     {
       "tag": "行业",
@@ -151,7 +311,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "is_new": false
     },
     {
       "tag": "重磅",
@@ -160,7 +321,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-06-14"
+      "date": "2026-06-14",
+      "is_new": false
     },
     {
       "tag": "重磅",
@@ -169,179 +331,8 @@
       "impact": "",
       "uses": "",
       "source": "",
-      "date": "2026-06-14"
-    },
-    {
-      "tag": "重点",
-      "title": "OpenAI 将 Codex 并入 ChatGPT，周活破500万",
-      "summary": "OpenAI 在\"Intelligence at Work\"活动上宣布 Codex 正式并入 ChatGPT，合并对话式AI与自主任务执行能力。Codex 周活跃用户突破 500万，知识工作者占比20%，增速是开发者的3倍。同步发布 Agent Plugins、Annotations、Sites 三大新功能，朝\"10亿用户超级Agent\"方向加速。此外，OpenAI 还上线了\"Codex for open source\"申请页，定向开放算力给开源项目维护者。",
-      "impact": "",
-      "uses": "",
-      "source": "",
-      "date": "2026-06-14"
-    },
-    {
-      "tag": "重点",
-      "title": "微软 Build 2026：Windows Agent Framework 发布，14亿台PC变身Agent平台",
-      "summary": "微软 Build 2026 大会发布 Windows Agent Framework，AI Agent 成为系统级一等公民。WSL 3 GPU访问速度提升40%；Azure Agent Mesh 全球分布式Agent基础设施上线；Windows Agent Store 开发者分成高达85%。全球 14亿台 Windows 设备将成为 Agent 执行节点。同时 GitHub Copilot 推出桌面应用预览版与 Canvas 双向协作空间，但同步上线的 Token 计费模式引发社区强烈反对——部分用户月费可能从29美元飙至750美元。",
-      "impact": "",
-      "uses": "",
-      "source": "",
-      "date": "2026-06-14"
-    },
-    {
-      "tag": "重点",
-      "title": "Kimi 估值6个月飙至300亿美元，中国AI公司估值集体重写",
-      "summary": "Kimi 估值6个月内从43亿美元飙升至 300亿美元，对应 ARR 2亿美元、PS约150倍。2026年1月付费订单环比+8280%，Stripe付费排名跃至全球第9。行业同步：智谱完成港股上市启动A股IPO、MiniMax港股上市、DeepSeek传与国家集成电路基金洽谈首轮融资、阶跃星辰即将递表港股。中国AI原生App MAU已达 4.4亿，单季新增1.3亿。",
-      "impact": "",
-      "uses": "",
-      "source": "",
-      "date": "2026-06-14"
-    },
-    {
-      "tag": "关注",
-      "title": "2026智源大会开幕：悟界·Physis世界基座模型等系列成果发布",
-      "summary": "第八届北京智源大会开幕，主题\"三体互动\"（AI、物理世界、生命科学）。重磅发布：①悟界·Physis-v0.1——全球首个通用世界基座模型；②悟界·Brainμ1.0——多模态神经科学大模型（关联论文已发Science）；③悟界·OpenComplex2.5——AI驱动药物发现模型；④具身栈 RoboBrain / RoboOS / RoboBrain Orca。FlagOS 2.1 覆盖18家芯片厂商32款芯片，累计开源模型200+，总下载 10亿+。",
-      "impact": "",
-      "uses": "",
-      "source": "",
-      "date": "2026-06-14"
-    },
-    {
-      "tag": "关注",
-      "title": "阿里首席科学家周靖人履新仅6天提交离职",
-      "summary": "阿里合伙人、首席科学家周靖人于6月13日提交离职申请，距6月8日任命仅6天。行业普遍解读为\"明升暗降\"——6月8日调整中 Token Foundry 事业部改由CEO吴泳铭直管，周靖人实际被架空。2026年以来 Qwen 团队已流失4位核心：技术负责人林俊旸、后训练郁博文、核心成员李凯新，加上周靖人。通义团队的持续人才流失值得关注。",
-      "impact": "",
-      "uses": "",
-      "source": "",
-      "date": "2026-06-14"
-    },
-    {
-      "tag": "AI",
-      "title": "SpaceX 正式登陆纳斯达克，创史上最大IPO",
-      "summary": "北京时间6月12日，SpaceX（股票代码 SPCX）以每股 $135 定价在纳斯达克上市交易，估值达 1.77 万亿美元，募资 750 亿美元，刷新全球IPO纪录。值得注意的是 MSCI 将从6月13日起将其纳入全球标准指数，被动基金将被迫买入。SpaceX 在AI基础设施领域的布局是此次超高估值的重要支撑。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：Reuters · Bloomberg",
-      "date": "2026-06-12"
-    },
-    {
-      "tag": "AI",
-      "title": "WWDC 闭幕：Xcode 27 集成 Claude/Gemini/OpenAI 三引擎，Apple 免费开放 Foundation Models",
-      "summary": "苹果WWDC 2026收官。Xcode 27 搭载双引擎AI编码：本地 Neural Engine 实时补全，云端路由层可将复杂任务自由调度给 Claude、Gemini 或 OpenAI，通过统一 LanguageModel 协议无需改代码切换。同时 SiriKit 官宣弃用（2-3年过渡期），Apple Foundation Models 框架向下载量低于 200 万的开发者免费开放。被评价为\"Apple 有史以来最重要的AI开发者工具\"。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：Apple · IT之家 · 51CTO",
-      "date": "2026-06-12"
-    },
-    {
-      "tag": "AI",
-      "title": "国家发改委全面实施\"人工智能+\"行动，工信部印发AI+信息通信三年实施意见",
-      "summary": "6月11日，国家发改委明确将全面实施\"人工智能+\"行动；工信部同步印发《\"人工智能+信息通信\"创新发展实施意见（2026—2028年）》，围绕算力网络、AI赋能通信、智能终端、安全治理四大方向部署17项任务，提出到2028年形成30个以上高价值典型场景，城域算力1毫秒时延圈覆盖率不低于75%。政策密集发力，AI基建进入快车道。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：国家发改委 · 工信部 · 新华财经",
-      "date": "2026-06-12"
-    },
-    {
-      "tag": "AI",
-      "title": "2026智源大会今日开幕：200+全球AI领袖齐聚北京",
-      "summary": "第8届智源大会6月12-13日在北京举行，召集200余位顶尖学者与40余位AI企业CEO，共议Agent、世界模型、具身智能、AI自进化与AI安全五大前沿方向。历年14位图灵奖得主曾出席，本届被业内视为年度AI学术风向标。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：腾讯新闻 · 智源研究院",
-      "date": "2026-06-12"
-    },
-    {
-      "tag": "AI",
-      "title": "HDC 2026华为开发者大会开幕，鸿蒙AI从\"被讨论\"走向\"被看见\"",
-      "summary": "华为开发者大会6月12-14日在东莞松山湖举行。本届核心看点：鸿蒙AI生态从概念走向规模化落地，覆盖端侧推理、小艺AI重构、鸿蒙原生智能应用三大层面。多家合作伙伴的AI应用已抢先接入鸿蒙AI能力，生态伙伴打Call视频陆续释出，标志着鸿蒙AI进入务实阶段。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：华为 · 腾讯新闻",
-      "date": "2026-06-12"
-    },
-    {
-      "tag": "AI",
-      "title": "Anthropic vs OpenAI 竞速IPO：AI双雄估值逼近万亿美元",
-      "summary": "Anthropic 估值已达约 9650 亿美元，OpenAI 估值约 8520 亿美元。Anthropic 主打\"安全优先\"路线，CEO 达里奥·阿莫迪强调 AI 安全是核心竞争力；OpenAI 则将 Codex 整体整合进 ChatGPT，发力\"AI 普惠化\"。两家上市竞赛已进入白热化阶段，市场普遍预计 OpenAI 上市时估值可能冲向万亿美元。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：新浪财经 · 腾讯新闻",
-      "date": "2026-06-12"
-    },
-    {
-      "tag": "AI",
-      "title": "台积电 3nm 制程或涨价 15%，AI 芯片需求远超预期",
-      "summary": "供应链消息显示，因上游成本压力传导，台积电下半年先进制程或将调涨代工价格，最紧缺的 3nm 制程涨幅或达 15%。尽管台积电持续扩产（Q2月产能达16-17.5万片），AI 需求增长速度仍远超产能扩张节奏，客户排队状况未明显缓解。AI人工智能ETF早盘涨超1.8%。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：供应链消息 · 腾讯财经",
-      "date": "2026-06-12"
-    },
-    {
-      "tag": "重磅",
-      "title": "Anthropic秘密递交IPO申请，估值逼近万亿美元",
-      "summary": "Anthropic已向美国证券交易委员会（SEC）秘密递交S-1注册声明草案，正式启动IPO流程。公司最新估值高达9650亿美元，在上市竞赛中领先于OpenAI。此前Anthropic完成新一轮融资，增长动力来自Claude Code、企业级需求激增以及Claude Opus 4.8的发布。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：TechCrunch · 2026-06-03",
-      "date": "2026-06-04"
-    },
-    {
-      "tag": "重磅",
-      "title": "微软发布MAI系列7款模型，构建自主AI技术栈",
-      "summary": "微软AI部门（Mustafa Suleyman领导）一口气发布7款MAI系列模型：旗舰推理模型MAI-Thinking-1在SWE Bench Pro上媲美Claude Opus 4.6；MAI-Code-1-Flash实现低延迟代码生成并原生集成VS Code；MAI-Image-2.5支持多轮图像编辑；MAI-Transcribe-1.5覆盖43种语言的音频转录。此举标志着微软加速降低对OpenAI的战略依赖。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：DevFlokers · 2026-06-02",
-      "date": "2026-06-04"
-    },
-    {
-      "tag": "重点",
-      "title": "欧盟正式提出《云与AI发展法案》，打造自主计算生态",
-      "summary": "欧洲委员会于6月3日正式提出《云与AI发展法案》，旨在协调各成员国资本投资方向、保护本地数据主权，构建欧洲自主的计算生态系统。该法案被视为欧盟在AI主权竞赛中的关键一步，预示着欧洲将对AI基础设施进行大规模公共投资。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：DevFlokers · 2026-06-03",
-      "date": "2026-06-04"
-    },
-    {
-      "tag": "重点",
-      "title": "OpenAI Codex扩展企业级功能：从编程助手到商业平台",
-      "summary": "OpenAI为Codex新增Sites、Annotations及企业工作流插件，将AI编程工具的能力边界从代码生成延伸到文档协作、知识管理和业务流程自动化。这一定位转变意味着Codex正从开发者工具蜕变为企业级AI工作平台。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：TheAITrack · 2026-06-02",
-      "date": "2026-06-04"
-    },
-    {
-      "tag": "重点",
-      "title": "DeepSeek V4 Pro永久降价75%，中国AI性价比优势持续凸显",
-      "summary": "DeepSeek宣布V4 Pro模型永久降价75%，此前临时降价转为永久策略。在AI智能体、编程工具和长上下文工作流等场景中，DeepSeek的低成本优势进一步扩大。与此同时，Kimi K2.5、Qwen 3.5等国产模型也在持续迭代，中国AI企业在模型性价比和落地应用方面持续领先。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：TheAITrack · 2026-05-26",
-      "date": "2026-06-04"
-    },
-    {
-      "tag": "关注",
-      "title": "联合国警告：AI能耗与电子废弃物危机急剧恶化",
-      "summary": "联合国支持的研究报告于6月3日发布，发出严厉警告：训练一个ChatGPT-5级别模型的电力消耗可为77万非洲居民供电一年。到2030年，AI服务器快速更替产生的电子废弃物相当于每年丢弃250座埃菲尔铁塔。报告呼吁各国将AI可持续发展纳入监管框架。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：DevFlokers · 2026-06-03",
-      "date": "2026-06-04"
-    },
-    {
-      "tag": "关注",
-      "title": "SK海力士市值首破1万亿美元，AI芯片需求持续爆发",
-      "summary": "受AI对高带宽内存（HBM）需求激增驱动，SK海力士市值首次突破1万亿美元大关，与三星、美光共同重塑全球芯片产业格局。AI训练和推理对内存带宽的饥渴需求，正将存储芯片从\"配角\"推向AI基础设施的核心位置。",
-      "impact": "",
-      "uses": "",
-      "source": "来源：TheAITrack · 2026-05-27",
-      "date": "2026-06-04"
+      "date": "2026-06-14",
+      "is_new": false
     }
-  ],
-  "updated": "2026-07-24"
+  ]
 }

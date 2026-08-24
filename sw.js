@@ -1,5 +1,5 @@
 /* 泽少学习助手 · Service Worker（离线缓存 + 可安装） */
-const CACHE = 'zheshao-v40';
+const CACHE = 'zheshao-v41';
 const ASSETS = [
   './',
   './index.html',
@@ -48,7 +48,21 @@ self.addEventListener('fetch', function (e) {
     );
     return;
   }
-  // 静态资源：cache-first，离线可用
+  // 数据文件（.json，含 ai_cards.json / ielts_bank.json 等）：network-first，
+  // 保证每天自动更新的 AI 新闻、单词库能立即生效，不被旧缓存卡住；离线时回退缓存。
+  if (/\.json($|\?)/.test(new URL(e.request.url).pathname)) {
+    e.respondWith(
+      fetch(e.request).then(function (resp) {
+        const cp = resp.clone();
+        caches.open(CACHE).then(function (c) { c.put(e.request, cp); });
+        return resp;
+      }).catch(function () {
+        return caches.match(e.request);
+      })
+    );
+    return;
+  }
+  // 其余静态资源：cache-first，离线可用
   e.respondWith(
     caches.match(e.request).then(function (cached) {
       if (cached) return cached;
