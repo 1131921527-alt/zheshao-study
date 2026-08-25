@@ -255,6 +255,12 @@ section.on{display:block}
       </div>
     </div>
 
+    <div class="card" style="border-color:rgba(70,230,160,.25);background:linear-gradient(160deg,rgba(70,230,160,.10),rgba(47,208,193,.06))">
+      <div class="hd"><span id="ic-en2"></span><h2>继续背单词</h2><span class="tag" id="wordProgTag" style="color:var(--green);border-color:rgba(70,230,160,.3)">0 / 20</span></div>
+      <div class="small muted" style="margin-bottom:12px" id="wordProgDesc">四选一释义 · 强制拼写 · 掌握度追踪</div>
+      <a class="btn primary block" id="quickWordBtn" href="study.html?deck=en" style="background:linear-gradient(135deg,var(--green),#2fd6c0);box-shadow:0 8px 22px rgba(70,230,160,.28)">📖 继续英语学习 →</a>
+    </div>
+
     <div class="card" style="border-color:var(--line2);background:linear-gradient(160deg,rgba(56,225,255,.12),rgba(160,123,255,.08))">
       <div class="hd"><span id="ic-study"></span><h2>融合学习台</h2><span class="tag">融合</span></div>
       <div class="small muted" style="margin-bottom:12px">三个板块「点开即学」：英语单词用百词斩式（发音+配图+释义+拼写）、AI 动态（点开读资讯）、知识卡片（点开读文章）。进度本地保存。</div>
@@ -718,7 +724,18 @@ var toastTimer;
 function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('on');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('on');},1600);}
 
 /* ============ 启动 ============ */
-function renderAll(){renderHero();renderSign();renderTasks();renderSkillTree();renderKlib();renderMe();renderAch();}
+function renderAll(){renderHero();renderSign();renderTasks();renderSkillTree();renderKlib();renderMe();renderAch();renderQuickWord();}
+function renderQuickWord(){
+  var st=state.study||{}, seen=(st.words||[]).length, total=1170, today=st.wordToday||0, need=20;
+  var pct=Math.min(100,Math.round(seen/total*100));
+  document.getElementById('wordProgTag').textContent=seen+' / '+total+' 已学';
+  var btn=document.getElementById('quickWordBtn');
+  if(today>=need){ btn.textContent='✓ 今日目标已完成'; btn.style.opacity='.7'; }
+  else{ btn.textContent='📖 继续英语学习 → (今日 '+today+'/'+need+')'; btn.style.opacity='1'; }
+  var desc=document.getElementById('wordProgDesc');
+  if(seen>0) desc.textContent='上次学到第 '+seen+' 词 · 今日已学 '+today+' 词 · 四选一释义 + 强制拼写';
+  else desc.textContent='四选一释义 · 强制拼写 · 掌握度追踪 · 点击开始首次学习';
+}
 renderAll();
 checkBadges();
 </script>
