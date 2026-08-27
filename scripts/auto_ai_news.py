@@ -220,9 +220,12 @@ def collect():
                 company = feed.get('company') or detect_company(title) or detect_company(feed['outlet']) or feed['outlet']
                 pub_bj = pub.astimezone(BJTZ) if pub else NOW
                 date_str = pub_bj.strftime('%Y-%m-%d')
-                summary = truncate(it['summary'], 80)
+                # 中文源取完整内容（content:encoded），英文源也尽量保留更长摘录；
+                # 人工翻译的中文正文/标题会在 main() 中按标题回填，不被此处自动片段覆盖
+                cap = 320 if feed['lang'] == 'zh' else 200
+                summary = truncate(it['summary'], cap)
                 if feed['lang'] == 'en':
-                    # 英文源：用官方口吻包装，绝不编造细节
+                    # 英文源：用官方口吻包装，绝不编造细节（中文翻译由人工补充并回填）
                     head = ('【%s 官方动态】' % company) if not summary else ('【%s】' % company)
                     summary = head + (summary if summary else title)
                 card = {
@@ -230,6 +233,7 @@ def collect():
                     'company': company,
                     'source': feed['outlet'],
                     'title': title,
+                    'title_cn': '',
                     'date': date_str,
                     'published_at': pub_bj.strftime('%Y-%m-%dT%H:%M:%S+08:00'),
                     'summary': summary,
@@ -274,6 +278,11 @@ def main():
         # 回填历史中已有中文解读，避免被新抓的空值覆盖
         pc = prev_map.get(t)
         if pc:
+            # 若历史中有更长的中文正文（人工翻译），优先保留，避免被 80 字片段覆盖
+            if pc.get('summary') and len(pc.get('summary', '')) > len(c.get('summary', '')):
+                c['summary'] = pc['summary']
+            if not c.get('title_cn') and pc.get('title_cn'):
+                c['title_cn'] = pc['title_cn']
             if not c.get('impact') and pc.get('impact'):
                 c['impact'] = pc['impact']
             if not c.get('uses') and pc.get('uses'):
