@@ -1,6 +1,104 @@
 {
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "cards": [
+    {
+      "tag": "NVIDIA",
+      "company": "NVIDIA",
+      "source": "NVIDIA",
+      "title": "NVIDIA NVLink Fusion Expands With NVHBM Custom High-Bandwidth Memory",
+      "date": "2026-08-27",
+      "published_at": "2026-08-27T05:05:30+08:00",
+      "summary": "【NVIDIA】The next wave of AI is placing new demands on infrastructure. As AI agents and t…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "GitHub",
+      "company": "GitHub",
+      "source": "GitHub",
+      "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
+      "date": "2026-08-27",
+      "published_at": "2026-08-27T04:12:53+08:00",
+      "summary": "【GitHub】I might be biased, but I think Dependabot is pretty amazing. It helps keep my pr…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
+      "date": "2026-08-26",
+      "published_at": "2026-08-26T18:00:00+08:00",
+      "summary": "【OpenAI】ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "Learning never stops: How AI makes learning continuous",
+      "date": "2026-08-26",
+      "published_at": "2026-08-26T18:00:00+08:00",
+      "summary": "【OpenAI】OpenAI’s new report explores how students and educators use ChatGPT to make lear…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/learning-never-stops",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "Hugging Face",
+      "company": "Hugging Face",
+      "source": "Hugging Face",
+      "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+      "date": "2026-08-26",
+      "published_at": "2026-08-26T08:00:00+08:00",
+      "summary": "【Hugging Face 官方动态】Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://huggingface.co/blog/train-multi-vector-encoder",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "The Hugging Face incident and the road ahead",
+      "date": "2026-08-26",
+      "published_at": "2026-08-26T08:00:00+08:00",
+      "summary": "【OpenAI】OpenAI shares findings from the Hugging Face security incident and the steps we’…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "How loveholidays is making everyone a builder with Codex",
+      "date": "2026-08-26",
+      "published_at": "2026-08-26T08:00:00+08:00",
+      "summary": "【OpenAI】Discover how loveholidays uses OpenAI Codex to make software development accessi…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/loveholidays",
+      "official": true,
+      "is_new": true
+    },
     {
       "tag": "GitHub",
       "company": "GitHub",
@@ -13,7 +111,7 @@
       "uses": "",
       "source_url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "Google",
@@ -27,7 +125,7 @@
       "uses": "",
       "source_url": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -41,105 +139,7 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
       "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "Hugging Face",
-      "company": "Hugging Face",
-      "source": "Hugging Face",
-      "title": "Granite 4.2 LLMs: How They're Built",
-      "date": "2026-08-25",
-      "published_at": "2026-08-25T23:14:14+08:00",
-      "summary": "【Hugging Face 官方动态】Granite 4.2 LLMs: How They're Built",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "Hugging Face",
-      "company": "Hugging Face",
-      "source": "Hugging Face",
-      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-      "date": "2026-08-25",
-      "published_at": "2026-08-25T19:39:24+08:00",
-      "summary": "【Hugging Face 官方动态】Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "The full stack behind abundant intelligence",
-      "date": "2026-08-25",
-      "published_at": "2026-08-25T15:05:00+08:00",
-      "summary": "【OpenAI】OpenAI CFO Sarah Friar explains how advances across chips, compute, models, and…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
-      "date": "2026-08-25",
-      "published_at": "2026-08-25T15:00:00+08:00",
-      "summary": "【OpenAI】Jalapeño is a custom inference chip from OpenAI that delivers faster, more power…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/jalapeno-first-results",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "Hugging Face",
-      "company": "Hugging Face",
-      "source": "Hugging Face",
-      "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
-      "date": "2026-08-25",
-      "published_at": "2026-08-25T08:00:00+08:00",
-      "summary": "【Hugging Face 官方动态】Wire It, Run It, Deploy It: AI Workflows in Gradio",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://huggingface.co/blog/gradio-workflow-guide",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Disrupting a new covert influence campaign from Russia",
-      "date": "2026-08-25",
-      "published_at": "2026-08-25T08:00:00+08:00",
-      "summary": "【OpenAI】OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based thi…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
-      "date": "2026-08-25",
-      "published_at": "2026-08-25T08:00:00+08:00",
-      "summary": "【OpenAI】Use the Admin plugin for ChatGPT Work and Codex to analyze workspace usage, mana…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/introducing-admin-plugin",
-      "official": true,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
