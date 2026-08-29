@@ -1,6 +1,21 @@
 {
-  "updated": "2026-08-28",
+  "updated": "2026-08-29",
   "cards": [
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "title_cn": "",
+      "date": "2026-08-28",
+      "published_at": "2026-08-28T14:00:00+08:00",
+      "summary": "【OpenAI】Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "official": true,
+      "is_new": true
+    },
     {
       "tag": "OpenAI",
       "company": "OpenAI",
@@ -13,6 +28,36 @@
       "impact": "",
       "uses": "",
       "source_url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "official": true,
+      "is_new": false
+    },
+    {
+      "tag": "Hugging Face",
+      "company": "Hugging Face",
+      "source": "Hugging Face",
+      "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+      "title_cn": "",
+      "date": "2026-08-28",
+      "published_at": "2026-08-28T08:00:00+08:00",
+      "summary": "【Hugging Face 官方动态】The Open ASR Leaderboard Adds Its First Global South Language",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "GitHub",
+      "company": "GitHub",
+      "source": "GitHub",
+      "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
+      "title_cn": "",
+      "date": "2026-08-28",
+      "published_at": "2026-08-28T00:00:00+08:00",
+      "summary": "【GitHub】What began as a personal experiment quickly became a global open source project with extraordinary momentum. OpenClaw is a personal AI assistant that runs on users devices and connects with the messag…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
       "official": true,
       "is_new": true
     },
@@ -29,7 +74,7 @@
       "uses": "",
       "source_url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -44,7 +89,7 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -59,7 +104,7 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -74,7 +119,7 @@
       "uses": "",
       "source_url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -89,7 +134,7 @@
       "uses": "",
       "source_url": "https://openai.com/index/expanding-our-presence-in-brazil",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -104,52 +149,7 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
       "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
-      "title_cn": "",
-      "date": "2026-08-26",
-      "published_at": "2026-08-26T18:00:00+08:00",
-      "summary": "【OpenAI】ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Learning never stops: How AI makes learning continuous",
-      "title_cn": "",
-      "date": "2026-08-26",
-      "published_at": "2026-08-26T18:00:00+08:00",
-      "summary": "【OpenAI】OpenAI’s new report explores how students and educators use ChatGPT to make learning more continuous, with support that extends beyond the classroom.",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/learning-never-stops",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "Hugging Face",
-      "company": "Hugging Face",
-      "source": "Hugging Face",
-      "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
-      "title_cn": "",
-      "date": "2026-08-26",
-      "published_at": "2026-08-26T08:00:00+08:00",
-      "summary": "【Hugging Face 官方动态】Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://huggingface.co/blog/train-multi-vector-encoder",
-      "official": true,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
