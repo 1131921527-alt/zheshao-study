@@ -1,6 +1,36 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-01",
   "cards": [
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "Polimill builds Japan's next-generation public AI infrastructure",
+      "title_cn": "",
+      "date": "2026-08-31",
+      "published_at": "2026-08-31T15:00:00+08:00",
+      "summary": "【OpenAI】Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/polimill",
+      "official": true,
+      "is_new": true
+    },
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "A milestone in expanding access to AI",
+      "title_cn": "",
+      "date": "2026-08-31",
+      "published_at": "2026-08-31T12:00:00+08:00",
+      "summary": "【OpenAI】ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+      "official": true,
+      "is_new": true
+    },
     {
       "tag": "OpenAI",
       "company": "OpenAI",
@@ -118,36 +148,6 @@
       "impact": "",
       "uses": "",
       "source_url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
-      "official": true,
-      "is_new": false
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Expanding OpenAI’s presence in Brazil",
-      "title_cn": "",
-      "date": "2026-08-27",
-      "published_at": "2026-08-27T11:00:00+08:00",
-      "summary": "【OpenAI】OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/expanding-our-presence-in-brazil",
-      "official": true,
-      "is_new": false
-    },
-    {
-      "tag": "NVIDIA",
-      "company": "NVIDIA",
-      "source": "NVIDIA",
-      "title": "NVIDIA NVLink Fusion Expands With NVHBM Custom High-Bandwidth Memory",
-      "title_cn": "",
-      "date": "2026-08-27",
-      "published_at": "2026-08-27T05:05:30+08:00",
-      "summary": "【NVIDIA】The next wave of AI is placing new demands on infrastructure. As AI agents and trillion-parameter workloads become mainstream, the performance of AI infrastructure depends not only on compute, but on…",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
       "official": true,
       "is_new": false
     }
