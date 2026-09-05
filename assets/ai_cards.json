@@ -1,6 +1,21 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "cards": [
+    {
+      "tag": "GitHub",
+      "company": "GitHub",
+      "source": "GitHub",
+      "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
+      "title_cn": "",
+      "date": "2026-09-05",
+      "published_at": "2026-09-05T00:04:14+08:00",
+      "summary": "【GitHub】Providing developers the best model for the task at hand has always been our goal. Earlier this year, we made that easier by launching Auto model selection, which reviews your task and matches it to t…",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+      "official": true,
+      "is_new": true
+    },
     {
       "tag": "NVIDIA",
       "company": "NVIDIA",
@@ -14,7 +29,7 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "GitHub",
@@ -29,7 +44,7 @@
       "uses": "",
       "source_url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -44,7 +59,7 @@
       "uses": "",
       "source_url": "https://openai.com/index/daybreak-for-frontline-defenders",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "Hugging Face",
@@ -59,7 +74,7 @@
       "uses": "",
       "source_url": "https://huggingface.co/blog/Hcompany/neomme",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -74,22 +89,7 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/geforce-now-thursday-september-2026-games-list/",
       "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "OpenAI",
-      "company": "OpenAI",
-      "source": "OpenAI",
-      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-      "title_cn": "",
-      "date": "2026-09-03",
-      "published_at": "2026-09-03T20:00:00+08:00",
-      "summary": "【OpenAI】Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://openai.com/index/legora-financial-statement-review-with-astra",
-      "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "OpenAI",
@@ -104,7 +104,22 @@
       "uses": "",
       "source_url": "https://openai.com/index/playco-game-prototyping-with-astra",
       "official": true,
-      "is_new": true
+      "is_new": false
+    },
+    {
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "title_cn": "",
+      "date": "2026-09-03",
+      "published_at": "2026-09-03T20:00:00+08:00",
+      "summary": "【OpenAI】Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+      "impact": "",
+      "uses": "",
+      "source_url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "official": true,
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -119,35 +134,20 @@
       "uses": "",
       "source_url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
-      "tag": "Hugging Face",
-      "company": "Hugging Face",
-      "source": "Hugging Face",
-      "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+      "tag": "OpenAI",
+      "company": "OpenAI",
+      "source": "OpenAI",
+      "title": "GPT-6 Astra: A new generation of intelligence",
       "title_cn": "",
       "date": "2026-09-03",
-      "published_at": "2026-09-03T08:00:00+08:00",
-      "summary": "【Hugging Face 官方动态】Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+      "published_at": "2026-09-03T19:00:00+08:00",
+      "summary": "【OpenAI】Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
       "impact": "",
       "uses": "",
-      "source_url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
-      "official": true,
-      "is_new": true
-    },
-    {
-      "tag": "Hugging Face",
-      "company": "Hugging Face",
-      "source": "Hugging Face",
-      "title": "Give Your Coding Agents a Memory You Own",
-      "title_cn": "",
-      "date": "2026-09-03",
-      "published_at": "2026-09-03T08:00:00+08:00",
-      "summary": "【Hugging Face 官方动态】Give Your Coding Agents a Memory You Own",
-      "impact": "",
-      "uses": "",
-      "source_url": "https://huggingface.co/blog/funes",
+      "source_url": "https://openai.com/index/gpt-6-astra",
       "official": true,
       "is_new": true
     }
