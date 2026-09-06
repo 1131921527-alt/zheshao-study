@@ -37,6 +37,11 @@ FEEDS = [
     {'url': 'https://36kr.com/feed', 'outlet': '36氪', 'lang': 'zh'},
     {'url': 'https://www.ifanr.com/feed', 'outlet': '爱范儿', 'lang': 'zh'},
     {'url': 'https://sspai.com/feed', 'outlet': '少数派', 'lang': 'zh'},
+    # —— 国内手机/数码媒体（小米、华为、荣耀、OPPO、vivo 新机与新技术）——
+    {'url': 'https://www.ithome.com/rss', 'outlet': 'IT之家', 'lang': 'zh'},
+    {'url': 'https://www.leiphone.com/feed', 'outlet': '雷锋网', 'lang': 'zh'},
+    # —— 国际手机/数码媒体（Samsung / Google Pixel / Motorola 等，不局限于国内）——
+    {'url': 'https://www.androidauthority.com/feed/', 'outlet': 'Android Authority', 'lang': 'en'},
     # —— 官方 / 权威科技源（标题与链接真实可靠）——
     # AI 官方：免关键词过滤，保证不漏重要 AI 发布
     {'url': 'https://huggingface.co/blog/feed.xml', 'outlet': 'Hugging Face', 'lang': 'en', 'company': 'Hugging Face', 'ai_only': True},
@@ -76,7 +81,11 @@ COMPANY_MAP = [
     (r'华为|盘古', '华为'),
     (r'智谱|glm|chatglm', '智谱AI'),
     (r'月之暗面|kimi|moonshot', '月之暗面'),
-    (r'小米', '小米'),
+    (r'小米|红米|redmi', '小米'),
+    (r'荣耀|\bhonor\b', '荣耀'),
+    (r'\boppo\b', 'OPPO'),
+    (r'vivo', 'vivo'),
+    (r'一加|oneplus', '一加'),
     (r'苹果|apple', 'Apple'),
     (r'亚马逊|amazon|aws', 'Amazon'),
 ]
@@ -116,10 +125,14 @@ MED_IMPACT = re.compile(
     r'price|release ?date|date ?set|pre-order|reservation)',
     re.I)
 
-# 不让它进 list 的关键词（纯粹的营销话术/页面推广/友情链接广告）
+# 不让它进 list 的关键词（纯粹的营销话术/页面推广/友情链接广告/劳资纠纷/攻略榜单文）
+# 注意：命中 LOW_BLOCK 只在没命中 HIGH_IMPACT 时才判 low——重大新闻（发布/收购/监管）
+# 即使摘要里带 "how to" 也不会被误杀
 LOW_BLOCK = re.compile(
     r'(赞助内容|promoted|paid ?partner|广告|sponsored|advertis|newsletter ?signup|订阅 ?newsletter|'
-    r'disclaimer|免责声明)',
+    r'disclaimer|免责声明|'
+    r'工会|罢工|劳资|薪酬差距|裁员补偿|'
+    r'how to (get|install|use|download|set)|best \w+ ?apps?|tips and tricks|选购指南|值得买)',
     re.I)
 
 
@@ -153,9 +166,20 @@ def score_importance(title, summary, official=False):
 _IMPORTANCE_RANK = {'high': 0, 'med': 1, 'low': 2}
 
 AI_KEYWORDS = re.compile(
-    r'ai|人工智能|大模型|模型|gpt|claude|gemini|llm|agent|智能体|芯片|算力|'
+    # 'ai' 必须独立成词：不能匹配 said/remain/chairman 这类英文单词里的 ai 子串
+    # 'rag' 同理要词边界：不能匹配 storage/average 子串
+    r'ai(?![a-z0-9])|aigc|人工智能|大模型|模型|gpt|claude|gemini|llm|agent|智能体|芯片|算力|'
     r'神经网络|机器学习|深度学习|机器人|算法|开源模型|推理|训练|多模态|'
-    r'chatbot|生成式|向量|rag|微调|提示词|prompt', re.I)
+    r'chatbot|生成式|向量|\brag\b|微调|提示词|prompt', re.I)
+
+# 手机厂商科技关键词：与 AI 关键词并列放行（第17轮：收录小米/OPPO/vivo/华为/荣耀等
+# 厂商的新科技动态，如荣耀 robot phone、鸿蒙新版本、新旗舰发布等）
+PHONE_KEYWORDS = re.compile(
+    # vivo 加词边界：不匹配 survivor 子串
+    r'小米|红米|redmi|xiaomi|华为|huawei|harmonyos|鸿蒙|mate\s*\d+|'
+    r'荣耀|\bhonor\b|magic\s*os|\boppo\b|\bvivo\b|一加|oneplus|魅族|meizu|realme|'
+    r'手机|折叠屏|新机|机器人手机|robot\s*phone|'
+    r'samsung|galaxy|google\s*pixel|iphone|智能手机', re.I)
 
 # 统一使用北京时间（UTC+8），保证“更新于 YYYY-MM-DD”与用户感知一致，且不受运行环境时区影响
 BJTZ = datetime.timezone(datetime.timedelta(hours=8))
@@ -328,9 +352,10 @@ def collect():
                     if feed['lang'] == 'en' and age > WINDOW * 3:
                         continue
                 text = title + ' ' + it['summary']
-                # 非 AI 专属 / 非分类专用源（中文媒体 / 综合英文媒体）必须命中 AI 关键词，避免无关垃圾内容混入
-                # 已知分类（如 Apple/Tesla）的官方源，跳过 AI 关键词检查（它们本身就在自家领域内）
-                if not feed.get('ai_only') and not feed.get('category') and not AI_KEYWORDS.search(text):
+                # 非分类专用源（中文媒体 / 综合英文媒体）必须命中 AI 或手机厂商关键词，
+                # 既保住 AI 主线，也放行小米/华为/荣耀/OPPO/vivo 等新科技动态
+                # 已知分类（如 Apple/Tesla）的官方源，跳过关键词检查（它们本身就在自家领域内）
+                if not feed.get('ai_only') and not feed.get('category') and not (AI_KEYWORDS.search(text) or PHONE_KEYWORDS.search(text)):
                     continue
                 company = feed.get('company') or detect_company(title) or detect_company(feed['outlet']) or feed['outlet']
                 pub_bj = pub.astimezone(BJTZ) if pub else NOW
@@ -402,7 +427,17 @@ def main():
         return (_IMPORTANCE_RANK.get(c.get('importance', 'med'), 1),
                 c.get('published_at', ''))
     fresh.sort(key=_sort_key, reverse=True)
-    fresh = fresh[:10]
+    # 单一媒体最多占 4 条（40%）：防止 IT之家这类高产量源刷屏，保证来源多样
+    capped, outlet_n = [], {}
+    for c in fresh:
+        o = c.get('source') or ''
+        if outlet_n.get(o, 0) >= 4:
+            continue
+        outlet_n[o] = outlet_n.get(o, 0) + 1
+        capped.append(c)
+        if len(capped) >= 10:
+            break
+    fresh = capped
 
     # 合并：今日新抓在前（is_new = 不在历史里），总量控制在 5~10 条，宁缺毋滥
     final = []
@@ -454,6 +489,31 @@ def main():
             c['_carryover'] = True  # 标记为跨天延续，前端可显示"昨日重点"
             seen_t.add(t)
             final.append(c)
+
+    # 第17轮：按 source_url 恢复历史卡片的全文（每日列表是重建的，
+    # 不恢复的话已抓好的 fulltext 会被洗掉，又要重新抓一遍）
+    prev_ft = {}
+    for c in prev_cards:
+        if c.get('source_url') and c.get('fulltext'):
+            prev_ft[c['source_url']] = {
+                'fulltext': c['fulltext'],
+                'fulltext_lang': c.get('fulltext_lang', ''),
+                'fulltext_chars': c.get('fulltext_chars', 0),
+            }
+    for c in final:
+        pf = prev_ft.get(c.get('source_url', ''))
+        if pf and not c.get('fulltext'):
+            c.update(pf)
+
+    # 第17轮：给仍没有全文的卡片在线抓原文全文（详情页显示 100% 原文）
+    # lxml 缺失或网络异常时静默跳过，绝不影响主流程（摘要仍在）
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from fetch_fulltext import enrich_cards
+        ok_n, fail_n, skip_n = enrich_cards(final, sleep_s=0.8, quiet=True)
+        sys.stderr.write('fulltext: ok=%d fail=%d skip=%d\n' % (ok_n, fail_n, skip_n))
+    except Exception as e:
+        sys.stderr.write('fulltext enrich skipped: %s\n' % e)
 
     # 把本次最终列表里的中文译文沉淀进缓存，供后续复用
     try:

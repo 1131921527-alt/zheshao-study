@@ -99,21 +99,24 @@ def lang_of(paras):
     return "zh" if cjk / max(len(txt), 1) > 0.25 else "en"
 
 
-def main():
-    force = "--force" in sys.argv
-    d = json.load(io.open(P, encoding="utf-8"))
-    cards = d["cards"]
+def enrich_cards(cards, force=False, sleep_s=1.0, quiet=False):
+    """给卡片列表就地补全文（fulltext/fulltext_lang/fulltext_chars）。
+    幂等：已有 >=800 字全文且未 force 则跳过。
+    返回 (成功数, 失败数, 跳过数)。供 auto_ai_news.py 每日更新时直接调用。
+    """
     ok_n = fail_n = skip_n = 0
     for i, it in enumerate(cards):
         w = (it.get("title_cn") or it.get("title") or "")[:24]
         ft = it.get("fulltext")
         if ft and len("".join(ft)) >= 800 and not force:
-            print("[%d/%d] %-26s 已有全文，跳过" % (i + 1, len(cards), w))
+            if not quiet:
+                print("[%d/%d] %-26s 已有全文，跳过" % (i + 1, len(cards), w))
             skip_n += 1
             continue
         url = it.get("source_url") or ""
         if not url:
-            print("[%d/%d] %-26s 无 source_url" % (i + 1, len(cards), w))
+            if not quiet:
+                print("[%d/%d] %-26s 无 source_url" % (i + 1, len(cards), w))
             fail_n += 1
             continue
         try:
@@ -123,19 +126,31 @@ def main():
             paras = clean_paras(best) if best is not None else []
             n = sum(len(t) for t in paras)
             if n < 500:
-                print("[%d/%d] %-26s 正文仅 %d 字，放弃" % (i + 1, len(cards), w, n))
+                if not quiet:
+                    print("[%d/%d] %-26s 正文仅 %d 字，放弃" % (i + 1, len(cards), w, n))
                 fail_n += 1
                 continue
             it["fulltext"] = paras
             it["fulltext_lang"] = lang_of(paras)
             it["fulltext_chars"] = n
-            print("[%d/%d] %-26s %5d 字 / %2d 段 / %s  OK" %
-                  (i + 1, len(cards), w, n, len(paras), it["fulltext_lang"]))
+            if not quiet:
+                print("[%d/%d] %-26s %5d 字 / %2d 段 / %s  OK" %
+                      (i + 1, len(cards), w, n, len(paras), it["fulltext_lang"]))
             ok_n += 1
         except Exception as e:
-            print("[%d/%d] %-26s FAIL: %s" % (i + 1, len(cards), w, str(e)[:60]))
+            if not quiet:
+                print("[%d/%d] %-26s FAIL: %s" % (i + 1, len(cards), w, str(e)[:60]))
             fail_n += 1
-        time.sleep(1.0)                   # 礼貌间隔
+        if sleep_s > 0:
+            time.sleep(sleep_s)                  # 礼貌间隔
+    return ok_n, fail_n, skip_n
+
+
+def main():
+    force = "--force" in sys.argv
+    d = json.load(io.open(P, encoding="utf-8"))
+    cards = d["cards"]
+    ok_n, fail_n, skip_n = enrich_cards(cards, force=force)
     json.dump(d, io.open(P, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("\n抓取成功 %d / 失败 %d / 跳过 %d" % (ok_n, fail_n, skip_n))
 
