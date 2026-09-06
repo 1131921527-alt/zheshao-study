@@ -550,7 +550,7 @@
       "uses": "",
       "source_url": "https://openai.com/index/an-alien-mind",
       "official": true,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
