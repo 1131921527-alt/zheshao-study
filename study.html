@@ -132,6 +132,9 @@ a{color:inherit;text-decoration:none}
 .wcard .core{font-size:17px;color:#dfe6ff;margin-top:4px;line-height:1.5}
 .wcard .example{font-size:15px;color:#cdd6f4;margin-top:8px;line-height:1.6;font-style:italic}
 .wcard .example .hl{color:var(--cyan);font-weight:700}
+/* 例句行：英文 + 右侧播放按钮 */
+.wcard .example .ex-row{display:flex;align-items:flex-start;gap:8px}
+.wcard .example .ex-row .speaker{flex:0 0 auto;font-size:16px;line-height:1.5;vertical-align:middle}
 
 /* 详情标签（解释阶段） */
 .detail{margin-top:14px}
@@ -602,6 +605,15 @@ var Pron=(function(){
       var p=el.play(); if(p&&p.catch) p.catch(function(){});
     }catch(e){}
   }
+  // 例句整句发音：直接走有道在线 dictvoice（本地无整句 mp3，跳过无谓的 404 试探）
+  function speakSentence(sent){
+    if(!sent) return;
+    try{
+      el.src='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(sent)+'&type=1';
+      try{ el.currentTime=0; }catch(e){}
+      var p=el.play(); if(p&&p.catch) p.catch(function(){});
+    }catch(e){}
+  }
   function play(w){ if(!G.auto) return; speak(w); }   // 自动发音：受开关控制
   function unlock(){   // 必须在真实用户手势里调用，才能解锁移动端音频
     if(unlocked) return;
@@ -616,7 +628,7 @@ var Pron=(function(){
   }
   function stop(){ try{ el.pause(); el.currentTime=0; }catch(e){} }
   function preload(w){ if(!w) return; var a=new Audio(); a.preload='auto'; a.src=url(w); }
-  return {play:play, speak:speak, stop:stop, preload:preload, unlock:unlock};
+  return {play:play, speak:speak, speakSentence:speakSentence, stop:stop, preload:preload, unlock:unlock};
 })();
 
 /* ============ 图片预加载（文字优先，绝不卡图片） ============ */
@@ -1410,6 +1422,31 @@ function initWordState(){
 }
 
 // ---- 阶段1：显示单词卡片（图+词+音标+例句）----
+// 取例句数组：优先 examples（含3条），兼容旧 en/cn 单条
+function getExamples(it){
+  var arr = (it.examples && it.examples.length) ? it.examples : [];
+  if(!arr.length && it.en){ arr = [{en:it.en, cn:it.cn||''}]; }
+  return arr;
+}
+// 渲染一条例句（英文高亮单词 + 播放按钮 + 中文），返回 HTML
+// 播放按钮用 data-en-idx 索引，由点击时从当前词句 examples 里取整句交给有道，避免内联整句的转义问题
+function exHtml(it, ex, idx){
+  var sent=ex.en||'';
+  var hl=sent.replace(new RegExp('\\b'+escapeRegExp(it.word)+'\\b','gi'),'<span class="hl">'+esc(it.word)+'</span>');
+  return '<div class="example" id="ex_'+idx+'" style="margin-bottom:8px">'
+    +'<div class="ex-row"><span style="flex:1">'+hl+'</span>'
+    +'<span class="speaker" onclick="playEx('+idx+')" style="cursor:pointer">🔊</span></div>'
+    +(ex.cn?'<div style="font-size:13px;color:var(--mut);margin-top:4px">'+esc(ex.cn)+'</div>':'')
+    +'</div>';
+}
+// 点击例句播放按钮：从当前词取第 idx 条例句整句，交给有道在线发音
+function playEx(idx){
+  if(!cur||!cur.items) return;
+  var it=cur.items[cur.idx];
+  var exs=getExamples(it);
+  var ex=exs[idx];
+  if(ex&&ex.en) Pron.speakSentence(ex.en);
+}
 function showStageCard(){
   cur.stage=STAGE.CARD;
   var it=cur.items[cur.idx];
@@ -1423,13 +1460,14 @@ function showStageCard(){
     mediaHtml='<div class="media" id="wordMedia"><div style="font-size:80px">'+wordEmoji(it.word,it.cn||'')+'</div></div>';
   }
 
-  // 例句（如果有）
+  // 例句（显示最多 3 条，每条带发音按钮）
   var exampleHtml='';
-  if(it.en){
-    var sentence=it.en;
-    var highlighted=sentence.replace(new RegExp('\\b'+escapeRegExp(it.word)+'\\b','gi'),'<span class="hl">'+esc(it.word)+'</span>');
-    exampleHtml='<div class="example">'+highlighted+'</div>';
-    if(it.cn) exampleHtml+='<div style="font-size:13px;color:var(--mut);margin-top:4px">'+esc(it.cn)+'</div>';
+  var exs=getExamples(it);
+  if(exs.length){
+    var shown=exs.slice(0,3);
+    exampleHtml='<div>';
+    for(var ei=0;ei<shown.length;ei++){ exampleHtml+=exHtml(it, shown[ei], ei); }
+    exampleHtml+='</div>';
   }
 
   document.getElementById('stageContent').innerHTML=
@@ -1590,7 +1628,13 @@ function showStageExplain(){
 
   // 构建解释面板HTML
   var tabs=[];
-  if(it.en) tabs.push(['例句', '<div class="en">'+esc(it.en)+'</div><div class="cn">'+esc(it.cn||'')+'</div>']);
+  var exs=getExamples(it);
+  if(exs.length){
+    var exBlock='';
+    var shown=exs.slice(0,3);
+    for(var ei=0;ei<shown.length;ei++){ exBlock+=exHtml(it, shown[ei], ei); }
+    tabs.push(['例句', exBlock]);
+  }
   if((it.story||it.tip)) tabs.push(['助记', '<div>'+(esc(it.story)||'')+'</div><div style="margin-top:6px;color:var(--mut)">'+(esc(it.tip)||'')+'</div>']);
   if(it.pos) tabs.push(['词性', '<div>'+esc(it.pos)+'</div>']);
 
