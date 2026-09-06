@@ -458,7 +458,7 @@ function resetDailyIfNeeded(){var t=todayStr(); if(G.study.lastDate!==t){G.study
 
 /* ============ 设置 ============ */
 function toggleSetting(which){
-  if(which==='sound'){ G.sound=!G.sound; zs(SET_SOUND,G.sound); document.getElementById('tgSound').classList.toggle('on',G.sound); if(G.sound) Sound.play('click'); }
+  if(which==='sound'){ G.sound=!G.sound; zs(SET_SOUND,G.sound); Sound.setOn(G.sound); document.getElementById('tgSound').classList.toggle('on',G.sound); if(G.sound) Sound.play('click'); }
   else if(which==='auto'){ G.auto=!G.auto; zs(SET_AUTO,G.auto); document.getElementById('tgAuto').classList.toggle('on',G.auto); if(G.auto) toast('自动发音已开'); }
   else if(which==='spell'){ G.spell=!G.spell; zs(SET_SPELL,G.spell); document.getElementById('tgSpell').classList.toggle('on',G.spell); }
 }
@@ -467,12 +467,17 @@ function closeSettings(){ document.getElementById('setOv').classList.remove('on'
 
 /* ============ 统一音效系统（WebAudio 合成，无外部文件）增强版 ============ */
 var Sound=(function(){
-  var ctx=null, master=null, on=true, last={}, comboCount=0;
+  var ctx=null, master=null, on=true, last={}, comboCount=0, lastPlayAt=0;
   function ensure(){
     if(!ctx){
-      try{ ctx=new (window.AudioContext||window.webkitAudioContext)(); master=ctx.createGain(); master.gain.value=0.16; master.connect(ctx.destination); }catch(e){ ctx=null; }
+      try{
+        var AC=window.AudioContext||window.webkitAudioContext;
+        if(!AC) return;
+        ctx=new AC(); master=ctx.createGain(); master.gain.value=0.16; master.connect(ctx.destination);
+      }catch(e){ ctx=null; return; }
     }
-    if(ctx&&ctx.state==='suspended'){ ctx.resume(); }
+    // iOS/安卓：AudioContext 初始为 suspended，必须在用户手势里 resume 才出声
+    if(ctx&&ctx.state==='suspended'){ try{ var p=ctx.resume(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
   }
   function tone(freq,start,dur,type,vol,glide){
     if(!ctx) return;
@@ -490,7 +495,7 @@ var Sound=(function(){
     ensure(); if(!ctx) return;
     var now=Date.now();
     if(last[name]&&now-last[name]<35) return;
-    last[name]=now;
+    last[name]=now; lastPlayAt=now;
     switch(name){
       case 'click': tone(620,0,0.05,'square',0.35); break;
       case 'next': tone(480,0,0.06,'triangle',0.4,720); break;
@@ -532,20 +537,41 @@ var Sound=(function(){
   function addCombo(){ comboCount++; if(comboCount===3){ play('combo3'); showComboToast('🔥 3连击!'); } else if(comboCount>=5 && comboCount%5===0){ play('combo5'); showComboToast('⚡ '+comboCount+'连击!'); } }
   function resetCombo(){ comboCount=0; }
   function showComboToast(txt){ var el=document.getElementById('comboToast'); el.textContent=txt; el.classList.remove('on'); void el.offsetWidth; el.classList.add('on'); setTimeout(function(){el.classList.remove('on');},1200); }
-  return {play:play, setOn:function(v){on=v;}, isOn:function(){return on;}, unlock:ensure, addCombo:addCombo, resetCombo:resetCombo};
+  return {play:play, setOn:function(v){on=v;}, isOn:function(){return on;}, unlock:ensure, addCombo:addCombo, resetCombo:resetCombo, recentlyPlayed:function(){return (Date.now()-lastPlayAt)<80;}};
 })();
 
 /* ============ 自动发音 + 预加载（复用现有 mp3） ============ */
 var Pron=(function(){
   var el=document.getElementById('audio');
-  function url(w){ return 'ielts/audio/'+encodeURIComponent(w)+'_us.mp3'; }
-  function play(w){
-    if(!G.auto) return;
-    try{ el.src=url(w); var p=el.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){}
+  // 极小静音 wav，仅用于首次手势里解锁移动端 <audio>（iOS/安卓不解锁则点喇叭没声音）
+  var SILENT='data:audio/wav;base64,UklGRmQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YUAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
+  var unlocked=false;
+  // 音频文件名统一小写（下载脚本用的是 word.lower()），这里必须转小写才能命中，
+  // 否则 Edition 这类首字母大写的词会拼成不存在的 Edition_us.mp3 而哑掉
+  function url(w){ return 'ielts/audio/'+encodeURIComponent(String(w||'').trim().toLowerCase())+'_us.mp3'; }
+  function speak(w){   // 立即发音：不理“自动发音”开关，手动点喇叭必须出声
+    if(!w) return;
+    try{
+      el.src=url(w);
+      try{ el.currentTime=0; }catch(e){}
+      var p=el.play(); if(p&&p.catch) p.catch(function(){});
+    }catch(e){}
+  }
+  function play(w){ if(!G.auto) return; speak(w); }   // 自动发音：受开关控制
+  function unlock(){   // 必须在真实用户手势里调用，才能解锁移动端音频
+    if(unlocked) return;
+    // 无论成功失败都必须把音量恢复为 1，否则后续发音全被静音
+    var done=function(){ try{ el.pause(); }catch(e){} try{ el.volume=1; }catch(e){} };
+    try{
+      el.volume=0; el.src=SILENT;
+      var p=el.play();
+      if(p&&p.then){ p.then(function(){ unlocked=true; }, function(){}).then(done, done); }
+      else { unlocked=true; done(); }
+    }catch(e){ done(); }
   }
   function stop(){ try{ el.pause(); el.currentTime=0; }catch(e){} }
   function preload(w){ if(!w) return; var a=new Audio(); a.preload='auto'; a.src=url(w); }
-  return {play:play, stop:stop, preload:preload};
+  return {play:play, speak:speak, stop:stop, preload:preload, unlock:unlock};
 })();
 
 /* ============ 图片预加载（文字优先，绝不卡图片） ============ */
@@ -1388,7 +1414,7 @@ function prevWord(){
   if(cur.idx>0){ cur.idx--; Sound.play('back'); enterLearnStage(); }
 }
 
-function replayWord(){ Sound.play('click'); Pron.stop(); Pron.play(cur.items[cur.idx].word); }
+function replayWord(){ Sound.play('click'); Pron.stop(); Pron.speak(cur.items[cur.idx].word); }
 function favoriteCurrent(){
   if(!cur||cur.deck.key!=='en') return;
   var w=cur.items[cur.idx].word;
@@ -1544,9 +1570,35 @@ function startFromUrl(){
   setTimeout(function(){ startDeck(deck); }, 80);
   return true;
 }
-function firstGesture(){ Sound.unlock(); window.removeEventListener('pointerdown',firstGesture); window.removeEventListener('touchstart',firstGesture); }
+/* ===== 首次手势解锁：WebAudio 与 <audio> 都要解锁，否则手机浏览器点啥都没声 ===== */
+function firstGesture(){
+  Sound.unlock(); Pron.unlock();
+  window.removeEventListener('pointerdown',firstGesture);
+  window.removeEventListener('touchstart',firstGesture);
+  window.removeEventListener('mousedown',firstGesture);
+  window.removeEventListener('click',firstGesture);
+  window.removeEventListener('keydown',firstGesture);
+}
 window.addEventListener('pointerdown',firstGesture);
 window.addEventListener('touchstart',firstGesture);
+window.addEventListener('mousedown',firstGesture);
+window.addEventListener('click',firstGesture);        // 只触发 click 的环境（部分移动端/键盘）也能解锁
+window.addEventListener('keydown',firstGesture);
+
+/* ===== 全站按钮音效：任何按钮点击都出声；已有专属音效的按钮不重复叠加 ===== */
+(function(){
+  var SEL='button,.btn,.tbtn,.qopt,.chip,.tile,.card,.nav,.tab,.iconbtn,.opt,.optbtn,[data-key]';
+  document.addEventListener('click',function(e){
+    if(!G.sound) return;
+    var t=e.target;
+    if(!t||typeof t.closest!=='function') return;
+    if(!t.closest(SEL)) return;
+    if(Sound.recentlyPlayed()) return;
+    Sound.play('click');
+  },false);
+})();
+
+Sound.setOn(G.sound);
 if(!startFromUrl()) renderHome();
 </script>
 </body>
