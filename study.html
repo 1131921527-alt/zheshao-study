@@ -254,6 +254,7 @@ a{color:inherit;text-decoration:none}
 .news-full .source{font-size:12.5px;margin-top:12px}
 .news-full .np{font-size:16.5px;line-height:1.95;color:#dbe2ea;margin-top:14px;letter-spacing:.2px}
 .news-full .np-label{font-size:12px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-top:22px}
+.news-full .np-lang{font-size:12px;color:var(--mut);margin-top:20px;padding:8px 12px;border:1px dashed var(--line2);border-radius:10px;background:rgba(255,255,255,.02)}
 .news-full .nimpact{margin-top:10px;padding:13px 15px;border-left:3px solid var(--cyan);background:rgba(56,182,255,.07);border-radius:0 12px 12px 0;font-size:15.5px;line-height:1.85;color:#bfe7ff}
 .news-full .nuses{margin-top:12px;padding:13px 15px;border-left:3px solid var(--green);background:rgba(74,222,128,.07);border-radius:0 12px 12px 0;font-size:15.5px;line-height:1.85;color:#c4ecd2}
 .news-full .srcrow{margin-top:22px;padding-top:14px;border-top:1px dashed var(--line2)}
@@ -3444,11 +3445,19 @@ function renderNews(){
   document.getElementById('newsTag').textContent=(it.category?'【'+it.category+'】':'')+(it.tag||'AI');
   document.getElementById('newsTitle').textContent=it.title_cn||it.title||'';
   document.getElementById('newsDate').textContent=it.date?('发布：'+it.date):'';
-  // 第15轮：全屏全文版——正文按句分段渲染，impact/uses 做成强调块
-  var paras=paraSplit(it.summary||'');
+  // 第16轮：优先渲染抓回来的全文 fulltext（每篇 2000-8000 字）；无全文回退摘要分段
   var h='';
-  paras.forEach(function(p){ h+='<div class="np">'+escAttr(p)+'</div>'; });
-  if(!paras.length) h+='<div class="np" style="color:var(--mut)">（暂无正文摘要，可点下方原文查看全文）</div>';
+  var ft=it.fulltext;
+  if(ft && ft.length){
+    var merged=mergeParas(ft);
+    if(it.fulltext_lang==='en') h+='<div class="np-lang">🌐 以下为英文原文全文（'+(it.fulltext_chars||0)+' 字符，完整内容）</div>';
+    merged.forEach(function(p){ h+='<div class="np">'+escAttr(p)+'</div>'; });
+    h+='<div class="np-lang" style="margin-top:16px">以上为原文全文 · 共 '+merged.length+' 段</div>';
+  }else{
+    var paras=paraSplit(it.summary||'');
+    paras.forEach(function(p){ h+='<div class="np">'+escAttr(p)+'</div>'; });
+    if(!paras.length) h+='<div class="np" style="color:var(--mut)">（暂无正文摘要，可点下方原文查看全文）</div>';
+  }
   var imp=it.impact||it.why_it_matters||'';
   var use=it.uses||it.how_to_use||'';
   if(imp||use){
@@ -3485,6 +3494,19 @@ function paraSplit(t){
     }
   }
   if(buf.trim()) out.push(buf.trim());
+  return out;
+}
+/* 第16轮：把抓回来的碎段落合并成 80~200 字的自然段（量子位等站点一句一段，太碎） */
+function mergeParas(arr){
+  if(!arr||!arr.length) return [];
+  var out=[],buf='';
+  arr.forEach(function(t){
+    t=(t||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    if(buf && (buf.length>=80 || (buf.length+t.length)>200)){ out.push(buf); buf=t; }
+    else { buf=buf?buf+' '+t:t; }
+  });
+  if(buf) out.push(buf);
   return out;
 }
 function newsId(it){ return newsIdKey(it); }
