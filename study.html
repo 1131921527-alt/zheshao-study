@@ -414,17 +414,9 @@ var ICONS={word:'📖',ai:'🤖',know:'🧠',speak:'🔊',back:'←'};
 
 /* ============ 牌组配置（沿用，不改动数据源） ============ */
 var DECKS=[
-  {key:'en', name:'英语 · 雅思词汇', desc:'1170 词 · 发音+配图+释义', type:'word', src:'ielts/ielts_bank.json', color:'linear-gradient(135deg,#1f6feb,#a371f7)', icon:'📖', batch:20},
+  {key:'en', name:'英语 · 雅思词汇', desc:'1170 词 · 发音+配图+四选一+拼写', type:'word', src:'ielts/ielts_bank.json', color:'linear-gradient(135deg,#1f6feb,#a371f7)', icon:'📖', batch:20},
   {key:'ai', name:'AI 动态', desc:'每天自动更新的行业新闻', type:'news', src:'assets/ai_cards.json', color:'linear-gradient(135deg,#ff8a5c,#ff5d8f)', icon:'🤖', batch:5},
-  {key:'kn_ai', name:'AI 科普', desc:'4 篇 · 三次冬天·提示词·幻觉', type:'know', src:'assets/knowledge_cards.json', cat:'AI与科技科普', color:'linear-gradient(135deg,#38e1ff,#2fa8ff)', icon:'💡', batch:5},
-  {key:'kn_carnegie', name:'卡耐基 · 人际沟通', desc:'5 篇 · 名字·倾听·批评艺术', type:'know', src:'assets/knowledge_cards.json', cat:'卡耐基与人际沟通', color:'linear-gradient(135deg,#ffce5a,#ff9d4d)', icon:'💬', batch:5},
-  {key:'kn_history', name:'历史 · 人物常识', desc:'5 篇 · 诸葛亮·曾国藩·工业革命', type:'know', src:'assets/knowledge_cards.json', cat:'历史人物与历史常识', color:'linear-gradient(135deg,#c98bff,#7b5cff)', icon:'🏛️', batch:5},
-  {key:'kn_habit', name:'原子习惯', desc:'5 篇 · 微小改变·系统·环境', type:'know', src:'assets/knowledge_cards.json', cat:'原子习惯', color:'linear-gradient(135deg,#46e6a0,#2fc1c1)', icon:'🔁', batch:5},
-  {key:'kn_geo', name:'地理 · 世界常识', desc:'4 篇 · 时区·季风·南北极', type:'know', src:'assets/knowledge_cards.json', cat:'地理与世界常识', color:'linear-gradient(135deg,#5fd0ff,#3a8fd0)', icon:'🌍', batch:5},
-  {key:'kn_psy', name:'心理学', desc:'6 篇 · 心流·内耗·间歇性强化', type:'know', src:'assets/knowledge_cards.json', cat:'心理学', color:'linear-gradient(135deg,#ff9ad1,#b96bff)', icon:'🧠', batch:6},
-  {key:'kn_lit', name:'文学 · 文化', desc:'2 篇 · 西游记与修心·鲁迅', type:'know', src:'assets/knowledge_cards.json', cat:'文学与文化', color:'linear-gradient(135deg,#ffb86b,#ff6b6b)', icon:'📜', batch:5},
-  {key:'kn_sport', name:'运动健康', desc:'4 篇 · 睡眠·蛋白质·跑姿', type:'know', src:'assets/knowledge_cards.json', cat:'运动健康与身体常识', color:'linear-gradient(135deg,#7be495,#2fb86b)', icon:'🏃', batch:5},
-  {key:'kn_all', name:'全部知识文章', desc:'35 篇 · 一次性刷完所有类目', type:'know', src:'assets/knowledge_cards.json', color:'linear-gradient(135deg,#9aa7ff,#6b78ff)', icon:'📚', batch:5}
+  {key:'kn_all', name:'知识文章', desc:'35 篇 · 一次刷完所有类目', type:'know', src:'assets/knowledge_cards.json', color:'linear-gradient(135deg,#9aa7ff,#6b78ff)', icon:'📚', batch:5}
 ];
 
 /* ============ 存储（与 index.html 共享前缀 wb_zs_） ============ */
@@ -686,7 +678,7 @@ function renderHome(){
   var goals=[
     {key:'word',label:'英语 20 词',need:20,prog:G.study.wordToday,deck:'en',xp:10},
     {key:'ai',label:'AI 新闻 3 篇',need:3,prog:G.study.newsToday,deck:'ai',xp:10},
-    {key:'art',label:'知识卡 1 篇',need:1,prog:G.study.artToday,deck:'kn_ai',xp:20}
+    {key:'art',label:'知识卡 1 篇',need:1,prog:G.study.artToday,deck:'kn_all',xp:20}
   ];
   var gl=document.getElementById('goalList'); var gh='';
   goals.forEach(function(g){
@@ -1288,8 +1280,6 @@ function proceedNext(){
   }
 }
 
-function nextWord(){ proceedNext(); }
-
 function finishWord(){
   Sound.play('complete');
   addXp(10);
@@ -1297,60 +1287,6 @@ function finishWord(){
   toast('本轮完成！+10 XP');
   hideThumb();
   setTimeout(renderHome, 600);
-}
-
-/* ============ 旧模式兼容（保留 study/quiz 切换按钮入口） ============ */
-function switchMode(mode){
-  if(!cur || cur.deck.key!=='en') return;
-  if(mode==='quiz'){
-    // 直接进入新版四选一流程（已经是默认了）
-    enterLearnStage();
-  } else {
-    // 旧的学习模式（看词→判断）
-    cur.stage=STAGE.CARD;
-    cur.ws={isNew:true,quizResult:null,wrongCount:0,spellRequired:false,spellAttempts:0,mastery:'unknown',revealed:false,quizAnswered:false};
-    showLegacyStudyMode();
-  }
-  Sound.play('click');
-}
-
-/**
- * 旧版学习模式兼容（保留给想用老方式的用户）
- */
-function showLegacyStudyMode(){
-  var it=cur.items[cur.idx];
-  cur.judged=false;
-  var card=document.getElementById('wordCard');
-  card.classList.add('swap');
-  document.getElementById('stageContent').innerHTML=
-    '<div class="ft">英语 · 雅思词汇（经典模式）</div>'
-    +'<div class="media" id="wordMedia">'+(it.image?'<img id="wm" src="'+esc(it.image)+'" style="opacity:0;transition:opacity .16s">':'<div style="font-size:80px">'+wordEmoji(it.word,it.cn||'')+'</div>')+'</div>'
-    +'<div class="big" id="wordText">'+esc(it.word)+'</div>'
-    +'<div class="ipa" id="wordIpa"><span>'+esc(it.ipa||'')+'</span><span class="speaker" id="wordSpeak">🔊</span></div>'
-    +'<div class="pos" id="wordPos">'+esc(it.pos||'')+'</div>'
-    +'<div class="core" id="wordCore">'+esc(it.cn||'')+'</div>';
-
-  if(it.image){ var im=document.getElementById('wm'); if(im){ im.onload=function(){this.style.opacity=1;}; im.onerror=function(){document.getElementById('wordMedia').innerHTML='<div style="font-size:80px">'+wordEmoji(it.word,it.cn||'')+'</div>';};} }
-
-  document.getElementById('wprog').textContent=(cur.idx+1)+' / '+cur.items.length;
-  document.getElementById('wFav').classList.toggle('on', G.fav.indexOf(it.word)>=0);
-  var sp=document.getElementById('wordSpeak'); if(sp) sp.onclick=function(){replayWord();};
-  Pron.play(it.word);
-  preloadAround();
-
-  // 显示旧的底部操作栏
-  showThumbLegacyStudy();
-  setTimeout(function(){ card.classList.remove('swap'); }, 20);
-}
-
-function judge(ans){
-  if(cur.judged) return;
-  cur.judged=true;
-  Sound.play(ans==='yes'?'correct':'next');
-  if(ans!=='yes') vibe(20);
-  addSeen('en', idOf(cur.deck, cur.items[cur.idx]));
-  saveLast();
-  showThumbLegacyNext();
 }
 
 /* ============ 底部栏管理（按阶段切换） ============ */
@@ -1398,28 +1334,6 @@ function skipSpell(){
   // 仅非强制拼写时可跳过，且跳过时不奖励拼写 XP
   cur.ws.spellRequired=false;
   proceedNext();
-}
-
-/** 旧模式底栏：学习状态 */
-function showThumbLegacyStudy(){
-  var thumb=document.getElementById('thumb'); var inner=document.getElementById('thumbInner');
-  thumb.classList.add('on');
-  inner.innerHTML='<div style="display:flex;gap:8px;width:100%">'
-    +'<button class="tbtn speaker" style="flex:0 0 48px;font-size:20px" onclick="replayWord()">🔊</button>'
-    +'<button class="tbtn no" style="flex:1" onclick="judge(\'no\')">不认识</button>'
-    +'<button class="tbtn vag" style="flex:1" onclick="judge(\'vag\')">模糊</button>'
-    +'<button class="tbtn yes" style="flex:1" onclick="judge(\'yes\')">认识</button>'
-    +'</div>';
-}
-
-/** 旧模式底栏：下一个 */
-function showThumbLegacyNext(){
-  var thumb=document.getElementById('thumb'); var inner=document.getElementById('thumbInner');
-  thumb.classList.add('on');
-  inner.innerHTML='<div style="display:flex;gap:8px;width:100%">'
-    +'<button class="tbtn speaker" style="flex:0 0 48px;font-size:20px" onclick="replayWord()">🔊</button>'
-    +'<button class="tbtn next" style="flex:1;background:linear-gradient(135deg,var(--cyan),var(--violet));border:none;color:#06121f" onclick="nextWord()">下一个 →</button>'
-    +'</div>';
 }
 
 function prevWord(){
