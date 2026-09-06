@@ -458,7 +458,7 @@ var ICONS={word:'📖',ai:'🤖',know:'🧠',speak:'🔊',back:'←'};
 
 /* ============ 牌组配置（沿用，不改动数据源） ============ */
 var DECKS=[
-  {key:'en', name:'英语 · 雅思词汇', desc:'1170 词 · 发音+配图+四选一+拼写', type:'word', src:'ielts/ielts_bank.json', color:'linear-gradient(135deg,#1f6feb,#a371f7)', icon:'📖', batch:20},
+  {key:'en', name:'英语 · 雅思词汇', desc:'3934 词 · 乱序学习 · 发音+四选一+拼写', type:'word', src:'ielts/ielts_bank.json', color:'linear-gradient(135deg,#1f6feb,#a371f7)', icon:'📖', batch:20},
   {key:'ai', name:'AI · 科技精选', desc:'每天自动更新的 AI / 科技精选', type:'news', src:'assets/ai_cards.json', color:'linear-gradient(135deg,#ff8a5c,#ff5d8f)', icon:'🤖', batch:10},
   {key:'kn_all', name:'知识文章', desc:'35 篇 · 一次刷完所有类目', type:'know', src:'assets/knowledge_cards.json', color:'linear-gradient(135deg,#9aa7ff,#6b78ff)', icon:'📚', batch:5}
 ];
@@ -573,6 +573,21 @@ var Sound=(function(){
 /* ============ 自动发音 + 预加载（复用现有 mp3） ============ */
 var Pron=(function(){
   var el=document.getElementById('audio');
+  // 本地 mp3 加载失败（404）时，自动回退到有道在线发音，保证任何词都能出声
+  try{
+    el.addEventListener('error', function(){
+      var src=el.src||'';
+      if(src.indexOf('ielts/audio/')>=0){
+        try{
+          var m=decodeURIComponent(src).match(/audio\/(.+)_us\.mp3/);
+          if(m){
+            el.src='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(m[1])+'&type=2';
+            var p=el.play(); if(p&&p.catch) p.catch(function(){});
+          }
+        }catch(e){}
+      }
+    });
+  }catch(e){}
   // 极小静音 wav，仅用于首次手势里解锁移动端 <audio>（iOS/安卓不解锁则点喇叭没声音）
   var SILENT='data:audio/wav;base64,UklGRmQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YUAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
   var unlocked=false;
@@ -795,6 +810,15 @@ function deckProgress(d, items){
   return {known:known,total:total,pct:pct,text:known+' / '+total+' 已学 ('+pct+'%)'};
 }
 
+/* 洗牌：每次进入英语牌组都随机乱序，不再是词库正序（abundant 开头） */
+function shuffleArr(a){
+  var arr=a.slice();
+  for(var i=arr.length-1;i>0;i--){
+    var j=Math.floor(Math.random()*(i+1));
+    var t=arr[i]; arr[i]=arr[j]; arr[j]=t;
+  }
+  return arr;
+}
 /* ============ 学习会话 ============ */
 var cur=null;
 // 学习阶段常量
@@ -804,7 +828,9 @@ function startDeck(key){
   loadDeck(deck,function(items){
     var seen=getSeen(key);
     var unseen=items.filter(function(it){return seen.indexOf(idOf(deck,it))<0;});
-    var pool=unseen.concat(items.filter(function(it){return seen.indexOf(idOf(deck,it))>=0;}));
+    var seenItems=items.filter(function(it){return seen.indexOf(idOf(deck,it))>=0;});
+    // 单词牌组：未学的洗牌在前，已学的洗牌在后 —— 每次进入都是随机顺序
+    var pool=(deck.type==='word')? shuffleArr(unseen).concat(shuffleArr(seenItems)) : unseen.concat(seenItems);
     var n=Math.min(deck.batch, pool.length);
     if(n===0){ toast('该板块已学完，去复习吧～'); return; }
     cur={
@@ -823,7 +849,9 @@ function resumeLast(){
   loadDeck(deck,function(items){
     var seen=getSeen(deck.key);
     var unseen=items.filter(function(it){return seen.indexOf(idOf(deck,it))<0;});
-    var pool=unseen.concat(items.filter(function(it){return seen.indexOf(idOf(deck,it))>=0;}));
+    var seenItems=items.filter(function(it){return seen.indexOf(idOf(deck,it))>=0;});
+    // 单词牌组：继续学习同样走乱序（泽少要求每次进入都是随机顺序）
+    var pool=(deck.type==='word')? shuffleArr(unseen).concat(shuffleArr(seenItems)) : unseen.concat(seenItems);
     var n=Math.min(deck.batch, pool.length);
     if(n===0){ startDeck(deck.key); return; }
     var idx=Math.min(G.last.idx||0, n-1);
