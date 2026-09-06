@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "cards": [
     {
       "tag": "GitHub",
@@ -14,7 +14,7 @@
       "uses": "",
       "source_url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
       "official": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "tag": "NVIDIA",
@@ -149,7 +149,7 @@
       "uses": "",
       "source_url": "https://openai.com/index/gpt-6-astra",
       "official": true,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
