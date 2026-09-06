@@ -2058,16 +2058,11 @@ function showStageExplain(){
   determineSpellingNeed();
 
   // 构建解释面板HTML
+  // 第13轮：卡片上方已经渲染了 3 条例句（wordExamples）和词性（wordPos），
+  // 这里不再重复推「例句」「词性」标签，只保留「助记」（story/tip，卡片上没有的内容）
   var tabs=[];
   var exs=getExamples(it);
-  if(exs.length){
-    var exBlock='';
-    var shown=exs.slice(0,3);
-    for(var ei=0;ei<shown.length;ei++){ exBlock+=exHtml(it, shown[ei], ei); }
-    tabs.push(['例句', exBlock]);
-  }
   if((it.story||it.tip)) tabs.push(['助记', '<div>'+(esc(it.story)||'')+'</div><div style="margin-top:6px;color:var(--mut)">'+(esc(it.tip)||'')+'</div>']);
-  if(it.pos) tabs.push(['词性', '<div>'+esc(it.pos)+'</div>']);
 
   var explainHtml='<div class="detail" style="display:block">';
   if(tabs.length>0){
@@ -2078,24 +2073,25 @@ function showStageExplain(){
     explainHtml+='</div>';
     explainHtml+='<div class="dpanel on" id="dpanel">'+tabs[0][1]+'</div>';
   }
-  // 核心释义（如果之前没在卡片上显示过）
-  if(it.cn && !document.getElementById('wordCore')){
-    explainHtml='<div class="core" style="margin-bottom:10px">'+esc(it.cn)+'</div>'+explainHtml;
-  }
+  // 第13轮：整句翻译 cn 与例句1的中文翻译是同一句，只在卡片上没有任何例句时才补显示
+  var coreHtml=(!exs.length && it.cn && !document.getElementById('wordCore')) ? '<div class="core" style="margin-bottom:10px">'+esc(it.cn)+'</div>' : '';
   explainHtml+='</div>';
 
   // 替换或追加解释内容到卡片
-  var existingDetail=document.querySelector('.detail');
-  if(!existingDetail){
-    var content=document.getElementById('stageContent');
-    // 移除四选一区域
-    var quizArea=document.querySelector('.quiz-area');
-    if(quizArea) quizArea.remove();
-    // 第11轮：恢复四选一时隐藏的释义/例句，移除"看提示"按钮
-    var wpEl2=document.getElementById('wordPos'); if(wpEl2) wpEl2.style.display='';
-    var wexEl2=document.getElementById('wordExamples'); if(wexEl2) wexEl2.style.display='';
-    var hintRow=document.getElementById('quizHintRow'); if(hintRow) hintRow.remove();
-    content.insertAdjacentHTML('beforeend', explainHtml);
+  if(tabs.length>0 || coreHtml){
+    var existingDetail=document.querySelector('.detail');
+    if(!existingDetail){
+      var content=document.getElementById('stageContent');
+      // 移除四选一区域
+      var quizArea=document.querySelector('.quiz-area');
+      if(quizArea) quizArea.remove();
+      // 第11轮：恢复四选一时隐藏的释义/例句，移除"看提示"按钮
+      var wpEl2=document.getElementById('wordPos'); if(wpEl2) wpEl2.style.display='';
+      var wexEl2=document.getElementById('wordExamples'); if(wexEl2) wexEl2.style.display='';
+      var hintRow=document.getElementById('quizHintRow'); if(hintRow) hintRow.remove();
+      content.insertAdjacentHTML('beforeend', coreHtml+explainHtml);
+    }
+    if(tabs.length>0) bindDetailTabs(tabs);
   }
 
   // 绑定详情标签
