@@ -37,16 +37,25 @@ FEEDS = [
     {'url': 'https://36kr.com/feed', 'outlet': '36氪', 'lang': 'zh'},
     {'url': 'https://www.ifanr.com/feed', 'outlet': '爱范儿', 'lang': 'zh'},
     {'url': 'https://sspai.com/feed', 'outlet': '少数派', 'lang': 'zh'},
-    # —— 官方 / 英文媒体（标题与链接真实；摘要英文时仅作补充）——
-    # ai_only=True 的官方源只发 AI/技术内容，免去关键词过滤，保证不漏重要发布
+    # —— 官方 / 权威科技源（标题与链接真实可靠）——
+    # AI 官方：免关键词过滤，保证不漏重要 AI 发布
     {'url': 'https://huggingface.co/blog/feed.xml', 'outlet': 'Hugging Face', 'lang': 'en', 'company': 'Hugging Face', 'ai_only': True},
     {'url': 'https://github.blog/feed/', 'outlet': 'GitHub', 'lang': 'en', 'company': 'GitHub', 'ai_only': True},
     {'url': 'https://blog.google/technology/ai/rss/', 'outlet': 'Google', 'lang': 'en', 'company': 'Google', 'ai_only': True},
     {'url': 'https://blogs.nvidia.com/feed/', 'outlet': 'NVIDIA', 'lang': 'en', 'company': 'NVIDIA', 'ai_only': True},
     {'url': 'https://openai.com/blog/rss.xml', 'outlet': 'OpenAI', 'lang': 'en', 'company': 'OpenAI', 'ai_only': True},
+    {'url': 'https://news.microsoft.com/source/topics/ai/rss/', 'outlet': 'Microsoft', 'lang': 'en', 'company': 'Microsoft', 'ai_only': True},
+    # 综合科技媒体（不强制 AI，用于补 Apple/Tesla/手机/芯片等）
     {'url': 'https://techcrunch.com/category/artificial-intelligence/feed/', 'outlet': 'TechCrunch', 'lang': 'en'},
     {'url': 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml', 'outlet': 'The Verge', 'lang': 'en'},
     {'url': 'https://arstechnica.com/ai/feed/', 'outlet': 'Ars Technica', 'lang': 'en'},
+    # Apple 官方
+    {'url': 'https://www.apple.com/newsroom/rss-feed.rss', 'outlet': 'Apple Newsroom', 'lang': 'en', 'company': 'Apple', 'category': 'Apple'},
+    {'url': 'https://developer.apple.com/news/rss/news.rss', 'outlet': 'Apple Developer', 'lang': 'en', 'company': 'Apple', 'category': 'Apple'},
+    # Tesla / 电动车
+    {'url': 'https://www.teslarati.com/feed/', 'outlet': 'Teslarati', 'lang': 'en', 'company': 'Tesla', 'category': 'Tesla'},
+    # Samsung
+    {'url': 'https://news.samsung.com/global/feed/', 'outlet': 'Samsung', 'lang': 'en', 'company': 'Samsung', 'category': '手机'},
 ]
 
 # 公司识别（标题/摘要命中即标记）
@@ -71,6 +80,77 @@ COMPANY_MAP = [
     (r'苹果|apple', 'Apple'),
     (r'亚马逊|amazon|aws', 'Amazon'),
 ]
+
+# 分类标签（按语义命中优先顺序，谁先命中就是谁）
+# 优先级：Tesla > Apple > 手机 > 芯片 > 自动驾驶 > 机器人 > AI
+CATEGORY_KEYWORDS = [
+    ('Tesla',      re.compile(r'tesla\b|(?<![a-z])fsd\b(?!\w+)|robotaxi|cybercab|\boptimus\b|cybertruck|powerwall|(?<![a-z])model\s+[3ysx]\b|(?<![a-z])model[ -][3ysx]\b', re.I)),
+    ('Apple',      re.compile(r'apple|苹果|iphone|ipad|macbook|mac ?os|ios|vision\s*pro|apple ?intelligence|airpods|apple ?watch|homepod', re.I)),
+    ('手机',       re.compile(r'华为|huawei|mate\s*\d+|harmonyos|harmony\s*os|小米|xiaomi|hyperos|荣耀|honor|vivo|oppo|三星|samsung|galaxy|google ?pixel|一加|oneplus', re.I)),
+    ('芯片',       re.compile(r'芯片|chip|半导体|semiconductor|gpu|tpu|高通|qualcomm|骁龙|snapdragon|联发科|mediatek|麒麟|apple ?silicon|m[1-9]\s*(pro|max|ultra)|tsmc|台积电|3nm|2nm', re.I)),
+    ('自动驾驶',   re.compile(r'自动驾驶|autonomous ?driving|autonomous ?vehicle|fsd|robotaxi|waymo|apollo|自驾|端到端|城区|领航辅助', re.I)),
+    ('机器人',     re.compile(r'机器人|robot|humanoid|optimus|figure|unitree|宇树|1x|boston dynamics', re.I)),
+    ('AI',         re.compile(r'(openai|anthropic|claude|gpt|gemini|llama|llm|deep ?seek|qwen|kimi|hunyuan|智能体|agent|ai |artificial intelligence|machine learning|深度学习|多模态|multimodal|foundation model|chatbot|rag|大模型|推理模型|open ?source model)', re.I)),
+]
+
+# 重要性评分关键词（high=重大，med=一般，low=小修小补）
+HIGH_IMPACT = re.compile(
+    r'(release|launch|introduce|unveil|announce|unveils|announces|debut|正式发布|正式推出|震撼|首发|首测|'
+    r'new model|new phone|new chip|new ?gpu|next.gen|next-generation|'
+    r'GPT-?\s*\d+|Claude-?\s*\d+|Gemini-?\s*\d+|Sora-?\s*\d+|Llama-?\s*\d+|Qwen-?\s*\d+|DeepSeek-?\s*\d+|'
+    r'iPhone-?\s*\d+|iPhone-?\s*Pro|iPhone-?\s*Air|MacBook|iPad|Vision-?\s*Pro|Apple-?\s*Watch|Apple-?\s*Intelligence|'
+    r'Tesla|Mate-?\s*\d+|Xiaomi-?\s*\d+|Pixel-?\s*\d+|Galaxy-?\s*S\d+|'
+    r'收购|acquire|acquisition|merger|'
+    r'invest|round of funding|融资|估值|billion|million|'
+    r'rescue|breakthrough|break ?through|开创|首创|首次|first|epoch|milestone|里程碑|'
+    r'IPO|上市|'
+    r'Regulator|regulation|ban|sue|lawsuit|监管|调查|罚款|禁令|'
+    r'Roundtable|Cannes|GTC|IFA|OFC|首映|开幕式|start-up|发布|launches|'
+    r'全球|重磅|震撼|最大规模|最贵|最强|最强)',
+    re.I)
+
+MED_IMPACT = re.compile(
+    r'(update|upgrade|feature|新功能|性能|bench|benchmarks|tools|api|beta|preview|ra preview|figma|'
+    r'now available|generally available|downloadable|available today|开始推送|开放|预览|'
+    r'整合|integration|partner|合作|compatible|可用|上线|推出|fast|fast ?charge|improvement|'
+    r'price|release ?date|date ?set|pre-order|reservation)',
+    re.I)
+
+# 不让它进 list 的关键词（纯粹的营销话术/页面推广/友情链接广告）
+LOW_BLOCK = re.compile(
+    r'(赞助内容|promoted|paid ?partner|广告|sponsored|advertis|newsletter ?signup|订阅 ?newsletter|'
+    r'disclaimer|免责声明)',
+    re.I)
+
+
+def classify_category(text, default='AI'):
+    """返回分类标签：AI / Apple / Tesla / 手机 / 芯片 / 机器人 / 自动驾驶"""
+    for name, pat in CATEGORY_KEYWORDS:
+        if pat.search(text):
+            return name
+    return default
+
+
+def score_importance(title, summary, official=False):
+    """
+    重要性: 'high' / 'med' / 'low'
+    - official 源的默认不会是 low（官方发布一定不是营销）
+    - 命中明确『发布/收购/重大/重大产品/版本大更新/重大更新/监管/里程碑』→ high
+    - 命中『feature/update/tools/beta/preview』『合作/上线/推送』→ med
+    - 命中仅为『newsletter/赞助/广告』→ low (会被过滤)
+    """
+    text = (title or '') + ' ' + (summary or '')
+    if LOW_BLOCK.search(text) and not HIGH_IMPACT.search(text):
+        return 'low'
+    if HIGH_IMPACT.search(text):
+        return 'high'
+    if MED_IMPACT.search(text):
+        return 'med'
+    # 官方源默认中（中性的更新）；非官方源默认中
+    return 'med' if official else 'med'
+
+
+_IMPORTANCE_RANK = {'high': 0, 'med': 1, 'low': 2}
 
 AI_KEYWORDS = re.compile(
     r'ai|人工智能|大模型|模型|gpt|claude|gemini|llm|agent|智能体|芯片|算力|'
@@ -248,23 +328,27 @@ def collect():
                     if feed['lang'] == 'en' and age > WINDOW * 3:
                         continue
                 text = title + ' ' + it['summary']
-                # 非 AI 专属源（中文媒体 / 综合英文媒体）必须命中 AI 关键词，避免无关科技新闻混入
-                if not feed.get('ai_only') and not AI_KEYWORDS.search(text):
+                # 非 AI 专属 / 非分类专用源（中文媒体 / 综合英文媒体）必须命中 AI 关键词，避免无关垃圾内容混入
+                # 已知分类（如 Apple/Tesla）的官方源，跳过 AI 关键词检查（它们本身就在自家领域内）
+                if not feed.get('ai_only') and not feed.get('category') and not AI_KEYWORDS.search(text):
                     continue
                 company = feed.get('company') or detect_company(title) or detect_company(feed['outlet']) or feed['outlet']
                 pub_bj = pub.astimezone(BJTZ) if pub else NOW
                 date_str = pub_bj.strftime('%Y-%m-%d')
-                # 中文源取完整内容（content:encoded），英文源也尽量保留更长摘录；
-                # 人工翻译的中文正文/标题会在 main() 中按标题回填，不被此处自动片段覆盖
                 cap = 320 if feed['lang'] == 'zh' else 200
                 summary = truncate(it['summary'], cap)
                 if feed['lang'] == 'en':
-                    # 英文源：用官方口吻包装，绝不编造细节（中文翻译由人工补充并回填）
                     head = ('【%s 官方动态】' % company) if not summary else ('【%s】' % company)
                     summary = head + (summary if summary else title)
+                # 先用 feed 直接声明的 category（如 Apple/Tesla/Samsung），再用关键词推断
+                cat_default = feed.get('category') or ('AI' if feed.get('ai_only') else 'AI')
+                importance = score_importance(title, summary, official=bool(feed.get('ai_only') or feed.get('category')))
+                cat = feed.get('category') or classify_category(title + ' ' + (summary or ''), default=cat_default)
                 card = {
                     'tag': company,
                     'company': company,
+                    'category': cat,
+                    'importance': importance,
                     'source': feed['outlet'],
                     'title': title,
                     'title_cn': '',
@@ -274,7 +358,7 @@ def collect():
                     'impact': '',
                     'uses': '',
                     'source_url': link,
-                    'official': bool(feed.get('ai_only')),
+                    'official': bool(feed.get('ai_only') or feed.get('category')),
                 }
                 # 去重：优先按归一化标题（跨源同事件只留一条），其次按链接
                 key = norm_title(title) or link
@@ -292,6 +376,13 @@ def collect():
 
 def main():
     prev_cards, prev_updated = load_prev()
+    # 给历史的旧卡补 importance / category（兼容升级前的数据）
+    for c in prev_cards:
+        if not c.get('category'):
+            c['category'] = classify_category((c.get('title') or '') + ' ' + (c.get('summary') or ''), default='AI')
+        if not c.get('importance'):
+            c['importance'] = score_importance(c.get('title', ''), c.get('summary', ''), official=c.get('official', False))
+
     prev_titles = {c.get('title') for c in prev_cards}
     prev_map = {c.get('title'): c for c in prev_cards}
 
@@ -304,12 +395,14 @@ def main():
         pass
 
     fresh = collect()
-    # 官方来源优先，各自按时间新 -> 旧；每日精选上限 10 条
-    official = sorted([c for c in fresh if c.get('official')],
-                      key=lambda c: c.get('published_at', ''), reverse=True)
-    other = sorted([c for c in fresh if not c.get('official')],
-                   key=lambda c: c.get('published_at', ''), reverse=True)
-    fresh = (official + other)[:10]
+    # 过滤掉纯营销/低质内容（importance=low）
+    fresh = [c for c in fresh if c.get('importance') != 'low']
+    # 排序：高重要性优先，同重要性内按时间新→旧
+    def _sort_key(c):
+        return (_IMPORTANCE_RANK.get(c.get('importance', 'med'), 1),
+                c.get('published_at', ''))
+    fresh.sort(key=_sort_key, reverse=True)
+    fresh = fresh[:10]
 
     # 合并：今日新抓在前（is_new = 不在历史里），总量控制在 5~10 条，宁缺毋滥
     final = []
@@ -346,15 +439,19 @@ def main():
         c['is_new'] = t not in prev_titles
         seen_t.add(t)
         final.append(c)
-    # 当日新不足 5 条时，用前一天重要内容补齐，但总量仍不超过 10
+    # 当日新不足 5 条时，用前一天高重要性内容补齐，但总量仍不超过 10
+    # 按 importance 优先、时间次排序的回忆卡
     if len(final) < 5:
-        for c in prev_cards:
+        backup_pool = [c for c in prev_cards if c.get('importance') != 'low']
+        backup_pool.sort(key=lambda c: (_IMPORTANCE_RANK.get(c.get('importance', 'med'), 1), c.get('published_at', '')), reverse=True)
+        for c in backup_pool:
             t = c.get('title')
             if t in seen_t:
                 continue
             if len(final) >= 5:
                 break
             c['is_new'] = False
+            c['_carryover'] = True  # 标记为跨天延续，前端可显示"昨日重点"
             seen_t.add(t)
             final.append(c)
 
@@ -367,7 +464,10 @@ def main():
         pass
 
     today = NOW.strftime('%Y-%m-%d')
-    out = {'updated': today, 'cards': final}
+    out = {'updated': today, 'cards': [dict(c) for c in final]}  # 先 copy 避免后续修改 prev_cards 影响输出
+    # 清理内部标记字段，仅保留前端实际需要的
+    for c in out['cards']:
+        c.pop('_carryover', None)
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding='utf-8')
 
     new_count = sum(1 for c in final if c.get('is_new'))

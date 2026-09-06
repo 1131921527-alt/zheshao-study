@@ -227,6 +227,37 @@ a{color:inherit;text-decoration:none}
 .news-card-scroll{max-height:64vh;overflow:auto;-webkit-overflow-scrolling:touch}
 .news-src-bottom{margin-top:16px;padding-top:12px;border-top:1px solid var(--line2)}
 .news-src-bottom a.src{font-size:14px}
+
+/* AI 动态列表（先看卡片再点进单篇） */
+.news-list-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:6px 0 16px;font-size:13px;color:var(--mut)}
+.news-list-meta .m-pill{background:rgba(124,196,255,.08);border:1px solid rgba(124,196,255,.25);color:var(--cyan);border-radius:20px;padding:4px 12px;font-weight:700}
+.news-list-meta .m-pill.imp{background:rgba(255,213,79,.12);border-color:rgba(255,213,79,.32);color:#ffd97a}
+.news-list{display:flex;flex-direction:column;gap:12px;max-height:72vh;overflow:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
+.news-list-card{
+  background:linear-gradient(160deg,var(--panel2),var(--panel));
+  border:1px solid var(--line2);border-radius:18px;padding:16px;
+  display:flex;flex-direction:column;gap:8px;cursor:pointer;position:relative;
+  transition:transform .12s,border-color .12s,box-shadow .12s;
+}
+.news-list-card:active{transform:scale(.99)}
+.news-list-card.read{opacity:.62}
+.news-list-card.imp{border-color:rgba(255,138,92,.5);box-shadow:0 0 0 1px rgba(255,138,92,.18) inset}
+.news-list-card .top-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.cat-pill{font-size:11px;font-weight:800;padding:3px 9px;border-radius:10px;letter-spacing:.5px}
+.cat-AI{background:rgba(124,196,255,.15);color:#7cc4ff;border:1px solid rgba(124,196,255,.32)}
+.cat-Apple{background:rgba(200,200,200,.13);color:#e0e0e0;border:1px solid rgba(220,220,220,.3)}
+.cat-Tesla{background:rgba(255,140,140,.16);color:#ff9090;border:1px solid rgba(255,140,140,.34)}
+.cat-手机{background:rgba(180,160,255,.15);color:#c5b3ff;border:1px solid rgba(180,160,255,.32)}
+.cat-芯片{background:rgba(255,200,100,.16);color:#ffd47e;border:1px solid rgba(255,200,100,.34)}
+.cat-机器人{background:rgba(120,220,180,.14);color:#79e2b3;border:1px solid rgba(120,220,180,.32)}
+.cat-自动驾驶{background:rgba(255,140,200,.16);color:#ffa3d0;border:1px solid rgba(255,140,200,.34)}
+.imp-high-pill{font-size:11px;font-weight:800;padding:3px 8px;border-radius:10px;background:linear-gradient(135deg,#ff8a5c,#ff5d8f);color:#fff}
+.read-mark{position:absolute;top:14px;right:14px;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(124,196,255,.18)}
+.read-mark.read{background:rgba(255,255,255,.18);box-shadow:none}
+.news-list-card .ttl{font-size:16px;font-weight:800;line-height:1.4;color:var(--txt);margin:2px 0}
+.news-list-card .ex{font-size:13px;color:#aab2bd;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news-list-card .row-meta{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--mut);margin-top:4px}
+.news-list-card .row-meta .src{opacity:.7}
 .artbody{margin-top:12px;font-size:15px;line-height:1.8;color:#cdd6f4}
 .artbody h2{font-size:20px;font-weight:800;color:#e6edf6;margin:14px 0 8px}
 .artbody h3{font-size:17px;font-weight:800;color:var(--cyan);margin:18px 0 6px}
@@ -319,26 +350,39 @@ a{color:inherit;text-decoration:none}
   <!-- AI 动态阅读 -->
   <div id="view-news" class="newsview" style="display:none">
     <div class="back-link" onclick="goHome()">← 返回学习台</div>
-    <div class="newshead" id="newsHead"></div>
-    <div class="progress-top">
-      <div class="bar"><i id="progNews" style="width:0"></i></div>
-      <div class="cnt" id="cntNews">1 / 5</div>
+
+    <!-- 列表模式：默认进入 AI 动态时先看到列表 -->
+    <div id="newsListWrap">
+      <div class="ft" style="font-size:12px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">AI · 科技精选 · 今日更新</div>
+      <div class="big" id="newsListTitle" style="font-size:22px;margin-bottom:8px">今日 AI / 科技精选</div>
+      <div class="news-list-meta" id="newsListMeta">加载中…</div>
+      <div class="news-list" id="newsList"></div>
     </div>
-    <div class="learn-card news-card-scroll" id="newsCard">
-      <div class="ft">AI 动态</div>
-      <div class="tag-pill" id="newsTag">OpenAI</div>
-      <div class="big" id="newsTitle" style="font-size:22px;margin-top:4px">标题</div>
-      <div class="source" id="newsDate">2026-08-20</div>
-      <div class="summary" id="newsSummary">摘要</div>
-      <div class="summary" id="newsImpact" style="color:var(--cyan)">📌 为什么重要</div>
-      <div class="summary" id="newsUses" style="color:var(--green)">💡 对我有什么用</div>
-      <div class="news-src-bottom" id="newsSrcWrap" style="display:none">
-        <a class="src" id="newsSrc" href="#" target="_blank" rel="noopener">📄 英文原文（来源验证 / 延伸阅读）→</a>
+
+    <!-- 单篇阅读模式：点卡片后进入 -->
+    <div id="newsCardWrap" style="display:none">
+      <div class="back-link" onclick="renderNewsList()">← 返回列表</div>
+      <div class="newshead" id="newsHead"></div>
+      <div class="progress-top">
+        <div class="bar"><i id="progNews" style="width:0"></i></div>
+        <div class="cnt" id="cntNews">1 / 5</div>
       </div>
-    </div>
-    <div class="actions">
-      <button class="btn ghost" id="newsPrev">← 上一篇</button>
-      <button class="btn green" id="newsNext">下一篇 →</button>
+      <div class="learn-card news-card-scroll" id="newsCard">
+        <div class="ft">AI · 科技精选</div>
+        <div class="tag-pill" id="newsTag">OpenAI</div>
+        <div class="big" id="newsTitle" style="font-size:22px;margin-top:4px">标题</div>
+        <div class="source" id="newsDate">2026-08-20</div>
+        <div class="summary" id="newsSummary">摘要</div>
+        <div class="summary" id="newsImpact" style="color:var(--cyan)">📌 为什么重要</div>
+        <div class="summary" id="newsUses" style="color:var(--green)">💡 对我有什么用</div>
+        <div class="news-src-bottom" id="newsSrcWrap" style="display:none">
+          <a class="src" id="newsSrc" href="#" target="_blank" rel="noopener">📄 英文原文（来源验证 / 延伸阅读）→</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn ghost" id="newsPrev">← 上一篇</button>
+        <button class="btn green" id="newsNext">下一篇 →</button>
+      </div>
     </div>
   </div>
 
@@ -415,7 +459,7 @@ var ICONS={word:'📖',ai:'🤖',know:'🧠',speak:'🔊',back:'←'};
 /* ============ 牌组配置（沿用，不改动数据源） ============ */
 var DECKS=[
   {key:'en', name:'英语 · 雅思词汇', desc:'1170 词 · 发音+配图+四选一+拼写', type:'word', src:'ielts/ielts_bank.json', color:'linear-gradient(135deg,#1f6feb,#a371f7)', icon:'📖', batch:20},
-  {key:'ai', name:'AI 动态', desc:'每天自动更新的行业新闻', type:'news', src:'assets/ai_cards.json', color:'linear-gradient(135deg,#ff8a5c,#ff5d8f)', icon:'🤖', batch:5},
+  {key:'ai', name:'AI · 科技精选', desc:'每天自动更新的 AI / 科技精选', type:'news', src:'assets/ai_cards.json', color:'linear-gradient(135deg,#ff8a5c,#ff5d8f)', icon:'🤖', batch:10},
   {key:'kn_all', name:'知识文章', desc:'35 篇 · 一次刷完所有类目', type:'know', src:'assets/knowledge_cards.json', color:'linear-gradient(135deg,#9aa7ff,#6b78ff)', icon:'📚', batch:5}
 ];
 
@@ -706,6 +750,18 @@ function renderHome(){
   // 板块列表
   var box=document.getElementById('deckList'); var h='';
   DECKS.forEach(function(d){
+    h+='<div class="deck" data-key="'+d.key+'" style="background:linear-gradient(160deg,'+d.color.replace('135deg','150deg')+',rgba(255,255,255,.02))">'
+      + (d.key==='ai' ? '<span class="badge-new" id="deckNew_ai" style="display:none"></span>' : '')
+      +'<div class="row">'
+      +'<div class="emoji-box" style="background:'+d.color+'">'+d.icon+'</div>'
+      +'<div class="info"><div class="dn">'+d.name+'</div><div class="dd">'+d.desc+'</div></div>'
+      +'</div>'
+      +'<div class="prog"><i id="deckProg_'+d.key+'"></i></div>'
+      +'<div class="meta"><span id="deckMeta_'+d.key+'">加载中…</span><span class="go">开始学习 →</span></div>'
+      +'</div>';
+  });
+  box.innerHTML=h;  // 先插 DOM，loadDeck 异步回调时元数据元素已存在
+  DECKS.forEach(function(d){
     loadDeck(d,function(items){
       var p=deckProgress(d, items);
       var prog=document.getElementById('deckProg_'+d.key);
@@ -716,24 +772,16 @@ function renderHome(){
         var raw=rawCache[d.src];
         if(raw && raw.cards){
           var updated=raw.updated||'';
-          var cnt=raw.cards.filter(function(c){return c.is_new || c.date===todayStr();}).length;
-          if(meta){ meta.innerHTML='今日更新 '+updated+(cnt>0?(' · 今天新增 '+cnt+' 条'):'')+' <span class="go">开始学习 →</span>'; }
+          var total=raw.cards.length;
+          var newCnt=raw.cards.filter(function(c){return c.is_new || c.date===updated;}).length;
+          var readCnt=raw.cards.filter(function(c){return G.newsRead.indexOf(newsIdKey(c))>=0;}).length;
+          if(meta){ meta.innerHTML='今日更新 '+updated+' · 新增 '+newCnt+' / '+total+' 条 · 已读 '+readCnt+'/'+total+' <span class="go">开始阅读 →</span>'; }
           var badge=document.getElementById('deckNew_ai');
-          if(badge && cnt>0){ badge.style.display=''; badge.textContent='NEW '+cnt; }
+          if(badge && newCnt>0){ badge.style.display=''; badge.textContent='NEW '+newCnt; }
         }
       }
     });
-    h+='<div class="deck" data-key="'+d.key+'" style="background:linear-gradient(160deg,'+d.color.replace('135deg','150deg')+',rgba(255,255,255,.02))"'
-      + (d.key==='ai' ? '<span class="badge-new" id="deckNew_ai" style="display:none"></span>' : '')
-      +'<div class="row">'
-      +'<div class="emoji-box" style="background:'+d.color+'">'+d.icon+'</div>'
-      +'<div class="info"><div class="dn">'+d.name+'</div><div class="dd">'+d.desc+'</div></div>'
-      +'</div>'
-      +'<div class="prog"><i id="deckProg_'+d.key+'"></i></div>'
-      +'<div class="meta"><span id="deckMeta_'+d.key+'">加载中…</span><span class="go">开始学习 →</span></div>'
-      +'</div>';
   });
-  box.innerHTML=h;
   box.querySelectorAll('.deck').forEach(function(el){
     el.addEventListener('click',function(){ Sound.play('click'); startDeck(el.getAttribute('data-key')); });
   });
@@ -798,7 +846,7 @@ function enterWordView(){
     enterLearnStage();
   } else if(cur.deck.key==='ai'){
     document.getElementById('view-word').style.display='none';
-    document.getElementById('view-news').style.display=''; renderNews();
+    document.getElementById('view-news').style.display=''; renderNewsList();
   } else {
     document.getElementById('view-word').style.display='none';
     document.getElementById('view-article').style.display=''; renderArticle();
@@ -1332,10 +1380,63 @@ function preloadAround(){
 function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
 function escapeRegExp(str){ return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
-/* ============ AI 动态阅读（今天感） ============ */
+/* ============ AI 动态阅读（列表 + 单篇） ============ */
+function escAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function renderNewsList(){
+  document.getElementById('newsListWrap').style.display='';
+  document.getElementById('newsCardWrap').style.display='none';
+  var items=cur.items;
+  var raw=rawCache[cur.deck.src]||{};
+  var updated=raw.updated||'';
+  // 顶部 meta（今日更新日期 / 新增 / 已读 进度）
+  var newCnt=items.filter(function(it){return it.is_new||it.date===updated;}).length;
+  var readCnt=items.filter(function(it){return G.newsRead.indexOf(newsId(it))>=0;}).length;
+  var meta=document.getElementById('newsListMeta');
+  meta.innerHTML=
+    '<span class="m-pill">📅 今日更新 · '+escAttr(updated||'—')+'</span>'+
+    '<span class="m-pill">新增 '+newCnt+' 条</span>'+
+    '<span class="m-pill">已读 '+readCnt+' / '+items.length+'</span>'+
+    '<span class="m-pill">🔥 重要 '+items.filter(function(c){return c.importance==='high';}).length+'</span>';
+  // 标题旁附"今天值得看"提示
+  document.getElementById('newsListTitle').textContent='今日 AI / 科技精选';
+  // 渲染卡片
+  var box=document.getElementById('newsList'); var html='';
+  items.forEach(function(it, idx){
+    var cat=it.category||'AI';
+    var imp=it.importance||'med';
+    var isNew=it.is_new || (it.date===updated);
+    var read=G.newsRead.indexOf(newsId(it))>=0;
+    var src=it.source||it.tag||'';
+    var summary=(it.summary||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').slice(0,140);
+    html+='<div class="news-list-card'+(read?' read':'')+(imp==='high'?' imp':'')+'" data-idx="'+idx+'">'
+      + (read?'<span class="read-mark read"></span>':'<span class="read-mark"></span>')
+      +'<div class="top-row">'
+        +'<span class="cat-pill cat-'+escAttr(cat)+'">'+escAttr(cat)+'</span>'
+        +(imp==='high'?'<span class="imp-high-pill">🔥 重要</span>':'')
+        +(isNew?'<span class="m-pill" style="font-size:11px;padding:2px 8px">NEW</span>':'')
+      +'</div>'
+      +'<div class="ttl">'+escAttr(it.title_cn||it.title||'')+'</div>'
+      +'<div class="ex">'+escAttr(summary)+'</div>'
+      +'<div class="row-meta"><span class="src">📰 '+escAttr(src)+(it.date?' · '+escAttr(it.date):'')+'</span><span>点击阅读 →</span></div>'
+    +'</div>';
+  });
+  box.innerHTML=html;
+  // 列表卡片点击 → 切到单篇
+  box.querySelectorAll('.news-list-card').forEach(function(el){
+    el.addEventListener('click',function(){
+      Sound.play('click');
+      var idx=parseInt(el.getAttribute('data-idx'),10)||0;
+      cur.idx=idx;
+      renderNews();
+    });
+  });
+}
+
 function renderNews(){
+  document.getElementById('newsListWrap').style.display='none';
+  document.getElementById('newsCardWrap').style.display='';
   var it=cur.items[cur.idx];
-  document.getElementById('newsTag').textContent=it.tag||'AI';
+  document.getElementById('newsTag').textContent=(it.category?'【'+it.category+'】':'')+(it.tag||'AI');
   document.getElementById('newsTitle').textContent=it.title_cn||it.title||'';
   document.getElementById('newsDate').textContent=it.date?('发布：'+it.date):'';
   document.getElementById('newsSummary').textContent=it.summary||'';
@@ -1347,23 +1448,24 @@ function renderNews(){
   else wrap.style.display='none';
   updateProgress('progNews', cur.idx, cur.items.length);
   document.getElementById('newsPrev').style.visibility=cur.idx>0?'visible':'hidden';
-  document.getElementById('newsNext').textContent=cur.idx===cur.items.length-1?'完成阅读 ✓':'下一篇 →';
+  document.getElementById('newsNext').textContent=cur.idx===cur.items.length-1?'返回列表 ✓':'下一篇 →';
   markNewsRead(it);
   var head=document.getElementById('newsHead');
   var isNew = it.is_new || (it.date===todayStr());
   var read = G.newsRead.indexOf(newsId(it))>=0;
   var raw = rawCache[cur.deck.src];
   var updated = (raw && raw.updated) || it.date || '';
-  head.innerHTML='今日更新 · '+updated + (isNew?'<span class="new">NEW</span>':'') + (read?'<span style="color:var(--mut);margin-left:8px">已读</span>':'<span class="dot"></span>未读');
+  head.innerHTML='今日更新 · '+updated+(isNew?'<span class="new">NEW</span>':'')+(read?'<span style="color:var(--mut);margin-left:8px">已读</span>':'<span class="dot"></span>未读');
 }
-function newsId(it){ return it.title||''; }
+function newsId(it){ return newsIdKey(it); }
+function newsIdKey(it){ if(!it) return ''; return it.source_url || (it.title||''); }
 function markNewsRead(it){
   var id=newsId(it);
   if(G.newsRead.indexOf(id)<0){ G.newsRead.push(id); zs(NEWSREAD_KEY,G.newsRead); }
   addSeen('ai', idOf(cur.deck, it));
 }
 document.getElementById('newsNext').addEventListener('click',function(){
-  if(cur.idx>=cur.items.length-1){ toast('AI 动态阅读完成！'); renderHome(); }
+  if(cur.idx>=cur.items.length-1){ Sound.play('complete'); renderNewsList(); }
   else { cur.idx++; Sound.play('next'); renderNews(); }
 });
 document.getElementById('newsPrev').addEventListener('click',function(){ if(cur.idx>0){cur.idx--;Sound.play('back');renderNews();} });
