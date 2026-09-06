@@ -387,7 +387,7 @@ a{color:inherit;text-decoration:none}
       <div class="toggle on" id="tgAuto" onclick="toggleSetting('auto')"><i></i></div>
     </div>
     <div class="setrow">
-      <div class="sl"><div class="st">📝 强制拼写</div><div class="sd">新词 / 答错 / 不认识时要求拼写</div></div>
+      <div class="sl"><div class="st">📝 强制拼写</div><div class="sd">新词或答错时要求拼写</div></div>
       <div class="toggle on" id="tgSpell" onclick="toggleSetting('spell')"><i></i></div>
     </div>
     <div class="setrow">
@@ -1086,39 +1086,10 @@ function bindDetailTabs(tabs){
   box.querySelectorAll('.dt').forEach(function(d){ d.onclick=function(){ Sound.play('click'); show(parseInt(d.getAttribute('data-i'),10)); }; });
 }
 
-/**
- * 用户选择掌握度
- */
-function setMastery(level, auto){
-  cur.ws.mastery=level;
-  if(!auto) Sound.play('click');
-  // 根据掌握度更新拼写需求（新词 / 答错 强制拼写，不可被"认识"跳过）
-  if(level==='no'){ cur.ws.spellRequired=true; }
-  else if(level==='vag'){ cur.ws.spellRequired=(cur.ws.isNew||cur.ws.quizResult==='wrong')?true:(Math.random()<0.8); }
-  else if(level==='yes'){ cur.ws.spellRequired=(cur.ws.isNew||cur.ws.quizResult==='wrong')?true:false; }
-
-  // 高亮选中按钮
-  var bar=document.getElementById('masteryBar');
-  if(bar){
-    bar.querySelectorAll('.mbtn').forEach(function(b){ b.style.opacity='.5'; b.style.transform='scale(.95)'; });
-    var selected=bar.querySelector('.mbtn.'+level);
-    if(selected){ selected.style.opacity='1'; selected.style.transform='scale(1)'; }
-  }
-
-  // 自动预选时不自动进入下一阶段；手动点选才继续
-  if(!auto){
-    setTimeout(explainContinue, 350);
-  }
-}
 // 解释阶段统一出口：需要拼写就拼，否则进入下一词（"继续"按钮也走这里）
 function explainContinue(){
   if(cur.ws.spellRequired && G.spell){ showStageSpell(); }
   else { proceedNext(); }
-}
-// 自动猜测掌握度并预选高亮（用户可覆盖）
-function autoMastery(){
-  var def = cur.ws.quizResult==='wrong' ? 'vag' : (cur.ws.isNew ? 'no' : 'yes');
-  setMastery(def, true);
 }
 
 // ---- 阶段4：强制拼写 ----
@@ -1166,8 +1137,6 @@ function showStageSpell(){
   var content=document.getElementById('stageContent');
   var existingSpell=document.getElementById('spellBox');
   if(existingSpell) existingSpell.remove();
-  var existingMastery=document.getElementById('masteryBar');
-  if(existingMastery) existingMastery.remove();
   var existingDetail=document.querySelector('.detail');
   if(existingDetail) existingDetail.remove();
   var existingQuiz=document.querySelector('.quiz-area');
