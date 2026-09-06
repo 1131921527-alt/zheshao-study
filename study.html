@@ -179,18 +179,12 @@ a{color:inherit;text-decoration:none}
 .spell-box .spell-btn{width:100%;min-height:48px;border-radius:var(--r2);border:none;background:linear-gradient(135deg,var(--cyan),var(--violet));color:#06121f;font-size:16px;font-weight:800;cursor:pointer;margin-top:8px}
 .spell-box .spell-btn:active{transform:scale(.98)}
 .spell-box .hint-text{font-size:13px;color:var(--gold);margin-top:8px;text-align:center}
-
-/* 掌握度选择（解释阶段底部） */
-.mastery-bar{display:flex;gap:8px;margin-top:14px}
-.mbtn{
-  flex:1;min-height:48px;border-radius:14px;border:1px solid var(--line2);background:var(--panel2);
-  color:var(--txt);font-size:14px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  user-select:none;transition:transform .1s;
+.spell-box .spell-actions{margin:-4px 0 12px}
+.spell-box .spell-reveal{
+  display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:20px;
+  border:1px solid var(--line2);background:var(--panel2);color:var(--mut);font-size:13px;font-weight:700;cursor:pointer;transition:transform .1s;
 }
-.mbtn:active{transform:scale(.96)}
-.mbtn.no{background:linear-gradient(135deg,#ff8a9b,#ff6b81);border:none;color:#fff}
-.mbtn.vag{background:linear-gradient(135deg,#ffd27a,#ffb74d);border:none;color:#241500}
-.mbtn.yes{background:linear-gradient(135deg,#5fe6b0,var(--green));border:none;color:#06231a}
+.spell-box .spell-reveal:active{transform:scale(.96)}
 
 /* 底部操作区（固定，根据阶段切换内容） */
 .thumb{
@@ -870,6 +864,7 @@ function initWordState(){
     spellAttempts:0,
     spellHintLevel:0, // 0=无提示 1=首字母 2=更多提示
     mastery:'unknown',
+    revealed:false, // 拼写时是否点开了"显示单词"
     quizAnswered:false
   };
 }
@@ -940,11 +935,16 @@ function showStageQuiz(){
   var it=cur.items[cur.idx];
   var sc=document.getElementById('wordCard');
 
-  // 构建干扰项（从其他单词中取3个不同释义）
-  var others=shuffle(cur.items.filter(function(o){return o!==it&&o.cn!==it.cn;})).slice(0,3);
-  if(others.length<3){
-    // 如果不够3个不同的，允许重复但尽量不同
-    others=shuffle(cur.items.filter(function(o){return o!==it;})).slice(0,3);
+  // 取词条释义：pos 是单词短释义；cn 是例句整句翻译，不能用作四选一选项
+  function defText(o){ return (o.pos||o.cn||o.word); }
+  var myDef=defText(it);
+
+  // 构建干扰项：取3个释义与当前词不同的其他词（去重）
+  var others=[], seen={};
+  var candidates=shuffle(cur.items.filter(function(o){return o!==it;}));
+  for(var i=0;i<candidates.length && others.length<3;i++){
+    var d=defText(candidates[i]);
+    if(d!==myDef && !seen[d]){ seen[d]=1; others.push(candidates[i]); }
   }
   var options=[it].concat(others);
   options=shuffle(options);
@@ -952,7 +952,7 @@ function showStageQuiz(){
   // 渲染四选一区域（追加在卡片内容后面）
   var gridHtml='<div class="quiz-area"><div class="qgrid" id="qgrid">';
   options.forEach(function(opt){
-    gridHtml+='<div class="qopt" data-word="'+esc(opt.word)+'">'+esc(opt.cn||opt.word)+'</div>';
+    gridHtml+='<div class="qopt" data-word="'+esc(opt.word)+'">'+esc(defText(opt))+'</div>';
   });
   gridHtml+='</div></div>';
 
@@ -1069,17 +1069,9 @@ function showStageExplain(){
   }
   explainHtml+='</div>';
 
-  // 掌握度选择栏
-  explainHtml+='<div class="mastery-bar" id="masteryBar">'
-    +'<div class="mbtn no" onclick="setMastery(\'no\')">不认识</div>'
-    +'<div class="mbtn vag" onclick="setMastery(\'vag\')">模糊</div>'
-    +'<div class="mbtn yes" onclick="setMastery(\'yes\')">认识</div>'
-    +'</div>';
-
   // 替换或追加解释内容到卡片
   var existingDetail=document.querySelector('.detail');
-  var existingMastery=document.getElementById('masteryBar');
-  if(!existingDetail && !existingMastery){
+  if(!existingDetail){
     var content=document.getElementById('stageContent');
     // 移除四选一区域
     var quizArea=document.querySelector('.quiz-area');
@@ -1089,9 +1081,6 @@ function showStageExplain(){
 
   // 绑定详情标签
   bindDetailTabs(tabs);
-
-  // 自动预选掌握度（用户可覆盖）
-  autoMastery();
 
   // 显示底部操作栏（解释阶段）
   showThumbExplain();
@@ -1153,9 +1142,16 @@ function determineSpellingNeed(){
 function showStageSpell(){
   cur.stage=STAGE.SPELL;
   var it=cur.items[cur.idx];
+  cur.ws.revealed=false;
+
+  // 隐藏会透露单词的元素：单词本体/音标/英文例句(高亮露词)/卡片释义，只留拼写框里的中文释义作线索
+  var wt=document.getElementById('wordText'); if(wt) wt.style.display='none';
+  var wi=document.getElementById('wordIpa'); if(wi) wi.style.display='none';
+  var wp=document.getElementById('wordPos'); if(wp) wp.style.display='none';
+  var ex=document.querySelector('#stageContent .example'); if(ex) ex.style.display='none';
 
   // 构建拼写填空题
-  var hintCn=it.cn||it.word;
+  var hintCn=it.pos||it.cn||it.word;   // 用短释义作线索，不用整句翻译
   var blankHtml='_ '.repeat(it.word.length);
   var exSentence='';
   if(it.en){
@@ -1167,6 +1163,7 @@ function showStageSpell(){
     +'<div class="lab">✏️ 拼写练习</div>'
     +'<div class="hint-cn">'+esc(hintCn)+'</div>'
     +(exSentence?'<div class="hint-ex">'+exSentence+'</div>':'')
+    +'<div class="spell-actions"><button class="spell-reveal" id="spellRevealBtn" onclick="toggleSpellReveal()">👁 显示单词</button></div>'
     +'<input type="text" id="spellInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="输入英文单词">'
     +'<div class="res" id="spellRes"></div>'
     +'<div class="hint-text" id="spellHint"></div>'
@@ -1181,6 +1178,8 @@ function showStageSpell(){
   if(existingMastery) existingMastery.remove();
   var existingDetail=document.querySelector('.detail');
   if(existingDetail) existingDetail.remove();
+  var existingQuiz=document.querySelector('.quiz-area');
+  if(existingQuiz) existingQuiz.remove();
 
   content.insertAdjacentHTML('beforeend', spellHtml);
 
@@ -1192,6 +1191,19 @@ function showStageSpell(){
 
   // 显示拼写专用底栏
   showThumbSpell();
+}
+
+// 点击"显示单词"：默认隐藏，点一下才显示并朗读；再点收起
+function toggleSpellReveal(){
+  var wt=document.getElementById('wordText');
+  var wi=document.getElementById('wordIpa');
+  var btn=document.getElementById('spellRevealBtn');
+  var revealing = wt && wt.style.display==='none';
+  if(wt) wt.style.display = revealing ? '' : 'none';
+  if(wi) wi.style.display = revealing ? '' : 'none';
+  if(btn) btn.textContent = revealing ? '🙈 已显示' : '👁 显示单词';
+  if(revealing){ Pron.speak(cur.items[cur.idx].word); }
+  Sound.play('click');
 }
 
 function checkSpell(){
@@ -1296,7 +1308,7 @@ function switchMode(mode){
   } else {
     // 旧的学习模式（看词→判断）
     cur.stage=STAGE.CARD;
-    cur.ws={isNew:true,quizResult:null,wrongCount:0,spellRequired:false,spellAttempts:0,mastery:'unknown',quizAnswered:false};
+    cur.ws={isNew:true,quizResult:null,wrongCount:0,spellRequired:false,spellAttempts:0,mastery:'unknown',revealed:false,quizAnswered:false};
     showLegacyStudyMode();
   }
   Sound.play('click');
