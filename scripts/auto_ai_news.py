@@ -21,6 +21,10 @@ import xml.etree.ElementTree as ET
 
 BASE = Path(__file__).resolve().parent.parent
 OUT = BASE / 'assets' / 'ai_cards.json'
+# 中文译文缓存：按 source_url 索引，跨天保留。
+# 每日列表只留最新 10 条，卡片一旦被挤出列表，人工翻译的中文就会丢失；
+# 这份缓存让已翻译过的条目即使暂时掉出列表，再次出现时中文也能自动找回。
+CN_CACHE = BASE / 'assets' / 'ai_cards_cn_cache.json'
 
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/124.0 Safari/537.36')
@@ -188,6 +192,36 @@ def load_prev():
     return [], ''
 
 
+def load_cn_cache():
+    """读取中文译文缓存；任何异常都退化为空 dict，绝不影响每日更新。"""
+    try:
+        if CN_CACHE.exists():
+            d = json.loads(CN_CACHE.read_text(encoding='utf-8'))
+            if isinstance(d, dict):
+                return d
+    except Exception:
+        pass
+    return {}
+
+
+def save_cn_cache(cache):
+    try:
+        CN_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2),
+                            encoding='utf-8')
+    except Exception:
+        pass
+
+
+def _cache_put(cache, c):
+    """把一张卡片的中文译文写入缓存（必须同时有链接和中文标题才算有效译文）。"""
+    u, t = c.get('source_url', ''), c.get('title_cn', '')
+    if u and t:
+        cache[u] = {'title_cn': t,
+                    'summary': c.get('summary', ''),
+                    'impact': c.get('impact', ''),
+                    'uses': c.get('uses', '')}
+
+
 def collect():
     seen = {}
     for feed in FEEDS:
@@ -260,6 +294,15 @@ def main():
     prev_cards, prev_updated = load_prev()
     prev_titles = {c.get('title') for c in prev_cards}
     prev_map = {c.get('title'): c for c in prev_cards}
+
+    # 载入中文缓存，并先把历史里已有的中文译文沉淀进缓存
+    cn_cache = load_cn_cache()
+    try:
+        for c in prev_cards:
+            _cache_put(cn_cache, c)
+    except Exception:
+        pass
+
     fresh = collect()
     # 官方来源优先，各自按时间新 -> 旧；每日精选上限 10 条
     official = sorted([c for c in fresh if c.get('official')],
@@ -287,6 +330,19 @@ def main():
                 c['impact'] = pc['impact']
             if not c.get('uses') and pc.get('uses'):
                 c['uses'] = pc['uses']
+        # 标题没命中历史时，再按 source_url 找回缓存里的中文
+        # （防止标题被微调、或卡片曾掉出最新 10 条导致译文丢失）
+        if not c.get('title_cn'):
+            cu = cn_cache.get(c.get('source_url', ''))
+            if cu:
+                if cu.get('title_cn'):
+                    c['title_cn'] = cu['title_cn']
+                if cu.get('summary') and len(cu.get('summary', '')) > len(c.get('summary', '')):
+                    c['summary'] = cu['summary']
+                if not c.get('impact') and cu.get('impact'):
+                    c['impact'] = cu['impact']
+                if not c.get('uses') and cu.get('uses'):
+                    c['uses'] = cu['uses']
         c['is_new'] = t not in prev_titles
         seen_t.add(t)
         final.append(c)
@@ -301,6 +357,14 @@ def main():
             c['is_new'] = False
             seen_t.add(t)
             final.append(c)
+
+    # 把本次最终列表里的中文译文沉淀进缓存，供后续复用
+    try:
+        for c in final:
+            _cache_put(cn_cache, c)
+        save_cn_cache(cn_cache)
+    except Exception:
+        pass
 
     today = NOW.strftime('%Y-%m-%d')
     out = {'updated': today, 'cards': final}
