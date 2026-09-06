@@ -455,6 +455,10 @@ a{color:inherit;text-decoration:none}
       <div class="toggle on" id="tgAuto" onclick="toggleSetting('auto')"><i></i></div>
     </div>
     <div class="setrow">
+      <div class="sl"><div class="st">🗣 例句发音</div><div class="sd" id="voiceDesc">检测中…</div></div>
+      <button class="btn" style="min-height:36px;padding:6px 12px;font-size:13px" onclick="testVoice()">试听</button>
+    </div>
+    <div class="setrow">
       <div class="sl"><div class="st">📝 强制拼写</div><div class="sd">新词或答错时要求拼写</div></div>
       <div class="toggle on" id="tgSpell" onclick="toggleSetting('spell')"><i></i></div>
     </div>
@@ -516,7 +520,15 @@ function toggleSetting(which){
   else if(which==='auto'){ G.auto=!G.auto; zs(SET_AUTO,G.auto); document.getElementById('tgAuto').classList.toggle('on',G.auto); if(G.auto) toast('自动发音已开'); }
   else if(which==='spell'){ G.spell=!G.spell; zs(SET_SPELL,G.spell); document.getElementById('tgSpell').classList.toggle('on',G.spell); }
 }
-function openSettings(){ document.getElementById('tgSound').classList.toggle('on',G.sound); document.getElementById('tgAuto').classList.toggle('on',G.auto); document.getElementById('tgSpell').classList.toggle('on',G.spell); document.getElementById('setOv').classList.add('on'); }
+function openSettings(){ document.getElementById('tgSound').classList.toggle('on',G.sound); document.getElementById('tgAuto').classList.toggle('on',G.auto); document.getElementById('tgSpell').classList.toggle('on',G.spell); refreshVoiceDesc(); document.getElementById('setOv').classList.add('on'); }
+// 第12轮：显示当前例句用的是哪把嗓子，方便判断是否够自然
+function refreshVoiceDesc(){
+  var d=document.getElementById('voiceDesc'); if(!d) return;
+  var n=NeuralVoice.name(), q=NeuralVoice.quality();
+  if(!n){ d.textContent='系统无英文语音，例句自动用离线音频 / 有道发音'; return; }
+  d.textContent='当前音色：'+n+(q>=60?'（神经网络音色，自然）':'（偏机械，建议用 Edge/Chrome 桌面版）');
+}
+function testVoice(){ Pron.speakSentence('This is a sample sentence for testing the voice.', null, -1); }
 function closeSettings(){ document.getElementById('setOv').classList.remove('on'); }
 
 /* ============ 统一音效系统（WebAudio 合成，无外部文件）增强版 ============ */
@@ -598,6 +610,79 @@ var Sound=(function(){
   return {play:play, setOn:function(v){on=v;}, isOn:function(){return on;}, unlock:ensure, addCombo:addCombo, resetCombo:resetCombo, recentlyPlayed:function(){return (Date.now()-lastPlayAt)<80;}};
 })();
 
+/* ============ 第12轮：例句发音统一化 —— 系统神经语音 / 离线Aria / 有道 三层兜底 ============
+   背景：微软 Edge TTS 的 WSS 端点强制校验 Origin=chrome-extension:// 与 UA/Cookie，
+        浏览器 WebSocket 无法自定义这些头（forbidden header），网页端直连必然握手失败，
+        因此改为「系统自带的神经语音为主 + 离线预生成 Aria mp3 兜底 + 有道兜底」。
+   优先级：① 系统神经语音（全站同一把嗓子，离线可用，最自然）
+           ② 离线 mp3：ielts/audio/ex1/<slug>.mp3（en-US-AriaNeural 离线合成，仅第1条例句）
+           ③ 有道 dictvoice type=0（美音）在线兜底
+*/
+var NeuralVoice=(function(){
+  var synth=(typeof window!=='undefined'&&window.speechSynthesis)?window.speechSynthesis:null;
+  var picked=null, pickedScore=0;
+  // 音色打分：越高越自然。刻意压低英音(en-GB)，保证全站统一美音
+  var PREFS=[[/aria/i,100],[/jenny/i,96],[/natural/i,92],[/neural/i,88],[/microsoft[^|]*online/i,84],
+             [/google (us )?english/i,76],[/samantha/i,72],[/karen/i,62],[/daniel/i,60],[/moira/i,55],
+             [/tessa/i,55],[/zira/i,42],[/david/i,42],[/hazel/i,42],[/mark/i,42],[/english/i,20]];
+  function score(v){
+    if(!v) return 0;
+    var lang=v.lang||'';
+    if(!/^en[-_]/i.test(lang)) return 0;
+    var nm=(v.name||'')+' '+(v.voiceURI||''), best=0;
+    for(var i=0;i<PREFS.length;i++){ if(PREFS[i][0].test(nm)) best=Math.max(best,PREFS[i][1]); }
+    if(/en[-_]GB|United Kingdom|British|Irish|Scottish|en[-_]AU|en[-_]IN/i.test(lang+' '+nm)) best-=30;
+    if(v.localService) best+=3;
+    return best;
+  }
+  function pick(){
+    if(!synth) return null;
+    var list=[]; try{ list=synth.getVoices()||[]; }catch(e){ return null; }
+    var best=null,bs=9;   // 低于 10 分认为音色不可接受（多半是机械合成器）
+    for(var i=0;i<list.length;i++){ var s=score(list[i]); if(s>bs){bs=s;best=list[i];} }
+    pickedScore=best?bs:0;
+    return best;
+  }
+  function ready(){ if(!synth) return null; if(!picked) picked=pick(); return picked; }
+  function quality(){ if(!synth) return 0; if(!picked) picked=pick(); return pickedScore; }
+  if(synth&&typeof synth.addEventListener==='function'){
+    try{ synth.addEventListener('voiceschanged',function(){ picked=pick(); }); }catch(e){}
+  }
+  var keepAlive=null;
+  // Chrome 长句 15s 后会自动停，定时 pause/resume 续命
+  function watch(text){
+    if(keepAlive) clearInterval(keepAlive);
+    var t0=Date.now();
+    keepAlive=setInterval(function(){
+      try{
+        if(!synth.speaking||Date.now()-t0>25000){ clearInterval(keepAlive); keepAlive=null; return; }
+        synth.pause(); synth.resume();
+      }catch(e){ clearInterval(keepAlive); keepAlive=null; }
+    },8000);
+  }
+  // speak(text,onFail)：成功返回 true；失败/无音色调用 onFail 交给下一层
+  function speak(text,onFail){
+    if(!text){ if(onFail) onFail(); return false; }
+    var v=ready();
+    if(!v){ if(onFail) onFail(); return false; }
+    try{
+      synth.cancel();
+      var u=new SpeechSynthesisUtterance(text);
+      u.voice=v; u.lang=v.lang||'en-US'; u.rate=0.95; u.pitch=1; u.volume=1;
+      u.onerror=function(ev){
+        var err=(ev&&ev.error)||'';
+        if(err==='interrupted'||err==='canceled') return;   // 自己 cancel 掉的不算失败
+        if(onFail) onFail();
+      };
+      synth.speak(u);
+      watch(text);
+      return true;
+    }catch(e){ if(onFail) onFail(); return false; }
+  }
+  function name(){ var v=ready(); return v?String(v.name||v.voiceURI||''):''; }
+  return {speak:speak, quality:quality, name:name, ok:function(){ return !!ready(); }};
+})();
+
 /* ============ 自动发音 + 预加载（复用现有 mp3） ============ */
 var Pron=(function(){
   var el=document.getElementById('audio');
@@ -605,12 +690,20 @@ var Pron=(function(){
   try{
     el.addEventListener('error', function(){
       var src=el.src||'';
+      // 离线例句 mp3（/ex1/）缺失：改用系统神经语音，再退有道
+      if(src.indexOf('/ex1/')>=0){
+        if(lastSent){ NeuralVoice.speak(lastSent, function(){ youdao(lastSent); }); }
+        return;
+      }
       if(src.indexOf('ielts/audio/')>=0){
         try{
           var m=decodeURIComponent(src).match(/audio\/(.+)_us\.mp3/);
           if(m){
-            el.src='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(m[1])+'&type=2';
-            var p=el.play(); if(p&&p.catch) p.catch(function(){});
+            // 第12轮：本地 mp3 缺失时改用系统神经语音（和例句同一把嗓子），再回退有道
+            NeuralVoice.speak(m[1], function(){
+              el.src='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(m[1])+'&type=2';
+              var p=el.play(); if(p&&p.catch) p.catch(function(){});
+            });
           }
         }catch(e){}
       }
@@ -619,6 +712,7 @@ var Pron=(function(){
   // 极小静音 wav，仅用于首次手势里解锁移动端 <audio>（iOS/安卓不解锁则点喇叭没声音）
   var SILENT='data:audio/wav;base64,UklGRmQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YUAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
   var unlocked=false;
+  var lastSent='';   // 最近一次朗读的例句，供离线 mp3 404 时回退使用
   // 音频文件名统一小写（下载脚本用的是 word.lower()），这里必须转小写才能命中，
   // 否则 Edition 这类首字母大写的词会拼成不存在的 Edition_us.mp3 而哑掉
   function url(w){ return 'ielts/audio/'+encodeURIComponent(String(w||'').trim().toLowerCase())+'_us.mp3'; }
@@ -630,14 +724,39 @@ var Pron=(function(){
       var p=el.play(); if(p&&p.catch) p.catch(function(){});
     }catch(e){}
   }
-  // 例句整句发音：直接走有道在线 dictvoice（本地无整句 mp3，跳过无谓的 404 试探）
-  function speakSentence(sent){
-    if(!sent) return;
+  // 例句整句发音（第12轮）：系统神经语音 → 离线 Aria mp3 → 有道美音，三层兜底且音色尽量统一
+  function exMp3(word, idx){
+    if(idx!==0||!word) return '';   // 离线 mp3 只合成了每词的第 1 条例句
+    var s=String(word).trim().toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'');
+    return s?('ielts/audio/ex1/'+encodeURIComponent(s)+'.mp3'):'';
+  }
+  function youdao(sent){
     try{
-      el.src='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(sent)+'&type=1';
+      el.src='https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(sent)+'&type=0';
       try{ el.currentTime=0; }catch(e){}
       var p=el.play(); if(p&&p.catch) p.catch(function(){});
     }catch(e){}
+  }
+  function speakSentence(sent, word, idx){
+    if(!sent) return;
+    lastSent=sent;
+    var q=NeuralVoice.quality();          // 0=没有可用英文语音
+    var mp3=exMp3(word, idx);
+    // ① 音色够好（神经网络/自然音色）→ 系统语音，全站同一把嗓子
+    if(q>=60){ NeuralVoice.speak(sent, function(){ if(mp3) playMp3(mp3, youdao.bind(null,sent)); else youdao(sent); }); return; }
+    // ② 音色一般但有离线 Aria mp3（第1条例句）→ 优先离线，更自然也更统一
+    if(mp3){ playMp3(mp3, function(){ if(q>0) NeuralVoice.speak(sent, youdao.bind(null,sent)); else youdao(sent); }); return; }
+    // ③ 退而求其次：有系统语音就用，否则有道
+    if(q>0){ NeuralVoice.speak(sent, youdao.bind(null,sent)); return; }
+    youdao(sent);
+  }
+  function playMp3(src, onFail){
+    try{
+      el.src=src; try{ el.currentTime=0; }catch(e){}
+      var p=el.play();
+      if(p&&p.catch) p.catch(function(){ if(onFail) onFail(); });
+      else if(!p && el.error && onFail) onFail();
+    }catch(e){ if(onFail) onFail(); }
   }
   function play(w){ if(!G.auto) return; speak(w); }   // 自动发音：受开关控制
   function unlock(){   // 必须在真实用户手势里调用，才能解锁移动端音频
@@ -1739,7 +1858,7 @@ function playEx(idx){
   var it=cur.items[cur.idx];
   var exs=getExamples(it);
   var ex=exs[idx];
-  if(ex&&ex.en) Pron.speakSentence(ex.en);
+  if(ex&&ex.en) Pron.speakSentence(ex.en, it.word, idx);
 }
 function showStageCard(){
   cur.stage=STAGE.CARD;
@@ -2468,6 +2587,36 @@ window.addEventListener('touchstart',firstGesture);
 window.addEventListener('mousedown',firstGesture);
 window.addEventListener('click',firstGesture);        // 只触发 click 的环境（部分移动端/键盘）也能解锁
 window.addEventListener('keydown',firstGesture);
+
+/* ===== 第12轮：键盘操作 —— 回车=继续/下一词，1~4=四选一，←=上一个（网页端不用一直抓鼠标） ===== */
+window.addEventListener('keydown',function(e){
+  if(!cur||curView!=='word'||!cur.deck||cur.deck.key!=='en') return;
+  var tag=(e.target&&e.target.tagName)?e.target.tagName.toLowerCase():'';
+  var typing=(tag==='input'||tag==='textarea');
+
+  if(e.key==='Enter'){
+    if(typing) return;   // 拼写输入框自己的 onkeydown 负责提交，这里不处理避免双重触发
+    if(cur.stage===STAGE.EXPLAIN){ e.preventDefault(); explainContinue(); return; }
+    if(cur.stage===STAGE.SPELL){
+      // 拼写完成态：输入框已禁用（3/3 全对），回车=继续下一词
+      var inp=document.getElementById('spellInput');
+      if(inp&&inp.disabled){ e.preventDefault(); proceedNext(); }
+      return;
+    }
+    return;              // CARD 会自动进 QUIZ；QUIZ 必须先选一个选项
+  }
+  if(typing) return;
+
+  if(cur.stage===STAGE.QUIZ&&/^[1-4]$/.test(e.key)){
+    var opts=document.querySelectorAll('#qgrid .qopt');
+    var o=opts[parseInt(e.key,10)-1];
+    if(o&&!o.dataset.done){ e.preventDefault(); o.click(); }
+    return;
+  }
+  if(e.key==='ArrowLeft'&&cur.idx>0&&(cur.stage===STAGE.CARD||cur.stage===STAGE.EXPLAIN||cur.stage===STAGE.SPELL)){
+    e.preventDefault(); prevWord();
+  }
+});
 
 /* ===== 全站按钮音效：任何按钮点击都出声；已有专属音效的按钮不重复叠加 ===== */
 (function(){
