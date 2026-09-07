@@ -135,6 +135,72 @@ LOW_BLOCK = re.compile(
     r'how to (get|install|use|download|set)|best \w+ ?apps?|tips and tricks|选购指南|值得买)',
     re.I)
 
+# 第19轮：标题党 / 抢发 / 抢看型资讯拒收
+# 适配泽少需求："iphone 18 还没发布就有媒体号出来说什么什么发布了、抢先看这种新闻不要抓取"
+# 这些内容常出现在中等科技媒体（抢先看/独家/首发/全网首曝 等营销词）的转载/猜测稿里
+# 拆成三档分别严格度：
+#   CN        —— 中文抢发话术（任何源都直接 low，真官方稿不会用"抢先看"）
+#   EN_SEVERE —— 英文严重抢发（leaked/concept render/rumor etc.）—— 任何源都 low
+#   EN_MILD   —— 英文轻度抢发（said to / tipped to / first look 等）—— 非官方源 low，官方源允许
+
+CLICKBAIT_BLOCK_CN = re.compile(
+    # 中文抢发话术（任何源都判 low，真官方稿不会用"抢先看"这种词）
+    r'抢先看|抢鲜看|全球首[曝曝]|独家首[曝曝]|全网首[曝曝]|首发[预预]测|'
+    r'渲染图|假想图|谍照|概念机|模具图|全[新新]爆料|'
+    r'[曝曝]光|据[报报]道|传?[言言]称|疑似|网传|'
+    r'[新新]机[渲渲]染|设计图[曝曝]光|[曝曝]光[渲渲]染图|'
+    r'包装盒|包装[曝曝]光|说明书[曝曝]光|跑分[曝曝]光|'
+    r'疑似官图|疑似[正正]式[渲渲]染图|疑似[新新]机|'
+    r'抢先[曝曝]光|抢先[发发]布|第一[时时]间|一[文文]读懂|'
+    r'看完[再再]买|你最[关关]心的|都[在在]这[里里]|[这这][么么]选[不不][后后][悔悔]|'
+    r'尘埃[落落]定|定了|定了[！]*|刚刚|刚刚[发发]了|'
+    r'一[文文]汇总|汇总[来来]了|[新新]汇总',
+    re.I)
+
+CLICKBAIT_BLOCK_EN_SEVERE = re.compile(
+    r'leaked(?:\s+(?:image|images|render|design|specs?|specifications|price))?|'
+    r'concept\s+(?:image|images|render|design|phone)|'
+    r'rendered\s+(?:image|images|phone|design)|'
+    r'\brender(?:ed|s)?\b(?!\s+(?:release|launch|version|event))|'
+    r'exclusive(?:\s+leak)?|'
+    r'breaking\s+news[:.]|'
+    r'unofficial(?!\s+(?:statement|release))',
+    re.I)
+
+CLICKBAIT_BLOCK_EN_MILD = re.compile(
+    r'\bleak(?:s)?\b(?!ed\s+(?:image|images))|'
+    r'\brumor|rumour|alleged|'
+    r'first\s*-\s*look|first\s+look(?!s\s+at)|'
+    r'hands\-\s?on(?:\s+(?:review|impressions|video))?(?!\s+with)|'
+    r'said\s+to|tipped\s+to|is\s+reportedly|is\s+expected\s+to|'
+    r'appears\s+to(?:\s+be)?|'
+    r'preview(?!\s+(?:release|launch|event))',
+    re.I)
+
+# 第19轮：来源域名黑名单（已知标题党 / 抢发 / 二道贩子的常驻域名）
+# 不进 FEEDS 时只在卡片生成后用 outlet + source_url 双重判断
+UNRELIABLE_OUTLETS = {
+    '快科技', 'it快讯', '新客网', '手机中国', 'guge刊', 'guo[ke]', 'soft622', '聚牛科技',
+    '科技迷', '极客[视视]界', 'geek-[视视]界', '小白[玩玩]手机', 'geekpark-toutiao',
+    # 二级转载源（部分 slug 化名字，宁可错杀）
+}
+# 已知可靠、官方/权威通用 RSS 源白名单（用于在采集层就过滤：
+# 若 outlet 不在白名单内且命中 CLICKBAIT_BLOCK，直接丢弃）
+TRUSTED_OUTLETS = {
+    '量子位', '机器之心', '36氪', '爱范儿', '少数派',
+    'IT之家', '雷锋网',
+    'Android Authority',
+    'Hugging Face', 'GitHub', 'Google', 'NVIDIA', 'OpenAI', 'Microsoft',
+    'TechCrunch', 'The Verge', 'Ars Technica',
+    'Apple Newsroom', 'Apple Developer',
+    'Teslarati', 'Samsung',
+}
+
+# 第19轮：URL 黑名单（出现在 URL 路径里的抢发/猜测词）
+UNRELIABLE_URL = re.compile(
+    r'/(?:first-?look|hands-?on|leak|leaked|rumor|rumour|render|concept|hands-on|exclusive|breaking)',
+    re.I)
+
 
 def classify_category(text, default='AI'):
     """返回分类标签：AI / Apple / Tesla / 手机 / 芯片 / 机器人 / 自动驾驶"""
@@ -151,8 +217,24 @@ def score_importance(title, summary, official=False):
     - 命中明确『发布/收购/重大/重大产品/版本大更新/重大更新/监管/里程碑』→ high
     - 命中『feature/update/tools/beta/preview』『合作/上线/推送』→ med
     - 命中仅为『newsletter/赞助/广告』→ low (会被过滤)
+    - 第19轮：标题党/抢发/抢先看 关键词 → low（紧度比 HIGH_IMPACT 更高）
+      - 中文抢发（抢先看/谍照/渲染图 等）即使官方源也判 low（真官方稿不会说"抢先看"）
+      - 英文 leak/render/concept/rumor 等若在官方源（ai_only），允许 high（如 Beta release 背景）；
+        非官方源一律判 low
     """
     text = (title or '') + ' ' + (summary or '')
+    title_only = title or ''
+    summary_only = summary or ''
+    # 中文抢发词（标题党关键词）+ 英文严重抢发词（leaked/concept/render）—— 任何源都判 low
+    cn_clickbait = CLICKBAIT_BLOCK_CN.search(title_only) or CLICKBAIT_BLOCK_CN.search(summary_only)
+    en_severe = CLICKBAIT_BLOCK_EN_SEVERE.search(title_only) or CLICKBAIT_BLOCK_EN_SEVERE.search(summary_only)
+    if cn_clickbait or en_severe:
+        return 'low'
+    # 英文轻度抢发词（rumor/tipped/said to 等）—— 在非官方源判 low；
+    # 官方源（ai_only）允许 high（这些词偶尔出现在官方稿做背景描述）
+    en_mild = CLICKBAIT_BLOCK_EN_MILD.search(title_only) or CLICKBAIT_BLOCK_EN_MILD.search(summary_only)
+    if en_mild and not official:
+        return 'low'
     if LOW_BLOCK.search(text) and not HIGH_IMPACT.search(text):
         return 'low'
     if HIGH_IMPACT.search(text):
@@ -357,6 +439,20 @@ def collect():
                 # 已知分类（如 Apple/Tesla）的官方源，跳过关键词检查（它们本身就在自家领域内）
                 if not feed.get('ai_only') and not feed.get('category') and not (AI_KEYWORDS.search(text) or PHONE_KEYWORDS.search(text)):
                     continue
+                # 第19轮：标题党/抢发/抢先看型资讯拒收（不在官方源 / 不在品牌分类专用源时硬过滤）
+                # 例：「iPhone 18 还没发布，就有媒体号说什么什么发布了、抢先看」这类
+                if not feed.get('ai_only') and not feed.get('category'):
+                    cn_cb = CLICKBAIT_BLOCK_CN.search(title or '') or CLICKBAIT_BLOCK_CN.search(it['summary'] or '')
+                    en_cb = (CLICKBAIT_BLOCK_EN_SEVERE.search(title or '') or CLICKBAIT_BLOCK_EN_SEVERE.search(it['summary'] or '')
+                             or CLICKBAIT_BLOCK_EN_MILD.search(title or '') or CLICKBAIT_BLOCK_EN_MILD.search(it['summary'] or ''))
+                    if cn_cb or en_cb:
+                        continue
+                    # URL 路径里出现 /leak /first-look /rumor 等线索也直接拒
+                    if UNRELIABLE_URL.search(link):
+                        continue
+                    # outlet 命中黑名单（如果是中文媒体类可能名字比较杂，宁可少抓也不放过）
+                    if feed.get('outlet') in UNRELIABLE_OUTLETS:
+                        continue
                 company = feed.get('company') or detect_company(title) or detect_company(feed['outlet']) or feed['outlet']
                 pub_bj = pub.astimezone(BJTZ) if pub else NOW
                 date_str = pub_bj.strftime('%Y-%m-%d')
