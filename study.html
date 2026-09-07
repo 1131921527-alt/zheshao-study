@@ -3421,7 +3421,7 @@ function renderNewsList(){
         +(imp==='high'?'<span class="imp-high-pill">🔥 重要</span>':'')
         +(isNew?'<span class="m-pill" style="font-size:11px;padding:2px 8px">NEW</span>':'')
       +'</div>'
-      +'<div class="ttl">'+escAttr(it.title_cn||it.title||'')+'</div>'
+      +'<div class="ttl">'+escAttr(formatNewsTitle(it))+'</div>'
       +'<div class="ex">'+escAttr(summary)+'</div>'
       +'<div class="row-meta"><span class="src">📰 '+escAttr(src)+(it.date?' · '+escAttr(it.date):'')+'</span><span>点击阅读 →</span></div>'
     +'</div>';
@@ -3443,20 +3443,44 @@ function renderNews(){
   document.getElementById('newsCardWrap').style.display='';
   var it=cur.items[cur.idx];
   document.getElementById('newsTag').textContent=(it.category?'【'+it.category+'】':'')+(it.tag||'AI');
-  document.getElementById('newsTitle').textContent=it.title_cn||it.title||'';
+  /* 第18轮：英文标题显示「英文标题（中文翻译）」；中文标题直接显示 */
+  document.getElementById('newsTitle').textContent=formatNewsTitle(it);
   document.getElementById('newsDate').textContent=it.date?('发布：'+it.date):'';
-  // 第16轮：优先渲染抓回来的全文 fulltext（每篇 2000-8000 字）；无全文回退摘要分段
+  /* 第16轮：优先渲染抓回来的全文 fulltext（每篇 2000-8000 字）；
+     第18轮：若英文原文配了 fulltext_cn（按段），前端只显示中文译文；
+     译文段为空自动回退英文原文；末尾保留原文链接让用户对照 */
   var h='';
   var ft=it.fulltext;
-  if(ft && ft.length){
+  var ft_cn=it.fulltext_cn;
+  var has_cn = Array.isArray(ft_cn) && ft_cn.some(function(x){return !!x;});
+  var is_en = it.fulltext_lang==='en' || _isEnglishTitle(it);
+  if(has_cn){
+    if(is_en) h+='<div class="np-lang">🌐 以下为中文翻译全文（原文为英文，点文末链接可看英文原文）</div>';
+    var pairs=[];
+    var n=Math.max((ft&&ft.length)||0, ft_cn.length);
+    for(var i=0;i<n;i++){ pairs.push({cn: ft_cn[i]||'', en: (ft&&ft[i])||''}); }
+    var merged=mergeParasCn(pairs);
+    merged.forEach(function(p){ h+='<div class="np">'+escAttr(p)+'</div>'; });
+    var cn_done=ft_cn.filter(function(x){return !!x;}).length;
+    h+='<div class="np-lang" style="margin-top:16px">中文译文 '+cn_done+' / '+ft_cn.length+' 段 · 原文共 '+ft_cn.length+' 段</div>';
+  }else if(ft && ft.length){
     var merged=mergeParas(ft);
-    if(it.fulltext_lang==='en') h+='<div class="np-lang">🌐 以下为英文原文全文（'+(it.fulltext_chars||0)+' 字符，完整内容）</div>';
+    if(is_en) h+='<div class="np-lang">⚠️ 中文翻译暂缺，以下为英文原文（点文末链接可查看）</div>';
     merged.forEach(function(p){ h+='<div class="np">'+escAttr(p)+'</div>'; });
     h+='<div class="np-lang" style="margin-top:16px">以上为原文全文 · 共 '+merged.length+' 段</div>';
   }else{
-    var paras=paraSplit(it.summary||'');
-    paras.forEach(function(p){ h+='<div class="np">'+escAttr(p)+'</div>'; });
-    if(!paras.length) h+='<div class="np" style="color:var(--mut)">（暂无正文摘要，可点下方原文查看全文）</div>';
+    /* 第18轮：摘要也走双语策略，中文优先，英文兜底 */
+    var sum_pairs=[];
+    if(it.summary_cn) sum_pairs.push({cn:it.summary_cn, en:it.summary||''});
+    else if(it.summary) sum_pairs.push({cn:'', en:it.summary});
+    if(sum_pairs.length){
+      var merged_sum=mergeParasCn(sum_pairs);
+      if(!merged_sum.length) merged_sum=paraSplit(it.summary||'');
+      merged_sum.forEach(function(p){ h+='<div class="np">'+escAttr(p)+'</div>'; });
+      if(it.summary_cn && _isEnglishTitle(it)) h+='<div class="np-lang">🌐 以上为中文摘要（原文为英文）</div>';
+    }else{
+      h+='<div class="np" style="color:var(--mut)">（暂无正文摘要，可点下方原文查看全文）</div>';
+    }
   }
   var imp=it.impact||it.why_it_matters||'';
   var use=it.uses||it.how_to_use||'';
@@ -3505,6 +3529,35 @@ function mergeParas(arr){
     if(!t) return;
     if(buf && (buf.length>=80 || (buf.length+t.length)>200)){ out.push(buf); buf=t; }
     else { buf=buf?buf+' '+t:t; }
+  });
+  if(buf) out.push(buf);
+  return out;
+}
+/* 第18轮：英文标题显示「英文标题（中文翻译）」；
+     中文标题直接显示；缺翻译的英文标题退化为纯英文（不强制） */
+function _isEnglishTitle(it){
+  var t=(it&&(it.title||it.title_cn))||'';
+  if(!t) return false;
+  var en=0;
+  for(var i=0;i<t.length;i++){ var ch=t.charAt(i); if((ch>='A'&&ch<='Z')||(ch>='a'&&ch<='z')) en++; }
+  return en/Math.max(1,t.length)>0.5;
+}
+function formatNewsTitle(it){
+  var t=(it&&it.title)||'';
+  if(it && it.title_cn && _isEnglishTitle(it)) return t+'（'+it.title_cn+'）';
+  return (it&&it.title_cn)||t||'';
+}
+/* 第18轮：英文原文按段配对合并中文译文（80~200 字），缺译文段用英文兜底 */
+function mergeParasCn(pairs){
+  if(!pairs||!pairs.length) return [];
+  var out=[],buf='';
+  pairs.forEach(function(p){
+    var en=((p&&p.en)||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+    var cn=((p&&p.cn)||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+    if(!cn) cn=en; /* 缺翻译用英文原文兜底 */
+    if(!cn) return;
+    if(buf && (buf.length>=80 || (buf.length+cn.length)>200)){ out.push(buf); buf=cn; }
+    else { buf=buf?buf+' '+cn:cn; }
   });
   if(buf) out.push(buf);
   return out;

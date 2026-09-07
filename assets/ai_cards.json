@@ -76,7 +76,7 @@
       "importance": "med",
       "source": "TechCrunch",
       "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
-      "title_cn": "",
+      "title_cn": "作者集体反击：出版社和代理方在 Anthropic 和解金上狮子大开口",
       "date": "2026-09-07",
       "published_at": "2026-09-07T04:47:37+08:00",
       "summary": "【Anthropic】Authors say publishers seem to be claiming more than their fair share of settlement payments.",
@@ -126,7 +126,8 @@
         "MapQuest’s app surges to No. 1 in Navigation after refusing to rename Lake Ontario"
       ],
       "fulltext_lang": "en",
-      "fulltext_chars": 4991
+      "fulltext_chars": 4991,
+      "summary_cn": "【Anthropic】作者们表示，出版社在 Anthropic 的和解金分配上似乎拿走了远超其应得的份额。"
     },
     {
       "tag": "阿里巴巴",
@@ -406,7 +407,7 @@
       "importance": "med",
       "source": "Android Authority",
       "title": "Motorola and Google foldables are quietly beating Samsung where it counts",
-      "title_cn": "",
+      "title_cn": "摩托罗拉和谷歌的折叠屏，正在悄悄在关键阵地上击败三星",
       "date": "2026-09-06",
       "published_at": "2026-09-06T18:30:51+08:00",
       "summary": "【Google】If you need a foldable with the best specs and budget isn’t a factor, the Samsung Galaxy Z Fold 8 Ultra takes the crown. It isn’t even really that close. With its thin-and-light form factor, 5,000mAh…",
@@ -438,7 +439,8 @@
         "Thank you for being part of our community. Read our Comment Policy before posting."
       ],
       "fulltext_lang": "en",
-      "fulltext_chars": 7335
+      "fulltext_chars": 7335,
+      "summary_cn": "【Google】如果预算不是问题、要挑最强配置的折叠屏，三星 Galaxy Z Fold 8 Ultra 仍然稳坐王位——领先幅度还不小。它的轻薄机身、5000mAh 大电池等亮点确实亮眼。但从销量和性价比上看，…"
     },
     {
       "tag": "Android Authority",
@@ -447,7 +449,7 @@
       "importance": "med",
       "source": "Android Authority",
       "title": "I want better Samsung phones, but these new sales numbers show why we won’t get them",
-      "title_cn": "",
+      "title_cn": "我也想要更好的三星手机，但这些最新销量数据告诉你为什么我们等不到",
       "date": "2026-09-06",
       "published_at": "2026-09-06T17:30:54+08:00",
       "summary": "【Android Authority】Years ago, I considered Samsung’s flagships as the best Android smartphones to beat. But that idea has seemed increasingly nostalgic as competitors in other markets overtake the company’s smartphones…",
@@ -477,7 +479,8 @@
         "Thank you for being part of our community. Read our Comment Policy before posting."
       ],
       "fulltext_lang": "en",
-      "fulltext_chars": 5317
+      "fulltext_chars": 5317,
+      "summary_cn": "【Android Authority】几年前，三星旗舰是公认的最强安卓标杆，但随着其他市场的竞争对手不断追赶，这种印象越来越像一种怀旧情怀。三星高端机销量依旧稳健，…"
     },
     {
       "tag": "OpenAI",
@@ -486,7 +489,7 @@
       "importance": "med",
       "source": "OpenAI",
       "title": "An Alien Mind",
-      "title_cn": "",
+      "title_cn": "外星人的思维",
       "date": "2026-09-06",
       "published_at": "2026-09-06T17:00:00+08:00",
       "summary": "【OpenAI】Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
@@ -494,7 +497,8 @@
       "uses": "",
       "source_url": "https://openai.com/index/an-alien-mind",
       "official": true,
-      "is_new": false
+      "is_new": false,
+      "summary_cn": "【OpenAI】Jakub Pachocki 反思日益强大的 AI 以及让其保持对齐的挑战。他呼吁更严的安全护栏和跨国协同监管。"
     }
   ]
 }

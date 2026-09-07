@@ -492,18 +492,31 @@ def main():
 
     # 第17轮：按 source_url 恢复历史卡片的全文（每日列表是重建的，
     # 不恢复的话已抓好的 fulltext 会被洗掉，又要重新抓一遍）
+    # 第18轮：同时恢复 title_cn / summary_cn / fulltext_cn（已翻译过的卡片不再重新翻）
     prev_ft = {}
     for c in prev_cards:
-        if c.get('source_url') and c.get('fulltext'):
+        if c.get('source_url') and (c.get('fulltext') or c.get('title_cn') or c.get('summary_cn') or c.get('fulltext_cn')):
             prev_ft[c['source_url']] = {
-                'fulltext': c['fulltext'],
+                'fulltext': c.get('fulltext'),
                 'fulltext_lang': c.get('fulltext_lang', ''),
                 'fulltext_chars': c.get('fulltext_chars', 0),
+                'title_cn': c.get('title_cn', ''),
+                'summary_cn': c.get('summary_cn', ''),
+                'fulltext_cn': c.get('fulltext_cn'),
             }
     for c in final:
         pf = prev_ft.get(c.get('source_url', ''))
-        if pf and not c.get('fulltext'):
-            c.update(pf)
+        if pf:
+            if pf.get('fulltext') and not c.get('fulltext'):
+                c['fulltext'] = pf['fulltext']
+                c['fulltext_lang'] = pf.get('fulltext_lang', '')
+                c['fulltext_chars'] = pf.get('fulltext_chars', 0)
+            if pf.get('title_cn') and not c.get('title_cn'):
+                c['title_cn'] = pf['title_cn']
+            if pf.get('summary_cn') and not c.get('summary_cn'):
+                c['summary_cn'] = pf['summary_cn']
+            if pf.get('fulltext_cn') and not c.get('fulltext_cn'):
+                c['fulltext_cn'] = pf['fulltext_cn']
 
     # 第17轮：给仍没有全文的卡片在线抓原文全文（详情页显示 100% 原文）
     # lxml 缺失或网络异常时静默跳过，绝不影响主流程（摘要仍在）
@@ -514,6 +527,17 @@ def main():
         sys.stderr.write('fulltext: ok=%d fail=%d skip=%d\n' % (ok_n, fail_n, skip_n))
     except Exception as e:
         sys.stderr.write('fulltext enrich skipped: %s\n' % e)
+
+    # 第18轮：把英文卡片（标题/摘要/全文）翻成中文
+    # 引擎链由 translate_cn.py 内部裁决；本机 / 云端都安全（429 时降级 MyMemory）
+    # 任何异常均静默跳过，绝不影响主流程
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from translate_cn import translate_cards
+        n_tr, n_holes = translate_cards(final, sleep_s=0.4, quiet=True)
+        sys.stderr.write('translate: %d cards touched, %d holes remain\n' % (n_tr, n_holes))
+    except Exception as e:
+        sys.stderr.write('translate skipped: %s\n' % e)
 
     # 把本次最终列表里的中文译文沉淀进缓存，供后续复用
     try:
