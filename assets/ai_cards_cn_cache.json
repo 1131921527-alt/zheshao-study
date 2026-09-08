@@ -118,5 +118,77 @@
     "summary": "美国机器人数据新创公司 XDOF 今天被曝正以约 12 亿美元投后估值谈 B 轮融资。该团队 3 个月前才走出隐身模式，靠专攻“真实场景机器人动作数据采集与标注”，立刻跻身独角兽行列。本轮领投方暂未透露，但已是本年度机器人赛道里数一数二的大额融资。",
     "impact": "机器人赛道的“数据公司”开始被资本重新定价，意味着真正高质量的具身数据比模型本身还值钱。",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/": {
+    "title_cn": "作者集体反击：出版社和代理方在 Anthropic 和解金上狮子大开口",
+    "summary": "【Anthropic】Authors say publishers seem to be claiming more than their fair share of settlement payments.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/motorola-google-foldables-beat-samsung-3704932/": {
+    "title_cn": "摩托罗拉和谷歌的折叠屏，正在悄悄在关键阵地上击败三星",
+    "summary": "【Google】If you need a foldable with the best specs and budget isn’t a factor, the Samsung Galaxy Z Fold 8 Ultra takes the crown. It isn’t even really that close. With its thin-and-light form factor, 5,000mAh…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-record-sales-keep-us-from-better-phones-3704357/": {
+    "title_cn": "我也想要更好的三星手机，但这些最新销量数据告诉你为什么我们等不到",
+    "summary": "【Android Authority】Years ago, I considered Samsung’s flagships as the best Android smartphones to beat. But that idea has seemed increasingly nostalgic as competitors in other markets overtake the company’s smartphones…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://openai.com/index/an-alien-mind": {
+    "title_cn": "外星人的思维",
+    "summary": "【OpenAI】Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/": {
+    "title_cn": "黑客正在从订阅者那里窃取克劳德代币",
+    "summary": "【Anthropic】Last month, a Claude user noticed his account was consuming tokens even though he wasn't working. Anthropic has since warned users about hackers.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-find-hub-remembered-rollout-3708974/": {
+    "title_cn": "忘记放哪了？查找Hub的新“Remembered”功能现已推出，助您一臂之力",
+    "summary": "【Android Authority】Credit: Rita El Khoury / Android Authority TL;DR Find Hub’s new “Remembered” tab is starting to roll out. The new tab allows you to make a note of any object’s location. It appears the update is not w…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/nest-ios-alerts-bug-3708958/": {
+    "title_cn": "您的iPhone上缺少Nest提醒？ Google已修复",
+    "summary": "【Google】TL;DR For the past few days, iPhone users have reported not getting Nest camera alerts on their devices. While the app still recorded events, notifications for them weren’t going through. Google share…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race": {
+    "title_cn": "元押注AI特工Muse在人工智能竞赛中迎头赶上",
+    "summary": "【Meta】Meta is making another push to bring artificial intelligence to the masses with Muse, a personal assistant it says can put AI in the hands of virtually anyone. The product is the latest step in a mult…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/990313/anthropic-class-action-lawsuit-pricing-subscription-plans": {
+    "title_cn": "人工智能超级用户声称Anthropic通过订阅欺骗了他们，他们正在将其告上法庭",
+    "summary": "【Anthropic】Anthropic says power users are key to its business - it's prioritized them even when it means cutting off other popular applications, like OpenClaw. But some of these same customers say Anthropic misl…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-z-fold-8-flip-8-sales-3708955/": {
+    "title_cn": "三星在苹果加入比赛的前一天弯曲其可折叠的领先优势",
+    "summary": "【Apple】TL;DR Combined US purchases of the Galaxy Z Fold 8 and Fold 8 Ultra are tracking 30% ahead of the Galaxy Z Fold 7. The two Fold models account for roughly 80% of current Galaxy Z8 series purchases in…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/09/real-photos-of-young-girls-were-in-nudify-app-ads-on-facebook-instagram/": {
+    "title_cn": "“这是人们实际使用的人工智能” ：元广告推送应用程序裸露真正的青少年",
+    "summary": "【Meta】Meta took days to remove ads containing AI-generated child sexual abuse material (CSAM) on Facebook and Instagram. Some ads featured photos of real kids, including a press photo of a young member of a…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/science/2026/09/googles-ai-weather-model-now-uses-more-raw-satellite-data/": {
+    "title_cn": "谷歌人工智能天气模型的更新提高了预测准确性",
+    "summary": "【Google】Google is one of the major players in AI (meaning machine learning) weather forecast model space. The models it and others generate have their strengths and weaknesses , but the main advantage is that…",
+    "impact": "",
+    "uses": ""
   }
 }
