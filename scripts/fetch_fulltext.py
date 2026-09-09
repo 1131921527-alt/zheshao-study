@@ -8,7 +8,15 @@
 用法：python fetch_fulltext.py [--force]
 """
 import io, json, re, sys, time, urllib.request
-from lxml import html as LH
+
+# 第20轮：lxml 是可选依赖 —— GH Actions 忘装 / 本机没装时用标准库 HTMLParser 兜底，
+# 不再因为一个 import 让整条全文抓取管线静默失败
+try:
+    from lxml import html as LH
+    HAS_LXML = True
+except ImportError:
+    from html.parser import HTMLParser as _HP
+    HAS_LXML = False
 
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = r"C:\Users\admin\WorkBuddy\2026-08-24-00-30-20\zheshao-study"
@@ -31,6 +39,13 @@ NOISE2 = re.compile(
 )
 MIN_PARA = 10          # 短于这个字数且无句号的段落丢弃
 MAX_CHARS = 20000      # 单篇全文软上限（防超长页误抓）
+MIN_TOTAL = 300        # 第20轮：500→300，IT之家这类短中文新闻（350~450字）也能进全文
+
+# 第20轮：这些域名挂了反爬墙（AWS WAF / JS 挑战），抓了也只拿到 2KB 挑战页，
+# 直接跳过省时间，前端自动回退显示 RSS 摘要
+FULLTEXT_SKIP_HOSTS = {
+    "arstechnica.com",           # AWS WafCaptcha JS 挑战
+}
 
 
 def fetch(url):
@@ -48,11 +63,10 @@ def fetch(url):
     return raw.decode("utf-8", "ignore")
 
 
-def clean_paras(div):
-    """从正文容器提取并清洗段落"""
+def clean_texts(texts):
+    """第20轮：清洗一段段纯文本（lxml 路径和 stdlib 兜底路径共用）"""
     seen, out = set(), []
-    for p in div.xpath(".//p"):
-        t = "".join(p.itertext())
+    for t in texts:
         t = re.sub(r"\s+", " ", t).strip()
         if not t:
             continue
@@ -64,7 +78,6 @@ def clean_paras(div):
             continue                       # 重复段
         seen.add(t)
         out.append(t)
-    # 去重后若首段就是标题的重复，也无所谓；控制总长
     total = sum(len(t) for t in out)
     if total > MAX_CHARS:
         keep, n = [], 0
@@ -76,6 +89,54 @@ def clean_paras(div):
                 break
         out = keep
     return out
+
+
+if not HAS_LXML:
+    class _PCollector(_HP):
+        """标准库兜底：收所有 <p> 的文本（跳过 script/style）"""
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.paras, self._in_p, self._buf, self._skip = [], 0, [], 0
+        def handle_starttag(self, tag, attrs):
+            if tag in ("script", "style", "noscript"):
+                self._skip += 1
+            elif tag == "p":
+                self._in_p += 1
+        def handle_endtag(self, tag):
+            if tag in ("script", "style", "noscript") and self._skip:
+                self._skip -= 1
+            elif tag == "p" and self._in_p:
+                self._in_p -= 1
+                if self._in_p == 0:
+                    t = " ".join("".join(self._buf).split())
+                    if t:
+                        self.paras.append(t)
+                    self._buf = []
+        def handle_data(self, data):
+            if self._in_p and not self._skip:
+                self._buf.append(data)
+
+
+def extract_paras(html):
+    """统一入口：有 lxml 用最大文本块算法，没有用 <p> 全收 + 同一套清洗"""
+    if HAS_LXML:
+        doc = LH.fromstring(html)
+        best, bl = find_best_div(doc)
+        if best is None:
+            return []
+        return clean_paras(best)
+    c = _PCollector()
+    try:
+        c.feed(html)
+        c.close()
+    except Exception:
+        pass
+    return clean_texts(c.paras)
+
+
+def clean_paras(div):
+    """从正文容器提取并清洗段落（lxml 路径专用）"""
+    return clean_texts(["".join(p.itertext()) for p in div.xpath(".//p")])
 
 
 def find_best_div(doc):
@@ -108,7 +169,7 @@ def enrich_cards(cards, force=False, sleep_s=1.0, quiet=False):
     for i, it in enumerate(cards):
         w = (it.get("title_cn") or it.get("title") or "")[:24]
         ft = it.get("fulltext")
-        if ft and len("".join(ft)) >= 800 and not force:
+        if ft and len("".join(ft)) >= MIN_TOTAL and not force:
             if not quiet:
                 print("[%d/%d] %-26s 已有全文，跳过" % (i + 1, len(cards), w))
             skip_n += 1
@@ -119,13 +180,18 @@ def enrich_cards(cards, force=False, sleep_s=1.0, quiet=False):
                 print("[%d/%d] %-26s 无 source_url" % (i + 1, len(cards), w))
             fail_n += 1
             continue
+        # 第20轮：反爬墙域名直接跳过（抓到的只是 JS 挑战页）
+        host = url.split("/")[2].lower() if url.startswith("http") else ""
+        if any(host == h or host.endswith("." + h) for h in FULLTEXT_SKIP_HOSTS):
+            if not quiet:
+                print("[%d/%d] %-26s 反爬域名，跳过全文" % (i + 1, len(cards), w))
+            skip_n += 1
+            continue
         try:
-            html = fetch(url)
-            doc = LH.fromstring(html)
-            best, bl = find_best_div(doc)
-            paras = clean_paras(best) if best is not None else []
+            page = fetch(url)
+            paras = extract_paras(page)
             n = sum(len(t) for t in paras)
-            if n < 500:
+            if n < MIN_TOTAL:
                 if not quiet:
                     print("[%d/%d] %-26s 正文仅 %d 字，放弃" % (i + 1, len(cards), w, n))
                 fail_n += 1
