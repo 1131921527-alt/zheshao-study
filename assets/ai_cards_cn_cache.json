@@ -232,5 +232,35 @@
     "summary": "【TechCrunch】AI companies have been talking about superintelligent AI like&#160;it&#8217;s&#160;inevitable, but recent&#160;safety incidents&#160;like&#160;OpenAI&#8217;s&#160;Hugging Face breach&#160;are&#160;dem…",
     "impact": "",
     "uses": ""
+  },
+  "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/": {
+    "title_cn": "初学者GitHub Copilot应用：使用diff、终端和浏览器",
+    "summary": "【GitHub】When an agent makes a change to your code, you want to review it, run it, and see what changed. Great news: now you can do all three without having to leave the GitHub Copilot app . Before, doing thos…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/989853/slackforce-surfaces-launch": {
+    "title_cn": "Slack现在可以在聊天中对交互式图表和报告进行vibe编码",
+    "summary": "【The Verge】A new feature coming to Slack will allow you to build interactive reports, polls, dashboards, presentations, microsites, and other tools directly inside a chat. With Slackforce Surfaces, you can descr…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/": {
+    "title_cn": "由于Astra的需求， OpenAI暂停了Pro订阅",
+    "summary": "【OpenAI】The company said Pro subscriptions put the most strain on its systems, so it's pausing sign-ups while adding more capacity.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/": {
+    "title_cn": "Meta的人工智能代理Muse现在是美国排名第二的应用程序",
+    "summary": "【Meta】Meta's newest app Muse is off to a slower start than the company's other apps, like Meta AI or Threads.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/policy/993308/computer-science-ai-education-coding-kids": {
+    "title_cn": "学校正在关注大型科技公司的剧本",
+    "summary": "【The Verge】It's the hot new thing in tech, and it's where all the jobs are. Students who don't learn to use it fall behind. And to help them catch up in time, its creators are graciously providing the resources…",
+    "impact": "",
+    "uses": ""
   }
 }
