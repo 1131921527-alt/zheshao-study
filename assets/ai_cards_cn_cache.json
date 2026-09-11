@@ -262,5 +262,41 @@
     "summary": "【The Verge】It's the hot new thing in tech, and it's where all the jobs are. Students who don't learn to use it fall behind. And to help them catch up in time, its creators are graciously providing the resources…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/": {
+    "title_cn": "Y Combinator的Garry Tan希望美国开放式人工智能实验室也能“提炼”前沿模型",
+    "summary": "【TechCrunch】Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U.S. a more robust set of open-weight options that aren’t Chinese.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/11/openais-feud-with-mathematicians-is-only-escalating/": {
+    "title_cn": "OpenAI与数学家的不和只会升级",
+    "summary": "【OpenAI】Twenty-five leading mathematicians signed an open letter arguing that AI labs are threatening their intellectual work.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/chatgpt-sites-new-features-3710506/": {
+    "title_cn": "使用ChatGPT构建网站变得更快、更具协作性",
+    "summary": "【OpenAI】TL;DR ChatGPT Sites’ new Build Together feature lets multiple people edit, save, and publish the same Site. Sites can now stay private and be shared with specific people, and deployment is roughly twi…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal": {
+    "title_cn": "律师在一起谋杀案中因人工智能幻觉证人被罚款5000 $",
+    "summary": "【The Verge】New Mexico's Supreme Court is punishing a lawyer for including AI-fabricated witnesses and fake police testimony in an appeal for his client's murder conviction, according to a report from Reuters. In…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/09/chatgpt-using-lawyer-punished-for-citing-fake-testimony-from-made-up-witnesses/": {
+    "title_cn": "使用ChatGPT的律师因引用虚构证人的虚假证词而受到处罚",
+    "summary": "【OpenAI】The New Mexico Supreme Court held a ChatGPT-using lawyer in direct contempt of court for submitting a brief with \"false testimony from wholly fabricated witnesses,\" including fake police testimony and…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/": {
+    "title_cn": "人类学研究者的世界末日警告发生在一个非常有趣的时刻",
+    "summary": "【Anthropic】An Anthropic researcher resigned this week,&#160;warning in a post on X&#160;that the company is “racing straight to self-improving superintelligence and gambling with our lives”.&#160;The company&#82…",
+    "impact": "",
+    "uses": ""
   }
 }
