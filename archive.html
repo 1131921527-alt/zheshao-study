@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="description" content="泽少学习任务：每天自动更新的 AI 动态播报、AI 系统性学习、提示词技巧、雅思单词，免费公开，手机随时看。">
 <title>泽少学习任务</title>
 <link rel="stylesheet" href="assets/style.css">
@@ -75,8 +79,20 @@ body{padding-top:44px!important}
   window.lcCopyWx=function(){
     var id="Harryalwayslucky";
     if(!id) return;
-    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(function(){alert('微信号已复制：'+id);}); }
-    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');alert('微信号已复制：'+id);}catch(e){} document.body.removeChild(t); }
+    var ok=function(){
+      // 第21轮：用页面顶部 toast 替代 alert，避免打断操作 + PWA 下 alert 不弹
+      var bar=document.getElementById('liveClockBar');
+      if(bar){
+        var orig=bar.innerHTML;
+        bar.innerHTML='<span class="lc-tag" style="margin-left:auto;color:#3fb950">✓ 已复制微信号 '+id+'</span>';
+        setTimeout(function(){bar.innerHTML=orig;},1800);
+      } else if(navigator.clipboard){ navigator.clipboard.writeText(id); }
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(id).then(ok).catch(function(){
+      var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select();
+      try{document.execCommand('copy');ok();}catch(e){} document.body.removeChild(t);
+    }); }
+    else { var t=document.createElement('textarea'); t.value=id; document.body.appendChild(t); t.select(); try{document.execCommand('copy');ok();}catch(e){} document.body.removeChild(t); }
   };
 })();
 </script><style>

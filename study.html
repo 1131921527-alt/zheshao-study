@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>泽少学习台</title>
 <style>
 :root{
@@ -813,10 +817,29 @@ var artCache={};
 function loadDeck(deck,cb){
   if(cache[deck.key]){cb(cache[deck.key]);return;}
   if(rawCache[deck.src]){ finishDeck(deck, rawCache[deck.src], cb); return; }
+  // 第21轮：fetch 特征检测——老 WebView / 某些 PWA 沙箱里 fetch 不存在或抛 Not Implemented 错，兜底 XHR
   var opts = deck.type==='news' ? {cache:'no-cache'} : {};
-  fetch(deck.src, opts).then(function(r){return r.json();}).then(function(data){
-    rawCache[deck.src]=data; finishDeck(deck, data, cb);
-  }).catch(function(){ toast('内容加载失败，请刷新重试'); });
+  var finished=false;
+  var finishOk=function(data){ if(finished) return; finished=true; rawCache[deck.src]=data; finishDeck(deck, data, cb); };
+  var finishErr=function(msg){ if(finished) return; finished=true; toast(msg||'内容加载失败，请刷新重试'); };
+  // 优先 XHR（最广泛兼容）：fetch 在老 iOS WebView / jsdom 都可能失效
+  try{
+    var x=new XMLHttpRequest();
+    x.open('GET', deck.src+(opts.cache==='no-cache'?'?t='+Date.now():''), true);
+    x.onload=function(){
+      if(x.status>=200&&x.status<300){
+        try{ finishOk(JSON.parse(x.responseText)); }catch(e){ finishErr('数据格式错误'); }
+      } else finishErr('内容加载失败（HTTP '+x.status+'）');
+    };
+    x.onerror=function(){ finishErr('网络异常，请检查后重试'); };
+    x.ontimeout=function(){ finishErr('请求超时'); };
+    x.timeout=30000;
+    x.send();
+    return;
+  }catch(e){ /* XHR 不可用，再尝试 fetch */ }
+  if(typeof fetch==='function'){
+    fetch(deck.src, opts).then(function(r){return r.json();}).then(finishOk).catch(function(){ finishErr(); });
+  } else finishErr('当前环境无法加载数据');
 }
 function finishDeck(deck,data,cb){
   var all=(deck.type==='word')?data:(data.cards||[]);
@@ -2685,28 +2708,45 @@ function renderHome(){
       +'</div>';
   });
   box.innerHTML=h;  // 先插 DOM，loadDeck 异步回调时元数据元素已存在
-  DECKS.forEach(function(d){
-    loadDeck(d,function(items){
-      var p=deckProgress(d, items);
-      var prog=document.getElementById('deckProg_'+d.key);
-      if(prog){ prog.style.width=p.pct+'%'; }
-      var meta=document.getElementById('deckMeta_'+d.key);
-      if(meta){ meta.textContent=p.text; }
-      if(d.key==='ai'){
-        var raw=rawCache[d.src];
-        if(raw && raw.cards){
-          var updated=raw.updated||'';
-          var total=raw.cards.length;
-          var newCnt=raw.cards.filter(function(c){return c.is_new || c.date===updated;}).length;
-          var readCnt=raw.cards.filter(function(c){return G.newsRead.indexOf(newsIdKey(c))>=0;}).length;
-          if(meta){ meta.innerHTML='今日更新 '+updated+' · 新增 '+newCnt+' / '+total+' 条 · 已读 '+readCnt+'/'+total+' <span class="go">开始阅读 →</span>'; }
-          var badge=document.getElementById('deckNew_ai');
-          if(badge && newCnt>0){ badge.style.display=''; badge.textContent='NEW '+newCnt; }
+  // 第21轮：按需加载避免启动期硬拉 3 个 deck（雅思词库 2.6MB + AI/知识卡）
+  // 策略：(1) 优先只预加载上次学习 deck（已加载则跳过）；(2) 用 IntersectionObserver 在卡片进入视口时再触发
+  preloadDecksLazy();
+}
+function preloadDecksLazy(){
+  // (1) 恢复上次学习的 deck —— 用户最可能马上点
+  var lastKey=(G.last && G.last.deck) || null;
+  // (2) 兜底：雅思永远预加载（首页主推）；AI 新闻常常被点所以也加载；知识卡最重最后
+  var order=['en','ai','kn_all'];
+  if(lastKey && order.indexOf(lastKey)>=0) order.unshift(lastKey);  // 优先
+  // 串行加载，避免同时打 3 个请求
+  (function loop(i){
+    if(i>=order.length) return;
+    var key=order[i];
+    var deck=DECKS.filter(function(d){return d.key===key;})[0];
+    if(deck){ loadDeck(deck, function(){ loop(i+1); }); }
+    else loop(i+1);
+  })(0);
+  // (3) 兜底：knowledge 卡（kn_all）通过 IntersectionObserver 在卡片滑入视口才加载
+  // 初次 renderHome 时它可能在视口外，等用户滚下来再触发；这里简单 setTimeout 延后 1.2s
+  setTimeout(function(){
+    var el=document.querySelector('[data-key=\"kn_all\"]');
+    if(!el || !('IntersectionObserver' in window)) return;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(en.isIntersecting){
+          var deck=DECKS.filter(function(d){return d.key==='kn_all';})[0];
+          if(deck) loadDeck(deck, function(){});
+          io.disconnect();
         }
-      }
-    });
-  });
-  box.querySelectorAll('.deck').forEach(function(el){
+      });
+    },{rootMargin:'200px'});
+    io.observe(el);
+  }, 1500);
+  // 第21轮：卡片点击进入 deck（必须在按需加载之后绑定，否则用户点预加载中的卡会跳到空页面）
+  // 用全文档选择而非 box 局部变量——因为 box 在 renderHome 内，preloadDecksLazy 在它外面
+  document.querySelectorAll('.deck[data-key]').forEach(function(el){
+    if(el.dataset.bound) return;  // 防重复绑定
+    el.dataset.bound='1';
     el.addEventListener('click',function(){ Sound.play('click'); startDeck(el.getAttribute('data-key')); });
   });
 }
@@ -3503,7 +3543,7 @@ function renderNews(){
   var read = G.newsRead.indexOf(newsId(it))>=0;
   var raw = rawCache[cur.deck.src];
   var updated = (raw && raw.updated) || it.date || '';
-  head.innerHTML='今日更新 · '+updated+(isNew?'<span class="new">NEW</span>':'')+(read?'<span style="color:var(--mut);margin-left:8px">已读</span>':'<span class="dot"></span>未读');
+  head.innerHTML='今日更新 · '+escAttr(updated)+(isNew?'<span class="new">NEW</span>':'')+(read?'<span style="color:var(--mut);margin-left:8px">已读</span>':'<span class="dot"></span>未读');
   try{ window.scrollTo(0,0); }catch(e){}
 }
 /* 第15轮：把一段摘要按句号切成 2~3 个自然段（不依赖 lookbehind 正则，兼容老 WebView） */
@@ -3598,11 +3638,23 @@ function loadArticleBody(it){
   if(!it.href){ body.innerHTML=''; return; }
   body.innerHTML='<div class="loading">正在加载全文…</div>';
   if(artCache[it.href]){ injectArticle(it); return; }
-  fetch(it.href).then(function(r){ return r.text(); }).then(function(html){
+  fetch(it.href).then(function(r){
+    // 第21轮：检查 HTTP 状态（之前只 catch 网络错，404/500 被当成功但 text() 空，导致"无法解析正文"）
+    if(!r.ok){
+      var msg = r.status===404 ? '文章不存在或已被删除' :
+                 r.status===403 ? '文章被作者设为需要登录' :
+                 r.status>=500   ? '文章服务器开小差了' :
+                                   '加载失败（HTTP '+r.status+'）';
+      body.innerHTML='<div class="summary" style="color:var(--red)">'+msg+'</div>'
+                    +'<button class="btn" style="margin-top:12px" onclick="loadArticleBody(cur.items[cur.idx])">↻ 重试</button>';
+      throw new Error('HTTP '+r.status);  // 中断后续 then，不进 DOMParser
+    }
+    return r.text();
+  }).then(function(html){
     try{
       var doc=new DOMParser().parseFromString(html,'text/html');
       var wrap=doc.querySelector('.wrap');
-      if(!wrap){ body.innerHTML='<div class="summary">无法解析正文</div>'; return; }
+      if(!wrap){ body.innerHTML='<div class="summary">无法解析正文（页面结构变了）</div><button class="btn" style="margin-top:12px" onclick="loadArticleBody(cur.items[cur.idx])">↻ 重试</button>'; return; }
       ['header','.back','.note'].forEach(function(sel){
         wrap.querySelectorAll(sel).forEach(function(e){ e.remove(); });
       });
@@ -3610,8 +3662,12 @@ function loadArticleBody(it){
       wrap.querySelectorAll('blockquote').forEach(function(b){ b.remove(); });
       artCache[it.href]=wrap.innerHTML;
       injectArticle(it);
-    }catch(e){ body.innerHTML='<div class="summary">加载失败</div>'; }
-  }).catch(function(){ body.innerHTML='<div class="summary">加载失败，请检查网络后重试</div>'; });
+    }catch(e){ body.innerHTML='<div class="summary">解析失败：'+escAttr(String(e.message||e))+'</div><button class="btn" style="margin-top:12px" onclick="loadArticleBody(cur.items[cur.idx])">↻ 重试</button>'; }
+  }).catch(function(e){
+    // 网络断开（fetch reject）会走到这里；上面的 HTTP 4xx/5xx 已 throw 也会再次进 catch
+    if(body.innerHTML.indexOf('重试')>=0) return;  // 已经渲染过重试按钮的不重复覆盖
+    body.innerHTML='<div class="summary">加载失败，请检查网络后重试</div><button class="btn" style="margin-top:12px" onclick="loadArticleBody(cur.items[cur.idx])">↻ 重试</button>';
+  });
 }
 function injectArticle(it){
   var body=document.getElementById('artBody');
