@@ -358,5 +358,47 @@
     "summary": "【The Verge】Dario Amodei kicked off a flood of statements over the past few days about AI safety by publishing a long essay titled \"We Must Pace the Frontier\" detailing why AI development should be slowed down. O…",
     "impact": "",
     "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/": {
+    "title_cn": "Jensen Huang在Dreamforce上说： “现在我们什么都能知道，什么都能做。”",
+    "summary": "【NVIDIA】Know everything. Do anything. That was the message NVIDIA founder and CEO Jensen Huang brought to Salesforce Dreamforce Tuesday, joining CEO Marc Benioff onstage in an appearance that coincided with t…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/15/the-ai-data-center-boom-is-colliding-with-cities-scarred-by-big-industry/": {
+    "title_cn": "人工智能数据中心的繁荣正在与被大型产业蹂躏的城市相撞",
+    "summary": "【TechCrunch】National outcry against data center construction has spread to Philadelphia, where officials suggested possible construction in a neighborhood already impacted by a now-defunct oil refinery.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/": {
+    "title_cn": "Meta现在允许人工智能代理处理WhatsApp Business设置的无聊部分",
+    "summary": "【Meta】A new WhatsApp Business MCP server lets developers use AI coding agents like Claude, Cursor, Codex, and ChatGPT to handle setup, messaging templates, testing, and troubleshooting.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035/": {
+    "title_cn": "到2035年，美国数据中心的天然气消耗量可能超过德国和日本的总和",
+    "summary": "【TechCrunch】The AI frenzy could push U.S. data centers to become one of the largest consumers of natural gas in the world.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/": {
+    "title_cn": "人工智能代理现在有了告密的地方",
+    "summary": "【TechCrunch】The AI Contact Hotline is designed to be a discreet place where agents that have witnessed misbehavior can tip off authorities.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/": {
+    "title_cn": "从兆瓦到代币： NVIDIA如何最大化人工智能工厂生产",
+    "summary": "【NVIDIA】On a sweltering August evening in Silicon Valley, as the sun dropped and air conditioning loads spiked , Silicon Valley Power sent a signal to an AI factory to adjust its power consumption. Varun Siva…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/ai-infra-summit-vera-rubin-dsx-energy-efficiencies-tokens-per-watt-ai-factories/": {
+    "title_cn": "AI Infra峰会： NVIDIA Vera Rubin和DSX平台的进步展示了优化AI工厂每瓦令牌的能源效率",
+    "summary": "【NVIDIA】Ian Buck, vice president of hyperscale and high-performance computing at NVIDIA, Tuesday spoke on AI factory efficiency at the AI Infra Summit , the Santa Clara Convention Center event that has morphe…",
+    "impact": "",
+    "uses": ""
   }
 }
