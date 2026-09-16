@@ -400,5 +400,59 @@
     "summary": "【NVIDIA】Ian Buck, vice president of hyperscale and high-performance computing at NVIDIA, Tuesday spoke on AI factory efficiency at the AI Infra Summit , the Santa Clara Convention Center event that has morphe…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/": {
+    "title_cn": "Anthropic和OpenAI希望嵌入安全评估人员。他们真的会独立吗？",
+    "summary": "【OpenAI】Anthropic and OpenAI want to embed independent safety evaluators inside their AI labs. Researchers welcome the unprecedented access, but warn meaningful oversight requires transparency, independence,…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/entertainment/996499/ai-odyssey-movie-review": {
+    "title_cn": "这部2.5小时的人工智能电影《奥德赛》太长了2.5小时",
+    "summary": "【The Verge】Christopher Nolan's engrossing take on The Odyssey dominated at the box office and spurred a newfound interest in classic literature among filmgoers. But a new retelling of the story made entirely wit…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-home-widget-battery-efficiency-3712132/": {
+    "title_cn": "您的Google Home小工具现在将缩短电池续航时间",
+    "summary": "【Google】Credit: Rita El Khoury / Android Authority TL;DR Google Home app widgets will now pause background updates and polling when your phone’s screen is off. Several Home app, voice assistant, and camera fi…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date": {
+    "title_cn": "谷歌现在将让任何人工智能代理运行您的智能家居",
+    "summary": "【Google】Google is opening up its smart home to AI agents, letting tools like Claude and Open Claw access and control your connected devices and analyze your home's data using the standardized Model Context Pr…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/996321/apple-servers-ai-nvidia": {
+    "title_cn": "苹果可能会再次制造服务器，以兑现人工智能热潮",
+    "summary": "【Apple】According to The Information, Apple is planning to get back into the server game and might just pair up with Nvidia to make it happen. Apple retired its Xserve line in 2011 and has largely left enterp…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/spotify-follow-block-bug-3712072/": {
+    "title_cn": "Spotify漏洞正在阻止用户关注并阻止彼此",
+    "summary": "【Android Authority】Credit: Rita El Khoury / Android Authority TL;DR Spotify users are reporting that they are unable to follow/unfollow other accounts. Users are also getting an error message when trying to block/unbloc…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://developer.apple.com/news/?id=likeohx4": {
+    "title_cn": "为iOS 27做好订阅准备",
+    "summary": "【Apple】Discover how you can expand the reach of your subscriptions with new features in iOS 27. You can start preparing today by making sure your apps use StoreKit 2 to handle your Apple In-App Purchases. Re…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/": {
+    "title_cn": "Anthropic将Claude聊天和Cowork合并在一个界面中",
+    "summary": "【Anthropic】Anthropic is initially releasing these features to Pro and Max plan subscribers.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": {
+    "title_cn": "帮助老年人在日常生活中使用人工智能",
+    "summary": "【OpenAI】OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+    "impact": "",
+    "uses": ""
   }
 }
