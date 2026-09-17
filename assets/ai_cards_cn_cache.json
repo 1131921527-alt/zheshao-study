@@ -454,5 +454,53 @@
     "summary": "【OpenAI】OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai/": {
+    "title_cn": "PrismML 希望其小型法学硕士能够改变我们使用人工智能的方式",
+    "summary": "【TechCrunch】If AI lab PrismML isn't on your radar yet, it should be.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/09/nato-backed-startup-adapts-ai-for-autonomous-drone-recon-and-attack-missions/": {
+    "title_cn": "小型人工智能模型让无人机自主识别和攻击战场目标",
+    "summary": "【Ars Technica】As European militaries adapt to the use of AI and drones in modern warfare, a NATO-backed startup is helping to deploy AI-driven target detection and selection that can run on small drones for surveil…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/996923/ai-safety-slow-openai-anthropic": {
+    "title_cn": "AI超级智能放缓",
+    "summary": "【The Verge】Remember when tech leaders would tell their employees to “move fast and break things”? It seemed that would be the way of AI too. But after a summer where rogue AI agents became reality, and researche…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-ai-cc-family-household-assistant-3712623/": {
+    "title_cn": "这个谷歌人工智能实验想要成为你家人的无薪实习生",
+    "summary": "【Google】TL;DR Google is expanding CC from a personal daily briefing tool into an AI assistant for families and households. Up to six people can share information with CC, which can manage shared calendars, ta…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai/": {
+    "title_cn": "解决流氓人工智能代理可能需要更多的人工智能",
+    "summary": "【TechCrunch】As companies hand off longer and more complex tasks to AI agents, they are running into an oversight problem: Agents can act faster, longer, and at greater volume than humans can realistically review.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/17/is-the-ai-safety-debate-about-safety-or-control/": {
+    "title_cn": "人工智能安全争论是关于安全还是控制？",
+    "summary": "【TechCrunch】Not everyone agrees with Amodei's call for globally coordinated action for AI safety.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents/": {
+    "title_cn": "联合国求助于谷歌，为人工智能代理提供全球数据",
+    "summary": "【Google】The shift comes after a UNICEF test found leading AI models struggled to accurately retrieve global development statistics.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/": {
+    "title_cn": "使用人工智能水印时，法学硕士对有害提示的反应不同",
+    "summary": "【Ars Technica】In response to a new European Union law, AI platforms are implementing new schemes for watermarking the content they generate. Anthropic recently disclosed its future Claude models will use SynthID-Te…",
+    "impact": "",
+    "uses": ""
   }
 }
