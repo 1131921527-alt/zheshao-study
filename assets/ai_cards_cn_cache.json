@@ -502,5 +502,41 @@
     "summary": "【Ars Technica】In response to a new European Union law, AI platforms are implementing new schemes for watermarking the content they generate. Anthropic recently disclosed its future Claude models will use SynthID-Te…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/": {
+    "title_cn": "Anthropic正在运营一个进行生物学实验的实验室",
+    "summary": "【Anthropic】AI leaders have been promising that AI is the key to curing human disease. Anthropic researchers have also been warning that AI might kill us all.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/": {
+    "title_cn": "人工智能幻觉几乎触发美国军事行动",
+    "summary": "【TechCrunch】“It’s important for service members to understand the uncertainty inherent to LLMs,\" a GovAI research scholar warns.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report/": {
+    "title_cn": "人工智能对中国核部件的幻觉几乎导致了美国的军事攻击",
+    "summary": "【Ars Technica】The US narrowly avoided boarding a Chinese ship based on an \"entirely false\" US intelligence report generated with the help of AI tools, according to a CNN report . That erroneous intelligence, submit…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/": {
+    "title_cn": "来自ChatGPT发明者的一种新型人工智能模型让开发人员兴奋不已",
+    "summary": "【OpenAI】Jev, a new kind of AI model, is showing developers a cheaper and faster path to software intelligence.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/": {
+    "title_cn": "谷歌的新“CC”是一种人工智能代理，可帮助家庭经营家庭",
+    "summary": "【Google】Google is refocusing its CC AI agent on household coordination, letting families share emails, schedules, and tasks so the AI can manage calendars, fill out forms, make shopping lists, plan meals, and…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/": {
+    "title_cn": "您是否应该阅读代码， RAG是否已死， Skills是否杀死了MCP ？",
+    "summary": "【GitHub】Hot takes turn complicated topics into one confident sentence. That makes them great for engagement, but not necessarily for understanding. At the surface level, they do not matter much. You agree, di…",
+    "impact": "",
+    "uses": ""
   }
 }
