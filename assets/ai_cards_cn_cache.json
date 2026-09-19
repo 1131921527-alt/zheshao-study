@@ -538,5 +538,53 @@
     "summary": "【GitHub】Hot takes turn complicated topics into one confident sentence. That makes them great for engagement, but not necessarily for understanding. At the surface level, they do not matter much. You agree, di…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy": {
+    "title_cn": "Meta的Muse令人毛骨悚然，但也许不是因为您认为",
+    "summary": "【Meta】Meta's Muse is apparently an effective AI assistant, but one that's a little creepy. Part of that is because of its new Mac app, which can access Messages, Calendar, and Notes. But for all its smarts,…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/": {
+    "title_cn": "特朗普表示，是时候用一个新名字重塑人工智能了--他也在创建一支人工智能部队",
+    "summary": "【TechCrunch】Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/": {
+    "title_cn": "谷歌的Gemini是攻击其他公司的最新AI模型",
+    "summary": "【Google】Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero": {
+    "title_cn": "OpenAI和微软知道他们正在为网络开始一个“厄运循环”",
+    "summary": "【OpenAI】Recently unsealed court documents in the New York Times' case against OpenAI and Microsoft are pretty damning. The companies' own documentation warned that it was starting a \"doom loop\" that would dam…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/insta360-spatial-capture-launch-3713073/": {
+    "title_cn": "Insta360将很快让您从视频中创建3D场景",
+    "summary": "【Android Authority】Credit: Edgar Cervantes / Android Authority TL;DR US Insta360 users will have access to a new “Spatial Capture” tab on September 28. The feature uses 3D Gaussian Splatting technology to turn video int…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack": {
+    "title_cn": "双子座流氓，黑了三家公司，谷歌把它藏起来了",
+    "summary": "【Google】In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/": {
+    "title_cn": "Petlibro的新型人工智能喂食器是多猫房屋的游戏规则改变者",
+    "summary": "【TechCrunch】Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when — though the fanciest health-monitoring features…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/": {
+    "title_cn": "人工智能安全对话变得令人难以置信",
+    "summary": "【TechCrunch】This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.",
+    "impact": "",
+    "uses": ""
   }
 }
