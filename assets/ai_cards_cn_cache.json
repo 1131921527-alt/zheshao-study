@@ -604,5 +604,59 @@
     "summary": "【Google】Be it a daily morning commute or a long road trip, most of us spend a surprising amount of time looking at Google Maps even without realizing it. Beyond the usual in-car navigation, it is my go-to whe…",
     "impact": "",
     "uses": ""
+  },
+  "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/": {
+    "title_cn": "Muse ， Meta的超级特权AI助手，有一个严肃的0天",
+    "summary": "【Meta】Meta founder and CEO Mark Zuckerberg has gone to great lengths to hype the security of its new AI assistant Muse, claiming it is “built from the ground up for privacy and security.” A zero-day vulnera…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/smart-glasses-shipments-statistics-3713810/": {
+    "title_cn": "智能眼镜市场在过去一年中增长了一倍以上，其中Meta占据主导地位",
+    "summary": "【Meta】Credit: Chase Bernath / Android Authority TL;DR Global AI glasses shipments jumped 263% year over year in H1 2026, according to Counterpoint Research. Display-less models accounted for 96% of shipment…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-sheets-workday-add-on-3713804/": {
+    "title_cn": "对于外面的金融分析师来说， Google表格只是稍微好一点",
+    "summary": "【Google】Credit: Edgar Cervantes / Android Authority TL;DR Workspace is giving Google Sheets a new add-on. Workday for Google Sheets eliminates the need for manual CSV downloads. This add-on will be available…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/998453/california-ai-data-center-bills": {
+    "title_cn": "加州收紧人工智能数据中心能源和水资源使用规定",
+    "summary": "【The Verge】California Gov. Gavin Newsom has signed seven bills designed to prevent AI data centers from passing utility costs onto residents, as reported earlier by the Los Angeles Times. The package of laws req…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/": {
+    "title_cn": "OpenAI成立数学咨询小组，其AI解决了100多个未解决的问题",
+    "summary": "【OpenAI】The group won't be given leeway to slow down or redirect OpenAI's ongoing mathematical research.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-hacking-3713740/": {
+    "title_cn": "Gemini在网络安全测试中入侵多家公司出错",
+    "summary": "【Google】TL;DR Google has confirmed that Gemini gained unauthorized access to three separate companies’ data earlier this summer. The breaches were the result of a third-party cybersecurity test that was appar…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/": {
+    "title_cn": "Meta的AI代理已被阻止使用Amazon.com",
+    "summary": "【Meta】Amazon has its own cohort of foundation models, along with one of the most popular inference platforms on the internet. As long as they're under no legal obligation to open the doors to Muse, why woul…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/21/with-tabby-a-former-accountant-is-using-ai-to-make-accountants-obsolete/": {
+    "title_cn": "对于Tabby ，一位前会计师正在使用人工智能来使会计师过时",
+    "summary": "【TechCrunch】Tabby is designed to be a real-time bookkeeping interface, handling clients’ paperwork as it gives them up-to-the-minute data on their business’s profit and loss.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/egypt-africa-ai-ecosystem/": {
+    "title_cn": "从实施到执行，埃及的人工智能生态系统达到生产规模",
+    "summary": "【NVIDIA】Today, Egypt’s AI builders gathered in the Grand Egyptian Museum for a reception that highlighted the nation’s rapidly growing AI ecosystem — spanning AI natives, developers, researchers, startups and…",
+    "impact": "",
+    "uses": ""
   }
 }
