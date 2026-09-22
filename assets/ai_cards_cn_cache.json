@@ -658,5 +658,41 @@
     "summary": "【NVIDIA】Today, Egypt’s AI builders gathered in the Grand Egyptian Museum for a reception that highlighted the nation’s rapidly growing AI ecosystem — spanning AI natives, developers, researchers, startups and…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/claude-opus-5-5-faster-coding-lower-costs-3714261/": {
+    "title_cn": "Anthropic的新款Claude Opus 5.5以更少的钱包装更多的大脑",
+    "summary": "【Anthropic】TL;DR Anthropic’s new Claude Opus 5.5 promises improved performance, accuracy, communication, and stronger safety safeguards. The model generates responses over 30% faster and costs roughly 40% less t…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3": {
+    "title_cn": "Rabbit的新AI agent不需要R1就可以运行",
+    "summary": "【The Verge】Rabbit, the company behind the underwhelming R1 device, is rolling out a standalone AI agent that you don't need its hardware to use, as reported earlier by Wired. The startup says its new OS3 \"agenti…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/": {
+    "title_cn": "微软颠覆了人工智能辅助平台，该平台入侵了12,000个账户",
+    "summary": "【Microsoft】Microsoft said Tuesday that it led an industry-wide disruption of a subscription-based scam platform that used an AI chatbot to compromise 12,000 Microsoft accounts over a few-month span. Named EvilTo…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/22/meta-admits-muses-likeness-to-openclaw-isnt-a-coincidence/": {
+    "title_cn": "Meta承认Muse与OpenClaw的肖像并非巧合",
+    "summary": "【Meta】Meta says Muse was built from scratch, but acknowledges the AI assistant was \"heavily inspired\" by OpenClaw — down to some of its workspace filenames and content.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/smartwatch-calorie-tracking-inaccuracy-body-fat-3714192/": {
+    "title_cn": "您的智能手表可能给您的锻炼带来了超出应有的荣誉",
+    "summary": "【Android Authority】TL;DR A new study finds that popular smartwatches from Apple, Samsung, Garmin, and Fitbit substantially miscalculate calories burned during exercise. The higher your body fat percentage, the less accu…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence": {
+    "title_cn": "特朗普表示，美国正式将人工智能重新命名为“超级智能”",
+    "summary": "【The Verge】In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renam…",
+    "impact": "",
+    "uses": ""
   }
 }
