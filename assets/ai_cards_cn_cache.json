@@ -694,5 +694,65 @@
     "summary": "【The Verge】In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renam…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/": {
+    "title_cn": "Anthropic 表示其生物实验室已经发现了重大发现",
+    "summary": "【Anthropic】But maybe the biggest reveal is that Anthropic has not let Claude run loose in its biology lab. Humans are still, so far, in the loop.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/iphone-duo-android-foldable-app-support-3714733/": {
+    "title_cn": "苹果的 iPhone Duo 可以帮助解决 Android 最大的可折叠问题之一",
+    "summary": "【Apple】TL;DR Google’s Android boss says growing interest in foldables could give developers more reason to optimize their apps for larger screens. Some Android apps still haven’t properly adapted to foldable…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/09/china-silent-as-us-touts-plan-for-ai-safety-alerts-that-omits-tech-experts/": {
+    "title_cn": "专家称，特朗普的中国竞争和“人工智能竞赛”错觉可能危及美国",
+    "summary": "【Ars Technica】This week, the US and China, the two world leaders on AI, finally started talks meant to keep the whole world safe from emerging safety risks. But whether meetings between Donald Trump and Xi Jinping…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-vids-omni-flash-lite-3714767/": {
+    "title_cn": "谷歌的 Omni 视频生成器现在可以在 Vids 中免费试用",
+    "summary": "【Google】Credit: Joe Maring / Android Authority TL;DR Google Vids is expanding access to anyone with a personal or Workspace account. Users will be able to generate 1080p videos with Gemini Omni 1.1 Flash at n…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/gadgets/2026/09/youtube-promises-custom-feeds-and-a-lot-more-ai-later-this-year/": {
+    "title_cn": "YouTube 承诺今年晚些时候将提供定制提要和更多人工智能",
+    "summary": "【Ars Technica】The annual Made on YouTube event has just wrapped up, offering an early look at the features you can expect to come to Google's dominant online streaming platform in the coming months. Yes, there's pl…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/new-gemini-connected-apps-3714714/": {
+    "title_cn": "Gemini 刚刚进行了重大升级，推出了适用于工作、创造力和生活的全新互联应用程序",
+    "summary": "【Google】Credit: Shimul Sood / Android Authority TL;DR Gemini is getting several new connected apps. Some of these new connected apps include Airtable, Adobe, Peloton, and SeatGeek. These tools are rolling out…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/999526/meta-muse-ai-agent-hands-on-shopping": {
+    "title_cn": "Meta 的 AI 代理是个可爱的小家伙，很会花我的钱",
+    "summary": "【Meta】Modern life comes with an unending, auto-populating to-do list. It never ceases to amaze me how I can be doing nothing at all, minding my own business, and suddenly something needs to be taken care of…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/youtube-custom-feeds-announced-3714699/": {
+    "title_cn": "YouTube 终于让你可以更好地控制主页上显示的内容",
+    "summary": "【Android Authority】TL;DR YouTube is turning its earlier Custom Feed experiment into a full feature that lets you build recommendation feeds with conversational prompts. You can save multiple feeds for different interest…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/": {
+    "title_cn": "在 GitHub Copilot 应用程序中呈现巨大的拉取请求",
+    "summary": "【GitHub】Broad refactors and migrations often have to land as one change. Stacked pull requests are a great way to split work into smaller changes, which makes reviews easier and helps teams ship with less ris…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/policy/999412/data-center-water-electricity-disclosure-bills": {
+    "title_cn": "数据中心是黑匣子，但加州希望改变这一现状",
+    "summary": "【The Verge】California Gov. Gavin Newsom signed a slate of bills on Monday that could finally give communities better data - and more say - on how data centers impact their electricity bills and water supply. As…",
+    "impact": "",
+    "uses": ""
   }
 }
