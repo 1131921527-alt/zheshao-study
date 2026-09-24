@@ -754,5 +754,53 @@
     "summary": "【The Verge】California Gov. Gavin Newsom signed a slate of bills on Monday that could finally give communities better data - and more say - on how data centers impact their electricity bills and water supply. As…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem": {
+    "title_cn": "Muse显然会让您下载其整个文件系统",
+    "summary": "【The Verge】A pair of developers say that with very little prompting, Meta's Muse will share its entire filesystem with you. Peter James and Jonny L. Saunders have said they both independently coaxed Muse into zi…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/policy/1000005/flock-senate-hearing": {
+    "title_cn": "这种氛围对华盛顿的Flock来说很糟糕",
+    "summary": "【The Verge】Flock is in the hot seat in Washington, even if its CEO declined to actually face senators at a hearing about its \"AI Surveillance Network\" on Wednesday. \"There's many players in this industry, but th…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-live-avatar-3715280/": {
+    "title_cn": "谷歌的新双子座真人头像希望让支持机器人感觉更人性化",
+    "summary": "【Google】Credit: Google TL;DR Google is rolling out Live Avatar, a visual persona that combines real-time video generation with speech models. Live Avatar can trigger tool calls and fetch data in the backgroun…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/": {
+    "title_cn": "当聊天是错误的用户界面时",
+    "summary": "【GitHub】We re 176 years into this AI experiment. Wait it s only been three years? Are you sure? Sometimes I remember things that happened last year, but it feels like it was so long ago. Did that really happe…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/": {
+    "title_cn": "PrismML将其微小的LLM带入高通驱动的智能眼镜",
+    "summary": "【TechCrunch】Prism's larger goal is open-weight AI that runs on devices and makes better use of the computing power they already have.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/24/metas-muse-charm-looks-like-a-tamagotchi-but-its-tapping-into-a-much-newer-trend/": {
+    "title_cn": "Meta的Muse Charm看起来像Tamagotchi ，但它正在进入一个更新的趋势",
+    "summary": "【Meta】Meta’s new AI gadget may look like a Tamagotchi, but its dangling form factor taps into a much broader Gen Z trend around bag charms, retro tech, and turning gadgets into fashion accessories.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-chrome-gemini-quizzes-cross-device-tab-sharing-3714859/": {
+    "title_cn": "Chrome浏览器的跨设备切换功能变得更加智能",
+    "summary": "【Google】TL;DR Gemini in Chrome can now analyze podcasts and videos beyond YouTube to surface key takeaways and answer questions. Chrome can generate interactive quizzes from your notes, webpages, and YouTube…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-odyssey-g3-gaming-monitor-deal-3715196/": {
+    "title_cn": "三星奥德赛G3游戏显示器刚刚跌至155 $ ，建议零售价下跌33 ％",
+    "summary": "【Android Authority】Amazon just knocked 33% off the Samsung Odyssey G3 gaming monitor, dropping it from its $229.99 recommended retail price to $154.99. That saves you $75, which is a strong deal for a fast 27-inch displ…",
+    "impact": "",
+    "uses": ""
   }
 }
