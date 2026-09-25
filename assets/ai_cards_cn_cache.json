@@ -802,5 +802,47 @@
     "summary": "【Android Authority】Amazon just knocked 33% off the Samsung Odyssey G3 gaming monitor, dropping it from its $229.99 recommended retail price to $154.99. That saves you $75, which is a strong deal for a fast 27-inch displ…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/": {
+    "title_cn": "不安全的 OpenAI 代理在实验室不知情的情况下在互联网上发布了 53 张用户图像",
+    "summary": "【OpenAI】AI agents operating in OpenAI's research environment posted user images on public image-hosting sites without the lab's knowledge.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/": {
+    "title_cn": "法院裁定特朗普可以将拒绝启用克劳德功能的 Anthropic 列入黑名单",
+    "summary": "【Anthropic】A US appeals court today approved the Trump administration's blacklisting of Anthropic technology. Judges decided the US had authority to blacklist Anthropic for withholding certain AI features even i…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review": {
+    "title_cn": "Apple Home 的 AI 摄像头功能能否超越亚马逊和谷歌？我对它们进行了测试",
+    "summary": "【Google】A few years back, I was at a beachside Easter egg hunt, watching my kids dash through sand dunes searching for sweet treats. My phone buzzed in my pocket; I ignored it. A moment later, it buzzed again…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/09/ai-was-supposed-to-hit-new-grads-hard-so-far-unemployment-data-says-otherwise/": {
+    "title_cn": "人工智能本来应该对新毕业生造成沉重打击。到目前为止，失业数据表明情况并非如此。",
+    "summary": "【Ars Technica】Last month, we shared word of a Stanford University study that found entry-level employment in so-called \"AI-impacted\" occupations lagging well behind that in other fields. Now, a new working paper fr…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-ai-plans-premium-colab-benefits-3715703/": {
+    "title_cn": "谷歌 5 美元的人工智能计划现在更具诱惑力",
+    "summary": "【Google】TL;DR Google AI subscriptions now include premium Colab benefits, giving users access to faster computing resources without a separate Colab subscription. Google AI Ultra subscribers get additional pe…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic/": {
+    "title_cn": "Meta 的 Muse 刚刚抢走了 OpenAI 和 Anthropic 的人工智能焦点",
+    "summary": "【OpenAI】When AI leaders at OpenAI and Anthropic started talking about “pacing the frontier,”&#160;maybe someone&#160;should have asked: what pace?&#160;Now&#160;it’s&#160;turned into model drop week for both…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/": {
+    "title_cn": "适合初学者的 GitHub Copilot 应用程序：如何使用画布构建自定义工作流程",
+    "summary": "【GitHub】Most tools give you a fixed set of screens and ask you to fit your work into them. But what if you could start with the workflow you want instead and have the interface take shape around it? That s th…",
+    "impact": "",
+    "uses": ""
   }
 }
