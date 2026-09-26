@@ -844,5 +844,41 @@
     "summary": "【GitHub】Most tools give you a fixed set of screens and ask you to fit your work into them. But what if you could start with the workflow you want instead and have the interface take shape around it? That s th…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/": {
+    "title_cn": "保险公司声称人工智能已经增加了医疗成本",
+    "summary": "【TechCrunch】Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause": {
+    "title_cn": "OpenAI 暂停对其“最有能力的模型”的训练",
+    "summary": "【OpenAI】As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models. The de…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/": {
+    "title_cn": "我为自己创建了一个交互式数字化身——你可以和它交谈",
+    "summary": "【TechCrunch】After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/motorola-signature-27-advantage-over-other-samsung-rivals-3714695/": {
+    "title_cn": "摩托罗拉Signature 27与其他三星竞争对手相比有一个巨大的优势",
+    "summary": "【Android Authority】I couldn’t contain my excitement when I heard that Motorola plans to bring its Signature 27 phone to the US. For the last few years, Motorola has teased a return with a traditional slab flagship, but…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/snapdragon-8-elite-gen-6-downgrades-vs-gen-5-3715153/": {
+    "title_cn": "Snapdragon 8 Elite Gen 6的3种方式实际上比去年的芯片更糟糕",
+    "summary": "【Android Authority】Qualcomm is talking a big AI game with two flagship chipsets this year, the Snapdragon 8 Elite Gen 6 and Snapdragon 8 Elite Extreme Gen 6 . But a closer look at the differences between these two chips…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.qbitai.com/2026/09/498271.html": {
+    "title_cn": "AI开始研究物理AI ： FSD级团队亮出首版模型 Simate-beta ，空降 RoboDojo",
+    "summary": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。",
+    "impact": "",
+    "uses": ""
   }
 }
