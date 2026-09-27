@@ -880,5 +880,29 @@
     "summary": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website": {
+    "title_cn": "OpenAI 特工试图“暴力破解”联合国网站",
+    "summary": "【OpenAI】Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and June. While the inciden…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/": {
+    "title_cn": "Anthropic 的 Dario Amodei 接受 SNL 待遇",
+    "summary": "【Anthropic】\"AI is the devil and I its maker.\"",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/underrated-google-lens-features-2026-3714541/": {
+    "title_cn": "除了基本搜索之外，使用 Google Lens 的 7 种令人惊讶的有用方法",
+    "summary": "【Google】Google Lens is a powerful tool that makes it incredibly easy to understand the world around you. Just point your phone’s camera at a subject, and it gives you the relevant information. And because Goo…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/": {
+    "title_cn": "谷歌在印度测试通过 Gemini 和 AI Mode 从沃尔玛旗下的 Flipkart 购买产品",
+    "summary": "【Google】The limited test covers select products and users, with a broader rollout planned for later in October.",
+    "impact": "",
+    "uses": ""
   }
 }
