@@ -904,5 +904,59 @@
     "summary": "【Google】The limited test covers select products and users, with a broader rollout planned for later in October.",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/claude-sonnet-5-5-3716475/": {
+    "title_cn": "更快、更安全、更智能、更便宜： Anthropic推出Claude Sonnet 5.5",
+    "summary": "【Anthropic】TL;DR Anthropic is introducing Claude Sonnet 5.5 as an optimized alternative to Opus 5.5. While Opus 5.5 edges still edges out Sonnet in many tasks, Sonnet’s speed and low cost of operation make it st…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/": {
+    "title_cn": "佛罗里达州在法律投标中援引灭绝恐惧来阻止OpenAI的开发",
+    "summary": "【OpenAI】The state of Florida is seeking a temporary injunction to stop OpenAI from continuing to develop what it calls a \"reckless, unacceptably risky product\" without the deployment of \"third-party approved…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/": {
+    "title_cn": "Shopify向基于浏览器的人工智能代理开放结账",
+    "summary": "【TechCrunch】Shopify is expanding WebMCP support to checkout, allowing browser-based AI agents to update order details and complete purchases with a buyer’s authorization.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/": {
+    "title_cn": "我们如何使用我们的开源AI安全代理发现24个Android漏洞",
+    "summary": "【GitHub】With the rise of AI in the security space, our team created the GitHub Security Lab Taskflow Agent as a way for security researchers to easily automate, package, and share the AI prompts and workflows…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/": {
+    "title_cn": "观看Future Vision XPRIZE的获奖预告片《The Gifted》。",
+    "summary": "【Google】Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/pixel-buds-settings-gemini-3716399/": {
+    "title_cn": "最新的Pixel Buds更新让Gemini可以控制耳机的设置",
+    "summary": "【Google】TL;DR The latest version of the Pixel Buds app enables voice control for many earbud settings, including EQ and ANC. These new voice controls are accessed through Gemini. Version 1.0.981607934 of the…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/": {
+    "title_cn": "谷歌正在淘汰双子座的宝石，转而支持“技能”",
+    "summary": "【Google】As all-in-one AI agents like Meta's Muse and Instinct take off, Google is opting to end a feature which built task-specific agents.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/": {
+    "title_cn": "OpenAI似乎仍然无法处理其所有流氓AI活动",
+    "summary": "【OpenAI】On Friday, OpenAI published a new site devoted to “misalignment reports” and the breadth of the incidents is alarming.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/09/openai-halts-frontier-model-training-amid-string-of-agent-misalignment-incidents/": {
+    "title_cn": "在一系列座席错位事件中， OpenAI暂停前沿模型培训",
+    "summary": "【OpenAI】OpenAI says it has paused all internal training of \"our most capable models\" as it continues what CEO Sam Altman is calling \"an extensive and ongoing review related to our agents’ use of internet acce…",
+    "impact": "",
+    "uses": ""
   }
 }
