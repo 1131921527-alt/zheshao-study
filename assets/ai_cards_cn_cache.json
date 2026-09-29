@@ -958,5 +958,41 @@
     "summary": "【OpenAI】OpenAI says it has paused all internal training of \"our most capable models\" as it continues what CEO Sam Altman is calling \"an extensive and ongoing review related to our agents’ use of internet acce…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/openai-dots-chatgpt-always-on-ai-agents-3717020/": {
+    "title_cn": "OpenAI 对 Meta Muse 的回答是一个可爱的人工智能代理，永远不会打卡",
+    "summary": "【OpenAI】TL;DR OpenAI’s new Dots are always-on AI agents that can keep working across connected apps even when you’re not actively chatting with them. A Dot can monitor ongoing work, suggest or complete next s…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/": {
+    "title_cn": "OpenAI的最新功能直指应用商店模式",
+    "summary": "【OpenAI】OpenAI is building out the pieces of an alternative to the traditional app store model, turning ChatGPT into a place where software can be discovered and used by people and AI agents alike.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-play-usage-based-billing-subscriptions-3716927/": {
+    "title_cn": "您的下一个 Google Play 订阅的运作方式可能会大不相同",
+    "summary": "【Google】TL;DR Google Play is adding usage-based subscription billing aimed at AI apps and other services with variable costs. New options will also support team subscriptions, mixed subscription/one-time purc…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/america-gov-google-ai-federal-services-3716919/": {
+    "title_cn": "美国政府现在拥有人工智能聊天机器人，谷歌正在为其提供支持",
+    "summary": "【Google】TL;DR America.gov is a new AI-powered US government portal that pulls information from more than 29,000 official sources. The Google-backed platform can answer questions about benefits, forms, fees, d…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/": {
+    "title_cn": "这就是为什么 OpenAI 没有出现在 Nvidia 全行业范围内终结流氓 AI 代理的努力中",
+    "summary": "【OpenAI】OpenAI isn't a public supporter of Nvidia's Open Agent Safety Platform, but it is privately working with Nvidia, TechCrunch has learned.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews": {
+    "title_cn": "人工智能研究人员发布视频称超级智能“确实像听起来一样危险”",
+    "summary": "【The Verge】\"The chance of human extinction is about a coin flip, in my view,\" Geoffrey Irving, a former OpenAI and Google DeepMind employee, said in a new interview. It's one of a dozen interviews with AI resear…",
+    "impact": "",
+    "uses": ""
   }
 }
