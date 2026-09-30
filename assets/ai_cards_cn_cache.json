@@ -994,5 +994,41 @@
     "summary": "【The Verge】\"The chance of human extinction is about a coin flip, in my view,\" Geoffrey Irving, a former OpenAI and Google DeepMind employee, said in a new interview. It's one of a dozen interviews with AI resear…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/google-home-third-september-update-gemini-fixes-3717609/": {
+    "title_cn": "Gemini for Home现在更擅长在嘈杂的房间里听到您的声音",
+    "summary": "【Google】TL;DR Google Home’s third September update makes Gemini for Home better at hearing commands in noisy rooms and responding faster. The app also improves Find My Phone reliability, multilingual recognit…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices": {
+    "title_cn": "AI Tamagotchis即将到来",
+    "summary": "【The Verge】While AI has made plenty of inroads on people's phones and computers, it's largely failed in dedicated devices. But over the next year, two major AI companies, Meta and OpenAI, will attempt to change…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/health/2026/09/rfk-jr-says-ai-backs-his-anti-vaccine-views-we-checked-it-doesnt/": {
+    "title_cn": "小RFK认为人工智能将使我们摆脱医学事实和专业知识的“暴政”",
+    "summary": "【Ars Technica】At a Make America Healthy Again event Tuesday, anti-vaccine Health Secretary Robert F. Kennedy opened a \"fireside chat\" with Vice President JD Vance on the topic of artificial intelligence. While MAHA…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/apple-music-7-0-3717526/": {
+    "title_cn": "Apple Music正在为其Android应用程序提供迫切需要的光芒",
+    "summary": "【Apple】TL;DR Apple Music 7.0 is hitting beta testers with some major UI improvements. Artist pages get a full overhaul with big artwork and easy-to-reach bios. The app now better mirrors the iOS original, co…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/": {
+    "title_cn": "OpenAI的JEV克隆可以帮助前沿实验室阻止其集群特工",
+    "summary": "【OpenAI】OpenAI's \"Decisions API\" is a Jev clone that confirms the importance of fast, cheap intelligence.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-gems-phase-out-timeline-3717503/": {
+    "title_cn": "谷歌制定过渡计划，用技能取代双子座宝石",
+    "summary": "【Google】Credit: Shimul Sood / Android Authority TL;DR Google will start rolling out Skills in Workspace starting on October 5, 2026. Skills will come to the Gemini app starting on October 13, 2026. Gems will…",
+    "impact": "",
+    "uses": ""
   }
 }
