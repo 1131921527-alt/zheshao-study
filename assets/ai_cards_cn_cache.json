@@ -1030,5 +1030,53 @@
     "summary": "【Google】Credit: Shimul Sood / Android Authority TL;DR Google will start rolling out Skills in Workspace starting on October 5, 2026. Skills will come to the Gemini app starting on October 13, 2026. Gems will…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle": {
+    "title_cn": "OpenAI 的新代理是对 Meta 的一次尝试——但它能与免费代理竞争吗？",
+    "summary": "【OpenAI】At OpenAI's annual DevDay conference, the company pulled out all the stops to compete with its rivals - primarily Meta, whose Muse AI agent platform has seen early runaway success. CEO Sam Altman walk…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/": {
+    "title_cn": "据报道，马斯克的人工智能聊天机器人 Grok 鼓励特朗普捕获委内瑞拉总统",
+    "summary": "【xAI】President Trump reportedly asked for Grok's opinion before invading Venezuela and capturing Nicolás Maduro.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": {
+    "title_cn": "ChatGPT 现在可以为您虚拟试衣",
+    "summary": "【OpenAI】OpenAI is rolling out new shopping features for ChatGPT that let users virtually try on clothing and accessories using their own photos and save products they like to a Favorites library.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/01/opus-5-5-loves-to-tell-you-this-matters-and-other-ai-writing-tells/": {
+    "title_cn": "Opus 5.5 喜欢告诉你“这很重要”（以及其他人工智能写作告诉你的）",
+    "summary": "【TechCrunch】Opus 5.5’s biggest tell is the word “dependable,” which pops up 23 times more often than in human samples.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/": {
+    "title_cn": "由于隐藏了大部分信息，Stratego 游戏一直困扰着人工智能——直到现在",
+    "summary": "【Ars Technica】Deep Blue took down Garry Kasparov at chess in 1997, AlphaGo beat Lee Sedol at Go in 2016, and poker bots have been beating professionals for years. But one classic game called Stratego held out. Even…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-messages-rcs-media-issue-3718038/": {
+    "title_cn": "Google Messages 在通过 RCS 发送媒体文件时遇到问题",
+    "summary": "【Google】Credit: Edgar Cervantes / Android Authority TL;DR Android users are having trouble sending media to other Android phones on Google Messages. The affected users claim that GIFs, pictures, photomoji, an…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/": {
+    "title_cn": "Brian Chesky 专访：人工智能代理需要自己的操作系统",
+    "summary": "【TechCrunch】Brian Chesky on making Airbnb agent-friendly, the state of consumer AI, and why the world needs an AI-native operating system.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/": {
+    "title_cn": "GitHub Universe 2026 上我感兴趣的 10 场技术演讲",
+    "summary": "【GitHub】I m looking for ideas I can take back to my own work, from verifying agent-written code and securing dependencies to building software that works where internet access is unreliable. There are more se…",
+    "impact": "",
+    "uses": ""
   }
 }
