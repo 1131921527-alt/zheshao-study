@@ -1078,5 +1078,59 @@
     "summary": "【GitHub】I m looking for ideas I can take back to my own work, from verifying agent-written code and securing dependencies to building software that works where internet access is unreliable. There are more se…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/": {
+    "title_cn": "肖恩·帕克正在围绕音乐重建稳定性人工智能",
+    "summary": "【TechCrunch】Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link": {
+    "title_cn": "Meta 开源代码可让您制作 Muse AI 小工具",
+    "summary": "【Meta】Meta now lets you make your own Muse gadgets that feature the company's new AI agent with code that the company open sourced. The company suggests projects like loading Muse on a color E Ink display t…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents": {
+    "title_cn": "苹果将​​限制 Mac 磁盘访问，因为人工智能代理“大幅”增加了风险",
+    "summary": "【Apple】Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI agents, as reported earlier by TechCrunch. In an update on Friday, Apple says it's rolling out new controls to…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/audible-character-guide-visual-explorer-interactive-story-3718603/": {
+    "title_cn": "Audible 拥有三项新功能，让您与故事有更深入的联系",
+    "summary": "【Android Authority】Credit: Audible TL;DR Audible is rolling out three new AI-powered features: Character Guide, Interactive Story, and Visual Explorer. Character Guide helps listeners keep track of story characters, Int…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/chrome-android-biometric-password-autofill-3718614/": {
+    "title_cn": "Android 上的 Chrome 密码自动填充可能很快需要进行生物识别测试",
+    "summary": "【Android Authority】TL;DR Google is testing biometric authentication before password autofill in Chrome for Android. The feature has returned in Chrome Canary after Google previously tested and pulled a similar implement…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/": {
+    "title_cn": "苹果表示，由于人工智能代理带来的新风险，它正在加强 macOS 的“全磁盘访问”控制",
+    "summary": "【Apple】Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history risk…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/": {
+    "title_cn": "叫它AI，叫它超级智能，只有2%的消费者买账",
+    "summary": "【TechCrunch】This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —&#160;to sign an AI safety pledge&#160;that Preside…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent": {
+    "title_cn": "OpenAI 的 Dot Agent 是一款企业软件，也可以为你订餐",
+    "summary": "【OpenAI】It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute little guys who can do your bidding. But unlike the ultra-approachable Meta Muse, Dots feel very much like us…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/": {
+    "title_cn": "这不再是人工智能，而是“超级智能”（根据白宫的说法）",
+    "summary": "【TechCrunch】This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —&#160;to sign an AI safety pledge&#160;that Preside…",
+    "impact": "",
+    "uses": ""
   }
 }
