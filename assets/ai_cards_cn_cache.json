@@ -1132,5 +1132,35 @@
     "summary": "【TechCrunch】This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —&#160;to sign an AI safety pledge&#160;that Preside…",
     "impact": "",
     "uses": ""
+  },
+  "https://huggingface.co/blog/microsoft/thinkingbox": {
+    "title_cn": "经纪人说已经完成了。数据库不同意。",
+    "summary": "【Hugging Face 官方动态】The Agent Said It Was Done. The Database Disagreed.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/games/1004418/capcom-ai-game-development": {
+    "title_cn": "Capcom正在为“我们与人工智能一起创造游戏的未来”做准备",
+    "summary": "【The Verge】Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech. During the Capcom Open Conference RE: 2026 programmer Satoshi Ishida gave a present…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/": {
+    "title_cn": "所有可以存在于您的短信中的人工智能代理",
+    "summary": "【TechCrunch】We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/all-snapdragon-8-gen-5-chips-tested-3704993/": {
+    "title_cn": "最好的Snapdragon 8 Gen 5系列芯片是什么？我对它们进行了全部测试，以了解",
+    "summary": "【Android Authority】Credit: Tushar Mehta / Android Authority The Snapdragon 8 series is Qualcomm’s top-tier of smartphone processors. These chips offer a ton of performance, blazing-fast connectivity, cutting-edge camera…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://sspai.com/post/114922": {
+    "title_cn": "TDS评论| CMF Clip Pro 耳夹式无线耳机体验",
+    "summary": "不知道以后 CMF 的设计还会不会像现在一样出彩。 查看全文",
+    "impact": "",
+    "uses": ""
   }
 }
