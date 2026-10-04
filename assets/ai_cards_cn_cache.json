@@ -1162,5 +1162,23 @@
     "summary": "不知道以后 CMF 的设计还会不会像现在一样出彩。 查看全文",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/": {
+    "title_cn": "由于人工智能提交量“显着增加”，谷歌冻结了其开源漏洞赏金计划",
+    "summary": "【Google】AI slop seems to be overwhelming bug bounty programs.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/": {
+    "title_cn": "“超级智能”和不具约束力的安全协议能否解决人工智能的形象问题？",
+    "summary": "【TechCrunch】On Equity, we discussed the Trump administration's attempts to rebrand AI.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/soulog-sense-ai-voice-recorder-3716740/": {
+    "title_cn": "Soulog Sense 是一款人工智能录音机，具有个人语境系统，绝不会漏掉任何一个字",
+    "summary": "【Android Authority】Credit: SOULOG Plenty of important details get said out loud once and never written down: a price quoted on a call, a delivery date mentioned as a meeting wraps up, the name of a tool a colleague reco…",
+    "impact": "",
+    "uses": ""
   }
 }
