@@ -1180,5 +1180,47 @@
     "summary": "【Android Authority】Credit: SOULOG Plenty of important details get said out loud once and never written down: a price quoted on a call, a delivery date mentioned as a meeting wraps up, the name of a tool a colleague reco…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/galaxy-z-fold-8-ultra-prime-day-3719375/": {
+    "title_cn": "三星Galaxy Z Fold 8 Ultra在此次Prime Day优惠中降至最低价格",
+    "summary": "【Android Authority】Amazon just dropped the Samsung Galaxy Z Fold 8 Ultra to $1,699.99 for Prime Day, down from its $2,099.99 RRP. That saves you $400, a 19% discount off the recommended retail price, and it is the lowes…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-buds-3-fe-prime-day-3719650/": {
+    "title_cn": "三星Galaxy Buds 3 FE跌至94.99 $ ， RRP折扣37%",
+    "summary": "【Android Authority】Samsung’s Galaxy Buds 3 FE are the more affordable stem-style earbuds in the company’s 2025 lineup, and they pack in a lot of what people want from modern wireless buds. You get active noise cancelati…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/06/pinterests-ai-now-turns-beauty-pins-into-action-plans/": {
+    "title_cn": "Pinterest的人工智能现在将美容徽章转化为行动计划",
+    "summary": "【TechCrunch】Pinterest’s new AI-powered Beauty Guides translate hair and nail Pins into salon terminology, with estimated costs, appointment times, and maintenance needs.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/deal-samsung-galaxy-z-flip-8-3718618/": {
+    "title_cn": "热卖：三星Galaxy Z Flip 8在Prime Day精选中跌破990 $",
+    "summary": "【Android Authority】Amazon has dropped the Samsung Galaxy Z Flip 8 to $989.99 for Prime Day, down from its $1,199.99 RRP. That saves you $220, an 18% discount off the recommended retail price, and it is the lowest price…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-z-fold-8-deal-3718178/": {
+    "title_cn": "全新三星Galaxy Z Fold 8 Prime Day降价$ 350",
+    "summary": "【Android Authority】The Samsung Galaxy Z Fold 8 just dropped to $1,749.99 in the Prime Day sale, down from its $2,099.99 retail price. That saves you $350, a 17% discount relative to the RRP. That makes now a great time…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only": {
+    "title_cn": "谷歌即将取消对Gemini Flash和Pro的免费访问权限",
+    "summary": "【Google】Starting on October 9th, anyone using Google Gemini on a free plan will be limited to the Flash Lite model. Free users can currently choose from Gemini Flash Lite, Flash, and Pro, but now you'll need…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://sspai.com/post/115416": {
+    "title_cn": "基于 Vaultwarden 和 Keyguard 的自托管密码管理实践",
+    "summary": "密码管理服务的数据，当然要掌握在自己手里。 查看全文",
+    "impact": "",
+    "uses": ""
   }
 }
