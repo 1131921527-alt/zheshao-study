@@ -1222,5 +1222,65 @@
     "summary": "密码管理服务的数据，当然要掌握在自己手里。 查看全文",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-book-6-deal-3719839/": {
+    "title_cn": "三星 Galaxy Book 6 促销使这款 16 英寸触摸屏笔记本电脑降价 48%",
+    "summary": "【Android Authority】Amazon has cut $1,300 off the Samsung Galaxy Book 6 16-inch Touchscreen Laptop 2026, dropping it from its $2,699.99 RRP to $1,399.99. That is a 48% discount relative to the recommended retail price, a…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/": {
+    "title_cn": "人工智能代理的下一个障碍：让网站允许他们进入",
+    "summary": "【TechCrunch】Personal AI agents promise to shop, book flights, and make reservations for you. But deliberate blocks and anti-bot defenses are getting in the way, leaving consumers caught in the middle. A new stand…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/galaxy-watch-8-lte-deal-3719742/": {
+    "title_cn": "Galaxy Watch 8 Prime Day 优惠使其价格跌至历史最低价不到 4 美元",
+    "summary": "【Android Authority】Amazon has dropped the Samsung Galaxy Watch 8 (40mm, LTE) to $269.99 , down from its $349.99 recommended retail price. That saves you $80, a 23% discount off the RRP, and makes this Prime Day offer th…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/column/1005697/we-cant-just-change-the-definition-of-recording": {
+    "title_cn": "我们不能仅仅改变“录音”的定义",
+    "summary": "【The Verge】With AI hardware, tech companies are pushing the definition of what does and doesn't constitute a recording. For most of gadget history, it'd be reasonable to assume that a device with a microphone or…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://openai.com/index/atlassian-partnership": {
+    "title_cn": "Atlassian 和 OpenAI 扩大合作伙伴关系，将企业知识转化为行动",
+    "summary": "【OpenAI】Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help teams plan, build, and deliver work.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/": {
+    "title_cn": "Anthropic 为初创公司提供一年免费的 Claude Team 和 1,000 美元的积分",
+    "summary": "【Anthropic】\"We created this program because we believe the benefits of AI will reach most people through the companies that build on top of models, rather than through the models alone.\"",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/oneplus-16-reader-poll-buying-interest-3719618/": {
+    "title_cn": "OnePlus 已死，但对 OnePlus 16 的需求显然并未增加",
+    "summary": "【一加】TL;DR We ran a poll, and 93% of respondents said they’d at least consider buying the OnePlus 16 if it were available in their market. 61% said they’d buy it “without question,” while another 32% said…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/": {
+    "title_cn": "LibreOffice 称“无人工智能”现已成为一项软件功能",
+    "summary": "【TechCrunch】The maker of the open source document editor says it has no plans to add AI to its software's default configuration, citing user privacy.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/galaxy-watch-8-classic-prime-deal-3718754/": {
+    "title_cn": "三星高端 Galaxy Watch 8 Classic 亚马逊现价 389.99 美元",
+    "summary": "【Amazon】The Samsung Galaxy Watch 8 Classic is Samsung’s premium classic-style smartwatch for 2025, and it brings back one of the features many watch fans still love: the rotating bezel. There’s also a solid d…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://developer.apple.com/news/?id=gv788oj6": {
+    "title_cn": "开发者您好：2026 年 10 月",
+    "summary": "【Apple】In this edition: Get tips on submitting your iPhone Duo app. Sign up for new iPhone Duo Group Labs. Join us for a new developer event on speed and efficiency. Explore localized documentation. Browse n…",
+    "impact": "",
+    "uses": ""
   }
 }
