@@ -1282,5 +1282,41 @@
     "summary": "【Apple】In this edition: Get tips on submitting your iPhone Duo app. Sign up for new iPhone Duo Group Labs. Join us for a new developer event on speed and efficiency. Explore localized documentation. Browse n…",
     "impact": "",
     "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/10/software-is-over-bold-ai-developer-takes-aim-at-adobe-with-open-source-clones/": {
+    "title_cn": "“软件已经结束”：大胆的 AI 开发者用开源克隆瞄准 Adob​​e",
+    "summary": "【Ars Technica】For a while, those hoping to avoid the difficulty and expense of dealing with Adobe's Creative Suite have been able to use several free and/or open-source alternatives that replicate some or all of th…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence": {
+    "title_cn": "微软正在为 Copilot 提供对 Windows 和文件的更多控制权",
+    "summary": "【Microsoft】At today's Windows and Surface event, Microsoft showed off an upgrade to its Copilot AI system that will give it access to local files on your PC and the ability to take actions across the OS. It's pa…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/": {
+    "title_cn": "NVIDIA、微软利用 RTX Spark 和 AI Agent 开启 Windows PC 的新篇章",
+    "summary": "【NVIDIA】At a Microsoft event in San Francisco on Wednesday, Jensen Huang and Satya Nadella outlined how NVIDIA and Microsoft are co-engineering hardware and software for AI agents to run on Windows PCs. NVIDI…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-tab-s10-fe-plus-deal-3720458/": {
+    "title_cn": "亚马逊三星 Galaxy Tab S10 FE Plus 降价 180 美元直至午夜",
+    "summary": "【Amazon】Amazon has a strong Prime Day price cut on the Samsung Galaxy Tab S10 FE Plus right now. It has dropped to $519, down from its $699.99 recommended retail price, saving you $181 and working out to a 26…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/": {
+    "title_cn": "ChatGPT for Teens 让青少年即使在心理健康危机期间也能保持交谈",
+    "summary": "【OpenAI】ChatGPT’s teen safeguards are meant to protect vulnerable users, but new testing found the chatbot continues encouraging engagement during crises and potentially encourages unhealthy relationships wit…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/": {
+    "title_cn": "秘密保护必须与软件一起扩展",
+    "summary": "【GitHub】Today, one in three pull requests on GitHub involves an AI agent . A year ago, that number was fewer than one in 10. If that pace holds, within the next two years, most of the code pushed to GitHub co…",
+    "impact": "",
+    "uses": ""
   }
 }
