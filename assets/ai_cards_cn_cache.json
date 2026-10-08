@@ -1318,5 +1318,59 @@
     "summary": "【GitHub】Today, one in three pull requests on GitHub involves an AI agent . A year ago, that number was fewer than one in 10. If that pace holds, within the next two years, most of the code pushed to GitHub co…",
     "impact": "",
     "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/": {
+    "title_cn": "走进全方位：开发人员如何利用前沿人工智能代理将想法转化为模拟",
+    "summary": "【NVIDIA】Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI mo…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/": {
+    "title_cn": "被解雇的 OpenAI 安全研究人员对不当行为指控提出异议，警告会产生寒蝉效应",
+    "summary": "【OpenAI】Three fired OpenAI safety researchers dispute allegations of mishandling sensitive information, warning in an open letter that their dismissals are creating a chilling effect on the company’s AI safet…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/fcc-ai-political-robocall-3720952/": {
+    "title_cn": "如果 FCC 批准请愿，人工智能生成的政治机器人电话可能会淹没你的手机",
+    "summary": "【Android Authority】TL;DR The FCC currently has rules in place restricting both unsolicited political robocalls, and those created with AI. It’s not facing a petition that would grant a special exemption, targeting upcom…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/08/ben-affleck-is-an-ai-nerd-and-the-internet-is-impressed/": {
+    "title_cn": "本·阿弗莱克 (Ben Affleck) 是一位人工智能迷，互联网给我们留下了深刻的印象",
+    "summary": "【TechCrunch】Ben Affleck is going viral for his deep knowledge of AI, from neural networks and transformers to open weights. The actor, who sold his AI filmmaking startup to Netflix earlier this year, is proving h…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/": {
+    "title_cn": "谷歌为 Gemini 带来代理人工智能，从企业开始",
+    "summary": "【Google】Google is turning Gemini into an AI agent that can plan, execute tasks, and work across business apps and systems. The agent can delegate work to subagents, use multiple AI models, and even gets its o…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/": {
+    "title_cn": "OpenAI 的数学解决方案尚未达到该领域的标准",
+    "summary": "【OpenAI】OpenAI's flood of proofs deviated from the guidelines set by a group of mathematical researchers consulted by the frontier lab.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-watch-8-44mm-deal-3720897/": {
+    "title_cn": "三星 Galaxy Watch 8 仍保持原价，甚至不需要 Prime",
+    "summary": "【Android Authority】The Samsung Galaxy Watch 8 44mm Bluetooth is still at its Prime Day price on Amazon, and you do not need a Prime membership to get it. At $249.99, this deal cuts $80 off the $329.99 recommended retail…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/podcast/1007408/meta-muse-openai-dots-ai-agent-race-privacy-free": {
+    "title_cn": "你能相信 Meta 的 Muse 或 OpenAI 的 Dots 来掌控你的生活吗？",
+    "summary": "【OpenAI】My Decoder guest today is Hayden Field, The Verge’s senior AI reporter, and we’re discussing the new wave of consumer-friendly AI agents. If you’ve been paying attention to this space, you know AI ent…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://openai.com/index/oracle": {
+    "title_cn": "Oracle如何通过ChatGPT和Codex将工作日变为几分钟",
+    "summary": "【OpenAI】Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
+    "impact": "",
+    "uses": ""
   }
 }
