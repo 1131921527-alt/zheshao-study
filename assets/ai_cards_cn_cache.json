@@ -1396,5 +1396,29 @@
     "summary": "【Anthropic】After a recent spate of high-profile incidents in which AI agents escaped containment, Anthropic is cutting off internet access for all internal evaluations. In a report Friday, the company detailed \"…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/": {
+    "title_cn": "人工智能行业能否通过摆脱保密协议来说服数据中心的对手？",
+    "summary": "【TechCrunch】On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/": {
+    "title_cn": "这些高管认为语音AI尚未达到ChatGPT时刻",
+    "summary": "【OpenAI】Voice AI's often misses important points for its context layer, and causes the whole pipeline to break",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/vivo-x-fold-6-vs-galaxy-z-fold-8-ultra-hands-on-3720287/": {
+    "title_cn": "我正在使用vivo X Fold 6 ，现在Galaxy Z Fold 8 Ultra感觉很古老",
+    "summary": "【vivo】Credit: Harish Jonnalagadda / Android Authority While much of the foldable attention these days is going to wider devices like the Galaxy Z Fold 8 and the upcoming iPhone Duo , book-style foldables ha…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress": {
+    "title_cn": "学习使用本地人工智能是令人兴奋、不知所措和令人沮丧的",
+    "summary": "【The Verge】I'm embarking on a journey I've so far been hesitant to go on: actually using AI on the regular. Giving my most personal data to cloud services has been a major hold up for me, but it's increasingly p…",
+    "impact": "",
+    "uses": ""
   }
 }
