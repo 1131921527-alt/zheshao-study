@@ -1372,5 +1372,29 @@
     "summary": "【OpenAI】Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised": {
+    "title_cn": "萨蒂亚·纳德拉 (Satya Nadella) 表示，我们应该假设所有人工智能模型都“受到损害”",
+    "summary": "【The Verge】In a lengthy post on X, Microsoft's CEO laid out his views on the dangers posed by highly advanced AI models and how to confront those risks. Nadella says we can no longer accept a world where AI is t…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/": {
+    "title_cn": "微软的 Satya Nadella 表示人工智能模型需要“紧急刹车”",
+    "summary": "【Microsoft】In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/": {
+    "title_cn": "苹果披露了从个性化播客初创公司 Huxe 聘请团队和许可技术的交易",
+    "summary": "【Apple】Is Apple hoping to get into the AI-generated podcast business?",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet": {
+    "title_cn": "Anthropic 正在切断互联网上的内部评估",
+    "summary": "【Anthropic】After a recent spate of high-profile incidents in which AI agents escaped containment, Anthropic is cutting off internet access for all internal evaluations. In a report Friday, the company detailed \"…",
+    "impact": "",
+    "uses": ""
   }
 }
