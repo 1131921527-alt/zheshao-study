@@ -1420,5 +1420,47 @@
     "summary": "【The Verge】I'm embarking on a journey I've so far been hesitant to go on: actually using AI on the regular. Giving my most personal data to cloud services has been a major hold up for me, but it's increasingly p…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/ask-youtube-rolls-out-to-mobile-3722238/": {
+    "title_cn": "YouTube 的聊天式搜索登陆移动设备",
+    "summary": "【Android Authority】Credit: Joe Maring / Android Authority TL;DR YouTube is expanding its conversational AI-powered search tool to a new platform. You’ll now be able to use “Ask YouTube” on the mobile app. Viewers will s…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/10/anthropics-claude-ai-submitted-false-murder-tip-to-philadelphia-police/": {
+    "title_cn": "Anthropic 的 Claude AI 向费城警方提交了虚假的谋杀线索",
+    "summary": "【Anthropic】An Anthropic AI model submitted a false tip about an unsolved murder to Philadelphia police, the company and police department confirmed on Friday. A Claude model sent the false tip on July 18 to the…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/": {
+    "title_cn": "适合初学者的 GitHub Copilot 应用程序：如何向 Copilot 教授您的代码库",
+    "summary": "【GitHub】Context matters when you re working with AI. Every codebase has its own house rules: how components are structured, which scripts to run, and which conventions apply to different frameworks and file t…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/": {
+    "title_cn": "Honeyjar 提供人工智能工具来改善每家公司的公关和沟通",
+    "summary": "【TechCrunch】Journalists, entrepreneurs, and even some public relations professionals will tell you that the PR process is broken. But could AI actually make things better?",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/12/this-ai-startup-says-it-can-generate-permit-ready-blueprints-in-minutes/": {
+    "title_cn": "这家人工智能初创公司表示，它可以在几分钟内生成许可就绪的蓝图",
+    "summary": "【TechCrunch】Blueprints AI, a bootstrapped startup based in Santa Monica, developed software that produces code-compliant construction blueprints from a photo, PDF, or sketch.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/galaxy-z-fold-8-demand-3722120/": {
+    "title_cn": "Galaxy Z Fold 8 的受欢迎让三星摆脱了出货量下滑的困境",
+    "summary": "【Android Authority】TL;DR Samsung’s market share hit a high of 23% in Q3 2026, according to a new report. While shipments declined 3% YoY, strong demand for the Galaxy Z Fold 8 softened the blow. Apple’s market share gre…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/": {
+    "title_cn": "OCP 全球峰会：在生态系统采用过程中，NVIDIA 开放 Vera Rubin 架构以帮助扩展全球 AI 工厂",
+    "summary": "【NVIDIA】As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more re…",
+    "impact": "",
+    "uses": ""
   }
 }
