@@ -1462,5 +1462,53 @@
     "summary": "【NVIDIA】As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more re…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/": {
+    "title_cn": "Cerebras 首席执行官表示，我们即将迎来一个每个人家里都有个人人工智能助理的未来",
+    "summary": "【TechCrunch】Cerebras CEO Andrew Feldman predicts a future where personal AI assistants become as commonplace as household appliances, running partly on local devices and partly in the cloud.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/13/cerebras-ceo-pushes-back-on-ai-doomsday-warnings/": {
+    "title_cn": "Cerebras 首席执行官反驳人工智能世界末日警告",
+    "summary": "【TechCrunch】Cerebras CEO Andrew Feldman has a message for AI leaders spreading doomsday warnings: Maybe stop talking? At TechCrunch Disrupt, he argued that the industry's focus on AI's risks is drowning out its p…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce": {
+    "title_cn": "Instagram 允许 Mia Goth 的人工智能图像传播，她的代表表示，这是“不可理解的”",
+    "summary": "【The Verge】Earlier this month, news broke that actress Mia Goth had filed for divorce from actor and filmmaker Shia LaBeouf. An Instagram post from the account miagoth_ - marked with a blue verified checkmark -…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/": {
+    "title_cn": "法官命令 OpenAI 交出苹果商业机密案中的招聘记录",
+    "summary": "【OpenAI】A federal judge ruled that Apple can access OpenAI's interview materials involving former Apple employees, as well as private messages and testimony from key figures in the case.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration": {
+    "title_cn": "Xbox 正式拥抱 AI 驱动的游戏端口的混乱",
+    "summary": "【The Verge】Retro gaming is going through a wild time at the moment, thanks to decompilations and recompilations that are letting gamers port classic titles to new devices, or merge code from two different games…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/": {
+    "title_cn": "Flox Intelligence 正在构建人工智能，让野生动物远离火车、机场和道路",
+    "summary": "【TechCrunch】Flox's edge devices can identify animals and use species-specific sounds to drive them away from critical infrastructure.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/": {
+    "title_cn": "GitHub 的秘密检测模型：以更少的噪音发现更多的秘密",
+    "summary": "【GitHub】/* Copyright 2022 The Mona Sans Project Authors (https://github.com/github/mona-sans), with Reserved Font Name \"Mona\" This Font Software is licensed under the SIL Open Font License, Version 1.1. This…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b": {
+    "title_cn": "使用 LFM2.5-24B-A2B 在设备上快速运行专用代理",
+    "summary": "【Hugging Face 官方动态】Run fast, private agents on-device with LFM2.5-24B-A2B",
+    "impact": "",
+    "uses": ""
   }
 }
