@@ -1528,5 +1528,53 @@
     "summary": "【Google】Credit: Rita El Khoury / Android Authority TL;DR Google is testing firmware version 3.79.550760 for the original Google Home, Home Mini, Nest Mini, and Nest Audio. The devices are getting improvements…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs": {
+    "title_cn": "ChatGPT 现在可以查看您的 Chrome 标签页",
+    "summary": "【OpenAI】OpenAI's ChatGPT Atlas browser is gone, but now ChatGPT's Google Chrome extension is getting some upgrades that allow it to use the browser tabs you already have open. With the extension installed, Op…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/circle-to-search-google-lens-scam-text-detection-3724020/": {
+    "title_cn": "谷歌提醒 Android 用户注意一个被忽视的诈骗检测工具",
+    "summary": "【Google】TL;DR Google is highlighting Circle to Search’s existing ability to identify suspicious text messages using AI Overviews. We tested the functionality, and it works as intended, with Google explaining…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/ibm-granite/granite-switch-4-1": {
+    "title_cn": "Granite Switch 4.1：来自一个端点的聊天、决策和语音",
+    "summary": "【Hugging Face 官方动态】Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/": {
+    "title_cn": "亚马逊设备主管 Panos Panay 看到了人工智能设备取代使用应用程序的未来",
+    "summary": "【Amazon】Speaking at TechCrunch Disrupt, Amazon devices chief Panos Panay described a future where ambient AI devices work in the background, anticipating users' needs instead of waiting for commands.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/": {
+    "title_cn": "下一个开发者界面是环境智能",
+    "summary": "【GitHub】For most of my career, building software started with the same setup: keyboard, mouse, editor, terminal, browser, and an impressive number of tabs I was definitely going to look at later. The tools ch…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent": {
+    "title_cn": "朋友不会让朋友将他们的数据提供给人工智能代理",
+    "summary": "【The Verge】There's a growing trend in the consumer tech world: gadgets designed to spy on everything and everyone around you, regardless of whether or not anyone else actually consented to it. Now, with the adve…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/": {
+    "title_cn": "Anthropic 让 METR 研究人员通过员工级别的访问权限了解幕后情况",
+    "summary": "【Anthropic】METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the frontier AI model maker has given up the right to block them.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/": {
+    "title_cn": "Bluesky 扩展了其人工智能驱动的 Attie 应用程序，让任何人都可以构建网站、游戏等",
+    "summary": "【TechCrunch】Bluesky is bringing “social vibe coding” to its experimental Attie platform, allowing users to create interactive experiences like games, quizzes, and websites that can tap into the social network's a…",
+    "impact": "",
+    "uses": ""
   }
 }
