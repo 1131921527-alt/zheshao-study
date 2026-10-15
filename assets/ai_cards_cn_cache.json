@@ -1510,5 +1510,23 @@
     "summary": "【Hugging Face 官方动态】Run fast, private agents on-device with LFM2.5-24B-A2B",
     "impact": "",
     "uses": ""
+  },
+  "https://news.samsung.com/global/from-smart-city-to-race-circuit-samsungs-the-wall-in-control-rooms": {
+    "title_cn": "从智能城市到赛道：三星控制​​室的墙",
+    "summary": "【Samsung】On the front lines of crisis management, where timely decisions are critical, control rooms are evolving to meet the demands of today’s highly connected society. Moving beyond traditional monitoring,…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-ai-plus-pro-model-access-cut-off-date-3723558/": {
+    "title_cn": "谷歌现在正在向 Gemini 订阅者发送电子邮件，告知其将花费 4 倍的费用",
+    "summary": "【Google】TL;DR Google is now emailing AI Plus subscribers to confirm that access to Pro models in the Gemini app and AI Mode in Search will be restricted to Google AI Pro subscribers and above from November 13…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-home-mini-nest-mini-nest-audio-updates-3723549/": {
+    "title_cn": "谷歌正在对其旧版 Nest 和 Home 扬声器给予一些急需的关注",
+    "summary": "【Google】Credit: Rita El Khoury / Android Authority TL;DR Google is testing firmware version 3.79.550760 for the original Google Home, Home Mini, Nest Mini, and Nest Audio. The devices are getting improvements…",
+    "impact": "",
+    "uses": ""
   }
 }
