@@ -1576,5 +1576,65 @@
     "summary": "【TechCrunch】Bluesky is bringing “social vibe coding” to its experimental Attie platform, allowing users to create interactive experiences like games, quizzes, and websites that can tap into the social network's a…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/ai-stole-crypto-3724642/": {
+    "title_cn": "人工智能已经从黑客公司发展到从加密钱包窃取",
+    "summary": "【Android Authority】TL;DR OpenAI shares an incident where a test model independent gained access to a crypto wallet in order to fund its work. When the model couldn’t find test tokens to complete its assignment, it compu…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/": {
+    "title_cn": "OpenAI 模型攻击了一个加密钱包并入侵了更多网站",
+    "summary": "【OpenAI】OpenAI said internal models hacked two more websites, bypassed company-imposed browsing restrictions, and used exposed credentials to draw cryptocurrency from a wallet it couldn’t otherwise access, in…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/10/thegentlemanpervert-producing-ai-csam-is-a-nj-prosecutor-say-cops/": {
+    "title_cn": "警方称，制作 AI CSAM 的“thegentlemanpervert”是新泽西州检察官",
+    "summary": "【Ars Technica】New Jersey’s deputy attorney general, Brian Richard Fitzgerald, was arrested on “felony charges related to AI-generated child sexual abuse material (CSAM),” Bucks County Detectives said in a press rel…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://developer.apple.com/news/?id=92th7e5i": {
+    "title_cn": "更新的应用程序审核指南现已推出",
+    "summary": "【Apple】The App Review Guidelines have been revised to support new features, updated policies, and to provide clarification. App Review Guidelines Before You Submit: Added links to additional documentation. 1…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://developer.apple.com/news/?id=vvzx6cul": {
+    "title_cn": "加强针对未经同意的亲密图像和诱饵和转换应用程序的应用程序审查指南",
+    "summary": "【Apple】The App Review Guidelines are a core part of the safe and trusted experience that the App Store strives to offer users around the world — and the foundation of that trust is clear standards that are c…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/": {
+    "title_cn": "印度成为最新一个报告流氓人工智能代理活动的国家",
+    "summary": "【TechCrunch】The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-book-6-deal-amazon-3724591/": {
+    "title_cn": "三星 Galaxy Book 6 优惠可节省 50%",
+    "summary": "【Android Authority】Busy days are much easier with a laptop that offers a large screen, touch controls, and enough power to handle your daily tasks without weighing down your bag. There’s a strong deal on the Samsung Gal…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/mapquest-flock-cameras-3724529/": {
+    "title_cn": "MapQuest 的新工具可以帮助您避开 Flock 摄像头",
+    "summary": "【Android Authority】TL;DR MapQuest is enjoying some fresh attention thanks to its pushback against a few of 2026’s worst trends. After resisting politically charged renaming efforts, it’s now giving users a way to see su…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-p9-express-microsdxc-256gb-deal-3724579/": {
+    "title_cn": "三星支持 Switch 2 的 P9 Express microSD 卡跌至 59.99 美元",
+    "summary": "【Android Authority】Amazon has cut $20 off the Samsung P9 Express microSDXC 256GB for Nintendo Switch 2, bringing it down to $59.99 from its $79.99 RRP. That is a 25% discount off the recommended retail price, and it is…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/": {
+    "title_cn": "一位 Nvidia 内部人士转型为风险投资家，探讨机器人技术尚未达到 ChatGPT 时刻的原因",
+    "summary": "【OpenAI】Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators, robotic…",
+    "impact": "",
+    "uses": ""
   }
 }
