@@ -1636,5 +1636,41 @@
     "summary": "【OpenAI】Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators, robotic…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/": {
+    "title_cn": "Meta 删除了引发抓取和人工智能培训问题的语言",
+    "summary": "【Meta】A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/": {
+    "title_cn": "随着新款Windows PC的到来， RTX Spark点燃了全球庆祝活动",
+    "summary": "【NVIDIA】NVIDIA RTX Spark laptops are now available, bringing NVIDIA Blackwell RTX graphics, up to 128GB of unified memory and the full NVIDIA AI platform to slim, premium Windows PCs. Starting at $2,399, lapt…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/": {
+    "title_cn": "首席执行官表示， Replit使OpenAI成为Anthropic的默认值",
+    "summary": "【OpenAI】Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platform.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers": {
+    "title_cn": "Meta的新条款可能允许它免费在新闻网站上培训人工智能",
+    "summary": "【Meta】Meta's new terms appear to give it permission to crawl and scrape websites \"associated\" with the businesses that use its platforms - including online publishers, according to a report from Nieman Lab.…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites": {
+    "title_cn": "Meta删除了可能允许其抓取新闻网站的语言",
+    "summary": "【Meta】After backlash, Meta is updating its terms again to remove language that suggested it could scrape content from sites, including news sites, to train its AI. Specifically, the following language no lo…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/apple-homeview-vs-pixel-tablet-missing-features-3723785/": {
+    "title_cn": "Apple HomeView已经输给了我家中最不受欢迎的Google产品之一",
+    "summary": "【Google】The Apple HomeView should be my ideal smart home hub, but it hasn’t quite hit the spot. Why? It probably can’t match one of the least-loved Google mobile products of the last few years. I’m talking ab…",
+    "impact": "",
+    "uses": ""
   }
 }
