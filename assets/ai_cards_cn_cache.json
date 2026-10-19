@@ -1696,5 +1696,65 @@
     "summary": "【Android Authority】Credit: Ryan Haines / Android Authority While many of our regular readers might have a deeper understanding of the mobile world, many Android users are simply looking for a device that’s as cheap as p…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/": {
+    "title_cn": "Hugging Face 的政策负责人表示，嵌入式人工智能评估器不会是一个简单的解决方案",
+    "summary": "【Hugging Face】AI labs have staked their reputations on model benchmarking — the supposedly neutral and accurate system of evaluations that are designed to measure whether one AI product is better than another. Howe…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/": {
+    "title_cn": "微软表示人工智能代理就像内部威胁，因为“前沿模型不可信”",
+    "summary": "【Microsoft】Microsoft wants enterprises to closely watch the agents employees use with systems not controlled by AI labs like OpenAI and Anthropic.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-notebook-co-creation-video-and-slides-3725277/": {
+    "title_cn": "Google 为您提供了对 Gemini Notebook 的视频概述和幻灯片的更多创意控制",
+    "summary": "【Google】Credit: Karandeep Singh / Android Authority TL;DR Gemini Notebook is giving users more creative control over Slide Decks and Video Overviews through a feature called “Co-creation.” The platform will n…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/": {
+    "title_cn": "亚马逊通过新的 TorchNeuron 开发工具向 Nvidia 发起了迄今为止最大的攻击",
+    "summary": "【NVIDIA】Amazon wants to break Nvidia’s hold on PyTorch, the free toolkit used to build most AI apps, so that more developers run their apps on alternative chips like its own.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/": {
+    "title_cn": "黑客攻击人工智能编码工具 OpenCode，对用户的人工智能账户收取费用",
+    "summary": "【TechCrunch】OpenCode is an open source AI coding agent that's become a popular alternative to Claude Code and Cursor. But hackers got into part of its online platform and stole some users’ API keys, and the AI to…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/germany-wants-to-lead-the-world-in-industrial-ai-how-nvidia-will-help/": {
+    "title_cn": "德国希望在工业 AI 领域引领世界：NVIDIA 将如何提供帮助",
+    "summary": "【NVIDIA】In the cavernous hall of Kraftwerk, a former power station in Berlin, German Chancellor Friedrich Merz and NVIDIA founder and CEO Jensen Huang sat down to discuss Germany’s AI roadmap, and in particul…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/": {
+    "title_cn": "如何在 VS Code 中继续 GitHub Copilot 应用程序会话",
+    "summary": "【GitHub】The agent has finished the bulk of your change. Now you want to inspect one implementation detail, adjust a few lines by hand, and run the project locally before you ship it. But the work is sitting i…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/godox-a2-xenon-flash-phones-3725172/": {
+    "title_cn": "这款磁性配件为手机带来真正的闪光",
+    "summary": "【Android Authority】TL;DR The $85 Godox A2 brings real xenon flash to smartphones. It’s iPhone-only for now, but the company says Android support is “under development.” Android devices led the way with built-in xenon fl…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins": {
+    "title_cn": "一名黑客带着一群人工智能特工闯入了约翰迪尔和 SharkNinja",
+    "summary": "【The Verge】A hacker broke into more than 100 websites using an army of AI agents that mostly operated on their own, according to findings from the AI security firm Norforge. Though Norforge doesn't name the targ…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://news.samsung.com/global/samsung-electronics-expands-ssd-brand-campaign-across-global-landmarks": {
+    "title_cn": "三星电子在全球地标中拓展 SSD 品牌活动",
+    "summary": "【Samsung】Samsung Electronics is expanding its SSD brand campaign, “Choose the sure thing,” across major global landmarks in New York, London, and Hong Kong, creating more opportunities to connect with consumer…",
+    "impact": "",
+    "uses": ""
   }
 }
