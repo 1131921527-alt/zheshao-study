@@ -1756,5 +1756,47 @@
     "summary": "【Samsung】Samsung Electronics is expanding its SSD brand campaign, “Choose the sure thing,” across major global landmarks in New York, London, and Hong Kong, creating more opportunities to connect with consumer…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update": {
+    "title_cn": "现在谷歌表示可能会使用你的 Gmail 和 Google Photos 数据来定位广告",
+    "summary": "【Google】Google has updated its privacy policy in a way that could mean you'll start seeing targeted ads based on your personal data if you're using personalized AI features. The update, spotted by Android Aut…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/allenai/litpivot": {
+    "title_cn": "LitPivot：通过文学景观中的动态情境化发展研究思路",
+    "summary": "【Hugging Face 官方动态】LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping": {
+    "title_cn": "在出版商抵制人工智能抓取后，Meta 推迟了新的业务条款",
+    "summary": "【Meta】Meta is delaying the enforcement of its new business terms after publishers raised concerns that they could allow the company to scrape news sites for AI training, as reported earlier by Fast Company.…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/pixel-watch-5-deal-3727341/": {
+    "title_cn": "Google Pixel Watch 5 LTE 型号可节省 100 美元",
+    "summary": "【Google】Leaving your phone behind is a lot easier when your watch can still handle calls, texts, music, and data on its own. That’s what makes this Google Pixel Watch 5 deal worth a look, especially now that…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-web-apps-google-sites-export-3727259/": {
+    "title_cn": "Google 刚刚让您的 Gemini 构建的网络应用程序更容易共享",
+    "summary": "【Google】TL;DR Google now lets users export interactive apps built with Gemini directly to Google Sites. Apps remain fully interactive and can be customized, published, and shared without copying or rebuilding…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/new-ai-apps-services-photon-studio-3727165/": {
+    "title_cn": "这个 vivicoded 图像编辑器的构建成本为 2,000 美元——值得吗？",
+    "summary": "【Android Authority】Generative AI is everywhere, whether it’s used as a cornerstone of a service, used to build apps, or employed to boost functionality within them. But with so many new products appearing all the time,…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port": {
+    "title_cn": "复古游戏正在被人工智能淹没",
+    "summary": "【The Verge】Retro video games are everywhere lately - especially in places where they aren't supposed to be. Halo in a web browser, Wind Waker on the iPhone, Super Smash Bros. in mixed reality. Over the past mont…",
+    "impact": "",
+    "uses": ""
   }
 }
