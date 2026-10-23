@@ -1798,5 +1798,29 @@
     "summary": "【The Verge】Retro video games are everywhere lately - especially in places where they aren't supposed to be. Halo in a web browser, Wind Waker on the iPhone, Super Smash Bros. in mixed reality. Over the past mont…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/": {
+    "title_cn": "OpenAI 表示将不再在实时互联网上训练其人工智能模型，理由是“存在重大风险”",
+    "summary": "【OpenAI】OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn't work.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet": {
+    "title_cn": "OpenAI 现在无需连接互联网即可训练其前沿人工智能模型",
+    "summary": "【OpenAI】OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/oneplus-nord-buds-3-pro-deal-amazon-3727521/": {
+    "title_cn": "OnePlus Nord Buds 3 Pro 价格创下数月来最低价",
+    "summary": "【一加】The OnePlus Nord Buds 3 Pro are a strong pick for anyone who wants affordable true-wireless earbuds with useful features, and there’s a nice deal on them right now on Amazon. OnePlus packs in a lot fo…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/": {
+    "title_cn": "从 Toast 到 Bessemer：创始人将在 2026 年 TechCrunch 创始人峰会上听到谁的发言",
+    "summary": "【TechCrunch】Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, d…",
+    "impact": "",
+    "uses": ""
   }
 }
