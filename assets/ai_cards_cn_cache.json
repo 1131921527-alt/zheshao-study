@@ -1822,5 +1822,41 @@
     "summary": "【TechCrunch】Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, d…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai": {
+    "title_cn": "蓝色星球III在人工智能时代保持着粗糙的边缘",
+    "summary": "【The Verge】BBC's Blue Planet III is looking to prove its authenticity by leaving in the less-than-perfect shots. Previous incarnations of the nature series were defined by their gorgeous, crystal-clear footage t…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-notebook-connected-app-3727634/": {
+    "title_cn": "您现在可以直接从 Gemini 聊天中管理 Gemini 笔记本",
+    "summary": "【Google】Credit: Joe Maring / Android Authority TL;DR Gemini Notebook is now available as a Connected App in the Gemini app. This integration allows you to manage and query notebooks from your conversation wit…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/": {
+    "title_cn": "在被迫选择的情况下，Grok 的人工智能模型选择了共和党人。 OpenAI 选择了民主党人。",
+    "summary": "【OpenAI】A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/": {
+    "title_cn": "以下是可以存在于您的短信中的顶级人工智能代理",
+    "summary": "【TechCrunch】We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/make-google-photos-less-annoying-3724727/": {
+    "title_cn": "我终于通过这些调整让 Google Photos 不再那么烦人了",
+    "summary": "【Google】Credit: Shimul Sood / Android Authority Google Photos is easily the most feature-rich gallery app on Android. I love using it, but it can sometimes feel like too much. There’s a certain kind of fatigu…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/ai-debate-best-smartphone-3721987/": {
+    "title_cn": "我让 Gemini 和 ChatGPT 争论哪一个是最好的手机，结果在",
+    "summary": "【OpenAI】When it comes to the best Android phones , you’ll find a lot of contention among smartphone enthusiasts about which one holds the top spot. Your own choice will depend on whether you prioritize hardwa…",
+    "impact": "",
+    "uses": ""
   }
 }
