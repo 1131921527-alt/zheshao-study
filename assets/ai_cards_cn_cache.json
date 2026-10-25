@@ -1858,5 +1858,29 @@
     "summary": "【OpenAI】When it comes to the best Android phones , you’ll find a lot of contention among smartphone enthusiasts about which one holds the top spot. Your own choice will depend on whether you prioritize hardwa…",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/25/the-hottest-ai-wearables-and-gadgets-you-should-know-about/": {
+    "title_cn": "您应该了解的最热门的人工智能可穿戴设备和小工具",
+    "summary": "【TechCrunch】We compiled a list of all the hottest AI wearables, including Muse Charm, Bee, Friend, Plaud, and more.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.ithome.com/1/017/695.htm": {
+    "title_cn": "韩 KRAFTON AI 预览 Raon-1 mini 模型：30B-A4B，可与 Meta Muse Glimmer 竞争",
+    "summary": "IT之家 10 月 25 日消息，韩国知名游戏企业 KRAFTON（魁匠团）旗下人工智能分支 KRAFTON AI 本周公布了其从头训练的 Raon-1 mini 模型的预览版本，该模型的正式版和后续的更大模型即将推出。 Raon-1 mini 采用混合专家架构，导入线性注意力，支持推测解码，整体体量为 30B-A4B。该模型聚焦韩语的同时兼顾英语性能， 以 Apache 2.0 许可开源 。KRAFTON AI 还在官网提供限时免费 API 试用。 KRAFTON AI 表示，预览版的 Raon-1 mini 在编程与智能体任务上与 Meta 的 Muse Glimmer 30B 相当 ，同时速度更快、内存效率更高；此外其能进行自…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-ai-plus-downgrade-chatgpt-claude-alternatives-3724772/": {
+    "title_cn": "降级后我取消了Google AI Plus，但我仍在使用Gemini",
+    "summary": "【Google】I’ve been a Gemini user for a couple of years now. I use it mainly for learning new skills and summarizing concepts. It’s well-integrated with whatever Android smartphone I use, giving me helpful feat…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/best-portrait-camera-mode-3726046/": {
+    "title_cn": "哪款手机的人像拍照模式最好？我测试了三巨头来找出答案",
+    "summary": "【Android Authority】Credit: Robert Triggs / Android Authority Taking a great portrait is about more than just pointing your phone at someone and hitting the shutter button. The best shots capture natural skin tones, flat…",
+    "impact": "",
+    "uses": ""
   }
 }
