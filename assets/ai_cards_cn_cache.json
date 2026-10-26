@@ -1882,5 +1882,59 @@
     "summary": "【Android Authority】Credit: Robert Triggs / Android Authority Taking a great portrait is about more than just pointing your phone at someone and hitting the shutter button. The best shots capture natural skin tones, flat…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk": {
+    "title_cn": "Anthropic 正在燃烧天然气来推动人工智能的繁荣",
+    "summary": "【Anthropic】As it prepares to go public, Anthropic's S-1 filing makes generative AI's methane dependency glaringly obvious. \"Competition for access to electrical supply and data center locations with adequate pow…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/podcast/1018264/kevin-roose-the-agi-chronicles-machine-gods-podcast-youtube-openai-anthropic": {
+    "title_cn": "凯文·罗斯 (Kevin Roose) 充满了 AGI。你为什么不呢？",
+    "summary": "【The Verge】Today, I’m talking to Kevin Roose, journalist and author of the new book The AGI Chronicles, which details the recent and explosive transformation of the AI industry. Kevin was a longtime New York Tim…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/10/boston-dynamics-employees-want-to-block-sale-of-robot-dogs-to-ice/": {
+    "title_cn": "ICE 计划购买机器狗引发数百名波士顿动力员工抗议",
+    "summary": "【Ars Technica】Hundreds of employees at the US robotics firm Boston Dynamics signed a petition calling for executives to halt a sale of the company’s robot dogs to US Immigration and Customs Enforcement—but executiv…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-gemini-remembered-items-feature-apk-teardown-3728147/": {
+    "title_cn": "谷歌正在为你要求双子座记住的一切建立一个家",
+    "summary": "【Google】TL;DR Google is working on a new “Remembered items” section within Gemini’s Personal Intelligence settings. The feature will let users view and manage text and images they’ve explicitly asked Gemini t…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/switch-android-to-ios-poll-results-3728191/": {
+    "title_cn": "调查显示大多数读者支持 Android，但也有不少读者对 iOS 感到好奇",
+    "summary": "【Android Authority】Switching from an iPhone to an Android or vice versa is not the headache it once was. That goes for both the learning curves, or lack thereof, between the platforms, and the tools that now exist that…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal": {
+    "title_cn": "The RealReal 不会让人工智能代理霸占名牌服装",
+    "summary": "【The Verge】The RealReal, a secondhand luxury fashion consignment retailer, said it's updating its bot defense system, effectively making it harder for AI agents to shop on its site. The change comes days after T…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/fitbit-edge-review-3725764/": {
+    "title_cn": "我想我会喜欢 180 美元的 Fitbit Edge。 7天后，我很失望。",
+    "summary": "【Android Authority】Over the last few months, my priorities in wearables have changed. I’ve realized I don’t care about having Gemini on my wrist, multiple ways to reply to notifications, or even a robust app ecosystem.…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/": {
+    "title_cn": "SpaceX 与 Apollo 达成 40B 美元 GPU 融资协议",
+    "summary": "【TechCrunch】The financing gives SpaceX another way to fund its rapidly expanding AI ambitions without relying solely on traditional debt markets.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/": {
+    "title_cn": "我们最新的人工智能任务：绘制人类大脑图谱",
+    "summary": "【Google】Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+    "impact": "",
+    "uses": ""
   }
 }
