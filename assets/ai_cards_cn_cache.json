@@ -1936,5 +1936,59 @@
     "summary": "【Google】Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/": {
+    "title_cn": "数据中心的繁荣有一个好处：美国电网的创新",
+    "summary": "【TechCrunch】As the AI boom stresses the existing power grid, all sorts of new opportunities for grid modernization are also emerging as a result, industry insiders say.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses/": {
+    "title_cn": "“无人掌舵”：特拉华州计划将让人工智能代理管理整个业务",
+    "summary": "【Ars Technica】A Delaware proposal to let companies be operated by AI agents would help the firms' human owners evade legal responsibility for reckless and harmful actions taken by the AI, US Rep. James Comer (R-Ky.…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-live-neural-expressive-audio-visualizer-redesign-3728666/": {
+    "title_cn": "Google 正在为 Gemini Live 打造新外观，我们为您先睹为快",
+    "summary": "【Google】TL;DR Google is testing a new Neural Expressive-inspired design for Gemini Live’s audio visualizer. The redesign replaces the familiar pill-shaped visualizer with a circular button surrounded by anima…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-pixel-alarm-bug-3728689/": {
+    "title_cn": "Pixel 手机仍然缺少闹钟，将焦虑梦想变成现实",
+    "summary": "【Android Authority】TL;DR Pixel owner reports two alarms in a row not going off. They received a notification that said, “Alarm automatically silenced. Your alarm went off and was automatically silenced after the duratio…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-to-gray-out-unapproved-apps-3728698/": {
+    "title_cn": "三星希望您积极批准或阻止您孩子的应用程序",
+    "summary": "【Android Authority】Credit: Shimul Sood / Android Authority TL;DR Samsung is making a change to parental controls on Galaxy devices. Some apps on your child’s Galaxy phone will be grayed out until you approve them. This…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-odyssey-g5-amazon-deal-3728721/": {
+    "title_cn": "亚马逊将三星 34 英寸 Odyssey G5 降价 150 美元",
+    "summary": "【Amazon】Samsung’s 34-inch Odyssey G5 is built for people who want a bigger, more wrapped-around gaming view, and there’s a strong deal on it right now on Amazon. This ultrawide monitor gives you a lot more ro…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/": {
+    "title_cn": "Disruptive 筹集了 10B 美元基金，对至少 10 家公司进行大赌注",
+    "summary": "【TechCrunch】Disruptive has made headlines in recent years for pouring money into companies like chip startup Groq and the AI voice-generation startup ElevenLabs.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/science/2026/10/vibe-genes-naturalish-language-comes-to-protein-genome-design-software/": {
+    "title_cn": "氛围基因？自然语言引入蛋白质、基因组设计软件",
+    "summary": "【Ars Technica】Protein design tools may be getting increasingly sophisticated , but you still need a sophisticated understanding of protein structure for them to work. This can include knowing enzyme mechanisms down…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai": {
+    "title_cn": "VisionQuest 是人工智能真正失控时所发生的情况",
+    "summary": "【The Verge】In Marvel's VisionQuest, a superpowered robot tries to better understand humanity by getting lost in elaborate, digital daydreams in which he and other artificial intelligence-powered beings live toge…",
+    "impact": "",
+    "uses": ""
   }
 }
