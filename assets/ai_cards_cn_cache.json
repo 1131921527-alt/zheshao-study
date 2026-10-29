@@ -2038,5 +2038,53 @@
     "summary": "【The Verge】Following improvements made to Chrome's enhanced autofill last year that included your name, passport number, email address, and physical addresses sourced from your Google Accounts and services like…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc": {
+    "title_cn": "人工智能已经来到了亚利桑那州的水源",
+    "summary": "【The Verge】A hulking gray giant rises from the desert. Inside, engineers create the force behind our phones and computers and appliances, our streaming services and search engines and chatbots and vibe-coded app…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/gadgets/2026/10/trump-declares-robot-imports-a-national-security-threat/": {
+    "title_cn": "特朗普宣布机器人进口对国家安全构成威胁",
+    "summary": "【Ars Technica】President Donald Trump has declared the imports of foreign-made factory robots to be a national security threat—ordering new US negotiations with trading partners while holding out the possibility of…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/": {
+    "title_cn": "Granola推出听写功能，与Wispr展开竞争",
+    "summary": "【TechCrunch】Uno reverse! After Wispr added meeting notes to its dictation app, Granola is adding dictation to its meeting notetaker. The voice AI wars are getting interesting.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://openai.com/index/updated-model-spec": {
+    "title_cn": "更新的模型规格，以实现更强大、更有益的人工智能",
+    "summary": "【OpenAI】OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-odyssey-g7-deal-3729708/": {
+    "title_cn": "Samsung Odyssey G7降至$ 499.99 ，为您节省$ 400",
+    "summary": "【Android Authority】Big-screen PC gaming feels a lot better when your monitor can fill more of your view, and Samsung’s 37-inch Odyssey G7 is built for exactly that. There’s also a strong deal on Amazon right now, droppi…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad": {
+    "title_cn": "微软的人工智能未来工作岗位减少",
+    "summary": "【Microsoft】To anyone listening closely to what Microsoft CEO Satya Nadella has been saying over the past couple of years, this week felt like the clearest sign yet that AI is about to fundamentally change the si…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads/": {
+    "title_cn": "谷歌承认人工智能搜索赚的钱更少，但它正在通过更多的广告来解决这个问题",
+    "summary": "【Google】Google parent Alphabet reported its Q3 financial results on Wednesday afternoon, showing a healthy rise in revenue for the months of July to September. But the company's stock price has taken a beatin…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool": {
+    "title_cn": "纽约时报烹饪应用程序正在测试AI食谱修改",
+    "summary": "【The Verge】The New York Times is testing a new AI feature for its Cooking app that helps users to modify recipes, and it has sparked some drama among users. Last Friday, NYT Cooking senior editor Genevieve Ko an…",
+    "impact": "",
+    "uses": ""
   }
 }
