@@ -2140,5 +2140,35 @@
     "summary": "【TechCrunch】Can't agree on where to eat? Zest's AI concierge can combine everyone's tastes, put restaurant options to a vote, and make the reservation.",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/": {
+    "title_cn": "苹果首席执行官表示，该公司“不想为人工智能出货”",
+    "summary": "【Apple】Apple's new CEO defended the company's current position in the AI landscape.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/": {
+    "title_cn": "据报道， OpenAI降低了新一轮融资目标",
+    "summary": "【OpenAI】OpenAI’s latest funding round doesn't seem to be living up to expectations.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code": {
+    "title_cn": "在Meta之前，我构建了一个人工智能Tamagotchi",
+    "summary": "【Meta】Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/oppo-enco-x4-over-google-pixel-buds-pro-2-every-time-3727969/": {
+    "title_cn": "我每次都会选择这些耳机而不是Pixel Buds Pro 2 ，原因很简单",
+    "summary": "【Android Authority】I have a love/hate relationship with the Google Pixel Buds Pro 2 . The design, sound quality, and functionality are excellent. However, the fit has never been quite right for me. I’ve worked to overco…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-default-app-open-camera-comparison-3726024/": {
+    "title_cn": "我讨厌三星的默认相机应用程序—以下是我使用的应用程序",
+    "summary": "【Android Authority】You really have to give it to Samsung. Its camera hardware is stellar and consistently tops the charts alongside Pixels and iPhones. Even Samsung’s midrange phones have class-leading shooters . As lon…",
+    "impact": "",
+    "uses": ""
   }
 }
