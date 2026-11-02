@@ -2194,5 +2194,53 @@
     "summary": "【Android Authority】YouTube is going all in on Custom Feeds , with a big home screen redesign that’s equal parts confusing and infuriating. In the process of creating prompt-based, short-lived suggestion feeds, we’ve los…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones": {
+    "title_cn": "Anthropic压制Claude的人工智能视频游戏克隆",
+    "summary": "【Anthropic】Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to re-create existing video games, as reported by Tom's Hardware. Retro gaming is currently being overrun with…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/": {
+    "title_cn": "Anthropic警告说，它非常接近RSI能力，也就是自我构建的人工智能",
+    "summary": "【Anthropic】RSI is the point at which AI grows so good at training itself that it spawns a dramatic acceleration of AI capabilities. To the AI doomers, RSI represents the cataclysm from which there is no return.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-77-inch-s90h-4k-oled-tv-deal-3730773/": {
+    "title_cn": "亚马逊削减三星77英寸S90H 4K OLED电视800 $",
+    "summary": "【Amazon】Samsung’s 77-inch S90H is a big-screen 4K OLED TV built for movie nights, sports, and gaming, and there’s a strong deal on it right now on Amazon. This 2026 model sits in Samsung’s S90H lineup and bri…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/": {
+    "title_cn": "42AI凭借$ 6250万和一个可以“预测人类行为”的世界模型脱颖而出",
+    "summary": "【TechCrunch】Here's a question straight out of sci-fi: What if AI could predict what you were going to do before you decided to, even in a completely new situation?",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/deal-galaxy-tab-s10-plus-3730738/": {
+    "title_cn": "三星顶级规格Galaxy Tab S10 Plus优惠500 $",
+    "summary": "【Android Authority】Big-screen Android tablets are great for people who split their time between work, drawing, note-taking, and watching shows, and there’s a strong deal on one right now. The Samsung Galaxy Tab S10 Plus…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://openai.com/index/grid-protectors-program": {
+    "title_cn": "电网保护器计划简介",
+    "summary": "【OpenAI】OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/deal-galaxy-z-fold-8-3730703/": {
+    "title_cn": "三星Galaxy Z Fold 8亚马逊降价可节省300 $",
+    "summary": "【Amazon】Big-screen phone tasks are a lot easier when your phone can open up into something closer to a small tablet. The Samsung Galaxy Z Fold 8 is built for that kind of day-to-day use, and there’s a solid d…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/": {
+    "title_cn": "OpenAI终于合并了ChatGPT的“聊天”和“工作”选项卡",
+    "summary": "【OpenAI】OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change.",
+    "impact": "",
+    "uses": ""
   }
 }
