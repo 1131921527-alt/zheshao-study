@@ -2242,5 +2242,47 @@
     "summary": "【OpenAI】OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change.",
     "impact": "",
     "uses": ""
+  },
+  "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/": {
+    "title_cn": "Anthropic正在开发一个系统来证明人工智能模型的身份",
+    "summary": "【Anthropic】Called FlashProve, the system would let anyone check that an AI response really came from the model it claims to be from.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1025411/google-turn-off-search-ai-features": {
+    "title_cn": "在不需要人工智能的学校中，谷歌将完全禁用搜索功能",
+    "summary": "【Google】Google is completely turning off Search in schools that reject its AI features, the company told The New York Times. The decision was also shared in a broader education-related update from Google on T…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/11/russia-looks-to-hide-data-centers-underground-as-ukrainian-drones-strike-back/": {
+    "title_cn": "乌克兰的无人机袭击刺激了俄罗斯仓促的地下数据中心计划",
+    "summary": "【Ars Technica】Russian tech companies are scrambling to harden and hide their data centers underground after Ukrainian drone strikes damaged facilities housing AI supercomputers and disrupted cloud services for mill…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-to-turn-off-ai-for-students-3731314/": {
+    "title_cn": "谷歌让学校更难对人工智能说不（更新：声明）",
+    "summary": "【Google】Credit: C. Scott Brown / Android Authority TL;DR Google plans to turn off AI tools in its software for K-12 students next year, unless school administrators explicitly turn them on. At the same time,…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/": {
+    "title_cn": "谷歌将允许学校跳过人工智能工具，但他们也必须放弃搜索",
+    "summary": "【Google】While Google is trying to move beyond Chromebooks , the ubiquity of these devices has made the company's education products huge in schools. Now, Google says it will let educators choose whether to al…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/xiaomi-hyperos-4-android-17-global-rollout-schedule-3731257/": {
+    "title_cn": "安卓最大的软件发布之一即将推出，宾客名单上有80多台设备",
+    "summary": "【Android Authority】TL;DR Xiaomi has revealed its global HyperOS 4 rollout roadmap, covering 80+ phones and tablets across three waves. The rollout begins in early November, expands in mid-November, and reaches more devi…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/allenai/statebench": {
+    "title_cn": "StateBench ：测试语言模型如何跟踪长文档的状态变化",
+    "summary": "【Hugging Face 官方动态】StateBench: Testing how language models track state changes over long documents",
+    "impact": "",
+    "uses": ""
   }
 }
