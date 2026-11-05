@@ -2338,5 +2338,47 @@
     "summary": "【Hugging Face 官方动态】Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-one-ui-9-5-calendar-health-app-changes-3732266/": {
+    "title_cn": "Samsung One UI 9.5 为健康和日历带来显着变化",
+    "summary": "【Android Authority】TL;DR Early One UI 9.5 test builds reveal upcoming changes to Samsung Calendar and Samsung Health. Samsung Calendar is getting a cleaner, grid-free interface, a relocated search button, and a new Key…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-forms-actionable-insights-3732228/": {
+    "title_cn": "Google Forms 将开始使用 Gemini 来总结回复并发现趋势",
+    "summary": "【Google】Credit: Andy Walker / Android Authority TL;DR Google is introducing actionable insights to Google Forms. The new feature uses Gemini to analyze the form responses, uncover trends, and recommend next s…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/": {
+    "title_cn": "Vera 提供两全其美：最高的吞吐量和最快的代理",
+    "summary": "【NVIDIA】AI agents do more than generate answers. They search for information, query databases, write and test code and take action. Each of those steps relies on a CPU, with agents moving between GPU reasonin…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation": {
+    "title_cn": "用于交互式世界模拟的全新 NVIDIA Cosmos 3 开放模型",
+    "summary": "【Hugging Face 官方动态】New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-smart-glasses-pre-orders-3732159/": {
+    "title_cn": "三星Android XR智能眼镜11月12日开始预订",
+    "summary": "【Android Authority】TL;DR Samsung Android XR smart glasses are nearly here, with pre-orders now confirmed to open on November 12. The audio-based smart glasses, developed in collaboration with Google, will feature frames…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
+    "title_cn": "Gemini Omni 1.2 Flash：快速、经济高效，具有更长的剪辑",
+    "summary": "【Google】Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/": {
+    "title_cn": "Axiom Math 希望让人工智能远离数学",
+    "summary": "【TechCrunch】As AI floods math with unchecked proofs, Axiom Math is betting on verification. The startup’s AI agents just formally verified the Stacks Project, one of the field’s biggest libraries.",
+    "impact": "",
+    "uses": ""
   }
 }
