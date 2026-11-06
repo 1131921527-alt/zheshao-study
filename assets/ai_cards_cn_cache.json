@@ -2380,5 +2380,53 @@
     "summary": "【TechCrunch】As AI floods math with unchecked proofs, Axiom Math is betting on verification. The startup’s AI agents just formally verified the Stacks Project, one of the field’s biggest libraries.",
     "impact": "",
     "uses": ""
+  },
+  "https://www.androidauthority.com/joaquin-phoenix-smart-glasses-teaser-3732678/": {
+    "title_cn": "Gentle Monster在Joaquin Phoenix的帮助下挑逗三星Android XR眼镜",
+    "summary": "【Android Authority】TL;DR Pre-orders for Samsung’s Android XR glasses with frames from Warby Parker and Gentle Monster open next week, on November 12. Gentle Monster is sharing a teaser for a short film starring Joaquin…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy": {
+    "title_cn": "人工智能数据中心的所有最新更新",
+    "summary": "【The Verge】Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand warehouses full of energy-hungry servers has also kicked up fights across the w…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces": {
+    "title_cn": "Meta的Muse AI可以为您目前需要的应用版本创建自定义“空间”",
+    "summary": "【Meta】Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called \"spaces,\" allows its AI assistant to build things like a shopping hub, school dashboard, music tr…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity": {
+    "title_cn": "人工智能是新的约会交易破坏者",
+    "summary": "【The Verge】When Irene moved to San Francisco last year, she started using dating apps as a way to meet new people, get to know her new city, and connect with others who care about the things she does. After the…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/": {
+    "title_cn": "数百个公开暴露在网络中的Artex AI黑客工具",
+    "summary": "【TechCrunch】Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/chrome-android-colorful-settings-icons-redesign-3732624/": {
+    "title_cn": "谷歌将iOS风格的设置图标引入Chrome for Android",
+    "summary": "【Google】TL;DR Google is testing colorful icons for individual entries on Chrome for Android’s main Settings page, bringing it closer to the iOS version. The redesign also removes the “Basics” and “Advanced” s…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/": {
+    "title_cn": "Blue Wave期中考试如何重塑人工智能行业",
+    "summary": "【TechCrunch】Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/": {
+    "title_cn": "期中考试结束后，人工智能行业是否会持续两年？",
+    "summary": "【TechCrunch】Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the…",
+    "impact": "",
+    "uses": ""
   }
 }
