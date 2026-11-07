@@ -2428,5 +2428,29 @@
     "summary": "【TechCrunch】Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government": {
+    "title_cn": "美国允许英伟达向中国空置办公室出售芯片",
+    "summary": "【NVIDIA】Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company's H200 AI chips. According…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/underrated-productivity-apps-android-3731000/": {
+    "title_cn": "这 5 个你从未听说过的生产力应用程序值得在你的手机上占有一席之地",
+    "summary": "【Android Authority】Credit: Pankil Shah / Android Authority Most productivity app recommendations tend to look the same after a point — Notion, Todoist, ChatGPT, Wispr Flow, and the usual suspects. And sure, all of those…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-phones-document-scanner-one-ui-8-5-hands-on-3730608/": {
+    "title_cn": "Galaxy 手机现在有了更好的文档扫描仪，它帮我省去了很多麻烦",
+    "summary": "【Android Authority】I’ve digitized physical documents on a Galaxy phone many times, and the process typically involved scanning the document, then editing it to remove my fingers or corner folds, if they were captured du…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos": {
+    "title_cn": "人工智能打破了网络安全世界。接下来是什么？",
+    "summary": "【The Verge】Today, I’m talking with Alex Stamos, chief security officer at Cognition and longtime cybersecurity expert, about what a mess cybersecurity is right now. This episode is part one of a special series l…",
+    "impact": "",
+    "uses": ""
   }
 }
