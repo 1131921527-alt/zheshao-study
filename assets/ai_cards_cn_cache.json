@@ -2452,5 +2452,23 @@
     "summary": "【The Verge】Today, I’m talking with Alex Stamos, chief security officer at Cognition and longtime cybersecurity expert, about what a mess cybersecurity is right now. This episode is part one of a special series l…",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic": {
+    "title_cn": "苹果正在竞相让 Siri 变得更加代理",
+    "summary": "【Apple】Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. Wh…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/oneplus-15-coloros-hands-on-3730399/": {
+    "title_cn": "我在 OnePlus 15 上测试了 ColorOS 17。以下是您需要了解的 3 件事",
+    "summary": "【一加】I’ve used OnePlus phones since day one, and the clean, lightweight take on Android that OxygenOS offered, with useful additions that didn’t get in the way, is a big reason I stuck with the brand for m…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/droynis-open-source-android-security-app-3731115/": {
+    "title_cn": "谷歌想要锁定 Android，但 Droynis 教你如何保持安全",
+    "summary": "【Google】Part of the beauty of Android is its openness. It’s one of the many reasons why I would rather snag a Pixel or Galaxy device ahead of an iPhone. I can choose which default apps to employ, where I get…",
+    "impact": "",
+    "uses": ""
   }
 }
