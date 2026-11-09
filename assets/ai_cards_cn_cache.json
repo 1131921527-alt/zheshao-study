@@ -2470,5 +2470,59 @@
     "summary": "【Google】Part of the beauty of Android is its openness. It’s one of the many reasons why I would rather snag a Pixel or Galaxy device ahead of an iPhone. I can choose which default apps to employ, where I get…",
     "impact": "",
     "uses": ""
+  },
+  "https://openai.com/index/chatgpt-enterprise-aws-marketplace": {
+    "title_cn": "ChatGPT Enterprise 现已在 AWS Marketplace 中提供",
+    "summary": "【OpenAI】ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-odyssey-g3-monitor-deal-3733067/": {
+    "title_cn": "亚马逊将三星 Odyssey G3 200Hz 游戏显示器降价至 119.99 美元",
+    "summary": "【Amazon】Fast-paced games feel a lot better when your monitor can keep up, and that’s exactly where the Samsung 24-inch Odyssey G3 fits in. It’s built for players who want smoother motion on a desk-friendly sc…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me": {
+    "title_cn": "人工智能的未来取决于……黄仁勋的性生活？",
+    "summary": "【The Verge】I would prefer that these people's sex lives were none of my business but I guess we have to talk about Jensen Huang and the National Security Incident. Who could have guessed that the guy who was out…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/09/mediums-new-tk-app-brings-ai-assistance-directly-into-the-writing-process/": {
+    "title_cn": "Medium 的新 TK 应用程序将人工智能辅助直接带入写作过程",
+    "summary": "【TechCrunch】Medium's new writing app embraces AI-assisted writing, despite growing controversy over the technology's role in publishing.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1029802/trump-60-minutes-ai": {
+    "title_cn": "特朗普的60分钟采访涉及人工智能安全，威胁要逮捕一名人工智能高管",
+    "summary": "【The Verge】Asked about AI executives' warnings about their models' safety on 60 Minutes, Trump said, \"I think that the risk is not nearly as real as it- as they talk, and I think the risk can be managed, and it'…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.apple.com/newsroom/2026/11/olivia-dean-is-apple-musics-artist-of-the-year-for-2026/": {
+    "title_cn": "Olivia Dean是2026年Apple Music年度艺术家",
+    "summary": "【Apple】Apple Music named Olivia Dean its 2026 Artist of the Year, recognizing her undeniable leap to stardom over the past year.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-s85h-oled-tv-deal-3733004/": {
+    "title_cn": "三星S85H OLED交易节省$ 698并创历史新低",
+    "summary": "【Android Authority】Samsung’s 65-inch S85H OLED TV is a strong pick for anyone who wants OLED picture quality without jumping to the brand’s pricier flagship sets. It’s also a great time to buy, because this 2026 model h…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan": {
+    "title_cn": "Nemotron-Personas-Finance-Japan ：捕捉日本人口统计和金融背景的综合数据集",
+    "summary": "【Hugging Face 官方动态】Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/policy/1029652/kanter-doj-biden-legal-tech": {
+    "title_cn": "乔纳森·坎特（ Jonathan Kanter ）正在使用人工智能来对抗大型",
+    "summary": "【The Verge】When Jonathan Kanter stepped down as head of the Justice Department's Antitrust Division in 2024, he set out to keep fighting to dismantle illegal monopolies. But this time, he's continuing the fight…",
+    "impact": "",
+    "uses": ""
   }
 }
