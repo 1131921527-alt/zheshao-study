@@ -2572,5 +2572,65 @@
     "summary": "【Google】Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
     "impact": "",
     "uses": ""
+  },
+  "https://openai.com/index/gilbert-tobin-sam-nickless": {
+    "title_cn": "Gilbert + Tobin 用人工智能重新思考法律业务",
+    "summary": "【OpenAI】A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/video/why-the-data-center-you-dread-might-never-even-be-built/": {
+    "title_cn": "为什么您害怕的数据中心可能永远不会建成",
+    "summary": "【TechCrunch】The data center boom is running into serious real-world obstacles, from widespread local opposition and permitting delays to a scramble for electricity.&#160;Before those challenges even come into pla…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/podcast/how-backlash-and-red-tape-continue-to-slow-data-centers-post-blue-wave/": {
+    "title_cn": "蓝潮过后，强烈反对和繁文缛节如何继续拖慢数据中心的速度",
+    "summary": "【TechCrunch】The data center boom is running into serious real-world obstacles, from widespread local opposition and permitting delays to a scramble for electricity.&#160;Before those challenges even come into pla…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/": {
+    "title_cn": "CoreWeave 转向客户预付款和较短的合同来为人工智能的发展提供资金",
+    "summary": "【TechCrunch】CoreWeave is increasingly asking customers to pay upfront, borrowing against specific contracts, and even looking to short-term deals that could lead to higher prices, according to the company’s third…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-gemini-live-apple-carplay-launch-3734084/": {
+    "title_cn": "谷歌将独立的 Gemini 应用程序和 Gemini Live 引入 Apple CarPlay",
+    "summary": "【Google】TL;DR Google is rolling out a standalone Gemini app to Apple CarPlay globally, bringing Gemini Live to the platform. Unlike its existing Google Maps integration, the standalone app supports broader co…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/": {
+    "title_cn": "英国 Fractile 完成 7.2 亿美元融资，在人工智能芯片竞争中占据一席之地",
+    "summary": "【TechCrunch】Fractile has now become one of the top-funded players in the race for purpose-built AI chips.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/": {
+    "title_cn": "Gemini Decisions API：快速、经过校准的多模式决策",
+    "summary": "【Google】Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/gaming/2026/11/big-walk-used-ai-to-fix-a-bug-now-the-indie-gaming-world-is-having-a-reckoning/": {
+    "title_cn": "Big Walk 使用人工智能修复了一个错误。现在独立游戏界正在进行清算。",
+    "summary": "【Ars Technica】The last few years have seen significant debate over the widespread use of AI-powered tools in game development and the responsible disclosure of that usage to players. That debate has exploded into a…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/": {
+    "title_cn": "尝试桌面：可定制的协作空间，供团队一起计划、玩耍和做更多事情。",
+    "summary": "【Google】Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/galaxy-z-fold-8-ultra-deal-amazon-3733982/": {
+    "title_cn": "Galaxy Z Fold 8 Ultra 立减 250 美元",
+    "summary": "【Android Authority】Big screens are great for getting more done on your phone, but most handsets still feel cramped when you’re juggling apps, reading documents, or watching video. The Samsung Galaxy Z Fold 8 Ultra is bu…",
+    "impact": "",
+    "uses": ""
   }
 }
