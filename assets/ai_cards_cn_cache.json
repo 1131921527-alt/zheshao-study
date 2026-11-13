@@ -2692,5 +2692,53 @@
     "summary": "【Google】CHICAGO—Families joined protests in seven cities nationwide on Wednesday, rallying against what they see as Google’s bid to entrench its AI models in schools, turn kids of all ages into Gemini guinea…",
     "impact": "",
     "uses": ""
+  },
+  "https://arstechnica.com/features/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/": {
+    "title_cn": "美国联邦航空局 (FAA) 扩大人工智能建议，以管理整个美国空域的空中交通拥堵",
+    "summary": "【Ars Technica】The US government has expanded the use of an AI tool for advising air traffic controllers to assist in managing air traffic across the entire national airspace system. Airline executives have voiced s…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/": {
+    "title_cn": "AI代理初创公司LangChain估值达到30亿美元",
+    "summary": "【TechCrunch】LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast": {
+    "title_cn": "黄仁勋事件真正的利害关系是什么",
+    "summary": "【The Verge】One part of the saga surrounding Nvidia CEO Jensen Huang ended on Thursday, when Huang resigned from his position at the top of AI's most important company. But in the coming weeks and months, a much…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-wallet-gemini-integration-us-3735150/": {
+    "title_cn": "Google 电子钱包现在可让 Gemini 分析您的支出并提出节省方法建议",
+    "summary": "【Google】TL;DR Google Wallet is now integrating with Gemini’s Personal Intelligence to help you better understand your finances. You can ask Gemini to analyze spending, find forgotten subscriptions, and sugges…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place": {
+    "title_cn": "使用 SimReady Assets 构建机器人拾放模拟",
+    "summary": "【Hugging Face 官方动态】Build a Robot Pick-and-Place Simulation with SimReady Assets",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/": {
+    "title_cn": "OpenAI 董事会成员担心人工智能“接管”社会可能需要几个月的时间",
+    "summary": "【OpenAI】How do you think you're going to die? If you go by the current statistics for deaths in the US , it's reasonable to expect that cancer or heart disease will eventually get you. But OpenAI Foundation b…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://huggingface.co/blog/allenai/xybench": {
+    "title_cn": "XYBench：帮助解决问题背后的问题",
+    "summary": "【Hugging Face 官方动态】XYBench: Helping with the problem behind the question",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/": {
+    "title_cn": "ChatGPT 的新钱包让人工智能代理为您购物和结账",
+    "summary": "【OpenAI】ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribers.",
+    "impact": "",
+    "uses": ""
   }
 }
