@@ -2782,5 +2782,47 @@
     "summary": "【Android Authority】After my positive experience with the Samsung Galaxy Watch 8, I couldn’t wait to try out the Galaxy Watch 9 . It has a larger battery than its predecessor and new features that come with One UI 9 Watc…",
     "impact": "",
     "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/": {
+    "title_cn": "NVIDIA DGX Spark 开发套件将办公桌变成超级计算实验室",
+    "summary": "【NVIDIA】At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark HPC Developer Kit for researchers, academics and developers. The kit is a four-node…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/11/robo-soldier-startup-backed-by-eric-trump-misses-payroll-may-collapse/": {
+    "title_cn": "由埃里克·特朗普支持的机器人士兵初创公司未能发放工资，可能会倒闭",
+    "summary": "【Ars Technica】A humanoid robotics company backed and advised by President Donald Trump’s son, Eric Trump, has reportedly missed payroll and may be on the brink of collapse after a funding shortfall. The Silicon Val…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-messages-in-app-gaming-3735732/": {
+    "title_cn": "Google Messages 的聊天小游戏的运作方式如下",
+    "summary": "【Google】Credit: Edgar Cervantes / Android Authority TL;DR Strings of code shed new light on Google’s effort to bring games to the Messages app. You’ll be able to play games, like pool and chess, without leavi…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/samsung-galaxy-tab-a11-plus-kids-edition-deal-3735756/": {
+    "title_cn": "Galaxy Tab A11 Plus 儿童版创下历史新低",
+    "summary": "【Android Authority】Looking for a tablet the kids can call their own this holiday season? The Samsung Galaxy Tab A11 Plus Kids Edition is down to $249.99 on Amazon , which is $100 (29%) off its $349.99 list price and the…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/": {
+    "title_cn": "全球最先进的人工智能基础设施供应链如何创造未来",
+    "summary": "【NVIDIA】Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms. That description sums up the job, but it doesn’t begin to encompass what Shoquist has ma…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/": {
+    "title_cn": "美国采取行动切断中国对人工智能芯片的远程访问",
+    "summary": "【Ars Technica】On the heels of the Nvidia scandal , the Trump administration is preparing to crack down on foreign data centers that are fueling China’s advancements in artificial intelligence by allowing remote acc…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-gemini-new-regional-voices-3735654/": {
+    "title_cn": "Google 通过 66 种新的地区口音扩展了 Gemini 的语音选项",
+    "summary": "【Google】TL;DR Google is rolling out 66 new regional voices to the Gemini app on Android and iOS. The expansion covers seven language variants, including US English, with more than 10 voices available for UK E…",
+    "impact": "",
+    "uses": ""
   }
 }
