@@ -2824,5 +2824,41 @@
     "summary": "【Google】TL;DR Google is rolling out 66 new regional voices to the Gemini app on Android and iOS. The expansion covers seven language variants, including US English, with more than 10 voices available for UK E…",
     "impact": "",
     "uses": ""
+  },
+  "https://arstechnica.com/gadgets/2026/11/microsoft-calls-copilot-the-new-os-for-work-at-ignite-keynote/": {
+    "title_cn": "Copilot 是“新的工作操作系统”，现在 Office 在其中运行",
+    "summary": "【Microsoft】Opening the keynote at its Ignite event, Microsoft CEO Satya Nadella outlined the company's vision for its new \"frontier ecosystem,\" announcing Tuesday the general availability of Word, Excel, and Pow…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/news/1035957/meta-alexandr-wang-sam-altman-instagram-ai-deepfake": {
+    "title_cn": "即使 Sam Altman 也无法免受 Instagram 上的 AI 深度造假的影响",
+    "summary": "【The Verge】Instagram is filled with people posting deepfaked content - including, as of late, from one of Meta's most prominent executives. Earlier in November, Alexandr Wang, Meta's chief AI officer, shared a s…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1036111/satya-nadella-says-hes-agi-pilled-now": {
+    "title_cn": "萨蒂亚·纳德拉 (Satya Nadella) 表示，他现在已经被 AGI 占据了",
+    "summary": "【The Verge】Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI p…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-new-chat-history-settings-3736303/": {
+    "title_cn": "谷歌现在允许 Gemini 用户选择退出人工智能培训，同时保留他们的聊天记录",
+    "summary": "【Google】Credit: Megan Ellis / Android Authority TL;DR The Gemini app is getting new settings that allow you to keep your chat history while opting out of AI training. If history is turned off, your chats will…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-vids-personal-avatars-now-free-3736265/": {
+    "title_cn": "Google Vids 现在可让您免费创建个人头像",
+    "summary": "【Google】Credit: Google TL;DR Google is expanding personal avatars to users with personal Google accounts. Personal avatar lets you create a custom AI-generated avatar. Avatars are linked to your account and a…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/google-gemini-tasks-update-3736266/": {
+    "title_cn": "Gemini 现在可以免费处理任务请求，包括代表您致电企业",
+    "summary": "【Google】TL;DR Google expands Tasks to call businesses on a user’s behalf, schedule appointments, and make purchases. Users can also text and email tasks to Gemini outside the app. Tasks is now free in six cou…",
+    "impact": "",
+    "uses": ""
   }
 }
