@@ -2860,5 +2860,41 @@
     "summary": "【Google】TL;DR Google expands Tasks to call businesses on a user’s behalf, schedule appointments, and make purchases. Users can also text and email tasks to Gemini outside the app. Tasks is now free in six cou…",
     "impact": "",
     "uses": ""
+  },
+  "https://news.samsung.com/global/samsung-tv-plus-brings-2026-mama-awards-to-k-pop-fans-around-the-world": {
+    "title_cn": "三星 TV Plus 为全球 K-pop 粉丝带来 2026 MAMA AWARD",
+    "summary": "【Samsung】Samsung Electronics is once again connecting K-pop fans worldwide by livestreaming 2026 MAMA AWARDS . Through a partnership with CJ ENM, a leading Korean entertainment company, Samsung TV Plus will br…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/": {
+    "title_cn": "微软首席执行官萨蒂亚·纳德拉 (Satya Nadella) 解释为何要求 6 万名员工辞职",
+    "summary": "【Microsoft】Microsoft CEO Satya Nadella explained why he offered buyouts to 60,000 of his employees in October, essentially urging them to voluntarily quit, rather than reducing the workforce via another massive…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/": {
+    "title_cn": "萨蒂亚·纳德拉 (Satya Nadella) 担心人工智能网络攻击，称许多关键基础设施“无法修补”",
+    "summary": "【TechCrunch】The Microsoft CEO downplayed the recent Outlook outage while noting that AI was causing both opportunities and new challenges for securing much of the connected world.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google": {
+    "title_cn": "美国最大的学区考虑放弃 Google 搜索",
+    "summary": "【Google】New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Time…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/policy/1036749/trump-ai-chip-data-center-us-philippines-pax-silica": {
+    "title_cn": "特朗普最新的土地是菲律宾的人工智能中心",
+    "summary": "【The Verge】President Donald Trump was greeted by no less than five beauty queens when he landed in the Philippines on Tuesday, according to local news outlet Rappler. As he stepped onto the tarmac, a child hande…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/18/palmer-luckey-warns-ai-powered-cyberattacks-are-outpacing-defenses-its-time-to-start-running/": {
+    "title_cn": "Palmer Luckey 警告人工智能驱动的网络攻击正在超越防御：“是时候开始奔跑了”",
+    "summary": "【TechCrunch】The Anduril co-founder says outdated technology is leaving systems vulnerable to a new wave of AI-enabled attacks.",
+    "impact": "",
+    "uses": ""
   }
 }
