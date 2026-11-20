@@ -2896,5 +2896,41 @@
     "summary": "【TechCrunch】The Anduril co-founder says outdated technology is leaving systems vulnerable to a new wave of AI-enabled attacks.",
     "impact": "",
     "uses": ""
+  },
+  "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing": {
+    "title_cn": "苹果正在招聘工程师来构建自己的人工智能代理",
+    "summary": "【Apple】Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing s…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-chat-drafts-3737466/": {
+    "title_cn": "Gemini 很快就能让你轻松找到留下未完成草稿文本的聊天记录",
+    "summary": "【Google】TL;DR Google is working on indicators to show when you’ve left a draft message in Gemini chats. Users would be able to filter the chat list to only show those with active drafts. Gemini’s also working…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/": {
+    "title_cn": "Meta 的新款 Muse Charm 设备可能售价 300 美元",
+    "summary": "【Meta】Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price": {
+    "title_cn": "Meta 的 Muse Charm 可能售价 300 美元",
+    "summary": "【Meta】Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earli…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/amazon-black-friday-livestream-2026-3737417/": {
+    "title_cn": "加入我们的亚马逊黑色星期五直播，观看最佳科技优惠的现场演示",
+    "summary": "【Amazon】Credit: Paul Jones / Android Authority Some devices help you see more than you ever could on your own. A wearable display brings a huge virtual screen right in front of you, much bigger than your TV.…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/": {
+    "title_cn": "正在展开的黄仁勋丑闻：时间表",
+    "summary": "【TechCrunch】Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+    "impact": "",
+    "uses": ""
   }
 }
