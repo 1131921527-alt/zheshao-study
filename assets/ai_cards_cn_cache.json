@@ -2932,5 +2932,47 @@
     "summary": "【TechCrunch】Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
     "impact": "",
     "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/": {
+    "title_cn": "谷歌推出新搜索主页，带有人工智能聊天记录，没有搜索按钮",
+    "summary": "【Google】Google's flagship search experience is evolving into an AI experience with stunning speed. Even time-tested elements of search are getting AI makeovers, and the latest to get this treatment is the sea…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/": {
+    "title_cn": "在 AI 数据中心排放创纪录之际，Meta 重新考虑 2030 年净零排放目标",
+    "summary": "【Meta】Meta’s executives are rethinking the company’s original goal of achieving net-zero emissions by 2030. That revelation in Meta’s latest sustainability report comes as the company reported a record perc…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/gemini-gif-generation-rollout-3737901/": {
+    "title_cn": "Gemini 现在可以成为您制作 GIF 的首选来源",
+    "summary": "【Google】Credit: Joe Maring / Android Authority TL;DR Google has updated Gemini with the ability to create GIFs. Gemini allows the looping animations to be about three seconds long. The feature uses Google’s l…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/": {
+    "title_cn": "Daniel Ek 支持人工智能研究人员的聚变能源初创公司。这就是他们正在建造的东西。",
+    "summary": "【TechCrunch】Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the startup is building.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/": {
+    "title_cn": "AI 声称找到了 167 年黎曼猜想的解决方案——人类也做到了",
+    "summary": "【TechCrunch】Mathematicians are having their minds blown by the latest AI-driven result — and there's a competing human solution, too.",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.androidauthority.com/assistant-gemini-home-devices-3737857/": {
+    "title_cn": "Google Assistant 将于 2027 年 8 月停止在智能扬声器和显示器方面的工作",
+    "summary": "【Google】TL;DR Google started introducing Gemini for Home last fall. Users have had the option to replace Assistant with Gemini, but so far the move has not been mandatory on Home devices. Google now shares th…",
+    "impact": "",
+    "uses": ""
+  },
+  "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax": {
+    "title_cn": "特朗普威胁将人工智能数据中心移至美国境外“巨额税收”",
+    "summary": "【The Verge】President Donald Trump promised to put a \"tremendous tax\" on companies that build data centers outside of the US, even as states and cities around the country are placing restrictions on new applicati…",
+    "impact": "",
+    "uses": ""
   }
 }
